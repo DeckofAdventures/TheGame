@@ -1,40 +1,46 @@
 # Deck of Adventure Core Mechanics
 
-<!-- MarkdownTOC levels="2,3,4" autolink="true"-->
+## Full Player's Guide
+
+## Table of Contents
+<!-- MarkdownTOC -->
 
 - What is a Tabletop Game System?
 - Guiding Principles
 - The Action Deck
 - Fate Cards
 - Characters
-- Dealers, Bystanders and Companions
+   - Attributes, Skills, and Modifiers
+   - Dealers, Bystanders and Companions
 - During Play
+   - Out of Combat
+   - Making a Check
+   - In Combat
+      - Taking Turns
+      - In Combat Actions
+      - Effects
+   - Epic Events
+   - Rests
 - Character Creation
 - Starting your adventure
 
 <!-- /MarkdownTOC -->
 
 
-## Quick-Start Guide
-
-`SUMMARY NEEDED`
-
-## Full Player's Ruleset
-
-### What is a Tabletop Game System?
+## What is a Tabletop Game System?
 
 A game system provides all of the rules, mechanics, and story-telling devices that are used to describe how characters interact with the world during a session. During a game session, a Game Master (GM) uses the rules laid out in a game system to set the stage for a narrative that all players collectively move forward. Moment-to-moment, the GM presents a scenario and players respond by attempting actions, either specified by the game system or wholly invented. The GM determines a player’s success and failure, and guides the group in a meaningful way. 
 
-Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventurem and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventure sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventure just asks you to draw from your deck.
+Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventure and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventure sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventure just asks you to draw from your deck.
 
-### Guiding Principles 
+## Guiding Principles
 
 In times of uncertainty, defer to the following:
 
 1. Have fun.
 2. The Game Master (GM) is both the narrator and referee. They work to ensure the entire group has fun. They have the final say of rulings at the table. 
 
-### The Action Deck
+## The Action Deck
 
 Deck of Adventure is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A) across 4 suits, without Jokers. 
 
@@ -42,7 +48,7 @@ Deck of Adventure is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A
 2. Kings and Aces are Fate Cards and should be reserved in your hand. All other cards go directly into a discard pile. 
 3. When the Action Deck is empty, or if otherwise instructed by the GM, shuffle the discard pile into the Action Deck and resume play, holding on to any unused Fate Cards for future use!
 
-### Fate Cards
+## Fate Cards
 
 Fate Cards (K and A) are a chance to control your fate. They permit the player to choose when they want a second chance at a key moment.
 
@@ -51,9 +57,9 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
 3. A GM may award a Fate Card (as pulled from the discard pile or signified by another token) to a player for excellent play, including exemplifying their character’s strengths or weaknesses.
 4. When exchanged as a Fate Card, Aces give the next card drawn a +5 modifier. 
     
-### Characters
+## Characters
 
-#### Attributes, Skills, and Modifiers
+### Attributes, Skills, and Modifiers
 
 1. Attributes are general domains that collectively make up a characters strengths and weaknesses: Dexterity, Strength, Intuition, Intelligence, Conviction, and Vitality.
 2. Skills are specific to an Attribute. Athletics is a Strength skill, but Persuasion is a Conviction skill.
@@ -63,9 +69,9 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
 ### Dealers, Bystanders and Companions
 
 1. Dealers. All player characters, and some in-game characters. They...
-      1. Can use Spells, take Affinities and Vulnerabilities.
-      2. Have 5 health points.
-      3. Can receive and use Fate Cards.
+   1. Can use Spells, take Affinities and Vulnerabilities.
+   2. Have 5 health points.
+   3. Can receive and use Fate Cards.
 2. Bystanders. All other characters. They...
    1. Are weaker than Dealers
    2. Have limited access to Spells and Affinities
@@ -74,9 +80,9 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
    1. Develop in abilities in tandem with their associated Dealer. Generally, the stronger the dealer, the stronger the Companion.
    2. Have health points determined by the level of their Dealer.
 
-### During Play
+## During Play
 
-#### Out of Combat
+### Out of Combat
 
 The majority of time spent on adventures takes place outside of combat. This includes exploring the world, investigating for clues, and engaging social interactions with other players and non-playable characters found throughout the world. The GM will ask players to Make a Check by drawing a card and adding the modifier relevant to the circumstance. 
 
@@ -84,7 +90,7 @@ The majority of time spent on adventures takes place outside of combat. This inc
 2. **What do I see?** Character often know more just by having direct access to the world. Players may ask about the world, immediate environment or common knowledge a character might have. The GM’s answer may depend on a successful check.
 3. **Talking to the Locals.** The GM speaks on behalf of all other characters and will respond with what the relevant character knows depending on the situation. Some checks may determine the outcome of these conversations. When speaking either to the GM or other players, players should remember to be respectful. A brash character is no excuse to be rude to one’s fellow players. 
 
-#### Making a Check
+### Making a Check
 
 When the GM calls for a Check, they will specify the relevant Attribute or Skill. The player then draws a card from their Action Deck and announces the total, plus the relevant Modifier. Success is determined by comparing this total to the GM’s Difficulty Class (DC), which the GM may or may not announce. The GM may describe the nature of the outcome or announce the degree of success and ask the player to describe the outcome
 1. Drawing a 2 is a complete failure, regardless of Modifier. There may be immediate or future consequences. Unless otherwise specified, a player may not use a Fate Card to avoid the critical failure
@@ -100,18 +106,18 @@ When the GM calls for a Check, they will specify the relevant Attribute or Skill
 4. Drawing a 9 is a minor success, performing as intended.
 5. Drawing a Q is a major success. The character might catch a glimpse of something important in the distance during their jump.
 
-#### In Combat 
+### In Combat
 
 Some stories involve hostile forces that will threaten players with violence. The GM decides when Combat begins and then a separate set of rules take effect. Combat in Deck of Adventure is designed to be fast-paced, while leaving a lot of room for player teamwork and creativity. To keep up the pace, players should be sure to study their character sheets and know their options ahead of combat, and use others’ turns to make their choices. 
 
-GMs may provide gridded maps to help players visualize the situation. On a square grid, moving diagonally counts as one space unless otherwise ruled by the GM.
+GMs may provide grided maps to help players visualize the situation. On a square grid, moving diagonally counts as one space unless otherwise ruled by the GM.
 
-##### Taking Turns
+#### Taking Turns
 
 1. Combat order is determined by card draw. Every round, all characters draw a card to determine order, Ace high first, down to Two. Matching cards follow standard card game convention and are strongest in reverse alphabetical order of suits (Spades, Hearts, Diamonds, Clubs).
 2. A player may delay their turn in initiative order intentionally to co-occur with other players, but their turn is forfeited if they do not announce their action(s) by the end of the round. A GM may skip a player’s turn if they are unprepared and need more time to think.
 
-##### In Combat Actions
+#### In Combat Actions
 
 On a turn, a character may (a) move, and (b) perform action(s) in any order they choose. Each turn represents 6 seconds of game time passing.
 
@@ -122,7 +128,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Reflexes.
 6. **Toughening Up** - A Dealer may expend Fate Cards to nullify one point of damage per round of combat.
 
-##### Effects
+#### Effects
 
 Some effects will impact a character over time.
 1. **Stunned** If a Dealer takes 2 or more damage in 1 hit, they make a DC 8 (+2 for each additional damage) conviction check at the start of their turn. If failed, they may either move or make one action on their turn, not both. A major failure on this check leaves the Dealer unable to act.Some creatures can cause stunning effects as part of their attacks.
@@ -132,7 +138,7 @@ Some effects will impact a character over time.
 6. **Outnumbered** Dealers may delay their turns to co-occur with one another. For each additional character attacking the same Dealer at the same time, attack modifiers are boosted by 2.
 7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check (DC 8 + number of turns since effect onset). If attacked further, the player begins an Epic Event alone. Each additional hit is a Check they may respond to with one or more cards to pass an unknown DC as the Great Void calls out to them. 
 
-#### Epic Events
+### Epic Events
 
 At any point, the DM may call for an Epic Event, usually involves player(s) needing to make a series of successes in a short time period. During an epic event...
 
@@ -144,7 +150,7 @@ At any point, the DM may call for an Epic Event, usually involves player(s) need
 
 The GM determines when an epic event has been resolved. On successful resolution, the narrative will move forward and the GM will resume normal play. On a failure during an Epic Event, the GM will lay out the consequences and give the players a chance to react. 
 
-#### Rests
+### Rests
 
 A rest is an epic event in which players state what they hope to accomplish over the rest. Each goal is a separate check the players must collectively pass. Taking a short rest permits players to draw 3 cards, and long rest 5. 
 
@@ -153,20 +159,20 @@ Recovering from wounds is a Vitality check of DC 8 for the first health + 1 for 
 Players take turns attempting their respective checks. Order is either determined by the players themselves or the last played initiative order. The GM determines the DC for each novel goal. 
 
 
-### Character Creation
+## Character Creation
 
 Deck of Adventure offers both premade characters `LINK NEEDED` and a completely customizable process. Consult with your GM for information about the setting and what skills will be relevant for the story ahead. Custom creation starts with spending Experience Points on Attributes, Skills, Affinities, Vulnerabilities and/or Skills. 
 
 - Attributes cost more, but also increase corresponding skills.
-- Spending points has deminishing returns. Going from 0 to +1 is relatively cheap, but +3 to +4 will take many more points.
+- Spending points has diminishing returns. Going from 0 to +1 is relatively cheap, but +3 to +4 will take many more points.
 - Skill Modifiers start “unskilled,” with a -2 Modifier, so choose carefully. 
-- Vulnerabilities are roleplay and/or combat weaknesses and yeild 1 or 2 additional Experience Points to spend.
+- Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional Experience Points to spend.
 - Affinities are special features, boons or strengths, that cost 1 or 2 points.
 - Spells can have minor or major effects, and cost 1 or 2 points accordingly.
 
 For a full set of character creation options, see our Character Creation document `LINK NEEDED`.
 
-### Starting your adventure
+## Starting your adventure
 
 There are four steps to starting an adventure of Deck of Adventure:
 
