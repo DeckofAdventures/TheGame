@@ -19,6 +19,7 @@
       - Taking Turns
       - In Combat Actions
       - Effects
+   - Health and Armor
    - Epic Events
    - Rests
 - Character Creation
@@ -66,16 +67,41 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain, and are expressed as +/- modifiers ranging anywhere from -2, to +X. Modifiers are added to the total of the card drawn when making any check relevant to that Attribute or Skill. 
 4. When the GM asks a player to draw a card, they may announce the corresponding skill. The player reports the card’s value with corresponding modifier. Totals above 10 can either be reported as number value or face card value (J 11; Q 12; K 13; A 14).
 
+Complete list:
+- AGL Agility
+   - Finesse (Fight)
+   - Reflex
+   - Riding
+   - Stealth
+- CON Conviction
+   - Bluffing
+   - Performance
+   - Persuasion
+- GUT Intuition
+   - Detection
+   - Faith
+   - Craft
+   - Naturalism
+- INT Intelligence
+   - Knowledge
+   - Investigation
+   - Science
+- STR Strength
+   - Athletics
+   - Brute (Fight)
+   - Intimidation
+- VIT Vitality
+
 ### Dealers, Bystanders and Companions
 
 1. Dealers. All player characters, and some in-game characters. They...
    1. Can use Spells, take Affinities and Vulnerabilities.
-   2. Have 5 health points.
+   2. Have 3 health points.
    3. Can receive and use Fate Cards.
 2. Bystanders. All other characters. They...
    1. Are weaker than Dealers
    2. Have limited access to Spells and Affinities
-   3. Have 2 health points.
+   3. Have 1 health point.
 3. Companions are creatures associated with a Dealer, like a pet or other-wordly advisor. They ...
    1. Develop in abilities in tandem with their associated Dealer. Generally, the stronger the dealer, the stronger the Companion.
    2. Have health points determined by the level of their Dealer.
@@ -123,7 +149,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 
 1. **Movement** Character speed is equal to 6 spaces ± Agility modifier. The total may be split to occur before, after, and/or between actions.
 2. **Actions** Players may choose to perform up to three actions and must declare the number before taking their first. One action is made without penalty. Additional actions are made at either -2 (for two) or -4 (for three) penalty. Each action has a card draw associated with it.
-3. **Standard Attacks:** Spells and other character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. 
+3. **Standard Attacks:** Spells and other character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
 4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, applying a Skill Modifier as specified by the spell or action.
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Reflexes.
 6. **Toughening Up** - A Dealer may expend Fate Cards to nullify one point of damage per round of combat.
@@ -137,6 +163,12 @@ Some effects will impact a character over time.
 4. **Blinded, Deafened** At the start of their turn, a Dealer makes a conviction check against the spell-casting attribute of the creature causing the effect (or DC 5 if physical effect). If failed, they take a -5 penalty to any action requiring the relevant sense.
 6. **Outnumbered** Dealers may delay their turns to co-occur with one another. For each additional character attacking the same Dealer at the same time, attack modifiers are boosted by 2.
 7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check (DC 8 + number of turns since effect onset). If attacked further, the player begins an Epic Event alone. Each additional hit is a Check they may respond to with one or more cards to pass an unknown DC as the Great Void calls out to them. 
+
+### Health and Armor
+
+Dealers have three health points, Bystanders have 1 health point, and the health of Companions is determined by the level of their Dealer. If a character is wounded beyond their health pool, they are Knocked Out. Armor points are an optional additional pool that would be removed first in the event of a wound. Both health and armor points can be recovered on a rest, the former with a Vitality check and the latter with a Science or Craft check.
+
+`Forthcoming: Determining AC`
 
 ### Epic Events
 
@@ -154,7 +186,7 @@ The GM determines when an epic event has been resolved. On successful resolution
 
 A rest is an epic event in which players state what they hope to accomplish over the rest. Each goal is a separate check the players must collectively pass. Taking a short rest permits players to draw 3 cards, and long rest 5. 
 
-Recovering from wounds is a Vitality check of DC 8 for the first health + 1 for each additional wound. Recovering spell slots is a DC check of the relevant magic skill 8 + 1 for each additional spell slot. Players might also attempt to repair an item or read a book.  
+Recovering from wounds is a Vitality check of DC 7 + 1 for each wound being recovered. Recovering spell slots is a DC check of the relevant magic skill 7 + 1 for each spell slot recovered. Players might also attempt to repair an item (including Armor) or read a book.  
 
 Players take turns attempting their respective checks. Order is either determined by the players themselves or the last played initiative order. The GM determines the DC for each novel goal. 
 
@@ -170,7 +202,7 @@ Deck of Adventure offers both premade characters `LINK NEEDED` and a completely 
 - Affinities are special features, boons or strengths, that cost 1 or 2 points.
 - Spells can have minor or major effects, and cost 1 or 2 points accordingly.
 
-For a full set of character creation options, see our Character Creation document `LINK NEEDED`.
+For a full set of character creation options, see our [Character Creation document](03_CharacterCreation.md).
 
 ## Starting your adventure
 
@@ -185,4 +217,4 @@ To prepare for your first time playing, keep in mind...
 
 1. **Schedules:** Regular meetings help your group stay on track, and the action moving forward. 
 2. **Getting on the same page:** A good ‘first’ session discussion topic is the story ahead, including preferences and topics players wish to avoid. Next, players should propose a character (idea or complete) to their GM. The GM may offer feedback to help your character better fit the setting ahead, or offer inspiration on a more complete backstory that fits the world. They will help you create your Character Sheet before the first official session of play. 
-3. Players can prepare by knowing their character sheet, to be as quick as possible in their decision making. Premade characters are designed around common archetypes that the GM can always help you understand. Custom characters are in your hands, and your's to remember.
+3. Players can prepare by knowing their character sheet, to be as quick as possible in their decision making. Premade characters are designed around common Archetypes that the GM can always help you understand. Custom characters are in your hands, and your's to remember.

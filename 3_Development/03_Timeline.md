@@ -9,3 +9,5 @@ This document collects the immediate goals in development.
 - [ ] Generate standard Character Creation principles, with 4 exemplar sheets.
 - [ ] Playtest 4 standard characters with trusted informants, and incorporate feedback.
 - [ ] Generate to custom character creation template with automation tools (e.g., spreadsheet formulas).
+- [ ] Generate character creation wizard
+- [ ] Commission Artwork for a Pelagian deck of cards

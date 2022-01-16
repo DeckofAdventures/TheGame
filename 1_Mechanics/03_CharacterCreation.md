@@ -6,11 +6,27 @@ First, choose where your character is coming from including your lived experienc
 
 ## Choose Your Archetype
 
-Your Archetype describes how your character navigates challenges. While a Knight might apply force, a Mage might find a more magical solution. Choosing an Archetype grants you access to specific upgrades, called Affinities. Each Archetype has a skill they use to attack in combat (e.g., Brute Strength or Knowledge). You can switch your Archetype later on, but must forfeit Affinities with that prerequisite in exchange for the points previously spent.
+Your Archetype describes how your character navigates challenges. While a Knight might apply force, a Mage might find a more magical solution. Choosing an Archetype grants you access to specific upgrades, called Affinities. Each Archetype has a skill they use to attack in combat (e.g., Brute Strength or Knowledge). You can switch your Archetype later on, but must forfeit Affinities with that prerequisite in exchange for the points previously spent. 
+
+## Choose your Primary Suit
+
+Archetypes come primary suit suggestions, but this can be changed at each level-up.
+
+- Diamonds♦️ : Fire  🔥, Offense    🤛
+- Clubs   ♣️ : Earth 🪨, Defense    🛡
+- Hearts  ♥️ : Water 💧, Life       ❤️‍🩹
+- Spades  ♠️ : Air   💨, Technology ⚡️
+
+Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit that increases with level (+1 at level 2). Second, they gain one of the following abilities that can be used a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection.
+
+- Diamonds♦️ : Fire or Offense Dealers have explosive damage but they reun out of gas really fast. They can choose to 'burn' up to 3 cards to add to their attack draw. 
+- Clubs   ♣️ : Earth or Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their AC.
+- Hearts  ♥️ : Water or Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'drown' up to 3 cards and add that number to their ally's draw.
+- Spades  ♠️ : Air or Technology Dealers have a special intutition and can take brief glimpses into the future. They can choose to 'blow' up to 3 cards to look at following cards in their action deck, equal to the number discarded. They return the viewed cards to their deck in the same order as before. 
 
 ## Choose Your Affinities
 
-Affinities are your way of amplifying your character’s power both on and off the battlefield. These are additional perks and benefits to wielding certain types of weapons and magic and have both mechanical and roleplay implications. Some Affinities require a specific Archetype. prerequisite levels or relevant Attribute/Skill Modifiers.
+Affinities are your way of amplifying your character’s power both on and off the battlefield. These are additional perks and benefits to wielding certain types of weapons and magic and have both mechanical and roleplay implications. Some Affinities require a specific Archetype, prerequisite levels or relevant Attribute/Skill Modifiers.
 
 ## Choose Your Vulnerabilities
 
