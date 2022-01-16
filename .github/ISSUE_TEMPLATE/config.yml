@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: DataJoint Contribution Guideline
+    url: https://github.com/DeckofAdventure/beta/blob/main/CONTRIBUTING.md
+    about: Please make sure to review the Deck of Adventure Contribution Guidelines
