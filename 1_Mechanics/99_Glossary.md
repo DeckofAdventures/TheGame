@@ -1,9 +1,9 @@
 # Glossary
 - [AC, Armor class](01_PlayerGuide_Full.md#Health-and-Armor): How difficult is it to wound this thing during a combat Check?
-- [Affinitiy](03_CharacterCreation#Choose-Your-Affinities): Boons or special abilities granted to a Dealer.
+- [Affinity](03_CharacterCreation#Choose-Your-Affinities): Boons or special abilities granted to a Dealer.
 - [Archetype](03_CharacterCreation#Choose-Your-Archetype): General descriptor of a character role (e.g., Mage, Fighter). Some Affinities have Archetype prerequisites.
 - [Attribute](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): Major skill domain, each with associated motifier adding to related Skills.
-- [Bystander](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Less powerfull non-player character.
+- [Bystander](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Less powerful non-player character.
 - [Check](01_PlayerGuide_Full.md#Making-a-Check): Card-draw to determine an unknown outcome. A Modifier is added to the value drawn.
 - [Companions](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Side-kick or pet for a Dealer.
 - [DC, Difficulty class/level](01_PlayerGuide_Full.md#Making-a-Check): How are is it to do this thing during a check?

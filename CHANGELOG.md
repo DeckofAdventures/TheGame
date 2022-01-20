@@ -11,12 +11,14 @@ Deck of Adventure adopts conventions outlined by [Semantic Versioning](https://s
 While untracked edits may change individual pages and patches may systematically change multiple pages, minor and major versions will be accompanied by descriptors detailing the nature of these changes.
 
 
-## [0.1.0b0] - Unreleased
+## [0.0.0b0] - Unreleased
 + First beta release
 ### Added/Removed/etc.
 
-## [0.1.0a1] - 2022-01-14
+## [0.0.0a1] - 2022-01-14
 + Began porting notes to GitHub
++ Added primary suit feature
++ Further additions pending work on spells and backgrounds
 
-## [0.1.0a0] - 2021-12-10
+## [0.0.0a0] - 2021-12-10
 + Started discussions and drafts

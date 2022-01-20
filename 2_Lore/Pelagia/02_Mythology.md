@@ -21,7 +21,7 @@ Description: Symbolizing the world we live on, all elements in one godly body, t
 - Lucios
    - Alternate Names: Lady Luck
    - Historic Names: Loki
-Description: Appears as a Red Daemon Folk, with black horns and a bright smile. Often symbolized and    - referenced alongside playing cards, dice, and other games of chance.
+Description: Appears as a Red Planetouched, with black horns and a bright smile. Often symbolized and    - referenced alongside playing cards, dice, and other games of chance.
    - Domain: Luck/Chance
    - Element Association: Luck 🍀, Wild 🃏
    - Worshipers:

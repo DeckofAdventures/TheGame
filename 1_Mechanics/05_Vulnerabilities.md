@@ -5,7 +5,7 @@
    - Mechanic
    - Prerequisites
    - Tags
-- Name: Chaotic Familiar
+- Name: Chaotic Companion
    - Description: You and your companion don’t always get along, sometimes they don’t do exactly what you ask.
    - Mechanic: When you draw a card to command your companion, the DM gains control of the companion temporarily on cards below 3 (minor) or 4 (major)
    - Prerequisites: Beast Bond Affinity
@@ -22,7 +22,7 @@
    - Tags:
 - Name: Frail Form
    - Description: Through age, birth, or accident, your body is different from others’ and you find it hard to keep up.
-   - Mechanic: When you take this Vulnerability, your combat speed is reduced by half. When making a check to traverse terrain, draw two cards and select the lower value.
+   - Mechanic: When you take this Vulnerability, your combat speed is reduced by two squares. When making a check to traverse terrain, draw two cards and select the lower value.
    - Prerequisites:
    - Tags:
 - Name: No Mercy

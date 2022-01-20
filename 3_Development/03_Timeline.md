@@ -2,7 +2,7 @@
 
 This document collects the immediate goals in development.
 
-- [ ] Move notes to GitHub, establish policies for revisions.
+- [X] Move notes to GitHub, establish policies for revisions.
 - [ ] Try comparable systems as research.
 - [ ] Generate full set of core mechanics, excluding Character Creation.
 - [ ] Playtest core mechanics with trusted informants, and incorporate feedback.

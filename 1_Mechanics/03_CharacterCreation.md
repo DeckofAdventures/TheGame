@@ -17,12 +17,12 @@ Archetypes come primary suit suggestions, but this can be changed at each level-
 - Hearts  ♥️ : Water 💧, Life       ❤️‍🩹
 - Spades  ♠️ : Air   💨, Technology ⚡️
 
-Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit that increases with level (+1 at level 2). Second, they gain one of the following abilities that can be used a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection.
+Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit. This modifier increases with level (+1 at level 2). Second, they gain one of the following abilities that can be used a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection. The number of cards drawn in this manner serves as an additional modifier on a check before the outcome is known.
 
-- Diamonds♦️ : Fire or Offense Dealers have explosive damage but they reun out of gas really fast. They can choose to 'burn' up to 3 cards to add to their attack draw. 
-- Clubs   ♣️ : Earth or Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their AC.
+- Diamonds♦️ : Fire or Offense Dealers have explosive damage but they reun out of gas really fast. They can choose to 'burn' up to 3 cards to add to their own attack draw. 
+- Clubs   ♣️ : Earth or Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their own AC until the start of their next turn.
 - Hearts  ♥️ : Water or Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'drown' up to 3 cards and add that number to their ally's draw.
-- Spades  ♠️ : Air or Technology Dealers have a special intutition and can take brief glimpses into the future. They can choose to 'blow' up to 3 cards to look at following cards in their action deck, equal to the number discarded. They return the viewed cards to their deck in the same order as before. 
+- Spades  ♠️ : Air or Technology Dealers float around the battlefield and may deploy distractions against their enemies. They can 'blow' up to 3 cards and subtract that number from an enemy draw.
 
 ## Choose Your Affinities
 
@@ -40,4 +40,4 @@ Both at character creation and at the GM's discretion for level ups, you are awa
 
 You can adjust your Skills and Attributes using your Experience Points, which will help define how capable your character for relevant actions. On initial character creation, additional points can be gained from reducing modifier up to `X` for Attributes and `Y` for skills. Once these are set, a player may only add newly awarded Experience points.
 
-All Attributes start at a +0 modifier. This modifier adds to all relevant skills. Raising an Attribute by 1 initially costs 2 Experience Points, but becomes more costly as you add. All Skills start at a -2 modifier. Raising a Skill by 1 costs 1 Experience Point, but becomes more costly as you add. Modifier maximums are regulated by skill level.
+All Attributes and Skills start at a +0 modifier. The Attribute modifier adds to all relevant Skills. Raising an Attribute by 1 initially costs 2 Experience Points, but becomes more costly as you add. Raising a Skill by 1 costs 1 Experience Point, but becomes more costly as you add. Modifier maximums are capped according to character level (e.g., maximum +4 at level 1).

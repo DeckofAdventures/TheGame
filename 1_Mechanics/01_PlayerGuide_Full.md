@@ -32,14 +32,14 @@
 
 A game system provides all of the rules, mechanics, and story-telling devices that are used to describe how characters interact with the world during a session. During a game session, a Game Master (GM) uses the rules laid out in a game system to set the stage for a narrative that all players collectively move forward. Moment-to-moment, the GM presents a scenario and players respond by attempting actions, either specified by the game system or wholly invented. The GM determines a player’s success and failure, and guides the group in a meaningful way. 
 
-Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventure and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventure sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventure just asks you to draw from your deck.
+Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventure and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventure sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventure just asks you to draw a card from your deck.
 
 ## Guiding Principles
 
 In times of uncertainty, defer to the following:
 
 1. Have fun.
-2. The Game Master (GM) is both the narrator and referee. They work to ensure the entire group has fun. They have the final say of rulings at the table. 
+2. The Game Master (GM) is both the narrator and referee. They work to ensure the entire group has fun. They have the final say of rulings at the table and will work to try and resolve disputes between players that may come up.
 
 ## The Action Deck
 
@@ -62,7 +62,7 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
 
 ### Attributes, Skills, and Modifiers
 
-1. Attributes are general domains that collectively make up a characters strengths and weaknesses: Dexterity, Strength, Intuition, Intelligence, Conviction, and Vitality.
+1. Attributes are general domains that collectively make up a characters strengths and weaknesses: Agility, Strength, Intuition, Intelligence, Conviction, and Vitality.
 2. Skills are specific to an Attribute. Athletics is a Strength skill, but Persuasion is a Conviction skill.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain, and are expressed as +/- modifiers ranging anywhere from -2, to +X. Modifiers are added to the total of the card drawn when making any check relevant to that Attribute or Skill. 
 4. When the GM asks a player to draw a card, they may announce the corresponding skill. The player reports the card’s value with corresponding modifier. Totals above 10 can either be reported as number value or face card value (J 11; Q 12; K 13; A 14).
@@ -96,7 +96,7 @@ Complete list:
 
 1. Dealers. All player characters, and some in-game characters. They...
    1. Can use Spells, take Affinities and Vulnerabilities.
-   2. Have 3 health points.
+   2. Have 3 health points (HP).
    3. Can receive and use Fate Cards.
 2. Bystanders. All other characters. They...
    1. Are weaker than Dealers
@@ -148,7 +148,7 @@ GMs may provide grided maps to help players visualize the situation. On a square
 On a turn, a character may (a) move, and (b) perform action(s) in any order they choose. Each turn represents 6 seconds of game time passing.
 
 1. **Movement** Character speed is equal to 6 spaces ± Agility modifier. The total may be split to occur before, after, and/or between actions.
-2. **Actions** Players may choose to perform up to three actions and must declare the number before taking their first. One action is made without penalty. Additional actions are made at either -2 (for two) or -4 (for three) penalty. Each action has a card draw associated with it.
+2. **Actions** In addition to their movement, players can perform up to two actions each turn. The first action is made without penalty. If players choose to make a second action, the associated check is made at a -4 penalty.
 3. **Standard Attacks:** Spells and other character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
 4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, applying a Skill Modifier as specified by the spell or action.
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Reflexes.
