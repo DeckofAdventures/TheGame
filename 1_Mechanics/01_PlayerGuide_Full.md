@@ -1,4 +1,4 @@
-# Deck of Adventure Core Mechanics
+# Deck of Adventures Core Mechanics
 
 ## Full Player's Guide
 
@@ -32,7 +32,7 @@
 
 A game system provides all of the rules, mechanics, and story-telling devices that are used to describe how characters interact with the world during a session. During a game session, a Game Master (GM) uses the rules laid out in a game system to set the stage for a narrative that all players collectively move forward. Moment-to-moment, the GM presents a scenario and players respond by attempting actions, either specified by the game system or wholly invented. The GM determines a player’s success and failure, and guides the group in a meaningful way. 
 
-Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventure and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventure sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventure just asks you to draw a card from your deck.
+Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when starting an adventure and different game systems are better for different things. Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds Adventure Edition (SWADE); rules, supplements, and other materials for game systems can be found in published volumes and elsewhere online. Deck of Adventures sets itself apart by swapping out dedicated many-sided dice for a standard deck of playing cards. While other TTRPGs rely on using dice to determine the results of an uncertain action, Deck of Adventures just asks you to draw a card from your deck.
 
 ## Guiding Principles
 
@@ -43,7 +43,7 @@ In times of uncertainty, defer to the following:
 
 ## The Action Deck
 
-Deck of Adventure is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A) across 4 suits, without Jokers. 
+Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A) across 4 suits, without Jokers. 
 
 1. To take any action, draw one card (or multiple at the GM's request) from your Action Deck. 
 2. Kings and Aces are Fate Cards and should be reserved in your hand. All other cards go directly into a discard pile. 
@@ -134,7 +134,7 @@ When the GM calls for a Check, they will specify the relevant Attribute or Skill
 
 ### In Combat
 
-Some stories involve hostile forces that will threaten players with violence. The GM decides when Combat begins and then a separate set of rules take effect. Combat in Deck of Adventure is designed to be fast-paced, while leaving a lot of room for player teamwork and creativity. To keep up the pace, players should be sure to study their character sheets and know their options ahead of combat, and use others’ turns to make their choices. 
+Some stories involve hostile forces that will threaten players with violence. The GM decides when Combat begins and then a separate set of rules take effect. Combat in Deck of Adventures is designed to be fast-paced, while leaving a lot of room for player teamwork and creativity. To keep up the pace, players should be sure to study their character sheets and know their options ahead of combat, and use others’ turns to make their choices. 
 
 GMs may provide grided maps to help players visualize the situation. On a square grid, moving diagonally counts as one space unless otherwise ruled by the GM.
 
@@ -193,7 +193,7 @@ Players take turns attempting their respective checks. Order is either determine
 
 ## Character Creation
 
-Deck of Adventure offers both premade characters `LINK NEEDED` and a completely customizable process. Consult with your GM for information about the setting and what skills will be relevant for the story ahead. Custom creation starts with spending Experience Points on Attributes, Skills, Affinities, Vulnerabilities and/or Skills. 
+Deck of Adventures offers both premade characters `LINK NEEDED` and a completely customizable process. Consult with your GM for information about the setting and what skills will be relevant for the story ahead. Custom creation starts with spending Experience Points on Attributes, Skills, Affinities, Vulnerabilities and/or Skills. 
 
 - Attributes cost more, but also increase corresponding skills.
 - Spending points has diminishing returns. Going from 0 to +1 is relatively cheap, but +3 to +4 will take many more points.
@@ -206,12 +206,12 @@ For a full set of character creation options, see our [Character Creation docume
 
 ## Starting your adventure
 
-There are four steps to starting an adventure of Deck of Adventure:
+There are four steps to starting an adventure of Deck of Adventures:
 
-1. **Find a group:** Deck of Adventure requires as few as two people, one Game Master (GM) and one player, but richer stories can be told with more people bringing more to the table. Join the Deck of Adventure Discord Server `LINK NEEDED` to find a group! 
+1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master (GM) and one player, but richer stories can be told with more people bringing more to the table. Join the Deck of Adventures Discord Server `LINK NEEDED` to find a group! 
 2. **Discuss play style:** Different players and GMs will have different preferences. Some love light-hearted misadventures, others enjoy dark melodrama. Some stories involve political intrigue, traditional dungeon crawling, reuniting lost lovers, or eldritch horrors. Consult with your group to match preferences. A GM should always be able to give hints, and take feedback on topics preferred or to be avoided.
-3. **Choose your adventure:** You can choose to run one of Deck of Adventure’s standard adventures (Modules) or in the Deck of Adventure Starter Kit. The mechanics described here should be flexible to accommodate any story you want to tell, and GMs are invited to make modifications to fit their setting. 
-4. **Pick a time and place:** Deck of Adventure is designed to be as fun played in-person as it is online, so if you want to meet online we recommend using Roll20 because of the ability to draw virtual cards easily. 
+3. **Choose your adventure:** You can choose to run one of Deck of Adventures’s standard adventures (Modules) or in the Deck of Adventures Starter Kit. The mechanics described here should be flexible to accommodate any story you want to tell, and GMs are invited to make modifications to fit their setting. 
+4. **Pick a time and place:** Deck of Adventures is designed to be as fun played in-person as it is online, so if you want to meet online we recommend using Roll20 because of the ability to draw virtual cards easily. 
 
 To prepare for your first time playing, keep in mind...
 

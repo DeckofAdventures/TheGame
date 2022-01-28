@@ -1,26 +1,19 @@
 ---
-name: Bug report
+name: Minor Fix
 about: Create a report to help us improve
 title: ''
-labels: 'bug'
+labels: 'minor'
 assignees: ''
 
 ---
 
-## Bug Report
-A bug report in this context is a clear inconsistency in the mechanics or lore; these are either rules that are misaligned, or canonical pieces of lore that appear to conflict.
+## Minor fix
+A minor fix is a typo or grammatical error, contained to a sentence or two.
 
 ### Mechanics or Lore?
 
 ### Description
-Please provide two or more links and quotes from the official Deck of Adventures repository and a brief description of the inconsistency. Please link to specific line numbers (e.g., `github.com/DeckofAventure/beta/blob/main/README.md#L1-L2`)
+Please provide one or more links from the official Deck of Adventures repository and a brief description of the issue in need of fixing. Please link to specific line number(s) (e.g., `github.com/DeckofAventure/TheGame/blob/main/README.md#L1-L2`)
 
 ### Suggested resolution (optional)
 Developers invite your input. How would you propose to resolve this conflict?
-
-### Additional Context
-Add any additional context that was considered in creating this report.
-
-For example:
-- Related GitHub issues and PRs.
-- Comperable game systems, and their development history.

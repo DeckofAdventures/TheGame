@@ -11,3 +11,14 @@ This document collects the immediate goals in development.
 - [ ] Generate to custom character creation template with automation tools (e.g., spreadsheet formulas).
 - [ ] Generate character creation wizard
 - [ ] Commission Artwork for a Pelagian deck of cards
+
+Character Creation: Options up to level 3
+Character Creation: Options that make archetype feel like a meaningful choice
+Character Creation: How many points at start/per level?
+Spells: list of 10
+Spells: major/minor for each
+Spells: Restrict by Archetype
+Archetypes: who can and can't access spells
+Documentation: ReadTheDocs setup
+Documentation: PR that pluralizes adventures
+VTT: Foundry custom character sheet

@@ -2,7 +2,7 @@
 
 ## Choose Your Background
 
-First, choose where your character is coming from including your lived experiences that would motivate adventuring. Classically, this is a racial or species origin (e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. Deck of Adventure offers many more backgrounds to choose from that could inspire your core concept. This has no inherent mechanical impact, but may shape how your character navigates challenges. Growing up at a seaport or a Dwarf, your character might be more adept at sailing or masonry (i.e., certain skill checks) than others.
+First, choose where your character is coming from including your lived experiences that would motivate adventuring. Classically, this is a racial or species origin (e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. Deck of Adventures offers many more backgrounds to choose from that could inspire your core concept. This has no inherent mechanical impact, but may shape how your character navigates challenges. Growing up at a seaport or a Dwarf, your character might be more adept at sailing or masonry (i.e., certain skill checks) than others.
 
 ## Choose Your Archetype
 

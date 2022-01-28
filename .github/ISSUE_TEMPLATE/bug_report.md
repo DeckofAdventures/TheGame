@@ -13,7 +13,7 @@ A bug report in this context is a clear inconsistency in the mechanics or lore; 
 ### Mechanics or Lore?
 
 ### Description
-Please provide two or more links and quotes from the official Deck of Adventures repository and a brief description of the inconsistency. Please link to specific line numbers (e.g., `github.com/DeckofAventure/beta/blob/main/README.md#L1-L2`)
+Please provide two or more links and quotes from the official Deck of Adventuress repository and a brief description of the inconsistency. Please link to specific line numbers (e.g., `github.com/DeckofAventure/TheGame/blob/main/README.md#L1-L2`)
 
 ### Suggested resolution (optional)
 Developers invite your input. How would you propose to resolve this conflict?

@@ -1,4 +1,4 @@
-# Deck of Adventure Core Mechanics
+# Deck of Adventures Core Mechanics
 
 ## Quick-Start Guide
 

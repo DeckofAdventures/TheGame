@@ -2,7 +2,7 @@
 
 ## General
 
-Deck of Adventure adopts conventions outlined by [Semantic Versioning](https://semver.org/): Major:Minor:Patch. As much of this convention is specific to software development, we make the following general adjustments.
+Deck of Adventures adopts conventions outlined by [Semantic Versioning](https://semver.org/): Major:Minor:Patch. As much of this convention is specific to software development, we make the following general adjustments.
 
 1. MAJOR versions are for significant changes that may not be backwards compatible.
 2. MINOR versions add new features that are backwards compatible.

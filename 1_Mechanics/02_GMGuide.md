@@ -21,7 +21,7 @@ If you’ve been a Game Master elsewhere and are hoping to learn about what’s 
 
 —
 
-## Running a Session with Deck of Adventure
+## Running a Session with Deck of Adventures
 
 ### Successes and Failures
 
