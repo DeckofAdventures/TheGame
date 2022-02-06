@@ -1,0 +1,170 @@
+# Powers
+
+- Name: (Template)
+   - Description:
+   - Resource:
+   - Mechanic:
+   - Prerequisites:
+   - Tags:
+   
+- Name: Aces Wild
+   - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
+   - Resource: Simple
+   - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
+      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single action - even if you already went that round
+      - Ace of Diamonds: As an action, you recover 2 Power Points OR each member of your party recovers 1 Point 
+      - Ace of Hearts: As an action, you can heal one Health Point for yourself or an ally within 3 squares
+      - Ace of Spades: As an action, you can strike an enemy with an automatic hit with a Power of your choosing 
+   - Prerequisites: Level 3
+   - Tags: Fate Cards 🃏
+- Name: Attack, Weapon
+   - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
+   - Resource: Simple
+   - Mechanic: As an action in combat, you can make check to attack an Enemy. This may be performed while under the effects of another Power.
+   - Prerequisites: Skill: Finesse or Brute > 0
+   - Tags:
+- Name: Attack, Mystic
+   - Description: You've been trained in some for of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of enery at range.
+   - Resource: Simple
+   - Mechanic: As an action in combat, you can make check to attack an Enemy. This may be performed while under the effects of another Power.
+   - Prerequisites: Skill: Knowlege or Craft > 0
+   - Tags:
+- Name: Calculating
+   - Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
+   - Resource: Simple
+   - Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation. You spend 1 Power Point as you focus. Depending on your description, the GM may reveal the DC of the related check in approximate (e.g., above 10) or exact terms (e.g., DC or 10).
+   - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
+   - Tags: Difficulty Prediction
+- Name: Critical Master
+   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+   - Resource: Simple
+   - Mechanic: When delivering a critical hit, enemies no longer get to make a contested check against you. All critical hits now Stun a Dealer or Knock Out a Bystander
+   - Prerequisites: Level 3
+   - Tags:
+- Name: Creature Connection
+   - Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). On a long rest you can attune to an animal as a Companion.
+   - Resource: Simple
+   - Mechanic: On a long rest, you attempt to connect with a creature in the world to take them as a Companion. The GM determines if this attempt was successful.
+   - Prerequisites: 
+      + Skill requirement: Craft or Knowledge > 1
+   - Tags: Companion
+- Name: Creature Link
+   - Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
+   - Resource: Simple
+   - Mechanic: Some checks can now be made through your Companion using their Skills and Attributes.
+   - Prerequisites: 
+      + Level 2
+      + Power: Creature Connection
+   - Tags: Companion
+- Name: Creature Mastery
+   - Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power. On a long rest, you train/modify your Companion to improve their skills.
+   - Resource: Simple
+   - Mechanic: Your Companion gains one Health Point and +1 to attack Draws
+   - Prerequisites: 
+      + Level 2
+      + Power: Creature Connection
+   - Tags: Companion
+- Name: Fated Connection
+   - Description: Your Power towards a chosen suit has increased in strength. You can now control Fate when drawing a card from this suit.
+   - Resource: Major
+   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be played or discarded immediately.
+   - Prerequisites: Level 3
+   - Tags: Fate Cards 🃏
+- Name: Fated Draw
+   - Description: Your connection to the Fates is heightened and you feel you can shift the odds in your favor.
+   - Resource: Major
+   - Mechanic: When making a check, you can draw up to 3 cards and choose which of them to use for the check. You then must discard the remaining drawn cards. 
+   - Prerequisites: Level 3
+   - Tags:
+- Name: Favored by the Gods
+   - Description: You have a deep connection with a God of Pelagia who shines their blessings on your during times of need.
+   - Resource: Major
+   - Mechanic: You can exchange a fate card as an automatic success, without redrawing.
+   - Prerequisites: 
+      + Level 2
+      + Primary Skill: Any Intuituion Skill
+   - Tags: Fate Cards 🃏
+- Name: Find Weakness
+   - Description: You can size up an opponent and discover their weaknesses.
+   - Resource: Simple
+   - Mechanic: As an action, you can make an Intuition/Detection check (whichever modifier is higher) to discover an opponents vulnerability. On a DC 7 you learn one vulnerability and on a crit (DC 11+) you learn all vulnerabilities.
+   - Prerequisites: Level 2
+   - Tags: Difficulty Prediction
+- Name: Focused
+   - Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
+   - Resource: Simple
+   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous task that involves that skill, you draw 2 cards and select the higher value. During this time, you also have the Unattentive Vulnerability and are also unable to percieve the world outside this task. Draw 2 cards and select the lowest for any unrelated Skill.
+   - Prerequisites:
+   - Tags:
+- Name: Handy
+   - Description: You know how to work with your hands (e.g., machining, lock picking, tailoring).
+   - Resource: Simple
+   - Mechanic: Work with your GM to decide a trade with which your character is familiar. When making a check to to perform this craft, draw two cards and select the higher value.
+   - Prerequisites:
+      + Skill requirement: Craft or Knowledge > 1
+   - Tags: Combat
+- Name: Heal
+   - Description: Can channel magical energy or medical training to heal others
+   - Resource: Minor or Major
+   - Mechanic: Heal another character for 1/2 (Minor/Major) Health Points
+   - Prerequisites: Role: Support
+   - Tags:
+- Name: Keen Eye
+   - Description: You’re especially adept at taking in the world around you.
+   - Resource: Simple
+   - Mechanic: When you make a check to observe the world around you (visual, auditory or olfactory), draw two cards and select the higher value.
+   - Prerequisites:
+   - Tags: 
+- Name: Luck
+   - Description: Not everything goes your way, but for one reason or another, you seem to avoid the worst.
+   - Resource: Simple
+   - Mechanic: Can use a held Ace Fate Card to turn a Critical Failure into a minor success. If taken a second time, you may use either Ace or King.
+   - Prerequisites:
+   - Tags:
+- Name: Momentum 
+   - Description: By brute strength, force others to move around the battlefield. 
+   - Resource: Free
+   - Mechanic: As an Action, attempt to move a character withing 1 space during your movement. If the character is unwilling, this is a contested Brute vs. Finesse or Athletics check. On a failure, you may place the character within 1 square of you at the end of your movement.
+   - Prerequisites: 
+      + Role: Defender
+      + Skill: Brute > 1
+   - Tags:
+- Name: Momentum Aura
+   - Description: Your strength is supernatural, bending the gravity around you.
+   - Resource: Free
+   - Mechanic: Your Momentum ability extends to 3 spaces.
+   - Prerequisites: 
+      + Power: Momentum
+      + Role: Defender
+      + Skill: Brute > 1
+   - Tags:
+- Name: Multipowered
+   - Description: 
+   - Resource: Simple
+   - Mechanic: Select another Suit Mechanic from the Primary Suit list. You gain the ability to discard cards, but no additional modifier. You may not take this Power more than once. Unlike other Simple Powers, this Power costs 2 XP.
+   - Prerequisites: Level 3
+   - Tags:
+- Name: Scrying
+   - Description: Your intuition is heightened and you can anticipate moments coming in the near future. Your connection to this divine sense has strengthened.
+   - Resource: Minor
+   - Mechanic: You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again.
+   - Prerequisites: Level 2
+   - Tags: Card Viewing 👀
+- Name: Shield
+   - Description: Fortify yourself even further, adjusting your shield or summoning magical armor. 
+   - Size: Minor or Major
+   - Mechanic: Add +1/2 (Minor/Major) to a creature's AC until the end of their next turn.
+   - Prerequisites: Role: Support or Defender
+   - Tags:
+- Name: Specialist (e.g., Pyromaniac)
+   - Description: You are closely attuned to a specific domain and you can’t help yourself when using it. You can get a little carried away, sometimes.
+   - Resource: Simple
+   - Mechanic: When pulling a a suit of your choosing, you get a +1 on a check, however you also gain the Specialist Vulnerability which means when drawing a different suit of your choosing, you get a -1 on a check. This Power can be taken up to 3 times, increasing the value by 1 each time.
+   - Prerequisites: Level 2
+   - Tags: Vulnerability 
+- Name: Speedy
+   - Description: You’re quicker than the rest.
+   - Resource: Simple
+   - Mechanic: When you take this Power, your combat speed increases by 2 squares.
+   - Prerequisites:
+   - Tags: Combat
