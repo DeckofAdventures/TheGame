@@ -23,11 +23,97 @@
    - Mechanic: As an action in combat, you can make check to attack an Enemy. This may be performed while under the effects of another Power.
    - Prerequisites: Skill: Finesse or Brute > 0
    - Tags:
+- Name: Attack, Charge
+   - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
+   - Resource: Minor or Major
+   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 (Minor/Major) to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
+   - Prerequisites: 
+      + Power: Attack, Weapon
+      + Role: Defender
+   - Tags:
+- Name: Attack, Sweep
+   - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
+   - Resource: Minor or Major
+   - Mechanic: You perform you Weapon Attack on multiple characters withing 1 space. Targets must be next to one another (i.e., no non-targets between other targets). When used as a Major Power, Targets make a contested Agility check against your to-hit Draw.
+   - Prerequisites: 
+      + Power: Attack, Weapon
+      + Role: Martial or Defender
+   - Tags:
+- Name: Attack, Vengeance 
+   - Description: Ever the protector on the field, you leap at the chance to avenge an ally.
+   - Resource: Minor or Major
+   - Mechanic: When you see an ally hit after your turn, you may take 1/2 (Minor/Major) Weapon Attacks against the attacker without penalty. All other actions made when using this Power incur an additional -2 penalty.
+   - Prerequisites: 
+      + Power: Attack, Weapon
+      + Role: Defender
+   - Tags:
 - Name: Attack, Mystic
    - Description: You've been trained in some for of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of enery at range.
    - Resource: Simple
    - Mechanic: As an action in combat, you can make check to attack an Enemy. This may be performed while under the effects of another Power.
    - Prerequisites: Skill: Knowlege or Craft > 0
+   - Tags:
+- Name: Attack, Mystic Aura
+   - Description: You deploy resources to channel your magic all around you.
+   - Resource: Minor or Major
+   - Mechanic: You perform your Mystic Attack on all characters within 1/2 (Minor/Major) space(s).
+   - Prerequisites: 
+      + Power: Attack, Mystic
+      + Role: Caster
+   - Tags:
+- Name: Attack, Mystic Amplification 
+   - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+   - Resource: Minor
+   - Mechanic: Designate a physical weapon. You may make Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
+   - Prerequisites:
+      + Power: Attack, Mystic
+      + Role: Martial or Caster
+   - Tags:
+- Name: Attack, Mystic Cone
+   - Description: You deploy resources to channel your magic in a wide blast in front of you.
+   - Resource: Minor
+   - Mechanic: Choose one effect when you take this power:
+      + You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
+      + All characters in a 3 space cone in front of you make a contested Athletics check against your Primary Skill. On failure, they are Knocked Down
+   - Prerequisites: 
+      + Power: Attack, Mystic
+      + Role: Caster
+   - Tags:
+- Name: Attack, Mystic Confusion
+   - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
+   - Resource: Minor or Major
+   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, characters take no damage, but are Stunned.
+   - Prerequisites: 
+      + Power: Attack, Mystic
+      + Role: Support or Caster
+   - Tags:
+- Name: Attack, Mystic Entangle
+   - Description: You channel your abilities to tie your target in place.
+   - Resource: Minor or Major
+   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, target(s) are Entangled.
+   - Prerequisites: 
+      + Power: Attack, Mystic
+      + Role: Support Caster
+   - Tags:
+- Name: Attack, Mystic Deprivation 
+   - Description: You channel your abilities deprive a target of their senses.
+   - Resource: Minor or Major
+   - Mechanic: You select the Blinded or Deafened effect and make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, target(s) are under the relevant effect. Targets who do not use the relevant sense are immune to this Power.
+   - Prerequisites: 
+      + Power: Attack, Mystic
+      + Role: Support or Caster
+   - Tags:
+- Name: Barrier
+   - Description: Your skills allow you to deploy temporary impromptu walls
+   - Resource: Minor or Major
+   - Mechanic: You create a wall 3/5 (Minor/Major) wide until the end of your next turn. You may dismiss this wall at any time without an action.
+   - Prerequisites: Role: Support or Caster
+   - Tags:
+- Name: Battlecharged
+   - Description: You're always ready for something to go down.
+   - Resource: Simple
+   - Mechanic: When drawing initiative, add 2.
+   - Prerequisites:
    - Tags:
 - Name: Calculating
    - Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
@@ -64,6 +150,12 @@
       + Level 2
       + Power: Creature Connection
    - Tags: Companion
+- Name: Cunning
+   - Description: You're sharper than the rest when you take your time.
+   - Resource: Simple
+   - Mechanic: Choose one Ability. On turns when you only make 1 action using a Skill under that ability, add 1 to the relevant check. This does not add to contested checks initiated by another character.
+   - Prerequisites:
+   - Tags:
 - Name: Fated Connection
    - Description: Your Power towards a chosen suit has increased in strength. You can now control Fate when drawing a card from this suit.
    - Resource: Major
@@ -109,11 +201,56 @@
    - Mechanic: Heal another character for 1/2 (Minor/Major) Health Points
    - Prerequisites: Role: Support
    - Tags:
+- Name: Illusion
+   - Description: Your skills let you conjure illusory effects. 
+   - Resource: Minor or Major
+   - Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a contested detection check against your Primary Skill. As a Major Power, you can generate visual and auditory effects, and the check to verify draws two cards, selecting the lowest value.
+   - Prerequisites: Role: Caster
+   - Tags:
 - Name: Keen Eye
    - Description: You’re especially adept at taking in the world around you.
    - Resource: Simple
    - Mechanic: When you make a check to observe the world around you (visual, auditory or olfactory), draw two cards and select the higher value.
    - Prerequisites:
+   - Tags: 
+- Name: Lend Aid
+   - Description: Just a little help from a friend
+   - Resource: Simple
+   - Mechanic: Designate one ally who, on their next draw, will draw 2 cards and choose which to use for the check. The other card is discarded.
+   - Prerequisites: Role: Support
+   - Tags:
+- Name: Lend Distraction
+   - Description: Just an annoyance in the distance
+   - Resource: Simple
+   - Mechanic: Designate a character who, on their next draw, will draw 2 cards and use the lesser value. The other card is discarded
+   - Prerequisites: 
+   - Tags:
+- Name: Lend Confusion
+   - Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
+   - Resource: Minor or Major
+   - Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character can make Conviction check (DC 5 + your Primary Skill modifier) to undo the effect. As a Major effect, this character is prevented from using Fate Cards.
+   - Prerequisites: 
+      + Level 2
+      + Power: Lend Distraction
+      + Role: Support or Caster
+   - Tags: 
+- Name: Lend/Remove Skill
+   - Description: You really know how to target an ability and either support it or get in it's way.
+   - Resource: Minor or Major
+   - Mechanic: Designate a character to Boost or Reduce and a Skill (or action that would require a Skill such as Attack). This character recieves an additional 1/2 (Minor Major) positive or negative modifier to Draws that involve this Skill.
+   - Prerequisites: Role: Support
+   - Tags:
+- Name: Lend Readiness
+   - Description: Your talents bolster you allies' speed and alertness.
+   - Resource: Minor
+   - Mechanic: Select one character. Until the end of the next combat, this character draws 2 cards for initiative uses the higher value, discarding the other. This effect is maintained even if you use another Power.
+   - Prerequisites: Role: Support
+   - Tags: 
+- Name: Lend Vigor
+   - Description: Channel energy to do more than help: inspire! 
+   - Resource: Minor or Major
+   - Mechanic: Designate 1/2 (Minor/Major) character(s) who, on their next turn, can take an additional action without penalty and move 2 additional spaces during their movement.
+   - Prerequisites: Role: Support or Caster
    - Tags: 
 - Name: Luck
    - Description: Not everything goes your way, but for one reason or another, you seem to avoid the worst.
@@ -143,7 +280,7 @@
    - Resource: Simple
    - Mechanic: Select another Suit Mechanic from the Primary Suit list. You gain the ability to discard cards, but no additional modifier. You may not take this Power more than once. Unlike other Simple Powers, this Power costs 2 XP.
    - Prerequisites: Level 3
-   - Tags:
+   - Tags: Suit Mechanic
 - Name: Scrying
    - Description: Your intuition is heightened and you can anticipate moments coming in the near future. Your connection to this divine sense has strengthened.
    - Resource: Minor
@@ -162,9 +299,43 @@
    - Mechanic: When pulling a a suit of your choosing, you get a +1 on a check, however you also gain the Specialist Vulnerability which means when drawing a different suit of your choosing, you get a -1 on a check. This Power can be taken up to 3 times, increasing the value by 1 each time.
    - Prerequisites: Level 2
    - Tags: Vulnerability 
+- Name: Speed of the Wind
+   - Description: You float about the battlefield like no other, as if walking on air.
+   - Resource: Simple
+   - Mechanic: Discard up to 3 cards as an action a number of times equal to your level per long rest. Each card discarded is an addition 2 spaces of movement. To take this power, your must forfeit one other Suit Mechanic.
+   - Prerequisites: 
+      + Level 2
+      + Role: Martial
+   - Tags: Suit Mechanic
 - Name: Speedy
    - Description: You’re quicker than the rest.
    - Resource: Simple
    - Mechanic: When you take this Power, your combat speed increases by 2 squares.
    - Prerequisites:
    - Tags: Combat
+- Name: Stealthy Surprise
+   - Description: An undetected assailant is particularly deadly.
+   - Resource: Simple
+   - Mechanic: If you use your movement to become hidden, choose a target and make a contested Stealth check versus their Detection. The GM does not reveal if you succeed. If successful, your next attack Draw against that target gains an additional +2
+   - Prerequisites: Skill: Stealth > 1
+   - Tags: Stealth
+- Name: Stealth in the Shadows
+   - Description: A creature of the dark, you're especially adept at going unseen.
+   - Resource: Simple
+   - Mechanic: When you make a Stealth check in dim light or darkness, you draw 2 cards and select the higher value, discarding the other.
+   - Prerequisites: Skill: Stealth > 1
+   - Tags: Stealth
+- Name: Stealth's Call
+   - Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.
+   - Resource: Minor
+   - Mechanic: An illusory mundane sound emenates from a point you can see within 10 spaces. When you make a contested Stealth check versus any characters within 4 spaces of this point, they draw with an additional -2.
+   - Prerequisites: Skill: Stealth > 1
+   - Tags: Stealth
+- Name: Stealth's Blessing
+   - Description: You channel a deep energy to go unseen.
+   - Resource: Minor or Major
+   - Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth checks are made with an additional +2. If this is used as a Major power, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
+   - Prerequisites:   
+      + Level 2
+      + Skill: Stealth > 2
+   - Tags: Stealth

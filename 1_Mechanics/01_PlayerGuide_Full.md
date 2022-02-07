@@ -157,7 +157,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 
 Some effects will impact a character over time.
 1. **Stunned** If a Dealer takes 2 or more damage in 1 hit, they make a DC 8 (+2 for each additional damage) conviction check at the start of their turn. If failed, they may either move or make one action on their turn, not both. A major failure on this check leaves the Dealer unable to act.Some creatures can cause stunning effects as part of their attacks.
-2. **Entangled** At the start of their turn, a Dealer makes a Strength check against the attribute of the creature causing the effect. If failed, they may ot move on that turn. A critical failure prevents actions requiring arm movements.
+2. **Entangled** At the start of their turn, a Dealer makes a Strength check against the attribute of the creature causing the effect. If failed, they may not move on that turn. A critical failure prevents actions requiring arm movements.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their turn, and their movement speed is halved. 
 4. **Blinded, Deafened** At the start of their turn, a Dealer makes a conviction check against the spell-casting attribute of the creature causing the effect (or DC 5 if physical effect). If failed, they take a -5 penalty to any action requiring the relevant sense.
 6. **Outnumbered** Dealers may delay their turns to co-occur with one another. For each additional character attacking the same Dealer at the same time, attack modifiers are boosted by 2.

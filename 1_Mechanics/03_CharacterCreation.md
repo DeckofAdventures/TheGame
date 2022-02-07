@@ -27,40 +27,53 @@ Your Role describes how your character navigates challenges. While a Defender mi
 
 ## Choose your Primary Suit
 
-Roles come primary suit suggestions, but this can be changed at each level-up.
+Roles come with primary suit suggestions, but this can be changed at each level-up. This won't do anything at level 1, but effects will build at level 2 and beyond.
 
 - Diamonds ♦️ : Offense    🤛
 - Clubs    ♣️ : Defense    🛡
 - Hearts   ♥️ : Life       ❤️‍🩹
 - Spades   ♠️ : Technology ⚡️
 
-Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit. This modifier increases by one on each level-up. Second, they gain one of the following Suit Mechanics that can be used a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection. The number of cards drawn in this manner serves as an additional modifier on a check before the outcome is known.
+Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit. This modifier increases by one on each level-up. Second, they gain one of the following Suit Mechanics that can be used as an action a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection. The number of cards drawn in this manner serves as an additional modifier on a check before the outcome is known.
 
 - Diamonds ♦️ : Offense Dealers have explosive damage but they reun out of gas really fast. They can choose to 'burn' up to 3 cards to add to their own attack draw. 
 - Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their own AC until the start of their next turn.
-- Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'Toss' up to 3 cards and add that number to their ally's draw.
-- Spades   ♠️ : Technology Dealers float around the battlefield and may deploy distractions against their enemies. They can 'scrap' up to 3 cards and subtract that number from an enemy draw.
-
-## Choose Your Powers
-
-Powers are your way of amplifying your character both on and off the battlefield. These are additional perks and benefits to wielding certain types of weapons and magic and have both mechanical and roleplay implications. Some Powers require a specific Role, prerequisite levels or relevant Attribute/Skill Modifiers.
-
-Each Power has two properties: Size (Minor or Major) and Resource (Free or Costly). Size determines how many XP must be spent to add this Power. Minor Powers require 1 XP and Major Powers require 2 XP. Some Powers can be either Minor or Major, and will have improved effects as a Major Power. A character with a Major version of a Power may choose to use the Minor Power equivalent, but a character with a Minor Power does not have access to the Major effect. On level-up, a player may exchange 1 XP to convert a Minor Power to the Major equivalent.
-
-Some powers require Resources. A Power is Free if it is always active, or can be used an unlimited number of times. Powers that are costly are tiresome and require Power Points to use. Your characters maximum Power Points are determined by the number of XP spent on Costly Powers. Minor Costly Powers cost 1 Power Point. Major Costly Powers cost 1 Power Point for the Minor effect, and 2 Power Points for the Major effect.
-
-Unless otherwise noted, Powers that involve an attack take one action to perform and add a Dealer's Primary Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated shield) may only be used one at a time. Using a second Power will cancel out the effects of the first.
-
-## Choose Your Vulnerabilities
-
-People are not perfect, and many have Vulnerabilities as a result of their relationship with the world. At character creation you can choose up to three Vulnerabilities, which add mechanical and roleplay implications, like being afraid of fire or unable to swim. Adding Vulnerabilities to your character will grant you additional Experience Points during character creation. Each Vulnerability added grants 1 or 2 Experience Points, but you can only gain 4 total Experience Points during character creation. A GM may overrule this limit if, for example, the events of the story result in a character gaining an additional Vulnerability.
+- Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'toss' up to 3 cards and add that number to their ally's draw.
+- Spades   ♠️ : Technology Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can 'scrap' up to 3 cards and subtract that number from an enemy draw.
 
 ## Using Experience Points
 
-Both at character creation and at the GM's discretion for level ups, you are awarded Experience Points. These can be spent to gain additional Powers, boost an Attribute, a Skill, add to the Spells you know, or remove a Vulnerability.
+Both at character creation (4) and at the GM's discretion for each level up (3), you are awarded Experience Points. These can be spent to gain additional Powers, boost an Attribute, a Skill, add to the Spells you know, or remove a Vulnerability. Total XP is equal to 1+ (level * 3).
+
+### Choose Your Powers
+
+Powers are your way of amplifying your character both on and off the battlefield. These are additional perks and benefits to wielding certain types of weapons and magic and have both mechanical and roleplay implications. Some Powers require a specific Role, prerequisite levels or relevant Attribute/Skill Modifiers.
+
+Simple, Minor and Major Powers cost 1, 1, and 2 XP respectively. A Simple Power may be passive (always in effect) or can be used an unlimited number of times. A Minor or Major Power is tiresome and requires Power Points to use. Your character gains +1 Power Points at a rate of +1 XP spent on Minor and Major Powers. A character with a Major version of a Power may choose to use the Minor Power equivalent, but a character with a Minor Power does not have access to the Major effect. On level-up, a player may exchange 1 XP to convert a Minor Power to the Major equivalent.
+
+Unless otherwise noted, Powers take one action to perform and add a Dealer's Primary Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated shield) may only be used one at a time. Using a second Power will nullify the effects of the first. Powers described as passive take no action and are always in effect. 
+
+### Choose Your Vulnerabilities
+
+People are not perfect, and many have Vulnerabilities as a result of their relationship with the world. At character creation you can choose up to three Vulnerabilities, which add mechanical and roleplay implications, like being afraid of fire or unable to swim. Adding Vulnerabilities to your character will grant you additional Experience Points during character creation. Each Vulnerability added grants 1 or 2 Experience Points, but you can only gain 4 total Experience Points during character creation. A GM may overrule this limit if, for example, the events of the story result in a character gaining an additional Vulnerability.
 
 ### Changing Attributes and Skills
 
-You can adjust your Skills and Attributes using your Experience Points, which will help define how capable your character for relevant actions. On initial character creation, you can spend points to increase Attributes and Modifiers up to +3. This cap increases depending on your level (2, +4; 3, +5; 5, +6). Once these are set at character creation, a player may only add newly awarded Experience points.
+All Attributes and Skills start at a +0 modifier. The Attribute modifier adds to all relevant Skills. You can adjust your Skills and Attributes using your Experience Points, which will help define how capable your character for relevant actions. On initial character creation, you can spend points to increase or gain points to decrease Attributes and Skill Modifiers up to positive or negative 3. This upper limit increases on even level-ups (2, +4; 4, +5; 6, +6). Once these are set at character creation, a player may only add newly awarded Experience points.
 
-All Attributes and Skills start at a +0 modifier. The Attribute modifier adds to all relevant Skills. Raising an Attribute by 1 initially costs 2 Experience Points, but becomes more costly as you add. Raising a Skill by 1 costs 1 Experience Point, but becomes more costly as you add. Modifier maximums are capped according to character level (e.g., maximum +4 at level 1).
+Raising an Attribute by 1 initially costs 2 Experience Points. Raising a Skill by 1 initially costs 1 Experience Point. In both cases, raising modifiers becomes more costly as you add. The following table shows the cost Experience Points and the resulting modifier for Attributes and Skills.
+
+< center >
+| Modifier | Skill XP Cost | Attrib XP Cost |
+|     ---: |     :---:     |      :---:     |
+|       -3 |      -3       |       -8       |
+|       -2 |      -2       |       -4       |
+|       -1 |      -1       |       -2       |
+|        0 |       0       |        0       |
+|        1 |       1       |        2       |
+|        2 |       2       |        4       |
+|        3 |       3       |        8       |
+|        4 |       5       |       12       |
+|        5 |       7       |       18       |
+|        6 |       9       |       24       |
+</ center >
