@@ -10,8 +10,8 @@ Your Game Master (GM) is about to play narrator to a story in which you will tak
    - Success and failure are both part of an interesting story.
 3. If you draw a King or Ace, this is a *Fate Card* and should stay in your hand. If not, put it in your discard pile.
    - At any time, you can discard a Fate Card to redraw and take the new value.
-   - When Aces are used in this way, add an extra 5 to the total.
-4. You should have a character sheet with Attributes (general skills, like Agility and Intelligence), and specific Skills under each attribute (e.g., Finesse under Agility). Each Attribute and Skill has a Modifier that you add when drawing a card related reasons.
+   - When Aces are used in this way, add an extra +5 to the total.
+4. You should have a character sheet with Attributes (general skills, like Agility and Intelligence), and specific Skills under each attribute (e.g., Finesse under Agility). Each Attribute and Skill has a Modifier that you add when drawing a card related to that Attribute or Skill.
 5. The GM will describe a scene. It's up to you to ask follow-up questions and figure out what your character would do. Creativity and thinking outside the box (i.e., exact rules) is encouraged.
 6. The GM might announce an *Epic Event*.
   - You'll draw 5 cards and for an unknown number of checks for all players.

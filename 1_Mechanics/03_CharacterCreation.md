@@ -17,17 +17,17 @@ Your Role describes how your character navigates challenges. While a Defender mi
    - Primary Skill: Craft
    - Suggested Suit: Hearts ♥️ / Life ❤️‍🩹
 - Martial
-   - Description: Martials move quick and hit hard. They're adept with physical weapons to directly damage enemeies. Agile and light on their feet!
+   - Description: Martials move quick and hit hard. They're adept with physical weapons to directly damage enemies. Agile and light on their feet!
    - Primary Skill: Finesse
-   - Suggested Suit: Diamond ♦️ / Offense 🤛
+   - Suggested Suit: Diamonds ♦️ / Offense 🤛
 - Caster
-   - Description: Casters can be mages of fantasy or techo-wizards of a much more mundane world. Their intelect drives them to skills the rest of us can barely comprehend.
+   - Description: Casters can be mages of fantasy or techno-wizards of a much more mundane world. Their intellect drives them to skills the rest of us can barely comprehend.
    - Primary Skill: Knowledge
    - Suggested Suit: Spades ♠️ / Technology ⚡️
 
 ## Choose your Primary Suit
 
-Roles come with primary suit suggestions, but this can be changed at each level-up. This won't do anything at level 1, but effects will build at level 2 and beyond.
+Roles come with primary suit suggestions, but this can be changed at each level-up. This won't have a direct mechanical effect at level 1, but effects will build at level 2 and beyond.
 
 - Diamonds ♦️ : Offense    🤛
 - Clubs    ♣️ : Defense    🛡
@@ -43,7 +43,7 @@ Starting at level 2, Dealers are given special abilities based on their primary 
 
 ## Using Experience Points
 
-Both at character creation (4) and at the GM's discretion for each level up (3), you are awarded Experience Points. These can be spent to gain additional Powers, boost an Attribute, a Skill, add to the Spells you know, or remove a Vulnerability. Total XP is equal to 1+ (level * 3).
+Both at character creation (4) and at the GM's discretion for each level up (3), you are awarded Experience Points. These can be spent to gain additional Powers, boost an Attribute, a Skill, add to the Powers you know, or remove a Vulnerability. Total XP is equal to 1+ (level * 3).
 
 ### Choose Your Powers
 
@@ -61,7 +61,7 @@ People are not perfect, and many have Vulnerabilities as a result of their relat
 
 All Attributes and Skills start at a +0 modifier. The Attribute modifier adds to all relevant Skills. You can adjust your Skills and Attributes using your Experience Points, which will help define how capable your character for relevant actions. On initial character creation, you can spend points to increase or gain points to decrease Attributes and Skill Modifiers up to positive or negative 3. This upper limit increases on even level-ups (2, +4; 4, +5; 6, +6). Once these are set at character creation, a player may only add newly awarded Experience points.
 
-Raising an Attribute by 1 initially costs 2 Experience Points. Raising a Skill by 1 initially costs 1 Experience Point. In both cases, raising modifiers becomes more costly as you add. The following table shows the cost Experience Points and the resulting modifier for Attributes and Skills.
+Raising an Attribute Modifier by +1 initially costs 2 Experience Points. Raising a Skill Modifier by +1 initially costs 1 Experience Point. In both cases, raising modifiers becomes more costly as you add. The following table shows the cost in Experience Points and the resulting modifier for Attributes and Skills.
 
 < center >
 | Modifier | Skill XP Cost | Attrib XP Cost |

@@ -82,8 +82,8 @@
    - Tags:
 - Name: Specialist
    - Description: One domain doesn’t come easy to you.
-   - Resource: Minor
-   - Mechanic: When drawing a suit of your choosing, you get a -1 on a check. This Power can be taken up to 3 times, increasing the value by 1 each time.
+   - Resource: Minor or Major
+   - Mechanic: When drawing a card from a suit of your choosing, you get a -1 on a check when taken as a Minor vulnerability. As a Major Vulnerability, when drawing from the suit of your choosing, you instead draw at a -2 on checks made.
    - Prerequisites:
    - Tags:
 - Name: Unattentive

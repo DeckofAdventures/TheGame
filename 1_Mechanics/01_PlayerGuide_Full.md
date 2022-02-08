@@ -103,7 +103,7 @@ Complete list:
    1. Are weaker than Dealers
    2. Have limited access to Powers
    3. Have 1 health point.
-3. Companions are creatures associated with a Dealer, like a pet or other-wordly advisor. See the setting Beastiary for potential Companions.
+3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. See the setting Bestiary for a list of potential Companions.
 
 ## During Play
 
@@ -151,7 +151,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 3. **Standard Attacks:** Character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
 4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, applying a Skill Modifier as specified by the spell or action.
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Finesse.
-6. **Toughening Up** - A Dealer may expend Fate Cards to nullify one point of damage per round of combat.
+6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify one point of damage per round of combat. This is a free action and must be taken before the end of the Dealer's next turn. 
 
 #### Effects
 
@@ -165,7 +165,7 @@ Some effects will impact a character over time.
 
 ### Health and Armor
 
-Dealers have three health points, Bystanders have 1 health point, and the health of Companions is determined by the level of their Dealer. If a character is wounded beyond their health pool, they are Knocked Out. Armor points are an optional additional pool that would be removed first in the event of a wound. Both health and armor points can be recovered on a rest, the former with a Vitality check and the latter with a Knowledge or Craft check.
+Dealers have three health points, Bystanders have 1 health point, and the health of Companions is determined by the level of their Dealer. If a character is wounded beyond their health pool, they are Knocked Out. Armor points are an optional additional pool that would be removed first in the event of a wound. Both health and armor points can be recovered on a rest. Health is recovered with a Vitality check and Armor is recovered with a Knowledge or Craft check.
 
 AC is calculated by adding 8 to one of the following: Agility modifier, Vitality modifier, or number of Armor points remaining. AC is the highest of these three options.
 
