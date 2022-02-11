@@ -1,6 +1,6 @@
 # Character Creation
 
-## Choose Your Background
+## Decide Your Background
 
 First, choose where your character is coming from including your lived experiences that would motivate adventuring. Classically, this is a racial or species origin (e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. Deck of Adventures offers many more backgrounds to choose from that could inspire your core concept. This has no inherent mechanical impact, but may shape how your character navigates challenges. Growing up at a seaport or a Dwarf, your character might be more adept at sailing or masonry (i.e., certain skill checks) than others.
 
@@ -23,7 +23,7 @@ Your Role describes how your character navigates challenges. While a Defender mi
 - Caster
    - Description: Casters can be mages of fantasy or techno-wizards of a much more mundane world. Their intellect drives them to skills the rest of us can barely comprehend.
    - Primary Skill: Knowledge
-   - Suggested Suit: Spades ♠️ / Technology ⚡️
+   - Suggested Suit: Spades ♠️ / Conjuring ⚡️
 
 ## Choose your Primary Suit
 
@@ -32,14 +32,14 @@ Roles come with primary suit suggestions, but this can be changed at each level-
 - Diamonds ♦️ : Offense    🤛
 - Clubs    ♣️ : Defense    🛡
 - Hearts   ♥️ : Life       ❤️‍🩹
-- Spades   ♠️ : Technology ⚡️
+- Spades   ♠️ : Conjuring  ⚡️
 
 Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit. This modifier increases by one on each level-up. Second, they gain one of the following Suit Mechanics that can be used as an action a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection. The number of cards drawn in this manner serves as an additional modifier on a check before the outcome is known.
 
-- Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really fast. They can choose to 'burn' up to 3 cards to add to their own attack draw. 
-- Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their own AC until the start of their next turn.
-- Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'toss' up to 3 cards and add that number to their ally's draw.
-- Spades   ♠️ : Technology Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can 'scrap' up to 3 cards and subtract that number from an enemy draw.
+- Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really fast. They can choose to *burn* up to 3 cards to add to their own attack draw. 
+- Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They can choose to *bury* up to 3 cards to add to their own AC until the start of their next turn.
+- Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may *toss* up to 3 cards and add that number to their ally's draw.
+- Spades   ♠️ : Technology Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can *scrap* up to 3 cards and subtract that number from an enemy draw.
 
 ## Using Experience Points
 
@@ -49,7 +49,7 @@ Both at character creation (4) and at the GM's discretion for each level up (3),
 
 Powers are your way of amplifying your character both on and off the battlefield. These are additional perks and benefits to wielding certain types of weapons and magic and have both mechanical and roleplay implications. Some Powers require a specific Role, prerequisite levels or relevant Attribute/Skill Modifiers.
 
-Simple, Minor and Major Powers cost 1, 1, and 2 XP respectively. A Simple Power may be passive (always in effect) or can be used an unlimited number of times. A Minor or Major Power is tiresome and requires Power Points to use. Your character gains +1 Power Points at a rate of +1 XP spent on Minor and Major Powers. A character with a Major version of a Power may choose to use the Minor Power equivalent, but a character with a Minor Power does not have access to the Major effect. On level-up, a player may exchange 1 XP to convert a Minor Power to the Major equivalent.
+Simple, Minor and Major Powers cost 1, 1, and 2 XP respectively. A Simple Power may be passive (always in effect) or can be used an unlimited number of times. A Minor or Major Power is tiresome and requires Energy Points to use. Your character gains +1 Energy Points at a rate of +1 XP spent on Minor and Major Powers. A character with a Major version of a Power may choose to use the Minor Power equivalent, but a character with a Minor Power does not have access to the Major effect. On level-up, a player may exchange 1 XP to convert a Minor Power to the Major equivalent.
 
 Unless otherwise noted, Powers take one action to perform and add a Dealer's Primary Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated shield) may only be used one at a time. Using a second Power will nullify the effects of the first. Powers described as passive take no action and are always in effect. 
 

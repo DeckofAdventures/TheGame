@@ -12,7 +12,7 @@
    - Resource: Simple
    - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
       - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single action - even if you already went that round
-      - Ace of Diamonds: As an action, you recover 2 Power Points OR each member of your party recovers 1 Point 
+      - Ace of Diamonds: As an action, you recover 2 Energy Points OR each member of your party recovers 1 Point 
       - Ace of Hearts: As an action, you can heal one Health Point for yourself or an ally within 3 squares
       - Ace of Spades: As an action, you can strike an enemy with an automatic hit with a Power of your choosing 
    - Prerequisites: Level 3
@@ -26,7 +26,7 @@
 - Name: Attack, Charge
    - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
    - Resource: Minor or Major
-   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 (Minor/Major) to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
+   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 (Minor/Major) to the damage on a successful Weapon Attack. Energy Points are still expended on a miss.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Defender, Martial
@@ -82,7 +82,7 @@
 - Name: Attack, Mystic Confusion
    - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
    - Resource: Minor or Major
-   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, characters take no damage, but are Stunned.
+   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Energy Points. On a hit, characters take no damage, but are Stunned.
    - Prerequisites: 
       + Power: Attack, Mystic
       + Role: Support or Caster
@@ -90,7 +90,7 @@
 - Name: Attack, Mystic Entangle
    - Description: You channel your abilities to tie your target in place.
    - Resource: Minor or Major
-   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, target(s) are Entangled.
+   - Mechanic: You make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Energy Points. On a hit, target(s) are Entangled.
    - Prerequisites: 
       + Power: Attack, Mystic
       + Role: Support Caster
@@ -98,7 +98,7 @@
 - Name: Attack, Mystic Deprivation 
    - Description: You channel your abilities deprive a target of their senses.
    - Resource: Minor or Major
-   - Mechanic: You select the Blinded or Deafened effect and make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Power Points. On a hit, target(s) are under the relevant effect. Targets who do not use the relevant sense are immune to this Power.
+   - Mechanic: You select the Blinded or Deafened effect and make a Mystic Attack draw on 1/3 (Minor/Major) characters, expending the Energy Points. On a hit, target(s) are under the relevant effect. Targets who do not use the relevant sense are immune to this Power.
    - Prerequisites: 
       + Power: Attack, Mystic
       + Role: Support or Caster
@@ -260,7 +260,7 @@
    - Tags:
 - Name: Momentum 
    - Description: By brute strength, force others to move around the battlefield. 
-   - Resource: Free
+   - Resource: Simple
    - Mechanic: You attempt to move a character who is within 1 space of you during your movement. If the target is unwilling, this is a contested check: your Brute vs. target's Finesse or Athletics, their choice. If the target fails the contested check, you may place the target within 1 space of you at the end of your movement.
    - Prerequisites: 
       + Role: Defender
@@ -268,7 +268,7 @@
    - Tags:
 - Name: Momentum Aura
    - Description: Your strength is supernatural, bending the gravity around you.
-   - Resource: Free
+   - Resource: Simple
    - Mechanic: Your Momentum ability extends to 3 spaces.
    - Prerequisites: 
       + Power: Momentum
@@ -293,12 +293,6 @@
    - Mechanic: Add +1/2 (Minor/Major) to a creature's AC until the end of their next turn.
    - Prerequisites: Role: Support or Defender
    - Tags:
-- Name: Specialist (e.g., Pyromaniac)
-   - Description: You are closely attuned to a specific domain and you can’t help yourself when using it. You can get a little carried away, sometimes.
-   - Resource: Simple
-   - Mechanic: When pulling a a suit of your choosing, you get a +1 on a check, however you also gain the Specialist Vulnerability which means when drawing a different suit of your choosing, you get a -1 on a check. This Power can be taken up to 3 times, increasing the value by 1 each time.
-   - Prerequisites: Level 2
-   - Tags: Vulnerability 
 - Name: Speed of the Wind
    - Description: You float about the battlefield like no other, as if walking on air.
    - Resource: Simple

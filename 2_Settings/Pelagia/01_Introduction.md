@@ -13,7 +13,7 @@ The ubiquity of magic in Pelagia often maps onto four elements, which are also a
 - Diamonds♦️ : Offense    🤛   (e.g,. Air Ranger)
 - Clubs   ♣️ : Defense    🛡 	   (e.g., Earth Tank)
 - Hearts  ♥️ : Life       ❤️‍🩹 (e.g., Water Healer)
-- Spades  ♠️ : Technology ⚡️   (e.g., Fire Mage)
+- Spades  ♠️ : Conjuring  ⚡️   (e.g., Fire Mage)
 
 ## People of Pelagia
 

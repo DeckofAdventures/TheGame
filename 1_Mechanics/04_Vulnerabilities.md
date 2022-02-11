@@ -57,7 +57,7 @@
 - Name: Inorganic
    - Description: You were not born, but instead created. You are not a slave to the bodily needs of the rest, but may instead be called to a prescribed purpose.
    - Resource: Minor or Major
-   - Mechanic: You do not need to breathe, eat or sleep (but still rest to recover Health/Power Points). As a Major effect, choose one of the following when you take this Vulnerability:
+   - Mechanic: You do not need to breathe, eat or sleep (but still rest to recover Health/Energy Points). As a Major effect, choose one of the following when you take this Vulnerability:
       + Your creator or society at large consider you to have a function that you do not wish to pursue, such as a dangerous and laborious profession.
       + You require a rare form of fuel that is difficult to obtain and are rendered catatonic without regular access. 
    - Prerequisites:
@@ -78,12 +78,6 @@
    - Description: Your people look to you as their salvation.
    - Resource: GM Determined
    - Mechanic: Work with your GM to decide a group or organization that believes you are the key to their salvation. You may encounter a member of this group that requires your help.
-   - Prerequisites:
-   - Tags:
-- Name: Specialist
-   - Description: One domain doesn’t come easy to you.
-   - Resource: Minor or Major
-   - Mechanic: When drawing a card from a suit of your choosing, you get a -1 on a check when taken as a Minor vulnerability. As a Major Vulnerability, when drawing from the suit of your choosing, you instead draw at a -2 on checks made.
    - Prerequisites:
    - Tags:
 - Name: Unattentive

@@ -15,6 +15,10 @@ While untracked edits may change individual pages and patches may systematically
 + First beta release
 ### Added/Removed/etc.
 
+## [0.0.0a2] - 2022-02-10
++ Changed Suit mechanic to start at Level 1 per [Issue #15](https://github.com/DeckofAdventures/TheGame/issues/15)
++ 
+
 ## [0.0.0a1] - 2022-01-14
 + Began porting notes to GitHub
 + Added primary suit feature
