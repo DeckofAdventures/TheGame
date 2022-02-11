@@ -1,0 +1,100 @@
+# Vulnerabilities
+
+- Name: (Template)
+   - Description:
+   - Resource:
+   - Mechanic:
+   - Prerequisites:
+   - Tags:
+- Name: Bloodthirsty
+   - Description: Your character is driven by a need for violence.
+   - Resource: Minor
+   - Mechanic: Given the choice between a peaceful or violent solution, you must choose combat.
+   - Prerequisites:
+   - Tags:
+- Name: Chaotic Companion
+   - Description: You and your companion don’t always get along, sometimes they don’t do exactly what you ask.
+   - Resource: Minor or Major
+   - Mechanic: When you draw a card to command your companion, the DM gains control of the companion temporarily on cards below 3 (minor) or 4 (major)
+   - Prerequisites: Power: Creature Connection
+   - Tags:
+- Name: Code of Honor (a.k.a Vow, Oath)
+   - Description: You swore an oath to abide by a particular set of rules.
+   - Resource: GM Determined
+   - Mechanic: Work with your GM to define the code you live by. This may be pacifism or always helping those in need.
+   - Prerequisites:
+   - Tags:
+- Name: Conceited
+   - Description: You mistakenly believe everything is about you, and even fail to understand any conversation topic that doesn't pertain to you. 
+   - Resource: Major
+   - Mechanic: If you make a check to understand a topic or observe another creature, you must justify why your character thinks it's about themselves, or draw 2 cards and select the lower value.
+   - Prerequisites: Skill: Intelligence and Intuition < +1
+   - Tags:
+- Name: Cowardly Ally
+   - Description: Allies are great for many things, including blocking attacks.
+   - Resource: Major
+   - Mechanic: If you have movement remaining after attacking, you must try to position yourself so that an ally is between you and an enemy.
+   - Prerequisites:
+   - Tags:
+- Name: Eye for an Eye
+   - Description: You’re spiteful and can’t let an attacker get away.
+   - Resource: Major
+   - Mechanic: If you attack in combat, you must target the enemy who hit you most recently.
+   - Prerequisites:
+   - Tags:
+- Name: Frail Form
+   - Description: Through age, birth, or accident, your body is different from others’ and you find it hard to keep up.
+   - Resource: Major
+   - Mechanic: When you take this Vulnerability, your combat speed is reduced by two squares. When making a check to traverse terrain, draw two cards and select the lower value.
+   - Prerequisites:
+   - Tags:
+- Name: Illiterate
+   - Description: Never having been trained, the printed word is a mystery to you. You can recognize the general shape, and return to the same street sign, but couldn't pronounce the word.
+   - Resource: Minor
+   - Mechanic: You're unable to complete an action that requires understanding text.
+   - Prerequisites: Skill: Intelligence < 1
+   - Tags:
+- Name: Inorganic
+   - Description: You were not born, but instead created. You are not a slave to the bodily needs of the rest, but may instead be called to a prescribed purpose.
+   - Resource: Minor or Major
+   - Mechanic: You do not need to breathe, eat or sleep (but still rest to recover Health/Energy Points). As a Major effect, choose one of the following when you take this Vulnerability:
+      + Your creator or society at large consider you to have a function that you do not wish to pursue, such as a dangerous and laborious profession.
+      + You require a rare form of fuel that is difficult to obtain and are rendered catatonic without regular access. 
+   - Prerequisites:
+   - Tags:
+- Name: No Mercy
+   - Description: An attacker has made their choice; that choice is to die.
+   - Resource: Major
+   - Mechanic: If you are attacked in combat, you must continue attacking until your attacker is knocked out.
+   - Prerequisites:
+   - Tags:
+- Name: Outsider
+   - Description: You're a stranger in a strange land. You may be unfamiliar with customs, somehow ostracized by the community, or even hunted based on group membership.
+   - Resource: Minor or Major
+   - Mechanic: For any Conviction check to interact with the dominant society, you draw 2 cards and pick the lowest value. If chosen as Major, work with the GM to decide some feature of your background that makes you unwelcome in most public places.
+   - Prerequisites:
+   - Tags:
+- Name: Savior (a.k.a Chosen One)
+   - Description: Your people look to you as their salvation.
+   - Resource: GM Determined
+   - Mechanic: Work with your GM to decide a group or organization that believes you are the key to their salvation. You may encounter a member of this group that requires your help.
+   - Prerequisites:
+   - Tags:
+- Name: Unattentive
+   - Description: You can really only do one thing at a time. The rest of the world seems to fade away.
+   - Resource: Minor
+   - Mechanic: Whenever you Draw to observe or react to something you weren't already aware of (e.g., Detection checks or Agility reactions), you draw 2 cards and take the lower value.
+   - Prerequisites:
+   - Tags:
+- Name: Vendetta
+   - Description: You’ve sworn to track down an enemy. Business or pleasure?
+   - Resource: GM Determined
+   - Mechanic: Work with your GM to decide an NPC that has wronged you in the past.
+   - Prerequisites:
+   - Tags:
+- Name: Wanted
+   - Description: Your past will come back to haunt you.
+   - Resource: GM Determined
+   - Mechanic: Work with your GM to decide an NPC or organization that thinks you’re responsible for a crime. You may encounter a member of this group who wants you in jail or to stand trial.
+   - Prerequisites:
+   - Tags:

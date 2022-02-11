@@ -1,5 +1,24 @@
 # GM’s Guide to Pelagia
 
+`This document could be split into 02_GMGuide_Advice and 02_GMGuide_Crunch`
+
+<!-- MarkdownTOC -->
+
+- Introduction
+   - Getting Started
+   - What It’s All About
+   - Running a Session with Deck of Adventures
+      - Successes and Failures
+      - Which Skills to use
+      - Contested checks
+   - Running an Adventure
+   - Managing Players \(Expectations & Realities\)
+   - Crunch
+   - Now What?
+
+<!-- /MarkdownTOC -->
+
+
 # Introduction
 
 > You’ve entered the world of Pelagia as a player, and realized you wanted to become a Storyteller, one of the most important parts of Pelagia. This is how our voices spread through the heavens. Once known as “Beedle Bards,” Storytellers have taken shape all throughout the known Cosmiverse.
@@ -38,8 +57,8 @@ If you’ve been a Game Master elsewhere and are hoping to learn about what’s 
 ### Contested checks
 
 Examples
-1. Tackle target: Attacker Reflex vs. Target Athletics
-2. Convince Target, truthfully: Persuasion vs. Detection
+1. Tackle target: Attacker Finesse vs. Target Athletics
+2. Convince Target, truthfully: Bluffing vs. Detection
 3. Convince Target, deceptively: Bluffing vs. Detection
 
 ## Running an Adventure
