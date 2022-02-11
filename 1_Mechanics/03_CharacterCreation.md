@@ -39,7 +39,7 @@ Starting at level 2, Dealers are given special abilities based on their primary 
 - Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really fast. They can choose to *burn* up to 3 cards to add to their own attack draw. 
 - Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They can choose to *bury* up to 3 cards to add to their own AC until the start of their next turn.
 - Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may *toss* up to 3 cards and add that number to their ally's draw.
-- Spades   ♠️ : Technology Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can *scrap* up to 3 cards and subtract that number from an enemy draw.
+- Spades   ♠️ : Conjuring Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can *scrap* up to 3 cards and subtract that number from an enemy draw.
 
 ## Using Experience Points
 
