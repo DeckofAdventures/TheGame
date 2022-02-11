@@ -148,7 +148,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 
 1. **Movement** Character speed is equal to 6 spaces ± Agility modifier. The total may be split to occur before, after, and/or between actions.
 2. **Actions** In addition to their movement, players can perform up to two actions each turn. The first action is made without penalty. If players choose to make a second action, the associated check is made at a -2 penalty.
-3. **Standard Attacks:** Character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
+3. **Standard Attacks:** Character combat actions are described on the character sheet are associated with the character's Primary Skill Modifier, unless otherwise noted. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
 4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, with the target(s) applying their relevant Skill Modifier as specified by the power or action.
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Finesse.
 6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify one point of damage per round of combat. This is a free action and must be taken before the end of the Dealer's next turn. 
@@ -160,7 +160,7 @@ Some effects will impact a character over time.
 2. **Entangled** At the start of their turn, a Dealer makes a Strength check against the attribute of the creature causing the effect. If failed, they may not move on that turn. A critical failure prevents actions requiring arm movements.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their turn, and their movement speed is halved. 
 4. **Blinded, Deafened** At the start of their turn, a Dealer makes a conviction check against the spell-casting attribute of the creature causing the effect (or DC 5 if physical effect). If failed, they take a -5 penalty to any action requiring the relevant sense.
-6. **Outnumbered** Dealers may delay their turns to co-occur with one another. For each additional character attacking the same Dealer at the same time, attack modifiers are boosted by 2.
+6. **Outnumbered** Dealers may delay their turn to co-occur with another player Dealer. For each additional Dealer attacking the same target within 1 space, attack modifiers are take an additional +2.
 7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check (DC 8 + number of turns since effect onset). If attacked further, the player begins an Epic Event alone. Each additional hit is a Check they may respond to with one or more cards to pass an unknown DC as the Great Void calls out to them. 
 
 ### Health and Armor
@@ -185,7 +185,7 @@ The GM determines when an epic event has been resolved. On successful resolution
 
 A rest is an epic event in which players state what they hope to accomplish over the rest. Each goal is a separate check the players must collectively pass. Taking a short rest permits players to draw 3 cards, and long rest 5. 
 
-During a Rest, players might attempt to repair an item (including Armor), read a book, or recover Points. Recovering Health is a Vitality check of DC 7 + 1 for each Health Point being recovered. Some Powers are limited-use (i.e., Costly) and require recharging associated Points during rests, at a Primary Skill DC of 7 + 1 for Point being recovered. A Dealer who draws below their DC recovers a portion of Health or Power Points equal to the number drawn minus 7.
+During a Rest, players might attempt to repair an item (including Armor), read a book, recover Health Points (HP), or recover Energy Points. Recovering Health is a Vitality check of DC 7 + 2 for each Health Point being recovered. Some Powers are limited-use and require recharging associated Energy Points during a rest, at a Primary Skill DC of 7 + 1 for each Point being recovered. A Dealer who draws below the DC indicated above recovers a smaller portion of Health or Energy Points equal to the number drawn minus 7.
 
 Players take turns attempting their respective checks. Order is either determined by the players themselves or the last played initiative order. The GM determines the DC for each novel goal. 
 
