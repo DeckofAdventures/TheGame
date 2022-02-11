@@ -59,7 +59,7 @@
    - Mechanic: You perform your Mystic Attack on all characters within 1/2 (Minor/Major) space(s).
    - Prerequisites: 
       + Power: Attack, Mystic
-      + Role: Caster
+      + Role: Caster, Support
    - Tags:
 - Name: Attack, Mystic Amplification 
    - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
@@ -316,7 +316,7 @@
 - Name: Stealthy Surprise
    - Description: An undetected assailant is particularly deadly.
    - Resource: Simple
-   - Mechanic: If you use your movement to become hidden, choose a target and make a contested Stealth check versus their Detection. The GM does not reveal if you succeed. If successful, your next attack Draw against that target gains an additional +2
+   - Mechanic: You attempt to hide from a target. Choose a target and make a contested Stealth check versus their Detection skill check. The GM does not reveal if you succeed. If successful, your next Attack Draw against that target gains an additional +2 modifier so long as you are still considered hidden.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth in the Shadows
@@ -328,7 +328,7 @@
 - Name: Stealth's Call
    - Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.
    - Resource: Minor
-   - Mechanic: An illusory mundane sound emenates from a point you can see within 10 spaces. When you make a contested Stealth check versus any characters within 4 spaces of this point, they draw with an additional -2.
+   - Mechanic: You cause an illusory sound to emanate from a point you can see within 10 spaces. When you make a contested Stealth check versus any characters' Detection check who is within 4 spaces of this point, they draw at a -2 modifier.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth's Blessing
