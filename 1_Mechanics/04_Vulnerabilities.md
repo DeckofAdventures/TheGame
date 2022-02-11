@@ -28,7 +28,7 @@
    - Description: You mistakenly believe everything is about you, and even fail to understand any conversation topic that doesn't pertain to you. 
    - Resource: Major
    - Mechanic: If you make a check to understand a topic or observe another creature, you must justify why your character thinks it's about themselves, or draw 2 cards and select the lower value.
-   - Prerequisites: Skill: Intelligence and Intuition < 1
+   - Prerequisites: Skill: Intelligence and Intuition < +1
    - Tags:
 - Name: Cowardly Ally
    - Description: Allies are great for many things, including blocking attacks.

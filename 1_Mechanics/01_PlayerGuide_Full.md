@@ -149,7 +149,7 @@ On a turn, a character may (a) move, and (b) perform action(s) in any order they
 1. **Movement** Character speed is equal to 6 spaces ± Agility modifier. The total may be split to occur before, after, and/or between actions.
 2. **Actions** In addition to their movement, players can perform up to two actions each turn. The first action is made without penalty. If players choose to make a second action, the associated check is made at a -2 penalty.
 3. **Standard Attacks:** Character combat actions are described on the character sheet will be associated with a specific Skill Modifier. The character draws a card and applies this modifier, usually against a DC determined by the GM depending on what the character is trying to hit. This special DC is called Armor Class (AC).
-4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, applying a Skill Modifier as specified by the spell or action.
+4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the effect, with the target(s) applying their relevant Skill Modifier as specified by the power or action.
 5. **Contested Checks**. Some actions will require both attacker and target to draw a card and apply a relevant modifier. The highest total wins. For example, a character may try to tackle an enemy to the ground. The two would make a contested check of Athletics vs. Finesse.
 6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify one point of damage per round of combat. This is a free action and must be taken before the end of the Dealer's next turn. 
 

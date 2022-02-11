@@ -36,7 +36,7 @@ Roles come with primary suit suggestions, but this can be changed at each level-
 
 Starting at level 2, Dealers are given special abilities based on their primary suit. First, they gain an additional modifier when pulling cards of that suit. This modifier increases by one on each level-up. Second, they gain one of the following Suit Mechanics that can be used as an action a number of times equal to their level per long rest. Cards used in this manner are put directly in the discard pile without inspection. The number of cards drawn in this manner serves as an additional modifier on a check before the outcome is known.
 
-- Diamonds ♦️ : Offense Dealers have explosive damage but they reun out of gas really fast. They can choose to 'burn' up to 3 cards to add to their own attack draw. 
+- Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really fast. They can choose to 'burn' up to 3 cards to add to their own attack draw. 
 - Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They can choose to 'bury' up to 3 cards to add to their own AC until the start of their next turn.
 - Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are in the presence of an ally who fails a check, they may 'toss' up to 3 cards and add that number to their ally's draw.
 - Spades   ♠️ : Technology Dealers deploy all sorts of mechanisms for drawing the eye of enemies away from their allies. They can 'scrap' up to 3 cards and subtract that number from an enemy draw.
