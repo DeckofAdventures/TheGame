@@ -29,12 +29,12 @@
    - Mechanic: You must move 3 spaces before using this Power. You add +1/2 (Minor/Major) to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
    - Prerequisites: 
       + Power: Attack, Weapon
-      + Role: Defender
+      + Role: Defender, Martial
    - Tags:
 - Name: Attack, Sweep
    - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
    - Resource: Minor or Major
-   - Mechanic: You perform you Weapon Attack on multiple characters withing 1 space. Targets must be next to one another (i.e., no non-targets between other targets). When used as a Major Power, Targets make a contested Agility check against your to-hit Draw.
+   - Mechanic: You perform you Weapon Attack on multiple characters within 1 space. Targets must be next to one another (i.e., no non-targets between other targets). When used as a Major Power, Targets make a contested Agility check against your to-hit Draw and are Knocked Down if they fail to meet the DC.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Martial or Defender
@@ -42,13 +42,13 @@
 - Name: Attack, Vengeance 
    - Description: Ever the protector on the field, you leap at the chance to avenge an ally.
    - Resource: Minor or Major
-   - Mechanic: When you see an ally hit after your turn, you may take 1/2 (Minor/Major) Weapon Attacks against the attacker without penalty. All other actions made when using this Power incur an additional -2 penalty.
+   - Mechanic: When an ally takes damage in combat, you may take 1/2 (Minor/Major) Weapon Attacks against the attacker on your turn without penalty. All other actions made when using this Power incur an additional -2 penalty.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Defender
    - Tags:
 - Name: Attack, Mystic
-   - Description: You've been trained in some for of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of enery at range.
+   - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
    - Resource: Simple
    - Mechanic: As an action in combat, you can make check to attack an Enemy. This may be performed while under the effects of another Power.
    - Prerequisites: Skill: Knowlege or Craft > 0
@@ -106,19 +106,19 @@
 - Name: Barrier
    - Description: Your skills allow you to deploy temporary impromptu walls
    - Resource: Minor or Major
-   - Mechanic: You create a wall 3/5 (Minor/Major) wide until the end of your next turn. You may dismiss this wall at any time without an action.
+   - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide until the end of your next turn. You may dismiss this wall at any time without an action.
    - Prerequisites: Role: Support or Caster
    - Tags:
 - Name: Battlecharged
    - Description: You're always ready for something to go down.
    - Resource: Simple
-   - Mechanic: When drawing initiative, add 2.
+   - Mechanic: When drawing initiative, add +2.
    - Prerequisites:
    - Tags:
 - Name: Calculating
    - Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
    - Resource: Simple
-   - Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation. You spend 1 Power Point as you focus. Depending on your description, the GM may reveal the DC of the related check in approximate (e.g., above 10) or exact terms (e.g., DC or 10).
+   - Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation. You spend 1 Power Point as you focus. Depending on your description, the GM may reveal the DC of the related check in approximate (e.g., above 10) or exact terms (e.g., DC of 10).
    - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
    - Tags: Difficulty Prediction
 - Name: Critical Master
@@ -130,14 +130,14 @@
 - Name: Creature Connection
    - Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). On a long rest you can attune to an animal as a Companion.
    - Resource: Simple
-   - Mechanic: On a long rest, you attempt to connect with a creature in the world to take them as a Companion. The GM determines if this attempt was successful.
+   - Mechanic: On a long rest, you attempt to connect with a creature in the world to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check to determine success.
    - Prerequisites: 
-      + Skill requirement: Craft or Knowledge > 1
+      + Skill requirement: Craft or Knowledge > +1
    - Tags: Companion
 - Name: Creature Link
    - Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
    - Resource: Simple
-   - Mechanic: Some checks can now be made through your Companion using their Skills and Attributes.
+   - Mechanic: Some checks can now be made through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion. 
    - Prerequisites: 
       + Level 2
       + Power: Creature Connection
@@ -153,13 +153,13 @@
 - Name: Cunning
    - Description: You're sharper than the rest when you take your time.
    - Resource: Simple
-   - Mechanic: Choose one Ability. On turns when you only make 1 action using a Skill under that ability, add 1 to the relevant check. This does not add to contested checks initiated by another character.
+   - Mechanic: Choose one Attribute. On turns when you only make 1 action using a Skill under that Attribute, add +1 to the relevant check. This bonus does apply to contested checks initiated by another character.
    - Prerequisites:
    - Tags:
 - Name: Fated Connection
    - Description: Your Power towards a chosen suit has increased in strength. You can now control Fate when drawing a card from this suit.
    - Resource: Major
-   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be played or discarded immediately.
+   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be played or discarded immediately. When discarded, redraw.
    - Prerequisites: Level 3
    - Tags: Fate Cards 🃏
 - Name: Fated Draw
@@ -169,7 +169,7 @@
    - Prerequisites: Level 3
    - Tags:
 - Name: Favored by the Gods
-   - Description: You have a deep connection with a God of Pelagia who shines their blessings on your during times of need.
+   - Description: You have a deep connection with a Deity who shines their blessings on your during times of need.
    - Resource: Major
    - Mechanic: You can exchange a fate card as an automatic success, without redrawing.
    - Prerequisites: 
@@ -185,7 +185,7 @@
 - Name: Focused
    - Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
    - Resource: Simple
-   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous task that involves that skill, you draw 2 cards and select the higher value. During this time, you also have the Unattentive Vulnerability and are also unable to percieve the world outside this task. Draw 2 cards and select the lowest for any unrelated Skill.
+   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous task that involves that skill, you draw 2 cards and select the higher value. During this time, you also have the Unattentive Vulnerability and are also unable to percieve the world outside this task. Draw 2 cards and select the lowest for any Skill check made that is not directly related to the task at hand.
    - Prerequisites:
    - Tags:
 - Name: Handy
@@ -193,7 +193,7 @@
    - Resource: Simple
    - Mechanic: Work with your GM to decide a trade with which your character is familiar. When making a check to to perform this craft, draw two cards and select the higher value.
    - Prerequisites:
-      + Skill requirement: Craft or Knowledge > 1
+      + Skill requirement: Craft or Knowledge > +1
    - Tags: Combat
 - Name: Heal
    - Description: Can channel magical energy or medical training to heal others
@@ -228,7 +228,7 @@
 - Name: Lend Confusion
    - Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
    - Resource: Minor or Major
-   - Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character can make Conviction check (DC 5 + your Primary Skill modifier) to undo the effect. As a Major effect, this character is prevented from using Fate Cards.
+   - Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character can make Conviction check (DC 5 + your Primary Skill modifier) to end the effect. As a Major effect, this character is prevented from using Fate Cards when making their Conviction check to end the effect.
    - Prerequisites: 
       + Level 2
       + Power: Lend Distraction
@@ -237,7 +237,7 @@
 - Name: Lend/Remove Skill
    - Description: You really know how to target an ability and either support it or get in it's way.
    - Resource: Minor or Major
-   - Mechanic: Designate a character to Boost or Reduce and a Skill (or action that would require a Skill such as Attack). This character recieves an additional 1/2 (Minor Major) positive or negative modifier to Draws that involve this Skill.
+   - Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character receives an additional 1/2 (Minor Major) positive or negative modifier to any Draws that involve this Skill.
    - Prerequisites: Role: Support
    - Tags:
 - Name: Lend Readiness
@@ -255,16 +255,16 @@
 - Name: Luck
    - Description: Not everything goes your way, but for one reason or another, you seem to avoid the worst.
    - Resource: Simple
-   - Mechanic: Can use a held Ace Fate Card to turn a Critical Failure into a minor success. If taken a second time, you may use either Ace or King.
+   - Mechanic: Can use a held Ace Fate Card to turn a Critical Failure into a minor success. If taken a second time, you may use either an Ace or a King.
    - Prerequisites:
    - Tags:
 - Name: Momentum 
    - Description: By brute strength, force others to move around the battlefield. 
    - Resource: Free
-   - Mechanic: As an Action, attempt to move a character withing 1 space during your movement. If the character is unwilling, this is a contested Brute vs. Finesse or Athletics check. On a failure, you may place the character within 1 square of you at the end of your movement.
+   - Mechanic: You attempt to move a character who is within 1 space of you during your movement. If the target is unwilling, this is a contested check: your Brute vs. target's Finesse or Athletics, their choice. If the target fails the contested check, you may place the target within 1 space of you at the end of your movement.
    - Prerequisites: 
       + Role: Defender
-      + Skill: Brute > 1
+      + Skill: Brute > +1
    - Tags:
 - Name: Momentum Aura
    - Description: Your strength is supernatural, bending the gravity around you.
@@ -273,7 +273,7 @@
    - Prerequisites: 
       + Power: Momentum
       + Role: Defender
-      + Skill: Brute > 1
+      + Skill: Brute > +2
    - Tags:
 - Name: Multipowered
    - Description: 
@@ -302,7 +302,7 @@
 - Name: Speed of the Wind
    - Description: You float about the battlefield like no other, as if walking on air.
    - Resource: Simple
-   - Mechanic: Discard up to 3 cards as an action a number of times equal to your level per long rest. Each card discarded is an addition 2 spaces of movement. To take this power, your must forfeit one other Suit Mechanic.
+   - Mechanic: Discard up to 3 cards. Each card discarded grants you an additional 2 spaces of movement on your turn (up to 6 spaces). To take this Power, your must forfeit one other Suit Mechanic. You may use this Power a number of times equal to your level per long rest. 
    - Prerequisites: 
       + Level 2
       + Role: Martial
