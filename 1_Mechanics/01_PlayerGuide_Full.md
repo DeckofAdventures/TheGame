@@ -50,6 +50,11 @@ Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and 
 2. Kings and Aces are Fate Cards and should be reserved in your hand. All other cards go directly into a discard pile. 
 3. When the Action Deck is empty, or if otherwise instructed by the GM, shuffle the discard pile into the Action Deck and resume play, holding on to any unused Fate Cards for future use!
 
+Sometimes the odds will be in your favor; sometimes they will be against you. 
+1. Having the Upper Hand means you draw 2 cards and pick the highest value, after modifiers. The other cards is immediately discarded. This is your favor when you're looking for a high total.
+2. Having the Lower Hand means you draw 2 cards and pick the lower value, after modifiers. The other card is immediately discarded. This could represent how difficult a given task is for you.
+3. Having a Wild Hand means you draw 2 cards and pick whichever card you prefer. 
+
 ## Fate Cards
 
 Fate Cards (K and A) are a chance to control your fate. They permit the player to choose when they want a second chance at a key moment.
