@@ -29,7 +29,7 @@ character sheet.
 - Lucios
    - Alternate Names: Lady Luck
    - Historic Names: Loki Description: Appears as a Red Planetouched, with black horns
-     and a bright smile. Often symbolized and    - referenced alongside playing cards,
+     and a bright smile. Often symbolized and referenced alongside playing cards,
      dice, and other games of chance.
    - Domain: Luck/Chance
    - Element Association: Luck 🍀, Wild 🃏
@@ -59,7 +59,7 @@ character sheet.
    - Alternate Names: Kit
    - Historic Names: Hermes Description: A Saintly creature who can assume both a beast
      form and a human form, emphasizes love peace and connection between all the
-     peoples of Pelagia. Is a Paragon for good and speaks up for and    - defends the
+     peoples of Pelagia. Is a Paragon for good and speaks up for and d efends the
      innocent.
    - Domain: Life/People/Connection
    - Element Association: Life ❤️, Peace ⚖️

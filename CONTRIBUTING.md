@@ -14,22 +14,17 @@ permissions.
 
 ## GitHub Issues
 
-This repository has the following issue templates: 1. [Bug reports]
-(https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=bug_report.md&title=)
-for inconsistencies, either in mechanics or lore. 2. [Minor fixes]
-(https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
-Find a typo or grammatical error? Let us know. 3. [Question]
-(https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
+This repository has the following issue templates: 1. [Bug reports](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=bug_report.md&title=)
+for inconsistencies, either in mechanics or lore. 2. [Minor fixes](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
+Find a typo or grammatical error? Let us know. 3. [Question](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
 to start dialogs about the design process or anything that's not clear. 4.
-[Feature requests]
-(https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
+[Feature requests](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 What should the team prioritize next? Feel free to submit your own ideas here, as a
 general idea others could expand upon or a first draft.
 
 ## License
 
-Present materials adapted from [Fandom wiki licensing]
-(https://www.fandom.com/licensing).
+Present materials adapted from [Fandom wiki licensing](https://www.fandom.com/licensing).
 
 Deck of Adventures Versions < 0.1.0 material is licensed under the Creative
 Commons **Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** by
@@ -37,8 +32,7 @@ admin users (see [Community Roles](./3_Development/01_Community.md)) Deck of Adv
 documentation (hereafter ‘licensees’).
 
 - [Read the license summary](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- [Read the full legal code of the license]
-  (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
+- [Read the full legal code of the license] (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
 
 
