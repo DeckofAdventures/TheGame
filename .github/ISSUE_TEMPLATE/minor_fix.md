@@ -2,7 +2,7 @@
 name: Minor Fix
 about: Create a report to help us improve
 title: ''
-labels: 'minor'
+labels: 'minor fix'
 assignees: ''
 
 ---
