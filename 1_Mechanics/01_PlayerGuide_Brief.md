@@ -25,13 +25,14 @@ maximum. You'll need to keep track of how many you have left.
 out what your character would do. Creativity and thinking outside the box (i.e., exact
 rules) is encouraged.
 7. The GM might announce an *Epic Event*.
-  - You'll draw 5 cards and for an unknown number of checks for all players.
-  - You and the other players will work together to pass the checks, with the added
-  option of being able to sum cards.
-  - If your character needs a rest to recharge their Energy Points or heal, this is
-  played as an Epic event with either 3 cards for a short rest or 5 cards for a long
-  rest.
-8. If your group turns to violence to solve issues, the DM will announce the beginning of Combat, where you draw cards to determine turn order.
+   - You'll draw 5 cards and for an unknown number of checks for all players.
+   - You and the other players will work together to pass the checks, with the added
+   option of being able to sum cards.
+   - If your character needs a rest to recharge their Energy Points or heal, this is
+   played as an Epic event with either 3 cards for a short rest or 5 cards for a long
+   rest.
+8. If your group turns to violence to solve issues, the DM will announce the beginning 
+of Combat, where you draw cards to determine turn order.
    - You can move (up to six spaces on a grid, if present) and take up to 2 actions, in
    any order.
    - The more actions you take, the harder they will be complete. Subtract 2 from each
