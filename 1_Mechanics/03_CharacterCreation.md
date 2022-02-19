@@ -3,17 +3,16 @@
 ## Decide Your Background
 
 First, choose where your character is coming from including your lived experiences that
-would motivate adventuring. Classically, this is a racial or species origin
-(e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. Deck of
-Adventures offers many more backgrounds to choose from that could inspire your core
-concept. This has no inherent mechanical impact, but may shape how your character
+would motivate adventuring. Classically, this is a 'racial' or species origin
+(e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. 
+This has no inherent mechanical impact, but may shape how your character
 navigates challenges. Growing up at a seaport or a Dwarf, your character might be more
 adept at sailing or masonry (i.e., certain skill checks) than others.
 
 ## Choose Your Role
 
 Your Role describes how your character navigates challenges. While a Defender might
-apply force, a Mage might find a more magical solution. Choosing an Role grants you
+apply force, a Caster might find a more magical solution. Choosing an Role grants you
 access to specific upgrades, called Powers. Each Role has a skill they use to attack in
 combat (e.g., Brute Strength or Knowledge). You can switch your Role later on, but must
 forfeit Powers with that prerequisite in exchange for the points previously spent.
@@ -29,7 +28,7 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
    other boons to sway the battle in their favor. We're all stronger thanks to the
    support of our friends.
    - Primary Skill: Craft
-   - Suggested Suit: Hearts ♥️ / Life ❤️‍🩹
+   - Suggested Suit: Hearts ♥️ / Life ❤️‍
 - Martial
    - Description: Martials move quick and hit hard. They're adept with physical weapons
    to directly damage enemies. Agile and light on their feet!
@@ -44,34 +43,27 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
 
 ## Choose your Primary Suit
 
-Roles come with primary suit suggestions, but this can be changed at each level-up. This
-won't have a direct mechanical effect at level 1, but effects will build at level 2 and
-beyond.
+Roles come with primary suit suggestions, but this can be changed at each level-up.
 
 - Diamonds ♦️ : Offense    🤛
 - Clubs    ♣️ : Defense    🛡
-- Hearts   ♥️ : Life       ❤️‍🩹
+- Hearts   ♥️ : Life       ❤️‍
 - Spades   ♠️ : Conjuring  ⚡️
 
-Starting at level 2, Dealers are given special abilities based on their primary suit.
-First, they gain an additional modifier when pulling cards of that suit. This modifier
-increases by one on each level-up. Second, they gain one of the following Suit
-Mechanics that can be used as an action a number of times equal to their level per long
-rest. Cards used in this manner are put directly in the discard pile without
-inspection. The number of cards drawn in this manner serves as an additional modifier
-on a check before the outcome is known.
+Dealers are given special abilities based on their primary suit. First, `MISSING`
+modifier. Second, `MISSING` Suit Mechanics that can be used as an action a number of
+times equal to their level per long rest. Cards used in this manner are put directly in
+the discard pile without inspection. The number of cards drawn in this manner `MISSING`.
 
 - Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really
-fast. They can choose to *burn* up to 3 cards to add to their own attack draw.
+fast. They can choose to *burn* up to 3 cards to `MISSING` attack draw.
 - Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
-can choose to *bury* up to 3 cards to add to their own AC until the start of their next
+can choose to *bury* up to 3 cards to `MISSING` AC until the start of their next
 turn.
 - Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
-in the presence of an ally who fails a check, they may *toss* up to 3 cards and add that
-number to their ally's draw.
+in the presence of an ally who fails a check, they may *toss* up to 3 cards and `MISSING`
 - Spades   ♠️ : Conjuring Dealers deploy all sorts of mechanisms for drawing the eye of
-enemies away from their allies. They can *scrap* up to 3 cards and subtract that number
-from an enemy draw.
+enemies away from their allies. They can *scrap* up to 3 cards and `MISSING` enemy draw.
 
 ## Using Experience Points
 
@@ -113,12 +105,12 @@ gaining an additional Vulnerability.
 
 ### Changing Attributes and Skills
 
-All Attributes and Skills start at a +0 modifier. The Attribute modifier adds to all
-relevant Skills. You can adjust your Skills and Attributes using your Experience
+All Attributes and Skills start at a +0 modifier. The Attribute modifier  `MISSING`.
+You can adjust your Skills and Attributes using your Experience
 Points, which will help define how capable your character for relevant actions. On
 initial character creation, you can spend points to increase or gain points to decrease
-Attributes and Skill Modifiers up to positive or negative 3. This upper limit increases
-on even level-ups (2, +4; 4, +5; 6, +6). Once these are set at character creation, a
+Attributes and Skill Modifiers up to `MISSING`. This upper limit increases
+on even level-ups `MISSING`. Once these are set at character creation, a
 player may only add newly awarded Experience points.
 
 Raising an Attribute Modifier by +1 initially costs 2 Experience Points. Raising a Skill
@@ -126,17 +118,4 @@ Modifier by +1 initially costs 1 Experience Point. In both cases, raising modifi
 becomes more costly as you add. The following table shows the cost in Experience Points
 and the resulting modifier for Attributes and Skills.
 
-< center >
-| Modifier | Skill XP Cost | Attrib XP Cost |
-|     ---: |     :---:     |      :---:     |
-|       -3 |      -3       |       -8       |
-|       -2 |      -2       |       -4       |
-|       -1 |      -1       |       -2       |
-|        0 |       0       |        0       |
-|        1 |       1       |        2       |
-|        2 |       2       |        4       |
-|        3 |       3       |        8       |
-|        4 |       5       |       12       |
-|        5 |       7       |       18       |
-|        6 |       9       |       24       |
-</ center >
+`MISSING TABLE`

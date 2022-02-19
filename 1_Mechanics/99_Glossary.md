@@ -10,7 +10,7 @@
 - [Bystander](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Less powerful
   non-player character.
 - [Check](01_PlayerGuide_Full.md#Making-a-Check): Card-draw to determine an unknown
-  outcome. A Modifier is added to the value drawn.
+  outcome. A Modifier `MISSING`.
 - [Companions](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Side-kick or
   pet for a Dealer.
 - [DC, Difficulty class/level](01_PlayerGuide_Full.md#Making-a-Check): How are is it to
@@ -18,12 +18,11 @@
 - [Dealer](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Player character
   or powerful non-player character
 - [Epic Event](01_PlayerGuide_Full.md#Epic-Events): Draw multiple cards to pass a series
-  of checks using summed totals across cards.
-- [Fate Cards](01_PlayerGuide_Full.md#Fate-Cards): King/Aces cards held for rerolls.
+  of checks using `MISSING`.
+- [Fate Cards](01_PlayerGuide_Full.md#Fate-Cards): King/Aces cards held for redraws.
 - [GM, Game Master](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): narrator
   and curator of the story.
-- [Modifier](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): The number added
-  to a Check.
+- [Modifier](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): The number `MISSING`.
 - [Player](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Active participant
   in the story.
 - [Skill](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): Subskill within
