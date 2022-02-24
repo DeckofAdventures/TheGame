@@ -15,14 +15,12 @@ multiple pages, minor and major versions will be accompanied by descriptors deta
 the nature of these changes.
 
 
-## [0.0.0b0] - Unreleased
-+ First beta release
-### Added/Removed/etc.
+## [1.0.0a0] - Unreleased
++ Revised core mechanic, from threshold to banded target.
 
 ## [0.0.0a2] - 2022-02-10
 + Changed Suit mechanic to start at Level 1 per [Issue #15]
   (https://github.com/DeckofAdventures/TheGame/issues/15)
-+ 
 
 ## [0.0.0a1] - 2022-01-14
 + Began porting notes to GitHub

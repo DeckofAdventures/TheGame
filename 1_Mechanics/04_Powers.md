@@ -49,8 +49,7 @@
    - Resource: Minor or Major
    - Mechanic: You perform you Weapon Attack on multiple characters within 1 space.
      Targets must be next to one another (i.e., no non-targets between other targets).
-     When used as a Major Power, Targets make a contested Agility check against your
-     to-hit Draw and are Knocked Down if they fail to meet the DC.
+     When used as a Major Power, Targets make `MISSING` and are Knocked Down if they fail.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Martial or Defender
@@ -59,9 +58,9 @@
    - Description: Ever the protector on the field, you leap at the chance to avenge an
      ally.
    - Resource: Minor or Major
-   - Mechanic: When an ally takes damage in combat, you may take 1/2(Minor/Major) Weapon
+   - Mechanic: When an ally takes damage in combat, you may take 1/2 (Minor/Major) Weapon
      Attacks against the attacker on your turn without penalty. All other actions made
-     when using this Power incur an additional -2 penalty.
+     when using this Power incur an additional `MISSING` penalty.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Defender
@@ -102,8 +101,8 @@
    - Mechanic: Choose one effect when you take this power:
       + You perform your Mystic Attack on all characters within a cone of 3 spaces in
         front of you.
-      + All characters in a 3 space cone in front of you make a contested Athletics
-        check against your Primary Skill. On failure, they are Knocked Down
+      + All characters in a 3 space cone in front of you make a `MISSING`.
+        On failure, they are Knocked Down
    - Prerequisites: 
       + Power: Attack, Mystic
       + Role: Caster
@@ -142,13 +141,15 @@
    - Description: Your skills allow you to deploy temporary impromptu walls
    - Resource: Minor or Major
    - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide until the end of your
-     next turn. You may dismiss this wall at any time without an action.
+     next turn. You may dismiss this wall at any time without an action. This wall is 
+     impervious to standard attacks, but may be worn down over time at the GM's 
+     discretion. 
    - Prerequisites: Role: Support or Caster
    - Tags:
 - Name: Battlecharged
    - Description: You're always ready for something to go down.
    - Resource: Simple
-   - Mechanic: When drawing initiative, add +2.
+   - Mechanic: When drawing initiative, `MISSING`.
    - Prerequisites:
    - Tags:
 - Name: Calculating
@@ -157,16 +158,15 @@
    - Resource: Simple
    - Mechanic: Describe an action you or an ally wishes to take and how you would assess
      the situation. You spend 1 Power Point as you focus. Depending on your
-     description, the GM may reveal the DC of the related check in approximate
-     (e.g., above 10) or exact terms (e.g., DC of 10).
+     description, the GM may reveal `MISSING`.
    - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
    - Tags: Difficulty Prediction
 - Name: Critical Master
    - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against
      you when you make a critical hit against them.
    - Resource: Simple
-   - Mechanic: When delivering a critical hit, enemies no longer get to make a contested
-     check against you. All critical hits now Stun a Dealer or Knock Out a Bystander
+   - Mechanic: When delivering a critical hit, enemies `MISSING`. All critical hits now 
+     Stun a Dealer or Knock Out a Bystander
    - Prerequisites: Level 3
    - Tags:
 - Name: Creature Connection
@@ -196,7 +196,7 @@
      to increase the creature's power. On a long rest, you train/modify your Companion
      to improve their skills.
    - Resource: Simple
-   - Mechanic: Your Companion gains one Health Point and +1 to attack Draws
+   - Mechanic: Your Companion gains `MISSING` Health Point and `MISSING` to attack.
    - Prerequisites: 
       + Level 2
       + Power: Creature Connection
@@ -205,8 +205,8 @@
    - Description: You're sharper than the rest when you take your time.
    - Resource: Simple
    - Mechanic: Choose one Attribute. On turns when you only make 1 action using a Skill
-     under that Attribute, add +1 to the relevant check. This bonus does apply to
-     contested checks initiated by another character.
+     under that Attribute, `MISSING`. This bonus does apply to contested checks 
+     initiated by another character.
    - Prerequisites:
    - Tags:
 - Name: Fated Connection
@@ -232,14 +232,14 @@
    - Mechanic: You can exchange a fate card as an automatic success, without redrawing.
    - Prerequisites: 
       + Level 2
-      + Primary Skill: Any Intuituion Skill
+      + Primary Skill: Any Intuition Skill
    - Tags: Fate Cards 🃏
 - Name: Find Weakness
    - Description: You can size up an opponent and discover their weaknesses.
    - Resource: Simple
    - Mechanic: As an action, you can make an Intuition/Detection check
-     (whichever modifier is higher) to discover an opponents vulnerability. On a DC 7
-     you learn one vulnerability and on a crit (DC 11+) you learn all vulnerabilities.
+     (whichever modifier is higher) to discover an opponents vulnerability. On a `MISSING`
+     you learn one vulnerability and on `MISSING` you learn all vulnerabilities.
    - Prerequisites: Level 2
    - Tags: Difficulty Prediction
 - Name: Focused
@@ -248,10 +248,10 @@
      barely see the outside world.
    - Resource: Simple
    - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous
-     task that involves that skill, you draw 2 cards and select the higher value.
-     During this time, you also have the Unattentive Vulnerability and are also unable
-     to percieve the world outside this task. Draw 2 cards and select the lowest for
-     any Skill check made that is not directly related to the task at hand.
+     task that involves that skill, you with the Upper Hand.
+     During this time, you also have the Inattentive Vulnerability and are also unable
+     to perceive the world outside this task. Draw with the Lower Hand for any Skill 
+     check made that is not directly related to your current task.
    - Prerequisites:
    - Tags:
 - Name: Handy
@@ -259,15 +259,14 @@
      tailoring).
    - Resource: Simple
    - Mechanic: Work with your GM to decide a trade with which your character is
-     familiar. When making a check to to perform this craft, draw two cards and select
-     the higher value.
+     familiar. When making a check to to perform this craft, draw with the Upper Hand.
    - Prerequisites:
       + Skill requirement: Craft or Knowledge > +1
    - Tags: Combat
 - Name: Heal
    - Description: Can channel magical energy or medical training to heal others
    - Resource: Minor or Major
-   - Mechanic: Heal another character for 1/2 (Minor/Major) Health Points
+   - Mechanic: Heal another character for `MISSING` (Minor/Major) Health Points
    - Prerequisites: Role: Support
    - Tags:
 - Name: Illusion
@@ -275,30 +274,29 @@
    - Resource: Minor or Major
    - Mechanic: You make an illusory intangible visual (no larger than 1 space) or
      auditory effect that you've heard before. To determine if it's real, a character
-     makes a contested detection check against your Primary Skill. As a Major Power,
-     you can generate visual and auditory effects, and the check to verify draws two
-     cards, selecting the lowest value.
+     makes `MISSING`. As a Major Power,
+     you can generate visual and auditory effects, and the check to verify draws with
+     the Lower Hand.
    - Prerequisites: Role: Caster
    - Tags:
 - Name: Keen Eye
    - Description: You’re especially adept at taking in the world around you.
    - Resource: Simple
    - Mechanic: When you make a check to observe the world around you (visual, auditory
-     or olfactory), draw two cards and select the higher value.
+     or olfactory), draw with the Upper Hand.
    - Prerequisites:
    - Tags: 
 - Name: Lend Aid
    - Description: Just a little help from a friend
    - Resource: Simple
-   - Mechanic: Designate one ally who, on their next draw, will draw 2 cards and choose
-     which to use for the check. The other card is discarded.
+   - Mechanic: Designate one ally who, on their next draw, will draw with the Upper Hand.
    - Prerequisites: Role: Support
    - Tags:
 - Name: Lend Distraction
    - Description: Just an annoyance in the distance
    - Resource: Simple
-   - Mechanic: Designate a character who, on their next draw, will draw 2 cards and use
-     the lesser value. The other card is discarded
+   - Mechanic: Designate a character who, on their next draw, will draw with the Lower 
+     Hand.
    - Prerequisites: 
    - Tags:
 - Name: Lend Confusion
@@ -306,10 +304,9 @@
      target, having a sustained effect.
    - Resource: Minor or Major
    - Mechanic: Select one character to put under the effect of the Lend Distraction
-     Power. At the end of each of their turns this character can make Conviction check
-     (DC 5 + your Primary Skill modifier) to end the effect. As a Major effect, this
-     character is prevented from using Fate Cards when making their Conviction check to
-     end the effect.
+     Power. At the end of each of their turns this character `MISSING` to end the effect. 
+     As a Major effect, this character is prevented from using Fate Cards when making 
+     their check to end the effect.
    - Prerequisites: 
       + Level 2
       + Power: Lend Distraction
@@ -321,7 +318,7 @@
    - Resource: Minor or Major
    - Mechanic: Designate a character that you would like to Boost or Reduce and choose a
      Skill (or action that would require a Skill such as Attack). This character
-     receives an additional 1/2 (Minor Major) positive or negative modifier to any
+     receives an additional `MISSING` (Minor Major) positive or negative modifier to any
      Draws that involve this Skill.
    - Prerequisites: Role: Support
    - Tags:
@@ -329,8 +326,8 @@
    - Description: Your talents bolster you allies' speed and alertness.
    - Resource: Minor
    - Mechanic: Select one character. Until the end of the next combat, this character
-     draws 2 cards for initiative uses the higher value, discarding the other. This
-     effect is maintained even if you use another Power.
+     draws initiative with the Upper Hand. This  effect is maintained even if you use 
+     another Power.
    - Prerequisites: Role: Support
    - Tags: 
 - Name: Lend Vigor
@@ -353,9 +350,8 @@
    - Description: By brute strength, force others to move around the battlefield. 
    - Resource: Simple
    - Mechanic: You attempt to move a character who is within 1 space of you during your
-     movement. If the target is unwilling, this is a contested check: your Brute vs.
-     target's Finesse or Athletics, their choice. If the target fails the contested
-     check, you may place the target within 1 space of you at the end of your
+     movement. If the target is unwilling, this is `MISSING`. If the target is willing or 
+     fails the check, you may place the target within 1 space of you at the end of your
      movement.
    - Prerequisites: 
       + Role: Defender
@@ -385,13 +381,13 @@
    - Mechanic: You can a look at your top 2 cards of your deck and discard up to two of
      them. You must make a Draw before using this Power again.
    - Prerequisites: Level 2
-   - Tags: Card Viewing 👀
+   - Tags: Card Viewing 
 - Name: Shield
    - Description: Fortify yourself even further, adjusting your shield or summoning
      magical armor.
    - Size: Minor or Major
-   - Mechanic: Add +1/2 (Minor/Major) to a creature's AC until the end of their next
-     turn.
+   - Mechanic: Add `MISSING` (Minor/Major) to a creature's AC until the end of their 
+     next turn.
    - Prerequisites: Role: Support or Defender
    - Tags:
 - Name: Speed of the Wind
@@ -414,17 +410,17 @@
 - Name: Stealthy Surprise
    - Description: An undetected assailant is particularly deadly.
    - Resource: Simple
-   - Mechanic: You attempt to hide from a target. Choose a target and make a contested
-     Stealth check versus their Detection skill check. The GM does not reveal if you
+   - Mechanic: You attempt to hide from a target. Choose a target and make `MISSING` 
+     check. The GM does not reveal if you
      succeed. If successful, your next Attack Draw against that target gains an
-     additional +2 modifier so long as you are still considered hidden.
+     additional `MISSING` modifier so long as you are still considered hidden.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth in the Shadows
    - Description: A creature of the dark, you're especially adept at going unseen.
    - Resource: Simple
-   - Mechanic: When you make a Stealth check in dim light or darkness, you draw 2 cards
-     and select the higher value, discarding the other.
+   - Mechanic: When you make a Stealth check in dim light or darkness, you draw with 
+     the Upper Hand.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth's Call
@@ -432,15 +428,15 @@
      might catch you lurking.
    - Resource: Minor
    - Mechanic: You cause an illusory sound to emanate from a point you can see within 10
-     spaces. When you make a contested Stealth check versus any characters' Detection
-     check who is within 4 spaces of this point, they draw at a -2 modifier.
+     spaces. When you make a `MISSING` check versus any characters' `MISSING` within 4 
+     spaces of this point, they draw at a `MISSING` modifier.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth's Blessing
    - Description: You channel a deep energy to go unseen.
    - Resource: Minor or Major
    - Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth
-     checks are made with an additional +2. If this is used as a Major power, this
+     checks are made with a `MISSING` modifier. If this is used as a Major power, this
      effect extends to up to 3 characters. This effect ends for any character who
      Attacks.
    - Prerequisites:   

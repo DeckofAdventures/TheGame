@@ -2,17 +2,19 @@
 
 ## Quick-Start Guide
 
-Your Game Master (GM) is about to play narrator to a story in which you will take part. The GM will be there to help you through the process, but the more you pick up, the more time the GM can spend crafting an amazing story with you as participant.
+Your Game Master (GM) is about to play narrator to a story in which you will take part.
+The GM will be there to help you through the process, but the more you pick up, the
+more time the GM can spend crafting an amazing story with you as participant.
 
 1. Grab a deck of playing cards, exclude Jokers, and shuffle well.
-2. When asked, you'll draw one card from this deck, add a *Modifier*, and report the
-total. Sometimes, you'll be asked to draw more than one.
-   - Sometimes your total will pass a *Difficulty Check* (DC) threshold, sometimes not.
+2. When asked, `MISSING`
+   - *Modifier*
+   - Sometimes, you'll be asked to draw more than one.
+   - *Difficulty Check* (DC)
    - Success and failure are both part of an interesting story.
 3. If you draw a King or Ace, this is a *Fate Card* and should stay in your hand. If
-not, put it in your discard pile.
-   - At any time, you can discard a Fate Card to redraw and take the new value.
-   - When Aces are used in this way, add an extra +5 to the total.
+not, put it in your discard pile. At any time, you can discard a Fate Card to redraw 
+and take the new value.
 4. You should have a character sheet with Attributes (general skills, like Agility and
 Intelligence), and specific Skills under each attribute (e.g., Finesse under Agility).
 Each Attribute and Skill has a Modifier that you add when drawing a card related to that
@@ -31,17 +33,15 @@ rules) is encouraged.
    - If your character needs a rest to recharge their Energy Points or heal, this is
    played as an Epic event with either 3 cards for a short rest or 5 cards for a long
    rest.
-8. If your group turns to violence to solve issues, the DM will announce the beginning 
+8. After a long rest, suffle your discard pile back into your deck.
+9. If your group turns to violence to solve issues, the DM will announce the beginning 
 of Combat, where you draw cards to determine turn order.
-   - You can move (up to six spaces on a grid, if present) and take up to 2 actions, in
+   - You can move (up to `MISSING` on a grid, if present) and take up to 2 actions, in
    any order.
-   - The more actions you take, the harder they will be complete. Subtract 2 from each
-   Draw when taking two actions.
+   - The more actions you take, the harder they will be complete. 
    - Your character sheet will give you optional actions take under Powers, but you can
    always try something new.
-   - If you get hit, you may be asked to make a contested check. This is an additional
-   draw you make and compare the number drawn (plus any relevant modifiers) to the
-   number drawn on the attacker's hit. You can expend a Fate card to avoid damage.
+   - If you get hit, you can expend a Fate card to avoid damage.
    - Depending on the type of attack or amount of damage, you may get Stunned, Knocked
-   Out, Blinded/Deafened or Entangled, and need to pass a check to get back to normal.
-9. Remember: having fun comes first.
+   Out, Blinded/Deafened or Entangled, and need to undo this effect
+10. Remember: having fun comes first.

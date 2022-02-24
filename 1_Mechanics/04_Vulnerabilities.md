@@ -18,7 +18,7 @@
      exactly what you ask.
    - Resource: Minor or Major
    - Mechanic: When you draw a card to command your companion, the DM gains control of
-     the companion temporarily on cards below 3 (minor) or 4 (major)
+     the companion temporarily `MISSING` (Minor/Major)
    - Prerequisites: Power: Creature Connection
    - Tags:
 - Name: Code of Honor (a.k.a Vow, Oath)
@@ -56,8 +56,7 @@
      and you find it hard to keep up.
    - Resource: Major
    - Mechanic: When you take this Vulnerability, your combat speed is reduced by two
-     squares. When making a check to traverse terrain, draw two cards and select the
-     lower value.
+     squares. When making a check to traverse terrain, draw with the Lower Hand.
    - Prerequisites:
    - Tags:
 - Name: Illiterate
@@ -66,14 +65,23 @@
      pronounce the word.
    - Resource: Minor
    - Mechanic: You're unable to complete an action that requires understanding text.
-   - Prerequisites: Skill: Intelligence < 1
+   - Prerequisites: Skill: Intelligence `MISSING`
+   - Tags:
+- Name: Inattentive
+   - Description: You can really only do one thing at a time. The rest of the world
+     seems to fade away.
+   - Resource: Minor
+   - Mechanic: Whenever you Draw to observe or react to something you weren't already
+     aware of (e.g., Detection checks or Agility reactions), you draw with the Lower 
+     Hand.
+   - Prerequisites:
    - Tags:
 - Name: Inorganic
    - Description: You were not born, but instead created. You are not a slave to the
      bodily needs of the rest, but may instead be called to a prescribed purpose.
-   - Resource: Minor or Major
+   - Resource: Major
    - Mechanic: You do not need to breathe, eat or sleep (but still rest to recover
-     Health/Energy Points). As a Major effect, choose one of the following when you
+     Health/Energy Points). Choose one of the following when you
      take this Vulnerability:
       + Your creator or society at large consider you to have a function that you do not
         wish to pursue, such as a dangerous and laborious profession.
@@ -85,7 +93,7 @@
    - Description: An attacker has made their choice; that choice is to die.
    - Resource: Major
    - Mechanic: If you are attacked in combat, you must continue attacking until your
-     attacker is knocked out.
+     attacker is Knocked Out.
    - Prerequisites:
    - Tags:
 - Name: Outsider
@@ -93,9 +101,17 @@
      customs, somehow ostracized by the community, or even hunted based on group
      membership.
    - Resource: Minor or Major
-   - Mechanic: For any Conviction check to interact with the dominant society, you draw
-     2 cards and pick the lowest value. If chosen as Major, work with the GM to decide
+   - Mechanic: For any `MISSING` check to interact with the dominant society, you draw
+     with the Lower Hand. If chosen as Major, work with the GM to decide
      some feature of your background that makes you unwelcome in most public places.
+   - Prerequisites:
+   - Tags:
+- Name: Phobia
+   - Description: You can't shake it, there's just the terrifying fear that burdens you.
+   - Resource: GM Determined
+   - Mechanic: Work with your GM to decide a fear you hold and the reason for that fear.
+     This may be a fear of something concrete (e.g., spiders, fire) or something less
+     tangible (e.g., being alone, going hungry).
    - Prerequisites:
    - Tags:
 - Name: Savior (a.k.a Chosen One)
@@ -104,15 +120,6 @@
    - Mechanic: Work with your GM to decide a group or organization that believes you are
      the key to their salvation. You may encounter a member of this group that requires
      your help.
-   - Prerequisites:
-   - Tags:
-- Name: Unattentive
-   - Description: You can really only do one thing at a time. The rest of the world
-     seems to fade away.
-   - Resource: Minor
-   - Mechanic: Whenever you Draw to observe or react to something you weren't already
-     aware of (e.g., Detection checks or Agility reactions), you draw 2 cards and take
-     the lower value.
    - Prerequisites:
    - Tags:
 - Name: Vendetta
@@ -126,6 +133,6 @@
    - Resource: GM Determined
    - Mechanic: Work with your GM to decide an NPC or organization that thinks you’re
      responsible for a crime. You may encounter a member of this group who wants you in
-     jail or to stand trial.
+     jail, or stand trial, or outright dead.
    - Prerequisites:
    - Tags:
