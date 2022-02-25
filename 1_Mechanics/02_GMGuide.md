@@ -9,6 +9,7 @@
    - What It’s All About
    - Running a Session with Deck of Adventures
       - Successes and Failures
+      - Likelihood Chart
       - Which Skills to use
       - Contested checks
    - Running an Adventure
@@ -61,10 +62,37 @@ team on Discord `LINK NEEDED` or via GitHub issues.
 
 ### Successes and Failures
 
-- Criticals
-- Major
-- Minor
-- Match
+- Critical Successes have a 1.9% chance of success. They should feel amazing. Make an 
+  effort to rewards these exact matches whenever you can.
+- Major Successes have a 7.7% chance of success. This should still feel pretty good to
+  your players. 
+- Successes.
+- Misses.
+
+### Likelihood Chart
+
+The closer a TC is to the end of the spectrum, the less an expanded DC will matter in 
+determining the outcome. 7 and 8, for example have the full range, but above and below, 
+the end of your DC range will hit the Ace. This shouldn't dramatically impact play, 
+but is worth considering at crucial moments.
+
+
+|     Card | 0    | 1     | 2     | 3     | 4     | 5     | 6      |
+|     --- :|------|-------|-------|-------|-------|-------|--------|
+| **A Low**| 7.7% | 15.4% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8%  |
+|     **2**| 7.7% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8% | 61.5%  |
+|     **3**| 7.7% | 23.1% | 38.5% | 46.2% | 53.8% | 61.5% | 69.2%  |
+|     **4**| 7.7% | 23.1% | 38.5% | 53.8% | 61.5% | 69.2% | 76.9%  |
+|     **5**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 76.9% | 84.6%  |
+|     **6**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 84.6% | 92.3%  |
+|     **7**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 84.6% | 100.0% |
+|     **8**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 84.6% | 100.0% |
+|     **9**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 84.6% | 92.3%  |
+|    **10**| 7.7% | 23.1% | 38.5% | 53.8% | 69.2% | 76.9% | 84.6%  |
+|     **J**| 7.7% | 23.1% | 38.5% | 53.8% | 61.5% | 69.2% | 76.9%  |
+|     **Q**| 7.7% | 23.1% | 38.5% | 46.2% | 53.8% | 61.5% | 69.2%  |
+|     **K**| 7.7% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8% | 61.5%  |
+|**A High**| 7.7% | 15.4% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8%  |
 
 ### Which Skills to use
 

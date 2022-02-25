@@ -60,18 +60,15 @@ to try and resolve disputes between players that may come up.
 ## The Action Deck
 
 Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A)
-across 4 suits, without Jokers.
+across 4 suits, without Jokers. Each player should have their own Deck. 
 
-1. To take any action, `MISSING`
-2. Kings and Aces are Fate Cards and should be reserved in your hand. All other cards 
-go directly into a discard pile. Hold on to these Fate Cards, even when shuffling the deck.
-3. When the Action Deck is empty, `MISSING`
-
-Sometimes the odds will be in your favor; sometimes they will be against you. 
-1. Having the Upper Hand means you draw 2 cards and `MISSING`. The other cards is
-`MISSING`. The odds are in your favor.
-2. Having the Lower Hand means you draw 2 cards and `MISSING`. The other card is
-`MISSING`. This could represent how difficult a given task is for you.
+1. Actions with unknown outcomes will involve drawing from the respective in Checks.
+2. Kings and Aces are Fate Cards and should be reserved in one's hand, both player and 
+GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
+when shuffling the deck.
+3. Players will use this deck to do most anything; it represents their character's 
+stamina until they rest. When the Action Deck is empty and a player has to shuffle 
+prematurely, they draw with the Lower Hand (1+) until they would shuffle when resting.
 
 ## Fate Cards
 
@@ -79,7 +76,8 @@ Fate Cards (K and A) are a chance to control your fate. They permit the player t
 when they want a second chance at a key moment.
 
 1. Fate Cards drawn from the deck are played as usual, but remains in the player's hand.
-2. Any time a player draws a card, they may discard a held Fate Card and redraw.
+2. Any time a player or the GM draws a card, they may discard a held Fate Card and 
+redraw.
 3. A GM may award a Fate Card (as pulled from the discard pile or signified by another
 token) to a player for excellent play, including exemplifying their character’s
 strengths or weaknesses.
@@ -92,8 +90,8 @@ strengths or weaknesses.
 weaknesses: Agility, Strength, Intuition, Intelligence, Conviction, and Vitality.
 2. Skills are specific to an Attribute. Athletics is a Strength skill, but Bluffing is a
 Conviction skill.
-3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain. 
-`MISSING`
+3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
+and add or subtract from the [Difficulty Class](./#making-a-check) of a given check.
 4. Face cards retain their value relative to the 10 (J 11; Q 12; K 13; A 14).
 
 Complete list:
@@ -157,18 +155,71 @@ to be rude to one’s fellow players.
 
 ### Making a Check
 
-When the GM calls for a Check, `MISSING` relevant Attribute or Skill. `MISSING` The GM 
-may describe the nature of the outcome or announce the degree of success and ask the 
-player to describe the outcome
+When the GM calls for a Check, they will reveal a reveal a Target Card (TC) and the
+Attribute or Skill associated with the check. The GM may also reveal the Difficulty
+Class (DC); this is the range around the target card the player might hope to draw and
+may be widened or narrowed by the player's relevant modifier. The player will then draw
+one or more cards and declare how far away from the TC they drew. The GM may describe
+the nature of the outcome or announce the degree of success and ask the player to
+describe the outcome. Exactly matching the TC in value, it's a Major Success. If the
+drawn card is a perfect match (i.e., value and suit), it's a Critical Success. If the 
+card drawn matches the suit, it is either a Suited Hit or a Suited Miss, depending on
+whether or not it falls in the Success range. Suited Hit and Miss will only matter for 
+characters with specific abilities. 
 
-**For example**, when jumping across a chasm `MISSING`:
-1. `MISSING` a major failure and might be associated with consequences, such as
-falling from a great height.
-2. `MISSING` a minor failure and might result in just barely grabbing on to the far
-ledge with minor injuries.
-3. `MISSING` a minor success, performing as intended.
-4. `MISSING` a major success. The character might catch a glimpse of something
-important in the distance during their jump.
+**For example**, when a Xena attempts to jump across a chasm, the GM reveals a TC of
+the 8 of clubs and a DC of 2, asking for an Athletics check. If the player's Athletics 
+modifier is +1, the check is ...
+1. A Cricial Success if they draw the 8 of Clubs. They might perfectly make the
+ jump, impressing their allies, and catch a glimps of something important in the 
+ distance.
+2. A Major Success if they draw any 8. They might make the jump gracefully enough to 
+impress their allies without any other perks.
+3. A Suited Hit if they draw any card within 3 (DC 2 + 1). For TC 8 / DC 3, this is 5, 
+6, 7, 9, 10 or J. Xena might have a Power that grants benefits to allies on a Suited
+Hit. 
+3. A Success if they draw within XXX A Success would mean performing the jump as intended.
+2. A Suited Miss if they draw any Club below 5 or above J. Xena might have a Power that 
+lets them redraw on a Suited Miss, for example. 
+3. A Miss is any other draw below 5 or above J.
+
+Sometimes the odds will be in your favor; sometimes they will be against you. 
+1. Having the Upper Hand (N) means you draw N additional cards and select the card 
+closest to the TC after applying all relevant mechanics. 
+2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
+is furthest from the TC after applying all relevant mechanics. 
+
+In these cases, the other card is discarded. If N is not specified, draw 1 extra. If a 
+rule specifies Upper/Lower Hand (N+), N cards are drawn, +1 for each instance the effect
+is applied. For example, running through your Action Deck without resting is Lower
+ Hand (1+). This means that, if it happens twice, draw 3. If another effect would also
+ cause drawing with Lower Hand, draw 4.
+
+When an Ace is revealed as the TC, the GM declares if it is an Ace Low or Ace High. If 
+Ace Low, the DC may span 2, 3, 4, etc. If Ace High, the DC may span K, Q, J, etc. An Ace
+drawn for a check is Wild, either High or Low, whichever is closer to the TC. For 
+example, comparing the 2 and K rows below, an Ace can pass a DC of 1 in either case.
+
+**Target Card Range Table**
+For each card on the left, refer to the column with the corresponding sum of DC and 
+Modifiers. Left of 0 is the lower bound, right of 0 is the upper bound.
+
+|**Card**|**6**|**5**|**4**|**3**|**2**|**1**|**0**|**1**|**2**|**3**|**4**|**5**|**6**|
+|   ---: |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**A Low**| A  |  A  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |
+| **2**  |  A  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |
+| **3**  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |
+| **4**  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |
+| **5**  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |
+| **6**  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |
+| **7**  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |
+| **8**  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |
+| **9**  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |
+| **10** |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |
+| **J**  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |
+| **Q**  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |
+| **K**  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |  A  |
+|**A High**|8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |  A  |  A  |
 
 ### In Combat
 
@@ -184,8 +235,11 @@ moving diagonally counts as one space unless otherwise ruled by the GM.
 
 #### Taking Turns
 
-1. Combat order is determined by card draw. Every round, all characters draw a card to
-`MISSING`
+1. Combat order is determined by card draw. Every round, all characters draw an 
+initiatyive card and place it in on the table in view. This is both turn order (Ace 
+first, then K, Q, etc.) and the TC for any attack. Players with the same initiative 
+card values can decide who goes first. Without concensus, the player with the higher
+Agility modifier goes first.
 2. A player may delay their turn in initiative order intentionally to co-occur with
 other players, but their turn is forfeited if they do not announce their action(s) by
 the end of the round. A GM may skip a player’s turn if they are unprepared and need more
@@ -213,26 +267,26 @@ the Dealer's next turn.
 #### Effects
 
 Some effects will impact a character over time.
-1. **Stunned** If a Dealer takes `MISSING` damage in 1 hit, they `MISSING` conviction 
-check at the start of their turn. If failed, they may
-either move or make one action on their turn, not both. A major failure on this check
-`MISSING`. Some creatures can cause stunning effects as part of
+1. **Stunned** If a Dealer takes `MISSING` damage in 1 hit, they `MISSING` Conviction 
+Check at the start of their turn. If failed, they may
+either move or make one action on their turn, not both. 
+Some creatures can cause stunning effects as part of
 their attacks.
 2. **Entangled** At the start of their turn, a Dealer `MISSING`. 
 If failed, they may not move on that turn.
 `MISSING` prevents actions requiring arm movements.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their
 turn, and their movement speed is halved.
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a `MISSING` spell-casting attribute of the creature causing the effect (or DC 5 if
-physical effect). If failed, they take a -5 penalty to any action requiring the relevant
+4. **Blinded, Deafened** At the start of their turn, a Dealer makes a `MISSING` spell-casting attribute of the creature causing the effect.
+If Miss, they fraw Lower Hand (2) for any action requiring the relevant
 sense.
 6. **Outnumbered** Dealers may delay their turn to co-occur with another player Dealer.
-For each additional Dealer attacking the same target within 1 space, attack modifiers
-are take an additional +2.
-7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check (
-DC 8 + number of turns since effect onset). If attacked further, the player begins an
-Epic Event alone. Each additional hit is a Check they may respond to with one or more
-cards to pass an unknown DC as the Great Void calls out to them.
+For each additional Dealer attacking the same target within 1 space, attacks are made
+with an additional +1 modifier.
+7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check 
+(`MISSING` + number of turns since effect onset). If attacked further, the player begins
+an Epic Event alone. Each additional hit is a Check with a GM TC that they may respond 
+to with one or more cards to pass an unknown DC as the Great Void calls out to them.
 
 ### Health and Armor
 
@@ -248,22 +302,26 @@ AC is calculated by `MISSING`.
 ### Epic Events
 
 At any point, the DM may call for an Epic Event, usually involves player(s) needing to
-make a series of successes in a short time period. During an epic event...
+make a series of successes in a short time period. For example, an earthquake causes 
+the building to become unsteady. All characters must act quickly to get out before 
+a collapse
 
+During an epic event...
 1. Players draw 5 cards. 
-2. The DM will call for a series of checks. Any subset of players may volunteer for any
-of these checks.
-3. During an individual check, players `MISSING`.
+2. The DM will call for a series of Checks, revealing TCs and correponding Attributes or
+skills. Any subset of players may volunteer for any of these Checks.
+3. During an individual check, players play 1 card and may sacrifice others. Each card 
+sacrificed adds +1 modifier.
 4. Fate Cards card mechanics remain the same: played Ks and As return to the  player’s
 hand. If played as Fate Cards, they result in a number of discards and redraws equal to
 the number Fate Cards played.
-5. If no player volunteers for a check, or no player has cards remaining, the check is a
-critical failure.
+5. If no player volunteers for a check, or no player has cards remaining, the Check is
+an automatic miss.
 
-The GM determines when an epic event has been resolved. On successful resolution, the
-narrative will move forward and the GM will resume normal play. On a failure during an
-Epic Event, the GM will lay out the consequences and give the players a chance to
-react.
+The GM determines when an Epic Event has been resolved, and how many individual checks
+consititute collective success or failure. On successful resolution, the narrative will 
+move forward and the GM will resume normal play. On a failure during an Epic Event, the 
+GM will lay out the consequences and give the players a chance to react.
 
 ### Rests
 
@@ -273,9 +331,9 @@ rest permits players to draw 3 cards, and long rest 5.
 
 During a Rest, players might attempt to repair an item (including Armor), read a book,
 recover Health Points (HP), or recover Energy Points. Recovering Health is a Vitality
-check `MISSING` for each Health Point being recovered. Some Powers are limited-use
-and require recharging associated Energy Points during a rest, at a Primary Skill  
-`MISSING` for each Point being recovered. A Dealer who draws `MISSING`
+Check with DC`MISSING`, -1 for each Health Point being recovered. Some Powers are limited-use
+and require recharging associated Energy Points during a rest, at a Primary Skill Check 
+DC `MISSING`, -1 for each Point being recovered. A Player who draws `MISSING`
 recovers a smaller portion of Health or Energy Points equal `MISSING`.
 
 Players take turns attempting their respective checks. Order is either determined by the
@@ -284,7 +342,7 @@ each novel goal.
 
 ## Character Creation
 
-Deck of Adventures offers both premade characters `LINK NEEDED` and a completely
+Deck of Adventures offers both [premade characters](./PremadeCharacters/README.md) and a completely
 customizable process. Consult with your GM for information about the setting and what
 skills will be relevant for the story ahead. Custom creation starts with spending
 Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
@@ -292,7 +350,7 @@ Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
 - Attributes cost more, but also increase corresponding skills.
 - Spending points has diminishing returns. Going from 0 to +1 is relatively cheap, but
 +3 to +4 will take many more points.
-- Skill Modifiers start “unskilled,” with a 0 Modifier, so choose carefully. 
+- Skill Modifiers start “unskilled,” with a `MISSING` Modifier, so choose carefully. 
 - Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional
 Experience Points to spend.
 - Powers are special features, boons or strengths, that cost 1 or 2 points. 
