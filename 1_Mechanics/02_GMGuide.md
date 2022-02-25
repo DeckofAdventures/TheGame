@@ -95,7 +95,7 @@ but is worth considering at crucial moments.
 
 ### Which Skills to use
 
-1. Agility `MORE FORTHCOMING`
+1. Agility `MISSING`
 
 ### Contested checks
 
