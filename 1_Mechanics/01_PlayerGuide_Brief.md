@@ -7,11 +7,13 @@ The GM will be there to help you through the process, but the more you pick up, 
 more time the GM can spend crafting an amazing story with you as participant.
 
 1. Grab a deck of playing cards, exclude Jokers, and shuffle well.
-2. When asked, `MISSING`
-   - *Modifier*
-   - Sometimes, you'll be asked to draw more than one.
-   - *Difficulty Check* (DC)
-   - Success and failure are both part of an interesting story.
+2. You may be asked to make a Check. This involves..
+   - A *Target Card* (TC) on the table, that you hope to be close to when you Draw.
+   - *Difficulty Class* (DC) that defines how far away from the TC you can be and still
+     succeed. 
+   - A *Modifier* provided by your character sheet that expands or shrinks the DC.
+   - Sometimes, you'll be asked to draw more than one card to increase (Upper Hand) or 
+     decrease (Lower Hand) your odds.
 3. If you draw a King or Ace, this is a *Fate Card* and should stay in your hand. If
 not, put it in your discard pile. At any time, you can discard a Fate Card to redraw 
 and take the new value.
@@ -33,7 +35,7 @@ rules) is encouraged.
    - If your character needs a rest to recharge their Energy Points or heal, this is
    played as an Epic event with either 3 cards for a short rest or 5 cards for a long
    rest.
-8. After a long rest, suffle your discard pile back into your deck.
+8. After a long rest, shuffle your discard pile back into your deck.
 9. If your group turns to violence to solve issues, the DM will announce the beginning 
 of Combat, where you draw cards to determine turn order.
    - You can move (up to `MISSING` on a grid, if present) and take up to 2 actions, in

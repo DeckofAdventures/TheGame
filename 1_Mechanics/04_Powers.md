@@ -229,7 +229,7 @@
    - Description: You have a deep connection with a Deity who shines their blessings on
      your during times of need.
    - Resource: Major
-   - Mechanic: You can exchange a fate card as an automatic success, without redrawing.
+   - Mechanic: You can exchange a Fate Card as an automatic success, without redrawing.
    - Prerequisites: 
       + Level 2
       + Primary Skill: Any Intuition Skill
@@ -338,12 +338,19 @@
      their movement.
    - Prerequisites: Role: Support or Caster
    - Tags: 
-- Name: Luck
+- Name: Lucky
    - Description: Not everything goes your way, but for one reason or another, you seem
      to avoid the worst.
-   - Resource: Simple
-   - Mechanic: Can use a held Ace Fate Card to turn a Critical Failure into a minor
-     success. If taken a second time, you may use either an Ace or a King.
+   - Resource: Minor
+   - Mechanic: On a Suited Miss, redraw. Cannot be used multiple times on the same check.
+   - Prerequisites:
+   - Tags:
+- Name: Luck Shared
+   - Description: You know just how to spread the luck around. When things are going 
+     your way, you can share that vibe.
+   - Resource: Minor
+   - Mechanic: On a Suited Hit, choose one Player. Their next draw will be with the 
+     Upper Hand.
    - Prerequisites:
    - Tags:
 - Name: Momentum 
