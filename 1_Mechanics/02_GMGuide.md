@@ -5,17 +5,17 @@
 <!-- MarkdownTOC -->
 
 - Introduction
-   - Getting Started
-   - What It’s All About
-   - Running a Session with Deck of Adventures
-      - Successes and Failures
-      - Likelihood Chart
-      - Which Skills to use
-      - Contested checks
-   - Running an Adventure
-   - Managing Players \(Expectations & Realities\)
-   - Crunch
-   - Now What?
+  - Getting Started
+  - What It’s All About
+  - Running a Session with Deck of Adventures
+    - Successes and Failures
+    - Likelihood Chart
+    - Which Skills to use
+    - Contested checks
+  - Running an Adventure
+  - Managing Players \(Expectations & Realities\)
+  - Crunch
+  - Now What?
 
 <!-- /MarkdownTOC -->
 
@@ -76,9 +76,8 @@ determining the outcome. 7 and 8, for example have the full range, but above and
 the end of your DC range will hit the Ace. This shouldn't dramatically impact play, 
 but is worth considering at crucial moments.
 
-
 |     Card | 0    | 1     | 2     | 3     | 4     | 5     | 6      |
-|     --- :|------|-------|-------|-------|-------|-------|--------|
+|     --- :| :---:| :---: | :---: | :---: | :---: | :---: | :---:  |
 | **A Low**| 7.7% | 15.4% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8%  |
 |     **2**| 7.7% | 23.1% | 30.8% | 38.5% | 46.2% | 53.8% | 61.5%  |
 |     **3**| 7.7% | 23.1% | 38.5% | 46.2% | 53.8% | 61.5% | 69.2%  |
