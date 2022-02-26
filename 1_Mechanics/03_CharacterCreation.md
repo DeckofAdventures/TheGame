@@ -6,8 +6,9 @@ First, choose where your character is coming from including your lived experienc
 would motivate adventuring. Classically, this is a 'racial' or species origin
 (e.g., Dwarves, Humans, or Elves of Fantasy) that fits with the GM's setting. 
 This has no inherent mechanical impact, but may shape how your character
-navigates challenges. Growing up at a seaport or a Dwarf, your character might be more
-adept at sailing or masonry (i.e., certain skill checks) than others.
+navigates challenges. Growing up at a seaport, your character might be more
+adept at sailing (i.e., certain skill checks) than others. Coming to a new land as an
+outsider might be a [Vulnerability](#Choose-Your-Vulnerabilities), as described below.
 
 ## Choose Your Role
 
@@ -50,20 +51,25 @@ Roles come with primary suit suggestions, but this can be changed at each level-
 - Hearts   ♥️ : Life       ❤️‍
 - Spades   ♠️ : Conjuring  ⚡️
 
-Dealers are given special abilities based on their primary suit. First, `MISSING`
-modifier. Second, `MISSING` Suit Mechanics that can be used as an action a number of
+Dealers are given special abilities based on their primary suit. First, drawing a card
+of your primary suit grants a +1 
+modifier. At 2nd Level, Dealers gain access to Suit Mechanics that can be used as an 
+action a number of
 times equal to their level per long rest. Cards used in this manner are put directly in
-the discard pile without inspection. The number of cards drawn in this manner `MISSING`.
+the discard pile without inspection. Half the number of cards drawn in this manner, up
+to 4, serves as an additional modifier on a check before the outcome is known.
 
 - Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really
-fast. They can choose to *burn* up to 3 cards to `MISSING` attack draw.
+fast. They can choose to *burn* cards to add to the modifier of an attack draw.
 - Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
-can choose to *bury* up to 3 cards to `MISSING` AC until the start of their next
+can choose to *bury* cards to `MISSING` AC until the start of their next
 turn.
 - Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
-in the presence of an ally who fails a check, they may *toss* up to 3 cards and `MISSING`
+in the presence of an ally who misses a check, they may *toss* cards to add to the 
+modifier of the missed check.
 - Spades   ♠️ : Conjuring Dealers deploy all sorts of mechanisms for drawing the eye of
-enemies away from their allies. They can *scrap* up to 3 cards and `MISSING` enemy draw.
+enemies away from their allies. They can *scrap* to subtract from the DC (down to a 
+minimum of 0) an enemy attack.
 
 ## Using Experience Points
 
@@ -105,7 +111,7 @@ gaining an additional Vulnerability.
 
 ### Changing Attributes and Skills
 
-All Attributes and Skills start at a +0 modifier. The Attribute modifier  `MISSING`.
+All Attributes and Skills start at a `MISSING` modifier. The Attribute modifier `MISSING`.
 You can adjust your Skills and Attributes using your Experience
 Points, which will help define how capable your character for relevant actions. On
 initial character creation, you can spend points to increase or gain points to decrease

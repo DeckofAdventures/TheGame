@@ -254,6 +254,12 @@
      check made that is not directly related to your current task.
    - Prerequisites:
    - Tags:
+- Name: Fountain of Power
+   - Description: Your power runs deep, drawing from an unknown spring within you.
+   - Resource: Major
+   - Mechanic: When you discard cards for a Suit Mechanic, you may discard up to 6.
+   - Prerequisites: Level 2
+   - Tags: Suit Mechanic
 - Name: Handy
    - Description: You know how to work with your hands (e.g., machining, lock picking,
      tailoring).
