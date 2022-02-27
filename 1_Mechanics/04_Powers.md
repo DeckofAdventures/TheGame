@@ -6,24 +6,11 @@
    - Mechanic:
    - Prerequisites:
    - Tags:
-   
-- Name: Aces Wild
-   - Description: You have attuned to the wild magic of Aces. When using an Ace as a
-     Fate Card, it grants additional effects depending on the suit.
-   - Resource: Simple
-   - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to
-     trigger an effect corresponding to their suit. When you choose this Power (up to
-     twice), select two of the following effects.
-      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a
-        single action - even if you already went that round
-      - Ace of Diamonds: As an action, you recover 2 Energy Points OR each member of
-        your party recovers 1 Point
-      - Ace of Hearts: As an action, you can heal one Health Point for yourself or an
-        ally within 3 squares
-      - Ace of Spades: As an action, you can strike an enemy with an automatic hit with
-        a Power of your choosing
-   - Prerequisites: Level 3
-   - Tags: Fate Cards 🃏
+
+## Combat
+
+### Weapon Attacks
+
 - Name: Attack, Weapon
    - Description: You've been trained with basic weaponry, and maybe even taken a liking
      to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
@@ -49,10 +36,20 @@
    - Resource: Minor or Major
    - Mechanic: You perform you Weapon Attack on multiple characters within 1 space.
      Targets must be next to one another (i.e., no non-targets between other targets).
-     When used as a Major Power, Targets make `MISSING` and are Knocked Down if they fail.
+     When used as a Major Power, Targets make an Agility check vs. your TC. On a miss,
+     they are Knocked Down.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Martial or Defender
+   - Tags:
+- Name: Attack, Disarm
+   - Description: You're so skillful on the battlefield that you know how to target your
+     attacks to focus on the enemy weapon.
+   - Resource: Minor
+   - Mechanic: When you spend an Energy Point to disarm, perfom a Weapon Attack. On a 
+     hit, the enemy must spent one action picking up that weapon before using it again.
+     This does not apply to Mystic Attacks or other weapons the enemy may weild.
+   - Prerequisites: Role: Martial
    - Tags:
 - Name: Attack, Vengeance 
    - Description: Ever the protector on the field, you leap at the chance to avenge an
@@ -65,6 +62,9 @@
       + Power: Attack, Weapon
       + Role: Defender
    - Tags:
+
+### Mystic Attacks
+
 - Name: Attack, Mystic
    - Description: You've been trained in some form of Magic to Technology and can
      produce the most basic form with ease. This could be an electrified touch or a
@@ -137,30 +137,15 @@
       + Power: Attack, Mystic
       + Role: Support or Caster
    - Tags:
-- Name: Barrier
-   - Description: Your skills allow you to deploy temporary impromptu walls
-   - Resource: Minor or Major
-   - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide until the end of your
-     next turn. You may dismiss this wall at any time without an action. This wall is 
-     impervious to standard attacks, but may be worn down over time at the GM's 
-     discretion. 
-   - Prerequisites: Role: Support or Caster
-   - Tags:
+
+### Control
+
 - Name: Battlecharged
    - Description: You're always ready for something to go down.
    - Resource: Simple
    - Mechanic: When drawing initiative, `MISSING`.
    - Prerequisites:
    - Tags:
-- Name: Calculating
-   - Description: You concentrate and assess the nature of the task at hand to determine
-     how difficult it might be.
-   - Resource: Simple
-   - Mechanic: Describe an action you or an ally wishes to take and how you would assess
-     the situation. You spend 1 Power Point as you focus. Depending on your
-     description, the GM may reveal `MISSING`.
-   - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
-   - Tags: Difficulty Prediction
 - Name: Critical Master
    - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against
      you when you make a critical hit against them.
@@ -169,71 +154,26 @@
      Stun a Dealer or Knock Out a Bystander
    - Prerequisites: Level 3
    - Tags:
-- Name: Creature Connection
-   - Description: You have developed a connection with a creature in your setting
-     (e.g., animal, spirit, robot). On a long rest you can attune to an animal as a
-     Companion.
+- Name: Momentum 
+   - Description: By brute strength, force others to move around the battlefield. 
    - Resource: Simple
-   - Mechanic: On a long rest, you attempt to connect with a creature in the world to
-     take them as a Companion. The GM determines if this attempt was successful and may
-     ask for a relevant Skill check to determine success.
+   - Mechanic: You attempt to move a character who is within 1 space of you during your
+     movement. If the target is unwilling, this is `MISSING`. If the target is willing or 
+     fails the check, you may place the target within 1 space of you at the end of your
+     movement.
    - Prerequisites: 
-      + Skill requirement: Craft or Knowledge > +1
-   - Tags: Companion
-- Name: Creature Link
-   - Description: You have developed a strong bond with your Companion over time, and
-     can hear its thoughts in your mind.
-   - Resource: Simple
-   - Mechanic: Some checks can now be made through your Companion using their Skills and
-     Attributes. The GM determines if a check can reasonably be made through your
-     Companion.
-   - Prerequisites: 
-      + Level 2
-      + Power: Creature Connection
-   - Tags: Companion
-- Name: Creature Mastery
-   - Description: Your connection with your chosen creature has deepened, allowing you
-     to increase the creature's power. On a long rest, you train/modify your Companion
-     to improve their skills.
-   - Resource: Simple
-   - Mechanic: Your Companion gains `MISSING` Health Point and `MISSING` to attack.
-   - Prerequisites: 
-      + Level 2
-      + Power: Creature Connection
-   - Tags: Companion
-- Name: Cunning
-   - Description: You're sharper than the rest when you take your time.
-   - Resource: Simple
-   - Mechanic: Choose one Attribute. On turns when you only make 1 action using a Skill
-     under that Attribute, `MISSING`. This bonus does apply to contested checks 
-     initiated by another character.
-   - Prerequisites:
+      + Role: Defender
+      + Skill: Brute > +1
    - Tags:
-- Name: Fated Connection
-   - Description: Your Power towards a chosen suit has increased in strength. You can
-     now control Fate when drawing a card from this suit.
-   - Resource: Major
-   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be
-     played or discarded immediately. When discarded, redraw.
-   - Prerequisites: Level 3
-   - Tags: Fate Cards 🃏
-- Name: Fated Draw
-   - Description: Your connection to the Fates is heightened and you feel you can shift
-     the odds in your favor.
-   - Resource: Major
-   - Mechanic: When making a check, you can draw up to 3 cards and choose which of them
-     to use for the check. You then must discard the remaining drawn cards.
-   - Prerequisites: Level 3
-   - Tags:
-- Name: Favored by the Gods
-   - Description: You have a deep connection with a Deity who shines their blessings on
-     your during times of need.
-   - Resource: Major
-   - Mechanic: You can exchange a Fate Card as an automatic success, without redrawing.
+- Name: Momentum Aura
+   - Description: Your strength is supernatural, bending the gravity around you.
+   - Resource: Simple
+   - Mechanic: Your Momentum ability extends to 3 spaces.
    - Prerequisites: 
-      + Level 2
-      + Primary Skill: Any Intuition Skill
-   - Tags: Fate Cards 🃏
+      + Power: Momentum
+      + Role: Defender
+      + Skill: Brute > +2
+   - Tags:
 - Name: Find Weakness
    - Description: You can size up an opponent and discover their weaknesses.
    - Resource: Simple
@@ -242,56 +182,15 @@
      you learn one vulnerability and on `MISSING` you learn all vulnerabilities.
    - Prerequisites: Level 2
    - Tags: Difficulty Prediction
-- Name: Focused
-   - Description: There's some domain that completely captivates you. When you're
-     invested, you know exactly how to proceed and there's no distracting you. You
-     barely see the outside world.
-   - Resource: Simple
-   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous
-     task that involves that skill, you with the Upper Hand.
-     During this time, you also have the Inattentive Vulnerability and are also unable
-     to perceive the world outside this task. Draw with the Lower Hand for any Skill 
-     check made that is not directly related to your current task.
-   - Prerequisites:
-   - Tags:
-- Name: Fountain of Power
-   - Description: Your power runs deep, drawing from an unknown spring within you.
-   - Resource: Major
-   - Mechanic: When you discard cards for a Suit Mechanic, you may discard up to 6.
-   - Prerequisites: Level 2
-   - Tags: Suit Mechanic
-- Name: Handy
-   - Description: You know how to work with your hands (e.g., machining, lock picking,
-     tailoring).
-   - Resource: Simple
-   - Mechanic: Work with your GM to decide a trade with which your character is
-     familiar. When making a check to to perform this craft, draw with the Upper Hand.
-   - Prerequisites:
-      + Skill requirement: Craft or Knowledge > +1
-   - Tags: Combat
+   
+### Support
+
 - Name: Heal
    - Description: Can channel magical energy or medical training to heal others
    - Resource: Minor or Major
    - Mechanic: Heal another character for `MISSING` (Minor/Major) Health Points
    - Prerequisites: Role: Support
    - Tags:
-- Name: Illusion
-   - Description: Your skills let you conjure illusory effects. 
-   - Resource: Minor or Major
-   - Mechanic: You make an illusory intangible visual (no larger than 1 space) or
-     auditory effect that you've heard before. To determine if it's real, a character
-     makes `MISSING`. As a Major Power,
-     you can generate visual and auditory effects, and the check to verify draws with
-     the Lower Hand.
-   - Prerequisites: Role: Caster
-   - Tags:
-- Name: Keen Eye
-   - Description: You’re especially adept at taking in the world around you.
-   - Resource: Simple
-   - Mechanic: When you make a check to observe the world around you (visual, auditory
-     or olfactory), draw with the Upper Hand.
-   - Prerequisites:
-   - Tags: 
 - Name: Lend Aid
    - Description: Just a little help from a friend
    - Resource: Simple
@@ -344,6 +243,74 @@
      their movement.
    - Prerequisites: Role: Support or Caster
    - Tags: 
+- Name: Slow
+   - Description: You selectively bend the nature of time
+   - Resource: Major
+   - Mechanic: Select a point in space. All creatures within 2 spaces make
+     a Strength check vs. your TC. On a Miss, their speed is halved and they are
+     limited to one action per turn. A creature that leaves the area is no longer 
+     effected. Objects in the area are slowed until the effect ends or they are moved by
+     a creature.
+   - Prerequisites: 
+     + Level 3
+     + Role: Caster
+   - Tags:
+- Name: Shield
+   - Description: Fortify yourself even further, adjusting your shield or summoning
+     magical armor.
+   - Size: Minor or Major
+   - Mechanic: Add `MISSING` (Minor/Major) to a creature's AC until the end of their 
+     next turn.
+   - Prerequisites: Role: Support or Defender
+   - Tags:
+
+## Companion
+
+- Name: Creature Connection
+   - Description: You have developed a connection with a creature in your setting
+     (e.g., animal, spirit, robot). On a long rest you can attune to an animal as a
+     Companion.
+   - Resource: Simple
+   - Mechanic: On a long rest, you attempt to connect with a creature in the world to
+     take them as a Companion. The GM determines if this attempt was successful and may
+     ask for a relevant Skill check to determine success.
+   - Prerequisites: 
+      + Skill requirement: Craft or Knowledge > +1
+   - Tags: Companion
+- Name: Creature Link
+   - Description: You have developed a strong bond with your Companion over time, and
+     can hear its thoughts in your mind.
+   - Resource: Simple
+   - Mechanic: Some checks can now be made through your Companion using their Skills and
+     Attributes. The GM determines if a check can reasonably be made through your
+     Companion.
+   - Prerequisites: 
+      + Level 2
+      + Power: Creature Connection
+   - Tags: Companion
+- Name: Creature Mastery
+   - Description: Your connection with your chosen creature has deepened, allowing you
+     to increase the creature's power. On a long rest, you train/modify your Companion
+     to improve their skills.
+   - Resource: Simple
+   - Mechanic: Your Companion gains `MISSING` Health Point and `MISSING` to attack.
+   - Prerequisites: 
+      + Level 2
+      + Power: Creature Connection
+   - Tags: Companion
+
+## Game Mechanics
+
+### Adjust Odds
+
+- Name: Fated Draw
+   - Description: Your connection to the Fates is heightened and you feel you can shift
+     the odds in your favor.
+   - Resource: Major
+   - Mechanic: When making a check, you can draw up to 3 cards and choose which of them
+     to use for the check. You then must discard the remaining drawn cards.
+   - Prerequisites: Level 3
+   - Tags:
 - Name: Lucky
    - Description: Not everything goes your way, but for one reason or another, you seem
      to avoid the worst.
@@ -359,34 +326,6 @@
      Upper Hand.
    - Prerequisites:
    - Tags:
-- Name: Momentum 
-   - Description: By brute strength, force others to move around the battlefield. 
-   - Resource: Simple
-   - Mechanic: You attempt to move a character who is within 1 space of you during your
-     movement. If the target is unwilling, this is `MISSING`. If the target is willing or 
-     fails the check, you may place the target within 1 space of you at the end of your
-     movement.
-   - Prerequisites: 
-      + Role: Defender
-      + Skill: Brute > +1
-   - Tags:
-- Name: Momentum Aura
-   - Description: Your strength is supernatural, bending the gravity around you.
-   - Resource: Simple
-   - Mechanic: Your Momentum ability extends to 3 spaces.
-   - Prerequisites: 
-      + Power: Momentum
-      + Role: Defender
-      + Skill: Brute > +2
-   - Tags:
-- Name: Multipowered
-   - Description: 
-   - Resource: Simple
-   - Mechanic: Select another Suit Mechanic from the Primary Suit list. You gain the
-     ability to discard cards, but no additional modifier. You may not take this Power
-     more than once. Unlike other Simple Powers, this Power costs 2 XP.
-   - Prerequisites: Level 3
-   - Tags: Suit Mechanic
 - Name: Scrying
    - Description: Your intuition is heightened and you can anticipate moments coming in
      the near future. Your connection to this divine sense has strengthened.
@@ -395,14 +334,97 @@
      them. You must make a Draw before using this Power again.
    - Prerequisites: Level 2
    - Tags: Card Viewing 
-- Name: Shield
-   - Description: Fortify yourself even further, adjusting your shield or summoning
-     magical armor.
-   - Size: Minor or Major
-   - Mechanic: Add `MISSING` (Minor/Major) to a creature's AC until the end of their 
-     next turn.
-   - Prerequisites: Role: Support or Defender
+
+### Fate Cards
+
+- Name: Aces Wild
+   - Description: You have attuned to the wild magic of Aces. When using an Ace as a
+     Fate Card, it grants additional effects depending on the suit.
+   - Resource: Simple
+   - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to
+     trigger an effect corresponding to their suit. When you choose this Power (up to
+     twice), select two of the following effects.
+      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a
+        single action - even if you already went that round
+      - Ace of Diamonds: As an action, you recover 2 Energy Points OR each member of
+        your party recovers 1 Point
+      - Ace of Hearts: As an action, you can heal one Health Point for yourself or an
+        ally within 3 squares
+      - Ace of Spades: As an action, you can strike an enemy with an automatic hit with
+        a Power of your choosing
+   - Prerequisites: Level 3
+   - Tags: Fate Cards 🃏
+
+### Primary Suit
+
+- Name: Fated Connection
+   - Description: Your Power towards a chosen suit has increased in strength. You can
+     now control Fate when drawing a card from this suit.
+   - Resource: Major
+   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be
+     played or discarded immediately. When discarded, redraw.
+   - Prerequisites: Level 3
+   - Tags: Fate Cards 🃏
+- Name: Favored by the Gods
+   - Description: You have a deep connection with a Deity who shines their blessings on
+     your during times of need.
+   - Resource: Major
+   - Mechanic: You can exchange a Fate Card as an automatic success, without redrawing.
+   - Prerequisites: 
+      + Level 2
+      + Primary Skill: Any Intuition Skill
+   - Tags: Fate Cards 🃏  
+
+### Suit Mechanic
+
+- Name: Fountain of Power
+   - Description: Your power runs deep, drawing from an unknown spring within you.
+   - Resource: Major
+   - Mechanic: When you discard cards for a Suit Mechanic, you may discard up to 6.
+   - Prerequisites: Level 2
+   - Tags: Suit Mechanic
+- Name: Multipowered
+   - Description: 
+   - Resource: Simple
+   - Mechanic: Select another Suit Mechanic from the Primary Suit list. You gain the
+     ability to discard cards, but no additional modifier. You may not take this Power
+     more than once. Unlike other Simple Powers, this Power costs 2 XP.
+   - Prerequisites: Level 3
+   - Tags: Suit Mechanic
+
+## Magic
+
+- Name: Barrier
+   - Description: Your skills allow you to deploy temporary impromptu walls
+   - Resource: Minor or Major
+   - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide until the end of your
+     next turn. You may dismiss this wall at any time without an action. This wall is 
+     impervious to standard attacks, but may be worn down over time at the GM's 
+     discretion. 
+   - Prerequisites: Role: Support or Caster
    - Tags:
+- Name: Illusion
+   - Description: Your skills let you conjure illusory effects. 
+   - Resource: Minor or Major
+   - Mechanic: You make an illusory intangible visual (no larger than 1 space) or
+     auditory effect that you've heard before. To determine if it's real, a character
+     makes a Conviction Check vs. your TC. As a Major Power,
+     you can generate visual and auditory effects, and the check to verify draws with
+     the Lower Hand.
+   - Prerequisites: Role: Caster
+   - Tags:
+- Name: Mystic Recovery
+   - Description: Be still and meditate to draw energy from deep within you.
+   - Resource: Simple
+   - Mechanic: Spend 1/2 Actions on a turn that you do not move to recover 1/2 Energy 
+     Points. This may be done up to a number of times equal to your level per rest.
+   - Prerequisites: Role: Caster
+   - Tags:
+
+## Movement
+
+### Speed
+
 - Name: Speed of the Wind
    - Description: You float about the battlefield like no other, as if walking on air.
    - Resource: Simple
@@ -420,13 +442,16 @@
    - Mechanic: When you take this Power, your combat speed increases by 2 squares.
    - Prerequisites:
    - Tags: Combat
+
+### Stealth
+
 - Name: Stealthy Surprise
    - Description: An undetected assailant is particularly deadly.
    - Resource: Simple
-   - Mechanic: You attempt to hide from a target. Choose a target and make `MISSING` 
-     check. The GM does not reveal if you
-     succeed. If successful, your next Attack Draw against that target gains an
-     additional `MISSING` modifier so long as you are still considered hidden.
+   - Mechanic: You attempt to hide from a target. Choose a target and make a Stealth 
+     `MISSING`. The GM does not reveal if you
+     succeed. If successful, your next Attack Draw against that target gains the Upper
+     Hand so long as you are still considered hidden.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth in the Shadows
@@ -452,7 +477,55 @@
      checks are made with a `MISSING` modifier. If this is used as a Major power, this
      effect extends to up to 3 characters. This effect ends for any character who
      Attacks.
-   - Prerequisites:   
+   - Prerequisites: 
       + Level 2
       + Skill: Stealth > 2
    - Tags: Stealth
+
+## Roleplay
+
+- Name: Calculating
+   - Description: You concentrate and assess the nature of the task at hand to determine
+     how difficult it might be.
+   - Resource: Simple
+   - Mechanic: Describe an action you or an ally wishes to take and how you would assess
+     the situation. You spend 1 Power Point as you focus. Depending on your
+     description, the GM may reveal `MISSING`.
+   - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
+   - Tags: Difficulty Prediction
+- Name: Cunning
+   - Description: You're sharper than the rest when you take your time.
+   - Resource: Simple
+   - Mechanic: Choose one Attribute. On turns when you only make 1 action using a Skill
+     under that Attribute, `MISSING`. This bonus does apply to contested checks 
+     initiated by another character.
+   - Prerequisites:
+   - Tags:
+- Name: Focused
+   - Description: There's some domain that completely captivates you. When you're
+     invested, you know exactly how to proceed and there's no distracting you. You
+     barely see the outside world.
+   - Resource: Simple
+   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous
+     task that involves that skill, you with the Upper Hand.
+     During this time, you also have the Inattentive Vulnerability and are also unable
+     to perceive the world outside this task. Draw with the Lower Hand for any Skill 
+     check made that is not directly related to your current task.
+   - Prerequisites:
+   - Tags:
+- Name: Handy
+   - Description: You know how to work with your hands (e.g., machining, lock picking,
+     tailoring).
+   - Resource: Simple
+   - Mechanic: Work with your GM to decide a trade with which your character is
+     familiar. When making a check to to perform this craft, draw with the Upper Hand.
+   - Prerequisites:
+      + Skill requirement: Craft or Knowledge > +1
+   - Tags: 
+- Name: Keen Eye
+   - Description: You’re especially adept at taking in the world around you.
+   - Resource: Simple
+   - Mechanic: When you make a check to observe the world around you (visual, auditory
+     or olfactory), draw with the Upper Hand.
+   - Prerequisites:
+   - Tags: 
