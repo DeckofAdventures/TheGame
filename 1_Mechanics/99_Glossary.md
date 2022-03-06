@@ -13,7 +13,7 @@
   outcome, defined by a Target Card and Difficulty Class window around that card.
 - [Companions](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Side-kick or
   pet for a Dealer.
-- [DC, Difficulty class/level](01_PlayerGuide_Full.md#Making-a-Check): How are is it to
+- [DC, Difficulty class/level](01_PlayerGuide_Full.md#Making-a-Check): How hard is it to
   do this thing during a check? Defined by window around the Target Card you draw to 
   succeed on a check.
 - [Dealer](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Player character

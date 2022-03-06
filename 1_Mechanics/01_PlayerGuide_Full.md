@@ -62,13 +62,13 @@ to try and resolve disputes between players that may come up.
 Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A)
 across 4 suits, without Jokers. Each player should have their own Deck. 
 
-1. Actions with unknown outcomes will involve drawing from the respective in Checks.
+1. Actions with unknown outcomes will require a player to make a check, which means drawing from their respective decks to help determine the outcome.
 2. Kings and Aces are Fate Cards and should be reserved in one's hand, both player and 
 GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
 3. Players will use this deck to do most anything; it represents their character's 
 stamina until they rest. When the Action Deck is empty and a player has to shuffle 
-prematurely, they draw with the Lower Hand (1+) until they would shuffle when resting.
+between rests, they draw with the Lower Hand (1+) until they would shuffle when resting.
 
 ## Fate Cards
 
@@ -235,8 +235,8 @@ moving diagonally counts as one space unless otherwise ruled by the GM.
 
 #### Taking Turns
 
-1. Combat order is determined by card draw. Every round, all characters draw an 
-initiatyive card and place it in on the table in view. This is both turn order (Ace 
+1. Combat order is determined by card draw. At the beginning of combat, all characters draw an 
+Target Card and place it in on the table in view. The values represent the turn order (Ace 
 first, then K, Q, etc.) and the TC for any attack. Players with the same initiative 
 card values can decide who goes first. Without concensus, the player with the higher
 Agility modifier goes first.
@@ -284,8 +284,8 @@ sense.
 For each additional Dealer attacking the same target within 1 space, attacks are made
 with an additional +1 modifier.
 7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check 
-(`MISSING` + number of turns since effect onset). If attacked further, the player begins
-an Epic Event alone. Each additional hit is a Check with a GM TC that they may respond 
+or a Healing Power (`MISSING` + number of turns since effect onset). Knocked Out Dealers remain unconscious for a length of time determined by the GM. If a Knocked Out Dealer is attacked further, the player begins
+an Epic Event alone. Each additional hit requires a Check with a GM determined TC that the player may respond 
 to with one or more cards to pass an unknown DC as the Great Void calls out to them.
 
 ### Health and Armor
@@ -353,7 +353,7 @@ Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
 - Skill Modifiers start “unskilled,” with a `MISSING` Modifier, so choose carefully. 
 - Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional
 Experience Points to spend.
-- Powers are special features, boons or strengths, that cost 1 or 2 points. 
+- Powers are special features, boons or strengths, that cost 1 or 2 points. Powers may have additional pre-requirements such as Role or Level. 
 
 For a full set of character creation options, see our [Character Creation document](03_CharacterCreation.md).
 
