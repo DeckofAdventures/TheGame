@@ -175,8 +175,8 @@ modifier is +1, the check is ...
  distance.
 2. A Major Success if they draw any 8. They might make the jump gracefully enough to 
 impress their allies without any other perks.
-3. A Suited Hit if they draw any card within 3 (DC 2 + 1). For TC 8 / DC 3, this is 5, 
-6, 7, 9, 10 or J. Xena might have a Power that grants benefits to allies on a Suited
+3. A Success if they draw any card within 3 (DC 2 + 1). For TC 8 / DC 3, this is 5, 
+6, 7, 9, 10 or J. If any of these cards match the Clubs suit, it is considered a Suited Hit. Xena might have a Power that grants benefits to allies on a Suited
 Hit. 
 3. A Success if they draw within XXX A Success would mean performing the jump as intended.
 2. A Suited Miss if they draw any Club below 5 or above J. Xena might have a Power that 
@@ -352,7 +352,7 @@ Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
 +3 to +4 will take many more points.
 - Skill Modifiers start “unskilled,” with a `MISSING` Modifier, so choose carefully. 
 - Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional
-Experience Points to spend.
+Experience Points to spend when they are added to the Character Sheet during Character Creation.
 - Powers are special features, boons or strengths, that cost 1 or 2 points. Powers may have additional pre-requirements such as Role or Level. 
 
 For a full set of character creation options, see our [Character Creation document](03_CharacterCreation.md).
