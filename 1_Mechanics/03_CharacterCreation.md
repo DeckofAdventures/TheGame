@@ -10,6 +10,10 @@ navigates challenges. Growing up at a seaport, your character might be more
 adept at sailing (i.e., certain skill checks) than others. Coming to a new land as an
 outsider might be a [Vulnerability](#Choose-Your-Vulnerabilities), as described below.
 
+Characters beginning their journey at level 1 are relatively unskilled. They may have 
+had one profession for many years, but should not have any significant experience 
+adventuring or traveling beyond the borders of the comfort zone shared by their peers.
+
 ## Choose Your Role
 
 Your Role describes how your character navigates challenges. While a Defender might
@@ -34,42 +38,13 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
    - Description: Martials move quick and hit hard. They're adept with physical weapons
    to directly damage enemies. Agile and light on their feet!
    - Primary Skill: Finesse
-   - Suggested Suit: Diamonds ♦️ / Offense 🤛
+   - Suggested Suit: Spades ♠️ / Offense 🤛
 - Caster
    - Description: Casters can be mages of fantasy or techno-wizards of a much more
    mundane world. Their intellect drives them to skills the rest of us can barely
    comprehend.
    - Primary Skill: Knowledge
-   - Suggested Suit: Spades ♠️ / Conjuring ⚡️
-
-## Choose your Primary Suit
-
-Roles come with primary suit suggestions, but this can be changed at each level-up.
-
-- Diamonds ♦️ : Offense    🤛
-- Clubs    ♣️ : Defense    🛡
-- Hearts   ♥️ : Life       ❤️‍
-- Spades   ♠️ : Conjuring  ⚡️
-
-Dealers are given special abilities based on their primary suit. First, drawing a card
-of your primary suit grants a +1 
-modifier. At 2nd Level, Dealers gain access to Suit Mechanics that can be used as an 
-action a number of
-times equal to their level per long rest. Cards used in this manner are put directly in
-the discard pile without inspection. Half the number of cards drawn in this manner, up
-to 4, serves as an additional modifier on a check before the outcome is known.
-
-- Diamonds ♦️ : Offense Dealers have explosive damage but they run out of gas really
-fast. They can choose to *burn* cards to add to the modifier of an attack draw.
-- Clubs    ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
-can choose to *bury* cards to `MISSING` AC until the start of their next
-turn.
-- Hearts   ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
-in the presence of an ally who misses a check, they may *toss* cards to add to the 
-modifier of the missed check.
-- Spades   ♠️ : Conjuring Dealers deploy all sorts of mechanisms for drawing the eye of
-enemies away from their allies. They can *scrap* to subtract from the DC (down to a 
-minimum of 0) an enemy attack.
+   - Suggested Suit: Diamonds ♦️ / Conjuring ⚡️
 
 ## Using Experience Points
 
@@ -111,7 +86,7 @@ gaining an additional Vulnerability.
 
 ### Changing Attributes and Skills
 
-All Attributes and Skills start at a `MISSING` modifier. The Attribute modifier `MISSING`.
+All Attributes and Skills start at a 0 Modifier. 
 You can adjust your Skills and Attributes using your Experience
 Points, which will help define how capable your character for relevant actions. On
 initial character creation, you can spend points to increase or gain points to decrease
@@ -120,8 +95,8 @@ on even level-ups `MISSING`. Once these are set at character creation, a
 player may only add newly awarded Experience points.
 
 Raising an Attribute Modifier by +1 initially costs 2 Experience Points. Raising a Skill
-Modifier by +1 initially costs 1 Experience Point. In both cases, raising modifiers
-becomes more costly as you add. The following table shows the cost in Experience Points
-and the resulting modifier for Attributes and Skills.
+Modifier by +1 initially costs `MISSING` Experience Point. In both cases, raising
+modifiers becomes more costly as you add. The following table shows the cost in
+Experience Points and the resulting modifier for Attributes and Skills.
 
 `MISSING TABLE`

@@ -15,7 +15,7 @@
    - Description: You've been trained with basic weaponry, and maybe even taken a liking
      to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
    - Resource: Simple
-   - Mechanic: As an action in combat, you can make check to attack an Enemy. This may
+   - Mechanic: As an action in combat, you make a check to attack an Enemy. This may
      be performed while under the effects of another Power.
    - Prerequisites: Skill: Finesse or Brute > 0
    - Tags:
@@ -23,7 +23,8 @@
    - Description: Your weapon training allows you throw your weight into an enemy,
      heightening your damage.
    - Resource: Minor or Major
-   - Mechanic: You must move 3 spaces before using this Power. You add +1/2
+   - Mechanic: You must move `MISSING` spaces before using this Power. You add 
+     +`MISSING`/`MISSING`
      (Minor/Major) to the damage on a successful Weapon Attack. Energy Points are still
      expended on a miss.
    - Prerequisites: 
@@ -143,7 +144,7 @@
 - Name: Battlecharged
    - Description: You're always ready for something to go down.
    - Resource: Simple
-   - Mechanic: When drawing initiative, `MISSING`.
+   - Mechanic: When drawing initiative, Draw with Upper Hand.
    - Prerequisites:
    - Tags:
 - Name: Critical Master
@@ -158,7 +159,8 @@
    - Description: By brute strength, force others to move around the battlefield. 
    - Resource: Simple
    - Mechanic: You attempt to move a character who is within 1 space of you during your
-     movement. If the target is unwilling, this is `MISSING`. If the target is willing or 
+     movement. If the target is unwilling, this is Contested Check of your Strength vs. 
+     their Strength to resist or Agility to dodge. If the target is willing or 
      fails the check, you may place the target within 1 space of you at the end of your
      movement.
    - Prerequisites: 
@@ -177,9 +179,9 @@
 - Name: Find Weakness
    - Description: You can size up an opponent and discover their weaknesses.
    - Resource: Simple
-   - Mechanic: As an action, you can make an Intuition/Detection check
-     (whichever modifier is higher) to discover an opponents vulnerability. On a `MISSING`
-     you learn one vulnerability and on `MISSING` you learn all vulnerabilities.
+   - Mechanic: As an action, you can make a Contested Check of your Intuition/Detection
+      check (whichever modifier is higher) vs. their Bluffing to discover one opponent's vulnerability. On a Success, you learn one vulnerability and on Critical Success
+       you learn all vulnerabilities.
    - Prerequisites: Level 2
    - Tags: Difficulty Prediction
    
@@ -209,7 +211,8 @@
      target, having a sustained effect.
    - Resource: Minor or Major
    - Mechanic: Select one character to put under the effect of the Lend Distraction
-     Power. At the end of each of their turns this character `MISSING` to end the effect. 
+     Power. At the end of each of their turns this character makes a Contested 
+     Conviction Check vs. your Primary Skill to end the effect. 
      As a Major effect, this character is prevented from using Fate Cards when making 
      their check to end the effect.
    - Prerequisites: 
@@ -223,8 +226,7 @@
    - Resource: Minor or Major
    - Mechanic: Designate a character that you would like to Boost or Reduce and choose a
      Skill (or action that would require a Skill such as Attack). This character
-     receives an additional `MISSING` (Minor Major) positive or negative modifier to any
-     Draws that involve this Skill.
+     draws at Upper/Lower Hand (2/3 Minor/Major) checks that involve this Skill.
    - Prerequisites: Role: Support
    - Tags:
 - Name: Lend Readiness
@@ -246,11 +248,11 @@
 - Name: Slow
    - Description: You selectively bend the nature of time
    - Resource: Major
-   - Mechanic: Select a point in space. All creatures within 2 spaces make
-     a Strength check vs. your TC. On a Miss, their speed is halved and they are
-     limited to one action per turn. A creature that leaves the area is no longer 
-     effected. Objects in the area are slowed until the effect ends or they are moved by
-     a creature.
+   - Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs.
+     Strength for all creatures within 2 spaces. On a Miss, their speed is halved and 
+     they are limited to one action per turn. A creature that leaves the area is no 
+     longer  effected. Objects in the area are slowed until the effect ends or they are 
+     moved by a creature.
    - Prerequisites: 
      + Level 3
      + Role: Caster
@@ -315,7 +317,7 @@
    - Description: Not everything goes your way, but for one reason or another, you seem
      to avoid the worst.
    - Resource: Minor
-   - Mechanic: On a Suited Miss, redraw. Cannot be used multiple times on the same check.
+   - Mechanic: On a Suited Fail, redraw. Cannot be used multiple times on the same check.
    - Prerequisites:
    - Tags:
 - Name: Luck Shared
@@ -346,8 +348,8 @@
      twice), select two of the following effects.
       - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a
         single action - even if you already went that round
-      - Ace of Diamonds: As an action, you recover 2 Energy Points OR each member of
-        your party recovers 1 Point
+      - Ace of Diamonds: As an action, you recover 2 Energy Points OR up to four allies 
+        each recover 1 Energy Point
       - Ace of Hearts: As an action, you can heal one Health Point for yourself or an
         ally within 3 squares
       - Ace of Spades: As an action, you can strike an enemy with an automatic hit with
@@ -355,42 +357,6 @@
    - Prerequisites: Level 3
    - Tags: Fate Cards 🃏
 
-### Primary Suit
-
-- Name: Fated Connection
-   - Description: Your Power towards a chosen suit has increased in strength. You can
-     now control Fate when drawing a card from this suit.
-   - Resource: Major
-   - Mechanic: When take this Power, drawn cards of your Primary Suit can either be
-     played or discarded immediately. When discarded, redraw.
-   - Prerequisites: Level 3
-   - Tags: Fate Cards 🃏
-- Name: Favored by the Gods
-   - Description: You have a deep connection with a Deity who shines their blessings on
-     your during times of need.
-   - Resource: Major
-   - Mechanic: You can exchange a Fate Card as an automatic success, without redrawing.
-   - Prerequisites: 
-      + Level 2
-      + Primary Skill: Any Intuition Skill
-   - Tags: Fate Cards 🃏  
-
-### Suit Mechanic
-
-- Name: Fountain of Power
-   - Description: Your power runs deep, drawing from an unknown spring within you.
-   - Resource: Major
-   - Mechanic: When you discard cards for a Suit Mechanic, you may discard up to 6.
-   - Prerequisites: Level 2
-   - Tags: Suit Mechanic
-- Name: Multipowered
-   - Description: 
-   - Resource: Simple
-   - Mechanic: Select another Suit Mechanic from the Primary Suit list. You gain the
-     ability to discard cards, but no additional modifier. You may not take this Power
-     more than once. Unlike other Simple Powers, this Power costs 2 XP.
-   - Prerequisites: Level 3
-   - Tags: Suit Mechanic
 
 ## Magic
 
@@ -425,17 +391,6 @@
 
 ### Speed
 
-- Name: Speed of the Wind
-   - Description: You float about the battlefield like no other, as if walking on air.
-   - Resource: Simple
-   - Mechanic: Discard up to 3 cards. Each card discarded grants you an additional 2
-     spaces of movement on your turn (up to 6 spaces). To take this Power, your must
-     forfeit one other Suit Mechanic. You may use this Power a number of times equal to
-     your level per long rest.
-   - Prerequisites: 
-      + Level 2
-      + Role: Martial
-   - Tags: Suit Mechanic
 - Name: Speedy
    - Description: You’re quicker than the rest.
    - Resource: Simple
@@ -448,10 +403,10 @@
 - Name: Stealthy Surprise
    - Description: An undetected assailant is particularly deadly.
    - Resource: Simple
-   - Mechanic: You attempt to hide from a target. Choose a target and make a Stealth 
-     `MISSING`. The GM does not reveal if you
-     succeed. If successful, your next Attack Draw against that target gains the Upper
-     Hand so long as you are still considered hidden.
+   - Mechanic: You attempt to hide from a target. Make a Contested Stealth Check vs. 
+     Detection. The GM may choose not to success/failure. If successful, your next 
+     Attack Draw against that target gains the Upper Hand so long as you are still 
+     considered hidden.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth in the Shadows
@@ -466,15 +421,15 @@
      might catch you lurking.
    - Resource: Minor
    - Mechanic: You cause an illusory sound to emanate from a point you can see within 10
-     spaces. When you make a `MISSING` check versus any characters' `MISSING` within 4 
-     spaces of this point, they draw at a `MISSING` modifier.
+     spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand
+     until they leave the area.
    - Prerequisites: Skill: Stealth > 1
    - Tags: Stealth
 - Name: Stealth's Blessing
    - Description: You channel a deep energy to go unseen.
    - Resource: Minor or Major
    - Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth
-     checks are made with a `MISSING` modifier. If this is used as a Major power, this
+     checks are made with Upper Hand. If this is used as a Major power, this
      effect extends to up to 3 characters. This effect ends for any character who
      Attacks.
    - Prerequisites: 
@@ -490,15 +445,16 @@
    - Resource: Simple
    - Mechanic: Describe an action you or an ally wishes to take and how you would assess
      the situation. You spend 1 Power Point as you focus. Depending on your
-     description, the GM may reveal `MISSING`.
+     description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this 
+     action before anyone chooses to take it.
    - Prerequisites: Level 2, Primary Skill: Any Intelligence Skill
    - Tags: Difficulty Prediction
 - Name: Cunning
    - Description: You're sharper than the rest when you take your time.
    - Resource: Simple
-   - Mechanic: Choose one Attribute. On turns when you only make 1 action using a Skill
-     under that Attribute, `MISSING`. This bonus does apply to contested checks 
-     initiated by another character.
+   - Mechanic: Choose one Skill other than your Primary Skill. On turns when you only 
+     make 1 non-attack action using this Skill, draw with Upper Hand. This does 
+     apply when you are the target of a Contested Check.
    - Prerequisites:
    - Tags:
 - Name: Focused
@@ -506,8 +462,8 @@
      invested, you know exactly how to proceed and there's no distracting you. You
      barely see the outside world.
    - Resource: Simple
-   - Mechanic: Pick a Skill on your character sheet. When engaged in a non-instantaneous
-     task that involves that skill, you with the Upper Hand.
+   - Mechanic: Choose one Skill. When engaged in a non-instantaneous
+     task that involves that skill, you draw with the Upper Hand.
      During this time, you also have the Inattentive Vulnerability and are also unable
      to perceive the world outside this task. Draw with the Lower Hand for any Skill 
      check made that is not directly related to your current task.
@@ -525,7 +481,7 @@
 - Name: Keen Eye
    - Description: You’re especially adept at taking in the world around you.
    - Resource: Simple
-   - Mechanic: When you make a check to observe the world around you (visual, auditory
-     or olfactory), draw with the Upper Hand.
+   - Mechanic: When you use an action to make a check to observe the world around you 
+     (visual, auditory or olfactory), draw with the Upper Hand.
    - Prerequisites:
    - Tags: 

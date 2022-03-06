@@ -155,33 +155,42 @@ to be rude to one’s fellow players.
 
 ### Making a Check
 
-When the GM calls for a Check, they will reveal a reveal a Target Card (TC) and the
-Attribute or Skill associated with the check. The GM may also reveal the Difficulty
-Class (DC); this is the range around the target card the player might hope to draw and
-may be widened or narrowed by the player's relevant modifier. The player will then draw
-one or more cards and declare how far away from the TC they drew. The GM may describe
-the nature of the outcome or announce the degree of success and ask the player to
-describe the outcome. Exactly matching the TC in value, it's a Major Success. If the
-drawn card is a perfect match (i.e., value and suit), it's a Critical Success. If the 
-card drawn matches the suit, it is either a Suited Hit or a Suited Miss, depending on
-whether or not it falls in the Success range. Suited Hit and Miss will only matter for 
-characters with specific abilities. 
+When the GM or a Player calls for a Check, they announce who will be making this check
+and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
+check, and (c) the Difficulty Range (DR). The DR is the range around the TC the player
+might hope to draw. Once the DR has been announced, announced players must make this
+check. A player will draw one or more cards. Immediately after drawing, a player will
+apply any relevant Modifiers before reporting the outcome and whether or not they are
+within the DR. A Modifier is the maximum value a player may add or subtract; this is
+usually done to get closer to the TC. The GM may describe the nature of the outcome or
+announce the degree of success and ask the player to describe the outcome. 
+
+Exactly matching the TC in value, it's a Major Success. If the drawn card is a perfect
+match (i.e., value and suit), it's a Critical Success. If the card drawn is within the
+DR and matches the suit or color(i.e., red/black), it is either a Suited or Color
+Success. If there is a suit or color match outside the DR after the modifier has been
+applied, this is a Suited and Color Fail. Suit and Color will only matter under
+specific circumstances, for certain character Powers, gear types or Enemy defenses.
+There is no critical failure in Deck of Adventures.
 
 **For example**, when a Xena attempts to jump across a chasm, the GM reveals a TC of
-the 8 of clubs and a DC of 2, asking for an Athletics check. If the player's Athletics 
+the 8 of clubs and a DR of 2, asking for an Athletics check. If the player's Athletics 
 modifier is +1, the check is ...
-1. A Cricial Success if they draw the 8 of Clubs. They might perfectly make the
- jump, impressing their allies, and catch a glimps of something important in the 
+1. A Critical Success if they draw the 8 of Clubs. They might perfectly make the
+ jump, impressing their allies, and catch a glimpse of something important in the 
  distance.
 2. A Major Success if they draw any 8. They might make the jump gracefully enough to 
 impress their allies without any other perks.
-3. A Success if they draw any card within 3 (DC 2 + 1). For TC 8 / DC 3, this is 5, 
-6, 7, 9, 10 or J. If any of these cards match the Clubs suit, it is considered a Suited Hit. Xena might have a Power that grants benefits to allies on a Suited
-Hit. 
-3. A Success if they draw within XXX A Success would mean performing the jump as intended.
-2. A Suited Miss if they draw any Club below 5 or above J. Xena might have a Power that 
-lets them redraw on a Suited Miss, for example. 
-3. A Miss is any other draw below 5 or above J.
+3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1, 
+this is 5, 6, 7, 9, 10 or J. If Xena draws a J, she may subtract 1 to report a 10, 
+within the DR.
+4. A Color Success for any Successes that match the color of the TC.
+5. A Suited Success for any Successes that match the Suit of the TC. Xena might have a 
+Power that grants benefits to allies on a Suited Success. After crossing, they can 
+improve their ally's chances of crossing. 
+6. A Suited or Color Fail if they draw any Club or Spade, respectively below 5 or above
+J. Xena might have a Power that lets them redraw on a Suited Fail, for example. 
+3. A Fail is any Diamond or Heart draw below 5 or above J.
 
 Sometimes the odds will be in your favor; sometimes they will be against you. 
 1. Having the Upper Hand (N) means you draw N additional cards and select the card 
@@ -189,20 +198,36 @@ closest to the TC after applying all relevant mechanics.
 2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
 is furthest from the TC after applying all relevant mechanics. 
 
-In these cases, the other card is discarded. If N is not specified, draw 1 extra. If a 
-rule specifies Upper/Lower Hand (N+), N cards are drawn, +1 for each instance the effect
-is applied. For example, running through your Action Deck without resting is Lower
- Hand (1+). This means that, if it happens twice, draw 3. If another effect would also
- cause drawing with Lower Hand, draw 4.
+In these cases, the other card is discarded. If N is not specified, draw 1 extra. If a
+rule specifies Upper/Lower Hand (N+), N cards are drawn, +1 for each instance the
+effect is applied. For example, running through your Action Deck without resting is
+Lower Hand (1+). This means that, if it happens twice, draw 3. If another effect would
+also cause drawing with Lower Hand, draw 4.
 
-When an Ace is revealed as the TC, the GM declares if it is an Ace Low or Ace High. If 
-Ace Low, the DC may span 2, 3, 4, etc. If Ace High, the DC may span K, Q, J, etc. An Ace
-drawn for a check is Wild, either High or Low, whichever is closer to the TC. For 
-example, comparing the 2 and K rows below, an Ace can pass a DC of 1 in either case.
+When an Ace is revealed as the TC, the GM or Player who drew the TC declares if it is an
+Ace Low or Ace High. If Ace Low, the DR may span 2, 3, 4, etc. If Ace High, the DR may
+span K, Q, J, etc. An Ace drawn to match a TC is Wild, either High or Low, whichever is
+closer to the TC. For example, comparing the 2 and K rows below, an Ace can pass a DR
+of 1 in either case.
+
+Some checks will be initiated by a character's actions and require others to respond,
+pitting two skills against each other. This might be one character sneaking past
+another(e.g., Stealth vs. Deception), or one character causing a magical effect that
+another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check In these
+cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
+sets the DR; the DR for a Contested Check is 4 minus the Attacker's relevant modifier,
+to a minimum of 0. The character(s) responding are the Target(s). Rules that describe a 
+"Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
+fail individually.
+
+**For example,** Xena attempts to convince Jonas of something (either truthfully or
+with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
+They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
+Spades with a +1 Modifier to Detection and reports a 7, still outside the DR.
 
 **Target Card Range Table**
-For each card on the left, refer to the column with the corresponding sum of DC and 
-Modifiers. Left of 0 is the lower bound, right of 0 is the upper bound.
+For each card on the left, refer to the column with the corresponding DR. 
+Left of 0 is the lower bound, right of 0 is the upper bound.
 
 |**Card**|**6**|**5**|**4**|**3**|**2**|**1**|**0**|**1**|**2**|**3**|**4**|**5**|**6**|
 |   ---: |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -230,18 +255,18 @@ teamwork and creativity. To keep up the pace, players should be sure to study th
 character sheets and know their options ahead of combat, and use others’ turns to make
 their choices.
 
-GMs may provide grided maps to help players visualize the situation. On a square grid,
+GMs may provide a grid map to help players visualize the situation. On a square grid,
 moving diagonally counts as one space unless otherwise ruled by the GM.
 
 #### Taking Turns
 
-1. Combat order is determined by card draw. At the beginning of combat, all characters draw an 
-Target Card and place it in on the table in view. The values represent the turn order (Ace 
-first, then K, Q, etc.) and the TC for any attack. Players with the same initiative 
-card values can decide who goes first. Without concensus, the player with the higher
-Agility modifier goes first.
+1. Combat order is determined by card draw. At the beginning of combat, all characters 
+draw a Target Card and place it in on the table in view. The values represent the turn 
+order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the same 
+initiative card values can decide who goes first. Without consensus, the player with the
+ higher Agility modifier goes first.
 2. A player may delay their turn in initiative order intentionally to co-occur with
-other players, but their turn is forfeited if they do not announce their action(s) by
+other player(s)', but their turn is forfeited if they do not announce their action(s) by
 the end of the round. A GM may skip a player’s turn if they are unprepared and need more
 time to think.
 
@@ -261,7 +286,8 @@ character draws a card and `MISSING` modifier.
 4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the
 effect, with the target(s) `MISSING`.
 5. **Contested Checks**. Some actions will require both attacker and target to `MISSING`.
-6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify `MISSING` damage per round of combat. This is a free action and must be taken before the end of
+6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify `MISSING` 
+damage per round of combat. This is a free action and must be taken before the end of
 the Dealer's next turn.
 
 #### Effects
@@ -277,16 +303,19 @@ If failed, they may not move on that turn.
 `MISSING` prevents actions requiring arm movements.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their
 turn, and their movement speed is halved.
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a `MISSING` spell-casting attribute of the creature causing the effect.
-If Miss, they fraw Lower Hand (2) for any action requiring the relevant
+4. **Blinded, Deafened** At the start of their turn, a Dealer makes a `MISSING` 
+spell-casting attribute of the creature causing the effect.
+If they fail, they draw Lower Hand (2) for any action requiring the relevant
 sense.
-6. **Outnumbered** Dealers may delay their turn to co-occur with another player Dealer.
+5. **Outnumbered** Dealers may delay their turn to co-occur with another player Dealer.
 For each additional Dealer attacking the same target within 1 space, attacks are made
 with an additional +1 modifier.
-7. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check 
-or a Healing Power (`MISSING` + number of turns since effect onset). Knocked Out Dealers remain unconscious for a length of time determined by the GM. If a Knocked Out Dealer is attacked further, the player begins
-an Epic Event alone. Each additional hit requires a Check with a GM determined TC that the player may respond 
-to with one or more cards to pass an unknown DC as the Great Void calls out to them.
+6. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check 
+or a Healing Power (`MISSING` + number of turns since effect onset). Knocked Out Dealers
+ remain unconscious for a length of time determined by the GM. If a Knocked Out Dealer 
+ is attacked further, the player begins an Epic Event alone. Each additional hit 
+ requires a Check with a-GM determined TC that the player may respond to with one or 
+ more cards to pass an unknown DR as the Great Void calls out to them.
 
 ### Health and Armor
 
@@ -308,18 +337,18 @@ a collapse
 
 During an epic event...
 1. Players draw 5 cards. 
-2. The DM will call for a series of Checks, revealing TCs and correponding Attributes or
+2. The DM will call for a series of Checks, revealing TCs and corresponding Attributes or
 skills. Any subset of players may volunteer for any of these Checks.
 3. During an individual check, players play 1 card and may sacrifice others. Each card 
-sacrificed adds +1 modifier.
-4. Fate Cards card mechanics remain the same: played Ks and As return to the  player’s
+sacrificed adds +1 Modifier.
+4. Fate Cards card mechanics remain the same: played Ks and As return to the player’s
 hand. If played as Fate Cards, they result in a number of discards and redraws equal to
 the number Fate Cards played.
 5. If no player volunteers for a check, or no player has cards remaining, the Check is
 an automatic miss.
 
 The GM determines when an Epic Event has been resolved, and how many individual checks
-consititute collective success or failure. On successful resolution, the narrative will 
+constitute collective success or failure. On successful resolution, the narrative will 
 move forward and the GM will resume normal play. On a failure during an Epic Event, the 
 GM will lay out the consequences and give the players a chance to react.
 
@@ -331,13 +360,13 @@ rest permits players to draw 3 cards, and long rest 5.
 
 During a Rest, players might attempt to repair an item (including Armor), read a book,
 recover Health Points (HP), or recover Energy Points. Recovering Health is a Vitality
-Check with DC`MISSING`, -1 for each Health Point being recovered. Some Powers are limited-use
+Check with DR `MISSING`, -1 for each Health Point being recovered. Some Powers are limited-use
 and require recharging associated Energy Points during a rest, at a Primary Skill Check 
-DC `MISSING`, -1 for each Point being recovered. A Player who draws `MISSING`
+DR `MISSING`, -1 for each Point being recovered. A Player who draws `MISSING`
 recovers a smaller portion of Health or Energy Points equal `MISSING`.
 
 Players take turns attempting their respective checks. Order is either determined by the
-players themselves or the last played initiative order. The GM determines the DC for
+players themselves or the last played initiative order. The GM determines the DR for
 each novel goal.
 
 ## Character Creation
@@ -347,13 +376,17 @@ customizable process. Consult with your GM for information about the setting and
 skills will be relevant for the story ahead. Custom creation starts with spending
 Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
 
+- A [Background](03_CharacterCreation#Decide-Your-Background) is descriptive about of character's history and where they are when
+   you begin your adventure.
+- [A Role](03_CharacterCreation#Choose-Your-Role) is a general class the unlocks access to 
+  certain abilities.
 - Attributes cost more, but also increase corresponding skills.
 - Spending points has diminishing returns. Going from 0 to +1 is relatively cheap, but
 +3 to +4 will take many more points.
-- Skill Modifiers start “unskilled,” with a `MISSING` Modifier, so choose carefully. 
+- Skill Modifiers start *unskilled* with a 0 Modifier, so choose carefully. 
 - Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional
 Experience Points to spend when they are added to the Character Sheet during Character Creation.
-- Powers are special features, boons or strengths, that cost 1 or 2 points. Powers may have additional pre-requirements such as Role or Level. 
+- Powers are special features, boons or strengths, that cost 1 or 2 points. Powers may have additional requirements such as Role or Level. 
 
 For a full set of character creation options, see our [Character Creation document](03_CharacterCreation.md).
 
