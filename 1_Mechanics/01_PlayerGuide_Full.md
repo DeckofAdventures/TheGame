@@ -265,8 +265,8 @@ draw a Target Card and place it in on the table in view. The values represent th
 order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the same 
 initiative card values can decide who goes first. Without consensus, the player with the
  higher Agility modifier goes first.
-2. A player may delay their turn in initiative order intentionally to co-occur with
-other player(s)', but their turn is forfeited if they do not announce their action(s) by
+2. A player may delay their turn in initiative order to intentionally occur before or 
+after another player(s)', but their turn is forfeited if they do not announce their action(s) by
 the end of the round. A GM may skip a player’s turn if they are unprepared and need more
 time to think.
 
