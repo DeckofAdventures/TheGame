@@ -5,16 +5,17 @@
 <!-- MarkdownTOC -->
 
 - Introduction
-   - Getting Started
-   - What It’s All About
-   - Running a Session with Deck of Adventures
-      - Successes and Failures
-      - Which Skills to use
-      - Contested checks
-   - Running an Adventure
-   - Managing Players \(Expectations & Realities\)
-   - Crunch
-   - Now What?
+  - Getting Started
+  - What It’s All About
+  - Running a Session with Deck of Adventures
+    - Successes and Failures
+    - Likelihood Chart
+    - Which Skills to use
+    - Contested checks
+  - Running an Adventure
+  - Managing Players \(Expectations & Realities\)
+  - Crunch
+  - Now What?
 
 <!-- /MarkdownTOC -->
 
@@ -61,14 +62,78 @@ team on Discord `LINK NEEDED` or via GitHub issues.
 
 ### Successes and Failures
 
-- Criticals
-- Major
-- Minor
-- Match
+- Critical Successes have a 1.9% chance of success. They should feel amazing. Make an 
+  effort to rewards these exact matches whenever you can.
+- Major Successes have a 7.7% chance of success. This should still feel pretty good to
+  your players. 
+- Successes.
+- Misses.
+
+### Likelihood Chart
+
+The closer a TC is to the end of the spectrum, the less an expanded DC will matter in 
+determining the outcome. 7 and 8, for example have the full range, but above and below, 
+the end of your DC range will hit the Ace. This shouldn't dramatically impact play, 
+but is worth considering at crucial moments.
+
+| **Card** | **0**| **1** | **2** | **3** | **4** | **5** | **6**  |
+|      ---:| :---:| :---: | :---: | :---: | :---: | :---: | :---:  |
+| **A Low**| 8%   | 15%   | 23%   | 31%   | 38%   | 46%   | 54%    |
+| **2**    | 8%   | 23%   | 31%   | 38%   | 46%   | 54%   | 62%    |
+| **3**    | 8%   | 23%   | 38%   | 46%   | 54%   | 62%   | 69%    |
+| **4**    | 8%   | 23%   | 38%   | 54%   | 62%   | 69%   | 77%    |
+| **5**    | 8%   | 23%   | 38%   | 54%   | 69%   | 77%   | 85%    |
+| **6**    | 8%   | 23%   | 38%   | 54%   | 69%   | 85%   | 92%    |
+| **7**    | 8%   | 23%   | 38%   | 54%   | 69%   | 85%   | 100%   |
+| **8**    | 8%   | 23%   | 38%   | 54%   | 69%   | 85%   | 100%   |
+| **9**    | 8%   | 23%   | 38%   | 54%   | 69%   | 85%   | 92%    |
+| **10**   | 8%   | 23%   | 38%   | 54%   | 69%   | 77%   | 85%    |
+| **J**    | 8%   | 23%   | 38%   | 54%   | 62%   | 69%   | 77%    |
+| **Q**    | 8%   | 23%   | 38%   | 46%   | 54%   | 62%   | 69%    |
+| **K**    | 8%   | 23%   | 31%   | 38%   | 46%   | 54%   | 62%    |
+| **A High**|8%   | 15%   | 23%   | 31%   | 38%   | 46%   | 54%    |
+
+For a Color Match draw, divide these values by 2.
+
+| **Card** | **0**| **1** | **2** | **3** | **4** | **5** | **6**  |
+|      ---:| :---:| :---: | :---: | :---: | :---: | :---: | :---:  |
+| **A Low**| 4%   | 8%    | 12%   | 15%   | 19%   | 23%   | 27%    |
+| **2**    | 4%   | 12%   | 15%   | 19%   | 23%   | 27%   | 31%    |
+| **3**    | 4%   | 12%   | 19%   | 23%   | 27%   | 31%   | 35%    |
+| **4**    | 4%   | 12%   | 19%   | 27%   | 31%   | 35%   | 38%    |
+| **5**    | 4%   | 12%   | 19%   | 27%   | 35%   | 38%   | 42%    |
+| **6**    | 4%   | 12%   | 19%   | 27%   | 35%   | 42%   | 46%    |
+| **7**    | 4%   | 12%   | 19%   | 27%   | 35%   | 42%   | 50%    |
+| **8**    | 4%   | 12%   | 19%   | 27%   | 35%   | 42%   | 50%    |
+| **9**    | 4%   | 12%   | 19%   | 27%   | 35%   | 42%   | 46%    |
+| **10**   | 4%   | 12%   | 19%   | 27%   | 35%   | 38%   | 42%    |
+| **J**    | 4%   | 12%   | 19%   | 27%   | 31%   | 35%   | 38%    |
+| **Q**    | 4%   | 12%   | 19%   | 23%   | 27%   | 31%   | 35%    |
+| **K**    | 4%   | 12%   | 15%   | 19%   | 23%   | 27%   | 31%    |
+| **A High**|4%   | 8%    | 12%   | 15%   | 19%   | 23%   | 27%    |
+
+For a Suit Match draw, divide by 2 again.
+
+| **Card** | **0**| **1** | **2** | **3** | **4** | **5** | **6**  |
+|      ---:| :---:| :---: | :---: | :---: | :---: | :---: | :---:  |
+| **A Low**| 2%   | 4%    | 6%    | 8%    | 10%   | 12%   | 13%    |
+| **2**    | 2%   | 6%    | 8%    | 10%   | 12%   | 13%   | 15%    |
+| **3**    | 2%   | 6%    | 10%   | 12%   | 13%   | 15%   | 17%    |
+| **4**    | 2%   | 6%    | 10%   | 13%   | 15%   | 17%   | 19%    |
+| **5**    | 2%   | 6%    | 10%   | 13%   | 17%   | 19%   | 21%    |
+| **6**    | 2%   | 6%    | 10%   | 13%   | 17%   | 21%   | 23%    |
+| **7**    | 2%   | 6%    | 10%   | 13%   | 17%   | 21%   | 25%    |
+| **8**    | 2%   | 6%    | 10%   | 13%   | 17%   | 21%   | 25%    |
+| **9**    | 2%   | 6%    | 10%   | 13%   | 17%   | 21%   | 23%    |
+| **10**   | 2%   | 6%    | 10%   | 13%   | 17%   | 19%   | 21%    |
+| **J**    | 2%   | 6%    | 10%   | 13%   | 15%   | 17%   | 19%    |
+| **Q**    | 2%   | 6%    | 10%   | 12%   | 13%   | 15%   | 17%    |
+| **K**    | 2%   | 6%    | 8%    | 10%   | 12%   | 13%   | 15%    |
+| **A High**|2%   | 4%    | 6%    | 8%    | 10%   | 12%   | 13%    |
 
 ### Which Skills to use
 
-1. Agility `MORE FORTHCOMING`
+1. Agility `MISSING`
 
 ### Contested checks
 
