@@ -89,14 +89,19 @@ gaining an additional Vulnerability.
 All Attributes and Skills start at a 0 Modifier. 
 You can adjust your Skills and Attributes using your Experience
 Points, which will help define how capable your character for relevant actions. On
-initial character creation, you can spend points to increase or gain points to decrease
-Attributes and Skill Modifiers up to `MISSING`. This upper limit increases
-on even level-ups `MISSING`. Once these are set at character creation, a
+initial character creation, you can spend or earn points by increasing or decreasing
+Attributes and Skill Modifiers up to -2 or +3. This upper limit increases
+to +4 by level 5 and +5 at level 10. 
+Once modifiers are set at character creation, a
 player may only add newly awarded Experience points.
+
+The lower limit for Modifiers is -2. If -1, any Check made with that modifier must be 
+be a Color Match for success. If -2, any Check made with that modifier must be Suit 
+Match for success.
 
 Raising an Attribute Modifier by +1 initially costs 2 Experience Points. Raising a Skill
 Modifier by +1 initially costs `MISSING` Experience Point. In both cases, raising
-modifiers becomes more costly as you add. The following table shows the cost in
+modifiers becomes more costly as you add. The table below shows the cost in
 Experience Points and the resulting modifier for Attributes and Skills.
 
 `MISSING TABLE`

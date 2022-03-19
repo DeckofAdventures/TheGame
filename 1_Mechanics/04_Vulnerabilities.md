@@ -18,7 +18,7 @@
      exactly what you ask.
    - Resource: Minor or Major
    - Mechanic: When you draw a card to command your companion, the DM gains control of
-     the companion temporarily `MISSING` (Minor/Major)
+     the companion temporarily, with the duration at the DM's discression (Minor/Major).
    - Prerequisites: Power: Creature Connection
    - Tags:
 - Name: Code of Honor (a.k.a Vow, Oath)
@@ -64,8 +64,9 @@
      can recognize the general shape, and return to the same street sign, but couldn't
      pronounce the word.
    - Resource: Minor
-   - Mechanic: You're unable to complete an action that requires understanding text.
-   - Prerequisites: Skill: Intelligence `MISSING`
+   - Mechanic: You're unable to complete an action that requires understanding text. 
+     The skill prerqusite only applies at the time the Vulnerability is taken.
+   - Prerequisites: Skill: Intelligence < 1
    - Tags:
 - Name: Inattentive
    - Description: You can really only do one thing at a time. The rest of the world
@@ -101,7 +102,7 @@
      customs, somehow ostracized by the community, or even hunted based on group
      membership.
    - Resource: Minor or Major
-   - Mechanic: For any `MISSING` check to interact with the dominant society, you draw
+   - Mechanic: For any Conviction check to interact with the dominant society, you draw
      with the Lower Hand. If chosen as Major, work with the GM to decide
      some feature of your background that makes you unwelcome in most public places.
    - Prerequisites:

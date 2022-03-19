@@ -1,6 +1,8 @@
 # Glossary
-- [AC, Armor class](01_PlayerGuide_Full.md#Health-and-Armor): How difficult is it to
+- [AC, Armor Class](01_PlayerGuide_Full.md#Health-and-Armor): How difficult is it to
   wound this thing during a combat Check?
+- [AP, Armor Points](01_PlayerGuide_Full.md#Health-and-Armor) a pool of points that reduce when taking a damage. All damage 
+  except psychic and poisioning is applied to AP before HP.
 - [Power](03_CharacterCreation#Choose-Your-Powers): Boons or special abilities granted
   to a Dealer.
 - [Role](03_CharacterCreation#Choose-Your-Role): General descriptor of a character role
@@ -11,7 +13,7 @@
   non-player character.
 - [Check](01_PlayerGuide_Full.md#Making-a-Check): A card-draw to determine an unknown
   outcome, defined by a Target Card and Difficulty Range window around that card.
-- [Check, Contested](01_PlayerGuide_Full.md#Making-a-Check): A Check wherein two character Skills are in conflict. The 
+- [Check, Contested](01_PlayerGuide_Full.md#Contested-Checks): A Check wherein two character Skills are in conflict. The 
   initiating character draws a TC and sets a DR of 4 minus the relevant modifier.
 - [Companions](01_PlayerGuide_Full.md#Dealers,-Bystanders-and-Companions): Side-kick or
   pet for a Dealer.
@@ -25,6 +27,12 @@
 - [Fate Cards](01_PlayerGuide_Full.md#Fate-Cards): King/Aces cards held for redraws.
 - [GM, Game Master](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): narrator
   and curator of the story.
+- [Hand, Upper/Lower](01_PlayerGuide_Full#Upper-and-Lower-Hand): Draw N cards and report
+  the result closest (Upper), or furthest (Lower) from the TC. If unspecified, draw 2.
+- [HP, Health Points](01_PlayerGuide_Full.md#Health-and-Armor) pool of health from which damage can subtract, before getting 
+  Knocked Out.
+- [KO, Knocked Out](01_PlayerGuide_Full.md#Effects) Effect applied to a Dealer with no HP. Unconscious and on the 
+  brink of death.
 - [Modifier](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): The number a player may add or subtract from a draw before reporting
   the value on a check..
 - [Player](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Active participant
