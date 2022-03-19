@@ -176,8 +176,8 @@ degree of success and ask the player to describe the outcome.
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort exactly match the task at hand. Remembering which card is 5
-below a 3 can be tough, so there is a table below as well as a [printable tool]
-(./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you get familiar
+below a 3 can be tough, so there is a table below as well as a 
+[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you get familiar
 with the system.
 
 **Target Card Range Table**
