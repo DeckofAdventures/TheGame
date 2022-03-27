@@ -16,6 +16,9 @@
 - During Play
    - Out of Combat
    - Making a Check
+      - Degrees of Success
+      - Upper and Lower Hand
+      - Contested Checks
    - In Combat
       - Taking Turns
       - In Combat Actions
@@ -60,25 +63,30 @@ to try and resolve disputes between players that may come up.
 ## The Action Deck
 
 Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A)
-across 4 suits, without Jokers. Each player should have their own Deck. 
+across 4 suits, as well as Jokers. Each player should have their own Deck. 
 
-1. Actions with unknown outcomes will require a player to make a check, which means drawing from their respective decks to help determine the outcome.
-2. Kings and Aces are Fate Cards and should be reserved in one's hand, both player and 
+1. Actions with unknown outcomes will require a player to make a check, which means 
+drawing from their respective decks to help determine the outcome.
+2. Jokers and Aces are Fate Cards and should be reserved in one's hand, both player and 
 GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
 3. Players will use this deck to do most anything; it represents their character's 
 stamina until they rest. When the Action Deck is empty and a player has to shuffle 
-between rests, they draw with the Lower Hand (1+) until they would shuffle when resting.
+between rests, they draw with the [Lower Hand (1+)](#Upper-and-Lower-Hand) until they would shuffle when 
+resting.
 
 ## Fate Cards
 
-Fate Cards (K and A) are a chance to control your fate. They permit the player to choose
-when they want a second chance at a key moment.
+Fate Cards (Jokers and Aces) are a chance to control your fate. They permit the player
+to choose when they want a second chance at a key moment.
 
-1. Fate Cards drawn from the deck are played as usual, but remains in the player's hand.
-2. Any time a player or the GM draws a card, they may discard a held Fate Card and 
-redraw.
-3. A GM may award a Fate Card (as pulled from the discard pile or signified by another
+1. After a long rest, Jokers return to the player's hand, if they're not there already.
+2. Aces drawn from the deck are played as usual, but remains in the player's hand.
+3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
+redraw. Only one redraw is permitted per check.
+4. Fate Cards may also be expended to ignore damage equal to the number of Fate Cards 
+used.
+5. A GM may award a Fate Card (as pulled from the discard pile or signified by another
 token) to a player for excellent play, including exemplifying their character’s
 strengths or weaknesses.
     
@@ -91,8 +99,7 @@ weaknesses: Agility, Strength, Intuition, Intelligence, Conviction, and Vitality
 2. Skills are specific to an Attribute. Athletics is a Strength skill, but Bluffing is a
 Conviction skill.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
-and add or subtract from the [Difficulty Class](./#making-a-check) of a given check.
-4. Face cards retain their value relative to the 10 (J 11; Q 12; K 13; A 14).
+and allow you to add or subtract your draw before reporting the value on a given check.
 
 Complete list:
 - AGL Agility
@@ -121,14 +128,16 @@ Complete list:
 
 ### Dealers, Bystanders and Companions
 
-1. Dealers. All player characters, and some in-game characters. They...
+1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
    1. Can have Powers and Vulnerabilities.
-   2. Have `MISSING` health points (HP).
+   2. Have at least 5 health points (HP).
    3. Can receive and use Fate Cards.
+   4. Have a Primary Suit, and related mechanics.
 2. Bystanders. All other characters. They...
    1. Are weaker than Dealers
    2. Have limited access to Powers
-   3. Have `MISSING` health point.
+   3. Have 1-3 HP.
+   4. Cannot use either Fate Cards or Primary Suit features.
 3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. See the setting Bestiary for a list of potential Companions.
 
 ## During Play
@@ -158,18 +167,46 @@ to be rude to one’s fellow players.
 When the GM or a Player calls for a Check, they announce who will be making this check
 and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
 check, and (c) the Difficulty Range (DR). The DR is the range around the TC the player
-might hope to draw. Once the DR has been announced, announced players must make this
-check. A player will draw one or more cards. Immediately after drawing, a player will
-apply any relevant Modifiers before reporting the outcome and whether or not they are
-within the DR. A Modifier is the maximum value a player may add or subtract; this is
-usually done to get closer to the TC. The GM may describe the nature of the outcome or
-announce the degree of success and ask the player to describe the outcome. 
+might hope to draw. Once the DR has been announced, players must make this check. Players may consult with their GM to determine if another Attribute or Skill may be used to make the check instead. A
+player will draw one or more cards. Immediately after drawing, a player will apply any
+relevant Modifiers before reporting the outcome and whether or not they have successfully fallen within the
+DR. A Modifier is the maximum value a player may add or subtract; this is usually done
+to get closer to the TC. The GM may describe the nature of the outcome or announce the
+degree of success and ask the player to describe the outcome. 
 
-Exactly matching the TC in value, it's a Major Success. If the drawn card is a perfect
+Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
+dialing in your effort to match the task at hand as closely as possible. Remembering which card is 5
+below a 3 can be tough, so there is a table below as well as a 
+[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you get familiar
+with the system.
+
+**Target Card Range Table**
+For each card on the left, refer to the column with the corresponding DR. 
+Left of 0 is the lower bound, right of 0 is the upper bound.
+
+|**TC**|**-6**|**-5**|**-4**|**-3**|**-2**|**-1**|**0**|**+1**|**+2**|**+3**|**+4**|**+5**|**+6**|
+|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**A** | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  |
+|**2** | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  |
+|**3** | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  |
+|**4** | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 |
+|**5** | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  |
+|**6** | K  | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  |
+|**7** | A  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  |
+|**8** | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  |
+|**9** | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  |
+|**10**| 4  | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  |
+|**J** | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  |
+|**Q** | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  |
+|**K** | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  |
+
+#### Degrees of Success
+
+Exactly matching the TC in numeric value, is a Major Success. If the drawn card is a perfect
 match (i.e., value and suit), it's a Critical Success. If the card drawn is within the
-DR and matches the suit or color(i.e., red/black), it is either a Suited or Color
+DR and matches the suit or color (i.e., red/black), it is either a Suited or Color
 Success. If there is a suit or color match outside the DR after the modifier has been
-applied, this is a Suited and Color Fail. Suit and Color will only matter under
+applied, this is a Suited or Color Fail. Suit and Color will only matter under
 specific circumstances, for certain character Powers, gear types or Enemy defenses.
 There is no critical failure in Deck of Adventures.
 
@@ -192,23 +229,23 @@ improve their ally's chances of crossing.
 J. Xena might have a Power that lets them redraw on a Suited Fail, for example. 
 3. A Fail is any Diamond or Heart draw below 5 or above J.
 
+#### Upper and Lower Hand
+
 Sometimes the odds will be in your favor; sometimes they will be against you. 
 1. Having the Upper Hand (N) means you draw N additional cards and select the card 
 closest to the TC after applying all relevant mechanics. 
 2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
 is furthest from the TC after applying all relevant mechanics. 
 
-In these cases, the other card is discarded. If N is not specified, draw 1 extra. If a
-rule specifies Upper/Lower Hand (N+), N cards are drawn, +1 for each instance the
+In these cases, the other card is discarded. If N is not specified, draw 1 extra. 
+Multiple Upper/Lower hand effects can compound or even out.
+If a
+rule specifies Upper/Lower Hand (N+), the effect can apply multiple times. N cards are drawn, +1 for each instance the
 effect is applied. For example, running through your Action Deck without resting is
 Lower Hand (1+). This means that, if it happens twice, draw 3. If another effect would
 also cause drawing with Lower Hand, draw 4.
 
-When an Ace is revealed as the TC, the GM or Player who drew the TC declares if it is an
-Ace Low or Ace High. If Ace Low, the DR may span 2, 3, 4, etc. If Ace High, the DR may
-span K, Q, J, etc. An Ace drawn to match a TC is Wild, either High or Low, whichever is
-closer to the TC. For example, comparing the 2 and K rows below, an Ace can pass a DR
-of 1 in either case.
+#### Contested Checks
 
 Some checks will be initiated by a character's actions and require others to respond,
 pitting two skills against each other. This might be one character sneaking past
@@ -224,27 +261,6 @@ fail individually.
 with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
 Spades with a +1 Modifier to Detection and reports a 7, still outside the DR.
-
-**Target Card Range Table**
-For each card on the left, refer to the column with the corresponding DR. 
-Left of 0 is the lower bound, right of 0 is the upper bound.
-
-|**Card**|**6**|**5**|**4**|**3**|**2**|**1**|**0**|**1**|**2**|**3**|**4**|**5**|**6**|
-|   ---: |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|**A Low**| A  |  A  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |
-| **2**  |  A  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |
-| **3**  |  A  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |
-| **4**  |  A  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |
-| **5**  |  A  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |
-| **6**  |  A  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |
-| **7**  |  A  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |
-| **8**  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |
-| **9**  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |
-| **10** |  4  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |
-| **J**  |  5  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |
-| **Q**  |  6  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |
-| **K**  |  7  |  8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |  A  |
-|**A High**|8  |  9  |  10 |  J  |  Q  |  K  |  A  |  A  |  A  |  A  |  A  |  A  |  A  |
 
 ### In Combat
 
@@ -275,58 +291,68 @@ time to think.
 On a turn, a character may (a) move, and (b) perform action(s) in any order they choose.
 Each turn represents 6 seconds of game time passing.
 
-1. **Movement** Character speed is equal to `MISSING`. The total may be split to occur 
-before, after, and/or between actions.
+1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
+Speed is the total number of spaces a character can move in a turn. This total may be 
+split to occur before, after, and/or between actions.
 2. **Actions** In addition to their movement, players can perform up to two actions each
 turn. The first action is made without penalty. If players choose to make a second
-action, `MISSING` penalty.
-3. **Standard Attacks:** Character combat actions are described on the character sheet
+action, they draw with Lower Hand. 
+3. **Attacks:** Character combat actions are described on the character sheet
 are associated with the character's Primary Skill Modifier, unless otherwise noted. The
-character draws a card and `MISSING` modifier.
-4. **Saving Attacks:** Some attacks require the target(s) to make a check to resist the
-effect, with the target(s) `MISSING`.
-5. **Contested Checks**. Some actions will require both attacker and target to `MISSING`.
-6. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify `MISSING` 
+character draws a card and may add or subtract their modifier before reporting the result. 
+<!-- Broz: I took out Saving/Contested here bc powers now specify -->
+4. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify `MISSING` 
 damage per round of combat. This is a free action and must be taken before the end of
 the Dealer's next turn.
 
 #### Effects
 
 Some effects will impact a character over time.
-1. **Stunned** If a Dealer takes `MISSING` damage in 1 hit, they `MISSING` Conviction 
-Check at the start of their turn. If failed, they may
+1. **Stunned** If a Dealer takes 3 or more damage in 1 round, they make a DR 3 Conviction Check at the start of their turn vs the TC of their last Attacker.
+If failed, they may
 either move or make one action on their turn, not both. 
 Some creatures can cause stunning effects as part of
 their attacks.
-2. **Entangled** At the start of their turn, a Dealer `MISSING`. 
-If failed, they may not move on that turn.
-`MISSING` prevents actions requiring arm movements.
+2. **Entangled** A Dealer may expend an action to make a DR 3 Strength check.
+Until they are successful, they may not move.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their
-turn, and their movement speed is halved.
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a `MISSING` 
-spell-casting attribute of the creature causing the effect.
-If they fail, they draw Lower Hand (2) for any action requiring the relevant
+turn, and their movement speed is halved, rounding up.
+4. **Blinded, Deafened** At the start of their turn, a Dealer makes a Contested 
+Intuition vs. the spell-casting attribute of the creature causing the effect.
+If they fail, they draw Lower Hand (3) for any action requiring the relevant
 sense.
-5. **Outnumbered** Dealers may delay their turn to co-occur with another player Dealer.
+5. **Outnumbered** Dealers may delay their turn to occur before or after another player.
 For each additional Dealer attacking the same target within 1 space, attacks are made
 with an additional +1 modifier.
-6. **Knocked Out** Knocked out Dealers are unable to act until treated by a Craft check 
-or a Healing Power (`MISSING` + number of turns since effect onset). Knocked Out Dealers
- remain unconscious for a length of time determined by the GM. If a Knocked Out Dealer 
- is attacked further, the player begins an Epic Event alone. Each additional hit 
- requires a Check with a-GM determined TC that the player may respond to with one or 
- more cards to pass an unknown DR as the Great Void calls out to them.
+6. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft 
+check 
+or a Healing Power (DR 5 vs. the KO Dealer's TC - 1 for each since effect onset). 
+If a Knocked Out Dealer 
+is attacked further, the player begins an Epic Event alone. Each additional hit 
+ requires a Conviction Check vs. their attacker's TC that the player may respond to with one or 
+more cards to pass an unknown DR as the Great Void calls out to them. Each additional card played grants +1 modifier.
 
 ### Health and Armor
 
-Dealers have `MISSING` health points, Bystanders have `MISSING`, and the health of
-Companions is determined by the level of their Dealer. If a character is wounded beyond
-their health pool, they are Knocked Out. Armor points are an optional additional pool
-that would be removed first in the event of a wound. Both health and armor points can
+Dealers have 5 health points (HP) plus their level, plus Vitality modifier. 
+Bystanders have up to 3, and the health of
+Companions HP is half level of their Dealer, rounding up. If a character is wounded beyond
+their health pool, they are Knocked Out. Armor Points (AP) are an optional additional pool
+that would be removed first in the event of a physical wound. 
+Two kinds of damage, psychic and poisioning, bypass AP and impact HP directly. 
+Both health and armor points can
 be recovered on a rest. Health is recovered with a Vitality check and Armor is
 recovered with a Knowledge or Craft check.
 
-AC is calculated by `MISSING`.
+Armor Class (AC) is how hard you are to hit in general and sets the DR for an attack 
+against you. Without armor, this is 4 minus half of your Agility modifier rounded down.
+If you have physical armor or an armor-like magical effect, this overrides your 
+unarmored AC so long as you have at 
+least one AP. Some armor has strength requirements which, if unmet, will cut
+a character's speed in half. Some armor has special effects, like granting bonuses to 
+certain checks or requiring hits to color-match.
+
+<!-- `MISSING` Table of Typical Armor -->
 
 ### Epic Events
 
@@ -360,10 +386,9 @@ rest permits players to draw 3 cards, and long rest 5.
 
 During a Rest, players might attempt to repair an item (including Armor), read a book,
 recover Health Points (HP), or recover Energy Points. Recovering Health is a Vitality
-Check with DR `MISSING`, -1 for each Health Point being recovered. Some Powers are limited-use
+Check with DR 4, -1 for each Health Point being recovered. Some Powers are limited-use
 and require recharging associated Energy Points during a rest, at a Primary Skill Check 
-DR `MISSING`, -1 for each Point being recovered. A Player who draws `MISSING`
-recovers a smaller portion of Health or Energy Points equal `MISSING`.
+DR 4, minus 1/4 the Points being recovered, rounded down (i.e., to recover up to 3 Points, the DR is 4; up to 7, the DR is 3). A Player who attemps to recover more Health or Energy points, but doesn't draw within the DR can still regain points can still regain a lesser number. A critical success on a rest draw is full recovery.
 
 Players take turns attempting their respective checks. Order is either determined by the
 players themselves or the last played initiative order. The GM determines the DR for
