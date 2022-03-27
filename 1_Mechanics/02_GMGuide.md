@@ -73,7 +73,7 @@ team on Discord `LINK NEEDED` or via GitHub issues.
 ### Likelihood Chart
 
 The chart below shows probability of success for the kinds of draws you will typically
-encounter at each DR. Note that Color or Suit match divide the liklihood by 2 and 4
+encounter at each DR. Note that Color or Suit match divide the likelihood by 2 and 4
 respectively. The final row notes the difference caused by drawing 2 cards at Upper or
 Lower Hand. At the ends, there isn't much of an impact, but can increase or decrease
 the probability by as much as 25% for a DR 3 check.

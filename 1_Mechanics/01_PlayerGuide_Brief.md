@@ -21,7 +21,7 @@ more time the GM can spend crafting an amazing story with you as participant.
    - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5. If you 
      have a +1 Mod, you can draw a 2 or 6 and still report a 3 or 5 draw.
 3. You start with 2 Jokers in your hand as *Fate Cards*. Any Aces drawn during play are 
-also Fate Cards. At any time, you can discard a Fate Card to redraw and take the new 
+also reserved as Fate Cards. At any time, you can discard a Fate Card to redraw and take the new 
 value.
 4. You should have a character sheet with Attributes (general skills, like Agility and
 Intelligence), and specific Skills under each attribute (e.g., Finesse under Agility).

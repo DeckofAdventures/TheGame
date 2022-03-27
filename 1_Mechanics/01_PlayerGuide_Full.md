@@ -128,7 +128,7 @@ Complete list:
 
 ### Dealers, Bystanders and Companions
 
-1. Dealers. All player characters, and some in-game characters. They...
+1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
    1. Can have Powers and Vulnerabilities.
    2. Have at least 5 health points (HP).
    3. Can receive and use Fate Cards.
@@ -167,15 +167,15 @@ to be rude to one’s fellow players.
 When the GM or a Player calls for a Check, they announce who will be making this check
 and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
 check, and (c) the Difficulty Range (DR). The DR is the range around the TC the player
-might hope to draw. Once the DR has been announced, players must make this check. A
+might hope to draw. Once the DR has been announced, players must make this check. Players may consult with their GM to determine if another Attribute or Skill may be used to make the check instead. A
 player will draw one or more cards. Immediately after drawing, a player will apply any
-relevant Modifiers before reporting the outcome and whether or not they are within the
+relevant Modifiers before reporting the outcome and whether or not they have successfully fallen within the
 DR. A Modifier is the maximum value a player may add or subtract; this is usually done
 to get closer to the TC. The GM may describe the nature of the outcome or announce the
 degree of success and ask the player to describe the outcome. 
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
-dialing in your effort exactly match the task at hand. Remembering which card is 5
+dialing in your effort to match the task at hand as closely as possible. Remembering which card is 5
 below a 3 can be tough, so there is a table below as well as a 
 [printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you get familiar
 with the system.
@@ -202,11 +202,11 @@ Left of 0 is the lower bound, right of 0 is the upper bound.
 
 #### Degrees of Success
 
-Exactly matching the TC in value, is a Major Success. If the drawn card is a perfect
+Exactly matching the TC in numeric value, is a Major Success. If the drawn card is a perfect
 match (i.e., value and suit), it's a Critical Success. If the card drawn is within the
 DR and matches the suit or color (i.e., red/black), it is either a Suited or Color
 Success. If there is a suit or color match outside the DR after the modifier has been
-applied, this is a Suited and Color Fail. Suit and Color will only matter under
+applied, this is a Suited or Color Fail. Suit and Color will only matter under
 specific circumstances, for certain character Powers, gear types or Enemy defenses.
 There is no critical failure in Deck of Adventures.
 

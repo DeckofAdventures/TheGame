@@ -65,7 +65,7 @@
      pronounce the word.
    - Resource: Minor
    - Mechanic: You're unable to complete an action that requires understanding text. 
-     The skill prerqusite only applies at the time the Vulnerability is taken.
+     The skill prerequisite only applies at the time the Vulnerability is taken.
    - Prerequisites: Skill: Intelligence < 1
    - Tags:
 - Name: Inattentive

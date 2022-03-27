@@ -100,7 +100,7 @@ be a Color Match for success. If -2, any Check made with that modifier must be S
 Match for success.
 
 Raising an Attribute Modifier by +1 initially costs 2 Experience Points. Raising a Skill
-Modifier by +1 initially costs `MISSING` Experience Point. In both cases, raising
+Modifier by +1 initially costs +1 Experience Point. In both cases, raising
 modifiers becomes more costly as you add. The table below shows the cost in
 Experience Points and the resulting modifier for Attributes and Skills.
 
