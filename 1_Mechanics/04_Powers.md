@@ -23,8 +23,8 @@
    - Description: Your weapon training allows you throw your weight into an enemy,
      heightening your damage.
    - Resource: Minor or Major
-   - Mechanic: You must move `MISSING` spaces before using this Power. You add 
-     +`MISSING`/`MISSING`
+   - Mechanic: You must move 3 spaces before using this Power. You add 
+     +1/2
      (Minor/Major) to the damage on a successful Weapon Attack. Energy Points are still
      expended on a miss.
    - Prerequisites: 
@@ -58,7 +58,7 @@
    - Resource: Minor or Major
    - Mechanic: When an ally takes damage in combat, you may take 1/2 (Minor/Major) Weapon
      Attacks against the attacker on your turn without penalty. All other actions made
-     when using this Power incur an additional `MISSING` penalty.
+     when using this Power incur an Lower Hand (1+) penalty.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Defender
@@ -102,7 +102,8 @@
    - Mechanic: Choose one effect when you take this power:
       + You perform your Mystic Attack on all characters within a cone of 3 spaces in
         front of you.
-      + All characters in a 3 space cone in front of you make a `MISSING`.
+      + All characters in a 3 space cone in front of you make a Contested Conviction 
+        check.
         On failure, they are Knocked Down
    - Prerequisites: 
       + Power: Attack, Mystic
@@ -151,8 +152,7 @@
    - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against
      you when you make a critical hit against them.
    - Resource: Simple
-   - Mechanic: When delivering a critical hit, enemies `MISSING`. All critical hits now 
-     Stun a Dealer or Knock Out a Bystander
+   - Mechanic: All Critical Success attacks Stun a Dealer or Knock Out a Bystander.
    - Prerequisites: Level 3
    - Tags:
 - Name: Momentum 
@@ -190,7 +190,7 @@
 - Name: Heal
    - Description: Can channel magical energy or medical training to heal others
    - Resource: Minor or Major
-   - Mechanic: Heal another character for `MISSING` (Minor/Major) Health Points
+   - Mechanic: Heal another character for 1/3 (Minor/Major) Health Points
    - Prerequisites: Role: Support
    - Tags:
 - Name: Lend Aid
@@ -261,8 +261,8 @@
    - Description: Fortify yourself even further, adjusting your shield or summoning
      magical armor.
    - Size: Minor or Major
-   - Mechanic: Add `MISSING` (Minor/Major) to a creature's AC until the end of their 
-     next turn.
+   - Mechanic: Add 1/2 (Minor/Major) to a creature's AC until the end of their 
+     next turn. This effect does not stack with other Powers.
    - Prerequisites: Role: Support or Defender
    - Tags:
 
@@ -275,7 +275,8 @@
    - Resource: Simple
    - Mechanic: On a long rest, you attempt to connect with a creature in the world to
      take them as a Companion. The GM determines if this attempt was successful and may
-     ask for a relevant Skill check to determine success.
+     ask for a relevant Skill check to determine success. Unlike other simple powers, 
+     this costs 5 XP.
    - Prerequisites: 
       + Skill requirement: Craft or Knowledge > +1
    - Tags: Companion
@@ -295,7 +296,7 @@
      to increase the creature's power. On a long rest, you train/modify your Companion
      to improve their skills.
    - Resource: Simple
-   - Mechanic: Your Companion gains `MISSING` Health Point and `MISSING` to attack.
+   - Mechanic: Your Companion gains 1 Health Point and +1 Mod to attacks.
    - Prerequisites: 
       + Level 2
       + Power: Creature Connection
