@@ -17,7 +17,7 @@ The GM will be there to help you through the process, but the more you pick up, 
 more time the GM can spend crafting an amazing story with you as participant.
 
 1. Grab a deck of playing cards, reserving the Jokers, and shuffle well.
-2. You may be asked to make a Check. This involves..
+2. Your GM may ask you to make a Check to determine the result of an action your character is attempting. This involves..
    - A *Target Card* (TC) on the table, that you hope to be close to when you Draw. Think of it as the Bullseye of the target you are aiming for.
    - *Difficulty Range* (DR) that defines how far away from the TC you can be and still
      succeed. Think of it as the close rings surrounding the Bullseye. 
