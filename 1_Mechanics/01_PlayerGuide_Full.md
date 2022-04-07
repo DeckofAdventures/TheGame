@@ -13,8 +13,8 @@
 - Characters
    - Attributes, Skills, and Modifiers
    - Dealers, Bystanders and Companions
-- During Play
-   - Out of Combat
+- Playing the Game
+   - Exploration and Adventuring
    - Making a Check
       - Degrees of Success
       - Upper and Lower Hand
@@ -71,7 +71,7 @@ drawing from their respective decks to help determine the outcome.
 GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
 3. Players will use their deck to do most anything; it represents their character's 
-stamina until they rest. When the Action Deck is empty and a player has to shuffle 
+stamina until they complete a *Full Rest*. When the Action Deck is empty and a player has to shuffle 
 between rests, they draw with the [Lower Hand (1+)](#Upper-and-Lower-Hand) until they would shuffle when 
 resting.
 
@@ -80,7 +80,7 @@ resting.
 Fate Cards (Jokers and Aces) are a chance to control your fate. They permit the player
 to choose when they want a second chance at a key moment.
 
-1. After a long rest, Jokers return to the player's hand, if they're not there already.
+1. After a Full Rest, Jokers return to the player's hand, if they're not there already.
 2. Aces drawn from the deck are played as usual, but remains in the player's hand.
 3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
 redraw. Only one redraw is permitted per check.
@@ -102,31 +102,33 @@ Conviction skill.
 and allow you to add or subtract your draw before reporting the value on a given check.
 
 Complete list:
-- AGL Agility
+- Agility AGL
    - Finesse (Fight)
    <!-- - Reflex -->
    <!-- - Riding -->
    - Stealth
-- CON Conviction
+- Conviction CON
    - Bluffing
    - Performance
    <!-- - Persuasion -->
-- GUT Intuition
+- Intuition GUT
    - Detection
    <!-- - Faith -->
    - Craft
    <!-- - Naturalism -->
-- INT Intelligence
+- Intelligence INT
    - Knowledge
    - Investigation
    <!-- - Science -->
-- STR Strength
+- Strength STR
    - Athletics
    - Brute (Fight)
    <!-- - Intimidation -->
-- VIT Vitality
+- Vitality VIT
 
 ### Dealers, Bystanders and Companions
+
+The Player Characters (referred to as PCs) are typically the heroes of the story. PCs are considered *Dealers* and are distinct and separate from the majority of other characters in the world. The GM may control other Dealers who can take the form of powerful allies or adversaries the players may encounter along the way. 
 
 1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
    1. Can have Powers and Vulnerabilities.
@@ -138,11 +140,11 @@ Complete list:
    2. Have limited access to Powers
    3. Have 1-3 HP.
    4. Cannot use either Fate Cards or Primary Suit features.
-3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. A Companion acts on the players turn and may draw from their own deck, depending on their level. See the setting Bestiary for a list of potential Companions.
+3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. A Companion acts on the players turn and grants unique features in and out of combat. See the setting Bestiary for a list of potential Companions and their features.
 
-## During Play
+## Playing the Game
 
-### Out of Combat
+### Exploration and Adventuring
 
 The majority of time spent on adventures takes place outside of combat. This includes
 exploring the world, investigating for clues, and engaging social interactions with
@@ -333,24 +335,37 @@ more cards to pass an unknown DR as the Great Void calls out to them. Each addit
 ### Health and Armor
 
 Dealers have 5 health points (HP) plus their level, plus Vitality modifier. 
-Bystanders have up to 3, and the health of
-Companions HP is half level of their Dealer, rounding up. If a character is wounded beyond
-their health pool, they are Knocked Out. Armor Points (AP) are an optional additional pool
+Bystanders usually have between 1-3 HP, and the health of
+Companions HP is half the level of their Dealer, rounding up. If a character is wounded beyond
+their health pool, they are *Knocked Out*. Armor Points (AP) are an additional resource 
 that would be removed first in the event of a physical wound. 
 Two kinds of damage, psychic and poisioning, bypass AP and impact HP directly. 
-Both health and armor points can
-be recovered on a rest. Health is recovered with a Vitality check and Armor is
-recovered with a Knowledge or Craft check.
 
-Armor Class (AC) is how hard you are to hit in general and sets the DR for an attack 
+Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack 
 against you. Without armor, this is 4 minus half of your Agility modifier rounded down.
-If you have physical armor or an armor-like magical effect, this overrides your 
-unarmored AC so long as you have at 
-least one AP. Some armor has strength requirements which, if unmet, will cut
-a character's speed in half. Some armor has special effects, like granting bonuses to 
+If you have physical armor or an armor-like magical effect, this determines your AR depending on the type of armor. Some armor has strength requirements which, if unmet, will cut
+a character's speed in half. Some armor can possess special effects, like granting bonuses to 
 certain checks or requiring hits to color-match.
 
-<!-- `MISSING` Table of Typical Armor -->
+**Armor Value Table**
+
+The following table outlines the AR for each type of armor. Consult an individual item's details for full information about the additional effects a piece of armor may grant.
+
+Light Armor = AR 3
+Medium Armor = AR 2
+Heavy Armor = AR 1
+
+**Armor Points (AP)**
+
+Physical shields and magical effects can grant Armor Points (AP) depending on the strength of the shield. Armor Points are added to the Character's sheet upon activation of a Power or when taking an action that grants AP. When a character would take damage from most sources (excluding poison, psychic, and other specific damage types) they take the damage from their AP first. After AP is depleted, additional damage a character takes depletes their HP.
+
+**Shield/AP Table**
+
+Standard Shield = 1 AP
+Heavy Shield = 2 AP
+Magical Shield = Power dependent (check individual power for notes)
+
+A physical shield can be readied as an action to replenish AP. A magical shield requires the activation of a Power to add AP.
 
 ### Epic Events
 
@@ -378,19 +393,23 @@ GM will lay out the consequences and give the players a chance to react.
 
 ### Rests
 
-A rest is an Epic Event in which players state what they hope to accomplish over the
-rest. Each goal is a separate check the players must collectively pass. Taking a short
-rest permits players to draw 3 cards, and long rest 5.
+Rests are common throughout a session. There are two types of rests. A *Quick Rest* represents a short 30-minute break from the action, where characters may be catching their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where characters get some sleep and recover from a long day.
 
-During a Rest, players might attempt to repair an item (including Armor), read a book,
-recover Health Points (HP), or recover Energy Points. For each player attempting an action during a Rest, the GM will draw a unique TC associated with each character. Recovering Health is a Vitality
-Check with DR 4, -1 for each Health Point being recovered. Some Powers are limited-use
-and require recharging associated Energy Points during a rest, at a Primary Skill Check 
-DR 4, minus 1/4 the Points being recovered, rounded down (i.e., to recover up to 3 Points, the DR is 4; up to 7, the DR is 3). A Player who attemps to recover more Health or Energy points, but doesn't draw within the DR can still regain points can still regain a lesser number. A critical success on a rest draw results in full recovery of HP and Energy Points.
+During a *Quick Rest*, each player who is resting draws 3 cards and sums up the total value of those cards to determine how many Energy Points and Health Points your character regains. Face Cards and Aces retain their value (J=11, Q=12, K=13, A=14). After determining how many total points your character can recover, you can choose how many Health Points and Energy Points you are able to recover during the rest. The below table shows the total value drawn and corresponding number of points to recover.
 
-Players take turns attempting their respective checks. Order is either determined by the
-players themselves or the last played initiative order. The GM determines the DR for
-each novel goal.
+|**Total**|**1**|**2**|**3**|**4**|**5**|**6**|**7**
+|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**10** | 1  | x  | x  | x  | x  | x  | x  |
+|**15** | x  | 2  | x  | x  | x  | x  | x  | 
+|**20** | x  | x  | 3  | x  | x  | x  | x  |
+|**25** | x  | x  | x  | 4  | x  | x  | x  |
+|**30** | x  | x  | x  | x  | 5  | x  | x  | 
+|**35** | x  | x  | x  | x  | x  | 6  | x  | 
+|**40** | x  | x  | x  | x  | x  | x  | 7  | 
+
+After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Energy Points and your Health Points return to their maximum. 
+
+If you run out of cards before you can successfully take a *Full Rest*, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
 
 ## Character Creation
 

@@ -50,7 +50,7 @@ rules) is encouraged.
      option of being able to sacrifice additional cards to increase your Mod by +1 for
      each card sacrificed.
 8. Your character may need to take a rest during a session to recharge their Energy Points or heal their Health Points. You can take a *Quick Rest*, which takes about 30 minutes of in-game time, or a *Full Rest*, which is a full 8 hours of in-game time. 
-  - On a *Quick Rest*, each player draws 3 cards and sums up the total value of those cards to determine how many Energy Points and Health Points your charadcter regains. Face Cards and Aces retain their value (J=11, Q=12, K=13, A=14). Reference the Full Guide for more details on taking a *Quick Rest*.
+  - On a *Quick Rest*, each player draws 3 cards and sums up the total value of those cards to determine how many Energy Points and Health Points your character regains. Face Cards and Aces retain their value (J=11, Q=12, K=13, A=14). Reference the Full Guide for more details on taking a *Quick Rest*.
   - On a *Full Rest*, shuffle your discard pile back into your deck. You also replenish all expended Energy Points and your Health Points return to their maximum. 
    - If you run out of cards before you can successfully take a *Full Rest*, you may shuffle and always draw with 
      the Lower Hand, making it harder to succeed. This signifies your character running out of Stamina during a long day. 
