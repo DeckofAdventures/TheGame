@@ -18,7 +18,7 @@
      exactly what you ask.
    - Resource: Minor or Major
    - Mechanic: When you draw a card to command your companion, the DM gains control of
-     the companion temporarily, with the duration at the DM's discression (Minor/Major).
+     the companion temporarily, with the duration at the DM's discretion (Minor/Major).
    - Prerequisites: Power: Creature Connection
    - Tags:
 - Name: Code of Honor (a.k.a Vow, Oath)
@@ -33,8 +33,7 @@
      understand any conversation topic that doesn't pertain to you.
    - Resource: Major
    - Mechanic: If you make a check to understand a topic or observe another creature,
-     you must justify why your character thinks it's about themselves, or draw 2 cards
-     and select the lower value.
+     you must justify why your character thinks it's about themselves, or draw with the Lower Hand.
    - Prerequisites: Skill: Intelligence and Intuition < +1
    - Tags:
 - Name: Cowardly Ally
@@ -87,13 +86,13 @@
       + Your creator or society at large consider you to have a function that you do not
         wish to pursue, such as a dangerous and laborious profession.
       + You require a rare form of fuel that is difficult to obtain and are rendered
-        catatonic without regular access.
+        catatonic without regular access. Work with your GM to see what makes sense for your character in the setting.
    - Prerequisites:
    - Tags:
 - Name: No Mercy
    - Description: An attacker has made their choice; that choice is to die.
    - Resource: Major
-   - Mechanic: If you are attacked in combat, you must continue attacking until your
+   - Mechanic: If you are attacked in combat, you must only use the attack action or use an offensive Power until your
      attacker is Knocked Out.
    - Prerequisites:
    - Tags:
