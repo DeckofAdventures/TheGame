@@ -275,7 +275,7 @@ also cause drawing with Lower Hand, draw 4.
 
 Some checks will be initiated by a character's actions and require others to respond,
 pitting two skills against each other. This might be one character sneaking past
-another(e.g., Stealth vs. Detection), or one character causing a magical effect that
+another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check In these
 cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
 sets the DR; the DR for a Contested Check is 4 minus the Attacker's relevant modifier,
