@@ -20,9 +20,8 @@ more time the GM can spend crafting an amazing story with you as participant.
 2. Your GM will describe a scene. They may ask you to make a Check to determine the success or failure of an action your character is attempting that is more difficult than simply walking or talking. This might be attempting to sneak past an unsuspecting guard, trying to convince another character of something, or attacking an enemy. Making a Check involves...
    - A *Target Card* (TC) that is drawn and shown on the table, that you hope to be close to when you Draw. Think of it as the bullseye of the target you are aiming for.
    - *Difficulty Range* (DR) that defines how far away from the TC you can be and still
-     succeed. Think of it as the closest rings surrounding the bullseye. 
-   - A DR 'above' a King is an Ace, then 2, looping back around. A DR below 2 is Ace,
-     then King.
+     succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a 
+     King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
    - A *Modifier* (Mod) provided by your character sheet, that allows you to add or 
      subtract
      from the card you draw to get closer to the TC. This helps you aim your Check closer to the bullseye.
