@@ -380,7 +380,9 @@
    - Resource: Major
    - Mechanic: You can a look at your top 3 cards of your deck and discard up to three of
      them. You must make a Draw before using this Power again.
-   - Prerequisites: Level 3
+   - Prerequisites: 
+      + Level 3
+      + Power: Scrying
    - Tags: Card Viewing 
 
 ### Fate Cards
