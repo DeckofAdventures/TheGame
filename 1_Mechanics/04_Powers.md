@@ -360,7 +360,7 @@
    - Mechanic: On a Suited Miss, you may redraw once. This Power cannot be used multiple times on the same check.
    - Prerequisites:
    - Tags: Suited Miss
-- Name: Shared Luck
+- Name: Luck Shared
    - Description: You know just how to spread the luck around. When things are going 
      your way, you can share that vibe.
    - Resource: Minor
