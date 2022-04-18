@@ -47,7 +47,7 @@ rules) is encouraged.
      option of being able to discard additional cards to increase your Mod by +1 for
      each card sacrificed.
 8. Your character may need to rest to recharge Energy Points or heal Health Points. A *Quick Rest* takes about 30 minutes of in-game time. A *Full Rest* is a full 8 hours of in-game time.  
-  - On a *Quick Rest*, each player can draw a number of *Rest Cards* determined by their level. Each Rest Card drawn regains 1 HP or EP. If the card drawn is the same as the character's Primary Suit, you regain an additional 1 HP or EP. Reference the Full Guide for more details on taking a *Quick Rest*.
+  - On a *Quick Rest*, each player can draw a number of *Rest Cards* determined by their level. Each Rest Card drawn regains 1 HP or EP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or EP. Reference the Full Guide for more details on taking a *Quick Rest*.
   - On a *Full Rest* you replenish all expended Energy Points and your Health Points return to their maximum. 
    - If you run out of cards before you can successfully take a Rest, you may
      shuffle, but must always draw with one (1+) Lower Hand until your next Rest.
