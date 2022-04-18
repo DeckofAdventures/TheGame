@@ -422,7 +422,7 @@
    - Resource: Minor or Major
    - Mechanic: You make an illusory intangible visual (no larger than 1 space) or
      auditory effect that you've heard before. To determine if it's real, a character
-     makes a Conviction Check vs. your Primary Skill Modifier. As a Major Power,
+     makes a Contested Conviction Check. As a Major Power,
      you can generate both visual and auditory effects, and the check to verify draws with
      the Lower Hand.
    - Prerequisites: 
