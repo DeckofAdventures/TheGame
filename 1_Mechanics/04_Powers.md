@@ -195,7 +195,7 @@
 - Name: Find Weakness
    - Description: You can size up an opponent and discover their weaknesses.
    - Resource: Simple
-   - Mechanic: As an action, you can make a Contested Check of your Detection vs. their Bluffing to discover one opponent's vulnerability. On a Success, you learn one vulnerability and on Critical Success you learn all vulnerabilities.
+   - Mechanic: As an action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one vulnerability and on Critical Success you learn all vulnerabilities.
    - Prerequisites: Level 2
    - Tags: Difficulty Prediction
    
