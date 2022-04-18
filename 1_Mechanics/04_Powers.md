@@ -186,7 +186,7 @@
 - Name: Momentum Aura
    - Description: Your strength is supernatural, bending the gravity around you.
    - Resource: Simple
-   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check against your Strength.
+   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
    - Prerequisites: 
       + Power: Momentum
       + Role: Defender
