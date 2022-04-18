@@ -361,7 +361,7 @@ more cards to pass an unknown DR as the Great Void calls out to them. Each addit
 ### Health and Armor
 
 Dealers have 5 health points (HP) plus their level, plus Vitality modifier. 
-Bystanders usually have between 1-3 HP, and the health of
+The health of
 Companions HP is half the level of their Dealer, rounding up. If a character is wounded beyond
 their health pool, they are *Knocked Out*. Armor Points (AP) are an additional resource 
 that would be removed first in the event of a physical wound. 
