@@ -56,7 +56,7 @@ rules) is encouraged.
    - On a *Full Rest*, you may return both Jokers from the discard pile to your hand as Fate Cards if they were used. Return any Aces back to your deck before shuffling for a *Full Rest*.
 9. If your group turns to violence to solve issues, the DM will announce the beginning 
 of Combat, where each involved character will draw a Target Card to determine turn order.
-   - On your turn, you can move and take up to 2 actions, in any order. Certain actions can only be used once per turn, unless otherwise specified by a Power.
+   - On your turn, you can move and take up to 2 actions, in any order. Each Power can only be used once per turn, unless otherwise specified.
    - Your movement is limited by the Speed value on your character sheet, showing the
      maximum number of spaces you can move on a grid. The average speed is 6. 
    - Your character sheet will give you optional actions that you can take listed under Powers, but you can
