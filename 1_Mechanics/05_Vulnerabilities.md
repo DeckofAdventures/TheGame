@@ -92,7 +92,7 @@
 - Name: No Mercy
    - Description: An attacker has made their choice; that choice is to die.
    - Resource: Major
-   - Mechanic: If you are attacked in combat, you must only use the attack action or use an offensive Power until your
+   - Mechanic: If you are attacked in combat, you must only use offensive Power attacks until your
      attacker is Knocked Out.
    - Prerequisites:
    - Tags:
