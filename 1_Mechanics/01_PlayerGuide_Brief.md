@@ -27,8 +27,8 @@ more time the GM can spend crafting an amazing story with you as participant.
      from the card you draw to get closer to the TC. This helps you aim your Check closer to the bullseye.
    - Sometimes, you'll be asked to draw more than one card to increase (Upper Hand) or 
      decrease (Lower Hand) your odds. This represents how difficult or easy a Check is to make.
-   - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5. If you 
-     have a +1 Mod, you can draw a 2 or 6 and still report a 3 or 5 draw.
+   - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to succeed on a Check. If you 
+   have a +1 Mod, you can draw a 2 or 6 and still report a successful 3 or 5 draw.
 3. You start with 2 Jokers in your hand as *Fate Cards*. Any Aces drawn during play are 
 also reserved as Fate Cards. At any time, you can discard a Fate Card to redraw and take the new 
 value, or you can discard a Fate Card during combat to nullify a single point of damage your character would take.
