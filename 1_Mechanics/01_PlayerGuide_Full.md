@@ -369,25 +369,12 @@ If you have physical armor or an armor-like magical effect, this determines your
 a character's speed in half. Some armor can possess special effects, like granting bonuses to 
 certain checks or requiring hits to color-match.
 
-**Armor Value Table**
-
-The following table outlines the AR for each type of armor. Consult an individual item's details for full information about the additional effects a piece of armor may grant.
-
-Light Armor = AR 3
-Medium Armor = AR 2
-Heavy Armor = AR 1
-
-**Armor Points (AP)**
-
-Physical shields and magical effects can grant Armor Points (AP) depending on the strength of the shield. Armor Points are added to the Character's sheet upon activation of a Power or when taking an action that grants AP. When a character would take damage from most sources (excluding poison, psychic, and other specific damage types) they take the damage from their AP first. After AP is depleted, additional damage a character takes depletes their HP.
-
-**Shield/AP Table**
-
-Standard Shield = 1 AP
-Heavy Shield = 2 AP
-Magical Shield = Power dependent (check individual power for notes)
-
-A physical shield can be readied as an action to replenish AP. A magical shield requires the activation of a Power to add AP.
+Light, Medium, and Heavy armor has Armor Ranges of 3, 2, and 1, respectively The
+[item description](./06_Items.md) will specifiy the number of Armor Points (AP)
+(e.g., standard shield 1 AP, Heavy Shield 2 AP). Physical shields and magical effects
+can grant AP, either when equipping the item or activating the Power. Unless otherwise
+specified (e.g., poison, psychic damage), damage subtracts from AP first. After AP is
+depleted, additional damage subtracts from HP.
 
 ### Epic Events
 
