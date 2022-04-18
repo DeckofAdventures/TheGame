@@ -16,7 +16,7 @@ more time the GM can spend crafting an amazing story with you as participant.
 1. Grab a deck of playing cards, reserving the Jokers, and shuffle well.
 2. If your character attempts an action with an unknown outcome, you'll be asked to make a Check, which involves drawing one more cards from your deck, and comparing the outcome via...
 
-   - A *Target Card* (TC) that is drawn and shown on the table, that you hope to be close to when you Draw. Think of it as the bullseye of the target you are aiming for.
+   - A *Target Card* (TC) that is drawn and shown on the table, which you hope to Draw a value close to in order to succeed on your Check. Think of it as the bullseye of the target you are aiming for.
    - *Difficulty Range* (DR) that defines how far away from the TC you can be and still
      succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a 
      King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
