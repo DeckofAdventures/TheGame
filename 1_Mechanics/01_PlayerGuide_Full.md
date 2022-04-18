@@ -408,21 +408,11 @@ GM will lay out the consequences and give the players a chance to react.
 
 Rests are common throughout a session. There are two types of rests. A *Quick Rest* represents a short 30-minute break from the action, where characters may be catching their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting draws 3 cards and sums up the total value of those cards to determine how many Energy Points and Health Points your character regains. Face Cards and Aces retain their value (J=11, Q=12, K=13, A=14). After determining how many total points your character can recover, you can choose how many Health Points and Energy Points you are able to recover during the rest. The below table shows the total value drawn and corresponding number of points to recover.
+During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or EP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or EP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.  
 
-|**Total**|**1**|**2**|**3**|**4**|**5**|**6**|**7**
-|---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|**10** | 1  | x  | x  | x  | x  | x  | x  |
-|**15** | x  | 2  | x  | x  | x  | x  | x  | 
-|**20** | x  | x  | 3  | x  | x  | x  | x  |
-|**25** | x  | x  | x  | 4  | x  | x  | x  |
-|**30** | x  | x  | x  | x  | 5  | x  | x  | 
-|**35** | x  | x  | x  | x  | x  | 6  | x  | 
-|**40** | x  | x  | x  | x  | x  | x  | 7  | 
+After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Energy Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.  
 
-After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Energy Points and your Health Points return to their maximum. 
-
-If you run out of cards before you can successfully take a *Full Rest*, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
+If you run out of cards before you can successfully take a Rest, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
 
 ## Character Creation
 
