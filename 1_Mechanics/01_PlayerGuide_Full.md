@@ -286,7 +286,8 @@ fail individually.
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
 with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
-Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would successfully convince Jonas of something in this scenario. 
+Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
+successfully convince Jonas of something in this scenario. 
 
 ### In Combat
 
