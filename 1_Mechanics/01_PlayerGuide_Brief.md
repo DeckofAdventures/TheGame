@@ -60,7 +60,7 @@ of Combat, where each involved character will draw a Target Card to determine tu
    - Your movement is limited by the Speed value on your character sheet, showing the
      maximum number of spaces you can move on a grid. The average speed is 6. 
    - Your character sheet will give you optional actions that you can take listed under Powers, but you can
-     always try something new. Work with your GM to determine whether an action is possible in the circumstances. 
+     always try something new. Ask your GM if your idea is possible under circumstances. 
    - If you get hit, you can expend a Fate card to nullify 1 point of damage.
    - Depending on the type of attack or amount of damage, you may get Stunned, Knocked
      Out, Blinded/Deafened or Entangled, and need to undo this effect. For a full list of effects and their rules, consult the Full Players Guide.
