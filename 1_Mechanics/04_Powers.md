@@ -147,7 +147,10 @@
 - Name: Attack, Mystic Deprivation 
    - Description: You channel your abilities deprive a target of their senses.
    - Resource: Minor or Major
-   - Mechanic: You select the Blinded or Deafened effect and draw a Target Card and force 1/3 (Minor/Major) characters to make a Intuition check against your TC. On a failure, those characters are put are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
+   - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1/3
+     (Minor/Major) characters to make a Intuition check against your TC. On a failure,
+     target(s) are under the selected effect. Targets who do not use the relevant sense
+     are immune to this Power.
    - Prerequisites: 
       + Power: Attack, Mystic
       + Role: Support or Caster
