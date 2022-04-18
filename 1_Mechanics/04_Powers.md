@@ -247,7 +247,10 @@
    - Description: You're such a distracting presence that you bury into the mind of many
      target, having a sustained effect.
    - Resource: Minor or Major
-   - Mechanic: You draw a Target Card and force 2/3 (Minor/Major) characters to make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions made during their turn. At the end of each of their turns this character makes a Conviction Check vs. the TC to end the effect. 
+   - Mechanic: You draw a TC. 2/3 (Minor/Major) targets make a Conviction check against
+     your TC. On a failure, targets draw with the Lower Hand on any actions made during
+     their turn. At the end of each of their turns, targets may repeat the check to end
+     the effect. 
    - Prerequisites: 
       + Level 3
       + Power: Lend Mass Distraction
@@ -303,7 +306,8 @@
    - Description: Fortify yourself even further, adjusting your shield or summoning
      magical armor.
    - Size: Minor or Major
-   - Mechanic: Add 1/2 AP (Minor/Major) to yourself. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
+   - Mechanic: Add 1/2 AP (Minor/Major) to yourself. This effect is in addition to AP
+     from physical items, but must replace AP from other Powers.
    - Prerequisites: 
       + Role: Defender 
    - Tags:
@@ -315,9 +319,10 @@
      (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a
      Companion.
    - Resource: Simple
-   - Mechanic: At the end of a Full Rest, you attempt to connect with a creature in the world to take them as a Companion. The GM determines if this attempt was successful and may
-     ask for a relevant Skill check to determine success. Unlike other Simple Powers, taking 
-     this Power costs 5 XP.
+   - Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take
+     them as a Companion. The GM determines if this attempt was successful and may ask
+     for a relevant Skill check. Unlike other Simple Powers, taking this Power costs 5
+     XP. 
    - Prerequisites: 
       + Skill requirement: Craft or Knowledge > +1
    - Tags: Companion
@@ -411,7 +416,7 @@
 - Name: Barrier
    - Description: Your skills allow you to deploy temporary impromptu walls
    - Resource: Minor or Major
-   - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide. This wall lasts until you use another Major power. You may dismiss this wall at any time without using an action. This wall is 
+   - Mechanic: You create a wall 3/5 (Minor/Major) spaces wide. You may dismiss this wall at any time without using an action. This wall is 
      impervious to standard attacks, but may be worn down over time at the GM's 
      discretion. 
    - Prerequisites: 
