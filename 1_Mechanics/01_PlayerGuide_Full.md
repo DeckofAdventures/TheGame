@@ -333,7 +333,7 @@ the Dealer's next turn.
 #### Effects
 
 Some effects will impact a character over time.
-1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction Check at the start of their turn vs their TC.
+1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction Check at the start of their turn vs their  own TC.
 If failed, they may
 either move or make one action on their turn, not both. 
 Some creatures can cause stunning effects as part of
