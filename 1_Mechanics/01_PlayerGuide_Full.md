@@ -162,7 +162,7 @@ the players may encounter along the way.
 
 ### Exploration and Adventuring
 
-In Deck of Adventures, the players are creating and experiencing the world at the same time.
+The players are creating and experiencing the world at the same time.
 Adventures can include exploring the world, investigating for clues, and engaging in social interactions with
 other players and non-playable characters. During an Adventure, the GM will ask
 players to *Make a Check* by drawing a card and adding the modifier relevant to the
