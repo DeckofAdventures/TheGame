@@ -54,7 +54,7 @@ rules) is encouraged.
   - On a *Full Rest*, shuffle your discard pile back into your deck. You also replenish all expended Energy Points and your Health Points return to their maximum. 
    - If you run out of cards before you can successfully take a *Full Rest*, you may shuffle and always draw with 
      the Lower Hand, making it harder to succeed. This signifies your character running out of Stamina during a long day. 
-   - On a *Full Rest*, you may add both Jokers as Fate Cards if they were used. Return any Aces back to your deck before shuffling for a *Full Rest*.
+   - On a *Full Rest*, you may return both Jokers from the discard pile to your hand as Fate Cards if they were used. Return any Aces back to your deck before shuffling for a *Full Rest*.
 9. If your group turns to violence to solve issues, the DM will announce the beginning 
 of Combat, where each involved character will draw a Target Card to determine turn order.
    - On your turn, you can move and take up to 2 actions, in any order. Certain actions can only be used once per turn, unless otherwise specified by a Power.
