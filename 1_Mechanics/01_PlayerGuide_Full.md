@@ -71,7 +71,7 @@ drawing from their respective decks to help determine the outcome.
 GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
 3. Players will use their deck to do most anything; it represents their character's 
-stamina until they complete a *Full Rest*. When the Action Deck is empty and a player has to shuffle 
+stamina until they complete a Rest. When the Action Deck is empty and a player has to shuffle 
 between rests, they draw with the [Lower Hand (1+)](#Upper-and-Lower-Hand) until they would shuffle when 
 resting.
 
