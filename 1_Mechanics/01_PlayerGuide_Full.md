@@ -96,7 +96,11 @@ strengths or weaknesses.
 
 1. Attributes are general domains that collectively make up a characters strengths and
 weaknesses: Agility, Strength, Intuition, Intelligence, Conviction, and Vitality.
-2. Skills are specific to an Attribute. These signify how good a character is at performing certain types of actions. Each skill is tied to an attribute, meaning that being better at an attribute also increases the effectiveness of a specific skill. Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and Skills are listed in the chart below.
+2. Skills are specific to an Attribute. These signify how good a character is at
+performing certain types of actions. Each Skill is tied to an Attribute, meaning
+improving that Attribute also increases the effectiveness of a related Skill.
+Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and
+Skills are listed below.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
 and allow you to add or subtract your draw before reporting the value on a given check.
  These modifiers are determined at Character Creation and can be improved as you Level Up.
