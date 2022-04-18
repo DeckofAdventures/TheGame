@@ -130,9 +130,10 @@ and allow you to add or subtract your draw before reporting the value on a given
    <!-- - Intimidation -->
 - Vitality VIT
 
-**More skill details and examples:** 
-
-Each skill is generally related to a domain of expertise a character may possess. A GM might call for a Check using a specific skill, but you can always ask if another skill would be applicable in the situation. The GM decides whether the skill applies, so get creative! 
+Each skill is generally related to a domain of expertise a character may possess. A GM
+might call for a Check using a specific Skill, but you can always ask if another 
+would be applicable in the situation. The GM decides whether the Skill applies, so get
+creative! 
 
 <!--Add some examples of specific skills being used, with general description of domain --> 
 
