@@ -186,10 +186,12 @@ When the GM or a Player calls for a Check, they announce who will be making this
 and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
 check, and (c) the Difficulty Range (DR). 
 
-Think of a Target Card (TC) as the bullseye on a target you are hoping to hit. The Difficulty Range (DR) is the range around the TC the player
-might hope to draw, like the closest circles right around the bullseye. 
+A Target Card (TC) is like the bullseye on a target you are hoping to hit. The
+Difficulty Range (DR) is the range around the TC the player might hope to draw, like
+the circles around the bullseye. 
 
-Once the DR has been announced, players must make this check. Players may consult with their GM to determine if another Attribute or Skill may be used to make the check instead. A
+Once the DR has been announced, players must make this check. Players may consult with
+their GM to determine if another Attribute or Skill may be used instead. A
 player will draw one or more cards. Immediately after drawing, a player will apply any
 relevant Modifiers before reporting the outcome and whether or not they have successfully fallen within the
 DR. A Modifier is the maximum value a player may add or subtract; this is usually done
