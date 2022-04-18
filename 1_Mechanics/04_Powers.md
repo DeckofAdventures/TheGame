@@ -225,7 +225,9 @@
 - Name: Lend Mass Distraction
    - Description: You know how to cause a scene.
    - Resource: Minor or Major
-   - Mechanic: You draw a Target Card and force 2/3 (Minor/Major) characters to make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions made during their next turn.
+   - Mechanic: Draw a Target Card. 2/3 (Minor/Major) targets make a Conviction check
+     against your TC. On a failure, those characters draw with the Lower Hand on any
+     actions made during their next turn.
    - Prerequisites: 
       + Level 2
    - Tags:
