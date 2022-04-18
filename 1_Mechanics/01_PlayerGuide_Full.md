@@ -138,7 +138,10 @@ Each skill is generally related to a domain of expertise a character may possess
 
 ### Dealers, Bystanders and Companions
 
-The Player Characters (referred to as PCs) are typically the heroes of the story. PCs are considered *Dealers* and are distinct and separate from the majority of other characters in the world. The GM may control other Dealers who can take the form of powerful allies or adversaries the players may encounter along the way. 
+The Player Characters (PCs) are typically the heroes of the story. PCs are
+considered *Dealers* and differ from the majority of other characters in the world. The
+GM may control other Dealers who can take the form of powerful allies or adversaries
+the players may encounter along the way. 
 
 1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
    1. Can have Powers and Vulnerabilities.
