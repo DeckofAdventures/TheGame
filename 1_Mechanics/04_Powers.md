@@ -49,7 +49,7 @@
    - Resource: Minor
    - Mechanic: When you spend an Energy Point to disarm, perfom a Weapon Attack. On a 
      hit, the enemy must spend one action picking up that weapon before using it again.
-     This does not apply to Mystic Attacks or other weapons the enemy may wield.
+     This does not apply to Mystic Attacks or additional weapons the enemy may wield.
    - Prerequisites: 
       + Role: Martial or Defender
       + Tags:
