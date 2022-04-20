@@ -13,8 +13,8 @@
 - Characters
    - Attributes, Skills, and Modifiers
    - Dealers, Bystanders and Companions
-- During Play
-   - Out of Combat
+- Playing the Game
+   - Exploration and Adventuring
    - Making a Check
       - Degrees of Success
       - Upper and Lower Hand
@@ -62,16 +62,16 @@ to try and resolve disputes between players that may come up.
 
 ## The Action Deck
 
-Deck of Adventures is based around a 52-card deck: 13 cards (2-10, J, Q, K, and A)
+Deck of Adventures is based around a 54-card deck: 13 cards (2-10, J, Q, K, and A)
 across 4 suits, as well as Jokers. Each player should have their own Deck. 
 
-1. Actions with unknown outcomes will require a player to make a check, which means 
+1. Actions with unknown outcomes will require a player to make a Check, which means 
 drawing from their respective decks to help determine the outcome.
-2. Jokers and Aces are Fate Cards and should be reserved in one's hand, both player and 
+2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players and the 
 GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
-3. Players will use this deck to do most anything; it represents their character's 
-stamina until they rest. When the Action Deck is empty and a player has to shuffle 
+3. Players will use their deck to do most anything; it represents their character's 
+stamina until they complete a Rest. When the Action Deck is empty and a player has to shuffle 
 between rests, they draw with the [Lower Hand (1+)](#Upper-and-Lower-Hand) until they would shuffle when 
 resting.
 
@@ -80,7 +80,7 @@ resting.
 Fate Cards (Jokers and Aces) are a chance to control your fate. They permit the player
 to choose when they want a second chance at a key moment.
 
-1. After a long rest, Jokers return to the player's hand, if they're not there already.
+1. After a Full Rest, Jokers return to the player's hand, if they're not there already.
 2. Aces drawn from the deck are played as usual, but remains in the player's hand.
 3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
 redraw. Only one redraw is permitted per check.
@@ -96,64 +96,82 @@ strengths or weaknesses.
 
 1. Attributes are general domains that collectively make up a characters strengths and
 weaknesses: Agility, Strength, Intuition, Intelligence, Conviction, and Vitality.
-2. Skills are specific to an Attribute. Athletics is a Strength skill, but Bluffing is a
-Conviction skill.
+2. Skills are specific to an Attribute. These signify how good a character is at
+performing certain types of actions. Each Skill is tied to an Attribute, meaning
+improving that Attribute also increases the effectiveness of a related Skill.
+Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and
+Skills are listed below.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
 and allow you to add or subtract your draw before reporting the value on a given check.
+ These modifiers are determined at Character Creation and can be improved as you Level Up.
 
-Complete list:
-- AGL Agility
+**Complete Attribute and Skill List:**
+- Agility AGL
    - Finesse (Fight)
    <!-- - Reflex -->
    <!-- - Riding -->
    - Stealth
-- CON Conviction
+- Conviction CON
    - Bluffing
    - Performance
    <!-- - Persuasion -->
-- GUT Intuition
+- Intuition GUT
    - Detection
    <!-- - Faith -->
    - Craft
    <!-- - Naturalism -->
-- INT Intelligence
+- Intelligence INT
    - Knowledge
    - Investigation
    <!-- - Science -->
-- STR Strength
+- Strength STR
    - Athletics
    - Brute (Fight)
    <!-- - Intimidation -->
-- VIT Vitality
+- Vitality VIT
+
+Each skill is generally related to a domain of expertise a character may possess. A GM
+might call for a Check using a specific Skill, but you can always ask if another 
+would be applicable in the situation. The GM decides whether the Skill applies, so get
+creative! 
+
+<!--Add some examples of specific skills being used, with general description of domain --> 
 
 ### Dealers, Bystanders and Companions
+
+The Player Characters (PCs) are typically the heroes of the story. PCs are
+considered *Dealers* and differ from the majority of other characters in the world. The
+GM may control other Dealers who can take the form of powerful allies or adversaries
+the players may encounter along the way. 
 
 1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
    1. Can have Powers and Vulnerabilities.
    2. Have at least 5 health points (HP).
-   3. Can receive and use Fate Cards.
-   4. Have a Primary Suit, and related mechanics.
+   3. Draw from their own deck of cards.
+   4. Can receive and use Fate Cards.
+   5. Have a Primary Suit, and related mechanics.
 2. Bystanders. All other characters. They...
    1. Are weaker than Dealers
    2. Have limited access to Powers
    3. Have 1-3 HP.
-   4. Cannot use either Fate Cards or Primary Suit features.
-3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. See the setting Bestiary for a list of potential Companions.
+   4. Draw from a collective set of cards controlled by the GM. 
+   5. Cannot use either Fate Cards or Primary Suit features.
+3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. A Companion acts on the players turn, draws from the Dealer's deck of cards, and grants unique features in and out of combat. See the setting Bestiary for a list of potential Companions and their unique features.
 
-## During Play
+## Playing the Game
 
-### Out of Combat
+### Exploration and Adventuring
 
-The majority of time spent on adventures takes place outside of combat. This includes
-exploring the world, investigating for clues, and engaging social interactions with
-other players and non-playable characters found throughout the world. The GM will ask
-players to Make a Check by drawing a card and adding the modifier relevant to the
+The players are creating and experiencing the world at the same time.
+Adventures can include exploring the world, investigating for clues, and engaging in social interactions with
+other players and non-playable characters. During an Adventure, the GM will ask
+players to *Make a Check* by drawing a card and adding the modifier relevant to the
 circumstance.
 
 1. **Setting the Scene.** The GM will include a brief descriptions of important events
 and new locations to spark the narrative. Descriptions may hint at events ahead. Players
 are encouraged to ask clarifying questions.
-2. **What do I see?** Character often know more just by having direct access to the
+2. **What do I see?** Characters often know more just by having direct access to the
 world. Players may ask about the world, immediate environment or common knowledge a
 character might have. The GM’s answer may depend on a successful check.
 3. **Talking to the Locals.** The GM speaks on behalf of all other characters and will
@@ -166,13 +184,21 @@ to be rude to one’s fellow players.
 
 When the GM or a Player calls for a Check, they announce who will be making this check
 and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
-check, and (c) the Difficulty Range (DR). The DR is the range around the TC the player
-might hope to draw. Once the DR has been announced, players must make this check. Players may consult with their GM to determine if another Attribute or Skill may be used to make the check instead. A
+check, and (c) the Difficulty Range (DR). 
+
+A Target Card (TC) is like the bullseye on a target you are hoping to hit. The
+Difficulty Range (DR) is the range around the TC the player might hope to draw, like
+the circles around the bullseye. 
+
+Once the DR has been announced, players must make this check. Players may consult with
+their GM to determine if another Attribute or Skill may be used instead. A
 player will draw one or more cards. Immediately after drawing, a player will apply any
 relevant Modifiers before reporting the outcome and whether or not they have successfully fallen within the
 DR. A Modifier is the maximum value a player may add or subtract; this is usually done
-to get closer to the TC. The GM may describe the nature of the outcome or announce the
-degree of success and ask the player to describe the outcome. 
+to get closer to the TC. A Modifier is indicated on the character sheet next to the relevant Skill or Attribute related to the Check. Think of it as a character's ability to 'aim' a check to get closer to the TC. 
+
+The GM may describe the nature of the outcome or announce the
+degree of success and ask the player to describe how their character successfully accomplishes the action. 
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort to match the task at hand as closely as possible. Remembering which card is 5
@@ -206,12 +232,12 @@ Exactly matching the TC in numeric value, is a Major Success. If the drawn card 
 match (i.e., value and suit), it's a Critical Success. If the card drawn is within the
 DR and matches the suit or color (i.e., red/black), it is either a Suited or Color
 Success. If there is a suit or color match outside the DR after the modifier has been
-applied, this is a Suited or Color Fail. Suit and Color will only matter under
-specific circumstances, for certain character Powers, gear types or Enemy defenses.
+applied, this is a Suited or Color Miss. Suit and Color will only matter under
+specific circumstances; for certain character Powers, item types or defenses.
 There is no critical failure in Deck of Adventures.
 
-**For example**, when a Xena attempts to jump across a chasm, the GM reveals a TC of
-the 8 of clubs and a DR of 2, asking for an Athletics check. If the player's Athletics 
+**For example**, when Xena attempts to jump across a chasm, the GM reveals a TC of
+the 8 of Clubs and a DR of 2, asking for an Athletics check. If the player's Athletics 
 modifier is +1, the check is ...
 1. A Critical Success if they draw the 8 of Clubs. They might perfectly make the
  jump, impressing their allies, and catch a glimpse of something important in the 
@@ -225,9 +251,9 @@ within the DR.
 5. A Suited Success for any Successes that match the Suit of the TC. Xena might have a 
 Power that grants benefits to allies on a Suited Success. After crossing, they can 
 improve their ally's chances of crossing. 
-6. A Suited or Color Fail if they draw any Club or Spade, respectively below 5 or above
-J. Xena might have a Power that lets them redraw on a Suited Fail, for example. 
-3. A Fail is any Diamond or Heart draw below 5 or above J.
+6. A Suited or Color Miss if they draw any Club or Spade, respectively below 5 or above
+J. Xena might have a Power that lets them redraw on a Suited Miss, for example. 
+3. A Miss is any Diamond or Heart draw below 5 or above J.
 
 #### Upper and Lower Hand
 
@@ -249,7 +275,7 @@ also cause drawing with Lower Hand, draw 4.
 
 Some checks will be initiated by a character's actions and require others to respond,
 pitting two skills against each other. This might be one character sneaking past
-another(e.g., Stealth vs. Deception), or one character causing a magical effect that
+another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check In these
 cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
 sets the DR; the DR for a Contested Check is 4 minus the Attacker's relevant modifier,
@@ -260,7 +286,8 @@ fail individually.
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
 with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
-Spades with a +1 Modifier to Detection and reports a 7, still outside the DR.
+Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
+successfully convince Jonas of something in this scenario. 
 
 ### In Combat
 
@@ -269,9 +296,9 @@ decides when Combat begins and then a separate set of rules take effect. Combat 
 of Adventures is designed to be fast-paced, while leaving a lot of room for player
 teamwork and creativity. To keep up the pace, players should be sure to study their
 character sheets and know their options ahead of combat, and use others’ turns to make
-their choices.
+their choices. Deck of Adventures is all about teamwork, so communication is encouraged.
 
-GMs may provide a grid map to help players visualize the situation. On a square grid,
+GMs may provide a grid map and other visual cues like character tokens to help players visualize the situation. On a square grid,
 moving diagonally counts as one space unless otherwise ruled by the GM.
 
 #### Taking Turns
@@ -279,8 +306,7 @@ moving diagonally counts as one space unless otherwise ruled by the GM.
 1. Combat order is determined by card draw. At the beginning of combat, all characters 
 draw a Target Card and place it in on the table in view. The values represent the turn 
 order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the same 
-initiative card values can decide who goes first. Without consensus, the player with the
- higher Agility modifier goes first.
+Target Card values as an enemy go first. If two players draw the same Target Card, they can decide who goes first. Without consensus, the player with the higher Agility modifier goes first.
 2. A player may delay their turn in initiative order to intentionally occur before or 
 after another player(s)', but their turn is forfeited if they do not announce their action(s) by
 the end of the round. A GM may skip a player’s turn if they are unprepared and need more
@@ -295,20 +321,22 @@ Each turn represents 6 seconds of game time passing.
 Speed is the total number of spaces a character can move in a turn. This total may be 
 split to occur before, after, and/or between actions.
 2. **Actions** In addition to their movement, players can perform up to two actions each
-turn. The first action is made without penalty. If players choose to make a second
-action, they draw with Lower Hand. 
+turn. 
+
+<!-- MISSING: DESCRIPTION AND TYPE OF ACTIONS TO TAKE (i.e. attack, maneuver, use object) -->
+
 3. **Attacks:** Character combat actions are described on the character sheet
 are associated with the character's Primary Skill Modifier, unless otherwise noted. The
 character draws a card and may add or subtract their modifier before reporting the result. 
 <!-- Broz: I took out Saving/Contested here bc powers now specify -->
-4. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify `MISSING` 
-damage per round of combat. This is a free action and must be taken before the end of
+4. **Toughening Up** - A Dealer may choose to expend one Fate Card to nullify one
+damage per Fate card used. This is a free action and must be taken before the end of
 the Dealer's next turn.
 
 #### Effects
 
 Some effects will impact a character over time.
-1. **Stunned** If a Dealer takes 3 or more damage in 1 round, they make a DR 3 Conviction Check at the start of their turn vs the TC of their last Attacker.
+1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction Check at the start of their turn vs their  own TC.
 If failed, they may
 either move or make one action on their turn, not both. 
 Some creatures can cause stunning effects as part of
@@ -318,15 +346,13 @@ Until they are successful, they may not move.
 3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their
 turn, and their movement speed is halved, rounding up.
 4. **Blinded, Deafened** At the start of their turn, a Dealer makes a Contested 
-Intuition vs. the spell-casting attribute of the creature causing the effect.
+Intuition Check vs. the spell-casting attribute of the creature causing the effect.
 If they fail, they draw Lower Hand (3) for any action requiring the relevant
 sense.
-5. **Outnumbered** Dealers may delay their turn to occur before or after another player.
-For each additional Dealer attacking the same target within 1 space, attacks are made
-with an additional +1 modifier.
-6. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft 
+<!-- Lock: I took out Outnumbered bc this should be a specific power rather than a guaranteed effect - should also be Lower Hand now not +1  -->
+5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft 
 check 
-or a Healing Power (DR 5 vs. the KO Dealer's TC - 1 for each since effect onset). 
+or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn passed since the effect onset). 
 If a Knocked Out Dealer 
 is attacked further, the player begins an Epic Event alone. Each additional hit 
  requires a Conviction Check vs. their attacker's TC that the player may respond to with one or 
@@ -335,24 +361,24 @@ more cards to pass an unknown DR as the Great Void calls out to them. Each addit
 ### Health and Armor
 
 Dealers have 5 health points (HP) plus their level, plus Vitality modifier. 
-Bystanders have up to 3, and the health of
-Companions HP is half level of their Dealer, rounding up. If a character is wounded beyond
-their health pool, they are Knocked Out. Armor Points (AP) are an optional additional pool
+The health of
+Companions HP is half the level of their Dealer, rounding up. If a character is wounded beyond
+their health pool, they are *Knocked Out*. Armor Points (AP) are an additional resource 
 that would be removed first in the event of a physical wound. 
 Two kinds of damage, psychic and poisioning, bypass AP and impact HP directly. 
-Both health and armor points can
-be recovered on a rest. Health is recovered with a Vitality check and Armor is
-recovered with a Knowledge or Craft check.
 
-Armor Class (AC) is how hard you are to hit in general and sets the DR for an attack 
+Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack 
 against you. Without armor, this is 4 minus half of your Agility modifier rounded down.
-If you have physical armor or an armor-like magical effect, this overrides your 
-unarmored AC so long as you have at 
-least one AP. Some armor has strength requirements which, if unmet, will cut
-a character's speed in half. Some armor has special effects, like granting bonuses to 
+If you have physical armor or an armor-like magical effect, this determines your AR depending on the type of armor. Some armor has strength requirements which, if unmet, will cut
+a character's speed in half. Some armor can possess special effects, like granting bonuses to 
 certain checks or requiring hits to color-match.
 
-<!-- `MISSING` Table of Typical Armor -->
+Light, Medium, and Heavy armor has Armor Ranges of 3, 2, and 1, respectively The
+[item description](./06_Items.md) will specifiy the number of Armor Points (AP)
+(e.g., standard shield 1 AP, Heavy Shield 2 AP). Physical shields and magical effects
+can grant AP, either when equipping the item or activating the Power. Unless otherwise
+specified (e.g., poison, psychic damage), damage subtracts from AP first. After AP is
+depleted, additional damage subtracts from HP.
 
 ### Epic Events
 
@@ -380,19 +406,13 @@ GM will lay out the consequences and give the players a chance to react.
 
 ### Rests
 
-A rest is an Epic Event in which players state what they hope to accomplish over the
-rest. Each goal is a separate check the players must collectively pass. Taking a short
-rest permits players to draw 3 cards, and long rest 5.
+Rests are common throughout a session. There are two types of rests. A *Quick Rest* represents a short 30-minute break from the action, where characters may be catching their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where characters get some sleep and recover from a long day.
 
-During a Rest, players might attempt to repair an item (including Armor), read a book,
-recover Health Points (HP), or recover Energy Points. Recovering Health is a Vitality
-Check with DR 4, -1 for each Health Point being recovered. Some Powers are limited-use
-and require recharging associated Energy Points during a rest, at a Primary Skill Check 
-DR 4, minus 1/4 the Points being recovered, rounded down (i.e., to recover up to 3 Points, the DR is 4; up to 7, the DR is 3). A Player who attemps to recover more Health or Energy points, but doesn't draw within the DR can still regain points can still regain a lesser number. A critical success on a rest draw is full recovery.
+During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or EP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or EP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.  
 
-Players take turns attempting their respective checks. Order is either determined by the
-players themselves or the last played initiative order. The GM determines the DR for
-each novel goal.
+After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Energy Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.  
+
+If you run out of cards before you can successfully take a Rest, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
 
 ## Character Creation
 
