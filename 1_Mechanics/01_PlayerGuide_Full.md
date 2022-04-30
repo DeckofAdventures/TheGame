@@ -333,23 +333,21 @@ character draws a card and may add or subtract their modifier before reporting t
 damage per Fate card used. This is a free action and must be taken before the end of
 the Dealer's next turn.
 
-#### Effects
+#### Status Conditions
 
-Some effects will impact a character over time.
+Some Status Conditions will impact a character over time. The duration of each Condition is listed in the Power or effect that causes it.
+
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction Check at the start of their turn vs their  own TC.
 If failed, they may
 either move or make one action on their turn, not both. 
-Some creatures can cause stunning effects as part of
+Some creatures can cause the Stunned Condition as part of
 their attacks.
 2. **Entangled** A Dealer may expend an action to make a DR 3 Strength check.
 Until they are successful, they may not move.
-3. **Knocked Down** Getting up prevents a Dealer from making more than 1 action on their
-turn, and their movement speed is halved, rounding up.
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a Contested 
-Intuition Check vs. the spell-casting attribute of the creature causing the effect.
+3. **Knocked Down** A Dealer must expend an action to get up. Their movement speed is halved, rounding up. When Knocked Down, attackers within 1 space draw with Upper Hand (1) and attackers further than 1 space away draw with Lower Hand (1).
+4. **Blinded, Deafened** At the start of their turn, a Dealer makes a DR 3 Intuition Check vs. their TC.
 If they fail, they draw Lower Hand (3) for any action requiring the relevant
 sense.
-<!-- Lock: I took out Outnumbered bc this should be a specific power rather than a guaranteed effect - should also be Lower Hand now not +1  -->
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft 
 check 
 or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn passed since the effect onset). 
@@ -357,6 +355,9 @@ If a Knocked Out Dealer
 is attacked further, the player begins an Epic Event alone. Each additional hit 
  requires a Conviction Check vs. their attacker's TC that the player may respond to with one or 
 more cards to pass an unknown DR as the Great Void calls out to them. Each additional card played grants +1 modifier.
+6. **Burned** As an action, a Dealer can make a DR 3 Intuition check to stop the burning. On a failure, they take 1 fire damage (bypassing AP).
+7. **Poisoned** At the start of their turn, a Dealer makes a DR 3 Vitality Check to shake off the effects of the poison. On a failure, they take 1 poison damage (bypassing AP). 
+8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower Hand (1). A Dealer makes a DR 3 Strength Check at the end of their turn to attempt to end the freeze.
 
 ### Health and Armor
 
