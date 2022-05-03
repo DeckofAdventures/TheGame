@@ -35,10 +35,7 @@
    - Description: Your weapon training allows you throw your weight around, potentially
      knocking targets off balance. Sweep the legs!
    - Resource: Minor or Major
-   - Mechanic: You perform you Weapon Attack on multiple characters within 1 space.
-     Targets must be next to one another (i.e., no non-targets between other targets).
-     When used as a Major Power, Targets make an Agility check vs. your TC. On a miss,
-     they are Knocked Down.
+   - Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 FP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
    - Prerequisites: 
       + Power: Attack, Weapon
       + Role: Martial or Defender
@@ -66,7 +63,7 @@
 - Name: Attack, Dual-Wield 
    - Description: You are adept at wielding two weapons in combat.
    - Resource: Simple
-   - Mechanic: On your turn, you may make a second attack as an action. When drawing your second attack, draw with the Lower Hand. 
+   - Mechanic: On your turn, you may make a second attack as an action with Lower Hand. 
    - Prerequisites: 
       + Power: Attack, Weapon
    - Tags:
@@ -174,11 +171,7 @@
 - Name: Momentum 
    - Description: By brute strength, force others to move around the battlefield. 
    - Resource: Simple
-   - Mechanic: You attempt to move a character who is within 1 space of you during your
-     movement. If the target is unwilling, this is a Contested Check of your Strength vs. 
-     their Strength to resist or Agility to dodge. If the target is willing or 
-     fails the check, you may place the target within 1 space of you at the end of your
-     movement.
+   - Mechanic: You attempt to move a character who is within 1 space of you during your movement. If unwilling, target makes a Contested Strength or Agility Check to dodge. If  willing or fails, you may place the target within 1 space of end position.
    - Prerequisites: 
       + Role: Defender
       + Skill: Brute > +1
