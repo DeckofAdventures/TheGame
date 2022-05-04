@@ -1,8 +1,13 @@
 # Glossary
 - [AC, Armor Class](01_PlayerGuide_Full.md#Health-and-Armor): How difficult is it to
   wound this thing during a combat Check?
+- [Action Deck](01_PlayerGuide_Full.md#The-Action-Deck) a pool of cards to be drawn from
+   when making in-game decisions. 
 - [AP, Armor Points](01_PlayerGuide_Full.md#Health-and-Armor) a pool of points that reduce when taking a damage. All damage 
   except psychic and poisioning is applied to AP before HP.
+- [Discard Pile](01_PlayerGuide_Full.md#The-Action-Deck) a separate pile of cards that 
+  have already been used. The discard pile is only shuffled back into the Action Deck 
+  during a Rest.
 - [Power](03_CharacterCreation#Choose-Your-Powers): Boons or special abilities granted
   to a Dealer.
 - [Role](03_CharacterCreation#Choose-Your-Role): General descriptor of a character role

@@ -25,7 +25,7 @@
    - Resource: Minor or Major
    - Mechanic: You must move 3 spaces before using this Power. You add 
      +1/2
-     (Minor/Major) to the damage on a successful Weapon Attack. Energy Points are still
+     (Minor/Major) to the damage on a successful Weapon Attack. Fate Points are still
      expended on a miss.
    - Prerequisites: 
       + Power: Attack, Weapon
@@ -44,7 +44,7 @@
    - Description: You're so skillful on the battlefield that you know how to target your
      attacks to focus on the enemy weapon.
    - Resource: Minor
-   - Mechanic: When you spend an Energy Point to disarm, perfom a Weapon Attack. On a 
+   - Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a 
      hit, the enemy must spend one action picking up that weapon before using it again.
      This does not apply to Mystic Attacks or additional weapons the enemy may wield.
    - Prerequisites: 
@@ -394,8 +394,8 @@
      twice), select two of the following effects.
       - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a
         single action - even if you already went that round
-      - Ace of Diamonds: As an action, you recover 3 Energy Points OR you and up to three allies 
-        each recover 1 Energy Point
+      - Ace of Diamonds: As an action, you recover 3 Fate Points OR you and up to three allies 
+        each recover 1 Fate Point
       - Ace of Hearts: As an action, you can heal 2 Health Points for yourself or an
         ally you can see within 5 squares
       - Ace of Spades: As an action, you can strike an enemy with an automatic hit with

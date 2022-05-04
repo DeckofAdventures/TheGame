@@ -62,8 +62,8 @@ prerequisite levels or relevant Attribute/Skill Modifiers.
 
 Simple, Minor and Major Powers cost 1, 1, and 2 XP respectively. A Simple Power may be
 passive (always in effect) or can be used an unlimited number of times. A Minor or
-Major Power is tiresome and requires Energy Points to use. Your character gains +1
-Energy Points at a rate of +1 XP spent on Minor and Major Powers. A character with a
+Major Power is tiresome and requires Fate Points to use. Your character gains +1
+Fate Points at a rate of +1 XP spent on Minor and Major Powers. A character with a
 Major version of a Power may choose to use the Minor Power equivalent, but a character
 with a Minor Power does not have access to the Major effect. On level-up, a player may
 exchange 1 XP to convert a Minor Power to the Major equivalent.

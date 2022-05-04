@@ -81,7 +81,7 @@
      bodily needs of the rest, but may instead be called to a prescribed purpose.
    - Resource: Major
    - Mechanic: You do not need to breathe, eat or sleep (but still rest to recover
-     Health/Energy Points). Choose one of the following when you
+     Health/Fate Points). Choose one of the following when you
      take this Vulnerability:
       + Your creator or society at large consider you to have a function that you do not
         wish to pursue, such as a dangerous and laborious profession.

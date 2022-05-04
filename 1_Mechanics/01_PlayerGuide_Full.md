@@ -22,7 +22,7 @@
    - In Combat
       - Taking Turns
       - In Combat Actions
-      - Effects
+      - Status Conditions
    - Health and Armor
    - Epic Events
    - Rests
@@ -67,8 +67,7 @@ across 4 suits, as well as Jokers. Each player should have their own Deck.
 
 1. Actions with unknown outcomes will require a player to make a Check, which means 
 drawing from their respective decks to help determine the outcome.
-2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players and the 
-GM. All other cards go directly into a discard pile. Hold on to these Fate Cards, even 
+2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players and the GM. All other cards go directly into a Discard Pile. Hold on to these Fate Cards, even 
 when shuffling the deck.
 3. Players will use their deck to do most anything; it represents their character's 
 stamina until they complete a Rest. When the Action Deck is empty and a player has to shuffle 
@@ -393,7 +392,7 @@ During an epic event...
 2. The DM will call for a series of Checks, revealing TCs and corresponding Attributes or
 skills. Any subset of players may volunteer for any of these Checks.
 3. During an individual check, players play 1 card and may sacrifice others. Each card 
-sacrificed adds +1 Modifier.
+discarded adds +1 Modifier.
 4. Fate Cards card mechanics remain the same: played Ks and As return to the player’s
 hand. If played as Fate Cards, they result in a number of discards and redraws equal to
 the number Fate Cards played.
@@ -409,9 +408,9 @@ GM will lay out the consequences and give the players a chance to react.
 
 Rests are common throughout a session. There are two types of rests. A *Quick Rest* represents a short 30-minute break from the action, where characters may be catching their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or EP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or EP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.  
+During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or FP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or FP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.  
 
-After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Energy Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.  
+After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Fate Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.  
 
 If you run out of cards before you can successfully take a Rest, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
 
