@@ -144,17 +144,17 @@ GM may control other Dealers who can take the form of powerful allies or adversa
 the players may encounter along the way. 
 
 1. Dealers. All player characters, and some in-game characters that are controlled by the Game Master. They...
-   1. Can have Powers and Vulnerabilities.
-   2. Have at least 5 health points (HP).
-   3. Draw from their own deck of cards.
-   4. Can receive and use Fate Cards.
-   5. Have a Primary Suit, and related mechanics.
+   - Can have Powers and Vulnerabilities.
+   - Have at least 5 health points (HP).
+   - Draw from their own deck of cards.
+   - Can receive and use Fate Cards.
+   - Have a Primary Suit, and related mechanics.
 2. Bystanders. All other characters. They...
-   1. Are weaker than Dealers
-   2. Have limited access to Powers
-   3. Have 1-3 HP.
-   4. Draw from a collective set of cards controlled by the GM. 
-   5. Cannot use either Fate Cards or Primary Suit features.
+   - Are weaker than Dealers
+   - Have limited access to Powers
+   - Have 1-3 HP.
+   - Draw from a collective set of cards controlled by the GM. 
+   - Cannot use either Fate Cards or Primary Suit features.
 3. Companions are creatures that can be associated with a Dealer, like a pet or other-worldly advisor. A Companion acts on the players turn, draws from the Dealer's deck of cards, and grants unique features in and out of combat. See the setting Bestiary for a list of potential Companions and their unique features.
 
 ## Playing the Game
@@ -297,8 +297,13 @@ teamwork and creativity. To keep up the pace, players should be sure to study th
 character sheets and know their options ahead of combat, and use others’ turns to make
 their choices. Deck of Adventures is all about teamwork, so communication is encouraged.
 
-GMs may provide a grid map and other visual cues like character tokens to help players visualize the situation. On a square grid,
-moving diagonally counts as one space unless otherwise ruled by the GM.
+GMs may provide a grid map and other visual cues like character tokens to help players
+visualize the situation. On a square grid, moving diagonally counts as one space unless
+otherwise ruled by the GM.
+
+In combat, a Critical Success has an additional effect. Damaging or Healing actions deal
+or return 1 additional damage to the target. Other actions will grant benefits at the
+GM's discretion.
 
 #### Taking Turns
 
@@ -354,8 +359,8 @@ If a Knocked Out Dealer
 is attacked further, the player begins an Epic Event alone. Each additional hit 
  requires a Conviction Check vs. their attacker's TC that the player may respond to with one or 
 more cards to pass an unknown DR as the Great Void calls out to them. Each additional card played grants +1 modifier.
-6. **Burned** As an action, a Dealer can make a DR 3 Intuition check to stop the burning. On a failure, they take 1 fire damage (bypassing AP).
-7. **Poisoned** At the start of their turn, a Dealer makes a DR 3 Vitality Check to shake off the effects of the poison. On a failure, they take 1 poison damage (bypassing AP). 
+6. **Burned** As an action, a Dealer can make a DR 3 Intuition check to stop the burning. On a failure, they take 1 damage bypassing AP.
+7. **Poisoned** At the start of their turn, a Dealer makes a DR 3 Vitality Check to shake off the effects of the poison. On a failure, they take 1 damage bypassing AP. 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower Hand (1). A Dealer makes a DR 3 Strength Check at the end of their turn to attempt to end the freeze.
 
 ### Health and Armor
@@ -365,7 +370,6 @@ The health of
 Companions HP is half the level of their Dealer, rounding up. If a character is wounded beyond
 their health pool, they are *Knocked Out*. Armor Points (AP) are an additional resource 
 that would be removed first in the event of a physical wound. 
-Two kinds of damage, psychic and poisioning, bypass AP and impact HP directly. 
 
 Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack 
 against you. Without armor, this is 4 minus half of your Agility modifier rounded down.
@@ -373,12 +377,21 @@ If you have physical armor or an armor-like magical effect, this determines your
 a character's speed in half. Some armor can possess special effects, like granting bonuses to 
 certain checks or requiring hits to color-match.
 
-Light, Medium, and Heavy armor has Armor Ranges of 3, 2, and 1, respectively The
-[item description](./06_Items.md) will specifiy the number of Armor Points (AP)
-(e.g., standard shield 1 AP, Heavy Shield 2 AP). Physical shields and magical effects
+Physical shields and magical effects
 can grant AP, either when equipping the item or activating the Power. Unless otherwise
-specified (e.g., poison, psychic damage), damage subtracts from AP first. After AP is
-depleted, additional damage subtracts from HP.
+specified, damage subtracts from AP first. After AP is
+depleted, additional damage subtracts from HP. Unless otherwise noted, no two pieces of 
+armor may be worn at the same time.
+
+**Armor Table**
+| Type      | AR | AP | Prerequisite  |
+|-----------|----|----|---------------|
+| Basic     | 4  | 1  |               |
+| Light     | 4  | 2  |               |
+| Medium    | 3  | 1  |               |
+| Fortified | 3  | 1  | Strength ≥ 0  |
+| Heavy     | 3  | 2  | Strength ≥ 1  |
+| Massive   | 2  | 2  | Strength ≥ 2  |
 
 ### Epic Events
 

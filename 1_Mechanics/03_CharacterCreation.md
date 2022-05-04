@@ -74,6 +74,7 @@ Unless otherwise noted, Powers take one action to perform and use a Dealer's Pri
 Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated
 shield) may only be used one at a time. Using a second Power will nullify the effects
 of the first. Powers described as Passive take no action and are always in effect.
+Unless otherwise noted, Powers deal 1 damage.
 
 Power types:
 - **Passive**: always in effect.
