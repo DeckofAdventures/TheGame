@@ -408,9 +408,9 @@ GM will lay out the consequences and give the players a chance to react.
 
 Rests are common throughout a session. There are two types of rests. A *Quick Rest* represents a short 30-minute break from the action, where characters may be catching their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or FP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or FP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.  
+During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards* determined by their level. Each *Rest Card* drawn regains 1 HP or FP. If the card drawn is the same as the character's Primary Suit, regain an additional 1 HP or FP. Shuffle your discard pile back into your deck after completing a *Quick Rest*.
 
-After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Fate Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.  
+After completing a *Full Rest*, shuffle your discard pile back into your deck, along with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were used. You also replenish all expended Fate Points and your Health Points return to their maximum. Rest Cards return to their full value after a *Full Rest*.
 
 If you run out of cards before you can successfully take a Rest, you may shuffle and always draw with the Lower Hand when making a check. This signifies your character running out of Stamina during a long day. 
 

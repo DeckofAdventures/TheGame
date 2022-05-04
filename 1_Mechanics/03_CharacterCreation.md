@@ -46,54 +46,84 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
    - Primary Skill: Knowledge
    - Suggested Suit: Diamonds ♦️ / Conjuring ⚡️
 
-## Using Experience Points
+## Using Experience Points (XP)
 
-Both at character creation (4) and at the GM's discretion for each level up (3), you are
+Both at character creation (6) and at the GM's discretion for each level up (3), you are
 awarded Experience Points. These can be spent to gain additional Powers, boost an
 Attribute, a Skill, add to the Powers you know, or remove a Vulnerability. Total XP is
-equal to 1+ (level * 3).
+equal to 6 + (level * 3).
 
 ### Choose Your Powers
 
-Powers are your way of amplifying your character both on and off the battlefield. These
-are additional perks and benefits to wielding certain types of weapons and magic and
-have both mechanical and roleplay implications. Some Powers require a specific Role,
+Powers are your way of amplifying your character both on and off the battlefield, covering simple abilities like swinging a weapon to complicated magical feats. 
+Some Powers require a specific Role,
 prerequisite levels or relevant Attribute/Skill Modifiers.
 
-Simple, Minor and Major Powers cost 1, 1, and 2 XP respectively. A Simple Power may be
-passive (always in effect) or can be used an unlimited number of times. A Minor or
-Major Power is tiresome and requires Fate Points to use. Your character gains +1
-Fate Points at a rate of +1 XP spent on Minor and Major Powers. A character with a
-Major version of a Power may choose to use the Minor Power equivalent, but a character
-with a Minor Power does not have access to the Major effect. On level-up, a player may
-exchange 1 XP to convert a Minor Power to the Major equivalent.
+Each Power has an associated XP cost. Passive mechanics, or Minor magical tricks
+typically cost 1 XP. Big, character-altering feats will cost more. Major Powers are
+tiresome and require a limited resource to use: Fate Points(FP). Each Power will list
+the range of FP that can be spent (e.g., 1 FP to target one enemy vs. 2 FP to target
+multiple). The more FP spent, the bigger the effect. Numbers separated by `/` in the
+mechanics description indicate different effects depending on FP spent.
 
-Unless otherwise noted, Powers take one action to perform and add a Dealer's Primary
+Adding a Power with an FP cost raises the character's maximum FP by the largest number
+of FP listed for that Power. FP are replenished on a [Rest]
+(01_PlayerGuide_Full.md#Rests).
+
+Unless otherwise noted, Powers take one action to perform and use a Dealer's Primary
 Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated
 shield) may only be used one at a time. Using a second Power will nullify the effects
-of the first. Powers described as passive take no action and are always in effect.
+of the first. Powers described as Passive take no action and are always in effect.
+
+Power types:
+- **Passive**: always in effect.
+- **Minor**
+   + One action.
+   + No cost to use.
+- **Major**: 
+   + One action.
+   + Fate Point (FP) cost to use. 
+   + Adds maximum FP value to character's FP maximum.
 
 ### Choose Your Vulnerabilities
 
 People are not perfect, and many have Vulnerabilities as a result of their relationship
-with the world. At character creation you can choose up to three Vulnerabilities, which
+with the world. At character creation you can choose up to four Vulnerabilities, which
 add mechanical and roleplay implications, like being afraid of fire or unable to swim.
 Adding Vulnerabilities to your character will grant you additional Experience Points
-during character creation. Each Vulnerability added grants 1 or 2 Experience Points,
+during character creation. Each Vulnerability added grants 1 (Minor) or 2 (Major) Experience Points,
 but you can only gain 4 total Experience Points during character creation. A GM may
 overrule this limit if, for example, the events of the story result in a character
 gaining an additional Vulnerability.
 
+Vulnerability types:
+- **Minor**: Adds 1 XP
+- **Major**: Adds 2 XP
+
+Some Vulnerabilities are either Minor or Major, depending on the effects you choose.
+
 ### Changing Attributes and Skills
 
-All Attributes and Skills start at a 0 Modifier. 
-You can adjust your Skills and Attributes using your Experience
-Points, which will help define how capable your character for relevant actions. On
-initial character creation, you can spend or earn points by increasing or decreasing
-Attributes and Skill Modifiers up to -2 or +3. This upper limit increases
-to +4 by level 5 and +5 at level 10. 
-Once modifiers are set at character creation, a
-player may only add newly awarded Experience points.
+All Attributes and Skills start at a 0 Modifier. You can adjust your Skills and
+Attributes using your Experience Points (XP), which will help define how capable your
+character for relevant actions. On initial character creation, you can spend or earn
+points by increasing or decreasing Attributes and Skill Modifiers up to -2 or +2. This
+upper limit increases as you level up (see table below). Once modifiers are set at
+character creation, a player may only add newly awarded Experience points.
+
+**Mod Cap by Level**
+| Level | SkillCap |
+|:-----:|:--------:|
+| 1     | 2        |
+| 2     | 2        |
+| 3     | 3        |
+| 4     | 3        |
+| 5     | 3        |
+| 6     | 4        |
+| 7     | 5        |
+| 8     | 5        |
+| 9     | 5        |
+| 10    | 6        |
 
 The lower limit for Modifiers is -2. If -1, any Check made with that modifier must be 
 be a Color Match for success. If -2, any Check made with that modifier must be Suit 
@@ -104,4 +134,15 @@ Modifier by +1 initially costs +1 Experience Point. In both cases, raising
 modifiers becomes more costly as you add. The table below shows the cost in
 Experience Points and the resulting modifier for Attributes and Skills.
 
-`MISSING TABLE`
+**XP Cost for Attributes (left) and Skills (Right)**
+| XP Cost | Atrib<br />Mod | XP Cost | Skill<br />Mod |
+|  :---:  |    :---:       |  :---:  |    :---:       |
+|     -4  | -2             |     -2  | -2             |
+|     -2  | -1             |     -1  | -1             |
+|     0   | 0              |     0   | 0              |
+|     2   | 1              |     1   | 1              |
+|     4   | 2              |     2   | 2              |
+|     8   | 3              |     4   | 3              |
+|     12  | 4              |     6   | 4              |
+|     18  | 5              |     9   | 5              |
+|     24  | 6              |     12  | 6              |
