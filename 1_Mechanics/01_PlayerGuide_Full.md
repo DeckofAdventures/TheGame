@@ -303,7 +303,7 @@ pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
 cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
-sets the DR; the DR for a Contested Check is 4 minus the Attacker's relevant modifier,
+sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant modifier,
 to a minimum of 0. The character(s) responding are the Target(s). Rules that describe a 
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
 fail individually.
