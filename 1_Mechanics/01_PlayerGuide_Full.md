@@ -256,27 +256,36 @@ no critical failure in Deck of Adventures.
 **For example**, when Xena attempts to jump across a chasm, the GM reveals a TC of
 the 8 of Clubs and a DR of 2, asking for an Athletics check. If the player's Athletics 
 modifier is +1, the check is ...
+
 1. A Critical Success if they draw the 8 of Clubs. They might perfectly make the
  jump, impressing their allies, and catch a glimpse of something important in the 
  distance.
+
 2. A Major Success if they draw any 8. They might make the jump gracefully enough to 
 impress their allies without any other perks.
+
 3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1, 
 this is 5, 6, 7, 9, 10 or J. If Xena draws a J, she may subtract 1 to report a 10, 
 within the DR.
+
 4. A Color Success for any Successes that match the color of the TC.
+
 5. A Suited Success for any Successes that match the Suit of the TC. Xena might have a 
 Power that grants benefits to allies on a Suited Success. After crossing, they can 
 improve their ally's chances of crossing. 
+
 6. A Suited or Color Miss if they draw any Club or Spade, respectively below 5 or above
 J. Xena might have a Power that lets them redraw on a Suited Miss, for example. 
-3. A Miss is any Diamond or Heart draw below 5 or above J.
+
+7. A Miss is any Diamond or Heart draw below 5 or above J.
 
 #### Upper and Lower Hand
 
 Sometimes the odds will be in your favor; sometimes they will be against you. 
+
 1. Having the Upper Hand (N) means you draw N additional cards and select the card 
 closest to the TC after applying all relevant mechanics. 
+
 2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
 is furthest from the TC after applying all relevant mechanics. 
 
@@ -292,7 +301,7 @@ another effect would also cause drawing with Lower Hand, draw 4.
 Some checks will be initiated by a character's actions and require others to respond,
 pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
-another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check In these
+another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
 cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
 sets the DR; the DR for a Contested Check is 4 minus the Attacker's relevant modifier,
 to a minimum of 0. The character(s) responding are the Target(s). Rules that describe a 

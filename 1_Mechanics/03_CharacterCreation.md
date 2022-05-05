@@ -55,9 +55,10 @@ equal to 6 + (level * 3).
 
 ### Choose Your Powers
 
-Powers are your way of amplifying your character both on and off the battlefield, covering simple abilities like swinging a weapon to complicated magical feats. 
-Some Powers require a specific Role,
-prerequisite levels or relevant Attribute/Skill Modifiers.
+Powers are your way of amplifying your character both on and off the battlefield,
+covering simple abilities like swinging a weapon to complicated magical feats. Some
+Powers require a specific Role, prerequisite levels or relevant Attribute/Skill
+Modifiers.
 
 Each Power has an associated XP cost. Passive mechanics, or Minor magical tricks
 typically cost 1 XP. Big, character-altering feats will cost more. Major Powers are
@@ -92,10 +93,10 @@ People are not perfect, and many have Vulnerabilities as a result of their relat
 with the world. At character creation you can choose up to four Vulnerabilities, which
 add mechanical and roleplay implications, like being afraid of fire or unable to swim.
 Adding Vulnerabilities to your character will grant you additional Experience Points
-during character creation. Each Vulnerability added grants 1 (Minor) or 2 (Major) Experience Points,
-but you can only gain 4 total Experience Points during character creation. A GM may
-overrule this limit if, for example, the events of the story result in a character
-gaining an additional Vulnerability.
+during character creation. Each Vulnerability added grants 1 (Minor) or 2
+(Major) Experience Points, but you can only gain 4 total Experience Points during
+character creation. A GM may overrule this limit if, for example, the events of the
+story result in a character gaining an additional Vulnerability.
 
 Vulnerability types:
 - **Minor**: Adds 1 XP

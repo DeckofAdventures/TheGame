@@ -29,9 +29,14 @@ outcome via...
      subtract from the card you draw to get closer to the TC. This helps you aim your
      Check closer to the bullseye.
    - Under some circumstances, you'll be asked to draw with the Upper Hand or the Lower Hand.
-      - With the Upper Hand, you can draw an additional card(s) and use the more favorable value to increase your odds.
-      - With the Lower Hand, you must draw an additional card(s) and use the less favorable value, decreasing your odds.
-      - A single instance of Upper Hand or Lower Hand requires you to draw just 1 additional card. However, these effects can compound, requiring you to draw 2 or more cards for the applicable check. Upper and Lower Hand can also cancel each other out.
+      - With the Upper Hand, you can draw an additional card(s) and use the more
+        favorable value to increase your odds.
+      - With the Lower Hand, you must draw an additional card(s) and use the less
+        favorable value, decreasing your odds.
+      - A single instance of Upper Hand or Lower Hand requires you to draw just 1
+        additional card. However, these effects can compound, requiring you to draw 2
+        or more cards for the applicable check. Upper and Lower Hand can also cancel
+        each other out.
    - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
      succeed on a Check. If you have a +1 Mod, you can draw a 2 or 6 and still report a
      successful 3 or 5 draw.
