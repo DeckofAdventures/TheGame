@@ -7,9 +7,6 @@ assignees: ''
 
 ---
 
-### Mechanics or Lore?
-
-
 ### Description
 Please desribe what isn't clear, and make recommendations as to where this information should be provided in the future.
 

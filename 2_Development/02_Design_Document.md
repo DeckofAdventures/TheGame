@@ -7,7 +7,7 @@
   versions that will apply to different settings. To identify flavor text, use quotes
   within the parent formatting scheme. For example:
    - The Defender Archetype is ...
-   - > Defender of Pelagia are renowned for their mighty shields ...
+   - > Defenders of Pelagia are renowned for their mighty shields ...
 - Specialized terms are listed in the [Glossary](../1_Mechanics/99_Glossary.md) and will
   be capitalized across all documents.
 - Terms that are for flavor, not mechanics, are *Italicized*
@@ -34,3 +34,15 @@ this end should be revisited. Accessible and flexible doesn't, however, mean spa
 first-time player can pick up a pre-made character in minutes, but then optionally
 spend much longer planning out how to make a bespoke character that speaks to them,
 with creativity fueled by the wide array of choices.
+
+## Design Axioms
+
+Though itterative design, developers have landed on the following as touchstones.
+
+1. **Pip value is contextual.** The number on the card has no inherent value. There's
+nothing good or bad about a `2` or a `King`, a `Spade` or a `Club`. The randomized
+context determines how good the outcome is.
+
+2. **FP = HP = AP.** During rests, players decide which of these reources to replenish.
+Characters may have different maximum, but expending one should feel roughly equivalent
+to the others.
