@@ -420,7 +420,7 @@ wounded beyond their health pool, they are *Knocked Out*. Armor Points (AP) are 
 additional resource that would be removed first in the event of a physical wound. 
 
 Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack
-against you. Without armor, this is 4 minus half of your Agility modifier rounded down.
+against you. Without armor, this is 3 minus half of your Agility modifier rounded down.
 If you have physical armor or an armor-like magical effect, this determines your AR
 depending on the type of armor. Some armor has strength requirements which, if unmet,
 will cut a character's speed in half. Some armor can possess special effects, like
@@ -435,13 +435,13 @@ armor may be worn at the same time.
 **Armor Table**
 | Type      | AR | AP | Prerequisite  |
 |-----------|----|----|---------------|
-| Basic     | 4  | 1  |               |
-| Light     | 4  | 2  |               |
-| Medium    | 3  | 0  |               |
-| Fortified | 3  | 1  | Strength ≥ 0  |
-| Heavy     | 3  | 2  | Strength ≥ 1  |
-| Massive   | 2  | 2  | Strength ≥ 2  |
-| Gleaming  | 2  | 0  | Finesse ≥ 3   |
+| Basic     | 3  | 0  |               |
+| Light     | 3  | 0  |               |
+| Medium    | 2  | 0  |               |
+| Fortified | 2  | 1  | Strength ≥ 0  |
+| Heavy     | 1  | 2  | Strength ≥ 1  |
+| Massive   | 1  | 3  | Strength ≥ 2  |
+| Gleaming  | 1  | 2  | Agility ≥ 3   |
 
 ### Epic Events
 

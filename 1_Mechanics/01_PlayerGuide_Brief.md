@@ -43,7 +43,7 @@ outcome via...
 
 3. You start with 2 Jokers in your hand as *Fate Cards*. Any Aces drawn during play are
 also reserved as Fate Cards. At any time, you can discard a Fate Card to redraw and
-take the new value, or you can discard a Fate Card during combat to nullify one
+take the new value, you can discard a Fate Card to regenerate one *Fate Point*, or you can discard a Fate Card during combat to nullify one
 damage.
 
 4. You will have a Character Sheet with all the information about your character. This
