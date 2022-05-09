@@ -1,8 +1,13 @@
 # Glossary
 - [AC, Armor Class](01_PlayerGuide_Full.md#Health-and-Armor): How difficult is it to
   wound this thing during a combat Check?
+- [Action Deck](01_PlayerGuide_Full.md#The-Action-Deck) a pool of cards to be drawn from
+   when making in-game decisions. 
 - [AP, Armor Points](01_PlayerGuide_Full.md#Health-and-Armor) a pool of points that reduce when taking a damage. All damage 
   except psychic and poisioning is applied to AP before HP.
+- [Discard Pile](01_PlayerGuide_Full.md#The-Action-Deck) a separate pile of cards that 
+  have already been used. The discard pile is only shuffled back into the Action Deck 
+  during a Rest.
 - [Power](03_CharacterCreation#Choose-Your-Powers): Boons or special abilities granted
   to a Dealer.
 - [Role](03_CharacterCreation#Choose-Your-Role): General descriptor of a character role
@@ -25,7 +30,8 @@
 - [Epic Event](01_PlayerGuide_Full.md#Epic-Events): Draw multiple cards to pass a series
   of checks usually resulting in collective success or failure.
 - [Fate Cards](01_PlayerGuide_Full.md#Fate-Cards): King/Aces cards held for redraws.
-- [GM, Game Master](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): narrator
+- [FP, Fate Points](03_CharacterCreation#Choose-Your-Powers): Limited resource used when 
+- [GM, Game Master](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Narrator
   and curator of the story.
 - [Hand, Upper/Lower](01_PlayerGuide_Full#Upper-and-Lower-Hand): Draw N cards and report
   the result closest (Upper), or furthest (Lower) from the TC. If unspecified, draw 2.
@@ -34,12 +40,15 @@
 - [KO, Knocked Out](01_PlayerGuide_Full.md#Effects) Effect applied to a Dealer with no HP. Unconscious and on the 
   brink of death.
 - [Modifier](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): The number a player may add or subtract from a draw before reporting
-  the value on a check..
+  the value on a check.
+- [Passive](03_CharacterCreation#Choose-Your-Powers): A descriptor for Powers that are always in effect.
 - [Player](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Active participant
   in the story.
+- [Rest](01_PlayerGuide_Full.md#Rests): Break for the character during which the Player shuffles cards and replenishes resources.
 - [Skill](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): Subskill within
   Attribute, each with associated Modifier.
 - [TC, Target Card](01_PlayerGuide_Full.md#Making-a-Check): The card that sets the mid-point of the range for a Check.
 - The House: Audience observing the game, neither player nor GM.
 - [Vulnerability](03_CharacterCreation#Choose-Your-Vulnerabilities): Weaknesses that
   inhibit a Dealer in some way, either combat- or roleplay-based.
+- [XP, Experience Points](03_CharacterCreation#Using-Experience-Points-(XP)): Resource for building a character awarded on leveling up.

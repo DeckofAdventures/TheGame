@@ -8,9 +8,7 @@ assignees: ''
 ---
 
 ## Feature Request
-In this context, a feature request is something you'd like to see added to either the mechanics or the lore of Deck of Adventures.
-
-### Mechanics or Lore?
+In this context, a feature request is something you'd like to see added to Deck of Adventures. Maybe a suggestion for a new Power, or way to use Primary Suit.
 
 ### Current gap
 A clear and concise description the rules that are underspecified, or the lore that could be extended. Why should this gap be prioritized?

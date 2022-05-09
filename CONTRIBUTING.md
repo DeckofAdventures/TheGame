@@ -2,21 +2,25 @@
 
 ## Summary
 
-Deck of Adventures admin welcome input from the community, whether to help us make the
-wording of rules more precise or to expand upon the world of Pelagia. Admin ask that
+Deck of Adventures Admin welcome input from the community, whether to help us make the
+wording of rules more precise or to expand upon the options provided. Admin ask that
 you review the licenses applicable to any material submitted and respect the Creative
 Commons BY-NC-SA nature of this community. When contributing, please provide moderators
-with your preferred name and a URL to like to your other work. You can make a
+with your preferred name, pronouns, and a URL to like to your other work. You can make a
 contribution by opening a GitHub issue. For more major contributions, see our
 [design document](./3_Development/02_Design_Document.md) for design principles, and
-[community document](./3_Development/01_Community.md) for GitHub pull request
-permissions.
+[community document](./3_Development/01_Community.md) for information about GitHub pull 
+request permissions.
 
 ## GitHub Issues
 
-This repository has the following issue templates: 1. [Bug reports](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=bug_report.md&title=)
-for inconsistencies, either in mechanics or lore. 2. [Minor fixes](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
-Find a typo or grammatical error? Let us know. 3. [Question](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
+This repository has the following issue templates: 
+
+1. [Bug reports](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=bug_report.md&title=)
+for inconsistencies, either in mechanics or lore. 
+2. [Minor fixes](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
+Find a typo or grammatical error? Let us know. 
+3. [Question](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
 to start dialogs about the design process or anything that's not clear. 4.
 [Feature requests](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 What should the team prioritize next? Feel free to submit your own ideas here, as a
@@ -32,9 +36,7 @@ admin users (see [Community Roles](./3_Development/01_Community.md)) Deck of Adv
 documentation (hereafter ‘licensees’).
 
 - [Read the license summary](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- [Read the full legal code of the license] (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
-
-
+- [Read the full legal code of the license](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 
 ## Contributing to the Deck of Adventures
 
@@ -81,10 +83,10 @@ requirements to the work beyond what is described on this page. When re-using te
 has been posted subject to a Creative Commons license, you must provide attribution to
 the authors through direct listing of author(s) preferred citations. For example:
 
-> This article uses material from the “Standard Crystal Hilt” article on the Gear and
-  Items page at Deck of Adventures and is licensed under the Creative Commons
-  Attribution-NonCommercial-ShareAlike License. Quoted content should not be assumed to
-  be released under this license if this is not explicitly stated.
+> This article uses material from the “Character Creation" page at Deck of Adventures
+  and is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike
+  License. Quoted content should not be assumed to be released under this license if
+  this is not explicitly stated.
 
 ## Translations
 
