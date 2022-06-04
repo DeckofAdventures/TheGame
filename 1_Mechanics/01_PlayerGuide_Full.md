@@ -357,7 +357,7 @@ within reason, as permitted by the GM.
 Speed is the total number of spaces a character can move in a turn. This total may be 
 split to occur before, after, and/or between actions.
 
-2. **Actions** The list below are possible Minor/Major actions, but a GM may permit others. If an action specifies a skill, this is requires a check. Unless otherwise specified, a Power is a Major action.
+2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit others. If an action specifies a skill, this requires a check.
 
    1. **Free**
       - *Communication* that does not require a check.
@@ -383,15 +383,14 @@ is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction
 Check at the start of their turn vs their  own TC. If failed, they may either move or
-make one action on their turn, not both. Some creatures can cause the Stunned Condition
+make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend an action to make a DR 3 Strength check. Until they
-are successful, they may not move.
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until they
+are successful, they may not move and any Agility Checks are made with Lower Hand.
 
-3. **Knocked Down** A Dealer must expend an action to get up. Their movement speed is
-halved, rounding up. When Knocked Down, attackers within 1 space draw with Upper Hand
-(1) and attackers further than 1 space away draw with Lower Hand (1).
+3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed is
+halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space away draw with Lower Hand.
 
 4. **Blinded, Deafened** At the start of their turn, a Dealer makes a DR 3 Intuition
 Check vs. their TC. If they fail, they draw Lower Hand (3) for any action requiring the
@@ -405,14 +404,14 @@ attacker's TC that the player may respond to with one or more cards to pass an u
 DR as the Great Void calls out to them. Each additional card played grants +1
 modifier.
 
-6. **Burned** As an action, a Dealer can make a DR 3 Intuition check to stop the
+6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
-7. **Poisoned** At the start of their turn, a Dealer makes a DR 3 Vitality Check to 
+7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Vitality Check to 
 shake off the effects of the poison. On a failure, they take 1 damage bypassing AP. 
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
-Hand (1). A Dealer makes a DR 3 Strength Check at the end of their turn to attempt to
+Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to attempt to
 end the freeze.
 
 ### Health and Armor
@@ -477,7 +476,7 @@ GM will lay out the consequences and give the players a chance to react.
 ### Rests
 
 Rests are common throughout a session. There are two types of rests. A Quick Rest
-represents a short 30-minute break from the action, where characters may be catching
+represents a short 30-minute break, where characters may be catching
 their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
@@ -513,7 +512,7 @@ Upper/Lower Hand +1 is granted described below.
 
 - Hearts ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
   within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper Hand
-  (2/N) on their next action.
+  (N/2) on their next draw.
 
 - Spades ♠️ : Offense Dealers deploy all sorts of mechanisms for drawing the eye of
   enemies away from their allies. They can *scrap* N cards and cause an enemy to make
