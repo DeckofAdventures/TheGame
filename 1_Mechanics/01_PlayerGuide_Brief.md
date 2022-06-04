@@ -72,14 +72,14 @@ would do. Creativity and thinking outside the box (i.e., exact rules) is encoura
 8. Your character may need to rest to recharge Fate Points or heal Health Points.
 A *Quick Rest* takes about 30 minutes of in-game time. A *Full Rest* is a full 8 hours
 of in-game time.
-  - On a *Quick Rest*, each player can draw a number of *Rest Cards* determined by their
-    level. Each Rest Card drawn regains 1 Health Point or Fate Point. If the card drawn
-    is the same as the character's Primary Suit, regain an additional 1 Health Point or
-    Fate Point. Reference the Full Guide for more details on taking a *Quick Rest*.
-  - On a *Full Rest* you replenish all expended Fate Points and your Health Points
-    return to their maximum. 
+  - On a *Quick Rest*, each player can draw a number of *Rest Cards*. 
+    Each Rest Card can regain 1 Health or Fate Point, or be used to regain Armor Points.
+     If the card drawn
+    is the same as the character's Primary Suit, there are additional benefits.
+    Reference the Full Guide for more details on taking a *Quick Rest*.
+  - On a *Full Rest* you replenish all expended Health, Fate, and Armor. 
    - If you run out of cards before you can successfully take a Rest, you may
-     shuffle, but must always draw with one (1+) Lower Hand until your next Rest.
+     shuffle, but must always draw with one Lower Hand (1+) until your next Rest.
      This signifies your character running out of Stamina during a long day.
    - After completing a Rest, shuffle your discard pile back into your deck. On a *Full
      Rest*, you may return both Jokers from the discard pile to your hand as Fate Cards
@@ -88,8 +88,7 @@ of in-game time.
 
 9. If your group turns to violence to solve issues, the DM will announce the beginning 
 of Combat, where each involved character will draw a Target Card to determine turn order.
-   - On your turn, you can move and take up to 2 actions, in any order. Each Power can
-     only be used once per turn, unless otherwise specified.
+   - On your turn, you can move and take up to 1 Major and 1 Minor Action, in any order. Minor actions include object interactions and some Skill Checks.
    - Your movement is limited by the Speed value on your character sheet, showing the
      maximum number of spaces you can move on a grid. The average speed is 6. 
    - Your character sheet will give you optional actions that you can take listed under

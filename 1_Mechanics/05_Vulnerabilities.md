@@ -6,8 +6,8 @@
 - [Combat](#Combat)
 - [Party](#Party)
 - [Roleplay](#Roleplay)
-   - [Knives](#Knives)
    - [Backstory](#Backstory)
+   - [Knives](#Knives)
    - [Society](#Society)
 <!-- /MarkdownTOC -->
 
@@ -70,13 +70,6 @@
    - Mechanic: Whenever you Draw to observe or react to something you weren't already aware of (e.g., Detection checks or Agility reactions), you draw with the Lower Hand.
    - Type: Minor
 
-### Knives
-
-- Name: Phobia
-   - Description: You can't shake it, there's just the terrifying fear that burdens you.
-   - Mechanic: Work with your GM to decide a fear you hold and the reason for that fear. This may be a fear of something concrete (e.g., spiders, fire) or something less tangible (e.g., being alone, going hungry).
-   - Type: GM Determined
-
 ### Backstory
 
 - Name: Savior
@@ -92,6 +85,13 @@
 - Name: Wanted
    - Description: Your past will come back to haunt you.
    - Mechanic: Work with your GM to decide an NPC or organization that thinks you’re responsible for a crime. You may encounter a member of this group who wants you in jail, or stand trial, or outright dead.
+   - Type: GM Determined
+
+### Knives
+
+- Name: Phobia
+   - Description: You can't shake it, there's just the terrifying fear that burdens you.
+   - Mechanic: Work with your GM to decide a fear you hold and the reason for that fear. This may be a fear of something concrete (e.g., spiders, fire) or something less tangible (e.g., being alone, going hungry).
    - Type: GM Determined
 
 ### Society

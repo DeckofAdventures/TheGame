@@ -4,66 +4,87 @@
 
 <!-- MarkdownTOC -->
 - [Combat](#Combat)
-   - [Control](#Control)
-   - [Support](#Support)
    - [Weapon Attacks](#Weapon-Attacks)
+   - [Support](#Support)
+   - [Control](#Control)
    - [Mystic Attacks](#Mystic-Attacks)
 - [Companion](#Companion)
 - [Game Mechanics](#Game-Mechanics)
-   - [Fate Cards](#Fate-Cards)
    - [Adjust Odds](#Adjust-Odds)
+   - [Fate Cards](#Fate-Cards)
 - [Magic](#Magic)
 - [Movement](#Movement)
-   - [Stealth](#Stealth)
    - [Speed](#Speed)
+   - [Stealth](#Stealth)
 - [Roleplay](#Roleplay)
 <!-- /MarkdownTOC -->
 
 ## Combat
 
-### Control
+### Weapon Attacks
 
-- Name: Battlecharged
-   - Description: You're always ready for something to go down.
-   - Mechanic: When drawing initiative, Draw with Upper Hand.
-   - Type: Minor
+- Name: Attack, Weapon
+   - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
+   - Mechanic: As an action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
+   - Type: Major
       - XP Cost: 1
+   - Prereq Skill: Finesse > 0 or Brute > 0
    - Tags: None
 
-- Name: Critical Master
-   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
-   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
+- Name: Attack, Charge
+   - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
+   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 2
+   - Prereq Power: Attack, Weapon
+   - Prereq Role: Defender or Martial
+   - Tags: None
+
+- Name: Attack, Sweep
+   - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
+   - Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 FP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Power: Attack, Weapon
+   - Prereq Role: Martial or Defender
+   - Tags: Multi-target
+
+- Name: Attack, Disarm
+   - Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
+   - Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend one action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1
+   - Prereq Role: Martial or Defender
+   - Tags: None
+
+- Name: Attack, Vengeance
+   - Description: Ever the protector on the field, you leap at the chance to avenge an ally.
+   - Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your turn with the Upper Hand.
+   - Type: Major
+      - XP Cost: 1
+   - Prereq Power: Attack, Weapon
+   - Prereq Role: Defender
+   - Tags: None
+
+- Name: Attack, Dual-Wield
+   - Description: You are adept at wielding two weapons in combat.
+   - Mechanic: On your turn, you may make a second attack as a Minor Action with Lower Hand.
+   - Type: Minor
+      - XP Cost: 3
+   - Prereq Power: Attack, Weapon
+   - Tags: None
+
+- Name: Attack, Dual-Wield Master
+   - Description: You are a master of wielding two weapons in combat.
+   - Mechanic: On your turn, you may make a second attack as a Minor Action. When making this attack, you no longer draw with the Lower Hand.
    - Type: Minor
       - XP Cost: 1
    - Prereq Level: 3
+   - Prereq Power: Attack, Dual-Wield
    - Tags: None
-
-- Name: Momentum
-   - Description: By brute strength, force others to move around the battlefield.
-   - Mechanic: You attempt to move a character who is within 1 space of you during your movement. If unwilling, target makes a Contested Strength or Agility Check to dodge. If willing or fails, you may place the target within 1 space of end position.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 1
-   - Tags: None
-
-- Name: Momentum Aura
-   - Description: Your strength is supernatural, bending the gravity around you.
-   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
-   - Type: Minor
-      - XP Cost: 2
-   - Prereq Power: Momentum
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 2
-   - Tags: None
-
-- Name: Find Weakness
-   - Description: You can size up an opponent and discover their weaknesses.
-   - Mechanic: As an action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one vulnerability and on Critical Success you learn all vulnerabilities.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Level: 2
-   - Tags: Difficulty Prediction
 
 ### Support
 
@@ -78,7 +99,7 @@
 
 - Name: Lend Aid
    - Description: Just a little help from a friend
-   - Mechanic: Designate one ally who, on their next draw, will draw with the Upper Hand.
+   - Mechanic: As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
    - Type: Minor
       - XP Cost: 1
    - Prereq Role: Support
@@ -86,7 +107,7 @@
 
 - Name: Lend Distraction
    - Description: Just an annoyance in the distance
-   - Mechanic: Designate a character who, on their next draw, will draw with the Lower Hand.
+   - Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
    - Type: Minor
       - XP Cost: 1
    - Tags: None
@@ -99,12 +120,12 @@
       - FP Cost: 1 or 2
    - Prereq Level: 2
    - Prereq Power: Lend Distraction
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Lend Confusion
    - Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
-   - Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
-   - Type: Minor
+   - Mechanic: As a Major Action, select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
+   - Type: Major
       - XP Cost: 1
    - Prereq Level: 2
    - Prereq Power: Lend Distraction
@@ -120,7 +141,7 @@
    - Prereq Level: 3
    - Prereq Power: Lend Confusion
    - Prereq Role: Support or Caster
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Lend/Remove Skill
    - Description: You really know how to target an ability and either support it or get in it's way.
@@ -141,7 +162,7 @@
 
 - Name: Lend Vigor
    - Description: Channel energy to do more than help: inspire!
-   - Mechanic: Designate 1/2 character(s) who, on their next turn, can take an additional action without penalty and move 2 additional spaces during their movement.
+   - Mechanic: Designate 1/2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -176,77 +197,56 @@
    - Prereq Role: Defender
    - Tags: None
 
-### Weapon Attacks
+### Control
 
-- Name: Attack, Weapon
-   - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-   - Mechanic: As an action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
-   - Type: Minor
+- Name: Battlecharged
+   - Description: You're always ready for something to go down.
+   - Mechanic: When drawing initiative, Draw with Upper Hand.
+   - Type: Passive
       - XP Cost: 1
-   - Prereq Skill: Finesse > 0 or Brute > 0
    - Tags: None
 
-- Name: Attack, Charge
-   - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 2
-   - Prereq Power: Attack, Weapon
-   - Prereq Role: Defender or Martial
-   - Tags: None
-
-- Name: Attack, Sweep
-   - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-   - Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 FP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Power: Attack, Weapon
-   - Prereq Role: Martial or Defender
-   - Tags: None
-
-- Name: Attack, Disarm
-   - Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-   - Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend one action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1
-   - Prereq Role: Martial or Defender
-   - Tags: None
-
-- Name: Attack, Vengeance
-   - Description: Ever the protector on the field, you leap at the chance to avenge an ally.
-   - Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your turn with the Upper Hand.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Power: Attack, Weapon
-   - Prereq Role: Defender
-   - Tags: None
-
-- Name: Attack, Dual-Wield
-   - Description: You are adept at wielding two weapons in combat.
-   - Mechanic: On your turn, you may make a second attack as an action with Lower Hand.
-   - Type: Minor
-      - XP Cost: 3
-   - Prereq Power: Attack, Weapon
-   - Tags: None
-
-- Name: Attack, Dual-Wield Master
-   - Description: You are a master of wielding two weapons in combat.
-   - Mechanic: On your turn, you may make a second attack as an action. When making this attack, you no longer draw with the Lower Hand.
-   - Type: Minor
+- Name: Critical Master
+   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
+   - Type: Passive
       - XP Cost: 1
    - Prereq Level: 3
-   - Prereq Power: Attack, Dual-Wield
    - Tags: None
+
+- Name: Momentum
+   - Description: By brute strength, force others to move around the battlefield.
+   - Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 1
+   - Tags: None
+
+- Name: Momentum Aura
+   - Description: Your strength is supernatural, bending the gravity around you.
+   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
+   - Type: Passive
+      - XP Cost: 2
+   - Prereq Power: Momentum
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 2
+   - Tags: Multi-target
+
+- Name: Find Weakness
+   - Description: You can size up an opponent and discover their weaknesses.
+   - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
 
 ### Mystic Attacks
 
 - Name: Attack, Mystic
    - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
    - Mechanic: As an action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
-   - Type: Minor
+   - Type: Major
       - XP Cost: 1
    - Prereq Skill: Knowlege > 0 or Craft > 0
    - Tags: None
@@ -259,7 +259,7 @@
       - FP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Caster or Support
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Amplification
    - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
@@ -273,13 +273,15 @@
 
 - Name: Attack, Mystic Cone
    - Description: You deploy resources to channel your magic in a wide blast in front of you.
-   - Mechanic: Choose one effect when you take this power - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you. - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
+   - Mechanic: Choose one effect when you take this power
+      - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
+      - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1
    - Prereq Power: Attack, Mystic
    - Prereq Role: Caster
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Confusion
    - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
@@ -289,7 +291,7 @@
       - FP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Entangle
    - Description: You channel your abilities to tie your target in place.
@@ -299,7 +301,7 @@
       - FP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Deprivation
    - Description: You channel your abilities deprive a target of their senses.
@@ -309,7 +311,7 @@
       - FP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Dual-Shot
    - Description: You are so adept mystic arts you can start another spell before even finishing the first.
@@ -318,23 +320,23 @@
       - XP Cost: 3
    - Prereq Skill: Finesse > 1
    - Prereq Power: Attack, Mystic
-   - Tags: None
+   - Tags: Multi-target
 
 - Name: Attack, Mystic Dual-Wield Master
    - Description: You are a master of wielding two weapons in combat.
-   - Mechanic: On your turn, you may take a second Mystic Attack.
+   - Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
    - Type: Minor
       - XP Cost: 1
    - Prereq Level: 3
    - Prereq Power: Attack, Mystic Dual-Shot
-   - Tags: None
+   - Tags: Multi-target
 
 ## Companion
 
 - Name: Creature Connection
    - Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
    - Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check. Unlike other Simple Powers, taking this Power costs 5 XP.
-   - Type: Minor
+   - Type: Passive
       - XP Cost: 3
    - Prereq Skill: Craft > 1 or Knowledge > 1
    - Tags: Companion
@@ -359,20 +361,6 @@
 
 ## Game Mechanics
 
-### Fate Cards
-
-- Name: Aces Wild
-   - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
-   - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single action - even if you already went that round
-      - Ace of Diamonds: As an action, you recover 3 FP OR you and up to three allies each recover 1 FP
-      - Ace of Hearts: As an action, you can heal 2 HP for yourself or an ally you can see within 5 squares
-      - Ace of Spades: As an action, you can strike an enemy with an automatic hit with a Power of your choosing
-   - Type: Passive
-      - XP Cost: 1
-   - Prereq Level: 3
-   - Tags: Fate Cards
-
 ### Adjust Odds
 
 - Name: Fated Draw
@@ -393,7 +381,7 @@
 
 - Name: Luck Shared
    - Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-   - Mechanic: On a Suited Hit, choose one creature you can see. Their next draw will be with the Upper Hand.
+   - Mechanic: When you get a Suited Hit, on your next turn, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
    - Type: Minor
       - XP Cost: 1
    - Tags: Suited Hit
@@ -417,6 +405,20 @@
    - Prereq Power: Scrying
    - Tags: Card Viewing
 
+### Fate Cards
+
+- Name: Aces Wild
+   - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
+   - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
+      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single action - even if you already went that round
+      - Ace of Diamonds: As an action, you recover 3 FP OR you and up to three allies each recover 1 FP
+      - Ace of Hearts: As an action, you can heal 2 HP for yourself or an ally you can see within 5 squares
+      - Ace of Spades: As an action, you can strike an enemy with an automatic hit with a Power of your choosing
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Level: 3
+   - Tags: Fate Cards
+
 ## Magic
 
 - Name: Barrier
@@ -439,7 +441,7 @@
 
 - Name: Mystic Recovery
    - Description: Be still and meditate to draw energy from deep within you.
-   - Mechanic: As 1/2 Actions, recover 1/3 FP. This may be done up to a number of times equal to your level per Rest.
+   - Mechanic: As a Minor Action, recover 1 FP. If you take no other actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
    - Type: Minor
       - XP Cost: 1
    - Prereq Role: Support or Caster
@@ -447,11 +449,20 @@
 
 ## Movement
 
+### Speed
+
+- Name: Speedy
+   - Description: You’re quicker than the rest.
+   - Mechanic: When you take this Power, your combat speed increases by 2 squares.
+   - Type: Passive
+      - XP Cost: 1
+   - Tags: Combat
+
 ### Stealth
 
 - Name: Stealthy Surprise
    - Description: An undetected assailant is particularly deadly.
-   - Mechanic: You attempt to hide from a target. Make a Contested Stealth Check vs. Detection. The GM may choose not to reveal if it succeeded/failed. If successful, your next Attack Draw against that target gains the Upper Hand so long as you are still considered hidden by the GM.
+   - Mechanic: You may Hide as a Minor Action.
    - Type: Minor
       - XP Cost: 1
    - Prereq Skill: Stealth > 1
@@ -472,7 +483,7 @@
       - XP Cost: 1
       - FP Cost: 1
    - Prereq Skill: Stealth > 1
-   - Tags: Stealth
+   - Tags: Stealth or Multi-target
 
 - Name: Stealth's Blessing
    - Description: You channel a deep energy to go unseen.
@@ -482,16 +493,7 @@
       - FP Cost: 1 or 2
    - Prereq Level: 2
    - Prereq Skill: Stealth > 2
-   - Tags: Stealth
-
-### Speed
-
-- Name: Speedy
-   - Description: You’re quicker than the rest.
-   - Mechanic: When you take this Power, your combat speed increases by 2 squares.
-   - Type: Passive
-      - XP Cost: 1
-   - Tags: Combat
+   - Tags: Stealth or Multi-target
 
 ## Roleplay
 

@@ -4,30 +4,29 @@
 
 ## Table of Contents
 
-<!-- MarkdownTOC -->
-
-- What is a Tabletop Game System?
-- Guiding Principles
-- The Action Deck
-- Fate Cards
-- Characters
-   - Attributes, Skills, and Modifiers
-   - Dealers, Bystanders and Companions
-- Playing the Game
-   - Exploration and Adventuring
-   - Making a Check
-      - Degrees of Success
-      - Upper and Lower Hand
-      - Contested Checks
-   - In Combat
-      - Taking Turns
-      - In Combat Actions
-      - Status Conditions
-   - Health and Armor
-   - Epic Events
-   - Rests
-- Character Creation
-- Starting your adventure
+<!-- MarkdownTOC --> <!-- BROZ: Check that links work -->
+- [What is a Tabletop Game System?](#What-is-a-Tabletop-Game-System?)
+- [Guiding Principles](#Guiding-Principles)
+- [The Action Deck](#The-Action-Deck)
+- [Fate Cards](#Fate-Cards)
+- [Characters](#Characters)
+   - [Attributes, Skills, and Modifiers](#Attributes,-Skills,-and-Modifiers)
+   - [Dealers, Bystanders and Companions](#Dealers,-Bystanders-and-Companions)
+- [Playing the Game](#Playing-the-Game)
+   - [Exploration and Adventuring](#Exploration-and-Adventuring)
+   - [Making a Check](#Making-a-Check)
+      - [Degrees of Success](#Degrees-of-Success)
+      - [Upper and Lower Hand](#Upper-and-Lower-Hand)
+      - [Contested Checks](#Contested-Checks)
+   - [In Combat](#In-Combat)
+      - [Taking Turns](#Taking-Turns)
+      - [In Combat Actions](#In-Combat-Actions)
+      - [Status Conditions](#Status-Conditions)
+   - [Health and Armor](#Health-and-Armor)
+   - [Epic Events](#Epic-Events)
+   - [Rests](#Rests)
+- [Character Creation](#Character-Creation)
+- [Starting your adventure](#Starting-your-adventure)
 
 <!-- /MarkdownTOC -->
 
@@ -347,31 +346,32 @@ and need more time to think.
 
 #### In Combat Actions
 
-On a turn, a character may (a) move, and (b) perform action(s) in any order they choose.
 Each turn represents 6 seconds of game time passing.
+On a turn, a character may (a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order they choose. They may also perform any number of Free Actions,
+within reason, as permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be 
 split to occur before, after, and/or between actions.
 
-2. **Actions** In addition to their movement, players can perform up an action.
-Something that doesn't take up this resource is considered 'free'. Actions include...
-   
-   - **An attack.** Character combat actions are described on the character sheet are
-       associated with the character's Primary Skill Modifier, unless otherwise noted.
-       The character draws a card and may add their modifier before reporting the
-       result. 
+2. **Actions** The list below are possible Minor/Major actions, but a GM may permit others. If an action specifies a skill, this is requires a check. Unless otherwise specified, a Power is a Major action.
 
-   - **An object interaction.** Pressing a button, pulling a lever, using a disposable
+   1. **Free**
+      - *Communication* that does not require a check.
+      - *Observation*: gaining obvious information about the world.
+      - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card used.
+
+   2. **Minor**
+      - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
-   
-   - **Communicating.** If communication requires a check (e.g., convincing an enemy to
-       surrender), this takes an action. Shouting information to an ally, or
-       roleplaying the scene is free. 
+      - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something about an opponent or the terrain.
+      - *Convince*: Bluffing vs. GM-determined DR; convince an opponent to change their course of action
+      - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a specific piece of information 
 
-3. **Toughening up.** - A Dealer may discard one or more Fate Cards to nullify one
-damage per Fate card used. This is free, but must be taken before the end of the
-Dealer's next turn.
+   3. **Major**
+      - *Rush*: double movement
+      - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
+      - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against you by target(s) who failed
 
 #### Status Conditions
 
@@ -478,14 +478,16 @@ represents a short 30-minute break from the action, where characters may be catc
 their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards*
-determined by their level. Each *Rest Card* drawn regains 1 HP or FP. If the card drawn
-is the same as the character's Primary Suit, regain an additional 1 HP or FP. Shuffle
-your discard pile back into your deck after completing a *Quick Rest*.
+During a *Quick Rest*, each player who is resting draw from their deck using *Rest Cards*. Players start with a number of Rest Cards equal to the sum of their maximum Health and Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn
+is the same as the players's Primary Suit, regain an additional 1 Health or Fate Point.
+To recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge Skill check of DR 7 minus the number of points they are attempting to recover. If the Rest Card drawn matches they player's primary suit, make this check at Upper Hand.
+For standard play, Shuffle
+your discard pile back into your deck after completing a *Quick Rest*. 
+For hardcore play, continue without shuffling.
 
 After completing a *Full Rest*, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
-used. You also replenish all expended Fate Points and your Health Points return to
+used. Fate, Health, and Armor Points all return to
 their maximum. Rest Cards return to their full value after a *Full Rest*.
 
 If you run out of cards before you can successfully take a Rest, you may shuffle and

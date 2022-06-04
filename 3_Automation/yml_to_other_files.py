@@ -13,7 +13,7 @@ User should also install pydot to generate dot files
 User should inspect output in subfolder before moving moving elsewhere
 """
 
-input_file = "05_Vulnerabilities.yml"  #                # edit this
+input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
 writing = ["md", "dot", "png", "csv", "svg"]  #         # list of options
 add_dependencies = []  # , "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
@@ -318,5 +318,5 @@ try:
 except NameError:
     input_file = "04_Powers.yml"
 
-
-main(writing, input_file, out_delim)
+for input_file in input_files:
+    main(writing, input_file, out_delim)
