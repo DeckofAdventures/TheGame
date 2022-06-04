@@ -4,9 +4,9 @@
 
 <!-- MarkdownTOC -->
 - [Combat](#Combat)
+   - [Mystic Attacks](#Mystic-Attacks)
    - [Control](#Control)
    - [Support](#Support)
-   - [Mystic Attacks](#Mystic-Attacks)
    - [Weapon Attacks](#Weapon-Attacks)
 - [Companion](#Companion)
 - [Game Mechanics](#Game-Mechanics)
@@ -14,12 +14,102 @@
    - [Adjust Odds](#Adjust-Odds)
 - [Magic](#Magic)
 - [Movement](#Movement)
-   - [Stealth](#Stealth)
    - [Speed](#Speed)
+   - [Stealth](#Stealth)
 - [Roleplay](#Roleplay)
 <!-- /MarkdownTOC -->
 
 ## Combat
+
+### Mystic Attacks
+
+- Name: Attack, Mystic
+   - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
+   - Mechanic: As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+   - Type: Major
+      - XP Cost: 1
+   - Prereq Skill: Knowlege > 0 or Craft > 0
+   - Tags: None
+
+- Name: Attack, Mystic Aura
+   - Description: You deploy resources to channel your magic all around you.
+   - Mechanic: You perform your Mystic Attack on all characters within 1/2 space(s).
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Caster or Support
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Amplification
+   - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+   - Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
+   - Type: Major
+      - XP Cost: 1
+      - FP Cost: 1
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Martial or Caster
+   - Tags: None
+
+- Name: Attack, Mystic Cone
+   - Description: You deploy resources to channel your magic in a wide blast in front of you.
+   - Mechanic: Choose one effect when you take this power
+      - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
+      - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Caster
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Confusion
+   - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
+   - Mechanic: You draw a Target Card and force 1/3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Support or Caster
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Entangle
+   - Description: You channel your abilities to tie your target in place.
+   - Mechanic: You draw a Target Card and force 1/3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Support or Caster
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Deprivation
+   - Description: You channel your abilities deprive a target of their senses.
+   - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1/3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Power: Attack, Mystic
+   - Prereq Role: Support or Caster
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Dual-Shot
+   - Description: You are so adept mystic arts you can start another spell before even finishing the first.
+   - Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
+   - Type: Minor
+      - XP Cost: 3
+   - Prereq Skill: Finesse > 1
+   - Prereq Power: Attack, Mystic
+   - Tags: Multi-target
+
+- Name: Attack, Mystic Dual-Wield Master
+   - Description: You are a master of wielding two weapons in combat.
+   - Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Level: 3
+   - Prereq Power: Attack, Mystic Dual-Shot
+   - Tags: Multi-target
 
 ### Control
 
@@ -62,6 +152,15 @@
    - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
    - Type: Minor
       - XP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
+
+- Name: Pack Tactics
+   - Description: When an enemy is outnumbered, you know just how to take advantage..
+   - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+   - Type: Minor
+      - XP Cost: 2
+      - FP Cost: 1
    - Prereq Level: 2
    - Tags: Difficulty Prediction
 
@@ -175,96 +274,6 @@
       - FP Cost: 1 or 2
    - Prereq Role: Defender
    - Tags: None
-
-### Mystic Attacks
-
-- Name: Attack, Mystic
-   - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
-   - Mechanic: As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
-   - Type: Major
-      - XP Cost: 1
-   - Prereq Skill: Knowlege > 0 or Craft > 0
-   - Tags: None
-
-- Name: Attack, Mystic Aura
-   - Description: You deploy resources to channel your magic all around you.
-   - Mechanic: You perform your Mystic Attack on all characters within 1/2 space(s).
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Caster or Support
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Amplification
-   - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
-   - Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
-   - Type: Major
-      - XP Cost: 1
-      - FP Cost: 1
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Martial or Caster
-   - Tags: None
-
-- Name: Attack, Mystic Cone
-   - Description: You deploy resources to channel your magic in a wide blast in front of you.
-   - Mechanic: Choose one effect when you take this power
-      - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
-      - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Caster
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Confusion
-   - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-   - Mechanic: You draw a Target Card and force 1/3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Support or Caster
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Entangle
-   - Description: You channel your abilities to tie your target in place.
-   - Mechanic: You draw a Target Card and force 1/3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Support or Caster
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Deprivation
-   - Description: You channel your abilities deprive a target of their senses.
-   - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1/3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Power: Attack, Mystic
-   - Prereq Role: Support or Caster
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Dual-Shot
-   - Description: You are so adept mystic arts you can start another spell before even finishing the first.
-   - Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
-   - Type: Minor
-      - XP Cost: 3
-   - Prereq Skill: Finesse > 1
-   - Prereq Power: Attack, Mystic
-   - Tags: Multi-target
-
-- Name: Attack, Mystic Dual-Wield Master
-   - Description: You are a master of wielding two weapons in combat.
-   - Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Level: 3
-   - Prereq Power: Attack, Mystic Dual-Shot
-   - Tags: Multi-target
 
 ### Weapon Attacks
 
@@ -449,6 +458,15 @@
 
 ## Movement
 
+### Speed
+
+- Name: Speedy
+   - Description: You’re quicker than the rest.
+   - Mechanic: When you take this Power, your combat speed increases by 2 squares.
+   - Type: Passive
+      - XP Cost: 1
+   - Tags: Combat
+
 ### Stealth
 
 - Name: Stealthy Surprise
@@ -485,15 +503,6 @@
    - Prereq Level: 2
    - Prereq Skill: Stealth > 2
    - Tags: Stealth or Multi-target
-
-### Speed
-
-- Name: Speedy
-   - Description: You’re quicker than the rest.
-   - Mechanic: When you take this Power, your combat speed increases by 2 squares.
-   - Type: Passive
-      - XP Cost: 1
-   - Tags: Combat
 
 ## Roleplay
 
