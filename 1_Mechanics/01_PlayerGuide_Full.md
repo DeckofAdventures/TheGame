@@ -25,6 +25,7 @@
    - [Health and Armor](#Health-and-Armor)
    - [Epic Events](#Epic-Events)
    - [Rests](#Rests)
+   - [Primary Suit](#Primary-Suit)
 - [Character Creation](#Character-Creation)
 - [Starting your adventure](#Starting-your-adventure)
 
@@ -148,7 +149,7 @@ creative!
 ### Dealers, Bystanders and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
-considered *Dealers* and differ from the majority of other characters in the world. The
+considered Dealers and differ from the majority of other characters in the world. The
 GM may control other Dealers who can take the form of powerful allies or adversaries
 the players may encounter along the way. 
 
@@ -179,7 +180,7 @@ Bestiary for a list of potential Companions and their unique features.
 The players are creating and experiencing the world at the same time. Adventures can
 include exploring the world, investigating for clues, and engaging in social
 interactions with other players and non-playable characters. During an Adventure, the
-GM will ask players to *Make a Check* by drawing a card and adding the modifier
+GM will ask players to Make a Check by drawing a card and adding the modifier
 relevant to the circumstance.
 
 1. **Setting the Scene.** The GM will include a brief descriptions of important events
@@ -418,7 +419,7 @@ end the freeze.
 
 Dealers have 4 health points (HP) plus their level, plus Vitality modifier. The health
 of Companions HP is half the level of their Dealer, rounding up. If a character is
-wounded beyond their health pool, they are *Knocked Out*. Armor Points (AP) are an
+wounded beyond their health pool, they are Knocked Out. Armor Points (AP) are an
 additional resource that would be removed first in the event of a physical wound. 
 
 Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack
@@ -475,26 +476,56 @@ GM will lay out the consequences and give the players a chance to react.
 
 ### Rests
 
-Rests are common throughout a session. There are two types of rests. A *Quick Rest*
+Rests are common throughout a session. There are two types of rests. A Quick Rest
 represents a short 30-minute break from the action, where characters may be catching
-their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where
+their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting draw from their deck using *Rest Cards*. Players start with a number of Rest Cards equal to the sum of their maximum Health and Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn
+During a Quick Rest, each player who is resting draw from their deck using Rest Cards. Players start with a number of Rest Cards equal to the sum of their maximum Health and Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn
 is the same as the players's Primary Suit, regain an additional 1 Health or Fate Point.
-To recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge Skill check of DR 7 minus the number of points they are attempting to recover. If the Rest Card drawn matches they player's primary suit, make this check at Upper Hand.
+To recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge Skill check of DR 7 minus the number of points they are attempting to recover. If the Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand.
 For standard play, Shuffle
-your discard pile back into your deck after completing a *Quick Rest*. 
+your discard pile back into your deck after completing a Quick Rest. 
 For hardcore play, continue without shuffling.
 
-After completing a *Full Rest*, shuffle your discard pile back into your deck, along
+After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
 used. Fate, Health, and Armor Points all return to
-their maximum. Rest Cards return to their full value after a *Full Rest*.
+their maximum. Rest Cards return to their full value after a Full Rest.
 
 If you run out of cards before you can successfully take a Rest, you may shuffle and
 always draw with the Lower Hand when making a check. This signifies your character
 running out of Stamina during a long day. 
+
+### Primary Suit
+
+Each Dealer has a connection to a Primary Suit, as suggested by their Role. In addition
+to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action for
+additional benefits starting at Level 2. For 2 cards discarded, up to a limit of 4, an
+Upper/Lower Hand +1 is granted described below. 
+
+- Diamonds ♦️ : Casters Dealers have explosive damage but they run out of gas really
+  fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
+
+- Clubs ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
+  can choose to *bury* N cards to force all creatures within 2 spaces to make their
+  next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
+
+- Hearts ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
+  within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper Hand
+  (2/N) on their next action.
+
+- Spades ♠️ : Offense Dealers deploy all sorts of mechanisms for drawing the eye of
+  enemies away from their allies. They can *scrap* N cards and cause an enemy to make
+  Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
+
+The discard limit increases with level according to the table below.
+
+| Level | Discard Cap | Bonus |
+|:-----:|:-----------:|:-----:|
+|   1   |      4      |   2   |
+|   5   |      6      |   3   |
+|   8   |      8      |   4   |
 
 ## Character Creation
 
