@@ -22,7 +22,7 @@ Attack, Weapon:
   Category: Combat
   Subcategory: Weapon Attacks
   Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-  Mechanic: As an action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
+  Mechanic: As a Major Action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
   Type: Major
   XP Cost: 1
   Prereq Skill:
@@ -60,7 +60,7 @@ Attack, Disarm:
   Category: Combat
   Subcategory: Weapon Attacks
   Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-  Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend one action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
+  Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
   Type: Major
   XP Cost: 2
   FP Cost: 1
@@ -105,7 +105,7 @@ Attack, Mystic:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
-  Mechanic: As an action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+  Mechanic: As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
   Type: Major
   XP Cost: 1
   Prereq Skill: 
@@ -296,7 +296,7 @@ Lend Mass Distraction:
   Category: Combat
   Subcategory: Support
   Description: You know how to cause a scene.
-  Mechanic: Draw a Target Card. 2/3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions made during their next turn.
+  Mechanic: Draw a Target Card. 2/3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -365,7 +365,7 @@ Slow:
   Category: Combat
   Subcategory: Support
   Description: You selectively bend the nature of time
-  Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
+  Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
   Type: Major
   XP Cost: 2
   FP Cost: 2
@@ -488,12 +488,12 @@ Aces Wild:
   Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
   Mechanic:
     - Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-    - "Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single action - even if you already went that round"
-    - "Ace of Diamonds: As an action, you recover 3 FP OR you and up to three allies each recover 1 FP"
-    - "Ace of Hearts: As an action, you can heal 2 HP for yourself or an ally you can see within 5 squares"
-    - "Ace of Spades: As an action, you can strike an enemy with an automatic hit with a Power of your choosing"
+    - "Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round"
+    - "Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP"
+    - "Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares"
+    - "Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing"
   Type: Passive
-  XP Cost: 1
+  XP Cost: 2
   Prereq Level: 3
   Tags: Fate Cards
 
@@ -501,7 +501,7 @@ Barrier:
   Category: Magic
   Subcategory: None
   Description: Your skills allow you to deploy temporary impromptu walls
-  Mechanic: You create a wall 3/5 spaces wide. You may dismiss this wall at any time without using an action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion. 
+  Mechanic: You create a wall 3/5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -523,7 +523,7 @@ Mystic Recovery:
   Category: Magic
   Subcategory: None
   Description: Be still and meditate to draw energy from deep within you.
-  Mechanic: As a Minor Action, recover 1 FP. If you take no other actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
+  Mechanic: As a Minor Action, recover 1 FP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
   Type: Minor
   XP Cost: 1
   Prereq Role: [Support, Caster]

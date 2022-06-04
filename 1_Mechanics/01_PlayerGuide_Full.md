@@ -283,10 +283,12 @@ J. Xena might have a Power that lets them redraw on a Suited Miss, for example.
 Sometimes the odds will be in your favor; sometimes they will be against you. 
 
 1. Having the Upper Hand (N) means you draw N additional cards and select the card 
-closest to the TC after applying all relevant mechanics. 
+closest to the TC after applying all relevant mechanics. A player may choose to stop 
+drawing before N cards are drawn.
 
 2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
-is furthest from the TC after applying all relevant mechanics. 
+is furthest from the TC after applying all relevant mechanics. A play must draw all N
+cards.
 
 In these cases, the other card is discarded. If N is not specified, draw 1 extra.
 Multiple Upper/Lower hand effects can compound or even out. If a rule specifies
