@@ -13,7 +13,9 @@ Template:           # This dictates the CSV columns and order thereof
     Prereq Power:   # One or more strings
     Prereq Level:
     Tags:           # One string
-    Description:    # Flavor: one or two sentences
+    # For longer items, if has ':', whole line must be quoted
+    # if multiple items, rest will appear as bullets after first in md
+    Description:    # Flavor: one or two sentences.
     Mechanic:       # Rule: one or two sentences
 
 Attack, Weapon:
@@ -52,7 +54,7 @@ Attack, Sweep:
   FP Cost: [1,2]
   Prereq Power: Attack, Weapon
   Prereq Role: [Martial, Defender]
-  Tags:
+  Tags: Multi-target
 
 Attack, Disarm:
   Category: Combat
@@ -121,7 +123,7 @@ Attack, Mystic Aura:
   FP Cost: [1,2]
   Prereq Power: Attack, Mystic
   Prereq Role: [Caster, Support]
-  Tags:
+  Tags:  Multi-target
 
 Attack, Mystic Amplification :
   Category: Combat
@@ -139,7 +141,8 @@ Attack, Mystic Cone:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You deploy resources to channel your magic in a wide blast in front of you.
-  Mechanic: Choose one effect when you take this power
+  Mechanic:
+    - Choose one effect when you take this power
     - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
     - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
   Type: Major
@@ -147,7 +150,7 @@ Attack, Mystic Cone:
   FP Cost: 1
   Prereq Power: Attack, Mystic
   Prereq Role: Caster
-  Tags:
+  Tags: Multi-target
 
 Attack, Mystic Confusion:
   Category: Combat
@@ -159,7 +162,7 @@ Attack, Mystic Confusion:
   FP Cost: [1,2]
   Prereq Power: Attack, Mystic
   Prereq Role: [Support, Caster]
-  Tags:
+  Tags: Multi-target
 
 Attack, Mystic Entangle:
   Category: Combat
@@ -171,7 +174,7 @@ Attack, Mystic Entangle:
   FP Cost: [1,2]
   Prereq Power: Attack, Mystic
   Prereq Role: [Support, Caster]
-  Tags:
+  Tags: Multi-target
 
 Attack, Mystic Deprivation:
   Category: Combat
@@ -183,7 +186,7 @@ Attack, Mystic Deprivation:
   FP Cost: [1,2]
   Prereq Power: Attack, Mystic
   Prereq Role: [Support, Caster]
-  Tags:
+  Tags: Multi-target
 
 Attack, Mystic Dual-Shot:
   Category: Combat
@@ -194,7 +197,7 @@ Attack, Mystic Dual-Shot:
   XP Cost: 3
   Prereq Skill: Finesse > 1
   Prereq Power: Attack, Mystic
-  Tags:
+  Tags: Multi-target
 
 Attack, Mystic Dual-Wield Master:
   Category: Combat
@@ -205,7 +208,7 @@ Attack, Mystic Dual-Wield Master:
   XP Cost: 1
   Prereq Level: 3
   Prereq Power: Attack, Mystic Dual-Shot 
-  Tags:
+  Tags: Multi-target
 
 Battlecharged:
   Category: Combat
@@ -226,11 +229,11 @@ Critical Master:
   Prereq Level: 3
   Tags:
 
-Momentum:
+Momentum: # Without this power, this should cost a major action.
   Category: Combat
   Subcategory: Control
   Description: By brute strength, force others to move around the battlefield. 
-  Mechanic: You attempt to move a character who is within 1 space of you during your movement. If unwilling, target makes a Contested Strength or Agility Check to dodge. If willing or fails, you may place the target within 1 space of end position.
+  Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
   Type: Minor
   XP Cost: 1
   Prereq Role: Defender
@@ -247,7 +250,7 @@ Momentum Aura:
   Prereq Power: Momentum
   Prereq Role: Defender
   Prereq Skill: Brute > 2
-  Tags:
+  Tags: Multi-target
 
 Find Weakness:
   Category: Combat
@@ -299,7 +302,7 @@ Lend Mass Distraction:
   FP Cost: [1,2]
   Prereq Level: 2
   Prereq Power: Lend Distraction
-  Tags:
+  Tags: Multi-target
 
 Lend Confusion:
   Category: Combat
@@ -324,7 +327,7 @@ Lend Mass Confusion:
   Prereq Level: 3
   Prereq Power: Lend Confusion
   Prereq Role: [Support, Caster]
-  Tags:
+  Tags: Multi-target
 
 Lend/Remove Skill:
   Category: Combat
@@ -519,7 +522,7 @@ Mystic Recovery:
   Category: Magic
   Subcategory: None
   Description: Be still and meditate to draw energy from deep within you.
-  Mechanic: As 1/2 Actions, recover 1/3 FP. This may be done up to a number of times equal to your level per Rest.
+  Mechanic: As an action, recover 1 FP. If you take no other actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
   Type: Minor
   XP Cost: 1
   Prereq Role: [Support, Caster]
@@ -553,6 +556,7 @@ Stealth in the Shadows:
   XP Cost: 1
   Prereq Skill: Stealth > 1
   Tags: Stealth
+
 Stealth's Call:
   Category: Movement
   Subcategory: Stealth
@@ -562,7 +566,9 @@ Stealth's Call:
   XP Cost: 1
   FP Cost: 1
   Prereq Skill: Stealth > 1
-  Tags: Stealth
+  Tags:
+    - Stealth
+    - Multi-target
 
 Stealth's Blessing:
   Category: Movement
@@ -574,7 +580,9 @@ Stealth's Blessing:
   FP Cost: [1,2]
   Prereq Level: 2
   Prereq Skill: Stealth > 2
-  Tags: Stealth
+  Tags:
+    - Stealth
+    - Multi-target
 
 Calculating:
   Category: Roleplay

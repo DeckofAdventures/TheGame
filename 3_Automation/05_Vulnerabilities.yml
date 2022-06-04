@@ -7,6 +7,8 @@ Template:           # This dictates the CSV columns and order thereof
     Prereq Skill:
     Prereq Power:
     Tags:
+    # For longer items, if has ':', whole line must be quoted
+    # if multiple items, rest will appear as bullets after first in md
     Description:
     Mechanic:
 
