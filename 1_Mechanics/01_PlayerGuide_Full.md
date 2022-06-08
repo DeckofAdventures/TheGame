@@ -481,8 +481,9 @@ experience in rock formations, and will be making Craft Checks.
    
 3. The GM reveals a new TC: a K of Spades, with DR 3. A cultist blocks their path.
 
-4. Genesis volunteers to distract the cultists. Genesis and the GM each draw: Genesis, then the GM, then Genesis, then the GM, etc. Finally, the GM draws a Q of Spades. The cultist sees the remaining party
-members.
+4. Genesis volunteers to distract the cultists, using Performance Checks. Genesis and
+the GM each draw: Genesis, then the GM, then Genesis, then the GM, etc. Finally, the GM
+draws a Q of Spades. The cultist sees the remaining party members.
 
 5. The GM reveals a new TC, DR 2. All party members must make Athletics checks to outrun the cultist.
 
