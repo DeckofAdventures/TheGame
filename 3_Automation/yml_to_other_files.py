@@ -15,7 +15,7 @@ User should inspect output in subfolder before moving moving elsewhere
 
 input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
 writing = ["md", "dot", "png", "csv", "svg"]  #         # list of options
-add_dependencies = []  # , "Skill", "Level", "Role"]  # # list of options
+add_dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
 out_delim = "\t"  #                                     # delimiter for csv
 

@@ -3,20 +3,22 @@
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
 <!-- MarkdownTOC -->
-- [Combat](#Combat)
-   - [Mystic Attacks](#Mystic-Attacks)
-   - [Control](#Control)
-   - [Support](#Support)
-   - [Weapon Attacks](#Weapon-Attacks)
-- [Companion](#Companion)
-- [Game Mechanics](#Game-Mechanics)
-   - [Fate Cards](#Fate-Cards)
-   - [Adjust Odds](#Adjust-Odds)
-- [Magic](#Magic)
-- [Movement](#Movement)
-   - [Speed](#Speed)
-   - [Stealth](#Stealth)
-- [Roleplay](#Roleplay)
+
+- Combat
+   - Mystic Attacks
+   - Control
+   - Support
+   - Weapon Attacks
+- Companion
+- Game Mechanics
+   - Fate Cards
+   - Adjust Odds
+- Magic
+- Movement
+   - Speed
+   - Stealth
+- Roleplay
+
 <!-- /MarkdownTOC -->
 
 ## Combat
@@ -156,7 +158,7 @@
    - Tags: Difficulty Prediction
 
 - Name: Pack Tactics
-   - Description: When an enemy is outnumbered, you know just how to take advantage..
+   - Description: When an enemy is outnumbered, you know just how to take advantage.
    - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
    - Type: Minor
       - XP Cost: 2

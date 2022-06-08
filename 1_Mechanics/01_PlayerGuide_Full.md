@@ -265,7 +265,7 @@ modifier is +1, the check is ...
 impress their allies without any other perks.
 
 3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1, 
-this is 5, 6, 7, 9, 10 or J. If Xena draws a J, she may subtract 1 to report a 10, 
+this is 5, 6, 7, 9, 10 or J. If Xena draws a J, they may subtract 1 to report a 10, 
 within the DR.
 
 4. A Color Success for any Successes that match the color of the TC.
@@ -399,10 +399,7 @@ relevant sense.
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft
 check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn passed
 since the effect onset). If a Knocked Out Dealer is attacked further, the player begins
-an Epic Event alone. Each additional hit requires a Conviction Check vs. their
-attacker's TC that the player may respond to with one or more cards to pass an unknown
-DR as the Great Void calls out to them. Each additional card played grants +1
-modifier.
+an Epic Event alone.
 
 6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
@@ -447,31 +444,54 @@ armor may be worn at the same time.
 
 ### Epic Events
 
-At any point, the DM may call for an Epic Event, usually involves player(s) needing to
-make a series of successes in a short time period. For example, an earthquake causes 
-the building to become unsteady. All characters must act quickly to get out before 
-a collapse
+<!-- Add Knocked Out details -->
 
-During an epic event...
-1. Players draw 5 cards. 
+At any point, the DM may call for an Epic Event. This usually involves player(s) needing
+to make a series of successes in a short time period. During an Epic Event...
 
-2. The DM will call for a series of Checks, revealing TCs and corresponding Attributes
-or skills. Any subset of players may volunteer for any of these Checks.
+1. The GM draws a TC related to a specific task during the event. 
 
-3. During an individual check, players play 1 card and may sacrifice others. Each card
-discarded adds +1 Modifier.
+2. One or more players may announce how they would attempt this task. The GM decides the
+relevant Attribute or Skill, so each player may apply the relevant modifier. The GM
+applies no modifier.
 
-4. Fate Cards card mechanics remain the same: played Ks and As return to the player’s
-hand. If played as Fate Cards, they result in a number of discards and redraws equal to
-the number Fate Cards played.
+3. Each player involved and the GM take turns drawing on this TC, looking for a Suited
+Hit. If a player succeeds first, this is a success for the party. If the GM succeeds
+first, this is a failure. 
 
-5. If no player volunteers for a check, or no player has cards remaining, the Check is
-an automatic miss.
+This process repeats for each TC in the Epic Event. A player may not volunteer for
+sequential TCs. Just as in standard Checks, a failure may be associated with some
+drawbacks. Successive failures could change the course of the story. Fate Cards card
+mechanics still apply: played As return to the player’s hand. Players may use Fate
+Cards for redraws.
 
-The GM determines when an Epic Event has been resolved, and how many individual checks
-constitute collective success or failure. On successful resolution, the narrative will 
-move forward and the GM will resume normal play. On a failure during an Epic Event, the 
-GM will lay out the consequences and give the players a chance to react.
+**For example**, an earthquake causes a cavern to shake. The party must act quickly
+  to get out before a collapse
+
+1. The GM reveals a TC: a 4 of Hearts, with DR 4. How will the party navigate their way to safety?
+
+2. Xena and Elise both volunteer for this TC. Xena will attempt to remember the way
+back, and will be making Knowledge Checks. Elise is a skilled survivalist, with
+experience in rock formations, and will be making Craft Checks.
+
+   1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited Match.
+   
+   2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
+   good headway.
+   
+3. The GM reveals a new TC: a K of Spades, with DR 3. A cultist blocks their path.
+
+4. Genesis volunteers to distract the cultists. Genesis and the GM each draw: Genesis, then the GM, then Genesis, then the GM, etc. Finally, the GM draws a Q of Spades. The cultist sees the remaining party
+members.
+
+5. The GM reveals a new TC, DR 2. All party members must make Athletics checks to outrun the cultist.
+
+When a Dealer is Knocked Out in combat, their subsequent turns are replaced with Epic
+Event TCs of DR 4 Vitality Checks. If they take additional damage, they make these
+checks at Lower Hand (+1). If they succeed on two TCs, they remain unconscious and the
+Epic Event is concluded. For a Major Success (same value as TC), they recover 1 HP. For
+a Critical Success, they recover 1 HP and up to 3 FP (FP max permitting). If they fail
+two of these TCs, they are called to the great beyond. 
 
 ### Rests
 

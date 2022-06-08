@@ -1,6 +1,0 @@
-digraph {concentrate=true; splines=curved; compound=true;
-
-/* Linked */
-	"Chaotic Companion";
-	"Creature Connection" -> "Chaotic Companion"
-}
