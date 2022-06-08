@@ -79,7 +79,7 @@ of in-game time.
     Reference the Full Guide for more details on taking a *Quick Rest*.
   - On a *Full Rest* you replenish all expended Health, Fate, and Armor. 
    - If you run out of cards before you can successfully take a Rest, you may
-     shuffle, but must always draw with one Lower Hand (1+) until your next Rest.
+     shuffle, but must always draw with Lower Hand (1+) until your next Rest.
      This signifies your character running out of Stamina during a long day.
    - After completing a Rest, shuffle your discard pile back into your deck. On a *Full
      Rest*, you may return both Jokers from the discard pile to your hand as Fate Cards

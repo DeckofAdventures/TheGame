@@ -368,7 +368,7 @@ split to occur before, after, and/or between actions.
       - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
       - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something about an opponent or the terrain.
-      - *Convince*: Bluffing vs. GM-determined DR; convince an opponent to change their course of action
+      - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their course of action
       - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a specific piece of information 
 
    3. **Major**
@@ -392,7 +392,7 @@ are successful, they may not move and any Agility Checks are made with Lower Han
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed is
 halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space away draw with Lower Hand.
 
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a DR 3 Intuition
+4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Intuition
 Check vs. their TC. If they fail, they draw Lower Hand (3) for any action requiring the
 relevant sense.
 
@@ -446,10 +446,10 @@ armor may be worn at the same time.
 
 <!-- Add Knocked Out details -->
 
-At any point, the DM may call for an Epic Event. This usually involves player(s) needing
+At any point, the DM may call for an Epic Event. The GM will narrate a particularly tense scenario and the player(s) must navigate the challenge. This usually involves player(s) needing
 to make a series of successes in a short time period. During an Epic Event...
 
-1. The GM draws a TC related to a specific task during the event. 
+1. The GM draws a TC related to a specific task during the event. The GM determines the total number of TCs and the amount of successes or failures needed to complete the Epic Event. 
 
 2. One or more players may announce how they would attempt this task. The GM decides the
 relevant Attribute or Skill, so each player may apply the relevant modifier. The GM
