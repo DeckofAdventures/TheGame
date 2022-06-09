@@ -69,7 +69,7 @@ signified by a number like +1.
 Also on your character sheet are **Powers**. This is anything your character can do
 that might not be accessible to others. Some Powers, labeled Minor and Major, take 1 or
 2 *Fate Points* respectively to activate. Your character sheet shows your starting
-number of Fate Points as your maximum. You'll need to keep track of how many Energy
+number of Fate Points as your maximum. You'll need to keep track of how many Fate
 Points you have left as you use Powers.
 
 ### Gameplay
