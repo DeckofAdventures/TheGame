@@ -44,8 +44,10 @@
 - [Passive](03_CharacterCreation#Choose-Your-Powers): A descriptor for Powers that are always in effect.
 - [Player](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Active participant
   in the story.
-- [Rest](01_PlayerGuide_Full.md#Rests): Break for the character during which the Player shuffles cards and replenishes resources.
-- [Skill](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): Subskill within
+- [Primary Suit]()
+- [Rest](01_PlayerGuide_Full.md#Rests): Break for the character during which the Player shuffles cards and replenishes resources. Quick Rests last 30 minutes; Full Rests last 8 hours.
+- [Rest Cards](01_PlayerGuide_Full.md#Rests): A limited pool of cards used to recover Health or Fate Points during Quick Rests.
+- [Skill](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): A ubskill within an
   Attribute, each with associated Modifier.
 - [TC, Target Card](01_PlayerGuide_Full.md#Making-a-Check): The card that sets the mid-point of the range for a Check.
 - The House: Audience observing the game, neither player nor GM.

@@ -4,30 +4,30 @@
 
 ## Table of Contents
 
-<!-- MarkdownTOC -->
-
-- What is a Tabletop Game System?
-- Guiding Principles
-- The Action Deck
-- Fate Cards
-- Characters
-   - Attributes, Skills, and Modifiers
-   - Dealers, Bystanders and Companions
-- Playing the Game
-   - Exploration and Adventuring
-   - Making a Check
-      - Degrees of Success
-      - Upper and Lower Hand
-      - Contested Checks
-   - In Combat
-      - Taking Turns
-      - In Combat Actions
-      - Status Conditions
-   - Health and Armor
-   - Epic Events
-   - Rests
-- Character Creation
-- Starting your adventure
+<!-- MarkdownTOC --> <!-- BROZ: Check that links work -->
+- [What is a Tabletop Game System?](#What-is-a-Tabletop-Game-System?)
+- [Guiding Principles](#Guiding-Principles)
+- [The Action Deck](#The-Action-Deck)
+- [Fate Cards](#Fate-Cards)
+- [Characters](#Characters)
+   - [Attributes, Skills, and Modifiers](#Attributes,-Skills,-and-Modifiers)
+   - [Dealers, Bystanders and Companions](#Dealers,-Bystanders-and-Companions)
+- [Playing the Game](#Playing-the-Game)
+   - [Exploration and Adventuring](#Exploration-and-Adventuring)
+   - [Making a Check](#Making-a-Check)
+      - [Degrees of Success](#Degrees-of-Success)
+      - [Upper and Lower Hand](#Upper-and-Lower-Hand)
+      - [Contested Checks](#Contested-Checks)
+   - [In Combat](#In-Combat)
+      - [Taking Turns](#Taking-Turns)
+      - [In Combat Actions](#In-Combat-Actions)
+      - [Status Conditions](#Status-Conditions)
+   - [Health and Armor](#Health-and-Armor)
+   - [Epic Events](#Epic-Events)
+   - [Rests](#Rests)
+   - [Primary Suit](#Primary-Suit)
+- [Character Creation](#Character-Creation)
+- [Starting your adventure](#Starting-your-adventure)
 
 <!-- /MarkdownTOC -->
 
@@ -149,7 +149,7 @@ creative!
 ### Dealers, Bystanders and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
-considered *Dealers* and differ from the majority of other characters in the world. The
+considered Dealers and differ from the majority of other characters in the world. The
 GM may control other Dealers who can take the form of powerful allies or adversaries
 the players may encounter along the way. 
 
@@ -180,7 +180,7 @@ Bestiary for a list of potential Companions and their unique features.
 The players are creating and experiencing the world at the same time. Adventures can
 include exploring the world, investigating for clues, and engaging in social
 interactions with other players and non-playable characters. During an Adventure, the
-GM will ask players to *Make a Check* by drawing a card and adding the modifier
+GM will ask players to Make a Check by drawing a card and adding the modifier
 relevant to the circumstance.
 
 1. **Setting the Scene.** The GM will include a brief descriptions of important events
@@ -265,7 +265,7 @@ modifier is +1, the check is ...
 impress their allies without any other perks.
 
 3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1, 
-this is 5, 6, 7, 9, 10 or J. If Xena draws a J, she may subtract 1 to report a 10, 
+this is 5, 6, 7, 9, 10 or J. If Xena draws a J, they may subtract 1 to report a 10, 
 within the DR.
 
 4. A Color Success for any Successes that match the color of the TC.
@@ -284,10 +284,12 @@ J. Xena might have a Power that lets them redraw on a Suited Miss, for example.
 Sometimes the odds will be in your favor; sometimes they will be against you. 
 
 1. Having the Upper Hand (N) means you draw N additional cards and select the card 
-closest to the TC after applying all relevant mechanics. 
+closest to the TC after applying all relevant mechanics. A player may choose to stop 
+drawing before N cards are drawn.
 
 2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
-is furthest from the TC after applying all relevant mechanics. 
+is furthest from the TC after applying all relevant mechanics. A play must draw all N
+cards.
 
 In these cases, the other card is discarded. If N is not specified, draw 1 extra.
 Multiple Upper/Lower hand effects can compound or even out. If a rule specifies
@@ -347,31 +349,32 @@ and need more time to think.
 
 #### In Combat Actions
 
-On a turn, a character may (a) move, and (b) perform action(s) in any order they choose.
 Each turn represents 6 seconds of game time passing.
+On a turn, a character may (a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order they choose. They may also perform any number of Free Actions,
+within reason, as permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be 
 split to occur before, after, and/or between actions.
 
-2. **Actions** In addition to their movement, players can perform up an action.
-Something that doesn't take up this resource is considered 'free'. Actions include...
-   
-   - **An attack.** Character combat actions are described on the character sheet are
-       associated with the character's Primary Skill Modifier, unless otherwise noted.
-       The character draws a card and may add their modifier before reporting the
-       result. 
+2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit others. If an action specifies a skill, this requires a check.
 
-   - **An object interaction.** Pressing a button, pulling a lever, using a disposable
+   1. **Free**
+      - *Communication* that does not require a check.
+      - *Observation*: gaining obvious information about the world.
+      - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card used.
+
+   2. **Minor**
+      - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
-   
-   - **Communicating.** If communication requires a check (e.g., convincing an enemy to
-       surrender), this takes an action. Shouting information to an ally, or
-       roleplaying the scene is free. 
+      - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something about an opponent or the terrain.
+      - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their course of action
+      - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a specific piece of information 
 
-3. **Toughening up.** - A Dealer may discard one or more Fate Cards to nullify one
-damage per Fate card used. This is free, but must be taken before the end of the
-Dealer's next turn.
+   3. **Major**
+      - *Rush*: double movement
+      - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
+      - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against you by target(s) who failed
 
 #### Status Conditions
 
@@ -380,43 +383,39 @@ is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction
 Check at the start of their turn vs their  own TC. If failed, they may either move or
-make one action on their turn, not both. Some creatures can cause the Stunned Condition
+make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend an action to make a DR 3 Strength check. Until they
-are successful, they may not move.
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until they
+are successful, they may not move and any Agility Checks are made with Lower Hand.
 
-3. **Knocked Down** A Dealer must expend an action to get up. Their movement speed is
-halved, rounding up. When Knocked Down, attackers within 1 space draw with Upper Hand
-(1) and attackers further than 1 space away draw with Lower Hand (1).
+3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed is
+halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space away draw with Lower Hand.
 
-4. **Blinded, Deafened** At the start of their turn, a Dealer makes a DR 3 Intuition
+4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Intuition
 Check vs. their TC. If they fail, they draw Lower Hand (3) for any action requiring the
 relevant sense.
 
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft
 check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn passed
 since the effect onset). If a Knocked Out Dealer is attacked further, the player begins
-an Epic Event alone. Each additional hit requires a Conviction Check vs. their
-attacker's TC that the player may respond to with one or more cards to pass an unknown
-DR as the Great Void calls out to them. Each additional card played grants +1
-modifier.
+an Epic Event alone.
 
-6. **Burned** As an action, a Dealer can make a DR 3 Intuition check to stop the
+6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
-7. **Poisoned** At the start of their turn, a Dealer makes a DR 3 Vitality Check to 
+7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Vitality Check to 
 shake off the effects of the poison. On a failure, they take 1 damage bypassing AP. 
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
-Hand (1). A Dealer makes a DR 3 Strength Check at the end of their turn to attempt to
+Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to attempt to
 end the freeze.
 
 ### Health and Armor
 
 Dealers have 4 health points (HP) plus their level, plus Vitality modifier. The health
 of Companions HP is half the level of their Dealer, rounding up. If a character is
-wounded beyond their health pool, they are *Knocked Out*. Armor Points (AP) are an
+wounded beyond their health pool, they are Knocked Out. Armor Points (AP) are an
 additional resource that would be removed first in the event of a physical wound. 
 
 Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack
@@ -445,52 +444,108 @@ armor may be worn at the same time.
 
 ### Epic Events
 
-At any point, the DM may call for an Epic Event, usually involves player(s) needing to
-make a series of successes in a short time period. For example, an earthquake causes 
-the building to become unsteady. All characters must act quickly to get out before 
-a collapse
+<!-- Add Knocked Out details -->
 
-During an epic event...
-1. Players draw 5 cards. 
+At any point, the DM may call for an Epic Event. The GM will narrate a particularly tense scenario and the player(s) must navigate the challenge. This usually involves player(s) needing
+to make a series of successes in a short time period. During an Epic Event...
 
-2. The DM will call for a series of Checks, revealing TCs and corresponding Attributes
-or skills. Any subset of players may volunteer for any of these Checks.
+1. The GM draws a TC related to a specific task during the event. The GM determines the total number of TCs and the amount of successes or failures needed to complete the Epic Event. 
 
-3. During an individual check, players play 1 card and may sacrifice others. Each card
-discarded adds +1 Modifier.
+2. One or more players may announce how they would attempt this task. The GM decides the
+relevant Attribute or Skill, so each player may apply the relevant modifier. The GM
+applies no modifier.
 
-4. Fate Cards card mechanics remain the same: played Ks and As return to the player’s
-hand. If played as Fate Cards, they result in a number of discards and redraws equal to
-the number Fate Cards played.
+3. Each player involved and the GM take turns drawing on this TC, looking for a Suited
+Hit. If a player succeeds first, this is a success for the party. If the GM succeeds
+first, this is a failure. 
 
-5. If no player volunteers for a check, or no player has cards remaining, the Check is
-an automatic miss.
+This process repeats for each TC in the Epic Event. A player may not volunteer for
+sequential TCs. Just as in standard Checks, a failure may be associated with some
+drawbacks. Successive failures could change the course of the story. Fate Cards card
+mechanics still apply: played As return to the player’s hand. Players may use Fate
+Cards for redraws.
 
-The GM determines when an Epic Event has been resolved, and how many individual checks
-constitute collective success or failure. On successful resolution, the narrative will 
-move forward and the GM will resume normal play. On a failure during an Epic Event, the 
-GM will lay out the consequences and give the players a chance to react.
+**For example**, an earthquake causes a cavern to shake. The party must act quickly
+  to get out before a collapse
+
+1. The GM reveals a TC: a 4 of Hearts, with DR 4. How will the party navigate their way to safety?
+
+2. Xena and Elise both volunteer for this TC. Xena will attempt to remember the way
+back, and will be making Knowledge Checks. Elise is a skilled survivalist, with
+experience in rock formations, and will be making Craft Checks.
+
+   1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited Match.
+   
+   2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
+   good headway.
+   
+3. The GM reveals a new TC: a K of Spades, with DR 3. A cultist blocks their path.
+
+4. Genesis volunteers to distract the cultists, using Performance Checks. Genesis and
+the GM each draw: Genesis, then the GM, then Genesis, then the GM, etc. Finally, the GM
+draws a Q of Spades. The cultist sees the remaining party members.
+
+5. The GM reveals a new TC, DR 2. All party members must make Athletics checks to outrun the cultist.
+
+When a Dealer is Knocked Out in combat, their subsequent turns are replaced with Epic
+Event TCs of DR 4 Vitality Checks. If they take additional damage, they make these
+checks at Lower Hand (+1). If they succeed on two TCs, they remain unconscious and the
+Epic Event is concluded. For a Major Success (same value as TC), they recover 1 HP. For
+a Critical Success, they recover 1 HP and up to 3 FP (FP max permitting). If they fail
+two of these TCs, they are called to the great beyond. 
 
 ### Rests
 
-Rests are common throughout a session. There are two types of rests. A *Quick Rest*
-represents a short 30-minute break from the action, where characters may be catching
-their breath or healing their wounds. A *Full Rest* is an 8-hour period of time where
+Rests are common throughout a session. There are two types of rests. A Quick Rest
+represents a short 30-minute break, where characters may be catching
+their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
-During a *Quick Rest*, each player who is resting can draw a number of *Rest Cards*
-determined by their level. Each *Rest Card* drawn regains 1 HP or FP. If the card drawn
-is the same as the character's Primary Suit, regain an additional 1 HP or FP. Shuffle
-your discard pile back into your deck after completing a *Quick Rest*.
+During a Quick Rest, each player who is resting draw from their deck using Rest Cards. Players start with a number of Rest Cards equal to the sum of their maximum Health and Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn
+is the same as the players's Primary Suit, regain an additional 1 Health or Fate Point.
+To recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge Skill check of DR 7 minus the number of points they are attempting to recover. If the Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand.
+For standard play, Shuffle
+your discard pile back into your deck after completing a Quick Rest. 
+For hardcore play, continue without shuffling.
 
-After completing a *Full Rest*, shuffle your discard pile back into your deck, along
+After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
-used. You also replenish all expended Fate Points and your Health Points return to
-their maximum. Rest Cards return to their full value after a *Full Rest*.
+used. Fate, Health, and Armor Points all return to
+their maximum. Rest Cards return to their full value after a Full Rest.
 
 If you run out of cards before you can successfully take a Rest, you may shuffle and
 always draw with the Lower Hand when making a check. This signifies your character
 running out of Stamina during a long day. 
+
+### Primary Suit
+
+Each Dealer has a connection to a Primary Suit, as suggested by their Role. In addition
+to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action for
+additional benefits starting at Level 2. For 2 cards discarded, up to a limit of 4, an
+Upper/Lower Hand +1 is granted described below. 
+
+- Diamonds ♦️ : Casters Dealers have explosive damage but they run out of gas really
+  fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
+
+- Clubs ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
+  can choose to *bury* N cards to force all creatures within 2 spaces to make their
+  next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
+
+- Hearts ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
+  within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper Hand
+  (N/2) on their next draw.
+
+- Spades ♠️ : Offense Dealers deploy all sorts of mechanisms for drawing the eye of
+  enemies away from their allies. They can *scrap* N cards and cause an enemy to make
+  Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
+
+The discard limit increases with level according to the table below.
+
+| Level | Discard Cap | Bonus |
+|:-----:|:-----------:|:-----:|
+|   1   |      4      |   2   |
+|   5   |      6      |   3   |
+|   8   |      8      |   4   |
 
 ## Character Creation
 

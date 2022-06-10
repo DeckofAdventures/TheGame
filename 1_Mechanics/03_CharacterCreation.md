@@ -71,21 +71,12 @@ Adding a Power with an FP cost raises the character's maximum FP by the largest 
 of FP listed for that Power. FP are replenished on a [Rest]
 (01_PlayerGuide_Full.md#Rests).
 
-Unless otherwise noted, Powers take one action to perform and use a Dealer's Primary
-Skill Modifier. Unless otherwise noted, Powers with duration (e.g., an activated
-shield) may only be used one at a time. Using a second Power will nullify the effects
-of the first. Powers described as Passive take no action and are always in effect.
-Unless otherwise noted, Powers deal 1 damage.
-
-Power types:
-- **Passive**: always in effect.
-- **Minor**
-   + One action.
-   + No cost to use.
-- **Major**: 
-   + One action.
-   + Fate Point (FP) cost to use. 
-   + Adds maximum FP value to character's FP maximum.
+Unless otherwise noted, Powers...
+1. Take a Major Action to perform and use a Dealer's Primary
+ Skill Modifier. 
+2. That have sustained effects, may only be used one at a time. Passive Powers take no action and are always in effect.
+3. That damage, deal 1 point of damage.
+4. That have implied range, may be used up to 6 spaces away.
 
 ### Choose Your Vulnerabilities
 
