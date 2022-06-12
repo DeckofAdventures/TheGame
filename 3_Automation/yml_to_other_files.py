@@ -225,7 +225,7 @@ def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
     with open(out_md, "w", newline="") as f:
         f.write(
             f"# {file_title}\n\n<!-- DEVELOPERS: Please edit corresponding yaml in "
-            + "3_Automation -->\n\n<!-- MarkdownTOC -->\n"
+            + "3_Automation -->\n\n<!-- MarkdownTOC add_links=True -->\n"
         )  # md Title
         TOC = ""  # Table of contents
         for k, v in categories.items():
