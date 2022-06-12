@@ -2,7 +2,7 @@
 
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC add_links=True -->
 - [Combat](#Combat)
    - [Control](#Control)
    - [Mystic Attacks](#Mystic-Attacks)
