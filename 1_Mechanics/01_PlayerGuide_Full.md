@@ -524,13 +524,13 @@ to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action 
 additional benefits starting at Level 2. For 2 cards discarded, up to a limit of 4, an
 Upper/Lower Hand +1 is granted described below. 
 
-<!-- Agro/Intense/etc are labels to make it easier to put them on char sheets. -->
+<!-- Aggro/Intensify/etc are labels to make it easier to put them on char sheets. -->
 
-- Clubs ♣️, Agro: Defense Dealers have a strong foundation and can take the big hits. They
+- Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits. They
   can choose to *bury* N cards to force all creatures within 2 spaces to make their
   next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
 
-- Diamonds ♦️, Intense: Casters Dealers have explosive damage but they run out of gas really
+- Diamonds ♦️, Intensify: Casters Dealers have explosive damage but they run out of gas really
   fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
 
 - Hearts ♥️, Help: Life Dealers are fluid and flexible to adapt the situation. If they are
