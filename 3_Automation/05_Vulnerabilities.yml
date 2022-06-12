@@ -103,6 +103,13 @@ Outsider:
     Mechanic: For any Conviction check to interact with the dominant society, you draw with the Lower Hand. If chosen as Major, work with the GM to decide some feature of your background that makes you unwelcome in most public places.
     Type: Minor or Major
 
+Pascifist:
+    Category: Combat
+    Subcategory: None
+    Type: Major
+    Description: You've taken an oath of nonviolence. To break this oath would have severe consequences.
+    Mechanic: You may not knowingly inflict harm.
+
 Phobia:
     Category: Roleplay
     Subcategory: Knives

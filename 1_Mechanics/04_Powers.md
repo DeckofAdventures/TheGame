@@ -3,25 +3,76 @@
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
 <!-- MarkdownTOC -->
-
-- Combat
-   - Mystic Attacks
-   - Control
-   - Support
-   - Weapon Attacks
-- Companion
-- Game Mechanics
-   - Fate Cards
-   - Adjust Odds
-- Magic
-- Movement
-   - Speed
-   - Stealth
-- Roleplay
-
+- [Combat](#Combat)
+   - [Control](#Control)
+   - [Mystic Attacks](#Mystic-Attacks)
+   - [Support](#Support)
+   - [Weapon Attacks](#Weapon-Attacks)
+- [Companion](#Companion)
+- [Game Mechanics](#Game-Mechanics)
+   - [Fate Cards](#Fate-Cards)
+   - [Adjust Odds](#Adjust-Odds)
+- [Magic](#Magic)
+- [Movement](#Movement)
+   - [Speed](#Speed)
+   - [Stealth](#Stealth)
+- [Roleplay](#Roleplay)
 <!-- /MarkdownTOC -->
 
 ## Combat
+
+### Control
+
+- Name: Battlecharged
+   - Description: You're always ready for something to go down.
+   - Mechanic: When drawing initiative, Draw with Upper Hand.
+   - Type: Passive
+      - XP Cost: 1
+   - Tags: None
+
+- Name: Critical Master
+   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Level: 3
+   - Tags: None
+
+- Name: Momentum
+   - Description: By brute strength, force others to move around the battlefield.
+   - Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 1
+   - Tags: None
+
+- Name: Momentum Aura
+   - Description: Your strength is supernatural, bending the gravity around you.
+   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
+   - Type: Passive
+      - XP Cost: 2
+   - Prereq Power: Momentum
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 2
+   - Tags: Multi-target
+
+- Name: Find Weakness
+   - Description: You can size up an opponent and discover their weaknesses.
+   - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
+
+- Name: Pack Tactics
+   - Description: When an enemy is outnumbered, you know just how to take advantage.
+   - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+   - Type: Minor
+      - XP Cost: 2
+      - FP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
 
 ### Mystic Attacks
 
@@ -112,59 +163,6 @@
    - Prereq Level: 3
    - Prereq Power: Attack, Mystic Dual-Shot
    - Tags: Multi-target
-
-### Control
-
-- Name: Battlecharged
-   - Description: You're always ready for something to go down.
-   - Mechanic: When drawing initiative, Draw with Upper Hand.
-   - Type: Passive
-      - XP Cost: 1
-   - Tags: None
-
-- Name: Critical Master
-   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
-   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
-   - Type: Passive
-      - XP Cost: 1
-   - Prereq Level: 3
-   - Tags: None
-
-- Name: Momentum
-   - Description: By brute strength, force others to move around the battlefield.
-   - Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
-   - Type: Passive
-      - XP Cost: 1
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 1
-   - Tags: None
-
-- Name: Momentum Aura
-   - Description: Your strength is supernatural, bending the gravity around you.
-   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
-   - Type: Passive
-      - XP Cost: 2
-   - Prereq Power: Momentum
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 2
-   - Tags: Multi-target
-
-- Name: Find Weakness
-   - Description: You can size up an opponent and discover their weaknesses.
-   - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Level: 2
-   - Tags: Difficulty Prediction
-
-- Name: Pack Tactics
-   - Description: When an enemy is outnumbered, you know just how to take advantage.
-   - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
-   - Type: Minor
-      - XP Cost: 2
-      - FP Cost: 1
-   - Prereq Level: 2
-   - Tags: Difficulty Prediction
 
 ### Support
 
@@ -292,7 +290,7 @@
    - Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 2
+      - FP Cost: 1 or 2
    - Prereq Power: Attack, Weapon
    - Prereq Role: Defender or Martial
    - Tags: None
@@ -346,9 +344,9 @@
 
 - Name: Creature Connection
    - Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
-   - Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check. Unlike other Simple Powers, taking this Power costs 5 XP.
+   - Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
    - Type: Passive
-      - XP Cost: 3
+      - XP Cost: 5
    - Prereq Skill: Craft > 1 or Knowledge > 1
    - Tags: Companion
 
@@ -406,7 +404,7 @@
 
 - Name: Luck Shared
    - Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-   - Mechanic: When you get a Suited Hit, on your next turn, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
+   - Mechanic: When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
    - Type: Minor
       - XP Cost: 1
    - Tags: Suited Hit
@@ -454,7 +452,7 @@
    - Description: Be still and meditate to draw energy from deep within you.
    - Mechanic: As a Minor Action, recover 1 FP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
    - Type: Minor
-      - XP Cost: 1
+      - XP Cost: 2
    - Prereq Role: Support or Caster
    - Tags: None
 

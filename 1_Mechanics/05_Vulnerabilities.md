@@ -28,6 +28,11 @@
    - Mechanic: If you are attacked in combat, you must only use offensive Power attacks until your attacker is Knocked Out.
    - Type: Major
 
+- Name: Pascifist
+   - Type: Major
+   - Description: You've taken an oath of nonviolence. To break this oath would have severe consequences.
+   - Mechanic: You may not knowingly inflict harm.
+
 ## Party
 
 - Name: Chaotic Companion
