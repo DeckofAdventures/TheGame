@@ -524,18 +524,20 @@ to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action 
 additional benefits starting at Level 2. For 2 cards discarded, up to a limit of 4, an
 Upper/Lower Hand +1 is granted described below. 
 
-- Diamonds ♦️ : Casters Dealers have explosive damage but they run out of gas really
-  fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
+<!-- Aggro/Intensify/etc are labels to make it easier to put them on char sheets. -->
 
-- Clubs ♣️ : Defense Dealers have a strong foundation and can take the big hits. They
+- Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits. They
   can choose to *bury* N cards to force all creatures within 2 spaces to make their
   next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
 
-- Hearts ♥️ : Life Dealers are fluid and flexible to adapt the situation. If they are
+- Diamonds ♦️, Intensify: Casters Dealers have explosive damage but they run out of gas really
+  fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
+
+- Hearts ♥️, Help: Life Dealers are fluid and flexible to adapt the situation. If they are
   within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper Hand
   (N/2) on their next draw.
 
-- Spades ♠️ : Offense Dealers deploy all sorts of mechanisms for drawing the eye of
+- Spades ♠️, Thwart: Offense Dealers deploy all sorts of mechanisms for drawing the eye of
   enemies away from their allies. They can *scrap* N cards and cause an enemy to make
   Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
 

@@ -2,7 +2,7 @@
 
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
-<!-- MarkdownTOC -->
+<!-- MarkdownTOC add_links=True -->
 - [Combat](#Combat)
 - [Party](#Party)
 - [Roleplay](#Roleplay)
@@ -27,6 +27,11 @@
    - Description: An attacker has made their choice; that choice is to die.
    - Mechanic: If you are attacked in combat, you must only use offensive Power attacks until your attacker is Knocked Out.
    - Type: Major
+
+- Name: Pacifist
+   - Type: Major
+   - Description: You've taken an oath of nonviolence. To break this oath would have severe consequences.
+   - Mechanic: You may not knowingly inflict harm.
 
 ## Party
 

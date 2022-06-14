@@ -50,8 +50,9 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
 
 Both at character creation (6) and at the GM's discretion for each level up (3), you are
 awarded Experience Points. These can be spent to gain additional Powers, boost an
-Attribute, a Skill, add to the Powers you know, or remove a Vulnerability. Total XP is
-equal to 6 + (level * 3).
+Attribute, a Skill, or remove a Vulnerability. Total XP is
+equal to 6 + (level * 3). DM permitting, you may respec, or exchange powers for their 
+equivalent XP value.
 
 ### Choose Your Powers
 

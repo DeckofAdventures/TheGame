@@ -37,7 +37,7 @@ Attack, Charge:
   Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
   Type: Major
   XP Cost: 2
-  FP Cost: 2
+  FP Cost: [1, 2]
   Prereq Power: Attack, Weapon
   Prereq Role:
     - Defender
@@ -410,9 +410,9 @@ Creature Connection:
   Category: Companion
   Subcategory: None
   Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
-  Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check. Unlike other Simple Powers, taking this Power costs 5 XP. 
+  Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
   Type: Passive
-  XP Cost: 3
+  XP Cost: 5
   Prereq Skill: 
     - Craft > 1
     - Knowledge > 1
@@ -465,7 +465,7 @@ Luck Shared:
   Category: Game Mechanics
   Subcategory: Adjust Odds
   Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-  Mechanic: When you get a Suited Hit, on your next turn, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
+  Mechanic: When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
   Type: Minor
   XP Cost: 1
   Tags: Suited Hit
@@ -536,7 +536,7 @@ Mystic Recovery:
   Description: Be still and meditate to draw energy from deep within you.
   Mechanic: As a Minor Action, recover 1 FP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
   Type: Minor
-  XP Cost: 1
+  XP Cost: 2
   Prereq Role: [Support, Caster]
   Tags:
 

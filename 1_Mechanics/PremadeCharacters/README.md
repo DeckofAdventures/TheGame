@@ -14,6 +14,6 @@ Living among humans as an android has cultivated her drive for pacifism.
 wolf companion is always by their side, an extension of their senses, and a 
 manifestation of their commitment to protect the natural world at all costs.
 
-4. **Caster** Locklear is learn'ed mage. He's light on his feet and uses magic to 
+4. **Caster** Locklear is a learn'ed mage. He's getting on in years and uses magic to 
 navigate the world, be it illusion or explosion. Vain to a fault, but some of his 
 narcissism may be justified.
