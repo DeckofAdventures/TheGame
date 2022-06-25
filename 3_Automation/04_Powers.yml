@@ -247,6 +247,7 @@ Momentum Aura:
   Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
   Type: Passive
   XP Cost: 2
+  FP Cost: 1
   Prereq Power: Momentum
   Prereq Role: Defender
   Prereq Skill: Brute > 2

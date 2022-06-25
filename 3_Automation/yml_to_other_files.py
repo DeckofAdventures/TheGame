@@ -299,7 +299,10 @@ def main(writing=[], input_file="04_Powers.yml", out_delim="\t"):
         graph = graphs[0]
 
         if "png" in writing:
-            graph.write_png(out_png, prog="dot.exe")
+            try:
+                graph.write_png(out_png, prog="dot.exe")
+            except FileNotFoundError:
+                graph.write_png(out_png)
             logging.info("Wrote png")
         if "svg" in writing:
             graph.write_svg(out_svg)

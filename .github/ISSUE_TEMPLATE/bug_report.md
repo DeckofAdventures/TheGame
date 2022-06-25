@@ -21,4 +21,4 @@ Add any additional context that was considered in creating this report.
 
 For example:
 - Related GitHub issues and PRs.
-- Comperable game systems, and their development history.
+- Comparable game systems, and their development history.

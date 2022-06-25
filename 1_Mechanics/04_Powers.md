@@ -5,9 +5,9 @@
 <!-- MarkdownTOC add_links=True -->
 - [Combat](#Combat)
    - [Support](#Support)
+   - [Control](#Control)
    - [Mystic Attacks](#Mystic-Attacks)
    - [Weapon Attacks](#Weapon-Attacks)
-   - [Control](#Control)
 - [Companion](#Companion)
 - [Game Mechanics](#Game-Mechanics)
    - [Fate Cards](#Fate-Cards)
@@ -131,6 +131,60 @@
       - FP Cost: 1 or 2
    - Prereq Role: Defender
    - Tags: None
+
+### Control
+
+- Name: Battlecharged
+   - Description: You're always ready for something to go down.
+   - Mechanic: When drawing initiative, Draw with Upper Hand.
+   - Type: Passive
+      - XP Cost: 1
+   - Tags: None
+
+- Name: Critical Master
+   - Description: When you hit big, you hit BIG. Enemies donâ€™t stand a chance against you when you make a critical hit against them.
+   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Level: 3
+   - Tags: None
+
+- Name: Momentum
+   - Description: By brute strength, force others to move around the battlefield.
+   - Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
+   - Type: Passive
+      - XP Cost: 1
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 1
+   - Tags: None
+
+- Name: Momentum Aura
+   - Description: Your strength is supernatural, bending the gravity around you.
+   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
+   - Type: Passive
+      - XP Cost: 2
+      - FP Cost: 1
+   - Prereq Power: Momentum
+   - Prereq Role: Defender
+   - Prereq Skill: Brute > 2
+   - Tags: Multi-target
+
+- Name: Find Weakness
+   - Description: You can size up an opponent and discover their weaknesses.
+   - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
+
+- Name: Pack Tactics
+   - Description: When an enemy is outnumbered, you know just how to take advantage.
+   - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+   - Type: Minor
+      - XP Cost: 2
+      - FP Cost: 1
+   - Prereq Level: 2
+   - Tags: Difficulty Prediction
 
 ### Mystic Attacks
 
@@ -287,59 +341,6 @@
    - Prereq Power: Attack, Dual-Wield
    - Tags: None
 
-### Control
-
-- Name: Battlecharged
-   - Description: You're always ready for something to go down.
-   - Mechanic: When drawing initiative, Draw with Upper Hand.
-   - Type: Passive
-      - XP Cost: 1
-   - Tags: None
-
-- Name: Critical Master
-   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
-   - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
-   - Type: Passive
-      - XP Cost: 1
-   - Prereq Level: 3
-   - Tags: None
-
-- Name: Momentum
-   - Description: By brute strength, force others to move around the battlefield.
-   - Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
-   - Type: Passive
-      - XP Cost: 1
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 1
-   - Tags: None
-
-- Name: Momentum Aura
-   - Description: Your strength is supernatural, bending the gravity around you.
-   - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
-   - Type: Passive
-      - XP Cost: 2
-   - Prereq Power: Momentum
-   - Prereq Role: Defender
-   - Prereq Skill: Brute > 2
-   - Tags: Multi-target
-
-- Name: Find Weakness
-   - Description: You can size up an opponent and discover their weaknesses.
-   - Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Level: 2
-   - Tags: Difficulty Prediction
-
-- Name: Pack Tactics
-   - Description: When an enemy is outnumbered, you know just how to take advantage.
-   - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
-   - Type: Minor
-      - XP Cost: 2
-      - FP Cost: 1
-   - Prereq Level: 2
-   - Tags: Difficulty Prediction
-
 ## Companion
 
 - Name: Creature Connection
@@ -375,7 +376,7 @@
 - Name: Aces Wild
    - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
    - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round
+      - Ace of Clubs: you can play this card to interrupt an enemyâ€™s turn and make a single Major ction - even if you already went that round
       - Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP
       - Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
       - Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
@@ -461,7 +462,7 @@
 ### Speed
 
 - Name: Speedy
-   - Description: You’re quicker than the rest.
+   - Description: Youâ€™re quicker than the rest.
    - Mechanic: When you take this Power, your combat speed increases by 2 squares.
    - Type: Passive
       - XP Cost: 1
@@ -539,7 +540,7 @@
    - Tags: None
 
 - Name: Keen Eye
-   - Description: You’re especially adept at taking in the world around you.
+   - Description: Youâ€™re especially adept at taking in the world around you.
    - Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
    - Type: Passive
       - XP Cost: 1
