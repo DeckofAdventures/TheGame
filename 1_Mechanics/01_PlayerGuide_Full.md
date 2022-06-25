@@ -91,9 +91,12 @@ Fate Card.
 3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
 redraw. Only one redraw is permitted per check.
 
-4. Fate Cards may also be expended to ignore damage equal to the number of Fate Cards
-used. This must be done before the end of the Player's next turn after recieving
-damage.
+4. Fate Cards may also be expended to either ... 
+   
+   1. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
+   done before the end of the Player's next turn after recieving damage.
+   
+   2. *Exchange Fate*: gain Fate Points equal to the number of Fate Cards used.
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
@@ -218,10 +221,10 @@ The GM may describe the nature of the outcome or announce the degree of success 
 the player to describe how their character successfully accomplishes the action. 
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
-dialing in your effort to match the task at hand as closely as possible. Remembering which card is 5
-below a 3 can be tough, so there is a table below as well as a 
-[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you get familiar
-with the system.
+dialing in your effort to match the task at hand as closely as possible. Remembering
+which card is 5 below a 3 can be tough, so there is a table below as well as a
+[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you
+get familiar with the system.
 
 **Target Card Range Table**
 For each card on the left, refer to the column with the corresponding DR. 
@@ -305,8 +308,9 @@ pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
 cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
-sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant modifier,
-to a minimum of 0. The character(s) responding are the Target(s). Rules that describe a 
+sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant
+modifier, to a minimum of 0. The character(s) responding are the Target(s). Rules that
+describe a 
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
 fail individually.
 
@@ -349,32 +353,41 @@ and need more time to think.
 
 #### In Combat Actions
 
-Each turn represents 6 seconds of game time passing.
-On a turn, a character may (a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order they choose. They may also perform any number of Free Actions,
-within reason, as permitted by the GM.
+Each turn represents 6 seconds of game time passing. On a turn, a character may
+(a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order
+they choose. They may also perform any number of Free Actions, within reason, as
+permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be 
 split to occur before, after, and/or between actions.
 
-2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit others. If an action specifies a skill, this requires a check.
+2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
+others. If an action specifies a skill, this requires a check.
 
    1. **Free**
       - *Communication* that does not require a check.
       - *Observation*: gaining obvious information about the world.
-      - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card used.
+      - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
+         used.
+      - *Exchanging Fate*: discard one or more Fate Cards to gain one Fate Point per 
+        card used.
 
    2. **Minor**
       - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
-      - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something about an opponent or the terrain.
-      - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their course of action
-      - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a specific piece of information 
+      - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
+         about an opponent or the terrain.
+      - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
+         course of action
+      - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a
+         specific piece of information 
 
    3. **Major**
       - *Rush*: double movement
       - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
-      - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against you by target(s) who failed
+      - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
+         you by target(s) who failed
 
 #### Status Conditions
 
@@ -386,15 +399,18 @@ Check at the start of their turn vs their  own TC. If failed, they may either mo
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until they
-are successful, they may not move and any Agility Checks are made with Lower Hand.
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until
+they are successful, they may not move and any Agility Checks are made with Lower
+Hand.
 
-3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed is
-halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space away draw with Lower Hand.
+3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
+is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
+Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
+1 space away draw with Lower Hand.
 
-4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Intuition
-Check vs. their TC. If they fail, they draw Lower Hand (3) for any action requiring the
-relevant sense.
+4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
+DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
+action requiring the relevant sense.
 
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft
 check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn passed
@@ -404,12 +420,13 @@ an Epic Event alone.
 6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
-7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a DR 3 Vitality Check to 
-shake off the effects of the poison. On a failure, they take 1 damage bypassing AP. 
+7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a DR 3
+Vitality Check to shake off the effects of the poison. On a failure, they take 1 damage
+bypassing AP. 
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
-Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to attempt to
-end the freeze.
+Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
+attempt to end the freeze.
 
 ### Health and Armor
 
@@ -446,10 +463,14 @@ armor may be worn at the same time.
 
 <!-- Add Knocked Out details -->
 
-At any point, the DM may call for an Epic Event. The GM will narrate a particularly tense scenario and the player(s) must navigate the challenge. This usually involves player(s) needing
-to make a series of successes in a short time period. During an Epic Event...
+At any point, the DM may call for an Epic Event. The GM will narrate a particularly
+tense scenario and the player(s) must navigate the challenge. This usually involves
+player(s) needing to make a series of successes in a short time period. During an Epic
+Event...
 
-1. The GM draws a TC related to a specific task during the event. The GM determines the total number of TCs and the amount of successes or failures needed to complete the Epic Event. 
+1. The GM draws a TC related to a specific task during the event. The GM determines the
+total number of TCs and the amount of successes or failures needed to complete the Epic
+Event. 
 
 2. One or more players may announce how they would attempt this task. The GM decides the
 relevant Attribute or Skill, so each player may apply the relevant modifier. The GM
@@ -468,13 +489,15 @@ Cards for redraws.
 **For example**, an earthquake causes a cavern to shake. The party must act quickly
   to get out before a collapse
 
-1. The GM reveals a TC: a 4 of Hearts, with DR 4. How will the party navigate their way to safety?
+1. The GM reveals a TC: a 4 of Hearts, with DR 4. How will the party navigate their way
+to safety?
 
 2. Xena and Elise both volunteer for this TC. Xena will attempt to remember the way
 back, and will be making Knowledge Checks. Elise is a skilled survivalist, with
 experience in rock formations, and will be making Craft Checks.
 
-   1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited Match.
+   1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited
+   Match.
    
    2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
    good headway.
@@ -485,7 +508,8 @@ experience in rock formations, and will be making Craft Checks.
 the GM each draw: Genesis, then the GM, then Genesis, then the GM, etc. Finally, the GM
 draws a Q of Spades. The cultist sees the remaining party members.
 
-5. The GM reveals a new TC, DR 2. All party members must make Athletics checks to outrun the cultist.
+5. The GM reveals a new TC, DR 2. All party members must make Athletics checks to outrun
+the cultist.
 
 When a Dealer is Knocked Out in combat, their subsequent turns are replaced with Epic
 Event TCs of DR 4 Vitality Checks. If they take additional damage, they make these
@@ -501,12 +525,15 @@ represents a short 30-minute break, where characters may be catching
 their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
-During a Quick Rest, each player who is resting draw from their deck using Rest Cards. Players start with a number of Rest Cards equal to the sum of their maximum Health and Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn
-is the same as the players's Primary Suit, regain an additional 1 Health or Fate Point.
-To recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge Skill check of DR 7 minus the number of points they are attempting to recover. If the Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand.
-For standard play, Shuffle
-your discard pile back into your deck after completing a Quick Rest. 
-For hardcore play, continue without shuffling.
+During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
+Players start with a number of Rest Cards equal to the sum of their maximum Health and
+Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn is
+the same as the players's Primary Suit, regain an additional 1 Health or Fate Point. To
+recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
+Skill check of DR 7 minus the number of points they are attempting to recover. If the
+Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand. For
+standard play, Shuffle your discard pile back into your deck after completing a Quick
+Rest. For hardcore play, continue without shuffling.
 
 After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
@@ -521,25 +548,27 @@ running out of Stamina during a long day.
 
 Each Dealer has a connection to a Primary Suit, as suggested by their Role. In addition
 to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action for
-additional benefits starting at Level 2. For 2 cards discarded, up to a limit of 4, an
-Upper/Lower Hand +1 is granted described below. 
+additional benefits in combat starting at Level 2. For 2 cards discarded, up to a limit of 4, an
+Upper/Lower Hand +1 is granted described below. These effects do not stack; only one
+may be applied to a character at a time.
 
-<!-- Aggro/Intensify/etc are labels to make it easier to put them on char sheets. -->
+<!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
-- Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits. They
-  can choose to *bury* N cards to force all creatures within 2 spaces to make their
-  next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
+- Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits.
+  They can choose to *bury* N cards to force all creatures within 2 spaces to make
+  their next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
 
-- Diamonds ♦️, Intensify: Casters Dealers have explosive damage but they run out of gas really
-  fast. They can choose to *burn* N cards to make their next Check at Upper Hand (N/2).
+- Diamonds ♦️, Intensify: Casters Dealers have explosive damage but they run out of gas
+  really fast. They can choose to *burn* N cards to make their next Check at Upper
+  Hand (N/2).
 
-- Hearts ♥️, Help: Life Dealers are fluid and flexible to adapt the situation. If they are
-  within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper Hand
-  (N/2) on their next draw.
+- Hearts ♥️, Help: Life Dealers are fluid and flexible to adapt the situation. If they
+  are within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper
+  Hand(N/2) on their next draw.
 
-- Spades ♠️, Thwart: Offense Dealers deploy all sorts of mechanisms for drawing the eye of
-  enemies away from their allies. They can *scrap* N cards and cause an enemy to make
-  Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
+- Spades ♠️, Thwart: Offense Dealers deploy all sorts of mechanisms for drawing the eye
+  of enemies away from their allies. They can *scrap* N cards and cause an enemy to
+  make Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
 
 The discard limit increases with level according to the table below.
 
@@ -585,7 +614,10 @@ There are four steps to starting an adventure of Deck of Adventures:
 
 1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master (
 GM) and one player, but richer stories can be told with more people bringing more to the
-table. Join the Deck of Adventures Discord Server `LINK NEEDED` to find a group!
+table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF)! to find a group!
+
+*If the above link is expired, please 
+[submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!).*
 
 2. **Discuss play style:** Different players and GMs will have different preferences.
 Some love light-hearted misadventures, others enjoy dark melodrama. Some stories involve

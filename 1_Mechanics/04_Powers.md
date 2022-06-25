@@ -4,9 +4,9 @@
 
 <!-- MarkdownTOC add_links=True -->
 - [Combat](#Combat)
+   - [Support](#Support)
    - [Control](#Control)
    - [Mystic Attacks](#Mystic-Attacks)
-   - [Support](#Support)
    - [Weapon Attacks](#Weapon-Attacks)
 - [Companion](#Companion)
 - [Game Mechanics](#Game-Mechanics)
@@ -21,6 +21,117 @@
 
 ## Combat
 
+### Support
+
+- Name: Heal
+   - Description: Can channel magical energy or medical training to heal others
+   - Mechanic: Heal yourself or another you can see for 1 or 3 Health Points
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Role: Support
+   - Tags: None
+
+- Name: Lend Aid
+   - Description: Just a little help from a friend
+   - Mechanic: As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Role: Support
+   - Tags: None
+
+- Name: Lend Distraction
+   - Description: Just an annoyance in the distance
+   - Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
+   - Type: Minor
+      - XP Cost: 1
+   - Tags: None
+
+- Name: Lend Mass Distraction
+   - Description: You know how to cause a scene.
+   - Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Level: 2
+   - Prereq Power: Lend Distraction
+   - Tags: Multi-target
+
+- Name: Lend Confusion
+   - Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
+   - Mechanic: As a Major Action, select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
+   - Type: Major
+      - XP Cost: 1
+   - Prereq Level: 2
+   - Prereq Power: Lend Distraction
+   - Prereq Role: Support or Caster
+   - Tags: None
+
+- Name: Lend Mass Confusion
+   - Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
+   - Mechanic: You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 2
+   - Prereq Level: 3
+   - Prereq Power: Lend Confusion
+   - Prereq Role: Support or Caster
+   - Tags: Multi-target
+
+- Name: Lend/Remove Skill
+   - Description: You really know how to target an ability and either support it or get in it's way.
+   - Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Role: Support
+   - Tags: None
+
+- Name: Lend Readiness
+   - Description: Your talents bolster you allies' speed and alertness.
+   - Mechanic: Select one character. Until the end of the next combat, this character draws their Target Card with the Upper Hand. This effect is maintained even if you use another Power.
+   - Type: Minor
+      - XP Cost: 1
+   - Prereq Role: Support
+   - Tags: None
+
+- Name: Lend Vigor
+   - Description: Channel energy to do more than help: inspire!
+   - Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Role: Support or Caster
+   - Tags: None
+
+- Name: Slow
+   - Description: You selectively bend the nature of time
+   - Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 2
+   - Prereq Level: 3
+   - Prereq Role: Support or Caster
+   - Tags: None
+
+- Name: Shield, Others
+   - Description: Fortify others by summoning magical armor.
+   - Mechanic: Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Role: Support
+   - Tags: None
+
+- Name: Shield, Self
+   - Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
+   - Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
+   - Type: Major
+      - XP Cost: 2
+      - FP Cost: 1 or 2
+   - Prereq Role: Defender
+   - Tags: None
+
 ### Control
 
 - Name: Battlecharged
@@ -31,7 +142,7 @@
    - Tags: None
 
 - Name: Critical Master
-   - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+   - Description: When you hit big, you hit BIG. Enemies donâ€™t stand a chance against you when you make a critical hit against them.
    - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
    - Type: Passive
       - XP Cost: 1
@@ -52,6 +163,7 @@
    - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
    - Type: Passive
       - XP Cost: 2
+      - FP Cost: 1
    - Prereq Power: Momentum
    - Prereq Role: Defender
    - Prereq Skill: Brute > 2
@@ -86,7 +198,7 @@
 
 - Name: Attack, Mystic Aura
    - Description: You deploy resources to channel your magic all around you.
-   - Mechanic: You perform your Mystic Attack on all characters within 1/2 space(s).
+   - Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -118,7 +230,7 @@
 
 - Name: Attack, Mystic Confusion
    - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-   - Mechanic: You draw a Target Card and force 1/3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+   - Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -128,7 +240,7 @@
 
 - Name: Attack, Mystic Entangle
    - Description: You channel your abilities to tie your target in place.
-   - Mechanic: You draw a Target Card and force 1/3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
+   - Mechanic: You draw a Target Card and force 1 or 3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -138,7 +250,7 @@
 
 - Name: Attack, Mystic Deprivation
    - Description: You channel your abilities deprive a target of their senses.
-   - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1/3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
+   - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1 or 3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -164,117 +276,6 @@
    - Prereq Power: Attack, Mystic Dual-Shot
    - Tags: Multi-target
 
-### Support
-
-- Name: Heal
-   - Description: Can channel magical energy or medical training to heal others
-   - Mechanic: Heal yourself or another you can see for 1/3 Health Points
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Role: Support
-   - Tags: None
-
-- Name: Lend Aid
-   - Description: Just a little help from a friend
-   - Mechanic: As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Role: Support
-   - Tags: None
-
-- Name: Lend Distraction
-   - Description: Just an annoyance in the distance
-   - Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
-   - Type: Minor
-      - XP Cost: 1
-   - Tags: None
-
-- Name: Lend Mass Distraction
-   - Description: You know how to cause a scene.
-   - Mechanic: Draw a Target Card. 2/3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Level: 2
-   - Prereq Power: Lend Distraction
-   - Tags: Multi-target
-
-- Name: Lend Confusion
-   - Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
-   - Mechanic: As a Major Action, select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
-   - Type: Major
-      - XP Cost: 1
-   - Prereq Level: 2
-   - Prereq Power: Lend Distraction
-   - Prereq Role: Support or Caster
-   - Tags: None
-
-- Name: Lend Mass Confusion
-   - Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
-   - Mechanic: You draw a TC. 2/3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 2
-   - Prereq Level: 3
-   - Prereq Power: Lend Confusion
-   - Prereq Role: Support or Caster
-   - Tags: Multi-target
-
-- Name: Lend/Remove Skill
-   - Description: You really know how to target an ability and either support it or get in it's way.
-   - Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper/Lower Hand (2/3) checks that involve this Skill.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Role: Support
-   - Tags: None
-
-- Name: Lend Readiness
-   - Description: Your talents bolster you allies' speed and alertness.
-   - Mechanic: Select one character. Until the end of the next combat, this character draws their Target Card with the Upper Hand. This effect is maintained even if you use another Power.
-   - Type: Minor
-      - XP Cost: 1
-   - Prereq Role: Support
-   - Tags: None
-
-- Name: Lend Vigor
-   - Description: Channel energy to do more than help: inspire!
-   - Mechanic: Designate 1/2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Role: Support or Caster
-   - Tags: None
-
-- Name: Slow
-   - Description: You selectively bend the nature of time
-   - Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 2
-   - Prereq Level: 3
-   - Prereq Role: Support or Caster
-   - Tags: None
-
-- Name: Shield, Others
-   - Description: Fortify others by summoning magical armor.
-   - Mechanic: Add 1/2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Role: Support
-   - Tags: None
-
-- Name: Shield, Self
-   - Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-   - Mechanic: Add 1/2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
-   - Type: Major
-      - XP Cost: 2
-      - FP Cost: 1 or 2
-   - Prereq Role: Defender
-   - Tags: None
-
 ### Weapon Attacks
 
 - Name: Attack, Weapon
@@ -287,7 +288,7 @@
 
 - Name: Attack, Charge
    - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-   - Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
+   - Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -375,7 +376,7 @@
 - Name: Aces Wild
    - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
    - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-      - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round
+      - Ace of Clubs: you can play this card to interrupt an enemyâ€™s turn and make a single Major ction - even if you already went that round
       - Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP
       - Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
       - Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
@@ -432,7 +433,7 @@
 
 - Name: Barrier
    - Description: Your skills allow you to deploy temporary impromptu walls
-   - Mechanic: You create a wall 3/5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
+   - Mechanic: You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
    - Type: Major
       - XP Cost: 2
       - FP Cost: 1 or 2
@@ -461,7 +462,7 @@
 ### Speed
 
 - Name: Speedy
-   - Description: You’re quicker than the rest.
+   - Description: Youâ€™re quicker than the rest.
    - Mechanic: When you take this Power, your combat speed increases by 2 squares.
    - Type: Passive
       - XP Cost: 1
@@ -539,7 +540,7 @@
    - Tags: None
 
 - Name: Keen Eye
-   - Description: You’re especially adept at taking in the world around you.
+   - Description: Youâ€™re especially adept at taking in the world around you.
    - Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
    - Type: Passive
       - XP Cost: 1

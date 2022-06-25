@@ -34,7 +34,7 @@ Attack, Charge:
   Category: Combat
   Subcategory: Weapon Attacks
   Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-  Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
+  Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
   Type: Major
   XP Cost: 2
   FP Cost: [1, 2]
@@ -117,7 +117,7 @@ Attack, Mystic Aura:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You deploy resources to channel your magic all around you.
-  Mechanic: You perform your Mystic Attack on all characters within 1/2 space(s).
+  Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -156,7 +156,7 @@ Attack, Mystic Confusion:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-  Mechanic: You draw a Target Card and force 1/3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+  Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -168,7 +168,7 @@ Attack, Mystic Entangle:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You channel your abilities to tie your target in place.
-  Mechanic: You draw a Target Card and force 1/3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
+  Mechanic: You draw a Target Card and force 1 or 3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -180,7 +180,7 @@ Attack, Mystic Deprivation:
   Category: Combat
   Subcategory: Mystic Attacks
   Description: You channel your abilities deprive a target of their senses.
-  Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1/3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
+  Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1 or 3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -247,6 +247,7 @@ Momentum Aura:
   Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
   Type: Passive
   XP Cost: 2
+  FP Cost: 1
   Prereq Power: Momentum
   Prereq Role: Defender
   Prereq Skill: Brute > 2
@@ -277,7 +278,7 @@ Heal:
   Category: Combat
   Subcategory: Support
   Description: Can channel magical energy or medical training to heal others
-  Mechanic: Heal yourself or another you can see for 1/3 Health Points
+  Mechanic: Heal yourself or another you can see for 1 or 3 Health Points
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -307,7 +308,7 @@ Lend Mass Distraction:
   Category: Combat
   Subcategory: Support
   Description: You know how to cause a scene.
-  Mechanic: Draw a Target Card. 2/3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
+  Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -331,7 +332,7 @@ Lend Mass Confusion:
   Category: Combat
   Subcategory: Support
   Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
-  Mechanic: You draw a TC. 2/3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect. 
+  Mechanic: You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
   Type: Major
   XP Cost: 2
   FP Cost: 2
@@ -344,7 +345,7 @@ Lend/Remove Skill:
   Category: Combat
   Subcategory: Support
   Description: You really know how to target an ability and either support it or get in it's way.
-  Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper/Lower Hand (2/3) checks that involve this Skill.
+  Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -365,7 +366,7 @@ Lend Vigor:
   Category: Combat
   Subcategory: Support
   Description: "Channel energy to do more than help: inspire!"
-  Mechanic: Designate 1/2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
+  Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -388,7 +389,7 @@ Shield, Others:
   Category: Combat
   Subcategory: Support
   Description: Fortify others by summoning magical armor.
-  Mechanic: Add 1/2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
+  Mechanic: Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -399,7 +400,7 @@ Shield, Self:
   Category: Combat
   Subcategory: Support
   Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-  Mechanic: Add 1/2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
+  Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]
@@ -512,7 +513,7 @@ Barrier:
   Category: Magic
   Subcategory: None
   Description: Your skills allow you to deploy temporary impromptu walls
-  Mechanic: You create a wall 3/5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
+  Mechanic: You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
   Type: Major
   XP Cost: 2
   FP Cost: [1,2]

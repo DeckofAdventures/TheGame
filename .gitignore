@@ -4,3 +4,4 @@ temp*/*
 *toml
 *pycache*
 3_Automation/_Auto*
+.DS_Store
