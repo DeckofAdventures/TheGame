@@ -41,7 +41,7 @@
 
 **Chaotic Companion**
 
-- Description: You and your companion don’t always get along, sometimes they don’t do exactly what you ask.
+- Description: You and your companion donâ€™t always get along, sometimes they donâ€™t do exactly what you ask.
 - Mechanic: When you draw a card to command your companion, the DM gains control of
 - Type: Minor or Major the companion temporarily, with the duration at the DM's discretion (Minor/Major).
 - Prereq Power: Creature Connection
@@ -63,13 +63,13 @@
 
 **Eye for an Eye**
 
-- Description: You’re spiteful and can’t let an attacker get away.
+- Description: Youâ€™re spiteful and canâ€™t let an attacker get away.
 - Mechanic: If you attack in combat, you must target the enemy who hit you most recently.
 - Type: Major
 
 **Frail Form**
 
-- Description: Through age, birth, or accident, your body is different from others’ and you find it hard to keep up.
+- Description: Through age, birth, or accident, your body is different from othersâ€™ and you find it hard to keep up.
 - Mechanic: When you take this Vulnerability, your combat speed is reduced by two spaces. When making a check to traverse terrain, draw with the Lower Hand.
 - Type: Major
 
@@ -96,14 +96,14 @@
 
 **Vendetta**
 
-- Description: You’ve sworn to track down an enemy. Business or pleasure?
+- Description: Youâ€™ve sworn to track down an enemy. Business or pleasure?
 - Mechanic: Work with your GM to decide an NPC that has wronged you in the past.
 - Type: GM Determined
 
 **Wanted**
 
 - Description: Your past will come back to haunt you.
-- Mechanic: Work with your GM to decide an NPC or organization that thinks you’re responsible for a crime. You may encounter a member of this group who wants you in jail, or stand trial, or outright dead.
+- Mechanic: Work with your GM to decide an NPC or organization that thinks youâ€™re responsible for a crime. You may encounter a member of this group who wants you in jail, or stand trial, or outright dead.
 - Type: GM Determined
 
 ### Knives
