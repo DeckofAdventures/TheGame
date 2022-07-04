@@ -14,6 +14,7 @@ jobs:
       - run: pip install mkdocs mkdocs-cinder
       # Copy root dir items to docs when publishing
       - run: for f in {C,REA}*md; do cp $f ./docs/; done
+      - run: mv ./docs/README.md index.md
       - run: git branch -D gh-pages
       - run: git checkout gh-pages
       - run: git pull --rebase
