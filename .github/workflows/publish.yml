@@ -16,5 +16,5 @@ jobs:
       # later: add mkdocs-include-markdown-plugin to pip list
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/; done
-      - run: iconv -f utf-8 -t utf-8 -c ./docs/1_Mechanics/04_Powers.md
+      - run: iconv -f utf-8 -t utf-8 -c ./docs/1_Mechanics/04_Powers.md -o ./docs/1_Mechanics/04_Powers.md
       - run: mkdocs gh-deploy --force --clean --verbose
