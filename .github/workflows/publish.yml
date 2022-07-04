@@ -15,5 +15,6 @@ jobs:
       - run: pip install mkdocs mkdocs-cinder mkdocs-exclude
       # later: add mkdocs-include-markdown-plugin to pip list
       # Copy root dir items to docs when publishing
-      - run: for f in {C,REA}*md; do cp $f ./docs/; done
+      - run: for f in C*md; do cp $f ./docs/; done
+      - run: cp README.md ./docs/index.md
       - run: mkdocs gh-deploy --force --clean --verbose

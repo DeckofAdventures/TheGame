@@ -27,7 +27,7 @@ theme:
     # analytics: {gtag: 'G-274394082'}
 
 nav:
-    - README.md
+    - index.md
     - Mechanics:
         - 1_Mechanics/01_PlayerGuide_Brief.md
         - 1_Mechanics/01_PlayerGuide_Full.md
