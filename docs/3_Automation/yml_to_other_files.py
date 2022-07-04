@@ -14,7 +14,7 @@ User should inspect output in subfolder before moving moving elsewhere
 """
 
 input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
-writing = ["md", "dot", "png", "csv", "svg"]  #         # list of options
+writing = ["md"]  # , "dot", "png", "csv", "svg"]  #         # list of options
 add_dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
 out_delim = "\t"  #                                     # delimiter for csv
@@ -163,8 +163,8 @@ def yaml_to_dot(
 
 
 def make_bullet(value, indents=0):
-    """Return string with 3 spaces per indent, plus '- '"""
-    spaces = indents * "   "
+    """Return string with 4 spaces per indent, plus '- '"""
+    spaces = indents * "    "
     return f"{spaces}- {value}\n"
 
 
@@ -180,20 +180,20 @@ def make_entries(input_items, input_yml="04_Powers.yml"):
     data = load_source(input_yml)
     entries = ""
     for item in input_items:
-        entries += make_bullet(f"Name: {item}")
+        entries += f"**{item}**\n\n"
         for k, v in data[item].items():
-            indent = 1
+            indent = 0
             if isinstance(v, list):
                 if k == "Mechanic":  # when mechanics are list, want indenting after 1st
                     mech_bullets = f"{v[0]}\n"
                     for mech_bullet in v[1:]:
-                        mech_bullets += make_bullet(mech_bullet, 2)
+                        mech_bullets += make_bullet(mech_bullet)
                     v = mech_bullets[:-1]  # remove last space
                 else:
                     v = [str(item) for item in v]
                     v = " or ".join(v)
             if "Cost" in k:  # additional indenting for cost items
-                indent = 2
+                indent = 1
             if v == "None":  # Explicit YAML None is empty in md
                 v = " "
             if not "egory" in k:  # drop sub/category items

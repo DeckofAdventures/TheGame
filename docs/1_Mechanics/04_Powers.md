@@ -5,13 +5,13 @@
 <!-- MarkdownTOC add_links=True -->
 - [Combat](#Combat)
     - [Support](#Support)
-    - [Control](#Control)
-    - [Mystic Attacks](#Mystic-Attacks)
     - [Weapon Attacks](#Weapon-Attacks)
+    - [Mystic Attacks](#Mystic-Attacks)
+    - [Control](#Control)
 - [Companion](#Companion)
 - [Game Mechanics](#Game-Mechanics)
-    - [Fate Cards](#Fate-Cards)
     - [Adjust Odds](#Adjust-Odds)
+    - [Fate Cards](#Fate-Cards)
 - [Magic](#Magic)
 - [Movement](#Movement)
     - [Speed](#Speed)
@@ -38,7 +38,7 @@
 - Description: Just a little help from a friend
 - Mechanic: As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
 - Type: Minor
-- XP Cost: 1
+    - XP Cost: 1
 - Prereq Role: Support
 - Tags: None
 
@@ -144,165 +144,6 @@
 - Prereq Role: Defender
 - Tags: None
 
-### Control
-
-**Battlecharged**
-
-- Description: You're always ready for something to go down.
-- Mechanic: When drawing initiative, Draw with Upper Hand.
-- Type: Passive
-    - XP Cost: 1
-- Tags: None
-
-**Critical Master**
-
-- Description: When you hit big, you hit BIG. Enemies donâ€™t stand a chance against you when you make a critical hit against them.
-- Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
-- Type: Passive
-    - XP Cost: 1
-- Prereq Level: 3
-- Tags: None
-
-**Momentum**
-
-- Description: By brute strength, force others to move around the battlefield.
-- Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
-- Type: Passive
-    - XP Cost: 1
-- Prereq Role: Defender
-- Prereq Skill: Brute > 1
-- Tags: None
-
-**Momentum Aura**
-
-- Description: Your strength is supernatural, bending the gravity around you.
-- Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
-- Type: Passive
-    - XP Cost: 2
-    - FP Cost: 1
-- Prereq Power: Momentum
-- Prereq Role: Defender
-- Prereq Skill: Brute > 2
-- Tags: Multi-target
-
-**Find Weakness**
-
-- Description: You can size up an opponent and discover their weaknesses.
-- Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
-- Type: Minor
-    - XP Cost: 1
-- Prereq Level: 2
-- Tags: Difficulty Prediction
-
-**Pack Tactics**
-
-- Description: When an enemy is outnumbered, you know just how to take advantage.
-- Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
-- Type: Minor
-    - XP Cost: 2
-    - FP Cost: 1
-- Prereq Level: 2
-- Tags: Difficulty Prediction
-
-### Mystic Attacks
-
-**Attack, Mystic**
-
-- Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
-- Mechanic: As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
-- Type: Major
-    - XP Cost: 1
-- Prereq Skill: Knowlege > 0 or Craft > 0
-- Tags: None
-
-**Attack, Mystic Aura**
-
-- Description: You deploy resources to channel your magic all around you.
-- Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
-- Type: Major
-    - XP Cost: 2
-    - FP Cost: 1 or 2
-- Prereq Power: Attack, Mystic
-- Prereq Role: Caster or Support
-- Tags: Multi-target
-
-**Attack, Mystic Amplification**
-
-- Description: You channel your talents into a physical weapon, melding the physical and supernatural.
-- Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
-- Type: Major
-    - XP Cost: 1
-    - FP Cost: 1
-- Prereq Power: Attack, Mystic
-- Prereq Role: Martial or Caster
-- Tags: None
-
-**Attack, Mystic Cone**
-
-- Description: You deploy resources to channel your magic in a wide blast in front of you.
-- Mechanic: Choose one effect when you take this power
-      - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
-      - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
-- Type: Major
-    - XP Cost: 2
-    - FP Cost: 1
-- Prereq Power: Attack, Mystic
-- Prereq Role: Caster
-- Tags: Multi-target
-
-**Attack, Mystic Confusion**
-
-- Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-- Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
-- Type: Major
-    - XP Cost: 2
-    - FP Cost: 1 or 2
-- Prereq Power: Attack, Mystic
-- Prereq Role: Support or Caster
-- Tags: Multi-target
-
-**Attack, Mystic Entangle**
-
-- Description: You channel your abilities to tie your target in place.
-- Mechanic: You draw a Target Card and force 1 or 3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
-- Type: Major
-    - XP Cost: 2
-    - FP Cost: 1 or 2
-- Prereq Power: Attack, Mystic
-- Prereq Role: Support or Caster
-- Tags: Multi-target
-
-**Attack, Mystic Deprivation**
-
-- Description: You channel your abilities deprive a target of their senses.
-- Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1 or 3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
-- Type: Major
-    - XP Cost: 2
-    - FP Cost: 1 or 2
-- Prereq Power: Attack, Mystic
-- Prereq Role: Support or Caster
-- Tags: Multi-target
-
-**Attack, Mystic Dual-Shot**
-
-- Description: You are so adept mystic arts you can start another spell before even finishing the first.
-- Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
-- Type: Minor
-    - XP Cost: 3
-- Prereq Skill: Finesse > 1
-- Prereq Power: Attack, Mystic
-- Tags: Multi-target
-
-**Attack, Mystic Dual-Wield Master**
-
-- Description: You are a master of wielding two weapons in combat.
-- Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
-- Type: Minor
-    - XP Cost: 1
-- Prereq Level: 3
-- Prereq Power: Attack, Mystic Dual-Shot
-- Tags: Multi-target
-
 ### Weapon Attacks
 
 **Attack, Weapon**
@@ -375,6 +216,165 @@
 - Prereq Power: Attack, Dual-Wield
 - Tags: None
 
+### Mystic Attacks
+
+**Attack, Mystic**
+
+- Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
+- Mechanic: As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- Type: Major
+    - XP Cost: 1
+- Prereq Skill: Knowlege > 0 or Craft > 0
+- Tags: None
+
+**Attack, Mystic Aura**
+
+- Description: You deploy resources to channel your magic all around you.
+- Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
+- Type: Major
+    - XP Cost: 2
+    - FP Cost: 1 or 2
+- Prereq Power: Attack, Mystic
+- Prereq Role: Caster or Support
+- Tags: Multi-target
+
+**Attack, Mystic Amplification**
+
+- Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+- Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
+- Type: Major
+    - XP Cost: 1
+    - FP Cost: 1
+- Prereq Power: Attack, Mystic
+- Prereq Role: Martial or Caster
+- Tags: None
+
+**Attack, Mystic Cone**
+
+- Description: You deploy resources to channel your magic in a wide blast in front of you.
+- Mechanic: Choose one effect when you take this power
+- You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
+- All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
+- Type: Major
+    - XP Cost: 2
+    - FP Cost: 1
+- Prereq Power: Attack, Mystic
+- Prereq Role: Caster
+- Tags: Multi-target
+
+**Attack, Mystic Confusion**
+
+- Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
+- Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+- Type: Major
+    - XP Cost: 2
+    - FP Cost: 1 or 2
+- Prereq Power: Attack, Mystic
+- Prereq Role: Support or Caster
+- Tags: Multi-target
+
+**Attack, Mystic Entangle**
+
+- Description: You channel your abilities to tie your target in place.
+- Mechanic: You draw a Target Card and force 1 or 3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
+- Type: Major
+    - XP Cost: 2
+    - FP Cost: 1 or 2
+- Prereq Power: Attack, Mystic
+- Prereq Role: Support or Caster
+- Tags: Multi-target
+
+**Attack, Mystic Deprivation**
+
+- Description: You channel your abilities deprive a target of their senses.
+- Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1 or 3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
+- Type: Major
+    - XP Cost: 2
+    - FP Cost: 1 or 2
+- Prereq Power: Attack, Mystic
+- Prereq Role: Support or Caster
+- Tags: Multi-target
+
+**Attack, Mystic Dual-Shot**
+
+- Description: You are so adept mystic arts you can start another spell before even finishing the first.
+- Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
+- Type: Minor
+    - XP Cost: 3
+- Prereq Skill: Finesse > 1
+- Prereq Power: Attack, Mystic
+- Tags: Multi-target
+
+**Attack, Mystic Dual-Wield Master**
+
+- Description: You are a master of wielding two weapons in combat.
+- Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
+- Type: Minor
+    - XP Cost: 1
+- Prereq Level: 3
+- Prereq Power: Attack, Mystic Dual-Shot
+- Tags: Multi-target
+
+### Control
+
+**Battlecharged**
+
+- Description: You're always ready for something to go down.
+- Mechanic: When drawing initiative, Draw with Upper Hand.
+- Type: Passive
+    - XP Cost: 1
+- Tags: None
+
+**Critical Master**
+
+- Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+- Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
+- Type: Passive
+    - XP Cost: 1
+- Prereq Level: 3
+- Tags: None
+
+**Momentum**
+
+- Description: By brute strength, force others to move around the battlefield.
+- Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, the target makes a Contested Strength or Agility Check to dodge. If the target is willing or fails the check, you may place the target within 1 space of end position.
+- Type: Passive
+    - XP Cost: 1
+- Prereq Role: Defender
+- Prereq Skill: Brute > 1
+- Tags: None
+
+**Momentum Aura**
+
+- Description: Your strength is supernatural, bending the gravity around you.
+- Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
+- Type: Passive
+    - XP Cost: 2
+    - FP Cost: 1
+- Prereq Power: Momentum
+- Prereq Role: Defender
+- Prereq Skill: Brute > 2
+- Tags: Multi-target
+
+**Find Weakness**
+
+- Description: You can size up an opponent and discover their weaknesses.
+- Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
+- Type: Minor
+    - XP Cost: 1
+- Prereq Level: 2
+- Tags: Difficulty Prediction
+
+**Pack Tactics**
+
+- Description: When an enemy is outnumbered, you know just how to take advantage.
+- Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+- Type: Minor
+    - XP Cost: 2
+    - FP Cost: 1
+- Prereq Level: 2
+- Tags: Difficulty Prediction
+
 ## Companion
 
 **Creature Connection**
@@ -407,21 +407,6 @@
 - Tags: Companion
 
 ## Game Mechanics
-
-### Fate Cards
-
-**Aces Wild**
-
-- Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
-- Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-      - Ace of Clubs: you can play this card to interrupt an enemyâ€™s turn and make a single Major ction - even if you already went that round
-      - Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP
-      - Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
-      - Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
-- Type: Passive
-    - XP Cost: 2
-- Prereq Level: 3
-- Tags: Fate Cards
 
 ### Adjust Odds
 
@@ -472,6 +457,21 @@
 - Prereq Power: Scrying
 - Tags: Card Viewing
 
+### Fate Cards
+
+**Aces Wild**
+
+- Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
+- Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
+- Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round
+- Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP
+- Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
+- Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
+- Type: Passive
+    - XP Cost: 2
+- Prereq Level: 3
+- Tags: Fate Cards
+
 ## Magic
 
 **Barrier**
@@ -509,7 +509,7 @@
 
 **Speedy**
 
-- Description: Youâ€™re quicker than the rest.
+- Description: You’re quicker than the rest.
 - Mechanic: When you take this Power, your combat speed increases by 2 squares.
 - Type: Passive
     - XP Cost: 1
@@ -596,7 +596,7 @@
 
 **Keen Eye**
 
-- Description: Youâ€™re especially adept at taking in the world around you.
+- Description: You’re especially adept at taking in the world around you.
 - Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
 - Type: Passive
     - XP Cost: 1

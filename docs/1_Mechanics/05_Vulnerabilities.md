@@ -6,9 +6,9 @@
 - [Combat](#Combat)
 - [Party](#Party)
 - [Roleplay](#Roleplay)
-   - [Society](#Society)
-   - [Knives](#Knives)
-   - [Backstory](#Backstory)
+    - [Backstory](#Backstory)
+    - [Knives](#Knives)
+    - [Society](#Society)
 <!-- /MarkdownTOC -->
 
 ## Combat
@@ -41,7 +41,7 @@
 
 **Chaotic Companion**
 
-- Description: You and your companion donâ€™t always get along, sometimes they donâ€™t do exactly what you ask.
+- Description: You and your companion don’t always get along, sometimes they don’t do exactly what you ask.
 - Mechanic: When you draw a card to command your companion, the DM gains control of
 - Type: Minor or Major the companion temporarily, with the duration at the DM's discretion (Minor/Major).
 - Prereq Power: Creature Connection
@@ -63,13 +63,13 @@
 
 **Eye for an Eye**
 
-- Description: Youâ€™re spiteful and canâ€™t let an attacker get away.
+- Description: You’re spiteful and can’t let an attacker get away.
 - Mechanic: If you attack in combat, you must target the enemy who hit you most recently.
 - Type: Major
 
 **Frail Form**
 
-- Description: Through age, birth, or accident, your body is different from othersâ€™ and you find it hard to keep up.
+- Description: Through age, birth, or accident, your body is different from others’ and you find it hard to keep up.
 - Mechanic: When you take this Vulnerability, your combat speed is reduced by two spaces. When making a check to traverse terrain, draw with the Lower Hand.
 - Type: Major
 
@@ -86,30 +86,6 @@
 - Mechanic: Whenever you Draw to observe or react to something you weren't already aware of (e.g., Detection checks or Agility reactions), you draw with the Lower Hand.
 - Type: Minor
 
-### Society
-
-**Inorganic**
-
-- Description: You were not born, but instead created. You are not a slave to the bodily needs of the rest, but may instead be called to a prescribed purpose.
-- Mechanic: You do not need to breathe, eat or sleep (but still rest to recover Health/Fate Points). Choose one of the following when you take this Vulnerability
-      - Your creator or society at large consider you to have a function that you do not wish to pursue, such as a dangerous and laborious profession.
-      - You require a rare form of fuel that is difficult to obtain and are rendered catatonic without regular access. Work with your GM to see what makes sense for your character in the setting.
-- Type: Major
-
-**Outsider**
-
-- Description: You're a stranger in a strange land. You may be unfamiliar with customs, somehow ostracized by the community, or even hunted based on group membership.
-- Mechanic: For any Conviction check to interact with the dominant society, you draw with the Lower Hand. If chosen as Major, work with the GM to decide some feature of your background that makes you unwelcome in most public places.
-- Type: Minor or Major
-
-### Knives
-
-**Phobia**
-
-- Description: You can't shake it, there's just the terrifying fear that burdens you.
-- Mechanic: Work with your GM to decide a fear you hold and the reason for that fear. This may be a fear of something concrete (e.g., spiders, fire) or something less tangible (e.g., being alone, going hungry).
-- Type: GM Determined
-
 ### Backstory
 
 **Savior**
@@ -120,13 +96,37 @@
 
 **Vendetta**
 
-- Description: Youâ€™ve sworn to track down an enemy. Business or pleasure?
+- Description: You’ve sworn to track down an enemy. Business or pleasure?
 - Mechanic: Work with your GM to decide an NPC that has wronged you in the past.
 - Type: GM Determined
 
 **Wanted**
 
 - Description: Your past will come back to haunt you.
-- Mechanic: Work with your GM to decide an NPC or organization that thinks youâ€™re responsible for a crime. You may encounter a member of this group who wants you in jail, or stand trial, or outright dead.
+- Mechanic: Work with your GM to decide an NPC or organization that thinks you’re responsible for a crime. You may encounter a member of this group who wants you in jail, or stand trial, or outright dead.
 - Type: GM Determined
+
+### Knives
+
+**Phobia**
+
+- Description: You can't shake it, there's just the terrifying fear that burdens you.
+- Mechanic: Work with your GM to decide a fear you hold and the reason for that fear. This may be a fear of something concrete (e.g., spiders, fire) or something less tangible (e.g., being alone, going hungry).
+- Type: GM Determined
+
+### Society
+
+**Inorganic**
+
+- Description: You were not born, but instead created. You are not a slave to the bodily needs of the rest, but may instead be called to a prescribed purpose.
+- Mechanic: You do not need to breathe, eat or sleep (but still rest to recover Health/Fate Points). Choose one of the following when you take this Vulnerability
+- Your creator or society at large consider you to have a function that you do not wish to pursue, such as a dangerous and laborious profession.
+- You require a rare form of fuel that is difficult to obtain and are rendered catatonic without regular access. Work with your GM to see what makes sense for your character in the setting.
+- Type: Major
+
+**Outsider**
+
+- Description: You're a stranger in a strange land. You may be unfamiliar with customs, somehow ostracized by the community, or even hunted based on group membership.
+- Mechanic: For any Conviction check to interact with the dominant society, you draw with the Lower Hand. If chosen as Major, work with the GM to decide some feature of your background that makes you unwelcome in most public places.
+- Type: Minor or Major
 

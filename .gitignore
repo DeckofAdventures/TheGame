@@ -12,7 +12,7 @@ temp*/*
 docs/3_Automation/_Auto*
 
 # Site
-# site/
+site/
 
 # Defaults
 .DS_Store
