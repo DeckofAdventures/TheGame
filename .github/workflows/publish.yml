@@ -1,0 +1,17 @@
+name: build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs mkdocs-cinder
+      # Copy root dir items to docs when publishing
+      - run: for f in {C,REA}*md; do cp $f ./docs/; done
+      - run: mkdocs gh-deploy --force --clean --verbose
