@@ -8,8 +8,8 @@ you review the licenses applicable to any material submitted and respect the Cre
 Commons BY-NC-SA nature of this community. When contributing, please provide moderators
 with your preferred name, pronouns, and a URL to like to your other work. You can make a
 contribution by opening a GitHub issue. For more major contributions, see our
-[design document](./3_Development/02_Design_Document.md) for design principles, and
-[community document](./3_Development/01_Community.md) for information about GitHub pull 
+[design document](./2_Development/02_Design_Document.md) for design principles, and
+[community document](./2_Development/01_Community.md) for information about GitHub pull 
 request permissions.
 
 ## GitHub Issues
@@ -32,7 +32,7 @@ Present materials adapted from [Fandom wiki licensing](https://www.fandom.com/li
 
 Deck of Adventures Versions < 0.1.0 material is licensed under the Creative
 Commons **Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** by
-admin users (see [Community Roles](./3_Development/01_Community.md)) Deck of Adventures
+admin users (see [Community Roles](./2_Development/01_Community.md)) Deck of Adventures
 documentation (hereafter ‘licensees’).
 
 - [Read the license summary](https://creativecommons.org/licenses/by-nc-sa/4.0/)
