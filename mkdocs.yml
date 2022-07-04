@@ -54,4 +54,5 @@ plugins:
         glob:
           - "temp*"
           - "3_Automation/*"
-    - include-markdown # https://github.com/mondeja/mkdocs-include-markdown-plugin
+    # - include-markdown # https://github.com/mondeja/mkdocs-include-markdown-plugin
+    # when use, add mkdocs-include-markdown-plugin to pip list

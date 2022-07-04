@@ -1,3 +1,4 @@
 mkdocs
 mkdocs-cinder
 mkdocs-exclude
+mkdocs-include-markdown-plugin

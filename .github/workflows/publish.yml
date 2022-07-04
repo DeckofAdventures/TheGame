@@ -13,6 +13,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs mkdocs-cinder mkdocs-exclude
+      # later: add mkdocs-include-markdown-plugin to pip list
       # Copy root dir items to docs when publishing
       - run: for f in {C,REA}*md; do cp $f ./docs/; done
       - run: mkdocs gh-deploy --force --clean --verbose
