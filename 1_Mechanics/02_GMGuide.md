@@ -33,9 +33,9 @@
 
 As the Game Master, your task is to bring together a group of Players and guide
 them through an Adventure. An Adventure can last for a single 2-3 hour session,
-or it can unfold over the course of weeks, months, or even years in a continous
+or it can unfold over the course of weeks, months, or even years in a continuous
 narrative. You can bring together close friends in person, or find new friends
-virtually through **MISSING** or in the Discord.
+virtually through `MISSING` or in the Discord.
 
 If you’ve been a Game Master elsewhere and are hoping to learn about what’s
 different about being a Deck of Adventures Game Master, you can skip right to
@@ -63,11 +63,7 @@ tell any type of story you would like. There is significant creative freedom in
 being a Game Master, both with the types of stories you can tell, and the way
 those stories unfold.  
 
-In this Section, you will learn more about what being a Game Master entails in
-Tabletop RPGs more generally, as well as the important things to keep in mind
-when assuming this role. 
-
-Game Masters come in all styles and each Game Master brings their unique
+Game Masters come in many styles and each Game Master brings their unique
 strengths and talents to the table. Don't compare yourself to others,
 especially those with significant experience at the table. This is a craft that
 takes years to hone, and decades to master, but you can be a great Game Master
@@ -78,7 +74,7 @@ experience, to support new Game Masters.
 As a Game Master, you need to be prepared to spend time outside of normal
 session hours working on your Adventure. A well-prepared Adventure makes
 running a session far easier than if you try to 'wing it'. Improvisation and
-sponenaeity are two vital ingredients to a great session of Deck of Adventures,
+spontaneity are two vital ingredients to a great session of Deck of Adventures,
 but having important things mapped out and planned ahead of time is important
 for you as the Game Master. 
 
@@ -89,7 +85,7 @@ don't go to plan, don't force the players back into a prescribed narrative just
 because you have that prepared. If the logical actions and outcomes of the
 Players in the session lead to a different outcome, go with it. These will lead
 to the most organic and well-remembered circumstances in your Adventure, and
-Players and GM's work together to bring these moments to life. The Game Master
+Players and GMs work together to bring these moments to life. The Game Master
 builds the world, populates it with characters and history, and then the
 Players walk through that world and experience it first-hand. 
 
@@ -98,12 +94,12 @@ Players walk through that world and experience it first-hand.
 
 As a Deck of Adventures Game Master you are controlling the flow of card draws
 constantly throughout a session. Your Players each have a single deck, which
-gives you the ability to drain their resources steadily during a sesion to
+gives you the ability to drain their resources steadily during a session to
 have them feel challenged and tested while playing. 
 
 You are also the primary resource of information for the world. Players will
-come to you asking quesations about the broader world or about a specific
-character, and it si up to you to provide details and information. Even if
+come to you asking questions about the broader world or about a specific
+character, and it is up to you to provide details and information. Even if
 you are working off of previously written material, you must always be
 prepared to go 'off script' and provide information about the world to a
 player. It is OK to say you don't know something, or that you can give them
@@ -111,18 +107,18 @@ more information later outside of the session. It is encouraged for you to be
 open to Player questions and ideas, and attempt to work with them to tell the
 story rather than against them. 
 
-You should be an impartial force in the world, controlling both the bad and
-the good without judgement, anger, or aggression. The best sessions feel like
+You should be an impartial force in the world, controlling both allies and
+enemies neutrally. The best sessions feel like
 everyone is working together to complete an objective, even the GM, rather
 than it feeling like a battle or competition between the Players and the Game
-Master. This is a delicate balance, and GM's are encouraged to ask for their
-Player's feedback on how they can improve, and it is also a GM's
+Master. This is a delicate balance, and GMs are encouraged to ask for their
+Player's feedback on how they can improve, and it is also a GMs
 responsibility to provide feedback to the Players at the table when necessary
 to help everyone enjoy their experience at the table. 
 
 ### Game Master Resources
 
-GM's should have several decks of cards available to them during a session so
+GMs should have several decks of cards available to them during a session so
 as to easily represent multiple groups of Minions and Dealers that the
 Players will fight during the course of an Adventure. At minimum, a GM must
 maintain two separate decks - one for enemy combatants and one for allies of
@@ -157,10 +153,8 @@ they face may test them closer to running out of cards between Rests.
 HP and FP are also balanced by Rests. It is expected and recommended that a
 party will take 1-2 Quick Rests between Full Rests during each day of in-game
 time, depending on the Encounters they face. While Resting, the Players will
-be regaining their Health and Fate Points, expending Rest Cards along the
-way. This should be kept in mind when planning Encounters that deal damage,
-since Players will want to take a Quick Rest if their HP or FP drops below a
-threshold they feel comfortable with. 
+be regaining their Health and Fate Points, and expending Rest Cards. Keep this in mind when planning Encounters that deal damage,
+since Players will want to take a Quick Rest if their HP or FP drop too low. 
 
 To take a Rest, the Players consult with the Game Master whether it is
 feasible for their characters to secure a 30-minute breather for a Quick
@@ -172,7 +166,7 @@ based on the remaining time left and extended as necessary.
 
 For example, if a group of Adventurers were attempting to spend the night in a
 comfortable inn near the heart of a major city, a Full Rest would be easy to
-secure. If that same group of Adventurers had just snuck into the heart of a
+secure. If that same group of Adventurers sneaks into the heart of a
 bandit camp, been spotted, and run into a tent to hide, it would be more
 difficult to secure that Rest. 
 
@@ -180,13 +174,13 @@ A Game Master plays the ultimate authority in the successful completion of a
 Rest, and can ask the Players for a series of Checks to determine whether the
 Rest can be completed or if another factor gets in the way. Players are
 encouraged to work with their Game Master and with each other to preserve
-resources in tense situations where Rests may not be easily acheived.       
+resources in tense situations where Rests may not be easily achieved.       
 
 ### Working with Character Vulnerabilities
 
 When Players create a character, they choose one or two (or more)
 Vulnerabilities that they place on their character sheet. This may have
-mechanical implications, but also impacts roleplay. GM's are highly
+mechanical implications, but also impacts roleplay. GMs are highly
 encouraged to keep these Vulnerabilities in mind when designing sessions or
 running entire Adventures. These are narrative seeds that can be cultivated
 over time to result in deep and meaningful moments for the Players.
@@ -231,7 +225,7 @@ both a King and a 2.
 
 ### Successes and Failures
 
-- Successes are cards that are drawn with a pip value within the Diffulty
+- Successes are cards that are drawn with a pip value within the Difficulty
   Range. When a Check is successful, the character making the Check is able
   to accomplish what they were intending to do.
 - Misses are cards that are drawn outside of the Difficulty Range. When a
@@ -286,7 +280,8 @@ Checks. Skills are intended to be more active for character-initiated events
 such as scaling a wall or looking for something.
 
 The below is a list of general information about the Attributes and Skills.
-More information is available in the [Full Players Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Characters)
+More information is available in the 
+[Full Players Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Characters)
 
 - AGL Agility: Dodging Contested Checks, boosts Unarmored AC
    - Finesse: Primary Skill for Martial
@@ -323,9 +318,10 @@ For the most updated reference and ruling on Contested Checks, visit the
 
 Here are some Examples of Skills that are used in Contested Checks, though you
 are free to decide what makes the most sense in a given scenario at your
-table. 1. Tackle Target: Attacker Finesse vs. Target Athletics 2. Convince
-Target, truthfully: Bluffing vs. Target Detection 3. Convince Target,
-deceptively: Bluffing vs. Target Detection
+table. 
+1. Tackle Target: Attacker Finesse vs. Target Athletics 
+2. Convince Target, truthfully or deceptively: Bluffing vs. Target Detection 
+3. `MISSING`
 
 ### Epic Events 
 
@@ -356,7 +352,7 @@ will get a feel for what makes for a good Epic Event, and how to place it in
 your narrative to keep the session feeling fresh and lively for all of your
 Players.
 
-For the most updated reference on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
+For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
 
 #### Setting an Epic Event's Difficulty
 
@@ -516,12 +512,12 @@ encounters.
 
 Certain enemies are by nature more powerful, and gain additional benefits and
 Actions that are not present in other types of Encounters. Any Dealer could
-be considered a Boss, and GM's are encouraged to use *Adversary Actions*
+be considered a Boss, and GMs are encouraged to use *Adversary Actions*
 whenever a Dealer is present to make them feel more threatening. Adding
 in *House Actions* can create a dynamic and exciting Boss encounter that the
 Players will remember.
 
-Narratively, Boss Battles are best saved for the end of Adventures, whether
+Boss Battles are best saved for the end of Adventures, whether
 that spans a single session and is the enemy the Players face at the end of
 their day's journey, or if it is an encounter at the end of an Adventure that
 is several sessions long, and the Boss is the final piece of the Adventure to
@@ -639,7 +635,7 @@ defeated.
 
 ### Preparing an Adventure 
 
-- Different durations of Adventures: One Shots, Multi-Shots, Campaigns
+- Different length of Adventures: One Shots, Multi-Shots, Campaigns
 - Different types of Adventures: Combat, investigation, contracts,
   negotiations, etc. 
 - Railroad vs. Sandbox
