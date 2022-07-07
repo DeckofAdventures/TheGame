@@ -118,19 +118,15 @@ to help everyone enjoy their experience at the table.
 
 ### Game Master Resources
 
-GMs should have several decks of cards available to them during a session so
-as to easily represent multiple groups of Minions and Dealers that the
-Players will fight during the course of an Adventure. At minimum, a GM must
-maintain two separate decks - one for enemy combatants and one for allies of
-the Players. If a GM only has one deck available, they should split the deck
-into two 26 card decks and re-shuffle regularly. 
+GMs should have at least two decks of cards available during a session to
+represent allies and enemies. More decks may be useful to represent different
+groups. If a GM only has one deck available, they should split the deck into
+two 26 card decks and re-shuffle regularly. 
 
-As the Game Master, you do not have to draw a single deck to empty. Unless a
-Dealer you control has an individual deck assigned to them, and they are in
-the active scene for long enough, the GM never invokes Lower Hand by needing
-to reshuffle. If an NPC were to need a mechanical reason to show them being
-exhausted, the same Status Condition can be added to that NPC as if they had
-a level of fatigue.  
+Most NPCs won't stick around long enough to use a deck completely, and  
+therefore won't need to invoke Lower Hand by shuffling. For the
+exceptional NPC, try assigning them a unique deck, if available. If 
+unavailable, you can decide when to invoke Lower Hand behind the DM screen.
 
 ### Managing Player Resources
 
@@ -143,10 +139,10 @@ Armor Points (AP).
 You can think of a Player's deck of cards like their character's stamina. The
 Adventurers should get progressively more tired throughout the day. This is
 accomplished by having the Players make a series of Checks, which is their
-way of interacting with the world. At lower levels, it is OK for Players not
-to approach the re-draw limit of running out of cards between Rests. However,
-as players progress and level up, the Powers they choose and the Encounters
-they face may test them closer to running out of cards between Rests. 
+way of interacting with the world. At lower levels, Players may not approach
+the re-draw limit of running out of cards between Rests. However, as players
+progress and level up, the Powers they choose and the Encounters they face
+may test them closer to running out of cards between Rests. 
 
 ### Resting
 
