@@ -8,41 +8,41 @@
 - Introduction
 - Getting Started as a Game Master
 - Being a Deck of Adventures Game Master
-  - Game Master Resources
-  - Managing Player Resources
-  - Cards
-  - Resting
-  - Working with Character Vulnerabilities
-  - Creating Your World
+    - Game Master Resources
+    - Managing Player Resources
+    - Cards
+    - Resting
+    - Working with Character Vulnerabilities
+    - Creating Your World
 - Running a Session with Deck of Adventures
-  - The Target Card System
-  - Successes and Failures
-  - Likelihood Chart
-  - Fate Cards
-  - Skills Breakdown
-  - Contested Checks
-  - Epic Events
-    - How to Identify an Epic Event
-    - Setting an Epic Event's Difficulty
-    - Deciding the Stakes
-    - An Example of an Epic Event
-  - Combat
-    - Initiating Combat
-    - Strengths and Weaknesses
-    - Setting up Combat Encounters
-  - Dealers, Minions, Bystanders, and Companions
-  - Creating a Boss Encounter
-    - Adversary Actions
-    - House Actions
-    - Boss Phases
-  - Example Combat Encounter designed for 4 Players at level 2
-    - Location and Spacing
-    - Encounter Details and Setup
-    - Enemy Stat Blocks
+    - The Target Card System
+    - Successes and Failures
+    - Likelihood Chart
+    - Fate Cards
+    - Skills Breakdown
+    - Contested Checks
+    - Epic Events
+        - How to Identify an Epic Event
+        - Setting an Epic Event's Difficulty
+        - Deciding the Stakes
+        - An Example of an Epic Event
+    - Combat
+        - Initiating Combat
+        - Strengths and Weaknesses
+        - Setting up Combat Encounters
+    - Dealers, Minions, Bystanders, and Companions
+    - Creating a Boss Encounter
+        - Adversary Actions
+        - House Actions
+        - Boss Phases
+    - Example Combat Encounter designed for 4 Players at level 2
+        - Location and Spacing
+        - Encounter Details and Setup
+        - Enemy Stat Blocks
 - Building Your World
-  - What is a World?
-  - Preparing an Adventure
-  - Creating NPCs
+    - What is a World?
+    - Preparing an Adventure
+    - Creating NPCs
 - Managing Players \(Expectations & Realities\)
 - Number Crunch
 - Continuing Your Journey as a Game Master
@@ -77,7 +77,11 @@ to the team on [Discord](https://discord.gg/2Wu6ZAb6S9) or via GitHub issues.
 Needs a notes about 
   1. what a DM screen is, literally and metaphorically 
   2. checks - why this is how ppl interact with the world, why add randomness?
-  3. resource management - move up from DofA specific
+  3. resource management - move up from DofA specific. Flow state is achieved when we're
+     at the peak of our ability and met with the exact level of challenge to fit our 
+     skills. To keep players engaged, dial in the difficulty to where they're feeling
+     challenged in a way that suits their play style, without worrying about what they 
+     have left.
 -->
 
 Game Masters (GMs) play referee and narrator in a Tabletop RPG like Deck of
@@ -221,57 +225,70 @@ damage by continuing to attack, but another could spend a turn studying movement
 learn that their adversary has an injury and can't defend against specific attacks.
 Perhaps an enemy has specific values that could be used to turn them into an ally.
 
-<!-- BROZ: editing bookmark -->
-
 ### Creating Your World
+
+`MISSING`
+
+<!-- BROZ: How much here should be in DofA-specific? Feels like new-DM topic to me -->
 
 ## Running a Session with Deck of Adventures
 
 ### The Target Card System
 
-As a Game Master, you will set up various challenges and difficulties for the
-Players throughout an Adventure. To resolve these challenges, a Player or GM
-will draw a Target Card, and the opposing force makes a Check and draws a
-card. The level of difficulty of a Check is set by the Difficulty Range,
-which is how far away a pip value can be of the card being drawn relative to
-the value of the Target Card. 
-
-Keep in mind the Target Card System is circular, so an Ace is only 1 away from
+As a Game Master (GM), you will set up various challenges wherein
+you or a Player
+will draw a Target Card (TC), and the other draws against that card to make a Check.
+The level of difficulty of a Check is set by the Difficulty Range (DR),
+which is the distance between pip values that will still count as a success. 
+The Target Card System is circular, so an Ace is only 1 away from
 both a King and a 2. 
 
-| DR | -6 | -5 | -4 | -3 | -2 | -1 | 0 | +1 | +2 |
-|---------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Card | 8 | 9 | 10 | J | Q | K | A | 2 | 3 |
-
+| DR   | -6  | -5  | -4  | -3  | -2  | -1  | 0   | +1  | +2  | +3  | +4  | +5  | +6  |
+|---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Card | 8   | 9   | 10  | J   | Q   | K   | A   | 2   | 3   | 4   | 5   | 6   | 7   |
 
 ### Successes and Failures
 
-- Successes are cards that are drawn with a pip value within the Difficulty
-  Range. When a Check is successful, the character making the Check is able
-  to accomplish what they were intending to do.
-- Misses are cards that are drawn outside of the Difficulty Range. When a
-  Check misses, the character making the Check is unable to accomplish what
-  they were intending to do. 
-- Critical Successes have a 1.9% chance of success. They should feel amazing
-  for the Player. Make an effort to rewards these exact matches whenever you
-  can with additional effects or bonuses.
-- Major Successes have a 7.7% chance of success. This should still feel pretty
-  good to your players. When drawn in Combat, a Major Success increases the
-  damage of the attack. Make your out of combat bonuses feel just as good.
-- Suited Successes occur when the card drawn falls within the Difficulty Range
-  and matches the Suit of the Target Card. 
-- A Player can use a Fate Card for a free re-draw, and if this turns a Miss
-  into a Success you must ignore that there was a Miss. This is treated as a
-  regular Success.
+- **Successes** happen when the drawn card is within the DR. 
+  The character making the Check is able to accomplish what they intended, within reason.
 
+- **Misses** happen when the drawn card is outside the DR.
+  The character making the Check is not able to accomplish what they intended. 
+
+- **Critical Successes** happen when the drawn card exactly matches the TC in 
+  pip value and suit. At 1.9% chance, they should feel amazing
+  for the Player. Make an effort to rewards these exact matches whenever possible
+  with additional effects or bonuses.
+
+- **Major Successes** happen when the drawn card matches the TC in pip value 
+  At 7.7% chance, this should feel pretty
+  good. In Combat, a Major Success increases the
+  damage of the attack by 1. Out of combat, some smaller bonus should happen whenever 
+  possible.
+
+- **Color and Suited Successes** happen when the drawn card is within the DR and 
+  matches the TC in color or suit. 
+
+- **Fate Cards**  permit a Dealer (Player character or significant NPC) to redraw. If
+  this changes the success state, the first draw should be ignored.
+
+<!-- 
+    BROZ: Previously, on Fate Cards: This is treated as a regular Success. 
+          This implies the second draw can't crit. I'm not sure I would want that.
+-->
 
 ### Likelihood Chart
 
-The chart below shows probability of success for the kinds of draws you will
-typically encounter at each DR. Note that Color or Suit match divide the
-likelihood by 2 and 4 respectively. The final row notes the difference caused
-by drawing 2 cards at Upper or Lower Hand. At the ends, there isn't much of
-an impact, but can increase or decrease the probability by as much as 25% for
+The chart below shows probability of success for the most frequent draws at each
+Difficulty Range (DR). 
+To further dial in the difficulty, you might say that a specific check requires a 
+Color or Suited Success. 
+Note that Color or Suit make success half or a quarter as likely. 
+Some mechanics or GM rulings can call for checks to be made at Upper or Lower hand, 
+drawing (up to) 2 or more cards, and taking the more or less benefitial result.
+The final row notes the difference caused 
+by drawing 2 cards. At DR 0 or 6, there's little difference, but it can be
+as much as 25% for
 a DR 3 check.
 
 | DR          | 0   | 1   | 2   | 3   | 4   | 5   | 6    |
@@ -285,120 +302,126 @@ a DR 3 check.
 
 ### Fate Cards
 
-It's up to you to decide how often you want players to use their Fate Cards.
-By default players start with their 2 Jokers and will randomly gain Fate
-Cards as they draw their Aces. If you want to give them more chances to
-redraw, reward key moments of play by giving a Player a Fate Card. This can
+Players start with their 2 Jokers and will randomly gain Fate
+Cards as they draw their Aces. As a GM, you can promote using Fate Cards by
+give more to reward key moments of play. This can
 be a great tool for encouraging great roleplay or working together. 
 
 ### Skills Breakdown
 
-Players will want to make Checks based on their character's strengths. Their
-approach to a situation should determine the nature of a check, but as the GM
-you ultimately have the final say in which skill applies. Attributes are
+Players will want to make Checks based on their characters' strengths. Their
+approach to a situation should determine the nature of a check. As the GM,
+you have the final say as to which skill applies. Attributes are
 meant to be more responsive/reactive, and are often used for Contested
-Checks. Skills are intended to be more active for character-initiated events
-such as scaling a wall or looking for something.
+Checks. Skills are intended to be more active for character-initiated events.
 
-The below is a list of general information about the Attributes and Skills.
-More information is available in the 
-[Full Players Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Characters)
+The list below provides of general information about the Attributes and Skills (see
+[Full Players Guide](../01_PlayerGuide_Full.md#Characters) 
+for more info).
 
-- AGL Agility: Dodging Contested Checks, boosts Unarmored AC
-   - Finesse: Primary Skill for Martial
-   - Stealth: how quietly you can move about
-- CON Conviction: Resistance to harmful effects, strength of personality
-   - Bluffing: how convincing you are, lying or truthful
-   - Performance: success for activities in front of large audiences
-- GUT Intuition: Inexplicable gut feelings (e.g., truthfulness, supernatural
-  knowledge)
-   - Detection: observing the world, taking in the surroundings using all of
-     your senses
-   - Craft: Primary Skill for Support, practicing a trade (Medicine, Pottery,
-     Piety)
-- INT Intelligence: Thinking on the fly, rapidly recalling information
-   - Knowledge: Primary Skill for Casters, how much you know with regards to
-     history or science
-   - Investigation: Actively seeking the answer to a specific question using
-     senses and acumen
-- STR Strength: Physical limits and boundaries, useful in resisting a push or
-  catching a boulder.
-   - Athletics: Sustained exertion.
-   - Brute: Primary Skill for Defenders, a burst hit or single heavy lift.
-- VIT Vitality: Determines HP, resistance of disease.
+<!-- BROZ: Do you want links to go to github or the site? I replaced with a relative
+           doc link, which should work on both, not certain -->
+
+- AGL Agility: Dodging Contested Checks, boosts Unarmored AC.
+    - Finesse: Performing difficult actions with ease. Primary Skill for Martial role.
+    - Stealth: Moving quietly, undetected.
+
+- CON Conviction: Strength of character to resist harmful mental effects.
+    - Bluffing: Convincing others, either truthfully or deceptively.
+    - Performance: Acting under scrutiny, potentially in front of audiences.
+
+- GUT Intuition: Gut feelings about the state of the world (e.g., truthfulness, 
+  supernatural knowledge)
+    - Detection: Observing the world using all senses.
+    - Craft: Practicing a honed trade (i.e., Medicine, Pottery, Piety). 
+      Primary Skill for Support role.
+
+- INT Intelligence: Reactive critical thinking or recalling recalling explicit information.
+    - Knowledge: Recalling and amassing knowledge at leisure. Primary Skill for Casters.
+    - Investigation: Seeking the answer a question or piecing together information.
+
+- STR Strength: Physical limits and boundaries (e.g,. resisting a push).
+    - Athletics: Exerting oneself in physical sustained challenge.
+    - Brute: Burst force or single lifts. Primary Skill for Defenders. 
+
+- VIT Vitality: Resisting bodily harm. Determines max HP.
 
 ### Contested Checks
 
-Contested Checks are initiated when two opposing forces are attempting to
-accomplish something at the same time. This can be someone attempting to push
-someone else over, a Player trying to convince an NPC that they are an ally,
-or with the use of certain Powers. 
+Contested Checks are initiated when two characters attempt to
+accomplish opposite goals, or one character attempting to overcome the resistance of 
+another (see 
+[Full Player Guide](../01_PlayerGuide_Full.md#contested-checks) for more info).
 
-For the most updated reference and ruling on Contested Checks, visit the
-[Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#contested-checks)
+The list below features some examples, but, as the GM, it's up to you to decide what
+a situation calls for if it is not explicitly described in the manual or in a Power
+mechanic.
 
-Here are some Examples of Skills that are used in Contested Checks, though you
-are free to decide what makes the most sense in a given scenario at your
-table. 
-1. Tackle Target: Attacker Finesse vs. Target Athletics 
-2. Convince Target, truthfully or deceptively: Bluffing vs. Target Detection 
+1. Tackle Target: Initiator Finesse vs. Target Athletics 
+2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection 
 3. `MISSING`
 
 ### Epic Events
 
+<!-- BROZ: I think this could be revised referring back to the same example repeatedly
+           the way I did for the player guide successes.
+ -->
+
 Epic Events are unique, time-gated scenarios that can occur throughout an
-Adventure. As the Game Master, you determine when an Epic Event will happen,
-set the Difficulty, and decide the Stakes. 
+Adventure. As the Game Master (GM), you determine when an Epic Event will happen,
+set the Difficulty, and decide the stakes. 
+
+Epic Events invoke a specific set
+of rules for determining the outcome, which is different than traditional
+combat, social interaction, or exploration. These are typically very draining on 
+Player stamina (remaining decks), and could be a tool to engage resource management.
+This is also is a good way to engage all
+Players in faster-paced, more free-form roleplaying. Since
+Players can't make a Check two times in a row, it requires active dialogue,
+planning, and participation from every Player.
+
+For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
 
 #### How to Identify an Epic Event
 
-Epic Events occur within a specific set amount of time, typically best for
-anything that would unfold in less than a minute. They invoke a specific set
-of rules for determining the outcome, which is different than traditional
-combat, social interaction, or exploration. 
+<!-- BROZ: I think Epic could also be used for time skips. Do we want to first-person
+           this long treck from A to B or Epic it? Or replace the 2-year gap training 
+           montage
+-->
 
-Setting an Epic Event during a session typically is a good way to engage all
-of your players in a faster-paced, more free-form set of roleplaying. Since
-Players can't make a Check two times in a row, it requires active dialogue,
-planning, and participation from every Player. It is recommended to stick to
-one or two Epic Events per session, so as to keep it feeling unique and not
-drain too much Stamina from the Players, though as the Game Master you can
-set as many as you would like. 
-
-An Epic Event can be the group attempting to escape a crumbling fortress, or
-escape an island with an erupting volcano. It can cover things that are
-smaller in scope, such as a single point on a larger battlefield, or it can
-determine the outcome of an entire battle itself. As the Game Master, you
+Epic Events often occur within a limited time frame, typically
+less than a minute, and typically no more than twice per session. This could be a
+fleeing event under some thread of harm (e.g., a crumbling dungeon or
+an erupting volcano), or an unexpected smaller scenario (e.g., preventing an 
+uncontrolled vehicle from crashing). It can cover a small scope (e.g, a moment of 
+surprise that begins a larger battlefield), something larger (e.g., replace an entire
+combat), or even be used to shrink time skips (e.g., dealing with the storms and 
+resource management of travel across a sea). As GM, you
 will get a feel for what makes for a good Epic Event, and how to place it in
 your narrative to keep the session feeling fresh and lively for all of your
 Players.
 
-For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
 
 #### Setting an Epic Event's Difficulty
 
-You determine the Difficulty of an Epic Event ahead of time and announce the
-Difficulty at the beginning of the Epic Event. This is how many total
-Successes will be needed to complete the Epic Event before 3 Failures. 
-
-Setting an Epic Event with a Difficulty of 4 means that the Players need to
-make 4 Successful Checks before reaching 3 Failures. You can modify this
-difficulty or adjust the Stakes depending how many Failures there are before
-reaching the number of Successes required.
+The GM sets the difficulty ahead by announcing how many 
+Successes will be needed before 3 Failures. 
+Setting an a difficulty of 4 means that the Players need to
+make 4 successful Checks before reaching 3 failures. 
 
 #### Deciding the Stakes
 
-The Stakes of an Epic Event are the outcomes of both Success and Failure for
-the Players. Going into an Epic Event, there is no guarantee of Success, even
+Going into an Epic Event, there is no guarantee of Success, even
 at lower Difficulties. Try to balance the outcomes based on the scope of the
 Epic Event. Not all Epic Events are life-or-death scenarios, and consequences
-can vary depending on the degree of failure. 
+can vary depending on the number of success before 3 failures. 
 
-If Players are trying to escape a building before it collapses, and they are
-unsuccessful, they can each take a certain amount of damage or discard a
-number of cards based on the number of successes before they failed.
-Likewise, if the Players are successful without getting any failures, the
+If Players get 3 Failures trying to escape a collapsing dungeon, they may
+take a little damage or need to discard some cards, or lose a precious object in the 
+fray. 
+Likewise, if the Players are successful without any failures, the
 reward for their success can be balanced accordingly. 
+<!-- BROZ: editing bookmark -->
 
 <!-- MISSING - a table or reference of standard success/failures + example
  stakes for certain types of scenarios --> 
