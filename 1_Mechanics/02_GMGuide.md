@@ -36,9 +36,7 @@
         - House Actions
         - Boss Phases
     - Example Combat Encounter designed for 4 Players at level 2
-        - Location and Spacing
-        - Encounter Details and Setup
-        - Enemy Stat Blocks
+        - Stat Blocks
 - Building Your World
     - What is a World?
     - Preparing an Adventure
@@ -596,69 +594,55 @@ way to add in dynamic elements to an encounter, such as new enemies appearing
 or the environment becoming more dangerous.
 
 #### Boss Phases
-<!-- BROZ: editing bookmark -->
 
-Dealers often have less than 10 total HP to keep the amount of damage Players
-can do balanced at numbers below 10. Boss Encounters, however, can have
-multiple Phases where the Dealer changes their approach each time they run
-out of HP, and replenish their HP at the beginning of each Phase. Every time a Boss enters a new Phase, draw a new TC for them.
+Dealers often have < 10 HP. For balance, Boss Encounters can have
+multiple Phases. After running out of HP, they replenish and changes their approach.
+Every time a Boss enters a new Phase, draw a new TC for them. 
+The following list features a number of examples that might be triggered by a new Phase:
+<!-- BROZ: Why draw new TC -->
 
-When designing a Boss Encounter, determine the total amount of HP you want the
-Boss to have. Then divide this up into Phases where the Boss has less than 10
-HP per Phase. Once their HP reaches 0, you can trigger the start of the next
-Phase where they regain their total HP once again and advance to the next
-Phase. Make sure to keep track of which Phase the Boss is in during the
-Encounter. 
-
-These are a few examples of Boss Phases you could add in that change the
-Encounter over time. Experiment with these and feel free to try out different Phase mechanics.
-
-After dropping to 0 HP for the first time, the Boss might: 
-
-- Summon Minions 
-- Escape to another location 
-- Disappear when minions spawn, and reappear when they've been defeated 
-- Disappear when minions spawn, and reappear after a set number of rounds 
-- Alter the environment (breathe fire,
-   spread ice, displace rock, or create air currents/cyclones) 
-- Modify their core stats or Skill Modifiers
-- Change their AR 
-- Start drawing with Upper Hand 
+- Boss escapes to another location 
+- Boss summons Minions 
+- Boss alters the environment to make certain areas 
+    + cause damage (e.g., erupting flame)
+    + require a check (e.g,. Agility check to stay standing ice) 
+- Boss disappears, and reappears
+    - when Minions have been defeated 
+    - after a set number of rounds 
+    - after an environmental effect dissipates 
+- Boss changes features like
+    + core stats
+    + higher or lower AR
+    + drawing with Upper Hand (e.g., putting in more effort)
+    + drawing with Lower Hand (e.g., getting angry/sloppy)
 
 ### Example Combat Encounter designed for 4 Players at level 2
 
-Here is an example encounter that you could run with your Players. In a longer
-campaign, it is recommended that you mix it up with different types of
-encounters to see how the Players react and interact with each other. This
+<!-- BROZ: New GM stuff -->
+In a longer
+campaign, mix up the types of
+encounters to see how Players react and interact with each other. This
 will keep things fresh so combat keeps Players engaged over time.
 
-Lore is kept purposefully blank - feel free to fill it in with the world or archetype you
-are most interested in. 
+Here, the context is kept purposefully blank to fill in with your setting.
 
-Below are suggested stats and abilities for each of the enemies, though as the
-GM you are free to modify or tweak as you see fit. 
+**Location.** Start with a wide open space for the Players and enemies to
+move around in, between 10-20 spaces across to
+allow for movement and range inform tactics. 
 
-#### Location and Spacing
+**Setup.** Add 4 Minions close to the entrance and 1 Dealer
+farther away. 2 Minions are melee guards
+and 2 are shooters 3-5 spaces away, to
+force the Players to choose their targets and
+allow space between each enemy. The Players will need to deal with Minions
+Guards first in order to reach the Dealer, giving the Dealer to use
+their abilities in the first 2+ rounds. 
 
-For this encounter, you want a wide open space for the Players and enemies to
-move around in. Look for a generic battle map, between 10-20 spaces across.
-This allows for movement and range to come into play in a meaningful way,
-which adds to the complexity of the encounter. 
-
-#### Encounter Details and Setup
-
-The Encounter contains 1 Dealer and 4 Minions. The enemy Dealer should be
-positioned farther away from the Players at first, with the two Guards up
-closest to the Players and the Shooters positioned between 3-5 spaces away
-from the Dealer each. This will force the Players to choose their targets and
-allows for space between each enemy. The Players will need to deal with the
-Guards first in order to reach the Dealer, and gives the Dealer time to use
-their abilities in the first two rounds before the Minions are fully
-defeated.  
-
-#### Enemy Stat Blocks
+<!-- BROZ: editing bookmark -->
+#### Stat Blocks
 
 **Dealer: Captain**
+
 - HP: 5
 - AR: 2 (Lightly armored)
 - FP: 2
@@ -667,21 +651,22 @@ defeated.
   on a suited miss the Dealer can make one free redraw. 
 - Vulnerabilities: Eye for an Eye, if you attack in combat, you must target
   the enemy who hit you most recently.
-- Actions:   
+- Actions: 
   - Major Actions: 
     1. Attack, Melee, +2 to hit, 1 space range, single target. On
     a successful hit, deal 1 damage. 
     2. Attack, Ranged, +1 to hit, 10 space
-    range, single target. On a successful hit, deal 1 damage.  
+    range, single target. On a successful hit, deal 1 damage. 
   - Minor Actions: 
-    1. Speed Boost, double the Dealer's movement.   
+    1. Speed Boost, double the Dealer's movement. 
   - Adversary Actions: 
     1. Break Stun, when the Dealer is stunned, as an Adversary
     Action they can end the stun. This can only be done once per round.
     2. Command Minions, the Dealer commands one Minion to attack. The targeted
-    Minion can move up to 3 spaces and take one Major Action.  
+    Minion can move up to 3 spaces and take one Major Action. 
 
 **Minions 1 + 2: Melee Guards**
+
 - HP: 2
 - AP: 1
 - AR: 2 (Lightly armored) 
@@ -690,7 +675,7 @@ defeated.
   1. Attack, Melee, +1 to hit, 1 space range, single target. On a
   successful hit, deal 1 damage.
 - Minor Actions: 
-  2. Protect, adds 1 AP (up to a maximum of 1).    
+  2. Protect, adds 1 AP (up to a maximum of 1).  
 
 **Minions 3 + 4: Ranged Shooters**
 - HP: 2
@@ -701,7 +686,7 @@ defeated.
   successful hit, deal 1 damage.
 - Minor Actions: 
   1. Ready Aim, focuses attention on a single target. While that
-  target is in range, draw attacks with the Upper Hand.  
+  target is in range, draw attacks with the Upper Hand. 
 
 <!-- We could move the above example encounter elsewhere, or have a different
  document entirely for GM resources or reference materials that we could
@@ -722,7 +707,7 @@ defeated.
 
 ### Creating NPCs
 
-- Social encounters, Bystanders  
+- Social encounters, Bystanders 
 
 - Enemy types: Dealers and Minions 
 
@@ -780,6 +765,6 @@ This section will contain some more advanced aspects of being a Game Master.
 - Supporting Player and character growth and development 
 - Building a continuous Adventure that sustains over time as a full Campaign
 - Resuming a Campaign after a long break (it's OK - it happens)
-- Seeking help from the community  
+- Seeking help from the community 
 
 --> 
