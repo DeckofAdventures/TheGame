@@ -30,7 +30,7 @@
         - Initiating Combat
         - Strengths and Weaknesses
         - Setting up Combat Encounters
-    - Dealers, Minions, Bystanders, and Companions
+    - Character Types
     - Creating a Boss Encounter
         - Adversary Actions
         - House Actions
@@ -75,7 +75,7 @@ to the team on [Discord](https://discord.gg/2Wu6ZAb6S9) or via GitHub issues.
 
 <!-- 
 Needs a notes about 
-  1. what a DM screen is, literally and metaphorically 
+  1. what a GM screen is, literally and metaphorically 
   2. checks - why this is how ppl interact with the world, why add randomness?
   3. resource management - move up from DofA specific. Flow state is achieved when we're
      at the peak of our ability and met with the exact level of challenge to fit our 
@@ -154,7 +154,7 @@ two 26-card decks and shuffle regularly.
 Most NPCs won't stick around long enough to use a deck completely, and 
 won't shuffle prematurely, invoking Lower Hand. For the
 exceptional NPC, try assigning them a deck, if available. If 
-unavailable, you can decide when to invoke Lower Hand behind the DM screen.
+unavailable, you can decide when to invoke Lower Hand behind the GM screen.
 
 ### Managing Player Resources
 
@@ -229,7 +229,7 @@ Perhaps an enemy has specific values that could be used to turn them into an all
 
 `MISSING`
 
-<!-- BROZ: How much here should be in DofA-specific? Feels like new-DM topic to me -->
+<!-- BROZ: How much here should be in DofA-specific? Feels like new-GM topic to me -->
 
 ## Running a Session with Deck of Adventures
 
@@ -421,40 +421,41 @@ take a little damage or need to discard some cards, or lose a precious object in
 fray. 
 Likewise, if the Players are successful without any failures, the
 reward for their success can be balanced accordingly. 
-<!-- BROZ: editing bookmark -->
 
 <!-- MISSING - a table or reference of standard success/failures + example
  stakes for certain types of scenarios --> 
 
 #### An Example of an Epic Event
 
-The Players hear screaming in the distance, and rush to investigate. From 100
-feet away, they can see a group of townsfolk being attacked by a group of
-monsters. Each townsfolk is engaged with a different monster. The Difficulty
+<!-- BROZ: Is this the 'classic' example? I feel like the dungeon collapse or sneaky 
+           infiltration does the concept more justice bc it's something that would be
+           otherwise handled by less intense skill checks, instead of combat.
+ -->
+
+The Players hear screaming ~100 ft away, and rush to investigate. 
+They see a group of townsfolk being attacked by a group of
+monsters. Each of the townsfolk is engaged with a different monster. The difficulty
 is set to 3, and 5 target cards are drawn. The Players then declare which
 skill they will use to save one of the townsfolk, and must make a suited hit
 before the GM does to succeed on each TC. 
 
-- The Defender chooses to use Brute to intercede with one of the monsters and
-  distract it while the Townsfolk gets away. The GM decides based on the
-  skill chosen and the scenario what the DR would be, in this case choosing
-  DR 3 on a Target Card of 9 of Hearts. The Defender has a +2 to Brute, and
-  draws a 6 of Hearts. This is a success, since it is within the DR and
-  matches the suit, and the townsfolk is able to escape safely. The Target
-  Card is flipped over, marking one success. 
+- The Defender chooses Brute, and intends to ram into a monster while
+  the townsperson gets away. The GM decides a corresponding DR of 3 
+  on a 9 of Hearts Target Card (TC). The Defender draws a 6 of Hearts
+  and, with the Defender's +2 to Brute, this is a Suited Success and a success on 
+  the first Epic Event challenge. 
 
-- The Support wants to protect a townsfolk using Craft, which they have a +1
-  modifier. The GM rules this more difficult, making it a DR 2 on a TC of 7
-  of Clubs. The Support draws a 3 of Diamonds, which is a miss. The GM then
-  draws, without a modifier, against this same TC. They draw a 6 of Spades.
-  Also a miss. They go back and forth for a few more draws until the Support
+- The Support wants to protect a townsperson using their magic via Craft, with a +1
+  modifier. The GM rules this more difficult, with a DR 2 on a 7
+  of Clubs TC. The Support draws a 3 of Diamonds, which is a miss. The GM then
+  draws, without a modifier, against this same TC. They draw a 6 of Spades; 
+  also a miss. Support and GM each take turns drawing until until the Support
   draws a 5 of Clubs, which is a success. 
 
-- The Martial wants to sneak up to a townsfolk and help them escape out from
-  under the monster's grasp, intending to use Stealth which they have a +2
-  in. The GM rules this as moderately difficult, making it a DR 2 on a TC of
-  Jack of Spades. The Martial draws first, and misses. The GM draws a King of
-  Spades, which makes it the first failure for the Players.
+- The Martial wants to sneak up to a monster and help the townsperson escape, 
+  using Stealth. The GM sets a DR 2 on the
+  Jack of Spades TC. The Martial draws first, and misses. The GM draws a King of
+  Spades. As the GM got a Suited Success, this is the first failure for the Players.
 
 - The Caster and Support both go for the fourth TC together, each with their
   primary skill modifier. The DR is set to a 3, and they each draw first,
@@ -463,171 +464,139 @@ before the GM does to succeed on each TC.
   the Players, which ends the Epic Event.
 
 The Players watch as the monsters retreat, having saved the majority of the
-townsfolk. Since there was one failure, one of the townsfolk has been gravely
+townsfolk. Due to the one failure, one of the townsfolk has been gravely
 injured and was dragged away with the monsters as they retreated. The Players
 can choose to follow after the monsters or regroup with the townsfolk they
-saved, having successfully prevented more lives from being lost. This can
+saved. This might
 result in a reward from the local government for saving lives, or kick off a
-new Adventure that involves seeking out the monsters in their lair and
-putting a stop to them.    
+new Adventure that involves seeking out the monsters.
 
 ### Combat
 
-Deck of Adventures combat is meant to be fast-paced, collaborative, and
-accessible. It is designed with a simple core, while allowing for a lot of
+<!-- BROZ: This feels like new-GM stuff -->
+Deck of Adventures (DofA) combat is meant to be fast-paced, collaborative, and
+accessible. It is designed around a simple core, while allowing for a lot of
 player freedom based on how they built their character. 
-
-To run combat in Deck of Adventures successfully, you should plan encounters
+To run combat in DofA successfully, you should plan encounters
 thoughtfully and be able to adapt on the fly when Players make unexpected
 strategic decisions. 
 
-Some sessions of Deck of Adventures may be very focused on combat, with 3-4
-combat encounters between Full Rests. Other sessions may be more centered
-around roleplay, with social encounters and exploration. As the Game Master,
+Some sessions may be very focused on combat, with 3-4
+combat encounters between Full Rests, while others will be more roleplay-oriented.
+As the Game Master (GM),
 you decide what mix is best for your table. Some Players may be more interested
 in combat, while others get excited and engaged with good social roleplay, and it
 is up to you as the GM to balance the interests of the Players at the table.
 
-You can ask the Players directly what they would prefer, and work to build
-sessions around their preferences, especially early on at a new table before
-everyone's preferences are explicitly understood.  
-
 #### Initiating Combat
 
 You choose when to declare the beginning of Combat, and this triggers the
-start of Combat Turn Order. The start of combat depends entirely on the
+start of Combat Turn Order. The start depends entirely on the
 scenario. It might begin when the Players decide to attack an enemy, or when
-an enemy is about to attack the Players. 
+an enemy decides to attack the Players. 
 
-To determine Turn Order, have every Player draw a Target Card for their
-character. You will draw a TC for each Minion and Dealer involved in the
+To determine Turn Order, every Player will draw a Target Card for themselves. 
+As the GM, you will draw a TC for each Minion and Dealer involved in the
 Encounter, including any new enemies that appear throughout Combat. 
-
-When drawing TCs for Turn Order, you can draw a single TC for a group of
-Minions to make them easier to manage. A Dealer must always have their own
+To simplify, a group of
+Minions might have a single TC, but a A Dealer must always have their own
 TC.
 
 #### Strengths and Weaknesses
 
 There are ways to build encounters that allow the Players to highlight their
-character's strengths, and other ways to optimize an encounter to address
-those characters' Vulnerabilities. 
+character's strengths or Vulnerabilities. 
+If a Player recently took a new Power, you might build an
+encounter give it a chance to shine. An new area of effect 
+Power would be feel great to deploy on a swarm of smaller enemies.
+If a Player has the Wanted Vulnerability, you introduce the
+the faction hunting, who might
+approach the Players as hostile. Can the Players
+talk their way out of the
+situation?
 
-For example, if a Player takes a new Power during a level up, you can build an
-encounter to allow that Player a chance to shine. If they just took an Area
-of Attack (AOE) power that allows them to hit many enemies close together,
-set up a Combat Encounter with many smaller foes that are swarming the
-Players. This will give that Player an opportunity to get to use the Power
-they were excited about taking. 
-
-Vulnerabilities may have combat implications as well as an effect on roleplay
-that you can leverage. If a Player has the Wanted Vulnerability, you can have
-the faction that is hunting them appear in an Adventure. They might
-explicitly approach the Players as hostile, attempting to engage in combat,
-or the Players might have an opportunity to talk their way out of the
-situation if they choose, or attack the enemies themselves.  
+<!-- BROZ Move up to new-GM  -->
 
 #### Setting up Combat Encounters
 
 You decide what types of Combat Encounters you want to run during a session.
-There are many different ways to run Combat, and mixing it up regularly is a
-good way to keep it interesting for the Players.
+Players could be matched against a single strong foe. Many smaller enemies
+might have the players torn in different directions. 
+A single Dealer with supporting Minions might have interesting interaction effects,
+where one gains benefits in the presence of the other.
 
-Do you want to pit the Players against a single strong foe, who can stand
-toe-to-toe with the entire 3-6 Player team in a Combat? Or do you want to
-throw many smaller enemies with a single stronger foe they are supporting, in
-a larger-scale battle scene? The choice is yours - and often a session may
-have a mix of combat encounters. 
+GMs should try to include a mix of roleplay and combat, when possible.
+Storming an enemy fortress may result in several Combat
+Encounters back to back. Investigating a crime in a
+major city may have more social investigation-based with relatively little combat.
 
-It is recommended for a session to include a mix of roleplay and combat,
-though depending on the scenario the Encounters may be more combat focused.
-Storming an enemy fortress, for example, may result in several Combat
-Encounters that are fought closely together, while investigating a crime in a
-major city may have more social investigation-based roleplay with only one or
-two combat Encounters. 
+<!-- BROZ Move up to new-GM  -->
 
-### Dealers, Minions, Bystanders, and Companions
+### Character Types
 
-- *Minions* are enemies that are weaker than the Players. They often have
-   lower HP, and they cannot take Powers or Vulnerabilities. Minions do not
-   have access to Fate Cards, and as the GM you would draw from a shared deck
-   of cards whenever Minions are present.
+- **Minions** are enemies that are weaker than the Players. They often have
+   lower HP, and cannot take Powers or Vulnerabilities. They do not
+   have access to Fate Cards, and draw from a single GM deck.
 
-- *Dealers* are as powerful if not more powerful than the Players. They are
-   the movers and shakers of the world, and often command Minions on the
-   battlefield. GMs draw from a separate deck of cards on behalf of each
-   Dealer, and these Dealers can use Fate Cards. Each Dealer starts with one
+- **Dealers** are just as powerful, or more powerful than, than the Players. They are
+   have a name, and experience that would lend them power. 
+   GMs might draw from a separate deck of cards for each
+   Dealer. Each starts with one
    Fate Card, and reserves Aces when drawn. Dealers can also take Powers and
-   Vulnerabilities, and may be in possession of powerful items and equipment.
+   Vulnerabilities, and may possess items.
    See below for how to turn a Dealer into a Boss. 
 
-- *Bystanders* are allied or neutral characters that exist throughout the
-   world. Bystanders range from simple store owners and local innkeepers, to
-   ambassadors or nobles from a neighboring land. These characters are
-   typically on par in power with Minions, though some Bystanders are
-   considerably more powerful and can join the Players in combat as
-   Companions or GM controlled Dealers.
+- **Bystanders** are allied or neutral characters that exist throughout the
+   world, as anything from a store owner to
+   noble ambassador. These characters are
+   typically on par in power with Minions, and may be persuaded to
+   join Players in combat as Companions or GM controlled Dealers.
 
-- *Companions* are Player controlled creatures that are allied to the Players.
-   They can be commanded with an Action, and Players can invest in Powers
-   that make their Companion more powerful. You can grant the Players a
-   temporary Companion as part of an Adventure, which does not cost XP, but
-   the most common way for Players to get a Companion is to take a relevant
-   Power on Level Up. As the GM, you decide whether or not a Bystander will
-   join the Players as a Companion, and for how long. This might involve a Check, or an exchange of money or items. 
+<!-- BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion 
+           or Companion, and join players in combat accordingly? -->
+
+- **Companions** are Player-controlled creatures who 
+   can be commanded with an Action. Players can invest in Powers
+   to make their Companion more powerful. A GM might also grant a
+   temporary Companion as part of an Adventure, potentially as a result of
+   a Check, or an exchange for other money or items. 
+
+- **Bosses** are even more powerful than dealers, and gain the following benefits:
+  Adversary Actions, House Actions, and Phases. 
 
 ### Creating a Boss Encounter
 
-Certain Dealers are extremely powerful, and gain additional benefits and
-Actions that are not present in other types of Encounters. Any Dealer could
-be considered a Boss, and GMs are encouraged to make use *Adversary Actions*
-whenever a Dealer is present to make them feel more threatening. Adding
-in *House Actions* during a Boss Encounter can create a dynamic and exciting
-Encounter that will challenge the Players.
-
 Boss Encounters are best saved for the end of Adventures, as a culmination of the
-work the Players have done up to that point. As the GM, you can choose when
-to place a Boss Encounter in your Adventure, as well as what Actions they should
-have based on when and where they are fought.    
+the story thus far. As the GM, you choose what Actions have access to.
 
 #### Adversary Actions
 
-An Adversary Action is a unique mechanic to an enemy Dealer, and can be used
-between any character's turns. Adversary Actions help balance encounters
-where a single Dealer might be facing a group of 3-6 Players. Adding in
-Adversary Actions helps balance an Encounter where the Players may be facing
-a single Dealer or a small group and a single Dealer. Using Adversary Actions
-helps give the Players a sense of the power and danger of a single enemy. 
-
-Some Adversary Actions may be related to resource replenishment, like allowing
-a Dealer to recover a small amount of HP or gain AP. Other Adversary Actions
-allow for an additional attack, or affect the environment to make the Players
-make a Check. If the Players fail that Check, they might take damage or
+An Adversary Action is a Boss ability that takes place outside their turn
+during Combat to help balance encounters
+where a single Boss might be facing up to 6 Players. 
+They
+help Players feel a sense of danger from a single enemy. These may be
+related to resource replenishment, like allowing
+a Dealer to recover a small amount of HP or gain Fate Points. They may
+allow for an additional attack, an environmental effect involving a Check for the Players.
+Players who fail might take damage or
 receive a Status Condition like Entangled. 
 
-Here is an example Adversary Action that a poison wielding enemy might use: 
-- Acid Splash, a cloud of acid appears in a 4 space cube. Any creature within
-  the cloud when it appears must make a DR 3 Agility Check. On a failure,
-  take 2 damage. On a success, take half damage.   
+For example, a poisonous monster would have the following Adversary Action: 
+*Acid Splash*. A cloud of acid appears in a 4 space cube. Any creature inside the cube
+at the start of their turn makes a DR 3 Agility Check or take 2 
+damage. On a success, 1 damage.
 
 #### House Actions
 
-If a Boss Encounter is happening within the Dealer's home or base of operations,
-an additional mechanic is added known as House Actions. These are Actions
-that happen at the beginning of every round of combat during a Boss Encounter.
-Once every Dealer and Minion has made their turn, and the first character in
-the turn order would go again, a House Action can trigger. This is a great
+House Actions take place when a Boss is in their home or base of operations.
+Once initiated, they happen at the beginning of every round of combat.
+This is a great
 way to add in dynamic elements to an encounter, such as new enemies appearing
-or a Phase change for a Boss. Some House Actions can be randomized by
-creating a table of possibilities, and drawing a card at the top of every
-round. 
-
-Think about the Boss you are trying to create. Would there be more Minions
-nearby, ready to be summoned by the call of their Master? Or does their lair
-contain traps or other hidden secrets that could be exposed during the course
-of a longer battle. Get creative with it!  
+or the environment becoming more dangerous.
 
 #### Boss Phases
+<!-- BROZ: editing bookmark -->
 
 Dealers often have less than 10 total HP to keep the amount of damage Players
 can do balanced at numbers below 10. Boss Encounters, however, can have
