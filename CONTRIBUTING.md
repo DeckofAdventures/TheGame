@@ -52,6 +52,19 @@ Contributions are always welcome as GitHub issues. GitHub pull requests should b
 reserved for major changes to at least one section, or minor changes across many
 sections (e.g., for terminology changes).
 
+<!--LOCK: Adding section for how we handle community contributions as Issues and the stages of consideration, development, playtesting, and integration into the core ruleset -->
+
+Contributions may take the form of suggested ideas or mechanics that could be
+implemented into the existing version. The Deck of Adventures admins reserve
+the right to choose which proposals and contributions are considered for
+integration, which are modified, adapted, playtested, and ultimately
+integrated into the current or future version.
+
+An Issue will be tagged as "Under Consideration", "In Development", "In
+Playtesting", and "Integrated" to establish where it is in the development
+cycle. Not all ideas will make it to the Integrated step, but every
+Contribution and comment from the Community is valued. 
+
 ## Commercial Use Waiver
 
 If you contribute to, or have contributed to, Deck of Adventures content, you hereby
