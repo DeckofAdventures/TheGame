@@ -7,17 +7,19 @@
 
 - Introduction
 - Getting Started as a Game Master
+    - Making Checks
+    - GM Preparation
+    - Creating Your World
 - Being a Deck of Adventures Game Master
-    - Game Master Resources
+    - GM Resources
     - Managing Player Resources
     - Cards
     - Resting
     - Working with Character Vulnerabilities
-    - Creating Your World
 - Running a Session with Deck of Adventures
     - The Target Card System
     - Successes and Failures
-    - Likelihood Chart
+    - Difficulty Chart
     - Fate Cards
     - Skills Breakdown
     - Contested Checks
@@ -38,7 +40,7 @@
     - Example Combat Encounter designed for 4 Players at level 2
         - Stat Blocks
 - Building Your World
-    - What is a World?
+    - What is Your World?
     - Preparing an Adventure
     - Creating NPCs
 - Managing Players \(Expectations & Realities\)
@@ -71,7 +73,7 @@ issues.
 
 ## Getting Started as a Game Master
 
-<!-- 
+<!-- BROZ:
 Needs a notes about 1. what a GM screen is, literally and metaphorically [added] 2.
 checks - why this is how ppl interact with the world, why add randomness? 3.
 resource management - move up from DofA specific. Flow state is achieved when
@@ -81,25 +83,29 @@ they're feeling challenged in a way that suits their play style, without
 worrying about what they have left.
 -->
 
+<!-- LOCK: Added 1. GM screen, 2. Checks, 3. Difficulty in this section --> 
+
 Game Masters (GMs) play referee and narrator in a Tabletop RPG like Deck of
 Adventures (DofA). You are both the arbiter of the rules, and the
 actor/playwright who brings the various scenes of the story to life and
 voices the majority of the characters who populate the world. You control
 when certain characters come and go, scene changes, and the narration between
-scenes. 
+scenes. You build the world, populate it with characters and history, and
+then the Players walk through that world and experience it first-hand. 
 
 GMs are responsible for preparing ahead of sessions and guiding a group of
 Players through a collaborative narrative Adventure. You bring the game to
 life with any type of story you can imagine. There are so many possibilities
-as Game Master.
+as Game Master, and this guide is intended to help GMs develop and hone their
+skills running Adventures.
 
-There are many different approaches GMs take to this role, focusing on unique
-strengths and talents. Don't compare yourself to others, especially those
-with years of experience. This craft takes years to hone, and decades to
-master, but you can be a great GM within your first few sessions by following
-some of the advice in this guide. The DofA Community also is available to
-respond to questions and offer advice, drawing from years of collective
-experience. 
+There are many different approaches GMs take to this role, focusing on their
+unique strengths and talents. Don't compare yourself to others, especially
+those with years of experience. This craft takes years to hone, and decades
+to master, but you can be a great GM within your first few sessions by
+following some of the advice in this guide. The DofA Community also is
+available to respond to questions and offer advice, drawing from years of
+collective experience. 
 
 You should be an impartial force in the world, controlling both allies and
 enemies neutrally. The best sessions feel like everyone is working together
@@ -109,6 +115,18 @@ feedback. It's also a GM's responsibility to provide feedback to the Players
 at the table when necessary, especially if one's play style may be a
 distraction to others at the table. 
 
+### Making Checks
+
+As the GM, you decide when characters should make a Check when attempting an action during an Adventure. Some actions just happen, like a character opening an unlocked door. Other actions might require the character to attempt a Skill Check to see if they are successful. Incorporating luck makes Adventures feel more dynamic and exciting. 
+
+When characters make a Check, they are drawing from their expertise (or inexperience) with a specific Skill to see how they perform. Their Modifier (Mod) indicates their character's expertise with a specific Skill. Characters with high Strength would be more likely to succeed on an Athletics Check than Characters with low Strength, though by incorporating luck a low Strength character still has a chance to succeed on a Strength Check. 
+
+You determine when a Check should be made, what Skill should be used, and set the Difficulty. A Player might ask if a specific Skill could be used instead, and it is your decision whether to allow it in the circumstance. Stepping over a crack in the floor should not require a Check, but leaping ten feet across a chasm would. Attempting to sneak past a sleeping guard still requires a Stealth Check, but it should be less difficult than sneaking past the same guard who is on high alert. 
+
+Flow state is achieved when we are at the peak of our ability and met with the
+exact level of challenge to fit our skills. To keep Players engaged, dial in
+the difficulty to where they're feeling challenged in a way that suits their
+play style, without worrying about what resources they have left.
 
 ### GM Preparation
 
@@ -116,62 +134,71 @@ As a GM, you will need to spend time outside of normal session hours working
 on your Adventure. You will be the primary resource for information about the
 world. Players will ask questions, and it's up to you to provide details,
 even if it's improvised. It's also OK to say you don't know something, or
-that you'll need to get back to them after the session. You should open to
-Player questions and ideas, and work with them to tell the story rather, as
-much as possible. Improvisation and spontaneity are two vital ingredients to
-a great session, but having key moments mapped out is important to shaping
-the Players' experience. What you prepare may not pan out perfectly, and
-that's part of the fun. The Players bring their own creative agency, and can
-be unpredictable. It's important not to force the players back into a
-prescribed narrative. If the Players logically lead the the session in a
-different direction, go with it. The Players also may not know when story
-beats are improvised, but these can be the most organic and memorable
-Adventures. The GM builds the world, populates it with characters and
-history, and then the Players walk through that world and experience it
-first-hand. 
+that you'll need to get back to them after the session. You should be open to
+Player questions and ideas, and work with them to tell the story as much as
+possible. Improvisation and spontaneity are two vital ingredients to a great
+session, but having key moments mapped out is important to shaping the
+Players' experience. 
+
+What you prepare may not pan out perfectly, and that's part of the fun. The
+Players bring their own creative agency to the table, and that can be
+unpredictable. It's important not to force the Players back into a prescribed
+narrative. If the Players logically lead the the session in a different
+direction, go with it. The Players also may not know when story beats are
+improvised, and these moments can make for the most organic and memorable Adventures. 
 
 During a session, GMs keep some information hidden from the Players. This can
 be a physical GM screen between the GM and players, or virtually with notes
 and images that are not actively shared. For a physical screen you can use a
-piece of cardboard or shortened trifold board that you can stick notes and
+piece of cardboard or shortened tri-fold board that you can stick notes and
 stat blocks onto the back of so only you can see. You choose when to share
 information that might come up naturally as a result of a Check or the
 narrative. Every GM has their own style of maintaining this division of what
 is hidden and what is revealed.
 
+### Creating Your World
+
+`MISSING`
+
+<!--LOCK: Moved up to new-GM per BROZ suggestion -->
 
 ## Being a Deck of Adventures Game Master
 
 As a Deck of Adventures (DofA) Game Master (GM) you are controlling the flow
-of card draws on both sides of the table.
+of card draws on both sides of the table. Try to balance card draws between Players and NPCs throughout a session, and make sure all Players are involved. 
 
 ### Game Master Resources
 
 Game Masters (GMs) should have at least two decks of cards available during a
 session to represent allies and enemies. More decks may be useful to
-represent different groups. If you only have one deck available, split it
-into two 26-card decks and shuffle regularly. 
+represent different groups in combat. If you only have one deck available,
+split it into two 26-card decks and shuffle regularly. 
 
-Most NPCs won't stick around long enough to use a deck completely, and won't
-shuffle prematurely, invoking Lower Hand. For the exceptional NPC, try
-assigning them a deck, if available. If unavailable, you can decide when to
-invoke Lower Hand behind the GM screen.
+Most NPCs won't stick around long enough to use a deck completely, and
+therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
+For the exceptional NPC, such as a Dealer or a Boss, try assigning them a
+deck, if available. If unavailable, you can decide when to invoke Lower Hand
+behind the GM screen.
+
+<!--LOCK: Consider adding a link here to the Player Guide about Fatigue --> 
 
 ### Managing Player Resources
 
 Adventures can also be designed to test different aspects of the Players and
 characters. Each Player holds a single deck of 52 cards, with two Fate Cards
 reserved at the beginning of play. Each character has statistics that include
-total Health Points (HP), Fate Points (FP), and Armor Points (AP). 
+total Health Points (HP), Fate Points (FP), and Armor Points (AP). Your focus during a session will be balancing the expenditure of all of these resources. 
 
 ### Cards
 
-Players' decks are like their character's stamina. As cards are drawn, they
-should get progressively more tired throughout the day via Checks and Powers.
-At lower levels, Players may not reach the end of their decks between Rests
-to incur Lower Hand penalties. As Players level up, both the Powers they use
-and the Encounters they face may require more draws, bringing them closer to
-running out. 
+Think of the Players' decks as their characters' stamina. They should get
+progressively more tired throughout the day as cards are drawn for Checks and
+Powers. If a Player runs out of cards between Rests, they are Fatigued and
+reshuffle their deck. They make all checks at Lower Hand until they complete
+a Rest. At lower levels, Players may not reach the end of their decks between
+Rests to incur Lower Hand penalties. As Players level up, both the Powers
+they use and the Encounters they face may require more draws, bringing them
+closer to running out. Some Players will go through cards quickly, while others will be more conservative about their draws. Keep this in mind when developing Encounters and challenging different Players. 
 
 ### Resting
 
@@ -180,20 +207,23 @@ Quick Rests between Full Rests during each day of in-game time, depending on
 the Encounters they face. While Resting, the Players will be regaining their
 HP and FP, and expending Rest Cards. When planning Encounters that deal
 damage, keep these resources in mind. Try to keep Players motivated to press
-on, even without full resources. They may want to take a Quick Rest p if
-their HP or FP drop too low. 
+on, even without full resources. They may want to take a Quick Rest if
+their HP or FP drop too low, though it might not always be possible. 
 
 To Rest, Players will consult with the GM about whether it is feasible for
-their characters to secure a 30-minute or 8-hour break uninterrupted If a
+their characters to secure a 30-minute or 8-hour break uninterrupted. Players
+can only use Rest Cards after a Rest has been successfully completed. If a
 situation is tense, it may not always be possible to gain the benefits of a
 Rest. In the event that a Rest is interrupted, it can be resumed based on the
-remaining time left and extended as necessary. For example, a Full Rest would
-be easy to secure at a comfortable inn in a major city. A temporary hiding
-spot in an enemy bandit camp would me much more risky. You could use (a) a
-Player stealth Check (b) an enemy detection Check, or (c) an Epic Event to
-see if they are interrupted. As the GM, you have the ultimate authority in
-the successful completion of a Rest. Encourage players to work with each
-other to make the best decision given circumstances.
+remaining time left and extended as necessary. 
+
+For example, a Full Rest would be easy to secure at a comfortable inn in a
+major city. A temporary hiding spot in an enemy bandit camp would me much
+more risky. You could use (a) a Player Stealth Check (b) an enemy Detection
+Check, or (c) an Epic Event to see if the Rest is interrupted. As the GM, you
+have the ultimate authority in the successful completion of a Rest. Encourage
+players to work with each other to make the best decision given
+circumstances.
 
 ### Working with Character Vulnerabilities
 
@@ -205,8 +235,8 @@ moments for the Players.
 
 For Player Vulnerabilities with more severe mechanical consequences, or those
 that could lead to dangerous situations, GMs should avoid planning too much
-on this weakness. The Players should feel like their Vulnerabilities add to
-the richness of the story, and ultimately rewarded for taking on the
+around this weakness. The Players should feel like their Vulnerabilities add to
+the richness of the story, and are ultimately rewarded for taking on the added
 challenge. A Vulnerability should result in feeling a balance of toughness
 and heroism despite the odds. At its best, Vulnerabilities will inspire
 characters that develop over time, intertwining with a broader narrative.
@@ -214,20 +244,13 @@ characters that develop over time, intertwining with a broader narrative.
 For NPCs, Vulnerabilities can add depth to an otherwise flat archetype of
 merchant or farmer. Are there Vulnerabilities that can work to challenge the
 values of Players? What foils can help Players flesh out their character by
-disagreeing with another. Seeing a corruptible guard might really activate a
-character focused on justice. Enemy NPC Vulnerabilities also give Players
-something to exploit, though deeper analysis of the world. Yes, one Player
-can do consistent damage by continuing to attack, but another could spend a
-turn studying movements to learn that their adversary has an injury and can't
-defend against specific attacks. Perhaps an enemy has specific values that
-could be used to turn them into an ally.
-
-### Creating Your World
-
-`MISSING`
-
-<!-- BROZ: How much here should be in DofA-specific? Feels like new-GM topic
-<!-- to me -->
+disagreeing with another character. Seeing a corruptible guard might really
+activate a character focused on justice. Enemy NPC Vulnerabilities also give
+Players something to exploit, through deeper analysis of the world. Yes, one
+Player can do consistent damage by continuing to attack, but another could
+spend a turn studying movements to learn that their adversary has an injury
+and can't defend against specific attacks. Perhaps an enemy has specific
+values or beliefs that could be used to turn them into an ally.
 
 ## Running a Session with Deck of Adventures
 
@@ -246,38 +269,45 @@ both a King and a 2.
 
 ### Successes and Failures
 
-- **Successes** happen when the drawn card is within the DR. 
-  The character making the Check is able to accomplish what they intended, within reason.
+- **Successes** happen when the drawn card is within the DR. The character
+    making the Check is able to accomplish what they intended, within
+    reason.
 
-- **Misses** happen when the drawn card is outside the DR.
-  The character making the Check is not able to accomplish what they intended. 
+- **Misses** happen when the drawn card is outside the DR. The character
+    making the Check is not able to accomplish what they intended. 
 
-- **Critical Successes** happen when the drawn card exactly matches the TC in 
-  pip value and suit. At 1.9% chance, they should feel amazing
-  for the Player. Make an effort to rewards these exact matches whenever possible
-  with additional effects or bonuses.
+- **Critical Successes** happen when the drawn card exactly matches the TC in
+    pip value and suit. At 2% chance, they should feel amazing for the
+    Player. Make an effort to reward these exact matches whenever possible
+    with additional effects or bonuses.
 
-- **Major Successes** happen when the drawn card matches the TC in pip value 
-  At 7.7% chance, this should feel pretty
-  good. In Combat, a Major Success increases the
-  damage of the attack by 1. Out of combat, some smaller bonus should happen whenever 
-  possible.
+- **Major Successes** happen when the drawn card matches the TC in pip value
+    At 8% chance, this should feel pretty good. In Combat, a Major Success
+    increases the damage of the attack by 1. Out of combat, some smaller
+    bonus should happen whenever possible.
 
-- **Color and Suited Successes** happen when the drawn card is within the DR and 
-  matches the TC in color or suit. 
+<!--LOCK: I rounded up to 2% and 8% to make it more accessible for the less
+ math-minded GMs, and to match the table below -->
 
-- **Fate Cards**  permit a Dealer (Player character or significant NPC) to redraw. If
-  this changes the success state, the first draw should be ignored.
+- **Color and Suited Successes** happen when the drawn card is within the DR
+    and matches the TC in color or suit. 
 
-### Likelihood Chart
+- **Fate Cards**  permit a Dealer (Player character or significant NPC) to
+    redraw. If this changes the success state, the first draw should be
+    ignored.
 
-The chart below shows probability of success for the most frequent draws at
-each Difficulty Range (DR). To further dial in the difficulty, you might say
-that a specific check requires a Color or Suited Success. Note that Color or
-Suit make success half or a quarter as likely. Some mechanics or GM rulings
-can call for checks to be made at Upper or Lower hand, drawing (up to) 2 or
-more cards, and taking the more or less benefitial result. The final row
-notes the difference caused by drawing 2 cards. At DR 0 or 6, there's little
+### Difficulty Chart
+
+<!--LOCK: Edited Likelihood to Difficulty for ease of GM navigation --> 
+
+The GM sets the Difficulty for all Checks made during a session. The chart
+below shows probability of success for the most frequent draws at each
+Difficulty Range (DR). To further dial in the difficulty, you might say that
+a specific check requires a Color or Suited Success. Note that Color or Suit
+make success half or a quarter as likely. Some mechanics or GM rulings can
+call for Checks to be made at Upper or Lower Hand, drawing (up to) 2 or more
+cards, and taking the more or less beneficial result. The final row notes the
+difference caused by drawing 2 cards. At DR 0 or 6, there's little
 difference, but it can be as much as 25% for a DR 3 check.
 
 | DR          | 0   | 1   | 2   | 3   | 4   | 5   | 6    |
@@ -287,40 +317,50 @@ difference, but it can be as much as 25% for a DR 3 check.
 | Suit Draw   | 2%  | 6%  | 10% | 13% | 17% | 21% | 25%  |
 | Lower Hand 2| 1%  | 5%  | 15% | 29% | 48% | 72% | 100% |
 | Upper Hand 2| 15% | 41% | 62% | 79% | 91% | 98% | 100% |
-| Difference  |  7% | 18% | 24% | 25% | 21% | 13% | NA   |
+| Difference  | 7%  | 18% | 24% | 25% | 21% | 13% | NA   |
+
+Keep this table as a handy reference for setting DRs throughout a session. Do
+you want something to feel extremely difficult? Maybe make it a DR 1. Should
+a Player feel like something is less challenging for their character in a
+moment where the odds are in their favor? Make it a DR 3 with Upper Hand. You
+decide what makes the most sense given a specific situation. 
 
 ### Fate Cards
 
-Players start with their 2 Jokers and will randomly gain Fate Cards as they
-draw their Aces. As a GM, you can promote using Fate Cards by give more to
-reward key moments of play. This can be a great tool for encouraging great
-roleplay or working together. 
+Players start with 2 Jokers as Fate Cards and will randomly gain more as they
+draw their Aces. As a GM, you also reserve Fate Cards when controlling
+Dealers during a session. Fate Cards are opportunities for Players and
+Dealers to manipulate fate by allowing for a re-draw or avoiding damage. You
+can ask if a Player would like to use a Fate Card when they Miss or when they
+take damage. You can encourage Players to use these more often by giving
+additional Fate Cards to reward key moments of play. This can be a great tool
+for encouraging great roleplay or working together.
 
 ### Skills Breakdown
 
 Players will want to make Checks based on their characters' strengths. Their
-approach to a situation should determine the nature of a check. As the GM,
-you have the final say as to which skill applies. Attributes are meant to be
+approach to a situation should determine the nature of a Check. As the GM,
+you have the final say as to which Skill applies. Attributes are meant to be
 more responsive/reactive, and are often used for Contested Checks. Skills are
 intended to be more active for character-initiated events.
 
 The list below provides of general information about the Attributes and
-Skills (see[Full Players Guide](../01_PlayerGuide_Full.md#Characters) for
+Skills (see [Full Players Guide](../01_PlayerGuide_Full.md#Characters) for
 more info).
 
 <!-- BROZ: Do you want links to go to github or the site? I replaced with a
 relative doc link, which should work on both, not certain -->
 
 - AGL Agility: Dodging Contested Checks, boosts Unarmored AC.
-    - Finesse: Performing difficult actions with ease. Primary Skill for
-      Martial role.
+    - Finesse: Performing difficult physical actions with ease. Primary Skill
+      for Martial role.
     - Stealth: Moving quietly, undetected.
 
 - CON Conviction: Strength of character to resist harmful mental effects.
     - Bluffing: Convincing others, either truthfully or deceptively.
     - Performance: Acting under scrutiny, potentially in front of audiences.
 
-- GUT Intuition: Gut feelings about the state of the world(e.g., truthfulness,
+- GUT Intuition: Gut feelings about the state of the world (e.g., truthfulness,
   supernatural knowledge)
     - Detection: Observing the world using all senses.
     - Craft: Practicing a honed trade (i.e., Medicine, Pottery, Piety).
@@ -330,7 +370,7 @@ relative doc link, which should work on both, not certain -->
   information.
     - Knowledge: Recalling and amassing knowledge at leisure. Primary Skill
       for Casters.
-    - Investigation: Seeking the answer a question or piecing together
+    - Investigation: Seeking the answer to a question or piecing together
       information.
 
 - STR Strength: Physical limits and boundaries (e.g,. resisting a push).
@@ -342,12 +382,12 @@ relative doc link, which should work on both, not certain -->
 ### Contested Checks
 
 Contested Checks are initiated when two characters attempt to accomplish
-opposite goals, or one character attempting to overcome the resistance of
+opposite goals, or one character attempts to overcome the resistance of
 another (see [Full Player Guide](../01_PlayerGuide_Full.md#contested-checks) for more info).
 
-The list below features some examples, but, as the GM, it's up to you to
-decide what a situation calls for if it is not explicitly described in the
-manual or in a Power mechanic.
+The list below features some examples of Contested Checks, but, as the GM,
+it's up to you to decide what a situation calls for if it is not explicitly
+described in the guide or in a Power mechanic.
 
 1. Tackle Target: Initiator Finesse vs. Target Athletics 
 2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection 
@@ -371,12 +411,17 @@ engage all Players in faster-paced, more free-form roleplaying. Since Players
 can't make a Check two times in a row, it requires active dialogue, planning,
 and participation from every Player.
 
+As the GM, you are actively drawing against the Players on a TC during the
+Epic Event. The odds are skewed in the Players' favor by allowing them to
+draw using Skill Modifiers while the GM draws with a +0 Mod. Your ability to
+modify the challenge of an Epic Event comes from setting the Difficulty.
+
 For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
 
 #### How to Identify an Epic Event
 
 <!-- BROZ: I think Epic could also be used for time skips. Do we want to first-person
-           this long treck from A to B or Epic it? Or replace the 2-year gap training 
+           this long trek from A to B or Epic it? Or replace the 2-year gap training 
            montage
 -->
 
@@ -386,16 +431,16 @@ event under some thread of harm (e.g., a crumbling dungeon or an erupting
 volcano), or an unexpected smaller scenario (e.g., preventing an uncontrolled
 vehicle from crashing). It can cover a small scope (e.g, a moment of surprise
 that begins a larger battlefield), something larger (e.g., replace an entire
-combat), or even be used to shrink time skips (e.g., dealing with the storms
-and resource management of travel across a sea). As GM, you will get a feel
-for what makes for a good Epic Event, and how to place it in your narrative
-to keep the session feeling fresh and lively for all of your Players.
-
+combat), or even be used to shrink longer periods of time into manageable
+pieces (e.g., dealing with the storms and resource management of travel
+across a sea). As GM, you will get a feel for what makes for a good Epic
+Event, and how to place it in your narrative to keep the session feeling
+fresh and lively for all of your Players.
 
 #### Setting an Epic Event's Difficulty
 
 The GM sets the difficulty ahead by announcing how many Successes will be
-needed before 3 Failures. Setting an a difficulty of 4 means that the Players
+needed before 3 Failures. Setting a difficulty of 4 means that the Players
 need to make 4 successful Checks before reaching 3 failures. 
 
 #### Deciding the Stakes
@@ -419,6 +464,8 @@ reward for their success can be balanced accordingly.
            infiltration does the concept more justice bc it's something that would be
            otherwise handled by less intense skill checks, instead of combat.
  -->
+
+<!-- LOCK: I agree - we can modify this to a more streamlined dungeon collapse--> 
 
 The Players hear screaming ~ 100 ft away, and rush to investigate. They see a
 group of townsfolk being attacked by a group of monsters. Each of the
@@ -461,6 +508,7 @@ lives, or kick off a new Adventure that involves seeking out the monsters.
 ### Combat
 
 <!-- BROZ: This feels like new-GM stuff -->
+
 Deck of Adventures (DofA) combat is meant to be fast-paced, collaborative, and
 accessible. It is designed around a simple core, while allowing for a lot of
 player freedom based on how they built their character. To run combat in DofA
@@ -484,20 +532,22 @@ decides to attack the Players.
 To determine Turn Order, every Player will draw a Target Card for themselves.
 As the GM, you will draw a TC for each Minion and Dealer involved in the
 Encounter, including any new enemies that appear throughout Combat. To
-simplify, a group of Minions might have a single TC, but a A Dealer must
-always have their own TC.
+simplify, a group of Minions might have a single TC, but a Dealer must always
+have their own TC.
 
 #### Strengths and Weaknesses
 
 There are ways to build encounters that allow the Players to highlight their
 character's strengths or Vulnerabilities. If a Player recently took a new
-Power, you might build an encounter give it a chance to shine. An new area of
-effect Power would be feel great to deploy on a swarm of smaller enemies. If
-a Player has the Wanted Vulnerability, you introduce the the faction hunting,
-who might approach the Players as hostile. Can the Players talk their way out
-of the situation?
+Power, you might build an encounter to give them a chance to shine. A new
+area of effect Power would be feel great to deploy on a swarm of smaller
+enemies. If a Player has the Wanted Vulnerability, you might introduce the
+faction hunting them, who might approach the Players as hostile. Can the
+Players talk their way out of the situation, or will they choose to fight?
 
 <!-- BROZ Move up to new-GM  -->
+
+<!-- LOCK: If we keep it all new-GM vs. DofA specific we'll lose some of the 'section' based value of the GM guide. Talking through combat more holistically is helpful here - do we strip it out entirely from DofA specific and make 'Combat' its own main section? --> 
 
 #### Setting up Combat Encounters
 
@@ -507,9 +557,9 @@ might have the players torn in different directions. A single Dealer with
 supporting Minions might have interesting interaction effects, where one
 gains benefits in the presence of the other.
 
-GMs should try to include a mix of roleplay and combat, when possible.
-Storming an enemy fortress may result in several Combat Encounters back to
-back. Investigating a crime in a major city may have more social
+GMs should try to include a mix of roleplay and combat in an Adventure, when
+possible. Storming an enemy fortress may result in several Combat Encounters
+back to back. Investigating a crime in a major city may have more social
 investigation-based with relatively little combat.
 
 <!-- BROZ Move up to new-GM  -->
@@ -520,8 +570,8 @@ investigation-based with relatively little combat.
     lower HP, and cannot take Powers or Vulnerabilities. They do not have
     access to Fate Cards, and draw from a single GM deck.
 
-- **Dealers** are just as powerful, or more powerful than, than the Players.
-    They are have a name, and experience that would lend them power. GMs
+- **Dealers** are just as powerful as, or more powerful than, the Players.
+    They have a name, and experience that would lend them power. GMs
     might draw from a separate deck of cards for each Dealer. Each starts
     with one Fate Card, and reserves Aces when drawn. Dealers can also take
     Powers and Vulnerabilities, and may possess items. See below for how to
@@ -536,30 +586,32 @@ investigation-based with relatively little combat.
 <!-- BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion
  or Companion, and join players in combat accordingly? -->
 
+<!-- LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion is an enemy term and Companion is a Player Controlled character. I don't like the term "NPC" when talking to GMs who are literally playing the characters, so I feel like using Bystander and Minion/Dealer as GM controlled character terms is more useful here. -->
+
 - **Companions** are Player-controlled creatures who can be commanded with an
     Action. Players can invest in Powers to make their Companion more
     powerful. A GM might also grant a temporary Companion as part of an
     Adventure, potentially as a result of a Check, or an exchange for other
     money or items. 
 
-- **Bosses** are even more powerful than dealers, and gain the following
+- **Bosses** are even more powerful than Dealers, and gain the following
     benefits: Adversary Actions, House Actions, and Phases. 
 
 ### Creating a Boss Encounter
 
 Boss Encounters are best saved for the end of Adventures, as a culmination of
-the the story thus far. As the GM, you choose what Actions have access to.
+the the story thus far. As the GM, you choose what Actions they have access to.
 
 #### Adversary Actions
 
 An Adversary Action is a Boss ability that takes place outside their turn
 during Combat to help balance encounters where a single Boss might be facing
-up to 6 Players. They help Players feel a sense of danger from a single
-enemy. These may be related to resource replenishment, like allowing a Dealer
-to recover a small amount of HP or gain Fate Points. They may allow for an
-additional attack, an environmental effect involving a Check for the Players.
-Players who fail might take damage or receive a Status Condition like
-Entangled. 
+up to 6 Players. This helps Players feel a sense of danger from a single
+enemy. Adversary Actions may be related to resource replenishment, like
+allowing a Boss to recover a small amount of HP or gain Fate Points. They may
+allow for an additional attack, or an environmental effect involving a Check
+for the Players. Players who fail might take damage or receive a Status
+Condition like Entangled. 
 
 For example, a poisonous monster would have the following Adversary Action: 
 *Acid Splash*. A cloud of acid appears in a 4 space cube. Any creature inside
@@ -582,6 +634,8 @@ list features a number of examples that might be triggered by a new Phase:
 
 <!-- BROZ: Why draw new TC -->
 
+<!-- LOCK: I pictured a 5 phase boss fight. The Players have made great progress on the Boss' HP, but if they've been aiming at the same TC for the last 10 rounds of combat they are going to be way less likely to keep hitting. Drawing a new TC for each Phase keeps the odds fresh and prevents a Player from feeling like they 'wasted' a card that would have been a hit during Boss fights. -->
+
 - Boss escapes to another location 
 - Boss summons Minions 
 - Boss alters the environment to make certain areas 
@@ -597,7 +651,7 @@ list features a number of examples that might be triggered by a new Phase:
     + drawing with Upper Hand (e.g., putting in more effort)
     + drawing with Lower Hand (e.g., getting angry/sloppy)
 
-### Example Combat Encounter designed for 4 Players at level 2
+### Example Combat Encounter designed for 4 Players at Level 2
 
 <!-- BROZ: New GM stuff -->
 In a longer campaign, mix up the types of encounters to see how Players react
@@ -607,14 +661,13 @@ Players engaged over time.
 Here, the context is kept purposefully blank to fill in with your setting.
 
 **Location.** Start with a wide open space for the Players and enemies to move
-  around in, between 10-20 spaces across to allow for movement and range
-  inform tactics. 
+  around in, between 10-20 spaces across to allow for movement and let the range influence Player tactics. 
 
 **Setup.** Add 4 Minions close to the entrance and 1 Dealer farther away. 2
   Minions are melee guards and 2 are shooters 3-5 spaces away, to force the
   Players to choose their targets and allow space between each enemy. The
-  Players will need to deal with Minions Guards first in order to reach the
-  Dealer, giving the Dealer to use their abilities in the first 2+ rounds. 
+  Players will need to deal with the Minions first in order to reach the
+  Dealer, allowing the Dealer to use their abilities in the first 2+ rounds. 
 
 #### Stat Blocks
 
@@ -671,7 +724,7 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 ## Building Your World
 
-### What is a World?
+### What is Your World?
 
 `MISSING`
 
@@ -690,6 +743,8 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 <!-- Other sections to build out 
 
+- Leveling up: XP vs. Milestones
+- Giving Players items and balancing Power creep
 - How to get Players to contribute to the World
 - Leveraging Player backstories 
 - Developing Lore and background information 
@@ -721,11 +776,12 @@ Here, the context is kept purposefully blank to fill in with your setting.
 `MISSING`
 
 <!--
+
 - General numbers on resources like FP/HP/AP/Stamina
-- Helping players level up
 - Making stat decisions for your NPCs
 - Balancing encounters (Difficulty Challenge Formula or advice)
 - Scaling damage over time 
+- Item lists or general descriptions/tables (see Issue #33)
 
 --> 
 
