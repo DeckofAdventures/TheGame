@@ -1,4 +1,4 @@
-# GM’s Guide to Pelagia
+# GM’s Guide to Deck of Adventures
 
 <!-- `This document could be split into 02_GMGuide_Advice and
  02_GMGuide_Crunch` -->
@@ -202,13 +202,15 @@ closer to running out. Some Players will go through cards quickly, while others 
 
 ### Resting
 
-Health and Fate Points are also balanced by Rests. Players should take 1-2
-Quick Rests between Full Rests during each day of in-game time, depending on
-the Encounters they face. While Resting, the Players will be regaining their
-HP and FP, and expending Rest Cards. When planning Encounters that deal
-damage, keep these resources in mind. Try to keep Players motivated to press
-on, even without full resources. They may want to take a Quick Rest if
-their HP or FP drop too low, though it might not always be possible. 
+Health and Fate Points are also balanced by Rests. Players can take a Quick
+Rest using 30 minutes of in-game time, whereas Full Rests take 8 hours of
+in-game time. Depending on the Encounters they face and the resources
+expended, Players may try to Rest more often. While Resting, the Players will
+be regaining their HP and FP, and expending Rest Cards. When planning
+Encounters that deal damage, keep these resources in mind. Try to keep
+Players motivated to press on, even without full resources. They may want to
+take a Quick Rest if their HP or FP drop too low, though it might not always
+be possible. 
 
 To Rest, Players will consult with the GM about whether it is feasible for
 their characters to secure a 30-minute or 8-hour break uninterrupted. Players
