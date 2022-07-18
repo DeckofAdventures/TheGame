@@ -49,8 +49,6 @@
 
 <!-- /MarkdownTOC -->
 
-
-
 ## Introduction
 
 As the Game Master (GM), your task is to bring together a group of Players and
@@ -117,11 +115,26 @@ distraction to others at the table.
 
 ### Making Checks
 
-As the GM, you decide when characters should make a Check when attempting an action during an Adventure. Some actions just happen, like a character opening an unlocked door. Other actions might require the character to attempt a Skill Check to see if they are successful. Incorporating luck makes Adventures feel more dynamic and exciting. 
+As the GM, you decide when characters should make a Check when attempting an
+action during an Adventure. Some actions just happen, like a character
+opening an unlocked door. Other actions might require the character to
+attempt a Skill Check to see if they are successful. Incorporating luck makes
+Adventures feel more dynamic and exciting. 
 
-When characters make a Check, they are drawing from their expertise (or inexperience) with a specific Skill to see how they perform. Their Modifier (Mod) indicates their character's expertise with a specific Skill. Characters with high Strength would be more likely to succeed on an Athletics Check than Characters with low Strength, though by incorporating luck a low Strength character still has a chance to succeed on a Strength Check. 
+When characters make a Check, they are drawing from their expertise
+(or inexperience) with a specific Skill to see how they perform. Their
+Modifier (Mod) indicates their character's expertise with a specific Skill.
+Characters with high Strength would be more likely to succeed on an Athletics
+Check than Characters with low Strength, though by incorporating luck a low
+Strength character still has a chance to succeed on a Strength Check. 
 
-You determine when a Check should be made, what Skill should be used, and set the Difficulty. A Player might ask if a specific Skill could be used instead, and it is your decision whether to allow it in the circumstance. Stepping over a crack in the floor should not require a Check, but leaping ten feet across a chasm would. Attempting to sneak past a sleeping guard still requires a Stealth Check, but it should be less difficult than sneaking past the same guard who is on high alert. 
+You determine when a Check should be made, what Skill should be used, and set
+the Difficulty. A Player might ask if a specific Skill could be used instead,
+and it is your decision whether to allow it in the circumstance. Stepping
+over a crack in the floor should not require a Check, but leaping ten feet
+across a chasm would. Attempting to sneak past a sleeping guard still
+requires a Stealth Check, but it should be less difficult than sneaking past
+the same guard who is on high alert. 
 
 Flow state is achieved when we are at the peak of our ability and met with the
 exact level of challenge to fit our skills. To keep Players engaged, dial in
@@ -156,11 +169,13 @@ information that might come up naturally as a result of a Check or the
 narrative. Every GM has their own style of maintaining this division of what
 is hidden and what is revealed.
 
+<!-- REMOVE TO SHOW BELOW 
+    
 ### Creating Your World
 
 `MISSING`
 
-<!--LOCK: Moved up to new-GM per BROZ suggestion -->
+LOCK: Moved up to new-GM per BROZ suggestion -->
 
 ## Being a Deck of Adventures Game Master
 
@@ -387,13 +402,12 @@ Contested Checks are initiated when two characters attempt to accomplish
 opposite goals, or one character attempts to overcome the resistance of
 another (see [Full Player Guide](../01_PlayerGuide_Full.md#contested-checks) for more info).
 
-The list below features some examples of Contested Checks, but, as the GM,
+The list below features a few examples of Contested Checks, but, as the GM,
 it's up to you to decide what a situation calls for if it is not explicitly
 described in the guide or in a Power mechanic.
 
 1. Tackle Target: Initiator Finesse vs. Target Athletics 
 2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection 
-3. `MISSING`
 
 ### Epic Events
 
@@ -724,6 +738,8 @@ Here, the context is kept purposefully blank to fill in with your setting.
  document entirely for GM resources or reference materials that we could
  include here instead.--> 
 
+<!-- LOCK: Commenting out hidden sections, remove to show below 
+
 ## Building Your World
 
 ### What is Your World?
@@ -754,6 +770,8 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 --> 
 
+<!-- REMOVE TO SHOW BELOW
+
 ## Managing Players (Expectations & Realities)
 
 `MISSING`
@@ -772,7 +790,7 @@ Here, the context is kept purposefully blank to fill in with your setting.
 - How to manage an Evil character at the table 
 --> 
 
-
+<!-- REMOVE TO SHOW BELOW
 ## Number Crunch
 
 `MISSING`
@@ -785,7 +803,9 @@ Here, the context is kept purposefully blank to fill in with your setting.
 - Scaling damage over time 
 - Item lists or general descriptions/tables (see Issue #33)
 
---> 
+-->
+
+<!-- REMOVE TO SHOW BELOW
 
 ## Continuing Your Journey as a Game Master
 
