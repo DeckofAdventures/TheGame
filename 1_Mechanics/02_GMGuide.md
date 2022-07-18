@@ -37,8 +37,9 @@
         - Adversary Actions
         - House Actions
         - Boss Phases
-    - Example Combat Encounter designed for 4 Players at level 2
+    - Example Combat Encounter
         - Stat Blocks
+<!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT  
 - Building Your World
     - What is Your World?
     - Preparing an Adventure
@@ -46,6 +47,8 @@
 - Managing Players \(Expectations & Realities\)
 - Number Crunch
 - Continuing Your Journey as a Game Master
+
+-->
 
 <!-- /MarkdownTOC -->
 
@@ -170,7 +173,7 @@ narrative. Every GM has their own style of maintaining this division of what
 is hidden and what is revealed.
 
 <!-- REMOVE TO SHOW BELOW 
-    
+
 ### Creating Your World
 
 `MISSING`
