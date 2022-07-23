@@ -40,13 +40,15 @@
     - Example Combat Encounter
         - Stat Blocks
 - Items
+    - Standard Currency
     - Starting Items
     - Weapons
     - Armor
     - General Items
+    - Tools
     - Consumable Items
     - Magic Items
-    - Upgradeable Items
+    - Upgrading Items
 - Number Crunch
 
 <!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT IN b2 
@@ -799,25 +801,45 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 ## Items
 
+### Standard Currency
+
+Every setting may have its own currency and economy, but in Deck of Adventures
+the standard recommendation is to use a system based on rare metals. Gold,
+Silver, and Copper are useful breakdowns, and can be modified as needed to
+fit your setting. The below Items reference a basic system where 1 Gold
+Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
+(cp). When creating your own currency, use the below tables as a reference
+for adapting these items to your setting.
+
+The GM can grant currency as a reward for completing an Adventure, defeating
+an Encounter, and general exploration and adventuring. You can show your
+Players the below tables, or encourage them to seek out merchants to acquire
+new items using the currency they've earned. Leverage the Player's desire to
+continue to strengthen their character by offering them opportunities to earn
+more currency during their Adventures, and reward strong roleplay, barter
+skills, and careful exploration and examination with additional currency. 
+
 ### Starting Items
 
 All characters start with a basic set of items, depending on their choices
 made at Character Creation. This may be setting dependent, and some settings
 may have access to items that other settings do not. A high fantasy campaign
-may start characters with a magical item, while others may simply start the
-characters with a standard weapon and armor. Determine what makes the most
+may start characters with a Magic Item, while others may simply start the
+characters with a Standard Weapon and Light Armor. Determine what makes the most
 sense for your world.
 
 The general starting items in Deck of Adventures include a standard weapon,
-simple armor, an Adventuring Pack, and a Trinket. 
+simple armor, an Adventuring Pack, and a Trinket. They also start with 50 gp
+in a Coin Purse. 
 
 **Adventuring Pack** contains the following:
-- 1 bed roll
-- 1 rations kit (contains 10 rations)
-- 5 torches
-- 1 flint & tinder
+- 1 Bedroll
+- 1 Rations Kit (contains 10 rations)
+- 5 Torches
+- 1 Flint & Tinder
+- 1 Flask
 
-**Trinket** are simple items that are part of a character's back story. These
+**Trinkets** are simple items that are part of a character's back story. These
   are something usually low in monetary value that are meaningful to the
   character. Some examples might include: 
 - a small statue
@@ -826,21 +848,27 @@ simple armor, an Adventuring Pack, and a Trinket.
 - a worn painting or image
 - an old letter 
 
+Work with your Players during Character Creation to encourage them to take
+Starting Items that make sense for the character they're trying to create.
+Take their Vulnerabilities into account as well. Would an Outsider carry
+something significant to their people? Maybe a character with the Frail
+Vulnerability would carry a cane with them of some significance.
+
 ### Weapons
 
 Weapons are the primary way a character is able to deal damage in combat. The
 quality of that weapon determines how much damage it will deal when making a
 successful attack. See the below table for a general reference on Weapon
-Quality.
+Quality. 
 
 **Weapon Quality Table**
 
-| Damage | Descriptor |
-| ------ | ---------- |
-| 1      | Standard   |
-| 2      | Improved   |
-| 3      | Heroic     |
-| 4      | Legendary  |
+| Damage | Descriptor | Average Cost |
+| ------ | ---------- | ------------ |
+| 1      | Standard   | 5 gp         |
+| 2      | Improved   | 500 gp       |
+| 3      | Heroic     | 2,500 gp     |
+| 4      | Legendary  | 5,000 gp     |
 
 Some weapons can have additional effects granted while wielding them, such as
 modifying damage on a Suited Hit or granting additional effects on a Major
@@ -852,17 +880,128 @@ Up.
 
 ### Armor
 
+Armor and Agility Modifiers are the only way for characters to alter their
+base Armor Range (AR). For characters with low Agility, wearing Armor will
+help them avoid attacks in combat. 
+
+Base AR for an unarmored character is 3. Wearing Armor reduces this AR
+depending on the Armor Type. Armor Types may have a Strength Requirement in
+order to wear. If wearing an Armor with a Strength Requirement above a
+character's Strength, their movement speed is halved and they make all
+Agility Checks at the Lower Hand.  
+
+**Armor Type Table** 
+
+| AR     | Armor Type  | Strength Req. | Average Cost |
+| ------ | ----------  | ------------  | -----------  |
+| 3      | Unarmored   | -             | -            |
+| 2      | Light       | -             | 25 gp        |
+| 1      | Medium      | +2            | 100 gp       |
+| 0      | Heavy       | +3            | 1000 gp      |
+
+Characters may start with Light Armor at Level 1, but must acquire Medium and
+Heavy Armor over the course of their Adventures, either through purchase or
+reward.  
+
 ### General Items
+
+When Players venture into a town or city, they will expect to find a store
+available that will sell them General Goods. The items they find here are up
+to the GM's discretion, but below is a list of items and their general
+costs.
+
+**General Items Table**
+
+| Item Name      | Short Description  | Cost  |
+| -------------- | -----------------  | ----- |
+| Hammer         | Unarmored          | 5 sp  |
+| Backpack       | Light              | 8 sp  |
+| Empty Vial     | Medium             | 2 sp  |
+| Canvas Pouch   | Heavy              | 2 sp  |
+| Tent           |                    | 1 gp  |
+| Torches        |                    | 5 sp  |
+| Flint & Tinder |               | 5 sp  |
+| Bedroll        |               | 8 sp  |
+| Rations Kit    |               | 5 sp  |
+| Flask          |               | 1 gp  |
+| Lantern        |               | 2 gp  |
+| Mirror         |               | 1 gp  |
+| Crowbar        |               | 1 gp  |
+
+### Tools
+
+Tools are useful items that a character can use to perform certain Checks more
+easily. A character who uses a Tool to perform a Check may draw with the
+Upper Hand. General domains and trade skills will use a specific tool to make
+a Check. These are listed below. 
+
+**Tools Table**
+
+| Tool Name          | Cost  |
+| ------------------ | ----- |
+| Blacksmith Hammer  | 2 gp  |
+| Lockpick           | 5 gp  |
+| Chef's Kit         | 3 gp  |
+| Carpentry Set      | 3 gp  |
+| Sailing Kit        | 2 gp  |
+| Leatherworking Set | 2 gp  |
+| Clothier Kit       | 5 gp  |
+| Navigation Set     | 1 gp  |
+| Alchemy Kit        | 3 gp  |
+| Herbalism Set      | 1 gp  |
+| Climbing Gear      | 3 gp  |
 
 ### Consumable Items
 
+*Consumable Items* are one-time use items that grant a specific effect,
+ usually during a set duration of time. These can include Potions, Charms,
+ Meals, and Ammunition. See below for how to use these Consumables in game.
+
+| Consumable Type | Use Time     | General Properties                               |
+| --------------- | ------------ | ------------------------------------------------ |
+| Potions         | Minor Action | Short term effects, usually a single effect.     |
+| Charms          | Major Action | Medium-term effects, more complex effects.       | 
+| Meals           | 10 minutes   | Long-term effects, enough to last most of a day. | 
+
+These items may vary in supply and cost depending on where the Players are
+looking. In a desolate town that only has a trader pass through once every
+year, these items might be in short supply. They would likely be in steady
+supply in the wealthy merchant district of a capital city. You can use any of
+the below items as a reward from an Adventure in addition to making them
+available for sale.
+
+It is up to the GM which Consumables to make available, and when. The reason
+to grant access to Consumables over Magical Items is to allow the Players to
+feel like they've gotten something valuable and powerful, but they need to be
+strategic in when to use it. These can create memorable moments of an
+Adventure without breaking it. 
+
+The Consumable Items listed below draw from a selection of possible
+Consumables and their Effects that you can add to your game. Feel free to
+create your own Consumable Items and ask the Community for help as needed. 
+
+| Consumable Name        | Cost  | Effect                                                                                    |
+| ---------------------- | ----- | ----------------------------------------------------------------------------------------- |
+| Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |
+| Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks for 1 minute                                         |   
+| Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks for 1 minute                                          |
+| Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks for 1 minute                                       |
+| Potion of Intelligence | 15 gp | Gain +1 to all Intelligence-based Checks for 1 minute                                     |
+| Potion of Intuition    | 15 gp | Gain +1 to all Intuition-based Checks for 1 minute                                        |
+| Potion of Vitality     | 25 gp | Gain +1 Maximum HP and +1 to all Vitality-based Checks for 1 minute                       |
+| Charm of Efficiency    | 65 gp | For the next hour you cannot draw with Upper or Lower Hand                                |
+| Charm of True Aim      | 40 gp | For the next hour all Attacks are made with Upper Hand                                    |
+| Charm of Amplification | 55 gp | For the next hour all Upper Hand and Lower Hand effects are doubled.                      |
+| Charm of Wounding      | 30 gp | For the next hour when dealing damage with an Attack or Power, add +1 damage to the total.|
+| Hearty Stew            | 10 gp | For the next 8 hours, gain +1 to your Maximum HP.                                         |
+| Focusing Beverage      | 10 gp | For the next 8 hours, gain +1 to your Maximum FP.                                         |
+| Fortifying Feast       | 10 gp | Gain +3 AP. For the next 8 hours, if you end your turn with 0 AP, return to 1 AP.         | 
+
 ### Magic Items
 
-### Upgradeable Items
 
-<!-- LOCK: We could move the above example encounter elsewhere, or have a different
- document entirely for GM resources or reference materials that we could
- include here instead.--> 
+### Upgrading Items 
+
 
 <!-- LOCK: Commenting out hidden sections, remove to show below 
 
