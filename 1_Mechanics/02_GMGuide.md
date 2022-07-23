@@ -39,13 +39,14 @@
         - Boss Phases
     - Example Combat Encounter
         - Stat Blocks
-<!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT  
+- Number Crunch
+
+<!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT IN b2 
 - Building Your World
     - What is Your World?
     - Preparing an Adventure
     - Creating NPCs
 - Managing Players \(Expectations & Realities\)
-- Number Crunch
 - Continuing Your Journey as a Game Master
 
 -->
@@ -192,6 +193,14 @@ session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
 split it into two 26-card decks and shuffle regularly. 
 
+One deck of cards should be designated the *Minion Deck* and one designated
+the *World Deck*. Different color card backs will help distinguish the two
+throughout play. The Minion Deck is used during combat and when applying
+negative Status Conditions. The World Deck is used to draw Target Cards for
+NPCs, make social checks, and used for drawing a card based on a table out of
+combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the
+World Deck when it is empty. 
+
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
 For the exceptional NPC, such as a Dealer or a Boss, try assigning them a
@@ -206,6 +215,16 @@ Adventures can also be designed to test different aspects of the Players and
 characters. Each Player holds a single deck of 52 cards, with two Fate Cards
 reserved at the beginning of play. Each character has statistics that include
 total Health Points (HP), Fate Points (FP), and Armor Points (AP). Your focus during a session will be balancing the expenditure of all of these resources. 
+
+Absolute values are low in Deck of Adventures to promote speed of play and
+simplicity of calculations. With that in mind, Player controlled Dealers
+start with 5 HP that scales up based on level and Vitality modifier. This
+makes the max HP 21 at level 10 with a +6 Vitality modifier. Armor Points are
+similarly scaled down, with a maximum of 3. Fate Points scale more extremely,
+but Powers require more of them over time, making the resource stay in
+balance even as it scales higher. Players will leverage all of their
+resources to survive and succeed in Adventures, and it is up to the GM to
+make those resources feel strained and tested.  
 
 ### Cards
 
@@ -280,8 +299,21 @@ As a Game Master (GM), you will set up various challenges wherein you or a
 Player will draw a Target Card (TC), and the other draws against that card to
 make a Check. The level of difficulty of a Check is set by the Difficulty
 Range (DR), which is the distance between pip values that will still count as
-a success. The Target Card System is circular, so an Ace is only 1 away from
-both a King and a 2. 
+a success. When thinking about the Target Card System, it may be helpful to
+consider a bullseye, where the Target Card is the center of the bullseye and
+the DR is the number of circles away from the bullseye you can hit and still
+be successful. 
+
+One of the initial barriers a new GM must overcome is helping the Players
+understand the Target Card system. As Players get more familiar with the
+system, speed of play increases, and it is then easier for them to understand
+more complex mechanics. Using the [Circular TC-DR Tool](.../1_Mechanics/Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
+aid. 
+
+The Target Card System is circular, so an Ace is only 1 away from both a King
+and a 2. If you were aiming a Check against a Target Card of an Ace, you
+could consult the below table to understand which cards would be successful
+within the set DR. 
 
 | DR   | -6  | -5  | -4  | -3  | -2  | -1  | 0   | +1  | +2  | +3  | +4  | +5  | +6  |
 |---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -320,15 +352,17 @@ both a King and a 2.
 
 <!--LOCK: Edited Likelihood to Difficulty for ease of GM navigation --> 
 
-The GM sets the Difficulty for all Checks made during a session. The chart
-below shows probability of success for the most frequent draws at each
-Difficulty Range (DR). To further dial in the difficulty, you might say that
-a specific check requires a Color or Suited Success. Note that Color or Suit
-make success half or a quarter as likely. Some mechanics or GM rulings can
-call for Checks to be made at Upper or Lower Hand, drawing (up to) 2 or more
-cards, and taking the more or less beneficial result. The final row notes the
-difference caused by drawing 2 cards. At DR 0 or 6, there's little
-difference, but it can be as much as 25% for a DR 3 check.
+The GM sets the Difficulty for all Checks made during a session. Setting the
+Difficulty Range (DR) is the GM's way of establishing how difficult something
+is to accomplish. The chart below shows probability of success for the most
+frequent draws at each Difficulty Range (DR). To further dial in the
+difficulty, you might say that a specific check requires a Color or Suited
+Success. Note that Color or Suit make success half or a quarter as likely.
+Some mechanics or GM rulings can call for Checks to be made at Upper or Lower
+Hand, drawing (up to) 2 or more cards, and taking the more or less beneficial
+result. The final row notes the difference caused by drawing 2 cards. At DR 0
+or 6, there's little difference, but it can be as much as 25% for a DR 3
+check.
 
 | DR          | 0   | 1   | 2   | 3   | 4   | 5   | 6    |
 |------------:|:---:|:---:|:---:|:---:|:---:|:---:| :---:|
@@ -344,6 +378,24 @@ you want something to feel extremely difficult? Maybe make it a DR 1. Should
 a Player feel like something is less challenging for their character in a
 moment where the odds are in their favor? Make it a DR 3 with Upper Hand. You
 decide what makes the most sense given a specific situation. 
+
+### Player Skill Mods and DR Reporting
+
+Players will have Modifiers (Mods) on their Character Sheet that allow them to
+reduce the difficulty of Checks made in that relevant domain. To simplify
+Player understanding of how modifiers work, you can explain that a Modifier
+widens the DR, making it more likely their draw will be successful. In some
+circumstances, having a +1 Mod may be the difference between success and
+failure. 
+
+Referencing the table above, it's clear to see the difference an additional
+DR +1 can make. As you progress Players through an Adventure, keep these
+Modifiers in mind when balancing Encounters and challenges. A Player with
+a +3 Mod facing a DR 3 Check is an automatic success on a Normal Draw. Scale
+difficulties up or down accordingly, but never punish a Player for having a
+high Modifier. If it is likely their character would be able to easily
+succeed on something, allow it rather than changing the Difficulty on the
+spot.   
 
 ### Fate Cards
 
