@@ -39,6 +39,14 @@
         - Boss Phases
     - Example Combat Encounter
         - Stat Blocks
+- Items
+    - Starting Items
+    - Weapons
+    - Armor
+    - General Items
+    - Consumable Items
+    - Magic Items
+    - Upgradeable Items
 - Number Crunch
 
 <!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT IN b2 
@@ -788,6 +796,69 @@ Here, the context is kept purposefully blank to fill in with your setting.
 - Minor Actions: 
   1. Ready Aim, focuses attention on a single target. While that
   target is in range, draw attacks with the Upper Hand. 
+
+## Items
+
+### Starting Items
+
+All characters start with a basic set of items, depending on their choices
+made at Character Creation. This may be setting dependent, and some settings
+may have access to items that other settings do not. A high fantasy campaign
+may start characters with a magical item, while others may simply start the
+characters with a standard weapon and armor. Determine what makes the most
+sense for your world.
+
+The general starting items in Deck of Adventures include a standard weapon,
+simple armor, an Adventuring Pack, and a Trinket. 
+
+**Adventuring Pack** contains the following:
+- 1 bed roll
+- 1 rations kit (contains 10 rations)
+- 5 torches
+- 1 flint & tinder
+
+**Trinket** are simple items that are part of a character's back story. These
+  are something usually low in monetary value that are meaningful to the
+  character. Some examples might include: 
+- a small statue
+- a bauble from childhood
+- a broken dagger
+- a worn painting or image
+- an old letter 
+
+### Weapons
+
+Weapons are the primary way a character is able to deal damage in combat. The
+quality of that weapon determines how much damage it will deal when making a
+successful attack. See the below table for a general reference on Weapon
+Quality.
+
+**Weapon Quality Table**
+
+| Damage | Descriptor |
+| ------ | ---------- |
+| 1      | Standard   |
+| 2      | Improved   |
+| 3      | Heroic     |
+| 4      | Legendary  |
+
+Some weapons can have additional effects granted while wielding them, such as
+modifying damage on a Suited Hit or granting additional effects on a Major
+Success. 
+
+Characters with high quality weapons are able to deal damage quickly, so keep
+this in mind when balancing Encounters or granting Players loot as they Level
+Up.  
+
+### Armor
+
+### General Items
+
+### Consumable Items
+
+### Magic Items
+
+### Upgradeable Items
 
 <!-- LOCK: We could move the above example encounter elsewhere, or have a different
  document entirely for GM resources or reference materials that we could
