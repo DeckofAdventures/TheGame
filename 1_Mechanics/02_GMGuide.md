@@ -5,25 +5,25 @@
 
 <!-- MarkdownTOC -->
 
-- Introduction
-- Getting Started as a Game Master
-    - Making Checks
-    - GM Preparation
-    - Creating Your World
-- Being a Deck of Adventures Game Master
-    - GM Resources
-    - Managing Player Resources
-    - Cards
-    - Resting
-    - Working with Character Vulnerabilities
-- Running a Session with Deck of Adventures
-    - The Target Card System
-    - Successes and Failures
-    - Difficulty Chart
-    - Fate Cards
-    - Skills Breakdown
-    - Contested Checks
-    - Epic Events
+- [Introduction](#Introduction)
+- [Getting Started as a Game Master](#Getting-Started-as-a-Game-Master)
+    - [Making Checks](#Making-Checks)
+    - [GM Preparation](#GM-Preparation)
+   <!-- - Creating Your World -->
+- [Being a Deck of Adventures Game Master](#Being-a-Deck-of-Adventures-Game-Master)
+    - [GM Resources](#GM-Resources)
+    - [Managing Player Resources](#Managing-Player-Resources)
+    - [Cards](#Cards)
+    - [Resting](#Resting)
+    - [Character Vulnerabilities](#Character-Vulnerabilities)
+- [Running a Session with Deck of Adventures](#Running-a-Session-with-Deck-of-Adventures)
+    - [The Target Card System](#The-Target-Card-System)
+    - [Successes and Failures](#Successes-and-Failures)
+    - [Difficulty Chart](#Difficulty-Chart)
+    - [Fate Cards](#Fate-Cards)
+    - [Skills Breakdown](#Skills-Breakdown)
+    - [Contested Checks](#Contested-Checks)
+    - [Epic Events](#Epic-Events)
         - How to Identify an Epic Event
         - Setting an Epic Event's Difficulty
         - Deciding the Stakes
@@ -194,7 +194,9 @@ LOCK: Moved up to new-GM per BROZ suggestion -->
 ## Being a Deck of Adventures Game Master
 
 As a Deck of Adventures (DofA) Game Master (GM) you are controlling the flow
-of card draws on both sides of the table. Try to balance card draws between Players and NPCs throughout a session, and make sure all Players are involved. 
+of card draws on both sides of the table. Try to balance card draws between
+Players and NPCs throughout a session, and make sure all Players are
+involved. 
 
 ### Game Master Resources
 
@@ -224,7 +226,9 @@ behind the GM screen.
 Adventures can also be designed to test different aspects of the Players and
 characters. Each Player holds a single deck of 52 cards, with two Fate Cards
 reserved at the beginning of play. Each character has statistics that include
-total Health Points (HP), Fate Points (FP), and Armor Points (AP). Your focus during a session will be balancing the expenditure of all of these resources. 
+total Health Points (HP), Fate Points (FP), and Armor Points (AP). Your focus
+during a session will be balancing the expenditure of all of these
+resources. 
 
 Absolute values are low in Deck of Adventures to promote speed of play and
 simplicity of calculations. With that in mind, Player controlled Dealers
@@ -245,7 +249,9 @@ reshuffle their deck. They make all checks at Lower Hand until they complete
 a Rest. At lower levels, Players may not reach the end of their decks between
 Rests to incur Lower Hand penalties. As Players level up, both the Powers
 they use and the Encounters they face may require more draws, bringing them
-closer to running out. Some Players will go through cards quickly, while others will be more conservative about their draws. Keep this in mind when developing Encounters and challenging different Players. 
+closer to running out. Some Players will go through cards quickly, while
+others will be more conservative about their draws. Keep this in mind when
+developing Encounters and challenging different Players. 
 
 ### Resting
 
@@ -274,7 +280,7 @@ have the ultimate authority in the successful completion of a Rest. Encourage
 players to work with each other to make the best decision given
 circumstances.
 
-### Working with Character Vulnerabilities
+### Character Vulnerabilities
 
 Each character can have one or two (or more) Vulnerabilities, which may have
 mechanical and/or roleplay implications. GMs are highly encouraged to keep
@@ -628,7 +634,10 @@ Players talk their way out of the situation, or will they choose to fight?
 
 <!-- BROZ Move up to new-GM  -->
 
-<!-- LOCK: If we keep it all new-GM vs. DofA specific we'll lose some of the 'section' based value of the GM guide. Talking through combat more holistically is helpful here - do we strip it out entirely from DofA specific and make 'Combat' its own main section? --> 
+<!-- LOCK: If we keep it all new-GM vs. DofA specific we'll lose some of
+the 'section' based value of the GM guide. Talking through combat more
+holistically is helpful here - do we strip it out entirely from DofA
+specific and make 'Combat' its own main section? --> 
 
 #### Setting up Combat Encounters
 
@@ -667,7 +676,11 @@ investigation-based with relatively little combat.
 <!-- BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion
  or Companion, and join players in combat accordingly? -->
 
-<!-- LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion is an enemy term and Companion is a Player Controlled character. I don't like the term "NPC" when talking to GMs who are literally playing the characters, so I feel like using Bystander and Minion/Dealer as GM controlled character terms is more useful here. -->
+<!-- LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion
+is an enemy term and Companion is a Player Controlled character. I don't
+like the term "NPC" when talking to GMs who are literally playing the
+characters, so I feel like using Bystander and Minion/Dealer as GM
+controlled character terms is more useful here. -->
 
 - **Companions** are Player-controlled creatures who can be commanded with an
     Action. Players can invest in Powers to make their Companion more
@@ -715,7 +728,12 @@ list features a number of examples that might be triggered by a new Phase:
 
 <!-- BROZ: Why draw new TC -->
 
-<!-- LOCK: I pictured a 5 phase boss fight. The Players have made great progress on the Boss' HP, but if they've been aiming at the same TC for the last 10 rounds of combat they are going to be way less likely to keep hitting. Drawing a new TC for each Phase keeps the odds fresh and prevents a Player from feeling like they 'wasted' a card that would have been a hit during Boss fights. -->
+<!-- LOCK: I pictured a 5 phase boss fight. The Players have made great
+progress on the Boss' HP, but if they've been aiming at the same TC for
+the last 10 rounds of combat they are going to be way less likely to
+keep hitting. Drawing a new TC for each Phase keeps the odds fresh and
+prevents a Player from feeling like they 'wasted' a card that would have
+been a hit during Boss fights. -->
 
 - Boss escapes to another location 
 - Boss summons Minions 
@@ -742,7 +760,8 @@ Players engaged over time.
 Here, the context is kept purposefully blank to fill in with your setting.
 
 **Location.** Start with a wide open space for the Players and enemies to move
-  around in, between 10-20 spaces across to allow for movement and let the range influence Player tactics. 
+  around in, between 10-20 spaces across to allow for movement and let the
+  range influence Player tactics. 
 
 **Setup.** Add 4 Minions close to the entrance and 1 Dealer farther away. 2
   Minions are melee guards and 2 are shooters 3-5 spaces away, to force the
@@ -870,13 +889,12 @@ Quality.
 | 3      | Heroic     | 2,500 gp     |
 | 4      | Legendary  | 5,000 gp     |
 
-Some weapons can have additional effects granted while wielding them, such as
-modifying damage on a Suited Hit or granting additional effects on a Major
-Success. 
-
 Characters with high quality weapons are able to deal damage quickly, so keep
 this in mind when balancing Encounters or granting Players loot as they Level
-Up.  
+Up. The average costs are meant to help guide the GM on when the Players
+should reasonably expect to be able to afford a specific Weapon Quality, but
+you can give these out as rewards or make them available to your Players at
+any time and at any price. 
 
 ### Armor
 
@@ -937,19 +955,20 @@ a Check. These are listed below.
 
 **Tools Table**
 
-| Tool Name          | Cost  |
-| ------------------ | ----- |
-| Blacksmith Hammer  | 2 gp  |
-| Lockpick           | 5 gp  |
-| Chef's Kit         | 3 gp  |
-| Carpentry Set      | 3 gp  |
-| Sailing Kit        | 2 gp  |
-| Leatherworking Set | 2 gp  |
-| Clothier Kit       | 5 gp  |
-| Navigation Set     | 1 gp  |
-| Alchemy Kit        | 3 gp  |
-| Herbalism Set      | 1 gp  |
-| Climbing Gear      | 3 gp  |
+| Tool Name          | Cost   |
+| ------------------ | ------ |
+| Blacksmith Hammer  | 5 gp   |
+| Lockpick           | 5 gp   |
+| Chef's Kit         | 3 gp   |
+| Carpentry Set      | 3 gp   |
+| Sailing Kit        | 2 gp   |
+| Leatherworking Set | 5 gp   |
+| Clothier Kit       | 5 gp   |
+| Navigation Set     | 1 gp   |
+| Alchemy Kit        | 3 gp   |
+| Herbalism Set      | 1 gp   |
+| Climbing Gear      | 3 gp   |
+| Jeweler's Kit      | 10 gp  |
 
 ### Consumable Items
 
@@ -999,9 +1018,19 @@ create your own Consumable Items and ask the Community for help as needed.
 
 ### Magic Items
 
+Some items can have additional effects granted while wielding them, such as
+modifying damage on a Suited Hit or granting additional effects on a Major
+Success. 
 
 ### Upgrading Items 
 
+Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgradable materials as well. 
+
+Upgrade materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. 
+
+An example of an Upgrade material might be a gemstone that when attuned to a weapon causes an additional 1 damage in a damage type relevant to the gemstone. 
+
+Another example of an Upgrade material would be when attuning to a piece of armor, that armor now grants +1 Max FP or HP.
 
 <!-- LOCK: Commenting out hidden sections, remove to show below 
 
