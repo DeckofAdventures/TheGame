@@ -824,7 +824,7 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 Every setting may have its own currency and economy, but in Deck of Adventures
 the standard recommendation is to use a system based on rare metals. Gold,
-Silver, and Copper are useful breakdowns, and can be modified as needed to
+Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
 fit your setting. The below Items reference a basic system where 1 Gold
 Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
 (cp). When creating your own currency, use the below tables as a reference
@@ -915,11 +915,21 @@ Agility Checks at the Lower Hand.
 | 3      | Unarmored   | -             | -            |
 | 2      | Light       | -             | 25 gp        |
 | 1      | Medium      | +2            | 100 gp       |
-| 0      | Heavy       | +3            | 1000 gp      |
+| 0      | Heavy       | +3            | 2500 gp      |
 
 Characters may start with Light Armor at Level 1, but must acquire Medium and
 Heavy Armor over the course of their Adventures, either through purchase or
 reward.  
+
+Some armor can also grant Armor Points (AP). Items like Shields can provide AP when readied using an Action, while other types of Armor may have magical effects that provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found in varying quality. 
+
+**Shield Quality Table**
+
+| AP | Descriptor | Average Cost |
+| -- | ---------- | ------------ |
+| 1  | Standard   | 5 gp         |
+| 2  | Hardened   | 200 gp       |
+| 3  | Impervious | 1,500 gp     |
 
 ### General Items
 
@@ -932,19 +942,19 @@ costs.
 
 | Item Name      | Short Description  | Cost  |
 | -------------- | -----------------  | ----- |
-| Hammer         | Unarmored          | 5 sp  |
-| Backpack       | Light              | 8 sp  |
-| Empty Vial     | Medium             | 2 sp  |
-| Canvas Pouch   | Heavy              | 2 sp  |
+| Hammer         |                    | 5 sp  |
+| Backpack       |                    | 8 sp  |
+| Empty Vial     |                    | 2 sp  |
+| Canvas Pouch   |                    | 2 sp  |
 | Tent           |                    | 1 gp  |
 | Torches        |                    | 5 sp  |
-| Flint & Tinder |               | 5 sp  |
-| Bedroll        |               | 8 sp  |
-| Rations Kit    |               | 5 sp  |
-| Flask          |               | 1 gp  |
-| Lantern        |               | 2 gp  |
-| Mirror         |               | 1 gp  |
-| Crowbar        |               | 1 gp  |
+| Flint & Tinder |                    | 5 sp  |
+| Bedroll        |                    | 8 sp  |
+| Rations Kit    |                    | 5 sp  |
+| Flask          |                    | 1 gp  |
+| Lantern        |                    | 2 gp  |
+| Mirror         |                    | 1 gp  |
+| Crowbar        |                    | 1 gp  |
 
 ### Tools
 
