@@ -114,7 +114,7 @@ improving that Attribute also increases the effectiveness of a related Skill.
 Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and
 Skills are listed below.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
-and allow you to add or subtract your draw before reporting the value on a given check.
+and allow you to add that number to the DR when making a Check.
  These modifiers are determined at Character Creation and can be improved as you Level Up.
 
 **Complete Attribute and Skill List:**
@@ -141,6 +141,7 @@ and allow you to add or subtract your draw before reporting the value on a given
    - Brute (Fight)
    <!-- - Intimidation -->
 - Vitality VIT
+   <!-- - Vitality Skill to add later -->
 
 Each skill is generally related to a domain of expertise a character may possess. A GM
 might call for a Check using a specific Skill, but you can always ask if another 
@@ -149,7 +150,7 @@ creative!
 
 <!--Add some examples of specific skills being used, with general description of domain --> 
 
-### Dealers, Bystanders and Companions
+### Dealers, Bystanders, Minions and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
 considered Dealers and differ from the majority of other characters in the world. The
@@ -164,7 +165,7 @@ the Game Master. They...
    - Can receive and use Fate Cards.
    - Have a Primary Suit, and related mechanics.
 
-2. Bystanders. All other characters. They...
+2. Bystanders and Minions. All other characters. They...
    - Are weaker than Dealers
    - Have limited access to Powers
    - Have 1-3 HP.
@@ -420,9 +421,9 @@ an Epic Event alone.
 6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
-7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a DR 3
-Vitality Check to shake off the effects of the poison. On a failure, they take 1 damage
-bypassing AP. 
+7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a
+DR 3 Vitality Check to shake off the effects of the poison. On a failure,
+they discard a card. The Poisoned Status Condition can stack.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
 Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
@@ -540,18 +541,22 @@ with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they
 used. Fate, Health, and Armor Points all return to
 their maximum. Rest Cards return to their full value after a Full Rest.
 
-If you run out of cards before you can successfully take a Rest, you may shuffle and
-always draw with the Lower Hand when making a check. This signifies your character
-running out of Stamina during a long day. 
+If you run out of cards before you can successfully take a Rest, you suffer
+one level of *Fatigue*. Reshuffle your deck and draw all Checks with the
+Lower Hand. Each time you need to reshuffle your deck in this way adds
+another level of Fatigue. If you were to suffer a fourth level of Fatigue,
+you are Knocked Out instead. This signifies your character running out of
+Stamina during a long day. 
 
-### Primary Suit
+### Burn Mechanics
 
-Each Dealer has a connection to a Primary Suit, as suggested by their Role. In addition
-to impacting Quick Rest recoveries, Dealers may discard cards as a Minor Action for
-additional benefits in combat starting at Level 2. For 2 cards discarded, up to a limit of 4, an
-Upper/Lower Hand +1 is granted described below. These effects do not stack; only one
-may be applied to a character at a time.
+Each Dealer may have an additional Burn Mechanic. Dealers may discard cards as
+a Minor Action for additional benefits in combat starting at Level 2. For
+every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
+granted described below. These effects do not stack; only one may be applied
+to a character at a time.
 
+Below is a list of possible Burn Mechanics, determined by Role. Work with your GM if you would like to use a different Burn Mechanic instead.  
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
 - Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits.

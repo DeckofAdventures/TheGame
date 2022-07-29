@@ -32,9 +32,9 @@ outcome via...
   succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a 
   King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
 
-- A *Modifier* (Mod) provided by your character sheet, that allows you to add or
-  subtract from the card you draw to get closer to the TC. This helps you aim your
-  Check closer to the bullseye.
+- A *Modifier* (Mod) provided by your character sheet, that allows you to add
+  that number to the DR, making it easier for you to succeed. This helps you
+  aim your Check closer to the bullseye.
 
 - Under some circumstances, you'll be asked to draw with the Upper Hand or the Lower 
   Hand.
@@ -48,7 +48,7 @@ outcome via...
      each other out.
 
 - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
-  succeed on a Check. If you have a +1 Mod, you can draw a 2 or 6 and still report a
+  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and still report a
   successful 3 or 5 draw.
 
 ### Fate Cards
