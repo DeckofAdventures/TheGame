@@ -24,34 +24,34 @@
     - [Skills Breakdown](#Skills-Breakdown)
     - [Contested Checks](#Contested-Checks)
     - [Epic Events](#Epic-Events)
-        - How to Identify an Epic Event
-        - Setting an Epic Event's Difficulty
-        - Deciding the Stakes
-        - An Example of an Epic Event
-    - Combat
-        - Initiating Combat
-        - Strengths and Weaknesses
-        - Setting up Combat Encounters
-    - Character Types
-    - Creating a Boss Encounter
-        - Adversary Actions
-        - House Actions
-        - Boss Phases
-    - Example Combat Encounter
-        - Stat Blocks
-- Items
-    - Standard Currency
-    - Starting Items
-    - Weapons
-    - Armor
-    - General Items
-    - Tools
-    - Consumable Items
-    - Magic Items
-    - Upgrading Items
-- Number Crunch
+        - [How to Identify an Epic Event](#How-to-Identify-an-Epic-Event)
+        - [Setting an Epic Event's Difficulty](#Setting-an-Epic-Event's-Difficulty)
+        - [Deciding the Stakes](#Deciding-the-Stakes)
+        - [An Example of an Epic Event](#An-Example-of-an-Epic-Event)
+    - [Combat](Combat)
+        - [Initiating Combat](#Initiating-Combat)
+        - [Strengths and Weaknesses](#Strengths-and-Weaknesses)
+        - [Setting up Combat Encounters](#Setting-up-Combat-Encounters)
+    - [Character Types](#Character-Types)
+    - [Creating a Boss Encounter](#Creating-a-Boss-Encounter)
+        - [Adversary Actions](#Adversary-Actions)
+        - [House Actions](#House-Actions)
+        - [Boss Phases](#Boss-Phases)
+    - [Example Combat Encounter](#Example-Combat-Encounter)
+        - [Stat Blocks](#Stat-Blocks)
+- [Items](#Items)
+    - [Standard Currency](#Standard-Currency)
+    - [Starting Items](#Starting-Items)
+    - [Weapons](#Weapons)
+    - [Armor](#Armor)
+    - [General Items](#General-Items)
+    - [Tools](#Tools)
+    - [Consumables](#Consumables)
+    - [Magic Items](#Magic-Items)
+    - [Upgrading Items](#Upgrading-Items)
 
 <!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT IN b2 
+- Number Crunch
 - Building Your World
     - What is Your World?
     - Preparing an Adventure
@@ -970,9 +970,9 @@ a Check. These are listed below.
 | Climbing Gear      | 3 gp   |
 | Jeweler's Kit      | 10 gp  |
 
-### Consumable Items
+### Consumables
 
-*Consumable Items* are one-time use items that grant a specific effect,
+*Consumables* are one-time use items that grant a specific effect,
  usually during a set duration of time. These can include Potions, Charms,
  Meals, and Ammunition. See below for how to use these Consumables in game.
 
@@ -995,9 +995,9 @@ feel like they've gotten something valuable and powerful, but they need to be
 strategic in when to use it. These can create memorable moments of an
 Adventure without breaking it. 
 
-The Consumable Items listed below draw from a selection of possible
+The Consumables listed below draw from a selection of possible
 Consumables and their Effects that you can add to your game. Feel free to
-create your own Consumable Items and ask the Community for help as needed. 
+create your own Consumables and ask the Community for help as needed. 
 
 | Consumable Name        | Cost  | Effect                                                                                    |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- |
