@@ -423,7 +423,7 @@ burning. On a failure, they take 1 damage bypassing AP.
 
 7. **Poisoned** At the start of their turn, as a Free Action, a Dealer makes a
 DR 3 Vitality Check to shake off the effects of the poison. On a failure,
-they discard a card. The Poisoned Status Condition can stack.
+they discard two cards. The Poisoned Status Condition can stack, and each additional instance adds one card discarded.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
 Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
