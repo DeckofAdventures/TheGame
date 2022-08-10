@@ -323,7 +323,7 @@ be successful.
 One of the initial barriers a new GM must overcome is helping the Players
 understand the Target Card system. As Players get more familiar with the
 system, speed of play increases, and it is then easier for them to understand
-more complex mechanics. Using the [Circular TC-DR Tool](.../1_Mechanics/Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
+more complex mechanics. Using the [Circular TC-DR Tool](./Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
 aid. 
 
 The Target Card System is circular, so an Ace is only 1 away from both a King
@@ -500,7 +500,7 @@ and participation from every Player.
 
 As the GM, you are actively drawing against the Players on a TC during the
 Epic Event. The odds are skewed in the Players' favor by allowing them to
-draw using Skill Modifiers while the GM draws with a +0 Mod. Your ability to
+draw using Skill Modifiers while you draw with a +0 Mod. Your ability to 
 modify the challenge of an Epic Event comes from setting the Difficulty.
 
 For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
