@@ -710,8 +710,40 @@ Here, the context is kept purposefully blank to fill in with your setting.
   Players will need to deal with the Minions first in order to reach the
   Dealer, allowing the Dealer to use their abilities in the first 2+ rounds. 
 
-<!-- BROZ Bookmark -->
 #### Stat Blocks
+
+<!-- 
+BROZ: It would be nice to have a section on making custom enemies. There, you would
+      add a standard template to copy/paste. Some suggestions for that template:
+      - Entity name as heading level 5: ##### Entity
+      - Feature as bold: **HP:**
+      - All skill labels as caps (AGL, GUT, etc) with +X. Delete unnecessary
+      - Named traits as italics: **Vulnys**: *Eye for an Eye*,
+      - Default attack action order in template. I think 'on successful hit' is implied.
+            > +X to hit, Y range, Z damage, (single/multi) target, (AGL, STR, No) Save
+            This gives you the promp to include each piece of information.
+    ALSO NOTE: bullets now need to be 4 spaces. GitHub is min 3, website is 4
+
+##### Name
+
+- **HP:** X
+- **AR:** X
+- **FP:** X
+- **Skill Mods:** ±X AGL, ±X CON, ±X GUT, ±X INT, ±X STR, ±X VIT
+- **Passives:** 
+    - *Passive*: Descrip
+    - *Passive*: Descrip
+- **Vulnys:**
+    - *Vulny*: Descrip
+- **Actions:** 
+    - **Major:**
+        - *Attack*: ±X hit, X damage, X range, (single/X multi)-target, 
+          (AGL, etc, No) Save (, X on save)
+    - **Minor**
+        - *Trait*: Descrip
+    - **Adversary** 
+        - *Trait*: Descrip
+ -->
 
 **Dealer: Captain**
 
@@ -767,18 +799,22 @@ Here, the context is kept purposefully blank to fill in with your setting.
 Every setting may have its own currency and economy, but in Deck of Adventures
 the standard recommendation is to use a system based on rare metals. Gold,
 Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
-fit your setting. The below Items reference a basic system where 1 Gold
+fit your setting. 
+By default, currencies are at a 1:10 ratio with the next-most valuable counterpart: 
+1 Gold
 Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
 (cp). When creating your own currency, use the below tables as a reference
 for adapting these items to your setting.
 
 The GM can grant currency as a reward for completing an Adventure, defeating
 an Encounter, and general exploration and adventuring. You can show your
-Players the below tables, or encourage them to seek out merchants to acquire
+Players the tables below, or encourage them to seek out merchants to acquire
 new items using the currency they've earned. Leverage the Player's desire to
 continue to strengthen their character by offering them opportunities to earn
 more currency during their Adventures, and reward strong roleplay, barter
-skills, and careful exploration and examination with additional currency. 
+skills, and careful exploration and examination with additional currency.
+
+<!-- BROZ Bookmark --> 
 
 ### Starting Items
 
