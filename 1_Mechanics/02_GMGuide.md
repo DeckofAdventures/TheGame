@@ -1,8 +1,5 @@
 # GM’s Guide to Deck of Adventures
 
-<!-- `This document could be split into 02_GMGuide_Advice and
- 02_GMGuide_Crunch` -->
-
 <!-- MarkdownTOC -->
 
 - [Introduction](#Introduction)
@@ -58,7 +55,6 @@
     - Creating NPCs
 - Managing Players \(Expectations & Realities\)
 - Continuing Your Journey as a Game Master
-
 -->
 
 <!-- /MarkdownTOC -->
@@ -84,18 +80,6 @@ issues.
 
 
 ## Getting Started as a Game Master
-
-<!-- BROZ:
-Needs a notes about 1. what a GM screen is, literally and metaphorically [added] 2.
-checks - why this is how ppl interact with the world, why add randomness? 3.
-resource management - move up from DofA specific. Flow state is achieved when
-we're at the peak of our ability and met with the exact level of challenge to
-fit our skills. To keep players engaged, dial in the difficulty to where
-they're feeling challenged in a way that suits their play style, without
-worrying about what they have left.
--->
-
-<!-- LOCK: Added 1. GM screen, 2. Checks, 3. Difficulty in this section --> 
 
 Game Masters (GMs) play referee and narrator in a Tabletop RPG like Deck of
 Adventures (DofA). You are both the arbiter of the rules, and the
@@ -175,21 +159,13 @@ direction, go with it. The Players also may not know when story beats are
 improvised, and these moments can make for the most organic and memorable Adventures. 
 
 During a session, GMs keep some information hidden from the Players. This can
-be a physical GM screen between the GM and players, or virtually with notes
-and images that are not actively shared. For a physical screen you can use a
-piece of cardboard or shortened tri-fold board that you can stick notes and
-stat blocks onto the back of so only you can see. You choose when to share
-information that might come up naturally as a result of a Check or the
+be a physical or virtual GM screen that separates the information that's available to
+the GM and not the players. *Behind the GM screen* also serves as a metaphor
+for what players can and can't see. 
+As the GM, you choose what to share and under what circumstances,
+as a result of a Check or just part of the
 narrative. Every GM has their own style of maintaining this division of what
-is hidden and what is revealed.
-
-<!-- REMOVE TO SHOW BELOW 
-
-### Creating Your World
-
-`MISSING`
-
-LOCK: Moved up to new-GM per BROZ suggestion -->
+is hidden and what is revealed. 
 
 ## Being a Deck of Adventures Game Master
 
@@ -208,7 +184,7 @@ split it into two 26-card decks and shuffle regularly.
 One deck of cards should be designated the *Minion Deck* and one designated
 the *World Deck*. Different color card backs will help distinguish the two
 throughout play. The Minion Deck is used during combat and when applying
-negative Status Conditions. The World Deck is used to draw Target Cards for
+negative [Status Conditions](./01_PlayerGuide_Full.md#Status-Conditions). The World Deck is used to draw Target Cards for
 NPCs, make social checks, and used for drawing a card based on a table out of
 combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the
 World Deck when it is empty. 
@@ -218,8 +194,6 @@ therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
 For the exceptional NPC, such as a Dealer or a Boss, try assigning them a
 deck, if available. If unavailable, you can decide when to invoke Lower Hand
 behind the GM screen.
-
-<!--LOCK: Consider adding a link here to the Player Guide about Fatigue --> 
 
 ### Managing Player Resources
 
@@ -231,42 +205,41 @@ during a session will be balancing the expenditure of all of these
 resources. 
 
 Absolute values are low in Deck of Adventures to promote speed of play and
-simplicity of calculations. With that in mind, Player controlled Dealers
-start with 5 HP that scales up based on level and Vitality modifier. This
-makes the max HP 21 at level 10 with a +6 Vitality modifier. Armor Points are
-similarly scaled down, with a maximum of 3. Fate Points scale more extremely,
-but Powers require more of them over time, making the resource stay in
-balance even as it scales higher. Players will leverage all of their
-resources to survive and succeed in Adventures, and it is up to the GM to
-make those resources feel strained and tested.  
+simplicity of calculations. With that in mind, Player controlled Dealer HP
+starts at 5, but scales with level and Vitality modifier. 
+The theoretical maximum is 21 HP, at level 10 with a +6 Vitality modifier. Armor Points are
+similarly small, with a maximum of 3. Maximum Fate Points may be larger at
+higher levels of play, the enemies that players face should require
+higher level Powers that balance out this scaling. 
+Players will leverage all of their
+resources to survive and succeed in Adventures. As the GM, it is up to you to
+make those resources feel strained and tested. 
 
 ### Cards
 
 Think of the Players' decks as their characters' stamina. They should get
 progressively more tired throughout the day as cards are drawn for Checks and
-Powers. If a Player runs out of cards between Rests, they are Fatigued and
-reshuffle their deck. They make all checks at Lower Hand until they complete
+Powers. If a Player runs out of cards between Rests, they are [Fatigued](./01_PlayerGuide_Full.md#Status-Conditions) and
+reshuffle their deck. They then make all checks at Lower Hand until they complete
 a Rest. At lower levels, Players may not reach the end of their decks between
 Rests to incur Lower Hand penalties. As Players level up, both the Powers
 they use and the Encounters they face may require more draws, bringing them
-closer to running out. Some Players will go through cards quickly, while
-others will be more conservative about their draws. Keep this in mind when
-developing Encounters and challenging different Players. 
+closer to running out. Some Players will go through cards more quickly than others. 
+Keep this in mind when
+developing Encounters to challenge different Players. 
 
 ### Resting
 
 Health and Fate Points are also balanced by Rests. Players can take a Quick
-Rest using 30 minutes of in-game time, whereas Full Rests take 8 hours of
-in-game time. Depending on the Encounters they face and the resources
+Rest using 30 minutes of in-game time, or a Full Rest using 8 hours.
+Depending on the Encounters they face and the resources
 expended, Players may try to Rest more often. While Resting, the Players will
-be regaining their HP and FP, and expending Rest Cards. When planning
-Encounters that deal damage, keep these resources in mind. Try to keep
-Players motivated to press on, even without full resources. They may want to
-take a Quick Rest if their HP or FP drop too low, though it might not always
-be possible. 
+regain their HP and FP, and expending Rest Cards. Keep these resources in mind when planning
+Encounters that deal damage. Try to keep
+Players motivated to press on, even without full resources. 
 
-To Rest, Players will consult with the GM about whether it is feasible for
-their characters to secure a 30-minute or 8-hour break uninterrupted. Players
+To Rest, Players will consult with the GM about whether it may be feasible
+to secure an uninterrupted break. Players
 can only use Rest Cards after a Rest has been successfully completed. If a
 situation is tense, it may not always be possible to gain the benefits of a
 Rest. In the event that a Rest is interrupted, it can be resumed based on the
@@ -282,18 +255,18 @@ circumstances.
 
 ### Character Vulnerabilities
 
-Each character can have one or two (or more) Vulnerabilities, which may have
+Each character can have one or more Vulnerabilities, which may have
 mechanical and/or roleplay implications. GMs are highly encouraged to keep
 these Vulnerabilities in mind when designing Adventures. For Players, these
-are narrative seeds that can be cultivated to result in truly meaningful
+are narrative seeds that can be cultivated into truly meaningful
 moments for the Players. 
 
 For Player Vulnerabilities with more severe mechanical consequences, or those
 that could lead to dangerous situations, GMs should avoid planning too much
 around this weakness. The Players should feel like their Vulnerabilities add to
-the richness of the story, and are ultimately rewarded for taking on the added
-challenge. A Vulnerability should result in feeling a balance of toughness
-and heroism despite the odds. At its best, Vulnerabilities will inspire
+the richness of the story, and that are ultimately rewarded for taking on the added
+challenge. A Vulnerability should feel both like an added difficulty
+and the source of heroism despite the odds. At its best, Vulnerabilities will inspire
 characters that develop over time, intertwining with a broader narrative.
 
 For NPCs, Vulnerabilities can add depth to an otherwise flat archetype of
@@ -316,12 +289,12 @@ Player will draw a Target Card (TC), and the other draws against that card to
 make a Check. The level of difficulty of a Check is set by the Difficulty
 Range (DR), which is the distance between pip values that will still count as
 a success. When thinking about the Target Card System, it may be helpful to
-consider a bullseye, where the Target Card is the center of the bullseye and
-the DR is the number of circles away from the bullseye you can hit and still
+consider a bullseye, where the TC is the center and
+the DR is the number of circles away from the center you can hit and still
 be successful. 
 
 One of the initial barriers a new GM must overcome is helping the Players
-understand the Target Card system. As Players get more familiar with the
+understand this target system. As Players get more familiar with the
 system, speed of play increases, and it is then easier for them to understand
 more complex mechanics. Using the [Circular TC-DR Tool](./Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
 aid. 
@@ -354,8 +327,7 @@ within the set DR.
     increases the damage of the attack by 1. Out of combat, some smaller
     bonus should happen whenever possible.
 
-<!--LOCK: I rounded up to 2% and 8% to make it more accessible for the less
- math-minded GMs, and to match the table below -->
+<!--BROZ: technically, the 8 above is closer to 6 subtracting the 2 crit, but w/e -->
 
 - **Color and Suited Successes** happen when the drawn card is within the DR
     and matches the TC in color or suit. 
@@ -366,21 +338,19 @@ within the set DR.
 
 ### Difficulty Chart
 
-<!--LOCK: Edited Likelihood to Difficulty for ease of GM navigation --> 
-
-The GM sets the Difficulty for all Checks made during a session. Setting the
+As the GM, you set the Difficulty for all Checks made during a session. Setting the
 Difficulty Range (DR) is the GM's way of establishing how difficult something
 is to accomplish. The chart below shows probability of success for the most
 frequent draws at each Difficulty Range (DR). To further dial in the
 difficulty, you might say that a specific check requires a Color or Suited
 Success. Note that Color or Suit make success half or a quarter as likely.
 Some mechanics or GM rulings can call for Checks to be made at Upper or Lower
-Hand, drawing (up to) 2 or more cards, and taking the more or less beneficial
+Hand, potentially drawing additional cards, and taking the more or less beneficial
 result. The final row notes the difference caused by drawing 2 cards. At DR 0
 or 6, there's little difference, but it can be as much as 25% for a DR 3
 check.
 
-| DR          | 0   | 1   | 2   | 3   | 4   | 5   | 6    |
+| DR          |  0  |  1  |  2  |  3  |  4  |  5  |  6   |
 |------------:|:---:|:---:|:---:|:---:|:---:|:---:| :---:|
 | Normal Draw | 8%  | 23% | 38% | 54% | 69% | 85% | 100% |
 | Color Draw  | 4%  | 12% | 19% | 27% | 35% | 42% | 50%  |
@@ -398,8 +368,8 @@ decide what makes the most sense given a specific situation.
 ### Player Skill Mods and DR Reporting
 
 Players will have Modifiers (Mods) on their Character Sheet that allow them to
-reduce the difficulty of Checks made in that relevant domain. To simplify
-Player understanding of how modifiers work, you can explain that a Modifier
+reduce the difficulty of Checks made in the relevant domain. 
+A Modifier
 widens the DR, making it more likely their draw will be successful. In some
 circumstances, having a +1 Mod may be the difference between success and
 failure. 
@@ -411,12 +381,12 @@ a +3 Mod facing a DR 3 Check is an automatic success on a Normal Draw. Scale
 difficulties up or down accordingly, but never punish a Player for having a
 high Modifier. If it is likely their character would be able to easily
 succeed on something, allow it rather than changing the Difficulty on the
-spot.   
+spot.
 
 ### Fate Cards
 
 Players start with 2 Jokers as Fate Cards and will randomly gain more as they
-draw their Aces. As a GM, you also reserve Fate Cards when controlling
+draw their Aces. As the GM, you also reserve Fate Cards when controlling
 Dealers during a session. Fate Cards are opportunities for Players and
 Dealers to manipulate fate by allowing for a re-draw or avoiding damage. You
 can ask if a Player would like to use a Fate Card when they Miss or when they
@@ -433,11 +403,8 @@ more responsive/reactive, and are often used for Contested Checks. Skills are
 intended to be more active for character-initiated events.
 
 The list below provides of general information about the Attributes and
-Skills (see [Full Players Guide](../01_PlayerGuide_Full.md#Characters) for
+Skills (see [Full Players Guide](./01_PlayerGuide_Full.md#Characters) for
 more info).
-
-<!-- BROZ: Do you want links to go to github or the site? I replaced with a
-relative doc link, which should work on both, not certain -->
 
 - AGL Agility: Dodging Contested Checks, boosts Unarmored AC.
     - Finesse: Performing difficult physical actions with ease. Primary Skill
@@ -478,13 +445,14 @@ it's up to you to decide what a situation calls for if it is not explicitly
 described in the guide or in a Power mechanic.
 
 1. Tackle Target: Initiator Finesse vs. Target Athletics 
-2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection 
+2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection or (if posessing relevant knowledge) Knowledge
+3. Sneaking past Target: Initiator Stealth vs. Target Detection
+4. Arm wrestle: Brute vs. Brute
+5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
 
 ### Epic Events
 
-<!-- BROZ: I think this could be revised referring back to the same example repeatedly
-           the way I did for the player guide successes.
- -->
+<!-- Future: revise to refer back to the same example repeatedly -->
 
 Epic Events are unique, time-gated scenarios that can occur throughout an
 Adventure. As the Game Master (GM), you determine when an Epic Event will
@@ -507,10 +475,7 @@ For more information on Epic Events, visit the [Full Player Guide](https://githu
 
 #### How to Identify an Epic Event
 
-<!-- BROZ: I think Epic could also be used for time skips. Do we want to first-person
-           this long trek from A to B or Epic it? Or replace the 2-year gap training 
-           montage
--->
+<!-- BROZ: Also for time skips. "Do we want to first-person travel or Epic it?" -->
 
 Epic Events often occur within a limited time frame, typically less than a
 minute, and typically no more than twice per session. This could be a fleeing
@@ -538,21 +503,15 @@ Event. Not all Epic Events are life-or-death scenarios, and consequences can
 vary depending on the number of success before 3 failures. 
 
 If Players get 3 Failures trying to escape a collapsing dungeon, they may take
-a little damage or need to discard some cards, or lose a precious object in
+a little damage, discard some cards, or lose a precious object in
 the fray. Likewise, if the Players are successful without any failures, the
 reward for their success can be balanced accordingly. 
 
-<!-- MISSING - a table or reference of standard success/failures + example
- stakes for certain types of scenarios --> 
+<!-- Future: a table for difficulty. Assuming X players Difficulty Y has Z% chance --> 
 
 #### An Example of an Epic Event
 
-<!-- BROZ: Is this the 'classic' example? I feel like the dungeon collapse or sneaky 
-           infiltration does the concept more justice bc it's something that would be
-           otherwise handled by less intense skill checks, instead of combat.
- -->
-
-<!-- LOCK: I agree - we can modify this to a more streamlined dungeon collapse--> 
+<!-- Future: Modify example as dungeon collapse--> 
 
 The Players hear screaming ~ 100 ft away, and rush to investigate. They see a
 group of townsfolk being attacked by a group of monsters. Each of the
@@ -594,8 +553,6 @@ lives, or kick off a new Adventure that involves seeking out the monsters.
 
 ### Combat
 
-<!-- BROZ: This feels like new-GM stuff -->
-
 Deck of Adventures (DofA) combat is meant to be fast-paced, collaborative, and
 accessible. It is designed around a simple core, while allowing for a lot of
 player freedom based on how they built their character. To run combat in DofA
@@ -632,13 +589,6 @@ enemies. If a Player has the Wanted Vulnerability, you might introduce the
 faction hunting them, who might approach the Players as hostile. Can the
 Players talk their way out of the situation, or will they choose to fight?
 
-<!-- BROZ Move up to new-GM  -->
-
-<!-- LOCK: If we keep it all new-GM vs. DofA specific we'll lose some of
-the 'section' based value of the GM guide. Talking through combat more
-holistically is helpful here - do we strip it out entirely from DofA
-specific and make 'Combat' its own main section? --> 
-
 #### Setting up Combat Encounters
 
 You decide what types of Combat Encounters you want to run during a session.
@@ -651,8 +601,6 @@ GMs should try to include a mix of roleplay and combat in an Adventure, when
 possible. Storming an enemy fortress may result in several Combat Encounters
 back to back. Investigating a crime in a major city may have more social
 investigation-based with relatively little combat.
-
-<!-- BROZ Move up to new-GM  -->
 
 ### Character Types
 
@@ -673,14 +621,18 @@ investigation-based with relatively little combat.
     persuaded to join Players in combat as Companions or GM controlled
     Dealers.
 
-<!-- BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion
- or Companion, and join players in combat accordingly? -->
-
-<!-- LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion
-is an enemy term and Companion is a Player Controlled character. I don't
-like the term "NPC" when talking to GMs who are literally playing the
-characters, so I feel like using Bystander and Minion/Dealer as GM
-controlled character terms is more useful here. -->
+<!-- 
+BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion
+      or Companion, and join players in combat accordingly? -
+LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion
+      is an enemy term and Companion is a Player Controlled character. I don't
+      like the term "NPC" when talking to GMs who are literally playing the
+      characters, so I feel like using Bystander and Minion/Dealer as GM
+      controlled character terms is more useful here. 
+BROZ: Does that give away more info than you want to? Saying someone is Bystander
+      vs. Minion biases the narrative. A lot can be gained from leaving allegiance
+      ambiguous until the last possible moment.
+-->
 
 - **Companions** are Player-controlled creatures who can be commanded with an
     Action. Players can invest in Powers to make their Companion more
@@ -726,24 +678,15 @@ Phases. After running out of HP, they replenish and changes their approach.
 Every time a Boss enters a new Phase, draw a new TC for them. The following
 list features a number of examples that might be triggered by a new Phase:
 
-<!-- BROZ: Why draw new TC -->
-
-<!-- LOCK: I pictured a 5 phase boss fight. The Players have made great
-progress on the Boss' HP, but if they've been aiming at the same TC for
-the last 10 rounds of combat they are going to be way less likely to
-keep hitting. Drawing a new TC for each Phase keeps the odds fresh and
-prevents a Player from feeling like they 'wasted' a card that would have
-been a hit during Boss fights. -->
-
 - Boss escapes to another location 
 - Boss summons Minions 
 - Boss alters the environment to make certain areas 
     + cause damage (e.g., erupting flame)
-    + require a check (e.g,. Agility check to stay standing ice) 
+    + require a check (e.g,. Agility check to stay standing on ice) 
 - Boss disappears, and reappears
-    - when Minions have been defeated 
-    - after a set number of rounds 
-    - after an environmental effect dissipates 
+    + when Minions have been defeated 
+    + after a set number of rounds 
+    + after an environmental effect dissipates 
 - Boss changes features like
     + core stats
     + higher or lower AR
@@ -752,11 +695,9 @@ been a hit during Boss fights. -->
 
 ### Example Combat Encounter designed for 4 Players at Level 2
 
-<!-- BROZ: New GM stuff -->
 In a longer campaign, mix up the types of encounters to see how Players react
 and interact with each other. This will keep things fresh so combat keeps
-Players engaged over time.
-
+Players engaged over time. 
 Here, the context is kept purposefully blank to fill in with your setting.
 
 **Location.** Start with a wide open space for the Players and enemies to move
@@ -770,6 +711,39 @@ Here, the context is kept purposefully blank to fill in with your setting.
   Dealer, allowing the Dealer to use their abilities in the first 2+ rounds. 
 
 #### Stat Blocks
+
+<!-- 
+BROZ: It would be nice to have a section on making custom enemies. There, you would
+      add a standard template to copy/paste. Some suggestions for that template:
+      - Entity name as heading level 5: ##### Entity
+      - Feature as bold: **HP:**
+      - All skill labels as caps (AGL, GUT, etc) with +X. Delete unnecessary
+      - Named traits as italics: **Vulnys**: *Eye for an Eye*,
+      - Default attack action order in template. I think 'on successful hit' is implied.
+            > +X to hit, Y range, Z damage, (single/multi) target, (AGL, STR, No) Save
+            This gives you the promp to include each piece of information.
+    ALSO NOTE: bullets now need to be 4 spaces. GitHub is min 3, website is 4
+
+##### Name
+
+- **HP:** X
+- **AR:** X
+- **FP:** X
+- **Skill Mods:** ±X AGL, ±X CON, ±X GUT, ±X INT, ±X STR, ±X VIT
+- **Passives:** 
+    - *Passive*: Descrip
+    - *Passive*: Descrip
+- **Vulnys:**
+    - *Vulny*: Descrip
+- **Actions:** 
+    - **Major:**
+        - *Attack*: ±X hit, X damage, X range, (single/X multi)-target, 
+          (AGL, etc, No) Save (, X on save)
+    - **Minor**
+        - *Trait*: Descrip
+    - **Adversary** 
+        - *Trait*: Descrip
+ -->
 
 **Dealer: Captain**
 
@@ -825,60 +799,59 @@ Here, the context is kept purposefully blank to fill in with your setting.
 Every setting may have its own currency and economy, but in Deck of Adventures
 the standard recommendation is to use a system based on rare metals. Gold,
 Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
-fit your setting. The below Items reference a basic system where 1 Gold
+fit your setting. 
+By default, currencies are at a 1:10 ratio with the next-most valuable counterpart: 
+1 Gold
 Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
 (cp). When creating your own currency, use the below tables as a reference
 for adapting these items to your setting.
 
 The GM can grant currency as a reward for completing an Adventure, defeating
 an Encounter, and general exploration and adventuring. You can show your
-Players the below tables, or encourage them to seek out merchants to acquire
+Players the tables below, or encourage them to seek out merchants to acquire
 new items using the currency they've earned. Leverage the Player's desire to
 continue to strengthen their character by offering them opportunities to earn
 more currency during their Adventures, and reward strong roleplay, barter
-skills, and careful exploration and examination with additional currency. 
+skills, and careful exploration and examination with additional currency.
+
+<!-- BROZ Bookmark --> 
 
 ### Starting Items
 
-All characters start with a basic set of items, depending on their choices
-made at Character Creation. This may be setting dependent, and some settings
-may have access to items that other settings do not. A high fantasy campaign
+All characters start with a basic set of items, depending on choices
+made at Character Creation. This may be setting dependent. 
+A high fantasy campaign
 may start characters with a Magic Item, while others may simply start the
 characters with a Standard Weapon and Light Armor. Determine what makes the most
 sense for your world.
 
 The general starting items in Deck of Adventures include a standard weapon,
-simple armor, an Adventuring Pack, and a Trinket. They also start with 50 gp
-in a Coin Purse. 
+simple armor, an Adventuring Pack, a Trinket and 50 gp. 
 
 **Adventuring Pack** contains the following:
 - 1 Bedroll
-- 1 Rations Kit (contains 10 rations)
+- 1 Rations Kit (contains 10 meals)
 - 5 Torches
 - 1 Flint & Tinder
 - 1 Flask
 
-**Trinkets** are simple items that are part of a character's back story. These
-  are something usually low in monetary value that are meaningful to the
-  character. Some examples might include: 
+**Trinkets** are simple items, low in monetary value, that are meaninful to the character and may be a part of their backstory. Examples include: 
 - a small statue
 - a bauble from childhood
 - a broken dagger
 - a worn painting or image
 - an old letter 
 
-Work with your Players during Character Creation to encourage them to take
-Starting Items that make sense for the character they're trying to create.
+Work with your Players during Character Creation to generate a list of
+Starting Items that make sense for their character.
 Take their Vulnerabilities into account as well. Would an Outsider carry
 something significant to their people? Maybe a character with the Frail
 Vulnerability would carry a cane with them of some significance.
 
 ### Weapons
 
-Weapons are the primary way a character is able to deal damage in combat. The
-quality of that weapon determines how much damage it will deal when making a
-successful attack. See the below table for a general reference on Weapon
-Quality. 
+Weapons are one way to damage in combat. The
+quality of that weapon determines how much damage.
 
 **Weapon Quality Table**
 
@@ -891,10 +864,10 @@ Quality.
 
 Characters with high quality weapons are able to deal damage quickly, so keep
 this in mind when balancing Encounters or granting Players loot as they Level
-Up. The average costs are meant to help guide the GM on when the Players
-should reasonably expect to be able to afford a specific Weapon Quality, but
-you can give these out as rewards or make them available to your Players at
-any time and at any price. 
+Up. The average costs are meant to guide you as to when Players
+can expect to afford each, but
+these can be given as rewards or made available at
+any price. 
 
 ### Armor
 
@@ -903,10 +876,15 @@ base Armor Range (AR). For characters with low Agility, wearing Armor will
 help them avoid attacks in combat. 
 
 Base AR for an unarmored character is 3. Wearing Armor reduces this AR
-depending on the Armor Type. Armor Types may have a Strength Requirement in
-order to wear. If wearing an Armor with a Strength Requirement above a
-character's Strength, their movement speed is halved and they make all
-Agility Checks at the Lower Hand.  
+depending on Type. Some have Strength Requirements in
+order to wear. A character who ignores this requirment may only use 
+their movement speed and must make all
+Agility Checks at Lower Hand.
+
+<!-- 
+BROZ: Does the above language mean only AGL attribute or AGL, Finesse, Stealth? 
+      The section below does not align with what's in the player guide. Please revise.
+-->
 
 **Armor Type Table** 
 
@@ -940,21 +918,21 @@ costs.
 
 **General Items Table**
 
-| Item Name      | Short Description  | Cost  |
-| -------------- | -----------------  | ----- |
-| Hammer         |                    | 5 sp  |
-| Backpack       |                    | 8 sp  |
-| Empty Vial     |                    | 2 sp  |
-| Canvas Pouch   |                    | 2 sp  |
-| Tent           |                    | 1 gp  |
-| Torches        |                    | 5 sp  |
-| Flint & Tinder |                    | 5 sp  |
-| Bedroll        |                    | 8 sp  |
-| Rations Kit    |                    | 5 sp  |
-| Flask          |                    | 1 gp  |
-| Lantern        |                    | 2 gp  |
-| Mirror         |                    | 1 gp  |
-| Crowbar        |                    | 1 gp  |
+| Item Name      | Cost  |
+| -------------- | ----- |
+| Hammer         | 5 sp  |
+| Backpack       | 8 sp  |
+| Empty Vial     | 2 sp  |
+| Canvas Pouch   | 2 sp  |
+| Tent           | 1 gp  |
+| Torches        | 5 sp  |
+| Flint & Tinder | 5 sp  |
+| Bedroll        | 8 sp  |
+| Rations Kit    | 5 sp  |
+| Flask          | 1 gp  |
+| Lantern        | 2 gp  |
+| Mirror         | 1 gp  |
+| Crowbar        | 1 gp  |
 
 ### Tools
 
@@ -964,6 +942,12 @@ Upper Hand. General domains and trade skills will use a specific tool to make
 a Check. These are listed below. 
 
 **Tools Table**
+
+<!-- 
+BROZ: Is this list too close to other games? Can we be more general and say that any 
+      trade/profession has an associated kit costing 1-10 gp. For example, pharmacist
+      or apothecary kit is 3gp. Navigator/cartographer is 1 gp. Jeweler is 10gp.
+-->
 
 | Tool Name          | Cost   |
 | ------------------ | ------ |
@@ -994,37 +978,35 @@ a Check. These are listed below.
 
 These items may vary in supply and cost depending on where the Players are
 looking. In a desolate town that only has a trader pass through once every
-year, these items might be in short supply. They would likely be in steady
-supply in the wealthy merchant district of a capital city. You can use any of
-the below items as a reward from an Adventure in addition to making them
-available for sale.
+year, these items might be in short supply. In a wealthy merchant district of a major
+city, they would be easy to find. 
 
 It is up to the GM which Consumables to make available, and when. The reason
 to grant access to Consumables over Magical Items is to allow the Players to
 feel like they've gotten something valuable and powerful, but they need to be
 strategic in when to use it. These can create memorable moments of an
-Adventure without breaking it. 
+Adventure without permenantly altering the balance of power. 
 
 The Consumables listed below draw from a selection of possible
 Consumables and their Effects that you can add to your game. Feel free to
 create your own Consumables and ask the Community for help as needed. 
 
-| Consumable Name        | Cost  | Effect                                                                                    |
-| ---------------------- | ----- | ----------------------------------------------------------------------------------------- |
-| Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |
-| Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks for 1 minute                                         |   
-| Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks for 1 minute                                          |
-| Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks for 1 minute                                       |
-| Potion of Intelligence | 15 gp | Gain +1 to all Intelligence-based Checks for 1 minute                                     |
-| Potion of Intuition    | 15 gp | Gain +1 to all Intuition-based Checks for 1 minute                                        |
-| Potion of Vitality     | 25 gp | Gain +1 Maximum HP and +1 to all Vitality-based Checks for 1 minute                       |
-| Charm of Efficiency    | 65 gp | For the next hour you cannot draw with Upper or Lower Hand                                |
-| Charm of True Aim      | 40 gp | For the next hour all Attacks are made with Upper Hand                                    |
-| Charm of Amplification | 55 gp | For the next hour all Upper Hand and Lower Hand effects are doubled.                      |
-| Charm of Wounding      | 30 gp | For the next hour when dealing damage with an Attack or Power, add +1 damage to the total.|
-| Hearty Stew            | 10 gp | For the next 8 hours, gain +1 to your Maximum HP.                                         |
-| Focusing Beverage      | 10 gp | For the next 8 hours, gain +1 to your Maximum FP.                                         |
-| Fortifying Feast       | 10 gp | Gain +3 AP. For the next 8 hours, if you end your turn with 0 AP, return to 1 AP.         | 
+| Consumable Name        | Cost  | Effect                                                                                    | Duration |
+| ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
+| Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |          |
+| Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks                                                      | 1 min    |
+| Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks                                                       | 1 min    |
+| Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |
+| Potion of Intelligence | 15 gp | Gain +1 to all Intelligence-based Checks                                                  | 1 min    |
+| Potion of Intuition    | 15 gp | Gain +1 to all Intuition-based Checks                                                     | 1 min    |
+| Potion of Vitality     | 25 gp | Gain +1 Maximum HP and +1 to all Vitality-based Checks                                    | 1 min    |
+| Charm of Efficiency    | 65 gp | You cannot draw with Upper or Lower Hand                                                  | 1 hour   |
+| Charm of True Aim      | 40 gp | All Attacks are made with Upper Hand                                                      | 1 hour   |
+| Charm of Amplification | 55 gp | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
+| Charm of Wounding      | 30 gp | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
+| Hearty Stew            | 10 gp | Gain +1 to your Maximum HP                                                                | 8 hours  |
+| Focusing Beverage      | 10 gp | Gain +1 to your Maximum FP                                                                | 8 hours  |
+| Fortifying Feast       | 10 gp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
 
 ### Magic Items
 
@@ -1032,15 +1014,9 @@ Some items can have additional effects granted while wielding them, such as
 modifying damage on a Suited Hit or granting additional effects on a Major
 Success. 
 
-### Upgrading Items 
+### Upgrading Items
 
-Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgradable materials as well. 
-
-Upgrade materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. 
-
-An example of an Upgrade material might be a gemstone that when attuned to a weapon causes an additional 1 damage in a damage type relevant to the gemstone. 
-
-Another example of an Upgrade material would be when attuning to a piece of armor, that armor now grants +1 Max FP or HP.
+Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgrade materials as well. These materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. For example, a gemstone attached a weapon causes an additional 1 damage. Attached to armor, the same gemstone might grants +1 Max FP or HP.
 
 <!-- LOCK: Commenting out hidden sections, remove to show below 
 
