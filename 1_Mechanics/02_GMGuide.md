@@ -47,7 +47,9 @@
     - [Magic Items](#Magic-Items)
     - [Upgrading Items](#Upgrading-Items)
 
-<!-- REMOVE TO SHOW BELOW - PENDING FURTHER DEVELOPMENT IN b2 
+<!-- Future - Add sections below --> 
+
+<!--
 - Number Crunch
 - Building Your World
     - What is Your World?
@@ -68,11 +70,10 @@ a continuous narrative. You can bring together close friends in person, or
 find new friends virtually through the [Discord](https://discord.gg/2Wu6ZAb6S9).
 
 If you’ve been a GM elsewhere and are hoping to learn about what’s different
-about being a Deck of Adventures Game Master, you can skip right to[Being a
-Deck of Adventures Game Master](#Being-a-Deck-of-Adventures-Game-Master). For
-everyone else, or those GMs who want a refresher, we will dive into what
-being a GM is all about in[Getting Started as a Game Master]
-(#Getting-Started-as-a-Game-Master). 
+about being a Deck of Adventures Game Master, you can skip right to[Being a Deck of Adventures Game Master](#Being-a-Deck-of-Adventures-Game-Master). 
+
+For everyone else, or those GMs who want a refresher, we will dive into what being a GM
+is all about in [Getting Started as a Game Master](#Getting-Started-as-a-Game-Master). 
 
 If you or your players have questions or need a helping hand, please reach out
 to the team on [Discord](https://discord.gg/2Wu6ZAb6S9) or via GitHub
@@ -323,11 +324,9 @@ within the set DR.
     with additional effects or bonuses.
 
 - **Major Successes** happen when the drawn card matches the TC in pip value
-    At 8% chance, this should feel pretty good. In Combat, a Major Success
+    At 6% chance, this should feel pretty good. In Combat, a Major Success
     increases the damage of the attack by 1. Out of combat, some smaller
     bonus should happen whenever possible.
-
-<!--BROZ: technically, the 8 above is closer to 6 subtracting the 2 crit, but w/e -->
 
 - **Color and Suited Successes** happen when the drawn card is within the DR
     and matches the TC in color or suit. 
@@ -621,19 +620,6 @@ investigation-based with relatively little combat.
     persuaded to join Players in combat as Companions or GM controlled
     Dealers.
 
-<!-- 
-BROZ: Do we Bystander distinction? Can't an NPC be either Dealer, Minion
-      or Companion, and join players in combat accordingly? -
-LOCK: Bystander to me is our stand-in for "Allied NPC", whereas a Minion
-      is an enemy term and Companion is a Player Controlled character. I don't
-      like the term "NPC" when talking to GMs who are literally playing the
-      characters, so I feel like using Bystander and Minion/Dealer as GM
-      controlled character terms is more useful here. 
-BROZ: Does that give away more info than you want to? Saying someone is Bystander
-      vs. Minion biases the narrative. A lot can be gained from leaving allegiance
-      ambiguous until the last possible moment.
--->
-
 - **Companions** are Player-controlled creatures who can be commanded with an
     Action. Players can invest in Powers to make their Companion more
     powerful. A GM might also grant a temporary Companion as part of an
@@ -712,17 +698,9 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 #### Stat Blocks
 
-<!-- 
-BROZ: It would be nice to have a section on making custom enemies. There, you would
-      add a standard template to copy/paste. Some suggestions for that template:
-      - Entity name as heading level 5: ##### Entity
-      - Feature as bold: **HP:**
-      - All skill labels as caps (AGL, GUT, etc) with +X. Delete unnecessary
-      - Named traits as italics: **Vulnys**: *Eye for an Eye*,
-      - Default attack action order in template. I think 'on successful hit' is implied.
-            > +X to hit, Y range, Z damage, (single/multi) target, (AGL, STR, No) Save
-            This gives you the promp to include each piece of information.
-    ALSO NOTE: bullets now need to be 4 spaces. GitHub is min 3, website is 4
+Every creature has a set of statistics that govern their actions in the game. Consult their stat block to learn their strengths and weaknesses, and what actions they can take in combat.
+
+If you want to make your own custom creature, you can use the sample template provided below: 
 
 ##### Name
 
@@ -743,54 +721,53 @@ BROZ: It would be nice to have a section on making custom enemies. There, you wo
         - *Trait*: Descrip
     - **Adversary** 
         - *Trait*: Descrip
- -->
+
+
 
 **Dealer: Captain**
 
-- HP: 5
-- AR: 2 (Lightly armored)
-- FP: 2
-- Skill Modifiers: Agi +2, Str +2, Vit +2
-- Passives: Multiattack, the Dealer can make two attacks on its turn. Lucky,
-  on a suited miss the Dealer can make one free redraw. 
-- Vulnerabilities: Eye for an Eye, if you attack in combat, you must target
+- **HP**: 5
+- **AR**: 2
+- **FP**: 2
+- **Skill Mods**: AGL +2, STR +2, VIT +2
+- **Passives**: 
+    - *Multiattack*: the Dealer can make two attacks on its turn.
+    - *Lucky*: on a suited miss the Dealer can make one free redraw. 
+- **Vulnys**: Eye for an Eye, if you attack in combat, you must target
   the enemy who hit you most recently.
-- Actions: 
-  - Major Actions: 
-    1. Attack, Melee, +2 to hit, 1 space range, single target. On
-    a successful hit, deal 1 damage. 
-    2. Attack, Ranged, +1 to hit, 10 space
-    range, single target. On a successful hit, deal 1 damage. 
-  - Minor Actions: 
-    1. Speed Boost, double the Dealer's movement. 
-  - Adversary Actions: 
-    1. Break Stun, when the Dealer is stunned, as an Adversary
-    Action they can end the stun. This can only be done once per round.
-    2. Command Minions, the Dealer commands one Minion to attack. The targeted
-    Minion can move up to 3 spaces and take one Major Action. 
+- **Actions**: 
+    - **Major**: 
+        - *Attack, Melee*: +2 to hit, 1 damage, 1 range, single target. 
+        - *Attack, Ranged*: +1 to hit, 1 damage, 10 range, single target. 
+    - **Minor**: 
+        - *Speed Boost*: double the Dealer's movement. 
+    - **Adversary**: 
+        - *Break Stun*: when the Dealer is stunned, they can end the stun. This can only be done once per round.
+        - *Command Minions*: the Dealer commands one Minion it can see to attack. The targeted
+        Minion can move up to 3 spaces and take one Major Action. 
 
 **Minions 1 + 2: Melee Guards**
 
-- HP: 2
-- AP: 1
-- AR: 2 (Lightly armored) 
-- Skill Modifiers: Agi +1, Str +1, Vit +1 
-- Major Actions: 
-  1. Attack, Melee, +1 to hit, 1 space range, single target. On a
-  successful hit, deal 1 damage.
-- Minor Actions: 
-  2. Protect, adds 1 AP (up to a maximum of 1).  
+- **HP**: 2
+- **AP**: 1
+- **AR**: 2
+- **Skill Mods**: AGL +1, STR +1, VIT +1 
+- **Actions**:
+    - **Major**:
+        - **Attack, Melee**: +1 to hit, 1 damage, 1 range, single target. 
+    - **Minor**: 
+        - **Reinforce Armor**: adds 1 AP (up to a maximum of 1).  
 
 **Minions 3 + 4: Ranged Shooters**
-- HP: 2
-- AR: 3 (Unarmored)
-- Skill Modifiers: Agi +1, Gut +1, Int +1
-- Major Actions: 
-  1. Attack, Ranged, +1 to hit, 10 space range, single target. On a
-  successful hit, deal 1 damage.
-- Minor Actions: 
-  1. Ready Aim, focuses attention on a single target. While that
-  target is in range, draw attacks with the Upper Hand. 
+- **HP**: 2
+- **AR**: 3 
+- **Skill Mods**: AGL +1, GUT +1, INT +1
+- **Actions**:
+    - **Major**: 
+        - **Attack, Ranged**: +1 to hit, 1 damage, 10 range, single target.
+    - **Minor**: 
+        - **Ready Aim**: focuses attention on a single target. While that
+        target is in range, draw attacks with the Upper Hand. 
 
 ## Items
 
@@ -813,8 +790,6 @@ new items using the currency they've earned. Leverage the Player's desire to
 continue to strengthen their character by offering them opportunities to earn
 more currency during their Adventures, and reward strong roleplay, barter
 skills, and careful exploration and examination with additional currency.
-
-<!-- BROZ Bookmark --> 
 
 ### Starting Items
 
@@ -879,27 +854,24 @@ Base AR for an unarmored character is 3. Wearing Armor reduces this AR
 depending on Type. Some have Strength Requirements in
 order to wear. A character who ignores this requirment may only use 
 their movement speed and must make all
-Agility Checks at Lower Hand.
-
-<!-- 
-BROZ: Does the above language mean only AGL attribute or AGL, Finesse, Stealth? 
-      The section below does not align with what's in the player guide. Please revise.
--->
+Agility, Finesse, and Stealth Checks at Lower Hand.
 
 **Armor Type Table** 
 
-| AR     | Armor Type  | Strength Req. | Average Cost |
-| ------ | ----------  | ------------  | -----------  |
-| 3      | Unarmored   | -             | -            |
-| 2      | Light       | -             | 25 gp        |
-| 1      | Medium      | +2            | 100 gp       |
-| 0      | Heavy       | +3            | 2500 gp      |
+| AR     | Armor Type  | AP    | Prerequisite  | Average Cost |
+| ------ | ----------  | ----- | ------------  | -----------  |
+| 3      | Unarmored   | 0     | -             | -            |
+| 3      | Light       | 0     | -             | 5 gp         |
+| 2      | Medium      | 0     | -             | 25 gp        |
+| 2      | Fortified   | 1     | Strength ≥ 0  | 100 gp       |
+| 1      | Heavy       | 2     | Strength ≥ 1  | 500 gp       |
+| 1      | Massive     | 3     | Strength ≥ 2  | 1500 gp      |
+| 1      | Gleaming    | 2     | Agility ≥ 3   | 1500 gp      |
 
-Characters may start with Light Armor at Level 1, but must acquire Medium and
-Heavy Armor over the course of their Adventures, either through purchase or
+Characters may start with Light Armor at Level 1, but must acquire other armor over the course of their Adventures, either through purchase or
 reward.  
 
-Some armor can also grant Armor Points (AP). Items like Shields can provide AP when readied using an Action, while other types of Armor may have magical effects that provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found in varying quality. 
+Some armor and items also grant Armor Points (AP). Items like Shields can provide AP when readied using an Action, while other types of Armor may have magical effects that provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found in varying quality. 
 
 **Shield Quality Table**
 
@@ -943,26 +915,23 @@ a Check. These are listed below.
 
 **Tools Table**
 
-<!-- 
-BROZ: Is this list too close to other games? Can we be more general and say that any 
-      trade/profession has an associated kit costing 1-10 gp. For example, pharmacist
-      or apothecary kit is 3gp. Navigator/cartographer is 1 gp. Jeweler is 10gp.
--->
+Various professions in the world require tools for their craft. To attempt a Check in a relevant profession, you must be in possession of that profession's tools or you make your Check at the Lower Hand. These tools can often be found in a General Store, though in some settings some professions' tools may be harder to find.
 
-| Tool Name          | Cost   |
+| Profession Name    | Cost   |
 | ------------------ | ------ |
-| Blacksmith Hammer  | 5 gp   |
-| Lockpick           | 5 gp   |
-| Chef's Kit         | 3 gp   |
-| Carpentry Set      | 3 gp   |
-| Sailing Kit        | 2 gp   |
-| Leatherworking Set | 5 gp   |
-| Clothier Kit       | 5 gp   |
-| Navigation Set     | 1 gp   |
-| Alchemy Kit        | 3 gp   |
-| Herbalism Set      | 1 gp   |
-| Climbing Gear      | 3 gp   |
-| Jeweler's Kit      | 10 gp  |
+| Blacksmith         | 5 gp   |
+| Locksmith          | 5 gp   |
+| Chef               | 3 gp   |
+| Carpenter          | 3 gp   |
+| Sailor             | 2 gp   |
+| Leatherworker      | 5 gp   |
+| Clothier           | 5 gp   |
+| Navigator          | 1 gp   |
+| Alchemist          | 3 gp   |
+| Herbalist          | 1 gp   |
+| Mountaineer        | 3 gp   |
+| Jeweler            | 10 gp  |
+| Cartographer       | 5 gp   |
 
 ### Consumables
 
@@ -1018,13 +987,13 @@ Success.
 
 Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgrade materials as well. These materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. For example, a gemstone attached a weapon causes an additional 1 damage. Attached to armor, the same gemstone might grants +1 Max FP or HP.
 
-<!-- LOCK: Commenting out hidden sections, remove to show below 
+<!-- Future: add additional sections for World building -->
+
+<!--
 
 ## Building Your World
 
 ### What is Your World?
-
-`MISSING`
 
 ### Preparing an Adventure
 
@@ -1039,7 +1008,7 @@ Some items can be upgraded with the proper materials. A Standard Weapon or Light
 
 - Enemy types: Dealers and Minions 
 
-<!-- Other sections to build out 
+Other sections to build out 
 
 - Leveling up: XP vs. Milestones
 - Giving Players items and balancing Power creep
@@ -1048,18 +1017,10 @@ Some items can be upgraded with the proper materials. A Standard Weapon or Light
 - Developing Lore and background information 
 - Managing an increasingly complex World
 
---> 
-
-<!-- REMOVE TO SHOW BELOW
-
 ## Managing Players (Expectations & Realities)
 
-`MISSING`
 
-<!-- LOCK: It would be good to get different opinions here and maybe seek community
- feedback for this section --> 
 
-<!--
 - Bringing Players together
 - The importance of Session 0 - establishing a safe space
 - United at the table
@@ -1068,14 +1029,8 @@ Some items can be upgraded with the proper materials. A Standard Weapon or Light
 - Keeping Players engaged
 - Mitigating conflict - in and out of session 
 - How to manage an Evil character at the table 
---> 
 
-<!-- REMOVE TO SHOW BELOW
 ## Number Crunch
-
-`MISSING`
-
-<!--
 
 - General numbers on resources like FP/HP/AP/Stamina
 - Making stat decisions for your NPCs
@@ -1083,15 +1038,7 @@ Some items can be upgraded with the proper materials. A Standard Weapon or Light
 - Scaling damage over time 
 - Item lists or general descriptions/tables (see Issue #33)
 
--->
-
-<!-- REMOVE TO SHOW BELOW
-
 ## Continuing Your Journey as a Game Master
-
-`MISSING`
-
-<!-- 
 
 This section will contain some more advanced aspects of being a Game Master. 
 
