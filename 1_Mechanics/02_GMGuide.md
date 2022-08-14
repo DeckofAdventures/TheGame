@@ -717,9 +717,9 @@ If you want to make your own custom creature, you can use the sample template pr
     - **Major:**
         - *Attack*: ±X hit, X damage, X range, (single/X multi)-target, 
           (AGL, etc, No) Save (, X on save)
-    - **Minor**
+    - **Minor:**
         - *Trait*: Descrip
-    - **Adversary** 
+    - **Adversary:** 
         - *Trait*: Descrip
 
 
