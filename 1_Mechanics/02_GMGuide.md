@@ -723,8 +723,7 @@ If you want to make your own custom creature, you can use the sample template pr
         - *Trait*: Descrip
 
 
-
-**Dealer: Captain**
+##### Dealer: Captain
 
 - **HP**: 5
 - **AR**: 2
@@ -746,7 +745,7 @@ If you want to make your own custom creature, you can use the sample template pr
         - *Command Minions*: the Dealer commands one Minion it can see to attack. The targeted
         Minion can move up to 3 spaces and take one Major Action. 
 
-**Minions 1 + 2: Melee Guards**
+##### Minions 1 + 2: Melee Guards
 
 - **HP**: 2
 - **AP**: 1
@@ -758,7 +757,7 @@ If you want to make your own custom creature, you can use the sample template pr
     - **Minor**: 
         - **Reinforce Armor**: adds 1 AP (up to a maximum of 1).  
 
-**Minions 3 + 4: Ranged Shooters**
+##### Minions 3 + 4: Ranged Shooters
 - **HP**: 2
 - **AR**: 3 
 - **Skill Mods**: AGL +1, GUT +1, INT +1
