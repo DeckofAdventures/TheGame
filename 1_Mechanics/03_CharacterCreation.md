@@ -1,5 +1,17 @@
 # Character Creation
 
+## Create Your Dealer
+
+Players and GMs both control Dealers. A Dealer is someone who is in charge of their own
+fate, and plays using their own unique deck. Players are able to level up their Dealers
+by playing in Adventures, and GMs can set the level of their Dealers to best balance
+the Encounter during a session.
+
+Every Dealer can take Powers and Vulnerabilities, and has Skill Modifiers that impact
+their ability to interact with the world around them. These are the steps to building a
+Dealer as part of Character Creation. GMs can find additional advice on how to create a
+GM Dealer in the [GM Guide](../02_GMGuide.md)
+
 ## Decide Your Background
 
 First, choose where your character is coming from including your lived experiences that
@@ -51,7 +63,7 @@ forfeit Powers with that prerequisite in exchange for the points previously spen
 Both at character creation (6) and at the GM's discretion for each level up (3), you are
 awarded Experience Points. These can be spent to gain additional Powers, boost an
 Attribute, a Skill, or remove a Vulnerability. Total XP is
-equal to 6 + (level * 3). DM permitting, you may respec, or exchange powers for their 
+equal to 6 + (level * 3). GM permitting, you may respec, or exchange powers for their 
 equivalent XP value.
 
 ### Choose Your Powers
@@ -65,12 +77,11 @@ Each Power has an associated XP cost. Passive mechanics, or Minor magical tricks
 typically cost 1 XP. Big, character-altering feats will cost more. Major Powers are
 tiresome and require a limited resource to use: Fate Points(FP). Each Power will list
 the range of FP that can be spent (e.g., 1 FP to target one enemy vs. 2 FP to target
-multiple). The more FP spent, the bigger the effect. Numbers separated by `/` in the
+multiple). The more FP spent, the bigger the effect. Numbers separated by `-` in the
 mechanics description indicate different effects depending on FP spent.
 
 Adding a Power with an FP cost raises the character's maximum FP by the largest number
-of FP listed for that Power. FP are replenished on a [Rest]
-(01_PlayerGuide_Full.md#Rests).
+of FP listed for that Power. FP are replenished on a [Rest](01_PlayerGuide_Full.md#Rests).
 
 Unless otherwise noted, Powers...
 1. Take a Major Action to perform and use a Dealer's Primary
