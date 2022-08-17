@@ -201,7 +201,7 @@ behind the GM screen.
 Adventures can also be designed to test different aspects of the Players and
 characters. Each Player holds a single deck of 52 cards, with two Fate Cards
 reserved at the beginning of play. Each character has statistics that include
-total Health Points (HP), Fate Points (FP), and Armor Points (AP). Your focus
+total Health Points (HP), Power Points (PP), and Armor Points (AP). Your focus
 during a session will be balancing the expenditure of all of these
 resources. 
 
@@ -209,7 +209,7 @@ Absolute values are low in Deck of Adventures to promote speed of play and
 simplicity of calculations. With that in mind, Player controlled Dealer HP
 starts at 5, but scales with level and Vitality modifier. 
 The theoretical maximum is 21 HP, at level 10 with a +6 Vitality modifier. Armor Points are
-similarly small, with a maximum of 3. Maximum Fate Points may be larger at
+similarly small, with a maximum of 3. Maximum Power Points may be larger at
 higher levels of play, the enemies that players face should require
 higher level Powers that balance out this scaling. 
 Players will leverage all of their
@@ -231,11 +231,11 @@ developing Encounters to challenge different Players.
 
 ### Resting
 
-Health and Fate Points are also balanced by Rests. Players can take a Quick
+Health and Power Points are also balanced by Rests. Players can take a Quick
 Rest using 30 minutes of in-game time, or a Full Rest using 8 hours.
 Depending on the Encounters they face and the resources
 expended, Players may try to Rest more often. While Resting, the Players will
-regain their HP and FP, and expending Rest Cards. Keep these resources in mind when planning
+regain their HP and PP, and expending Rest Cards. Keep these resources in mind when planning
 Encounters that deal damage. Try to keep
 Players motivated to press on, even without full resources. 
 
@@ -640,7 +640,7 @@ An Adversary Action is a Boss ability that takes place outside their turn
 during Combat to help balance encounters where a single Boss might be facing
 up to 6 Players. This helps Players feel a sense of danger from a single
 enemy. Adversary Actions may be related to resource replenishment, like
-allowing a Boss to recover a small amount of HP or gain Fate Points. They may
+allowing a Boss to recover a small amount of HP or gain Power Points. They may
 allow for an additional attack, or an environmental effect involving a Check
 for the Players. Players who fail might take damage or receive a Status
 Condition like Entangled. 
@@ -706,7 +706,7 @@ If you want to make your own custom creature, you can use the sample template pr
 
 - **HP:** X
 - **AR:** X
-- **FP:** X
+- **PP:** X
 - **Skill Mods:** ±X AGL, ±X CON, ±X GUT, ±X INT, ±X STR, ±X VIT
 - **Passives:** 
     - *Passive*: Descrip
@@ -727,7 +727,7 @@ If you want to make your own custom creature, you can use the sample template pr
 
 - **HP**: 5
 - **AR**: 2
-- **FP**: 2
+- **PP**: 2
 - **Skill Mods**: AGL +2, STR +2, VIT +2
 - **Passives**: 
     - *Multiattack*: the Dealer can make two attacks on its turn.
@@ -973,7 +973,7 @@ create your own Consumables and ask the Community for help as needed.
 | Charm of Amplification | 55 gp | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
 | Charm of Wounding      | 30 gp | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
 | Hearty Stew            | 10 gp | Gain +1 to your Maximum HP                                                                | 8 hours  |
-| Focusing Beverage      | 10 gp | Gain +1 to your Maximum FP                                                                | 8 hours  |
+| Focusing Beverage      | 10 gp | Gain +1 to your Maximum PP                                                                | 8 hours  |
 | Fortifying Feast       | 10 gp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
 
 ### Magic Items
@@ -984,7 +984,7 @@ Success.
 
 ### Upgrading Items
 
-Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgrade materials as well. These materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. For example, a gemstone attached a weapon causes an additional 1 damage. Attached to armor, the same gemstone might grants +1 Max FP or HP.
+Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgrade materials as well. These materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. For example, a gemstone attached a weapon causes an additional 1 damage. Attached to armor, the same gemstone might grants +1 Max PP or HP.
 
 <!-- Future: add additional sections for World building -->
 
@@ -1031,7 +1031,7 @@ Other sections to build out
 
 ## Number Crunch
 
-- General numbers on resources like FP/HP/AP/Stamina
+- General numbers on resources like PP/HP/AP/Stamina
 - Making stat decisions for your NPCs
 - Balancing encounters (Difficulty Challenge Formula or advice)
 - Scaling damage over time 

@@ -3,7 +3,7 @@ Template:           # This dictates the CSV columns and order thereof
     Subcategory:    # One string. If none, 'None'
     Type:           # One string of Passive, Minor, or Major
     XP Cost:        # One digit
-    FP Cost:        # One or more digits. For multiple [1, 2]
+    PP Cost:        # One or more digits. For multiple [1, 2]
     # Notes:
     #        Prereqs must match item in 'Prereq' section.
     #        For multiple, use [A, B] brackets or indented `-` bullets
@@ -50,10 +50,10 @@ Attack, Charge:
     Category: Combat
     Subcategory: Weapon Attacks
     Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-    Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
+    Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
     Type: Major
     XP Cost: 2
-    FP Cost: 2
+    PP Cost: 2
     Prereq Power: Attack, Weapon
     Prereq Level: 3
     Prereq Role:
@@ -64,10 +64,10 @@ Attack, Sweep:
     Category: Combat
     Subcategory: Example Second
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 FP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
+    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 PP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
     Type: Major
     XP Cost: 2
-    FP Cost: [1, 2]
+    PP Cost: [1, 2]
     Prereq Power: Attack, Weapon
     Prereq Role:
         - Martial

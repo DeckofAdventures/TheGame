@@ -96,7 +96,7 @@ redraw. Only one redraw is permitted per check.
    1. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
    done before the end of the Player's next turn after recieving damage.
    
-   2. *Exchange Fate*: gain Fate Points equal to the number of Fate Cards used.
+   2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
@@ -516,7 +516,7 @@ When a Dealer is Knocked Out in combat, their subsequent turns are replaced with
 Event TCs of DR 4 Vitality Checks. If they take additional damage, they make these
 checks at Lower Hand (+1). If they succeed on two TCs, they remain unconscious and the
 Epic Event is concluded. For a Major Success (same value as TC), they recover 1 HP. For
-a Critical Success, they recover 1 HP and up to 3 FP (FP max permitting). If they fail
+a Critical Success, they recover 1 HP and up to 3 PP (PP max permitting). If they fail
 two of these TCs, they are called to the great beyond. 
 
 ### Rests
@@ -528,7 +528,7 @@ characters get some sleep and recover from a long day.
 
 During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
 Players start with a number of Rest Cards equal to the sum of their maximum Health and
-Fate Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn is
+Power Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn is
 the same as the players's Primary Suit, regain an additional 1 Health or Fate Point. To
 recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
 Skill check of DR 7 minus the number of points they are attempting to recover. If the

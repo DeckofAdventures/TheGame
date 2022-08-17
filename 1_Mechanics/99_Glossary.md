@@ -30,7 +30,7 @@
 - [Epic Event](01_PlayerGuide_Full.md#Epic-Events): Draw multiple cards to pass a series
   of checks usually resulting in collective success or failure.
 - [Fate Cards](01_PlayerGuide_Full.md#Fate-Cards): King/Aces cards held for redraws.
-- [FP, Fate Points](03_CharacterCreation#Choose-Your-Powers): Limited resource used when 
+- [PP, Power Points](03_CharacterCreation#Choose-Your-Powers): Limited resource used when 
 - [GM, Game Master](01_PlayerGuide_Full.md#What-is-a-Tabletop-Game-System?): Narrator
   and curator of the story.
 - [Hand, Upper/Lower](01_PlayerGuide_Full#Upper-and-Lower-Hand): Draw N cards and report
@@ -46,7 +46,7 @@
   in the story.
 - [Primary Suit]()
 - [Rest](01_PlayerGuide_Full.md#Rests): Break for the character during which the Player shuffles cards and replenishes resources. Quick Rests last 30 minutes; Full Rests last 8 hours.
-- [Rest Cards](01_PlayerGuide_Full.md#Rests): A limited pool of cards used to recover Health or Fate Points during Quick Rests.
+- [Rest Cards](01_PlayerGuide_Full.md#Rests): A limited pool of cards used to recover Health or Power Points during Quick Rests.
 - [Skill](01_PlayerGuide_Full.md#Attributes,-Skills,-and-Modifiers): A ubskill within an
   Attribute, each with associated Modifier.
 - [TC, Target Card](01_PlayerGuide_Full.md#Making-a-Check): The card that sets the mid-point of the range for a Check.

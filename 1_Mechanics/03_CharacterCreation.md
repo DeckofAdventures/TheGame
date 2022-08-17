@@ -75,13 +75,13 @@ Modifiers.
 
 Each Power has an associated XP cost. Passive mechanics, or Minor magical tricks
 typically cost 1 XP. Big, character-altering feats will cost more. Major Powers are
-tiresome and require a limited resource to use: Fate Points(FP). Each Power will list
-the range of FP that can be spent (e.g., 1 FP to target one enemy vs. 2 FP to target
-multiple). The more FP spent, the bigger the effect. Numbers separated by `-` in the
-mechanics description indicate different effects depending on FP spent.
+tiresome and require a limited resource to use: Power Points(PP). Each Power will list
+the range of PP that can be spent (e.g., 1 PP to target one enemy vs. 2 PP to target
+multiple). The more PP spent, the bigger the effect. Numbers separated by `-` in the
+mechanics description indicate different effects depending on PP spent.
 
-Adding a Power with an FP cost raises the character's maximum FP by the largest number
-of FP listed for that Power. FP are replenished on a [Rest](01_PlayerGuide_Full.md#Rests).
+Adding a Power with an PP cost raises the character's maximum PP by the largest number
+of PP listed for that Power. PP are replenished on a [Rest](01_PlayerGuide_Full.md#Rests).
 
 Unless otherwise noted, Powers...
 1. Take a Major Action to perform and use a Dealer's Primary

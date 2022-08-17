@@ -28,7 +28,7 @@
    - Mechanic: Heal yourself or another you can see for 1 or 3 Health Points
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Support
    - Tags: None
 
@@ -52,7 +52,7 @@
    - Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Level: 2
    - Prereq Power: Lend Distraction
    - Tags: Multi-target
@@ -72,7 +72,7 @@
    - Mechanic: You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 2
+      - PP Cost: 2
    - Prereq Level: 3
    - Prereq Power: Lend Confusion
    - Prereq Role: Support or Caster
@@ -83,7 +83,7 @@
    - Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Support
    - Tags: None
 
@@ -100,7 +100,7 @@
    - Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Support or Caster
    - Tags: None
 
@@ -109,7 +109,7 @@
    - Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 2
+      - PP Cost: 2
    - Prereq Level: 3
    - Prereq Role: Support or Caster
    - Tags: None
@@ -119,7 +119,7 @@
    - Mechanic: Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Support
    - Tags: None
 
@@ -128,7 +128,7 @@
    - Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Defender
    - Tags: None
 
@@ -163,7 +163,7 @@
    - Mechanic: Your Momentum ability extends to 3 spaces, forcing any targeted opponent in that range to make a contested Strength or Agility check.
    - Type: Passive
       - XP Cost: 2
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Power: Momentum
    - Prereq Role: Defender
    - Prereq Skill: Brute > 2
@@ -182,7 +182,7 @@
    - Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
    - Type: Minor
       - XP Cost: 2
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Level: 2
    - Tags: Difficulty Prediction
 
@@ -201,7 +201,7 @@
    - Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Caster or Support
    - Tags: Multi-target
@@ -211,7 +211,7 @@
    - Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
    - Type: Major
       - XP Cost: 1
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Power: Attack, Mystic
    - Prereq Role: Martial or Caster
    - Tags: None
@@ -223,7 +223,7 @@
       - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Power: Attack, Mystic
    - Prereq Role: Caster
    - Tags: Multi-target
@@ -233,7 +233,7 @@
    - Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
    - Tags: Multi-target
@@ -243,7 +243,7 @@
    - Mechanic: You draw a Target Card and force 1 or 3 characters to make an Agility check against your TC. On a failure, those characters are Entangled.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
    - Tags: Multi-target
@@ -253,7 +253,7 @@
    - Mechanic: You select the Blinded or Deafened effect, draw a TC, and force 1 or 3 characters to make a Intuition check against your TC. On a failure, target(s) are under the selected effect. Targets who do not use the relevant sense are immune to this Power.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Mystic
    - Prereq Role: Support or Caster
    - Tags: Multi-target
@@ -288,20 +288,20 @@
 
 - Name: Attack, Charge
    - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-   - Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Fate Points are still expended on a miss.
+   - Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Weapon
    - Prereq Role: Defender or Martial
    - Tags: None
 
 - Name: Attack, Sweep
    - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-   - Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 FP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
+   - Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 PP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Power: Attack, Weapon
    - Prereq Role: Martial or Defender
    - Tags: Multi-target
@@ -311,7 +311,7 @@
    - Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Role: Martial or Defender
    - Tags: None
 
@@ -377,7 +377,7 @@
    - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
    - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
       - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round
-      - Ace of Diamonds: As a Minor Action, you recover 3 FP OR you and up to three allies each recover 1 FP
+      - Ace of Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP
       - Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
       - Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
    - Type: Passive
@@ -392,7 +392,7 @@
    - Mechanic: When making a Check, you can draw with the Upper Hand (3).
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 2
+      - PP Cost: 2
    - Prereq Level: 3
    - Tags: None
 
@@ -415,7 +415,7 @@
    - Mechanic: You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again.
    - Type: Major
       - XP Cost: 1
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Level: 2
    - Tags: Card Viewing
 
@@ -424,7 +424,7 @@
    - Mechanic: You can a look at your top 3 cards of your deck and discard up to three of them. You must make a Draw before using this Power again.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 2
+      - PP Cost: 2
    - Prereq Level: 3
    - Prereq Power: Scrying
    - Tags: Card Viewing
@@ -436,22 +436,22 @@
    - Mechanic: You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Support or Caster
    - Tags: None
 
 - Name: Illusion
    - Description: Your skills let you conjure illusory effects.
-   - Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 FP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand.
+   - Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Role: Caster
    - Tags: None
 
 - Name: Mystic Recovery
    - Description: Be still and meditate to draw energy from deep within you.
-   - Mechanic: As a Minor Action, recover 1 FP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
+   - Mechanic: As a Minor Action, recover 1 PP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
    - Type: Minor
       - XP Cost: 2
    - Prereq Role: Support or Caster
@@ -491,16 +491,16 @@
    - Mechanic: You cause an illusory sound to emanate from a point you can see within 10 spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand until they leave the area.
    - Type: Major
       - XP Cost: 1
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Skill: Stealth > 1
    - Tags: Stealth or Multi-target
 
 - Name: Stealth's Blessing
    - Description: You channel a deep energy to go unseen.
-   - Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 FP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
+   - Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
    - Type: Major
       - XP Cost: 2
-      - FP Cost: 1 or 2
+      - PP Cost: 1 or 2
    - Prereq Level: 2
    - Prereq Skill: Stealth > 2
    - Tags: Stealth or Multi-target
@@ -509,10 +509,10 @@
 
 - Name: Calculating
    - Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
-   - Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation, spending the FP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it.
+   - Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it.
    - Type: Major
       - XP Cost: 1
-      - FP Cost: 1
+      - PP Cost: 1
    - Prereq Level: 2
    - Prereq Skill: Knowledge > 1 or Investigation > 1
    - Tags: Difficulty Prediction

@@ -2,7 +2,7 @@ Name:                                 # must be unique
   Type: Boss, Dealer, Bystander, etc. # Required field
   HP: X                               # Required field
   AR: X                               # Required field
-  FP: X                               # Required field
+  PP: X                               # Required field
   Skill Mods:                         # List only those that apply
     AGL: ±X                           # + is implied if not explicit
     CON: ±X

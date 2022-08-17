@@ -43,6 +43,6 @@ Though itterative design, developers have landed on the following as touchstones
 nothing good or bad about a `2` or a `King`, a `Spade` or a `Club`. The randomized
 context determines how good the outcome is.
 
-2. **FP = HP = AP.** During rests, players decide which of these reources to replenish.
+2. **PP = HP = AP.** During rests, players decide which of these reources to replenish.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
