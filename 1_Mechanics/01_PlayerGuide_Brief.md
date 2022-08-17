@@ -80,8 +80,8 @@ would do. Creativity and thinking outside the box (i.e., exact rules) is encoura
 
 The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 
-- The GM will reveal a TC and DR. One or more players can volunteer and decide the
-  relevant check.
+- The GM will reveal a TC and DR. One or more players can volunteer and decide which
+  skill they want to use for the relevant check.
 
 - Each player and the GM will take turns drawing on the TC to get a success with a
   matching suit.
