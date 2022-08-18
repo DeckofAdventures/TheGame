@@ -63,10 +63,10 @@ to try and resolve disputes between players that may come up.
 ## The Action Deck
 
 Deck of Adventures is based around a 54-card deck: 13 cards (2-10, J, Q, K, and A)
-across 4 suits, as well as Jokers. Each player should have their own Deck. 
+across 4 suits, as well as Jokers. Each player should have their own Deck, with room for a Discard Pile and Fate Card pile. 
 
 1. Actions with unknown outcomes will require a player to make a Check, which means 
-drawing from their respective decks to help determine the outcome.
+drawing from their respective decks to inform the outcome.
 
 2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players
 and the GM. All other cards go directly into a Discard Pile. Hold on to these Fate
@@ -86,7 +86,7 @@ to choose when they want a second chance at a key moment.
 there already.
 
 2. Aces drawn from the deck are played as usual, but remains in the player's hand as a
-Fate Card.
+Fate Card rather than going to the Discard Pile.
 
 3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
 redraw. Only one redraw is permitted per check.
@@ -209,7 +209,7 @@ A Target Card (TC) is like the bullseye on a target you are hoping to hit. The
 Difficulty Range (DR) is the range around the TC the player might hope to draw, like
 the circles around the bullseye. 
 
-Once the DR has been announced, players must make this check. Players may consult with
+Once the DR has been announced, players must make the check. Players may consult with
 their GM to determine if another Attribute or Skill may be used instead. A player will
 draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
