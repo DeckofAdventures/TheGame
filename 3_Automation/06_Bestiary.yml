@@ -174,53 +174,47 @@ Poison Plant:
         Fail: 1 damage
   Primary Element: Earth
 
-Crocodile Folk Grunt:
+Grunt:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
-  Skill Mods: 1
-  Primary Element: Earth
+  Skill Mods: 1 
 
-Crocodile Folk Captain:
+Guard Captain:
   Type: Bystander
   HP: 4
   AP: 0
   AR: 2
   Skill Mods: 2
-  Primary Element: Earth
 
-Crocodile Folk Ritualist:
+Ritualist:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
   Skill Mods: 1
-  Primary Element: Earth
 
-Coral Bandit Grunt:
+Bandit Grunt:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
   Skill Mods: 1
-  Primary Element: Water
 
-Coral Bandit Guard:
+Bandit Guard:
   Type: Bystander
   HP: 2
   AP: 1
   AR: 3
   Skill Mods: 1
-  Primary Element: Water
 
-Coral Bandit Captain:
+Bandit Captain:
   Type: Bystander
   HP: 3
   AP: 1
   AR: 2
   Skill Mods: 2
-  Primary Element: Water
 
 Spectral Sentinel:
   Type: Bystander
@@ -314,230 +308,6 @@ Dragon Folk Captain:
   Skill Mods: 2
   Primary Element: Fire
 
-Fiery Avatar:
-  Type: Bystander
-  HP: 2
-  AR: 3
-  Skill Mods: 1
-  Actions: 
-    Infuse Lava Golem
-  Primary Element: Fire
-
-Chaos Rathera:
-  Type: Bystander
-  HP: 3
-  AP: 0
-  AR: 3
-  Primary Element: Chaos
-
-Swamp Shaman:
-  Type: Dealer
-  HP: 6
-  AP: 0
-  AR: 2
-  Skill Mods: 2
-  Actions: 
-    Mud Shield:
-      Type: Major
-      Effect: +2 AP shield to ally
-    Fog Cloud:
-      Type: Adversary
-      AOE: Aura 5
-      Effect: Attacks drawn at Lower Hand
-  Description: Minion of the Prophet
-  Primary Element: Earth
-
-The Prophet:
-  Type: Dealer
-  HP: 7
-  AP: 0
-  AR: 2
-  Skill Mods: 2
-  Passives: 
-    Multiattack: Two attacks per turn
-  Actions: 
-    Staff strike: 
-      Type: Major
-      Range: 0
-      Target: 1
-      Damage: 1
-    Acid Spray:
-      Range: 0
-      AOE: Line 6 x 1
-      Save:
-        DR: 2
-        Type: AGL
-        Fail: 2 damage
-        Succeed: 1 damage
-    Root Walk: 
-      Type: Minor
-      Effect: Teleport to a visible point
-      Range: 10
-    Acid Cloud:
-      Type: Adversary 
-      AOE: aura 2
-      Save:
-        Trigger: Start turn in area
-        DR: 3
-        Type: CON
-        Fail: 1 damage
-    Mud Water Bubble:
-      AOE: aura 0
-      Save:
-        DR: 2
-        Type: STR 
-        Fail: Captured by bubble 2 spaces in the air. Stunned and Entangled
-  Description: Guardian of the Corrupted Banyan Tree, Herald to the Swamp God.
-  Primary Element: Earth
-
-Great Banyan Tree Guardian Golem:
-  Type: Dealer
-  HP: 10
-  AP: 0
-  AR: 2
-  Skill Mods: 2
-  Passives: 
-    Multi-attack: 3 
-  Vulnerabilities:
-    Flammable: Double damage with fire.
-  Actions:
-    Vine slam:
-      Type: Major
-      Damage: 1
-      Range: 0
-      Target: 1
-      Save:
-        Trigger: Hit
-        DR: 3
-        Type: AGL
-        Fail: Entangled. Limit 2
-        Succeed: Descrip
-    Thorn Lash:
-      Type: Major
-      Range: 6
-      Target: 1
-      Save:
-        DR: 3
-        Type: STR
-        Fail: Move 2 spaces closer
-    Absorb life:
-      Type: Minor
-      Effect: Absorb 1 HB from Entangled creature
-    Acid Spores:
-      Type: Adversary
-      AOE: Aura 3
-      Save:
-        DR: 3
-        Type: CON
-        Fail: Poisoned 2
-  Phases:
-    One:
-      HP: 5
-    Two:
-      HP: 5
-      Effect: Enrage # Where is the enrage definition?
-  Primary Element: Earth
-
-The Swamp God:
-  Type: Dealer
-  HP: 7
-  AP: 0
-  AR: 3
-  Skill Mods: Agi +2, Str +1, Gut +2, Con +2, Vit +1, Int +2
-    AGL: 2
-    CON: 2
-    GUT: 2
-    INT: 2
-    STR: 1
-    VIT: 2
-  Passives:
-    Multi-attack: 2 attacks per turn
-  Actions:
-    Bite:
-      Type: Major
-      Range: 0
-      Target: 1
-      Damage: 1
-      Save:
-        DR: 3
-        Type: STR
-        Fail: Entangled
-    Lash:
-      Type: Major
-      Range: 6
-      Target: 1
-      Damage: 1
-      Save:
-        DR: 3
-        Fail: Pulled 3 spaces closer
-    Absorb life:
-      Type: Minor
-      Effect: Absorb 1 HB from Entangled creature
-    Drain Life:
-      Type: Adversary
-      Effect: +3 HP
-    Command Swamp Plants:
-      Type: Adversary
-      Effect: Move 1 Poison Plant 3 spaces. Explode
-      Save:
-        DR: 3
-        Type: AGL
-        Fail: 1 damage
-    Acid lair:
-      Type: Adversary
-      AOE: Aura 5
-      Save:
-        DR: 3
-        Type: Vitality
-      Description: Phase three only
-  Vulnerabilities: 
-    Praiseworthy: Those who agree to worship will not be treated as hostile.
-    Displeased: If a worshiper ceases to praise, they are attacked until out of reach or Knocked Out.
-  Phases:
-    One:
-      HP: 7
-      Description: Shielded, no attacks from Swamp God
-      Allies: 1 Crocodile Folk Ritualist per adversary
-    Two:
-      HP: 7
-      Allies: 2 Poison Plants per round that explode at the end of the round.
-      Description: Attacks freely.
-    Phase 3: 
-      HP: 7
-      Description: Entangle and Acid abilities
-  Primary Element: Earth
-
-The Sea Witch:
-  Type: Dealer
-  HP: 5
-  AP: 0
-  AR: 3
-  Skill Mods: 2
-  Primary Element: Water
-
-Roderick, Coral Knight of Sublantis:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Primary Element: Water
-
-Squid Folk Berserker:
-  Type: Dealer
-  HP: 2
-  AP: 0
-  AR: 3
-  Skill Mods: 1
-  Primary Element: Water
-
-Sea Demon Deckuditis:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Actions:
-  Primary Element: Water
-
 Giant Eagle:
   Type: Dealer
   HP: X
@@ -555,44 +325,3 @@ Giant Alligators:
       Type: Adversary
       Trigger: Half health
   Primary Element: Earth
-
-Bailstrom, Pirate Lord of Erianus:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Actions:
-  Primary Element: Fire
-
-Joffrey, Dark Knight:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Actions: 
-    Chaos Blast, Corrupted Shield (+3 AP), Teleport
-  Adversary Actions: 
-    Teleport
-  Primary Element: Chaos
-
-Lava Golem:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Actions: 
-    Slam (Melee)
-  Adversary Actions: 
-    Enrage
-  Primary Element: Fire
-
-Savilla, Dark Sorceress:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Actions: 
-    Empowered Firebolt, Teleport, Summon Avatar, Command Avatar
-  Adversary Actions: 
-    Flame Shield, Summon Avatars
-  Primary Element: Fire
