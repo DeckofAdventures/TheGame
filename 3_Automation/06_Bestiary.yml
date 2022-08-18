@@ -18,10 +18,10 @@ Name:                                 # must be unique
     Name:                             # Note: for Companions, type is action for Dealer
       Type: Major, Minor, Adversary, Free, House # Required.
       Trigger: Descrip                # Condition of Free Actions
-      To hit: ±X
+      To hit: ±X                      # + is implied if not explicit
       Damage: X
       Damage type:                    # e.g., if poison, implies bypass AP
-      Range: X
+      Range: X                        # 0 is default for 'in melee range'
       AOE: (aura, cone, line) X       # line would be X by Y, requires new diagram
       Target: X                       # number: 1 for single, 2 for 2 targets
       Effect: Descrip
@@ -93,7 +93,20 @@ Wolf:
   HP: 2
   AP: 0
   AR: 3
-  Skill Mods: 1
+  Skill Mods: 
+    AGL: 1
+    STR: 1
+  Actions:
+    Pack attack:
+      Type: Minor
+      Range: 0
+      Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
+    Attack, Weapon:
+      Type: Major
+      To hit: 1
+      Damage: 1            
+      Range: 0
+      Target: 1       
   Primary Element: Earth
 
 Dire Wolf:
@@ -101,7 +114,26 @@ Dire Wolf:
   HP: 3
   AP: 0
   AR: 2
-  Skill Mods: 2
+  Skill Mods: 
+    AGL: 2
+    STR: 2
+  Actions:
+    Pack attack:
+      Type: Minor
+      Range: 0
+      Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
+    Pounce:                             
+      Type: Major
+      To hit: 2
+      Damage: 2             
+      Range: 0
+      Target: 1                 
+      Effect: Pouncing on the enemy, you make an attack against a creature next to you and attempt to knock them to the ground.
+      Save:
+        Trigger: On hit
+        DR: 2
+        Type: STR                     
+        Fail: Knocked Down. 
   Primary Element: Earth
 
 Shrub Golem:
@@ -109,14 +141,13 @@ Shrub Golem:
   HP: 2
   AP: 0
   AR: 4
-  Primary Element: Earth
-
-Tree Golem:
-  Type: Bystander
-  HP: 7
-  AP: 0
-  AR: 3
-  Skill Mods: 2
+  Actions:
+    Attack, Weapon:
+      Type: Major
+      To hit: 1
+      Damage: 1            
+      Range: 0
+      Target: 1                 
   Primary Element: Earth
 
 Vine Golem:
@@ -124,6 +155,9 @@ Vine Golem:
   HP: 2
   AP: 0
   AR: 4
+  Skill Mods:
+    Str: 1
+    Agi: -1
   Actions: 
     Entangling Grasp:
       Type: Major
@@ -134,14 +168,41 @@ Vine Golem:
         DR: 3
         Type: STR
         Fail: Entangle
+    Attack, Ranged:
+      Type: Major
+      To hit: 1
+      Damage: 1            
+      Range: 6
+      Target: 1       
   Primary Element: Earth
 
-Swamp Beast:
+Tree Golem:
   Type: Bystander
   HP: 7
   AP: 0
   AR: 3
-  Skill Mods: 2
+  Skill Mods:
+    STR: 2
+    VIT: 2
+    AGL: -1
+    INT: -1
+  Actions:
+    Slam:
+      Type: Major
+      To hit: 2
+      Damage: 2          
+      Range: 0
+      AOE: Aura 1
+      Effect: The Golem slams the ground around it, attempting to knock nearby creatures down.
+      Save:
+        Trigger: On hit
+        DR: 2
+        Type: AGL                     
+        Fail: Knocked Down.
+        Succeed: Half damage, not Knocked Down.
+    Natural Regeneration:
+      Type: Minor
+      Effect: The Golem regenerates 1 HP. This can be used twice per Rest.
   Primary Element: Earth
 
 Poison Plant:
@@ -149,9 +210,13 @@ Poison Plant:
   HP: 2
   AP: 0
   AR: 4
-  Skill Mods: 1
+  Skill Mods:
+    AGL: -1
+    VIT: 1
+  Vulnys: 
+    Planted: The Plant has a Speed of 0 and cannot move on its own. 
   Actions: 
-    Poison spit:
+    Poison Spit:
       Type: Major
       Range: 6
       Target: 1
@@ -166,12 +231,6 @@ Poison Plant:
         DR: 3
         Type: STR 
         Fail: Entangle
-    Explode: 
-      Type: Free
-      Save:
-        DR: 3
-        Type: AGL
-        Fail: 1 damage
   Primary Element: Earth
 
 Grunt:
@@ -179,52 +238,89 @@ Grunt:
   HP: 2
   AP: 0
   AR: 3
-  Skill Mods: 1 
+  Skill Mods:
+    STR: 1
+  Actions:
+    Attack, Weapon:
+      Type: Major
+      To hit: 1
+      Damage: 1            
+      Range: 0
+      Target: 1       
 
-Guard Captain:
+Marksman:
+  Type: Bystander
+  HP: 2
+  AP: 1
+  AR: 3
+  Skill Mods: 1
+
+Captain:
   Type: Bystander
   HP: 4
-  AP: 0
+  AP: 1
   AR: 2
-  Skill Mods: 2
+  Skill Mods:
+    STR: 2
+    AGI: 1
+    CON: 1
+    INT: 1
+  Actions: 
+    Attack, Weapon:
+      Type: Major
+      To hit: 2
+      Damage: 1            
+      Range: 0
+      Target: 1
+    Command Grunt: 
+      Type: Minor
+      Effect: Targets one Grunt it can see. That Grunt can move up to 2 spaces and take a Major Action.
+    Raise Shield:
+      Type: Minor
+      Effect: The Captain gains 1 AP, up to a maximum of 1.      
 
 Ritualist:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
-  Skill Mods: 1
+  PP: 2
+  Skill Mods:
+    INT: 2
+    STR: -1
+    AGI: 1
+    CON: 1
+  Actions: 
+    Attack, Mystic:
+      Type: Major
+      Range: 10
+      Target: 1
+      To hit: 2
+      Damage: 1
+    Attack, Mystic Entangle:
+      Range: 6
+      Target: 3
+      Save:
+        DR: 2
+        Type: AGL 
+        Fail: Entangle
+    Attack, Mystic Cone: 
+      Type: Major
+      AoE: Cone 3
+      Damage: 1
+      Save:
+        DR: 2
+        Type: CON
+        Fail: Knocked Down
 
-Bandit Grunt:
+Sentinel:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
   Skill Mods: 1
 
-Bandit Guard:
-  Type: Bystander
-  HP: 2
-  AP: 1
-  AR: 3
-  Skill Mods: 1
-
-Bandit Captain:
-  Type: Bystander
-  HP: 3
-  AP: 1
-  AR: 2
-  Skill Mods: 2
-
-Spectral Sentinel:
-  Type: Bystander
-  HP: 2
-  AP: 0
-  AR: 3
-  Skill Mods: 1
-  Primary Element: Water
-
-Dark Spectral Servant:
+Specter:
   Type: Bystander
   HP: 3
   AP: 0
@@ -239,89 +335,25 @@ Dark Spectral Servant:
         DR: 3
         Type: AGL
         Fail: 1 damage
-  Primary Element: Water
 
-Bladed Falcon: # Should this just be a level 2 companion?
-  Type: Bystander
-  HP: 2
-  AP: 0
-  AR: 2
-  Skill Mods: 2
-  Passive: 
-    Mount: When ridden, grants +3 to rider. # +3 to mimic companions above
-  Description: Often found in Candris, Bladed Falcons can be ridden into battle and attack with wings that have razor-sharp feathers.
-  Primary Element: Air 
-
-Airborne Leviathan:
-  Type: Bystander
-  HP: 5
-  AP: 0
-  AR: 3
-  Skill Mods: 3
-  Primary Element: Air
-
-Lizard Folk Grunt:
-  Type: Bystander
-  HP: 2
-  AP: 0
-  AR: 3
-  Skill Mods: 1
-  Primary Element: Fire
-
-Lizard Folk Guard:
-  Type: Bystander
-  HP: 2
-  AP: 1
-  AR: 2
-  Skill Mods: 1
-  Primary Element: Fire
-
-Lizard Folk Elite:
-  Type: Bystander
-  HP: 3
-  AP: 1
-  AR: 2
-  Skill Mods: 2
-  Primary Element: Fire
-
-Dragon Folk Guard:
-  Type: Bystander
-  HP: 2
-  AP: 2
-  AR: 2
-  Skill Mods: 2 
-  Primary Element: Fire
-
-Dragon Folk Elite:
-  Type: Bystander
-  HP: 4
-  AP: 1
-  AR: 2
-  Skill Mods: 2
-  Primary Element: Fire
-
-Dragon Folk Captain:
-  Type: Bystander
-  HP: 5
-  AP: 2
-  AR: 2
-  Skill Mods: 2
-  Primary Element: Fire
-
-Giant Eagle:
-  Type: Dealer
-  HP: X
-  AP: 0
-  AR: X
-  Primary Element: Air
-
-Giant Alligators:
+Elite:
   Type: Dealer
   HP: 5
-  AP: 0
-  AR: 3
-  Actions:
-    Enrage:
-      Type: Adversary
-      Trigger: Half health
-  Primary Element: Earth
+  AP: 1
+  AR: 2
+  Skill Mods: 
+    AGL: 2 
+  Primary Element: Fire
+
+Mage:
+  Type: Dealer
+  HP: 7
+  AP: 2
+  AR: 2
+  Skill Mods: 
+    INT: 2
+    AGL: 1
+    STR: -1
+    CON: 1
+    VIT: 1
+  Primary Element: Fire
