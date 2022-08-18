@@ -531,16 +531,6 @@ Illusion:
   Prereq Role: Caster
   Tags:
 
-Mystic Recovery:
-  Category: Magic
-  Subcategory: None
-  Description: Be still and meditate to draw energy from deep within you.
-  Mechanic: As a Minor Action, recover 1 PP. If you take no other Actions or movement on this turn, recover 3. This may be done up to a number of times equal to your level per Rest.
-  Type: Minor
-  XP Cost: 2
-  Prereq Role: [Support, Caster]
-  Tags:
-
 Speedy:
   Category: Movement
   Subcategory: Speed
