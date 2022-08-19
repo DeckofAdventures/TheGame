@@ -68,7 +68,7 @@ Bear:
 Wolf:
   Type: Companion, level 1
   HP: 2
-  Passive:
+  Passives:
     Mount: When ridden, grants +3 to rider.
   Actions:
     Pack attack:
@@ -79,7 +79,7 @@ Wolf:
 Horse:
   Type: Companion, level 1
   HP: 2
-  Passive:
+  Passives:
     Mount: When ridden, grants +3 to rider.
     Elevated: Melee attacks against the rider are made at Lower Hand
 
@@ -263,10 +263,10 @@ Captain:
       Target: 1
     Command Grunt: 
       Type: Minor
-      Effect: Targets one Grunt it can see. That Grunt can move up to 2 spaces and take a Major Action.
+      Effect: Targets one creature it can see. That creature can move up to 2 spaces and take a Major Action.
     Raise Shield:
       Type: Minor
-      Effect: The Captain gains 1 AP, up to a maximum of 1.      
+      Effect: Gain 1 AP (max 1).      
 
 Ritualist:
   Type: Bystander
@@ -318,7 +318,7 @@ Specter:
   Actions:
     Spectral Explosion:
       Type: Free
-      Trigger: <1 HP
+      Trigger: HP < 1
       AOE: Aura 1
       Save:
         DR: 3
