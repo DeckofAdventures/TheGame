@@ -14,8 +14,9 @@ While untracked edits may change individual pages and patches may systematically
 multiple pages, minor and major versions will be accompanied by descriptors detailing
 the nature of these changes.
 
-## [1.0.1] - UNRELEASED
-+ 
+## [1.0.0a5] - UNRELEASED
++ Added Beastiary YAML
++ Renamed Fate Points to Power Points
 
 ## [1.0.0a4] - 2022-08-14
 + Added v1 GM Guide
