@@ -43,45 +43,30 @@ Name:                                 # must be unique
   Type: Companion, level 1
   HP: 1
   Passives:
-    Keen Eyed: When their Dealer makes a Detection check as an action with the companion present, they do so with Upper Hand
+    Keen Eyed: 
   Action:
     Swoop:
-      Type: Minor
-      Target: 1
-      Effect: Next attack against the target has Upper Hand
-
+    
 Bear:
   Type: Companion, level 1
   HP: 3
   Actions:
     Bear Hug: 
-      Type: Minor
-      Range: 0
-      Target: 1
-      Effect: Grapples target enemy
-      Save:
-        Trigger: Once
-        DR: 2
-        Type: STR 
-        Fail: All attacks against the target made until the end of their next turn have Upper Hand.
-
+      
 Wolf:
   Type: Companion, level 1
   HP: 2
   Passives:
-    Mount: When ridden, grants +3 to rider.
+    Mount: 
   Actions:
     Pack attack:
-      Type: Minor
-      Range: 0
-      Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
-
+      
 Horse:
   Type: Companion, level 1
   HP: 2
   Passives:
-    Mount: When ridden, grants +3 to rider.
-    Elevated: Melee attacks against the rider are made at Lower Hand
+    Mount: 
+    Elevated: 
 
 Wolf:
   Type: Bystander
@@ -93,15 +78,7 @@ Wolf:
     STR: 1
   Actions:
     Pack attack:
-      Type: Minor
-      Range: 0
-      Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
-    Attack, Weapon:
-      Type: Major
-      To hit: 1
-      Damage: 1            
-      Range: 0
-      Target: 1       
+    Attack, Weapon:    
 
 Dire Wolf:
   Type: Bystander
@@ -113,21 +90,7 @@ Dire Wolf:
     STR: 2
   Actions:
     Pack attack:
-      Type: Minor
-      Range: 0
-      Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
     Pounce:                             
-      Type: Major
-      To hit: 2
-      Damage: 2             
-      Range: 0
-      Target: 1                 
-      Effect: Pouncing on the enemy, you make an attack against a creature next to you and attempt to knock them to the ground.
-      Save:
-        Trigger: On hit
-        DR: 2
-        Type: STR                     
-        Fail: Knocked Down. 
 
 Shrub Golem:
   Type: Bystander
@@ -135,12 +98,7 @@ Shrub Golem:
   AP: 0
   AR: 4
   Actions:
-    Attack, Weapon:
-      Type: Major
-      To hit: 1
-      Damage: 1            
-      Range: 0
-      Target: 1                 
+    Attack, Weapon:           
 
 Vine Golem:
   Type: Bystander
@@ -152,21 +110,8 @@ Vine Golem:
     Agi: -1
   Actions: 
     Entangling Grasp:
-      Type: Major
-      To hit: 1
-      Range: 0
-      Target: 1
-      Save:
-        DR: 3
-        Type: STR
-        Fail: Entangle
-    Attack, Ranged:
-      Type: Major
-      To hit: 1
-      Damage: 1            
-      Range: 6
-      Target: 1       
-
+    Attack, Mystic:
+     
 Tree Golem:
   Type: Bystander
   HP: 7
@@ -179,22 +124,8 @@ Tree Golem:
     INT: -1
   Actions:
     Slam:
-      Type: Major
-      To hit: 2
-      Damage: 2          
-      Range: 0
-      AOE: Aura 1
-      Effect: The Golem slams the ground around it, attempting to knock nearby creatures down.
-      Save:
-        Trigger: On hit
-        DR: 2
-        Type: AGL                     
-        Fail: Knocked Down.
-        Succeed: Half damage, not Knocked Down.
     Natural Regeneration:
-      Type: Minor
-      Effect: The Golem regenerates 1 HP. This can be used twice per Rest.
-
+      
 Poison Plant:
   Type: Bystander
   HP: 2
@@ -204,23 +135,10 @@ Poison Plant:
     AGL: -1
     VIT: 1
   Vulnys: 
-    Planted: The Plant has a Speed of 0 and cannot move on its own. 
+    Planted:
   Actions: 
-    Poison Spit:
-      Type: Major
-      Range: 6
-      Target: 1
-      To hit: 1
-      Damage: 1
-      Damage type: Poison
+    Attack, Mystic:
     Entangling Grasp:
-      Range: 0
-      Target: 1
-      To hit: 1
-      Save:
-        DR: 3
-        Type: STR 
-        Fail: Entangle
 
 Grunt:
   Type: Bystander
@@ -230,19 +148,15 @@ Grunt:
   Skill Mods:
     STR: 1
   Actions:
-    Attack, Weapon:
-      Type: Major
-      To hit: 1
-      Damage: 1            
-      Range: 0
-      Target: 1       
+    Attack, Weapon:    
 
 Marksman:
   Type: Bystander
   HP: 2
   AP: 1
   AR: 3
-  Skill Mods: 1
+  Skill Mods: 
+    AGL: 1
 
 Captain:
   Type: Bystander
@@ -256,17 +170,8 @@ Captain:
     INT: 1
   Actions: 
     Attack, Weapon:
-      Type: Major
-      To hit: 2
-      Damage: 1            
-      Range: 0
-      Target: 1
     Command Grunt: 
-      Type: Minor
-      Effect: Targets one creature it can see. That creature can move up to 2 spaces and take a Major Action.
-    Raise Shield:
-      Type: Minor
-      Effect: Gain 1 AP (max 1).      
+    Raise Minor Shield:      
 
 Ritualist:
   Type: Bystander
@@ -281,49 +186,31 @@ Ritualist:
     CON: 1
   Actions: 
     Attack, Mystic:
-      Type: Major
-      Range: 10
-      Target: 1
-      To hit: 2
-      Damage: 1
     Attack, Mystic Entangle:
-      Range: 6
-      Target: 3
-      Save:
-        DR: 2
-        Type: AGL 
-        Fail: Entangle
     Attack, Mystic Cone: 
-      Type: Major
-      AoE: Cone 3
-      Damage: 1
-      Save:
-        DR: 2
-        Type: CON
-        Fail: Knocked Down
 
 Sentinel:
   Type: Bystander
   HP: 2
   AP: 0
   AR: 3
-  Skill Mods: 1
+  Skill Mods: 
+    GUT: 1
+    INT: 1
+    STR: -1
 
 Specter:
   Type: Bystander
   HP: 3
   AP: 0
   AR: 2
-  Skill Mods: 2
+  Skill Mods: 
+    GUT: 1
+    INT: 1
+    STR: -1
   Actions:
     Spectral Explosion:
-      Type: Free
-      Trigger: HP < 1
-      AOE: Aura 1
-      Save:
-        DR: 3
-        Type: AGL
-        Fail: 1 damage
+      
 
 Elite:
   Type: Dealer
@@ -331,7 +218,11 @@ Elite:
   AP: 1
   AR: 2
   Skill Mods: 
-    AGL: 2 
+    AGL: 2
+    STR: 2
+    VIT: 1
+    GUT: 1
+    CON: 1 
 
 Mage:
   Type: Dealer
