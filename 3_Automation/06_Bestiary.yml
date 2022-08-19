@@ -36,7 +36,6 @@ Name:                                 # must be unique
     One:
       HP: X
       Allies:
-  Element: Earth, Fire, etc           # Setting-specific
   Description: Descrip                # Full descriptive text
 
 
@@ -50,7 +49,6 @@ Name:                                 # must be unique
       Type: Minor
       Target: 1
       Effect: Next attack against the target has Upper Hand
-  Element: Air
 
 Bear:
   Type: Companion, level 1
@@ -66,7 +64,6 @@ Bear:
         DR: 2
         Type: STR 
         Fail: All attacks against the target made until the end of their next turn have Upper Hand.
-  Element: Earth
 
 Wolf:
   Type: Companion, level 1
@@ -78,7 +75,6 @@ Wolf:
       Type: Minor
       Range: 0
       Effect: If they are next to at least 2 enemies, all attacks against the target until the end of their turn have Upper Hand.
-  Element: Fire
 
 Horse:
   Type: Companion, level 1
@@ -86,7 +82,6 @@ Horse:
   Passive:
     Mount: When ridden, grants +3 to rider.
     Elevated: Melee attacks against the rider are made at Lower Hand
-  Element: Water
 
 Wolf:
   Type: Bystander
@@ -107,7 +102,6 @@ Wolf:
       Damage: 1            
       Range: 0
       Target: 1       
-  Primary Element: Earth
 
 Dire Wolf:
   Type: Bystander
@@ -134,7 +128,6 @@ Dire Wolf:
         DR: 2
         Type: STR                     
         Fail: Knocked Down. 
-  Primary Element: Earth
 
 Shrub Golem:
   Type: Bystander
@@ -148,7 +141,6 @@ Shrub Golem:
       Damage: 1            
       Range: 0
       Target: 1                 
-  Primary Element: Earth
 
 Vine Golem:
   Type: Bystander
@@ -174,7 +166,6 @@ Vine Golem:
       Damage: 1            
       Range: 6
       Target: 1       
-  Primary Element: Earth
 
 Tree Golem:
   Type: Bystander
@@ -203,7 +194,6 @@ Tree Golem:
     Natural Regeneration:
       Type: Minor
       Effect: The Golem regenerates 1 HP. This can be used twice per Rest.
-  Primary Element: Earth
 
 Poison Plant:
   Type: Bystander
@@ -231,7 +221,6 @@ Poison Plant:
         DR: 3
         Type: STR 
         Fail: Entangle
-  Primary Element: Earth
 
 Grunt:
   Type: Bystander
@@ -343,7 +332,6 @@ Elite:
   AR: 2
   Skill Mods: 
     AGL: 2 
-  Primary Element: Fire
 
 Mage:
   Type: Dealer
@@ -356,4 +344,3 @@ Mage:
     STR: -1
     CON: 1
     VIT: 1
-  Primary Element: Fire
