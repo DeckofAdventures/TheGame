@@ -3,7 +3,7 @@
 ## Create Your Dealer
 
 Players and GMs both control Dealers. A Dealer is someone who is in charge of their own
-fate, and plays using their own unique deck. Players are able to level up their Dealers
+fate, and likely plays using their own unique deck. Players are able to level up their Dealers
 by playing in Adventures, and GMs can set the level of their Dealers to best balance
 the Encounter during a session.
 
@@ -75,9 +75,9 @@ Modifiers.
 
 Each Power has an associated XP cost. Passive mechanics, or Minor magical tricks
 typically cost 1 XP. Big, character-altering feats will cost more. Major Powers are
-tiresome and require a limited resource to use: Power Points(PP). Each Power will list
+tiresome and require a limited resource to use: Power Points (PP). Each Power will list
 the range of PP that can be spent (e.g., 1 PP to target one enemy vs. 2 PP to target
-multiple). The more PP spent, the bigger the effect. Numbers separated by `-` in the
+multiple). The more PP spent, the bigger the effect. Numbers separated by `or` in the
 mechanics description indicate different effects depending on PP spent.
 
 Adding a Power with an PP cost raises the character's maximum PP by the largest number
