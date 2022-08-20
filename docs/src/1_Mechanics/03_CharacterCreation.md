@@ -35,28 +35,28 @@ combat (e.g., Brute Strength or Knowledge). You can switch your Role later on, b
 forfeit Powers with that prerequisite in exchange for the points previously spent.
 
 - Defender
-  - Description: Defenders can take a hit and keep protecting their allies. They focus
-  more on battlefield control during combat than outright damage. Not someone to mess
-  with!
-  - Primary Skill: Brute
-  - Suggested Suit: Clubs ♣️ / Defense 🛡
+    - Description: Defenders can take a hit and keep protecting their allies. They focus
+    more on battlefield control during combat than outright damage. Not someone to mess
+    with!
+    - Primary Skill: Brute
+    - Suggested Suit: Clubs ♣️ / Defense 🛡
 - Support
-   - Description: Attending to their allies, support characters may focus on healing or
-   other boons to sway the battle in their favor. We're all stronger thanks to the
-   support of our friends.
-   - Primary Skill: Craft
-   - Suggested Suit: Hearts ♥️ / Life ❤️‍
+    - Description: Attending to their allies, support characters may focus on healing or
+    other boons to sway the battle in their favor. We're all stronger thanks to the
+    support of our friends.
+    - Primary Skill: Craft
+    - Suggested Suit: Hearts ♥️ / Life ❤️‍
 - Martial
-   - Description: Martials move quick and hit hard. They're adept with physical weapons
-   to directly damage enemies. Agile and light on their feet!
-   - Primary Skill: Finesse
-   - Suggested Suit: Spades ♠️ / Offense 🤛
+    - Description: Martials move quick and hit hard. They're adept with physical weapons
+    to directly damage enemies. Agile and light on their feet!
+    - Primary Skill: Finesse
+    - Suggested Suit: Spades ♠️ / Offense 🤛
 - Caster
-   - Description: Casters can be mages of fantasy or techno-wizards of a much more
-   mundane world. Their intellect drives them to skills the rest of us can barely
-   comprehend.
-   - Primary Skill: Knowledge
-   - Suggested Suit: Diamonds ♦️ / Conjuring ⚡️
+    - Description: Casters can be mages of fantasy or techno-wizards of a much more
+    mundane world. Their intellect drives them to skills the rest of us can barely
+    comprehend.
+    - Primary Skill: Knowledge
+    - Suggested Suit: Diamonds ♦️ / Conjuring ⚡️
 
 ## Using Experience Points (XP)
 
@@ -102,6 +102,7 @@ character creation. A GM may overrule this limit if, for example, the events of 
 story result in a character gaining an additional Vulnerability.
 
 Vulnerability types:
+
 - **Minor**: Adds 1 XP
 - **Major**: Adds 2 XP
 
@@ -117,6 +118,7 @@ upper limit increases as you level up (see table below). Once modifiers are set 
 character creation, a player may only add newly awarded Experience points.
 
 **Mod Cap by Level**
+
 | Level | SkillCap |
 |:-----:|:--------:|
 | 1     | 2        |
@@ -140,6 +142,7 @@ modifiers becomes more costly as you add. The table below shows the cost in
 Experience Points and the resulting modifier for Attributes and Skills.
 
 **XP Cost for Attributes (left) and Skills (Right)**
+
 | XP Cost | Atrib<br />Mod | XP Cost | Skill<br />Mod |
 |  :---:  |    :---:       |  :---:  |    :---:       |
 |     -4  | -2             |     -2  | -2             |

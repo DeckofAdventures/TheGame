@@ -2,36 +2,6 @@
 
 ## Full Player's Guide
 
-## Table of Contents
-
-<!-- MarkdownTOC --> <!-- BROZ: Check that links work -->
-- [What is a Tabletop Game System?](#What-is-a-Tabletop-Game-System?)
-- [Guiding Principles](#Guiding-Principles)
-- [The Action Deck](#The-Action-Deck)
-- [Fate Cards](#Fate-Cards)
-- [Characters](#Characters)
-   - [Attributes, Skills, and Modifiers](#Attributes,-Skills,-and-Modifiers)
-   - [Dealers, Bystanders and Companions](#Dealers,-Bystanders-and-Companions)
-- [Playing the Game](#Playing-the-Game)
-   - [Exploration and Adventuring](#Exploration-and-Adventuring)
-   - [Making a Check](#Making-a-Check)
-      - [Degrees of Success](#Degrees-of-Success)
-      - [Upper and Lower Hand](#Upper-and-Lower-Hand)
-      - [Contested Checks](#Contested-Checks)
-   - [In Combat](#In-Combat)
-      - [Taking Turns](#Taking-Turns)
-      - [In Combat Actions](#In-Combat-Actions)
-      - [Status Conditions](#Status-Conditions)
-   - [Health and Armor](#Health-and-Armor)
-   - [Epic Events](#Epic-Events)
-   - [Rests](#Rests)
-   - [Primary Suit](#Primary-Suit)
-- [Character Creation](#Character-Creation)
-- [Starting your adventure](#Starting-your-adventure)
-
-<!-- /MarkdownTOC -->
-
-
 ## What is a Tabletop Game System?
 
 A game system provides all of the rules, mechanics, and story-telling devices that are
@@ -119,27 +89,26 @@ and allow you to add that number to the DR when making a Check.
  These modifiers are determined at Character Creation and can be improved as you Level Up.
 
 **Complete Attribute and Skill List:**
+
 - Agility AGL
-   - Finesse (Fight)
-   <!-- - Reflex -->
-   <!-- - Riding -->
-   - Stealth
+    - Finesse (Fight)
+    - Stealth
 - Conviction CON
-   - Bluffing
-   - Performance
+    - Bluffing
+    - Performance
    <!-- - Persuasion -->
 - Intuition GUT
-   - Detection
+    - Detection
    <!-- - Faith -->
-   - Craft
+    - Craft
    <!-- - Naturalism -->
 - Intelligence INT
-   - Knowledge
-   - Investigation
+    - Knowledge
+    - Investigation
    <!-- - Science -->
 - Strength STR
-   - Athletics
-   - Brute (Fight)
+    - Athletics
+    - Brute (Fight)
    <!-- - Intimidation -->
 - Vitality VIT
    <!-- - Vitality Skill to add later -->
@@ -160,18 +129,18 @@ the players may encounter along the way.
 
 1. Dealers. All player characters, and some in-game characters that are controlled by
 the Game Master. They...
-   - Can have Powers and Vulnerabilities.
-   - Have at least 5 health points (HP).
-   - Draw from their own deck of cards.
-   - Can receive and use Fate Cards.
-   - Have a Primary Suit, and related mechanics.
+    - Can have Powers and Vulnerabilities.
+    - Have at least 5 health points (HP).
+    - Draw from their own deck of cards.
+    - Can receive and use Fate Cards.
+    - Have a Primary Suit, and related mechanics.
 
 2. Bystanders and Minions. All other characters. They...
-   - Are weaker than Dealers
-   - Have limited access to Powers
-   - Have 1-3 HP.
-   - Draw from a collective set of cards controlled by the GM. 
-   - Cannot use either Fate Cards or Primary Suit features.
+    - Are weaker than Dealers
+    - Have limited access to Powers
+    - Have 1-3 HP.
+    - Draw from a collective set of cards controlled by the GM. 
+    - Cannot use either Fate Cards or Primary Suit features.
 
 3. Companions are creatures that can be associated with a Dealer, like a pet or
 other-worldly advisor. A Companion acts on the players turn, draws from the Dealer's
@@ -368,27 +337,27 @@ split to occur before, after, and/or between actions.
 others. If an action specifies a skill, this requires a check.
 
    1. **Free**
-      - *Communication* that does not require a check.
-      - *Observation*: gaining obvious information about the world.
-      - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
+        - *Communication* that does not require a check.
+        - *Observation*: gaining obvious information about the world.
+        - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
          used.
-      - *Exchanging Fate*: discard one or more Fate Cards to gain one Fate Point per 
+        - *Exchanging Fate*: discard one or more Fate Cards to gain one Power Point per 
         card used.
 
    2. **Minor**
-      - *Object interaction*: Pressing a button, pulling a lever, using a disposable
+        - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
-      - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
+        - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
          about an opponent or the terrain.
-      - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
+        - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
          course of action
-      - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a
+        - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a
          specific piece of information 
 
    3. **Major**
-      - *Rush*: double movement
-      - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
-      - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
+        - *Rush*: double movement
+        - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
+        - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
          you by target(s) who failed
 
 #### Status Conditions
@@ -529,8 +498,8 @@ characters get some sleep and recover from a long day.
 
 During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
 Players start with a number of Rest Cards equal to the sum of their maximum Health and
-Power Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn is
-the same as the players's Primary Suit, regain an additional 1 Health or Fate Point. To
+Power Points. Each Rest Cards drawn regains 1 Health or Power Point. If the card drawn is
+the same as the players's Primary Suit, regain an additional 1 Health or Power Point. To
 recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
 Skill check of DR 7 minus the number of points they are attempting to recover. If the
 Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand. For
@@ -549,7 +518,7 @@ another level of Fatigue. If you were to suffer a fourth level of Fatigue,
 you are Knocked Out instead. This signifies your character running out of
 Stamina during a long day. 
 
-### Burn Mechanics
+### Discard Mechanics
 
 Each Dealer may have an additional Burn Mechanic. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
@@ -557,7 +526,7 @@ every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
 to a character at a time.
 
-Below is a list of possible Burn Mechanics, determined by Role. Work with your GM if you
+Below is a list of possible Discard Mechanics, determined by Role. Work with your GM if you
 would like to use a different Burn Mechanic instead.  
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 

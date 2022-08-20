@@ -1,6 +1,10 @@
 # Development Timeline
 
-<!-- Notes from community feedback: add goals and explicit deliverables / must-haves to advance in each phase, as well as what we're hoping to learn and grow from as a result. -->
+<!-- 
+Notes from community feedback: 
+    add goals and explicit deliverables / must-haves to advance in each phase, 
+    as well as what we're hoping to learn and grow from as a result. 
+-->
 
 ## Initial Development
 

@@ -1,7 +1,14 @@
+# Notes
 temp*
 temp*/*
 *sublime*
+
+# Settings
 *toml
-*pycache*
+
+# Automation
 3_Automation/_Auto*
+docs/3_Automation/_Auto*
+
+# Defaults
 .DS_Store
