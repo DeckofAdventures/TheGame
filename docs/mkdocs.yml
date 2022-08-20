@@ -3,7 +3,7 @@ site_url: https://www.DeckofAdventures.com/
 site_description: Deck of Adventures Documents
 site_author: CBroz1
 
-repo_url: https://DeckofAdventures.github.io//TheGame
+repo_url: https://DeckofAdventures.github.io/TheGame
 docs_dir: ./src/
 # edit_uri: docs/
 
