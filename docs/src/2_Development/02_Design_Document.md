@@ -10,7 +10,7 @@ title: Design
   versions that will apply to different settings. To identify flavor text, use quotes
   within the parent formatting scheme. For example:
    - The Defender Archetype is ...
-   - > Defenders of Erdanis are renowned for their mighty shields ...
+   - > Defenders of the Realm are renowned for their mighty shields ...
 - Specialized terms are listed in the [Glossary](../1_Mechanics/99_Glossary.md) and will
   be capitalized across all documents.
 - Terms that are for flavor, not mechanics, are *Italicized*
@@ -27,8 +27,8 @@ session. One only needs a standard deck of playing cards.
 
 Second, Deck of Adventures is designed to be **flexible**, across the many types of
 stories GMs want to tell. While our mechanics have been work shopped with lore from the
-World of Erdanis, all core mechanics should be portable to another setting. The flavor
-text that surrounds mechanics will change beyond Erdanis, but the features themselves
+World of Erdania, all core mechanics should be portable to another setting. The flavor
+text that surrounds mechanics will change beyond Erdania, but the features themselves
 should stay the same.
 
 Third, participants should be able to quickly and easily engage in **rich storytelling**
@@ -46,6 +46,6 @@ Though itterative design, developers have landed on the following as touchstones
 nothing good or bad about a `2` or a `King`, a `Spade` or a `Club`. The randomized
 context determines how good the outcome is.
 
-2. **FP = HP = AP.** During rests, players decide which of these reources to replenish.
+2. **PP = HP = AP.** During rests, players decide which of these reources to replenish.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
