@@ -1,9 +1,11 @@
 name: build
 on:
+  pull_request:
   push:
     branches:
       - page-test
-      - main
+    tags:
+      - "*.*.*"
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,10 +14,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs mkdocs-cinder mkdocs-exclude
+      - run: pip install mkdocs-material mkdocs-exclude
       # later: add mkdocs-include-markdown-plugin to pip list
       # Copy root dir items to docs when publishing
-      - run: for f in {C,RE}*md; do cp $f ./docs/; done
+      - run: for f in {C,RE}*md; do cp $f ./docs/src/; done
       # not sure if below actually works
-      - run: iconv -f utf-8 -t utf-8 -c ./docs/1_Mechanics/04_Powers.md > ./docs/1_Mechanics/04_Powers.md
-      - run: mkdocs gh-deploy --force --clean --verbose
+      - run: iconv -f utf-8 -t utf-8 -c ./docs/src/1_Mechanics/04_Powers.md > ./docs/src/1_Mechanics/04_Powers.md
+      - run: mkdocs gh-deploy --force --clean --verbose --config-file ./docs/mkdocs.yml
