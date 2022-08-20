@@ -1,11 +1,18 @@
 name: build
 on:
-  pull_request:
-  push:
+  pull_request: # close of PR - mostly merges but not exclusively. if issue, can revise
     branches:
-      - page-test
+      - main
+    types:
+      - closed
+  push:        # on adding a tag
     tags:
       - "*.*.*"
+  workflow_dispatch: # on clicking browser GUI button
+  push:              # on pushing to page-test, as a dev branch for forks only
+    branches:
+      - page-test
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

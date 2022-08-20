@@ -1,4 +1,4 @@
-# Powers
+﻿# Powers
 
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
@@ -142,7 +142,7 @@
     - Tags: None
 
 - Name: Critical Master
-    - Description: When you hit big, you hit BIG. Enemies don’t stand a chance against you when you make a critical hit against them.
+    - Description: When you hit big, you hit BIG. Enemies don't stand a chance against you when you make a critical hit against them.
     - Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
     - Type: Passive
         - XP Cost: 1
@@ -376,7 +376,7 @@
 - Name: Aces Wild
     - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
     - Mechanic: Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-        - Ace of Clubs: you can play this card to interrupt an enemy’s turn and make a single Major ction - even if you already went that round
+        - Ace of Clubs: you can play this card to interrupt an enemy's turn and make a single Major ction - even if you already went that round
         - Ace of Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP
         - Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares
         - Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing
@@ -462,7 +462,7 @@
 ### Speed
 
 - Name: Speedy
-    - Description: You’re quicker than the rest.
+    - Description: You're quicker than the rest.
     - Mechanic: When you take this Power, your combat speed increases by 2 squares.
     - Type: Passive
         - XP Cost: 1
@@ -540,7 +540,7 @@
     - Tags: None
 
 - Name: Keen Eye
-    - Description: You’re especially adept at taking in the world around you.
+    - Description: You're especially adept at taking in the world around you.
     - Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
     - Type: Passive
         - XP Cost: 1
