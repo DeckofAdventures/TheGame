@@ -6,7 +6,7 @@ Deck of Adventures Admin welcome input from the community, whether to help us ma
 wording of rules more precise or to expand upon the options provided. Admin ask that
 you review the licenses applicable to any material submitted and respect the Creative
 Commons BY-NC-SA nature of this community. When contributing, please provide moderators
-with your preferred name, pronouns, and a URL to like to your other work. You can make a
+with your preferred name, pronouns, and a URL to link to your other work. You can make a
 contribution by opening a GitHub issue. For more major contributions, see our
 [design document](./2_Development/02_Design_Document.md) for design principles, and
 [community document](./2_Development/01_Community.md) for information about GitHub pull 
@@ -21,8 +21,8 @@ for inconsistencies, either in mechanics or lore.
 2. [Minor fixes](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
 Find a typo or grammatical error? Let us know. 
 3. [Question](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
-to start dialogs about the design process or anything that's not clear. 4.
-[Feature requests](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
+to start dialogs about the design process or anything that's not clear. 
+4. [Feature requests](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 What should the team prioritize next? Feel free to submit your own ideas here, as a
 general idea others could expand upon or a first draft.
 
@@ -30,7 +30,7 @@ general idea others could expand upon or a first draft.
 
 Present materials adapted from [Fandom wiki licensing](https://www.fandom.com/licensing).
 
-Deck of Adventures Versions < 0.1.0 material is licensed under the Creative
+Deck of Adventures Versions < 1.1.0 material is licensed under the Creative
 Commons **Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** by
 admin users (see [Community Roles](./2_Development/01_Community.md)) Deck of Adventures
 documentation (hereafter ‘licensees’).
@@ -48,9 +48,22 @@ Please note that your contributions are shareable and remixable under such licen
 cannot be used for commercial purposes by Deck of Adventures users. As a contributor,
 you agree that being attributed via our list of contributors page satisfies the
 attribution requirements of the license applicable to your contribution to a page.
-Contributions are always welcome as github issues. GitHub pull requests should be
-reserved for major changes to at least one section, or minor changes across a many
+Contributions are always welcome as GitHub issues. GitHub pull requests should be
+reserved for major changes to at least one section, or minor changes across many
 sections (e.g., for terminology changes).
+
+<!--LOCK: Adding section for how we handle community contributions as Issues and the stages of consideration, development, playtesting, and integration into the core ruleset -->
+
+Contributions may take the form of suggested ideas or mechanics that could be
+implemented into the existing version. The Deck of Adventures admins reserve
+the right to choose which proposals and contributions are considered for
+integration, which are modified, adapted, playtested, and ultimately
+integrated into the current or future version.
+
+An Issue will be tagged as "Under Consideration", "In Development", "In
+Playtesting", and "Integrated" to establish where it is in the development
+cycle. Not all ideas will make it to the Integrated step, but every
+Contribution and comment from the Community is valued. 
 
 ## Commercial Use Waiver
 
@@ -71,7 +84,7 @@ contribution.
 ## Non-text files
 
 Freely licensed or public domain images are strongly preferred in contributions.
-Non-text media on should not be assumed to be available under the same license as the
+Non-text media should not be assumed to be available under the same license as the
 text. If you are uploading files to Deck of Adventures, you should cite the source of
 the file, attribute the authors, and note any copyright information, where applicable.
 
