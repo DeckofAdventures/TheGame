@@ -2,23 +2,6 @@
 
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
-<!-- MarkdownTOC add_links=True -->
-- [Combat](#Combat)
-    - [Support](#Support)
-    - [Control](#Control)
-    - [Mystic Attacks](#Mystic-Attacks)
-    - [Weapon Attacks](#Weapon-Attacks)
-- [Companion](#Companion)
-- [Game Mechanics](#Game-Mechanics)
-    - [Fate Cards](#Fate-Cards)
-    - [Adjust Odds](#Adjust-Odds)
-- [Magic](#Magic)
-- [Movement](#Movement)
-    - [Speed](#Speed)
-    - [Stealth](#Stealth)
-- [Roleplay](#Roleplay)
-<!-- /MarkdownTOC -->
-
 ## Combat
 
 ### Support

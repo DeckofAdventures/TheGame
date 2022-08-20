@@ -2,15 +2,6 @@
 
 <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->
 
-<!-- MarkdownTOC add_links=True -->
-- [Combat](#Combat)
-- [Party](#Party)
-- [Roleplay](#Roleplay)
-    - [Society](#Society)
-    - [Knives](#Knives)
-    - [Backstory](#Backstory)
-<!-- /MarkdownTOC -->
-
 ## Combat
 
 - Name: Bloodthirsty

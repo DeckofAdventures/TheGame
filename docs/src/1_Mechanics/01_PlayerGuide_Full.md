@@ -2,37 +2,6 @@
 
 ## Full Player's Guide
 
-## Table of Contents
-
-<!-- MarkdownTOC --> <!-- BROZ: Check that links work -->
-
-- [What is a Tabletop Game System?](#What-is-a-Tabletop-Game-System?)
-- [Guiding Principles](#Guiding-Principles)
-- [The Action Deck](#The-Action-Deck)
-- [Fate Cards](#Fate-Cards)
-- [Characters](#Characters)
-    - [Attributes, Skills, and Modifiers](#Attributes,-Skills,-and-Modifiers)
-    - [Dealers, Bystanders and Companions](#Dealers,-Bystanders-and-Companions)
-- [Playing the Game](#Playing-the-Game)
-    - [Exploration and Adventuring](#Exploration-and-Adventuring)
-    - [Making a Check](#Making-a-Check)
-        - [Degrees of Success](#Degrees-of-Success)
-        - [Upper and Lower Hand](#Upper-and-Lower-Hand)
-        - [Contested Checks](#Contested-Checks)
-    - [In Combat](#In-Combat)
-        - [Taking Turns](#Taking-Turns)
-        - [In Combat Actions](#In-Combat-Actions)
-        - [Status Conditions](#Status-Conditions)
-    - [Health and Armor](#Health-and-Armor)
-    - [Epic Events](#Epic-Events)
-    - [Rests](#Rests)
-    - [Primary Suit](#Primary-Suit)
-- [Character Creation](#Character-Creation)
-- [Starting your adventure](#Starting-your-adventure)
-
-<!-- /MarkdownTOC -->
-
-
 ## What is a Tabletop Game System?
 
 A game system provides all of the rules, mechanics, and story-telling devices that are
