@@ -182,13 +182,12 @@ session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
 split it into two 26-card decks and shuffle regularly. 
 
-One deck of cards should be designated the *Minion Deck* and one designated
-the *World Deck*. Different color card backs will help distinguish the two
-throughout play. The Minion Deck is used during combat and when applying
-negative [Status Conditions](./01_PlayerGuide_Full.md#Status-Conditions). The World Deck is used to draw Target Cards for
-NPCs, make social checks, and used for drawing a card based on a table out of
-combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the
-World Deck when it is empty. 
+One deck of cards should be designated the *Minion Deck* and one designated the *World
+Deck*. Different color card backs will help distinguish the two throughout play. The
+Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#Status-Conditions). The World Deck is used to draw Target
+Cards for NPCs, make social checks, and used for drawing a card based on a table out of
+combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the World Deck
+when it is empty. 
 
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
@@ -698,9 +697,12 @@ Here, the context is kept purposefully blank to fill in with your setting.
 
 #### Stat Blocks
 
-Every creature has a set of statistics that govern their actions in the game. Consult their stat block to learn their strengths and weaknesses, and what actions they can take in combat.
+Every creature has a set of statistics that govern their actions in the game. Consult
+their stat block to learn their strengths and weaknesses, and what actions they can
+take in combat.
 
-If you want to make your own custom creature, you can use the sample template provided below: 
+If you want to make your own custom creature, you can use the sample template provided
+below: 
 
 ##### Name
 
@@ -809,7 +811,8 @@ simple armor, an Adventuring Pack, a Trinket and 50 gp.
 - 1 Flint & Tinder
 - 1 Flask
 
-**Trinkets** are simple items, low in monetary value, that are meaninful to the character and may be a part of their backstory. Examples include: 
+**Trinkets** are simple items, low in monetary value, that are meaninful to the
+  character and may be a part of their backstory. Examples include: 
 - a small statue
 - a bauble from childhood
 - a broken dagger
@@ -867,10 +870,13 @@ Agility, Finesse, and Stealth Checks at Lower Hand.
 | 1      | Massive     | 3     | Strength ≥ 2  | 1500 gp      |
 | 1      | Gleaming    | 2     | Agility ≥ 3   | 1500 gp      |
 
-Characters may start with Light Armor at Level 1, but must acquire other armor over the course of their Adventures, either through purchase or
-reward.  
+Characters may start with Light Armor at Level 1, but must acquire other armor over the
+course of their Adventures, either through purchase or reward.  
 
-Some armor and items also grant Armor Points (AP). Items like Shields can provide AP when readied using an Action, while other types of Armor may have magical effects that provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found in varying quality. 
+Some armor and items also grant Armor Points (AP). Items like Shields can provide AP
+when readied using an Action, while other types of Armor may have magical effects that
+provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found
+in varying quality. 
 
 **Shield Quality Table**
 
@@ -914,7 +920,10 @@ a Check. These are listed below.
 
 **Tools Table**
 
-Various professions in the world require tools for their craft. To attempt a Check in a relevant profession, you must be in possession of that profession's tools or you make your Check at the Lower Hand. These tools can often be found in a General Store, though in some settings some professions' tools may be harder to find.
+Various professions in the world require tools for their craft. To attempt a Check in a
+relevant profession, you must be in possession of that profession's tools or you make
+your Check at the Lower Hand. These tools can often be found in a General Store, though
+in some settings some professions' tools may be harder to find.
 
 | Profession Name    | Cost   |
 | ------------------ | ------ |
@@ -984,7 +993,13 @@ Success.
 
 ### Upgrading Items
 
-Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor can be modified to higher quality levels, and they can also be outfitted with magical upgrade materials as well. These materials are an optional addition to any GM's setting, and they are very straightforward ways to reward your Players during an Adventure with clear upgrades to existing items so they don't have to replace items often. For example, a gemstone attached a weapon causes an additional 1 damage. Attached to armor, the same gemstone might grants +1 Max PP or HP.
+Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor
+can be modified to higher quality levels, and they can also be outfitted with magical
+upgrade materials as well. These materials are an optional addition to any GM's
+setting, and they are very straightforward ways to reward your Players during an
+Adventure with clear upgrades to existing items so they don't have to replace items
+often. For example, a gemstone attached a weapon causes an additional 1 damage.
+Attached to armor, the same gemstone might grants +1 Max PP or HP.
 
 <!-- Future: add additional sections for World building -->
 

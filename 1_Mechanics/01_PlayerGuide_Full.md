@@ -63,7 +63,8 @@ to try and resolve disputes between players that may come up.
 ## The Action Deck
 
 Deck of Adventures is based around a 54-card deck: 13 cards (2-10, J, Q, K, and A)
-across 4 suits, as well as Jokers. Each player should have their own Deck, with room for a Discard Pile and Fate Card pile. 
+across 4 suits, as well as Jokers. Each player should have their own Deck, with room
+for a Discard Pile and Fate Card pile. 
 
 1. Actions with unknown outcomes will require a player to make a Check, which means 
 drawing from their respective decks to inform the outcome.
@@ -421,9 +422,9 @@ an Epic Event alone.
 6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
-7. **Poisoned N** Each poisoning effect adds +1 Poisoned. At the start of their turn, as a Free Action, a Dealer makes a
-DR 3 Vitality Check to shake off the effects of the poison. On a failure,
-they discard N+1 cards.
+7. **Poisoned N** Each poisoning effect adds +1 Poisoned. At the start of their turn, as
+a Free Action, a Dealer makes a DR 3 Vitality Check to shake off the effects of the
+poison. On a failure, they discard N+1 cards.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
 Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
@@ -556,7 +557,8 @@ every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
 to a character at a time.
 
-Below is a list of possible Burn Mechanics, determined by Role. Work with your GM if you would like to use a different Burn Mechanic instead.  
+Below is a list of possible Burn Mechanics, determined by Role. Work with your GM if you
+would like to use a different Burn Mechanic instead.  
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
 - Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits.
@@ -585,10 +587,11 @@ The discard limit increases with level according to the table below.
 
 ## Character Creation
 
-Deck of Adventures offers both [premade characters](./PremadeCharacters/README.md) and a completely
-customizable process. Consult with your GM for information about the setting and what
-skills will be relevant for the story ahead. Custom creation starts with spending
-Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
+Deck of Adventures offers both [premade characters](./PremadeCharacters/README.md) and a
+completely customizable process. Consult with your GM for information about the setting
+and what skills will be relevant for the story ahead. Custom creation starts with
+spending Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or
+Skills.
 
 - A [Background](03_CharacterCreation#Decide-Your-Background) is descriptive about of 
   character's history and where they are when you begin your adventure.
@@ -617,9 +620,9 @@ For a full set of character creation options, see our
 
 There are four steps to starting an adventure of Deck of Adventures:
 
-1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master (
-GM) and one player, but richer stories can be told with more people bringing more to the
-table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF)! to find a group!
+1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master
+( GM) and one player, but richer stories can be told with more people bringing more to
+the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group!
 
 *If the above link is expired, please 
 [submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!).*
