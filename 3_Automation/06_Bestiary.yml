@@ -1,5 +1,5 @@
 Name:                                 # must be unique
-  Type: Boss, Dealer, Bystander, etc. # Required field
+  Type: Boss, Dealer, NPC, etc.       # Required field
   HP: X                               # Required field
   AR: X                               # Required field
   PP: X                               # Required field
@@ -10,110 +10,63 @@ Name:                                 # must be unique
     INT: ±X
     STR: ±X
     VIT: ±X
-  Passives:
-    Passive: Descrip                  # Any text here
-  Vulnys:
-    Vulny: Descrip
-  Actions:
-    Name:                             # Note: for Companions, type is action for Dealer
-      Type: Major, Minor, Adversary, Free, House # Required.
-      Trigger: Descrip                # Condition of Free Actions
-      To hit: ±X                      # + is implied if not explicit
-      Damage: X
-      Damage type:                    # e.g., if poison, implies bypass AP
-      Range: X                        # 0 is default for 'in melee range'
-      AOE: (aura, cone, line) X       # line would be X by Y, requires new diagram
-      Target: X                       # number: 1 for single, 2 for 2 targets
-      Effect: Descrip
-      Save:
-        Trigger: Once, On hit, Start turn, etc
-        DR: X
-        Type: MOD                     # AGL, CON, etc
-        Fail: Descrip                 # effect on fail
-        Succeed: Descrip              # effect on success. Assume no access to above
   Threat Level: X                     # Consistent comparable rating fitting formula
-  Phases:                             # only for Boss
-    One:
-      HP: X
-      Allies:
   Description: Descrip                # Full descriptive text
 
 
-  Falcon:
+Falcon:
   Type: Companion, level 1
   HP: 1
-  Passives:
-    Keen Eyed: 
-  Action:
-    Swoop:
     
 Bear:
   Type: Companion, level 1
   HP: 3
-  Actions:
-    Bear Hug: 
       
 Wolf:
   Type: Companion, level 1
   HP: 2
-  Passives:
-    Mount: 
-  Actions:
-    Pack attack:
       
 Horse:
   Type: Companion, level 1
   HP: 2
-  Passives:
-    Mount: 
-    Elevated: 
 
 Wolf:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 3
   Skill Mods: 
     AGL: 1
-    STR: 1
-  Actions:
-    Pack attack:
-    Attack, Weapon:    
+    STR: 1  
 
 Dire Wolf:
-  Type: Bystander
+  Type: NPC
   HP: 3
   AP: 0
   AR: 2
   Skill Mods: 
     AGL: 2
-    STR: 2
-  Actions:
-    Pack attack:
-    Pounce:                             
+    STR: 2                          
 
 Shrub Golem:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 4
-  Actions:
-    Attack, Weapon:           
+          
 
 Vine Golem:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 4
   Skill Mods:
     Str: 1
     Agi: -1
-  Actions: 
-    Entangling Grasp:
-    Attack, Mystic:
+
      
 Tree Golem:
-  Type: Bystander
+  Type: NPC
   HP: 7
   AP: 0
   AR: 3
@@ -122,36 +75,27 @@ Tree Golem:
     VIT: 2
     AGL: -1
     INT: -1
-  Actions:
-    Slam:
-    Natural Regeneration:
+
       
 Poison Plant:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 4
   Skill Mods:
     AGL: -1
     VIT: 1
-  Vulnys: 
-    Planted:
-  Actions: 
-    Attack, Mystic:
-    Entangling Grasp:
 
 Grunt:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 3
   Skill Mods:
-    STR: 1
-  Actions:
-    Attack, Weapon:    
+    STR: 1   
 
 Marksman:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 1
   AR: 3
@@ -159,7 +103,7 @@ Marksman:
     AGL: 1
 
 Captain:
-  Type: Bystander
+  Type: NPC
   HP: 4
   AP: 1
   AR: 2
@@ -167,14 +111,10 @@ Captain:
     STR: 2
     AGI: 1
     CON: 1
-    INT: 1
-  Actions: 
-    Attack, Weapon:
-    Command Grunt: 
-    Raise Minor Shield:      
+    INT: 1    
 
 Ritualist:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 3
@@ -184,13 +124,9 @@ Ritualist:
     STR: -1
     AGI: 1
     CON: 1
-  Actions: 
-    Attack, Mystic:
-    Attack, Mystic Entangle:
-    Attack, Mystic Cone: 
 
 Sentinel:
-  Type: Bystander
+  Type: NPC
   HP: 2
   AP: 0
   AR: 3
@@ -200,7 +136,7 @@ Sentinel:
     STR: -1
 
 Specter:
-  Type: Bystander
+  Type: NPC
   HP: 3
   AP: 0
   AR: 2
@@ -208,8 +144,6 @@ Specter:
     GUT: 1
     INT: 1
     STR: -1
-  Actions:
-    Spectral Explosion:
       
 
 Elite:
