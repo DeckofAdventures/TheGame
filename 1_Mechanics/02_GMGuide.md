@@ -981,8 +981,8 @@ create your own Consumables and ask the Community for help as needed.
 | Charm of True Aim      | 40 gp | All Attacks are made with Upper Hand                                                      | 1 hour   |
 | Charm of Amplification | 55 gp | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
 | Charm of Wounding      | 30 gp | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
-| Hearty Stew            | 10 gp | Gain +1 to your Maximum HP                                                                | 8 hours  |
-| Focusing Beverage      | 10 gp | Gain +1 to your Maximum PP                                                                | 8 hours  |
+| Hearty Stew            | 10 gp | Gain +1 HP and +1 to your Maximum HP                                                                | 8 hours  |
+| Focusing Beverage      | 10 gp | Gain +1 HP and +1 to your Maximum PP                                                                | 8 hours  |
 | Fortifying Feast       | 10 gp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
 
 ### Magic Items
