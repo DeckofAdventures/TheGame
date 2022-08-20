@@ -14,9 +14,22 @@ While untracked edits may change individual pages and patches may systematically
 multiple pages, minor and major versions will be accompanied by descriptors detailing
 the nature of these changes.
 
-## [1.0.0a3] - Unreleased
+## [1.0.0a5] - UNRELEASED
++ Added Beastiary YAML
++ Renamed Fate Points to Power Points
+
+## [1.0.0a4] - 2022-08-14
++ Added v1 GM Guide
++ Added Adversary and House Actions
++ Renamed Primary Suit as Burn Mechanics
++ Updated DR + Mod on Report
++ Added 'Fatigued' Status Condition
+
+## [1.0.0a3] - 2022-06-09
 + Established Fate Point naming convention
 + Added premade level 1 characters
++ Revised Epic Events
++ Revised Rest Mechanics
  
 ## [1.0.0a2] - 2022-03-19
 + Revised core mechanic, from banded capped to circular.
