@@ -5,14 +5,10 @@ temp*/*
 
 # Settings
 *toml
-*pycache*
 
 # Automation
 3_Automation/_Auto*
 docs/3_Automation/_Auto*
-
-# Site
-site/
 
 # Defaults
 .DS_Store

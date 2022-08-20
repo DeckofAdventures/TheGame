@@ -1,6 +1,3 @@
----
-title: Design
----
 # Design Document
 
 ## Drafting specifics

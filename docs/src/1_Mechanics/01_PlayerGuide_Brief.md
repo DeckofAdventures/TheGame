@@ -55,7 +55,7 @@ outcome via...
 
 You start with 2 Jokers in your hand as **Fate Cards**. Any Aces drawn during play are
 also reserved as Fate Cards. At any time, you can discard a Fate Card to redraw and
-take the new value, you can discard a Fate Card to regenerate one *Fate Point*, or you can discard a Fate Card during combat to nullify one
+take the new value, you can discard a Fate Card to regenerate one *Power Point*, or you can discard a Fate Card during combat to nullify one
 damage.
 
 ### Characters
@@ -68,8 +68,8 @@ signified by a number like +1.
 
 Also on your character sheet are **Powers**. This is anything your character can do
 that might not be accessible to others. Some Powers, labeled Minor and Major, take 1 or
-2 *Fate Points* respectively to activate. Your character sheet shows your starting
-number of Fate Points as your maximum. You'll need to keep track of how many Fate
+2 *Power Points* respectively to activate. Your character sheet shows your starting
+number of Power Points as your maximum. You'll need to keep track of how many Fate
 Points you have left as you use Powers.
 
 ### Gameplay
@@ -80,8 +80,8 @@ would do. Creativity and thinking outside the box (i.e., exact rules) is encoura
 
 The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 
-- The GM will reveal a TC and DR. One or more players can volunteer and decide the
-  relevant check.
+- The GM will reveal a TC and DR. One or more players can volunteer and decide which
+  skill they want to use for the relevant check.
 
 - Each player and the GM will take turns drawing on the TC to get a success with a
   matching suit.
@@ -90,10 +90,10 @@ The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 
 ### Resting
 
-Your character may need to rest to recharge Fate Points or heal Health Points.
+Your character may need to rest to recharge Power Points or heal Health Points.
 
 - On a **Quick Rest** (30 minutes), each player can draw a number of **Rest Cards**.
-  - Each Rest Card can regain 1 Health or Fate Point, or be used to regain Armor Points.
+  - Each Rest Card can regain 1 Health or Power Point, or be used to regain Armor Points.
   - If the card drawn is the same as the character's Primary Suit, there are additional
     benefits. Reference the Full Guide for more details on taking a Quick Rest.
 

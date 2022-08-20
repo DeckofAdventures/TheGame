@@ -60,7 +60,7 @@ Attack, Disarm:
   Category: Combat
   Subcategory: Weapon Attacks
   Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-  Mechanic: When you spend an Fate Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
+  Mechanic: When you spend an Power Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
   Type: Major
   XP Cost: 2
   PP Cost: 1

@@ -341,7 +341,7 @@ others. If an action specifies a skill, this requires a check.
         - *Observation*: gaining obvious information about the world.
         - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
          used.
-        - *Exchanging Fate*: discard one or more Fate Cards to gain one Fate Point per 
+        - *Exchanging Fate*: discard one or more Fate Cards to gain one Power Point per 
         card used.
 
    2. **Minor**
@@ -498,8 +498,8 @@ characters get some sleep and recover from a long day.
 
 During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
 Players start with a number of Rest Cards equal to the sum of their maximum Health and
-Power Points. Each Rest Cards drawn regains 1 Health or Fate Point. If the card drawn is
-the same as the players's Primary Suit, regain an additional 1 Health or Fate Point. To
+Power Points. Each Rest Cards drawn regains 1 Health or Power Point. If the card drawn is
+the same as the players's Primary Suit, regain an additional 1 Health or Power Point. To
 recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
 Skill check of DR 7 minus the number of points they are attempting to recover. If the
 Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand. For
@@ -518,7 +518,7 @@ another level of Fatigue. If you were to suffer a fourth level of Fatigue,
 you are Knocked Out instead. This signifies your character running out of
 Stamina during a long day. 
 
-### Burn Mechanics
+### Discard Mechanics
 
 Each Dealer may have an additional Burn Mechanic. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
@@ -526,7 +526,7 @@ every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
 to a character at a time.
 
-Below is a list of possible Burn Mechanics, determined by Role. Work with your GM if you
+Below is a list of possible Discard Mechanics, determined by Role. Work with your GM if you
 would like to use a different Burn Mechanic instead.  
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
