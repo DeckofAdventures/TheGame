@@ -17,6 +17,7 @@ the nature of these changes.
 ## [1.0.0a5] - UNRELEASED
 + Added Beastiary YAML
 + Renamed Fate Points to Power Points
++ Updated repo structure for mkdocs
 
 ## [1.0.0a4] - 2022-08-14
 + Added v1 GM Guide
