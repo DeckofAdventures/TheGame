@@ -2,7 +2,7 @@
 
 This repository establishes the version history of the Deck of Adventure tabletop
 roleplaying game. A magical world awaits, where Players come first. In Deck of
-Adventure, it’s your turn, your choice.
+Adventure, it’s your turn, your choice.  
 
 Deck of Adventures is a collaborative roleplaying system, built with an open source 
 ethos. Please vist our
