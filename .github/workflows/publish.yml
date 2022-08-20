@@ -5,13 +5,10 @@ on:
       - main
     types:
       - closed
-  push:        # on adding a tag
-    tags:
-      - "*.*.*"
-  workflow_dispatch: # on clicking browser GUI button
   push:              # on pushing to page-test, as a dev branch for forks only
     branches:
       - page-test
+  # workflow_dispatch: # on clicking browser GUI button - Not working?
 
 jobs:
   deploy:
