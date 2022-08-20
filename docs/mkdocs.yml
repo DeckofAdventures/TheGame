@@ -3,7 +3,7 @@ site_url: https://www.DeckofAdventures.com/
 site_description: Deck of Adventures Documents
 site_author: CBroz1
 
-repo_url: https://github.com/CBroz1/TheGame
+repo_url: https://DeckofAdventures.github.io//TheGame
 docs_dir: ./src/
 # edit_uri: docs/
 
@@ -34,7 +34,7 @@ theme:
         next: 78     # n
         previous: 80 # p
         search: 83   # s
-    # analytics: {gtag: 'G-NVDBHE89HX'}
+    analytics: {gtag: 'G-NVDBHE89HX'}
 
 nav:
   # - Home: README.md
