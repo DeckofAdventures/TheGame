@@ -1,6 +1,3 @@
----
-title: Change Log
----
 # Changelog
 
 ## General

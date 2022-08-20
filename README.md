@@ -1,7 +1,3 @@
----
-title: Home
----
-
 # Welcome to Deck of Adventures, The Game.
 
 This repository establishes the version history of the Deck of Adventure tabletop

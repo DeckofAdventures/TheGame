@@ -1,6 +1,3 @@
----
-title: Full Guide
----
 # Deck of Adventures Core Mechanics
 
 ## Full Player's Guide
