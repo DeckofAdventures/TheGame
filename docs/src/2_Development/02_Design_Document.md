@@ -46,3 +46,5 @@ context determines how good the outcome is.
 2. **PP = HP = AP.** During rests, players decide which of these reources to replenish.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
+
+3. **Target Cards remain on a character at all times.** The Target Card represents a character moving through space, and in between combats the TC remains active on a character for any non-combat related checks. A new TC is drawn at the start of the next combat to keep cards flowing and 'shuffle' the turn order around for each combat. 

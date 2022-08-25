@@ -360,6 +360,10 @@ others. If an action specifies a skill, this requires a check.
         - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
          you by target(s) who failed
 
+#### Ending Combat
+
+When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is over. This ends the turn order, and characters can act independently of turn order. Characters do not discard their Target Cards after combat ends. This TC represents the character until the next combat is initiated, at which point a new TC is drawn. 
+
 #### Status Conditions
 
 Some Status Conditions will impact a character over time. The duration of each Condition
