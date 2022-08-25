@@ -331,7 +331,7 @@ permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be 
-split to occur before, after, and/or between actions.
+split to occur before, after, and/or between actions. A creature can move through a friendly creature's space as part of their movement but can not end their turn on that space. A creature cannot move through a hostile creature's space or between two hostile creatures' spaces if they are adjacent.
 
 2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
 others. If an action specifies a skill, this requires a check.
