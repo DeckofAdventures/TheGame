@@ -603,6 +603,10 @@ creature may be covered from one direction but not from another direction.
 
 #### Falling
 
+Falling from a great height is dangerous. At the end of a fall, a creature takes 1
+damage and loses 1 speed for every 10 feet it fell and the creature is Knocked Down.
+This speed is recovered after a Rest or if the creature is healed for at least 1 HP.
+
 #### Challenging Terrain
 
 ## Character Creation
