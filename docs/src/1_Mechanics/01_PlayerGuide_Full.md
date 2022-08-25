@@ -609,6 +609,11 @@ This speed is recovered after a Rest or if the creature is healed for at least 1
 
 #### Challenging Terrain
 
+Moving through the environment can sometimes be challenging. When navigating
+through *Challenging Terrain*, a creature moves at half speed, meaning moving through
+one space requires 2 speed. While standing in Challenging Terrain, all Agility Checks
+are made with the Lower Hand. 
+
 ## Character Creation
 
 Deck of Adventures offers both [premade characters](./PremadeCharacters/README.md) and a
