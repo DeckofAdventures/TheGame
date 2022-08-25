@@ -381,7 +381,7 @@ Hand.
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
 is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
-1 space away draw with Lower Hand.
+1 space away draw with Lower Hand. A creature can willingly go prone and be considered Knocked Down as part of their movement.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
 DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
