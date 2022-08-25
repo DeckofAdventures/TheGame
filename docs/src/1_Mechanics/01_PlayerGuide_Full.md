@@ -563,7 +563,7 @@ The discard limit increases with level according to the table below.
 #### Light and Vision
 
 Certain types of Checks require light and vision to see the environment or a target
-effectively. The amount of light available impacts Checks for most characters. There are some Powers that affect a character's abilities depending on the amount of light available. 
+effectively. The amount of light available impacts Checks for most creatures. There are some Powers that affect a creature's abilities depending on the amount of light available. 
 
 **Partial Darkness:** When making a Detection or Investigation Check in partial
   darkness, draw with the Lower Hand.
@@ -579,6 +579,27 @@ effectively. The amount of light available impacts Checks for most characters. T
 - Descending into a cave without a light source.
 
 #### Cover 
+
+When a creature moves to a position that makes it more difficult to hit them, they will
+gain the effects of cover.
+
+**Partially Covered**: When a creature is still visible behind something but it is still
+  reasonable to hit them. While partially covered the creature gains +1 AR. 
+
+*Examples of Partially Covered*:
+- Standing directly between another creature and an attacker.
+- Standing behind a crate or barrel that is half the creature's height. 
+
+**Fully Covered**: when a creature is nearly impossible to see behind something and it
+  is unlikely to land a hit on them. While fully covered, the creature gains +2 AR.
+
+*Examples of Fully Covered*: 
+- Crouching below a crate that is half the creature's height.
+- Standing behind a pillar or wall that is taller than the creature. 
+
+A creature can go from Fully to Partially Covered or from Fully Covered to Not Covered
+by using their Speed or making a Check. Some Powers may grant these effects as well. A
+creature may be covered from one direction but not from another direction. 
 
 #### Falling
 
