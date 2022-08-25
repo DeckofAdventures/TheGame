@@ -558,6 +558,32 @@ The discard limit increases with level according to the table below.
 |   5   |      6      |   3   |
 |   8   |      8      |   4   |
 
+### Interacting with the Environment
+
+#### Light and Vision
+
+Certain types of Checks require light and vision to see the environment or a target
+effectively. The amount of light available impacts Checks for most characters. There are some Powers that affect a character's abilities depending on the amount of light available. 
+
+**Partial Darkness:** When making a Detection or Investigation Check in partial
+  darkness, draw with the Lower Hand.
+
+*Examples of Partial Darkness:*
+- A dark alley in a city with some light spilling over from a nearby street. 
+- An underground room with some candles burning lightly. 
+
+**Full Darkness:** When making a Check in full darkness, draw with the Lower Hand.
+
+*Examples of Full Darkness:* 
+- A moonless night in the countryside without any light source. 
+- Descending into a cave without a light source.
+
+#### Cover 
+
+#### Falling
+
+#### Challenging Terrain
+
 ## Character Creation
 
 Deck of Adventures offers both [premade characters](./PremadeCharacters/README.md) and a
