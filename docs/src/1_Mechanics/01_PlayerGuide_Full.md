@@ -362,7 +362,10 @@ others. If an action specifies a skill, this requires a check.
 
 #### Ending Combat
 
-When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is over. This ends the turn order, and characters can act independently of turn order. Characters do not discard their Target Cards after combat ends. This TC represents the character until the next combat is initiated, at which point a new TC is drawn. 
+When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is
+over. This ends the turn order, and characters can act independently of turn order.
+Characters do not discard their Target Cards after combat ends. This TC represents the
+character until the next combat is initiated, at which point a new TC is drawn. 
 
 #### Status Conditions
 
@@ -563,7 +566,9 @@ The discard limit increases with level according to the table below.
 #### Light and Vision
 
 Certain types of Checks require light and vision to see the environment or a target
-effectively. The amount of light available impacts Checks for most creatures. There are some Powers that affect a creature's abilities depending on the amount of light available. 
+effectively. The amount of light available impacts Checks for most creatures. There are
+some Powers that affect a creature's abilities depending on the amount of light
+available. 
 
 **Partial Darkness:** When making a Detection or Investigation Check in partial
   darkness, draw with the Lower Hand.
