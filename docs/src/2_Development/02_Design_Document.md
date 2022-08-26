@@ -47,7 +47,11 @@ context determines how good the outcome is.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
 
-3. **Target Cards remain on a character at all times.** The Target Card represents a
-character moving through space, and in between combats the TC remains active on a
-character for any non-combat related checks. A new TC is drawn at the start of the next
-combat to keep cards flowing and 'shuffle' the turn order around for each combat. 
+3. **Target Cards remain on a character at all times.** Each character is always represented by a Target Card. Between combats, the TC remains active on a
+character for any other Checks. A new TC is drawn at the start of the next
+combat to shuffle the turn order around for each combat. 
+
+4. **Target Cards changing often is important.** When Player Dealers are drawing cards
+constantly aiming at a specific TC, the likelihood of a success decreases as more cards
+that hit are drawn from the deck. Changing TCs to represent each enemy or challenge
+keeps the odds of drawing a success balanced over the course of an Adventure. 

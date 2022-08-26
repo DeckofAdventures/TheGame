@@ -365,7 +365,7 @@ others. If an action specifies a skill, this requires a check.
 When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is
 over. This ends the turn order, and characters can act independently of turn order.
 Characters do not discard their Target Cards after combat ends. This TC represents the
-character until the next combat is initiated, at which point a new TC is drawn. 
+character until the start of the next combat.
 
 #### Status Conditions
 
@@ -384,7 +384,7 @@ Hand.
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
 is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
-1 space away draw with Lower Hand. A creature can willingly go prone and be considered Knocked Down as part of their movement.
+1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
 DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
@@ -571,17 +571,14 @@ some Powers that affect a creature's abilities depending on the amount of light
 available. 
 
 **Partial Darkness:** When making a Detection or Investigation Check in partial
-  darkness, draw with the Lower Hand.
+  darkness, draw with the Lower Hand. For example...
 
-*Examples of Partial Darkness:*
-- A dark alley in a city with some light spilling over from a nearby street. 
-- An underground room with some candles burning lightly. 
+    - A dark alley in a city with some light spilling over from a nearby street. 
+    - An underground room with some candles burning lightly. 
 
-**Full Darkness:** When making a Check in full darkness, draw with the Lower Hand.
-
-*Examples of Full Darkness:* 
-- A moonless night in the countryside without any light source. 
-- Descending into a cave without a light source.
+**Full Darkness:** When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...
+    - A moonless night in the countryside without any light source. 
+    - Descending into a cave without a light source.
 
 #### Cover 
 
@@ -609,15 +606,14 @@ creature may be covered from one direction but not from another direction.
 #### Falling
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
-damage and loses 1 speed for every 10 feet it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed for at least 1 HP.
+damage and applies -1 speed for every 10 feet it fell and the creature is Knocked Down.
+This speed is recovered after a Rest or if the creature is healed to their maximum HP.
 
 #### Challenging Terrain
 
 Moving through the environment can sometimes be challenging. When navigating
-through *Challenging Terrain*, a creature moves at half speed, meaning moving through
-one space requires 2 speed. While standing in Challenging Terrain, all Agility Checks
-are made with the Lower Hand. 
+through *Challenging Terrain*, moving through one space requires 2 speed. While
+standing in Challenging Terrain, all Agility Checks are made with the Lower Hand. 
 
 ## Character Creation
 
