@@ -606,8 +606,8 @@ creature may be covered from one direction but not from another direction.
 #### Falling
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
-damage and applies -1 speed for every 10 feet it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP.
+damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
+This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.  
 
 #### Challenging Terrain
 
