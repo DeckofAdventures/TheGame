@@ -331,7 +331,7 @@ permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be 
-split to occur before, after, and/or between actions.
+split to occur before, after, and/or between actions. A creature can move through a friendly creature's space as part of their movement but can not end their turn on that space. A creature cannot move through a hostile creature's space or between two hostile creatures' spaces if they are within one space of one another.
 
 2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
 others. If an action specifies a skill, this requires a check.
@@ -360,6 +360,13 @@ others. If an action specifies a skill, this requires a check.
         - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
          you by target(s) who failed
 
+#### Ending Combat
+
+When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is
+over. This ends the turn order, and characters can act independently of turn order.
+Characters do not discard their Target Cards after combat ends. This TC represents the
+character until the start of the next combat.
+
 #### Status Conditions
 
 Some Status Conditions will impact a character over time. The duration of each Condition
@@ -377,7 +384,7 @@ Hand.
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
 is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
-1 space away draw with Lower Hand.
+1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
 DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
@@ -553,6 +560,60 @@ The discard limit increases with level according to the table below.
 |   1   |      4      |   2   |
 |   5   |      6      |   3   |
 |   8   |      8      |   4   |
+
+### Interacting with the Environment
+
+#### Light and Vision
+
+Certain types of Checks require light and vision to see the environment or a target
+effectively. The amount of light available impacts Checks for most creatures. There are
+some Powers that affect a creature's abilities depending on the amount of light
+available. 
+
+**Partial Darkness:** When making a Detection or Investigation Check in partial
+  darkness, draw with the Lower Hand. For example...
+
+    - A dark alley in a city with some light spilling over from a nearby street. 
+    - An underground room with some candles burning lightly. 
+
+**Full Darkness:** When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...
+    - A moonless night in the countryside without any light source. 
+    - Descending into a cave without a light source.
+
+#### Cover 
+
+When a creature moves to a position that makes it more difficult to hit them, they will
+gain the effects of cover.
+
+**Partially Covered**: When a creature is still visible behind something but it is still
+  reasonable to hit them. While partially covered the creature gains +1 AR. 
+
+*Examples of Partially Covered*:
+- Standing directly between another creature and an attacker.
+- Standing behind a crate or barrel that is half the creature's height. 
+
+**Fully Covered**: when a creature is nearly impossible to see behind something and it
+  is unlikely to land a hit on them. While fully covered, the creature gains +2 AR.
+
+*Examples of Fully Covered*: 
+- Crouching below a crate that is half the creature's height.
+- Standing behind a pillar or wall that is taller than the creature. 
+
+A creature can go from Fully to Partially Covered or from Fully Covered to Not Covered
+by using their Speed or making a Check. Some Powers may grant these effects as well. A
+creature may be covered from one direction but not from another direction. 
+
+#### Falling
+
+Falling from a great height is dangerous. At the end of a fall, a creature takes 1
+damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
+This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.  
+
+#### Challenging Terrain
+
+Moving through the environment can sometimes be challenging. When navigating
+through *Challenging Terrain*, moving through one space requires 2 speed. While
+standing in Challenging Terrain, all Agility Checks are made with the Lower Hand. 
 
 ## Character Creation
 
