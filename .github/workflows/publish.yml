@@ -26,6 +26,7 @@ jobs:
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/src/; done
       - run: cp LICENSE ./docs/src/
+      - run: pip install mkdocs-material mkdocs-exclude
       # later: add mkdocs-include-markdown-plugin to pip list
       # not sure if below actually works
       - run: iconv -f utf-8 -t utf-8 -c ./docs/src/1_Mechanics/04_Powers.md > ./docs/src/1_Mechanics/04_Powers.md
