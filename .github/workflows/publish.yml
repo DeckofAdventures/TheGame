@@ -10,7 +10,9 @@ on:
       - page-test
   workflow_dispatch: # on clicking browser GUI button - Not working?
 
-# permissions: read-all|write-all
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   deploy:
@@ -24,8 +26,9 @@ jobs:
       - run: pip install mkdocs-material mkdocs-exclude
       # later: add mkdocs-include-markdown-plugin to pip list
       # Copy root dir items to docs when publishing
-      - run: for f in C*md; do cp $f ./docs/src/; done
-      - run: cp LICENSE.md ./docs/src/
+      - run: for f in {C,LIC}*md; do cp $f ./docs/src/; done
       # not sure if below actually works
       - run: iconv -f utf-8 -t utf-8 -c ./docs/src/1_Mechanics/04_Powers.md > ./docs/src/1_Mechanics/04_Powers.md
       - run: mkdocs gh-deploy --force --clean --verbose --config-file ./docs/mkdocs.yml
+        # with:
+        #   repo-token: ${{ secrets.GITHUB_TOKEN }}
