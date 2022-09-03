@@ -10,10 +10,11 @@ on:
       - page-test
   workflow_dispatch: # on clicking browser GUI button - Not working?
 
+permissions: read-all|write-all
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions: read-all|write-all
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
