@@ -10,7 +10,7 @@ on:
       - page-test
   workflow_dispatch: # on clicking browser GUI button - Not working?
 
-permissions: read-all|write-all
+# permissions: read-all|write-all
 
 jobs:
   deploy:
