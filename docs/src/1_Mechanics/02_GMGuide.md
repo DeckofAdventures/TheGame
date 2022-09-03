@@ -9,10 +9,10 @@ a continuous narrative. You can bring together close friends in person, or
 find new friends virtually through the [Discord](https://discord.gg/2Wu6ZAb6S9).
 
 If you’ve been a GM elsewhere and are hoping to learn about what’s different
-about being a Deck of Adventures Game Master, you can skip right to[Being a Deck of Adventures Game Master](#Being-a-Deck-of-Adventures-Game-Master). 
+about being a Deck of Adventures Game Master, you can skip right to [Being a Deck of Adventures Game Master](./02_GMGuide.md#being-a-deck-of-adventures-game-master). 
 
 For everyone else, or those GMs who want a refresher, we will dive into what being a GM
-is all about in [Getting Started as a Game Master](#Getting-Started-as-a-Game-Master). 
+is all about in [Getting Started as a Game Master](./02_GMGuide.md#getting-started-as-a-game-master). 
 
 If you or your players have questions or need a helping hand, please reach out
 to the team on [Discord](https://discord.gg/2Wu6ZAb6S9) or via GitHub
@@ -123,7 +123,7 @@ split it into two 26-card decks and shuffle regularly.
 
 One deck of cards should be designated the *Minion Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
-Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#Status-Conditions). The World Deck is used to draw Target
+Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to draw Target
 Cards for NPCs, make social checks, and used for drawing a card based on a table out of
 combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the World Deck
 when it is empty. 
@@ -158,7 +158,7 @@ make those resources feel strained and tested.
 
 Think of the Players' decks as their characters' stamina. They should get
 progressively more tired throughout the day as cards are drawn for Checks and
-Powers. If a Player runs out of cards between Rests, they are [Fatigued](./01_PlayerGuide_Full.md#Status-Conditions) and
+Powers. If a Player runs out of cards between Rests, they are [Fatigued](./01_PlayerGuide_Full.md#status-conditions) and
 reshuffle their deck. They then make all checks at Lower Hand until they complete
 a Rest. At lower levels, Players may not reach the end of their decks between
 Rests to incur Lower Hand penalties. As Players level up, both the Powers
@@ -340,10 +340,11 @@ more responsive/reactive, and are often used for Contested Checks. Skills are
 intended to be more active for character-initiated events.
 
 The list below provides of general information about the Attributes and
-Skills (see [Full Players Guide](./01_PlayerGuide_Full.md#Characters) for
+Skills (see [Full Players Guide](./01_PlayerGuide_Full.md#characters) for
 more info).
 
 - AGL Agility: Dodging Contested Checks, boosts Unarmored AC.
+
     - Finesse: Performing difficult physical actions with ease. Primary Skill
       for Martial role.
     - Stealth: Moving quietly, undetected.
@@ -375,7 +376,7 @@ more info).
 
 Contested Checks are initiated when two characters attempt to accomplish
 opposite goals, or one character attempts to overcome the resistance of
-another (see [Full Player Guide](../01_PlayerGuide_Full.md#contested-checks) for more info).
+another (see [Full Player Guide](./01_PlayerGuide_Full.md#contested-checks) for more info).
 
 The list below features a few examples of Contested Checks, but, as the GM,
 it's up to you to decide what a situation calls for if it is not explicitly
@@ -408,7 +409,7 @@ Epic Event. The odds are skewed in the Players' favor by allowing them to
 draw using Skill Modifiers while you draw with a +0 Mod. Your ability to 
 modify the challenge of an Epic Event comes from setting the Difficulty.
 
-For more information on Epic Events, visit the [Full Player Guide](https://github.com/DeckofAdventures/TheGame/blob/main/1_Mechanics/01_PlayerGuide_Full.md#Epic-Events)
+For more information on Epic Events, visit the [Full Player Guide](./01_PlayerGuide_Full.md#epic-events)
 
 #### How to Identify an Epic Event
 
@@ -814,7 +815,7 @@ course of their Adventures, either through purchase or reward.
 
 Some armor and items also grant Armor Points (AP). Items like Shields can provide AP
 when readied using an Action, while other types of Armor may have magical effects that
-provide AP (see [Magic Items](#Magic-Items)). Shields can be purchased and can be found
+provide AP (see [Magic Items](./02_GMGuide.md#magic-items)). Shields can be purchased and can be found
 in varying quality. 
 
 **Shield Quality Table**

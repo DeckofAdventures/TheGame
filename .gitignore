@@ -12,3 +12,6 @@ docs/3_Automation/_Auto*
 
 # Defaults
 .DS_Store
+
+# duplicate items when build with docker
+docs/src/C*

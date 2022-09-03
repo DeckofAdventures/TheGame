@@ -46,7 +46,7 @@ Cards, even when shuffling the deck.
 3. Players will use their deck to do most anything; it represents their character's
 stamina until they complete a Rest. When the Action Deck is empty and a player has to
 shuffle between rests, they draw with the 
-[Lower Hand (1+)](#Upper-and-Lower-Hand) until they would shuffle when resting.
+[Lower Hand (1+)](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would shuffle when resting.
 
 ## Fate Cards
 
@@ -64,10 +64,10 @@ redraw. Only one redraw is permitted per check.
 
 4. Fate Cards may also be expended to either ... 
    
-   1. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
-   done before the end of the Player's next turn after recieving damage.
+    1. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
+    done before the end of the Player's next turn after recieving damage.
    
-   2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
+    2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
@@ -336,7 +336,8 @@ split to occur before, after, and/or between actions. A creature can move throug
 2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
 others. If an action specifies a skill, this requires a check.
 
-   1. **Free**
+    1. **Free**
+
         - *Communication* that does not require a check.
         - *Observation*: gaining obvious information about the world.
         - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
@@ -344,7 +345,8 @@ others. If an action specifies a skill, this requires a check.
         - *Exchanging Fate*: discard one or more Fate Cards to gain one Power Point per 
         card used.
 
-   2. **Minor**
+    2. **Minor**
+
         - *Object interaction*: Pressing a button, pulling a lever, using a disposable
        item, etc.
         - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
@@ -354,7 +356,8 @@ others. If an action specifies a skill, this requires a check.
         - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a
          specific piece of information 
 
-   3. **Major**
+    3. **Major**
+
         - *Rush*: double movement
         - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
         - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
@@ -427,6 +430,7 @@ depleted, additional damage subtracts from HP. Unless otherwise noted, no two pi
 armor may be worn at the same time.
 
 **Armor Table**
+
 | Type      | AR | AP | Prerequisite  |
 |-----------|----|----|---------------|
 | Basic     | 3  | 0  |               |
@@ -474,11 +478,11 @@ to safety?
 back, and will be making Knowledge Checks. Elise is a skilled survivalist, with
 experience in rock formations, and will be making Craft Checks.
 
-   1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited
-   Match.
+    1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited
+    Match.
    
-   2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
-   good headway.
+    2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
+    good headway.
    
 3. The GM reveals a new TC: a K of Spades, with DR 3. A cultist blocks their path.
 
@@ -573,29 +577,28 @@ available.
 **Partial Darkness:** When making a Detection or Investigation Check in partial
   darkness, draw with the Lower Hand. For example...
 
-    - A dark alley in a city with some light spilling over from a nearby street. 
-    - An underground room with some candles burning lightly. 
+- A dark alley in a city with some light spilling over from a nearby street. 
+- An underground room with some candles burning lightly. 
 
 **Full Darkness:** When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...
-    - A moonless night in the countryside without any light source. 
-    - Descending into a cave without a light source.
 
-#### Cover 
+- A moonless night in the countryside without any light source. 
+- Descending into a cave without a light source.
+
+#### Cover
 
 When a creature moves to a position that makes it more difficult to hit them, they will
 gain the effects of cover.
 
 **Partially Covered**: When a creature is still visible behind something but it is still
-  reasonable to hit them. While partially covered the creature gains +1 AR. 
+  reasonable to hit them. While partially covered the creature gains +1 AR. For example...
 
-*Examples of Partially Covered*:
 - Standing directly between another creature and an attacker.
 - Standing behind a crate or barrel that is half the creature's height. 
 
 **Fully Covered**: when a creature is nearly impossible to see behind something and it
-  is unlikely to land a hit on them. While fully covered, the creature gains +2 AR.
+  is unlikely to land a hit on them. While fully covered, the creature gains +2 AR. For example...
 
-*Examples of Fully Covered*: 
 - Crouching below a crate that is half the creature's height.
 - Standing behind a pillar or wall that is taller than the creature. 
 
@@ -607,7 +610,7 @@ creature may be covered from one direction but not from another direction.
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
 damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.  
+This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.
 
 #### Challenging Terrain
 
@@ -623,10 +626,10 @@ and what skills will be relevant for the story ahead. Custom creation starts wit
 spending Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or
 Skills.
 
-- A [Background](03_CharacterCreation#Decide-Your-Background) is descriptive about of 
+- A [Background](./03_CharacterCreation#decide-your-background) is descriptive about of 
   character's history and where they are when you begin your adventure.
 
-- [A Role](03_CharacterCreation#Choose-Your-Role) is a general class the unlocks access to 
+- [A Role](./03_CharacterCreation#choose-your-role) is a general class the unlocks access to 
   certain abilities.
 
 - Attributes cost more, but also increase corresponding skills.
@@ -644,7 +647,7 @@ Skills.
   have additional requirements such as Role or Level. 
 
 For a full set of character creation options, see our 
-[Character Creation page](03_CharacterCreation.md).
+[Character Creation page](./03_CharacterCreation.md).
 
 ## Starting your adventure
 
@@ -652,10 +655,8 @@ There are four steps to starting an adventure of Deck of Adventures:
 
 1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master
 ( GM) and one player, but richer stories can be told with more people bringing more to
-the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group!
-
-*If the above link is expired, please 
-[submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!).*
+the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group! (if this link is expired, please 
+[submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!))
 
 2. **Discuss play style:** Different players and GMs will have different preferences.
 Some love light-hearted misadventures, others enjoy dark melodrama. Some stories involve

@@ -2,5 +2,7 @@ FROM python:slim
 
 WORKDIR /main
 COPY ./docs /main
-RUN pip install mkdocs mkdocs-cinder mkdocs-exclude
-RUN pip install mkdocs-material
+COPY /main/CHANGELOG.md /main/docs/src/
+COPY /main/CONTRIBUTING.md /main/docs/src/
+COPY /main/CODE_OF_CONDUCT.md /main/docs/src/
+RUN pip install mkdocs mkdocs-exclude mkdocs-material

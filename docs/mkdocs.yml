@@ -1,11 +1,11 @@
-site_name: Deck of Adventures
+site_name: The Game
 site_url: https://DeckofAdventures.github.io/TheGame
 site_description: Deck of Adventures Documents
 site_author: CBroz1
 
-repo_url: https://DeckofAdventures.github.io/TheGame
+repo_url: https://github.com/DeckofAdventures/TheGame
 docs_dir: ./src/
-# edit_uri: docs/
+edit_uri: blob/main/docs/src/
 
 theme:
     name: material
@@ -28,16 +28,17 @@ theme:
           name: Switch to light mode
     disable_nav_previous_next: true
     disable_nav_search: false
+    navigation_depth: 1
     locale: en
     shortcuts:
-        help: 191    # ?
-        next: 78     # n
-        previous: 80 # p
-        search: 83   # s
+        help:      72 # h # doesn't seem to be working
+        next:      78 # n
+        previous:  80 # p
+        search:    83 # s
     analytics: {gtag: 'G-NVDBHE89HX'}
 
 nav:
-  # - Home: README.md
+  - Home:                   index.md
   - Mechanics:
     - Brief Guide:          1_Mechanics/01_PlayerGuide_Brief.md
     - Full Guide:           1_Mechanics/01_PlayerGuide_Full.md
@@ -51,6 +52,7 @@ nav:
   - Development:
     - Community:            2_Development/01_Community.md
     - Design:               2_Development/02_Design_Document.md
+    - Timeline:             2_Development/03_Development_Timeline.md
     - Change Log:           CHANGELOG.md
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
