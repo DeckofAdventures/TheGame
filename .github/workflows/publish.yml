@@ -25,7 +25,8 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/src/; done
-      - run: cp LI*md ./docs/src/
+      - run: pwd
+      - run: ls -alt
       - run: pip install mkdocs-material mkdocs-exclude
       # later: add mkdocs-include-markdown-plugin to pip list
       # not sure if below actually works
