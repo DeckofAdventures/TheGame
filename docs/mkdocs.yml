@@ -63,7 +63,7 @@ nav:
     - Change Log:           CHANGELOG.md
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
-    - License Info:         LICENSE.md
+    - License Info:         LICENSE
 
 extra_css:
   - stylesheets/extra.css
