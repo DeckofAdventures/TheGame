@@ -340,7 +340,7 @@ more responsive/reactive, and are often used for Contested Checks. Skills are
 intended to be more active for character-initiated events.
 
 The list below provides of general information about the Attributes and
-Skills (see [Full Players Guide](./01_PlayerGuide_Full.md#characters) for
+Skills (see [Full Player's Guide](./01_PlayerGuide_Full.md#characters) for
 more info).
 
 - AGL Agility: Dodging Contested Checks, boosts Unarmored AC.
@@ -350,23 +350,27 @@ more info).
     - Stealth: Moving quietly, undetected.
 
 - CON Conviction: Strength of character to resist harmful mental effects.
+
     - Bluffing: Convincing others, either truthfully or deceptively.
     - Performance: Acting under scrutiny, potentially in front of audiences.
 
 - GUT Intuition: Gut feelings about the state of the world (e.g., truthfulness,
   supernatural knowledge)
+
     - Detection: Observing the world using all senses.
     - Craft: Practicing a honed trade (i.e., Medicine, Pottery, Piety).
       Primary Skill for Support role.
 
 - INT Intelligence: Reactive critical thinking or recalling recalling explicit
   information.
+
     - Knowledge: Recalling and amassing knowledge at leisure. Primary Skill
       for Casters.
     - Investigation: Seeking the answer to a question or piecing together
       information.
 
 - STR Strength: Physical limits and boundaries (e.g,. resisting a push).
+
     - Athletics: Exerting oneself in physical sustained challenge.
     - Brute: Burst force or single lifts. Primary Skill for Defenders. 
 
@@ -409,7 +413,7 @@ Epic Event. The odds are skewed in the Players' favor by allowing them to
 draw using Skill Modifiers while you draw with a +0 Mod. Your ability to 
 modify the challenge of an Epic Event comes from setting the Difficulty.
 
-For more information on Epic Events, visit the [Full Player Guide](./01_PlayerGuide_Full.md#epic-events)
+For more information on Epic Events, visit the [Full Player's Guide](./01_PlayerGuide_Full.md#epic-events)
 
 #### How to Identify an Epic Event
 

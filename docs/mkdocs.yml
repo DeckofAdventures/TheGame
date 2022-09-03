@@ -28,14 +28,21 @@ theme:
           name: Switch to light mode
     disable_nav_previous_next: true
     disable_nav_search: false
-    navigation_depth: 1
+    navigation_depth: 2
     locale: en
     shortcuts:
         help:      72 # h # doesn't seem to be working
         next:      78 # n
         previous:  80 # p
         search:    83 # s
-    analytics: {gtag: 'G-NVDBHE89HX'}
+    features:
+      - navigation.instant   # saves loading time - 1 browser page
+      - navigation.tracking  # even with above, changes URL by section
+      - navigation.top
+      # - navigation.tabs      # moves top level heading to tabs
+      # - toc.integrate        # move TOC to left
+      - search.suggest
+      - search.share
 
 nav:
   - Home:                   index.md
@@ -56,6 +63,7 @@ nav:
     - Change Log:           CHANGELOG.md
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
+    - License Info:         LICENSE.md
 
 extra_css:
   - stylesheets/extra.css
@@ -71,6 +79,7 @@ plugins:
 
 markdown_extensions:
   - attr_list
+  - tables
   - toc:
       permalink: true
 
@@ -78,6 +87,23 @@ extra:
   generator: false # Disable watermark
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/DeckofAdventures/
+      link: https://github.com/DeckofAdventures/TheGame
     - icon: fontawesome/brands/discord
       link: https://discord.gg/dk6RfWgPHF
+  analytics:
+    provider: google
+    property: G-NVDBHE89HX
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by opening a
+            <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">GitHub issue</a>.
