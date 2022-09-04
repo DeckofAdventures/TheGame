@@ -1,5 +1,5 @@
 # Glossary
-- [AC, Armor Class](01_PlayerGuide_Full.md#health-and-armor): How difficult is it to
+- [AR, Armor Range](01_PlayerGuide_Full.md#health-and-armor): How difficult is it to
   wound this thing during a combat Check?
 - [Action Deck](01_PlayerGuide_Full.md#the-action-deck): a pool of cards to be drawn from
    when making in-game decisions. 
