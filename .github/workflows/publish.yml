@@ -18,8 +18,6 @@ permissions:
 
 jobs:
   deploy:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -43,12 +41,8 @@ jobs:
       
       - name: Deploy
         run: | 
-          mkdocs --version
-          git remote set-url origin https://${GH_TOKEN}@github.com/DeckofAdventures/TheGame.git
           mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
         env:
           USERNAME: github-actions[bot]
-          REPO_KEY: ${{ secrets.GH_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
