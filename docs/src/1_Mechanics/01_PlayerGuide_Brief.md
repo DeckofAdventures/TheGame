@@ -111,7 +111,7 @@ of Combat, where each involved character will draw a Target Card to determine tu
 - On your turn, you can move and take up to 1 Major and 1 Minor Action, in any order.
   Minor actions include object interactions and some Skill Checks.
 - Your movement is limited by the Speed value on your character sheet, showing the
-  maximum number of spaces you can move on a grid. The average speed is 6. 
+  maximum number of spaces you can move. The average speed is 6. 
 - Your character sheet will give you optional actions that you can take listed under
   Powers, but you can always try something new. Ask your GM if your idea is possible
   under circumstances. 

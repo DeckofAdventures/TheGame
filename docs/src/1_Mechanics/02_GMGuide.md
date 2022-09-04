@@ -544,6 +544,45 @@ possible. Storming an enemy fortress may result in several Combat Encounters
 back to back. Investigating a crime in a major city may have more social
 investigation-based with relatively little combat.
 
+### Moving in space
+
+Deck of Adventures is designed to be playable using either imperial or metric units, on
+either a square grid or hex map. For units, treat 1 space as either 5 feet or 1 meter.
+You choice of map can impact diagonal movement and area of effect. Following the
+[Player Guide](./01_PlayerGuide_Full#in-combat)
+, moving diagonally on a grid is assumed
+to be the same as moving horizontally. You could alternatively decide that players are
+limited to 2 diagonal moves per round of combat, or that a diagonal move is worth 1.5
+speed.
+
+To measure area of effect (AOE), refer to the images provided in [Visual Tools](https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools). 
+Powers will define an AOE by it's shape and size (e.g., Cone 3). Here, we us N to define
+each shape at any size. 
+
+- **Line**: Pick an edge of the space of the character or object causing this effect. 
+  Draw a straight line perpendicular to this edge N spaces long. Any space touched by
+  this line is affected.
+
+- **Aura**: Unless otherwise specified, the point of origin is assumed to be the 
+  character or object causing the effect. A circle is drawn around this point. Any space
+  caught overlapping with this circle is affected.
+
+    - On a *grid* map, the radius of this circle is at the far edge of the Nth space 
+      away from the point of origin.
+    - On a *hex* map, the radius of this circle is at the far edge of the line segment
+      pointing in the direction of the point of origin.
+
+- **Cone**: Pick an edge of the space of the character or object causing this effect. 
+  The radius is measured from the center point of this edge, with additional lines drawn
+  to endpoints of the arc. Any space caught overlapping with this arc is affected.
+
+    - On a *grid* map, the radius extends N squares away from the origin, with lines 
+      drawn to the corners of the squares included in a perpendicular line N squares 
+      long.
+    - On a *hex* map, the radius extends N minus .5 hex away from this origin, with 
+      lines drawn to the far-most corners of the hex touched by a straight line N hex 
+      long, perpendicular to the radius.
+
 ### Character Types
 
 - **Minions** are enemies that are weaker than the Players. They often have

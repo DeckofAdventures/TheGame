@@ -300,7 +300,7 @@ teamwork and creativity. To keep up the pace, players should be sure to study th
 character sheets and know their options ahead of combat, and use others’ turns to make
 their choices. Deck of Adventures is all about teamwork, so communication is encouraged.
 
-GMs may provide a grid map and other visual cues like character tokens to help players
+GMs may provide a map and other visual cues like character tokens to help players
 visualize the situation. On a square grid, moving diagonally counts as one space unless
 otherwise ruled by the GM.
 
