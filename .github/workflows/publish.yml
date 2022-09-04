@@ -26,7 +26,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/src/; done
