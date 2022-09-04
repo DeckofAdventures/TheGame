@@ -16,4 +16,5 @@ Some powers will refer to an area of effect as either a line, aura, or cone. Thi
 sometimes followed by a number to indicate the size. These are fully defined in the 
 [GM Guide](../02_GMGuide.md#moving-in-space). 'Range' images in 
 [this directory](https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools) 
-show what this would look like on either a grid or hex map. These show Aura 1, Aura 2, Cone 3 and Line 6.
+show what this would look like on either a grid or hex map. These show Line 6, Aura 1, 
+Aura 2, and Cone 3.
