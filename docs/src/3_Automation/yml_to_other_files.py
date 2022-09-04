@@ -13,7 +13,9 @@ User should also install pydot to generate dot files
 User should inspect output in subfolder before moving moving elsewhere
 """
 
-input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
+input_files = [
+    "04_Powers.yml"
+]  # , "05_Vulnerabilities.yml"]  # edit this, permits multiple
 writing = ["md"]  # , "dot", "png", "csv", "svg"]  #         # list of options
 add_dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
@@ -225,8 +227,9 @@ def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
     with open(out_md, "w", newline="") as f:
         f.write(
             f"# {file_title}\n\n<!-- DEVELOPERS: Please edit corresponding yaml in "
-            + "3_Automation -->\n\n<!-- MarkdownTOC add_links=True -->\n"
+            + "3_Automation -->\n\n"
         )  # md Title
+        # f.write("<!-- MarkdownTOC add_links=True -->\n")
         TOC = ""  # Table of contents
         for k, v in categories.items():
             TOC += make_link(k)
@@ -247,7 +250,8 @@ def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
                     body += f"### {sub}\n\n"
                     body += make_entries(cat_items[f"{cat}_{sub}"], input_yml=input_yml)
 
-        f.write(TOC + body)
+        # f.write(TOC + body)
+        f.write(body)
 
 
 def validate_input(input_file="04_Powers.yml", out_delim="\t"):

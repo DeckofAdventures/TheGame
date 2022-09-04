@@ -1,14 +1,16 @@
 # Notes
 temp*
 temp*/*
+
+# Editors
 *sublime*
+.vs/*
 
 # Settings
 *toml
 
 # Automation
-3_Automation/_Auto*
-docs/3_Automation/_Auto*
+docs/src/3_Automation/_Auto*
 
 # Defaults
 .DS_Store
