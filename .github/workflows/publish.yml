@@ -43,8 +43,9 @@ jobs:
       
       - name: Deploy
         run: | 
-          mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
           mkdocs --version
+          git remote set-url origin https://${GH_TOKEN}@github.com/DeckofAdventures/TheGame.git
+          mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
         env:
           USERNAME: github-actions[bot]
           REPO_KEY: ${{ secrets.GH_TOKEN }}
