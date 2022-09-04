@@ -10,21 +10,19 @@ on:
       - page-test
   workflow_dispatch: # on clicking browser GUI button - Not working?
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
   deploy:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/src/; done
       - run: cp LICENSE ./docs/src/
