@@ -16,13 +16,18 @@ permissions:
 
 jobs:
   deploy:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       # Copy root dir items to docs when publishing
       - run: for f in C*md; do cp $f ./docs/src/; done
       - run: cp LICENSE ./docs/src/
@@ -30,4 +35,5 @@ jobs:
       # later: add mkdocs-include-markdown-plugin to pip list
       # not sure if below actually works
       - run: iconv -f utf-8 -t utf-8 -c ./docs/src/1_Mechanics/04_Powers.md > ./docs/src/1_Mechanics/04_Powers.md
+      - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       - run: mkdocs gh-deploy --force --clean --verbose --config-file ./docs/mkdocs.yml
