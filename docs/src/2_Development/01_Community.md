@@ -3,7 +3,7 @@
 Deck of Adventures developers are deeply appreciative of our active community. We
 welcome proposed contributions from all, but reserve the right to integrate changes as
 they align with our 
-[design principles](02_Design_Document.md#-Core-Design-Principles).
+[design principles](./02_Design_Document.md#core-design-principles).
 
 Join our [Discord server](https://discord.gg/dk6RfWgPHF)! 
 

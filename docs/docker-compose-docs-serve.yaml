@@ -1,5 +1,5 @@
 # docker-compose -f docs/docker-compose-docs-serve.yaml up --build
-# navigate to http://localhost/
+# navigate to http://localhost/TheGame
 version: "2.4"
 services:
   docs:

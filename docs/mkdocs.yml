@@ -1,11 +1,11 @@
-site_name: Deck of Adventures
+site_name: The Game
 site_url: https://DeckofAdventures.github.io/TheGame
 site_description: Deck of Adventures Documents
 site_author: CBroz1
 
-repo_url: https://DeckofAdventures.github.io/TheGame
+repo_url: https://github.com/DeckofAdventures/TheGame
 docs_dir: ./src/
-# edit_uri: docs/
+edit_uri: blob/main/docs/src/
 
 theme:
     name: material
@@ -28,22 +28,30 @@ theme:
           name: Switch to light mode
     disable_nav_previous_next: true
     disable_nav_search: false
+    navigation_depth: 2
     locale: en
     shortcuts:
-        help: 191    # ?
-        next: 78     # n
-        previous: 80 # p
-        search: 83   # s
-    analytics: {gtag: 'G-NVDBHE89HX'}
+        help:      72 # h # doesn't seem to be working
+        next:      78 # n
+        previous:  80 # p
+        search:    83 # s
+    features:
+      - navigation.instant   # saves loading time - 1 browser page
+      - navigation.tracking  # even with above, changes URL by section
+      - navigation.top
+      # - navigation.tabs      # moves top level heading to tabs
+      # - toc.integrate        # move TOC to left
+      - search.suggest
+      - search.share
 
 nav:
-  # - Home: README.md
+  - Home:                   index.md
   - Mechanics:
     - Brief Guide:          1_Mechanics/01_PlayerGuide_Brief.md
     - Full Guide:           1_Mechanics/01_PlayerGuide_Full.md
     - GM Guide:             1_Mechanics/02_GMGuide.md
     - Character Creation:   1_Mechanics/03_CharacterCreation.md
-    - Powers:               1_Mechanics/04_Powers.md
+    - Powers:               1_Mechanics/04_Powers-2.md
     - Vulnerabilities:      1_Mechanics/05_Vulnerabilities.md
     - Glossary:             1_Mechanics/99_Glossary.md
     - Lookup Tool:          1_Mechanics/Circlular_TC-DR_Tool/README.md
@@ -51,9 +59,11 @@ nav:
   - Development:
     - Community:            2_Development/01_Community.md
     - Design:               2_Development/02_Design_Document.md
+    - Timeline:             2_Development/03_Development_Timeline.md
     - Change Log:           CHANGELOG.md
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
+    - License Info:         LICENSE
 
 extra_css:
   - stylesheets/extra.css
@@ -69,6 +79,7 @@ plugins:
 
 markdown_extensions:
   - attr_list
+  - tables
   - toc:
       permalink: true
 
@@ -76,6 +87,24 @@ extra:
   generator: false # Disable watermark
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/DeckofAdventures/
+      link: https://github.com/DeckofAdventures/TheGame
     - icon: fontawesome/brands/discord
       link: https://discord.gg/dk6RfWgPHF
+  analytics:
+    provider: google
+    property: G-NVDBHE89HX # true site
+    # property: G-HJX8ZPN77Q # test site
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by opening a
+            <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">GitHub issue</a>.

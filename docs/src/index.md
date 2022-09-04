@@ -1,6 +1,11 @@
+---
+hide:
+  - feedback
+---
+
 # Welcome to Deck of Adventures, The Game.
 
-This repository establishes the version history of the Deck of Adventure tabletop
+This repository establishes the version history of the Deck of Adventures tabletop
 roleplaying game. A magical world awaits, where Players come first. In Deck of
 Adventure, it’s your turn, your choice.
 

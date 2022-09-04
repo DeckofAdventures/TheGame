@@ -10,7 +10,7 @@ the Encounter during a session.
 Every Dealer can take Powers and Vulnerabilities, and has Skill Modifiers that impact
 their ability to interact with the world around them. These are the steps to building a
 Dealer as part of Character Creation. GMs can find additional advice on how to create a
-GM Dealer in the [GM Guide](../02_GMGuide.md)
+GM Dealer in the [GM Guide](./02_GMGuide.md)
 
 ## Decide Your Background
 
@@ -20,7 +20,7 @@ would motivate adventuring. Classically, this is a 'racial' or species origin
 This has no inherent mechanical impact, but may shape how your character
 navigates challenges. Growing up at a seaport, your character might be more
 adept at sailing (i.e., certain skill checks) than others. Coming to a new land as an
-outsider might be a [Vulnerability](#Choose-Your-Vulnerabilities), as described below.
+outsider might be a [Vulnerability](./03_CharacterCreation.md#choose-your-vulnerabilities), as described below.
 
 Characters beginning their journey at level 1 are relatively unskilled. They may have 
 had one profession for many years, but should not have any significant experience 
@@ -81,7 +81,7 @@ multiple). The more PP spent, the bigger the effect. Numbers separated by `or` i
 mechanics description indicate different effects depending on PP spent.
 
 Adding a Power with an PP cost raises the character's maximum PP by the largest number
-of PP listed for that Power. PP are replenished on a [Rest](01_PlayerGuide_Full.md#Rests).
+of PP listed for that Power. PP are replenished on a [Rest](./01_PlayerGuide_Full.md#rests).
 
 Unless otherwise noted, Powers...
 1. Take a Major Action to perform and use a Dealer's Primary

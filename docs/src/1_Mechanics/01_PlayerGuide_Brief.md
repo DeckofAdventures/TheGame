@@ -38,11 +38,11 @@ outcome via...
 
 - Under some circumstances, you'll be asked to draw with the Upper Hand or the Lower 
   Hand.
-   - With the Upper Hand, you can draw an additional card(s) and use the more
+    - With the Upper Hand, you can draw an additional card(s) and use the more
      favorable value to increase your odds.
-   - With the Lower Hand, you must draw an additional card(s) and use the less
+    - With the Lower Hand, you must draw an additional card(s) and use the less
      favorable value, decreasing your odds.
-   - A single instance of Upper Hand or Lower Hand requires you to draw just 1
+    - A single instance of Upper Hand or Lower Hand requires you to draw just 1
      additional card. However, these effects can compound, requiring you to draw 2
      or more cards for the applicable check. Upper and Lower Hand can also cancel
      each other out.
@@ -93,15 +93,15 @@ The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 Your character may need to rest to recharge Power Points or heal Health Points.
 
 - On a **Quick Rest** (30 minutes), each player can draw a number of **Rest Cards**.
-  - Each Rest Card can regain 1 Health or Power Point, or be used to regain Armor Points.
-  - If the card drawn is the same as the character's Primary Suit, there are additional
-    benefits. Reference the Full Guide for more details on taking a Quick Rest.
+    - Each Rest Card can regain 1 Health or Power Point, or be used to regain Armor Points.
+    - If the card drawn is the same as the character's Primary Suit, there are additional
+      benefits. Reference the Full Guide for more details on taking a Quick Rest.
 
 - On a **Full Rest** you replenish all expended Health, Fate, and Armor. 
-   - If you run out of cards before you can successfully take a Rest, you may
+    - If you run out of cards before you can successfully take a Rest, you may
      shuffle, but must always draw with Lower Hand (1+) until your next Rest.
      This signifies your character running out of Stamina during a long day.
-   - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may also ask for shuffling on Quick Rests.
+    - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may also ask for shuffling on Quick Rests.
 
 ### Combat
 
