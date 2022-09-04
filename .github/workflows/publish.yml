@@ -25,22 +25,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
+          
       - name: Set up Python runtime
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
-          token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Deploy documentation
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }} # Future
+          token: ${{ secrets.GH_TOKEN }}
+      
+      - name: Setup - pip & config
         run: | # Later: mkdocs-include-markdown-plugin
           for f in C*md; do cp $f ./docs/src/; done 
           cp LICENSE ./docs/src/
           pip install mkdocs-material mkdocs-exclude
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
+      
+      - name: Deploy
+        run: | 
           mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
           mkdocs --version
+        env:
+          USERNAME: github-actions[bot]
+          REPO_KEY: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
