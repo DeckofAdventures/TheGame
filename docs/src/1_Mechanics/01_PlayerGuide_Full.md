@@ -348,7 +348,7 @@ others. If an action specifies a skill, this requires a check.
     2. **Minor**
 
         - *Object interaction*: Pressing a button, pulling a lever, using a disposable
-       item, etc.
+       item, equipping or changing weapons, etc.
         - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
          about an opponent or the terrain.
         - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
