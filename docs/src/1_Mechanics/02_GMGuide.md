@@ -235,7 +235,7 @@ be successful.
 One of the initial barriers a new GM must overcome is helping the Players
 understand this target system. As Players get more familiar with the
 system, speed of play increases, and it is then easier for them to understand
-more complex mechanics. Using the [Circular TC-DR Tool](./Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
+more complex mechanics. Using the [Circular TC-DR Tool](./Visual_Tools/1_Circular_Assembled.PNG) is a helpful visual
 aid. 
 
 The Target Card System is circular, so an Ace is only 1 away from both a King
