@@ -1,6 +1,6 @@
 name: build
 on:
-  pull_request: # close of PR - mostly merges but not exclusively. if issue, can revise
+  pull_request:      # close of PR. Insufficient permissions?
     branches:
       - main
     types:
