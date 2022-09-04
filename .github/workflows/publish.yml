@@ -30,4 +30,5 @@ jobs:
       # later: add mkdocs-include-markdown-plugin to pip list
       # not sure if below actually works
       - run: iconv -f utf-8 -t utf-8 -c ./docs/src/1_Mechanics/04_Powers.md > ./docs/src/1_Mechanics/04_Powers.md
+      - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       - run: mkdocs gh-deploy --force --clean --verbose --config-file ./docs/mkdocs.yml
