@@ -92,8 +92,7 @@ extra:
       link: https://discord.gg/dk6RfWgPHF
   analytics:
     provider: google
-    property: G-NVDBHE89HX # true site
-    # property: G-HJX8ZPN77Q # test site
+    property: !ENV GOOGLE_ANALYTICS_KEY
     feedback:
       title: Was this page helpful?
       ratings:
