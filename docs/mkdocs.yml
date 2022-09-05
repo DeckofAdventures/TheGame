@@ -10,6 +10,8 @@ edit_uri: blob/main/docs/src/
 theme:
     name: material
     custom_dir: overrides
+    logo: assets/club.svg
+    favicon: assets/spade.svg
     features:
       - toc.integrate
       - navigation.sections
@@ -51,10 +53,10 @@ nav:
     - Full Guide:           1_Mechanics/01_PlayerGuide_Full.md
     - GM Guide:             1_Mechanics/02_GMGuide.md
     - Character Creation:   1_Mechanics/03_CharacterCreation.md
-    - Powers:               1_Mechanics/04_Powers-2.md
+    - Powers:               1_Mechanics/04_Powers.md
     - Vulnerabilities:      1_Mechanics/05_Vulnerabilities.md
     - Glossary:             1_Mechanics/99_Glossary.md
-    - Lookup Tool:          1_Mechanics/Circlular_TC-DR_Tool/README.md
+    - Tools:                1_Mechanics/Visual_Tools/README.md
     - Premades:             1_Mechanics/PremadeCharacters/README.md
   - Development:
     - Community:            2_Development/01_Community.md

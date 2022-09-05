@@ -194,7 +194,7 @@ the player to describe how their character successfully accomplishes the action.
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort to match the task at hand as closely as possible. Remembering
 which card is 5 below a 3 can be tough, so there is a table below as well as a
-[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you
+[printable tool](./Visual_Tools/README.md) to help look up the DR range as you
 get familiar with the system.
 
 **Target Card Range Table**
@@ -300,7 +300,7 @@ teamwork and creativity. To keep up the pace, players should be sure to study th
 character sheets and know their options ahead of combat, and use others’ turns to make
 their choices. Deck of Adventures is all about teamwork, so communication is encouraged.
 
-GMs may provide a grid map and other visual cues like character tokens to help players
+GMs may provide a map and other visual cues like character tokens to help players
 visualize the situation. On a square grid, moving diagonally counts as one space unless
 otherwise ruled by the GM.
 
@@ -348,7 +348,7 @@ others. If an action specifies a skill, this requires a check.
     2. **Minor**
 
         - *Object interaction*: Pressing a button, pulling a lever, using a disposable
-       item, etc.
+       item, equipping or changing weapons, etc.
         - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
          about an opponent or the terrain.
         - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
