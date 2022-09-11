@@ -981,6 +981,7 @@ create your own Consumables and ask the Community for help as needed.
 | Consumable Name        | Cost  | Effect                                                                                    | Duration |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
 | Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |          |
+| Potion of Water Breath | 10 gp | You are immune to the Suffocating Status Condition while underwater                       | 1 hour   |
 | Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks                                                      | 1 min    |
 | Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks                                                       | 1 min    |
 | Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |

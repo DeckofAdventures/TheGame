@@ -432,6 +432,8 @@ poison. On a failure, they discard N+1 cards.
 Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their turn to
 attempt to end the freeze.
 
+9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 2 Vitality Save. On a failure, take 2 damage. On a success, take half damage.
+
 ### Health and Armor
 
 Dealers have 4 health points (HP) plus their level, plus Vitality modifier. The health
@@ -640,6 +642,16 @@ This speed is recovered after a Rest or if the creature is healed to their maxim
 Moving through the environment can sometimes be challenging. When navigating
 through *Challenging Terrain*, moving through one space requires 2 speed. While
 standing in Challenging Terrain, all Agility Saves are made with the Lower Hand. 
+
+#### Holding Breath
+
+A character can hold their breath for 1 + N number of additional minutes, where N is the
+character's Vitality Modifier. When this time runs out, or if something causes a
+character to no longer hold their breath while underwater or in a vacuum, the character
+gains the *Suffocating* Status Condition.
+
+Some Powers or effects can extend this time limit or prevent a character from
+Suffocating. 
 
 ## Character Creation
 
