@@ -120,7 +120,7 @@ creative!
 
 <!--Add some examples of specific skills being used, with general description of domain --> 
 
-### Dealers, Bystanders, Minions and Companions
+### Dealers, NPCs and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
 considered Dealers and differ from the majority of other characters in the world. The
@@ -135,7 +135,7 @@ the Game Master. They...
     - Can receive and use Fate Cards.
     - Have a Primary Suit, and related mechanics.
 
-2. Bystanders and Minions. All other characters. They...
+2. NPCs. All other characters. They...
     - Are weaker than Dealers
     - Have limited access to Powers
     - Have 1-3 HP.
@@ -181,10 +181,9 @@ the circles around the bullseye.
 
 Once the DR has been announced, players must make the check. Players may consult with
 their GM to determine if another Attribute or Skill may be used instead. A player will
-draw one or more cards. Immediately after drawing, a player will apply any relevant
+draw one card from the top of their deck. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
-within the DR. A Modifier is the maximum value a player may add or subtract; this is
-usually done to get closer to the TC. A Modifier is indicated on the character sheet
+within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
 next to the relevant Skill or Attribute related to the Check. Think of it as a
 character's ability to 'aim' a check to get closer to the TC. 
 
