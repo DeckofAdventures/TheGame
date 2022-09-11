@@ -330,7 +330,9 @@ draw a Target Card and place it in on the table in view. The values represent th
 order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the same
 Target Card values as an enemy go first. If two players draw the same Target Card, they
 can decide who goes first. Without consensus, the player with the higher Agility
-modifier goes first.
+modifier goes first. In the event of a Surprise Round, the characters who are part of
+the Surprise Round draw their TCs first and take one full round  before the characters
+being surprised draw their TCs.
 
 2. A player may delay their turn in initiative order to intentionally occur before or
 after another character(s)', but their turn is forfeited if they do not announce their
