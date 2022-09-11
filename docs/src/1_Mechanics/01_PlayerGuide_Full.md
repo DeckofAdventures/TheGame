@@ -333,7 +333,7 @@ can decide who goes first. Without consensus, the player with the higher Agility
 modifier goes first.
 
 2. A player may delay their turn in initiative order to intentionally occur before or
-after another player(s)', but their turn is forfeited if they do not announce their
+after another character(s)', but their turn is forfeited if they do not announce their
 action(s) by the end of the round. A GM may skip a player’s turn if they are unprepared
 and need more time to think.
 
@@ -377,6 +377,12 @@ others. If an action specifies a skill, this requires a check.
         - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
         - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
          you by target(s) who failed
+
+ A character can choose to hold their Major Action to occur on a stated trigger, such
+ as "I will make an Attack, Weapon when an enemy moves within 1 space of me." If the
+ trigger occurs, the held Major Action can then be activated. If the trigger does not
+ occur before the start of the character's next turn, this Major Action is forfeited,
+ along with any Power Points used for the Major Action. 
 
 #### Ending Combat
 
