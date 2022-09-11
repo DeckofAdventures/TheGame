@@ -392,6 +392,35 @@ described in the guide or in a Power mechanic.
 4. Arm wrestle: Brute vs. Brute
 5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
 
+### Saves
+
+Saves occur when a character is attempting to resist or shrug off a negative effect(see
+[Full Player Guide](./01_PlayerGuide_Full.md#saves) for more info). Certain Powers,
+events, or encounters may force a character to make a Save. 
+
+When calling for a Save, the GM chooses the Attribute that is most relevant to the
+effect forcing the Save. A character cannot choose to use a different Attribute when
+making a Save. 
+
+When making a Save, characters draw against their own TC. This means that a Save will
+never be a Critical Success. The GM can choose to add an additional effect to a Save
+for a Major Success. 
+
+Saves may have multiple effects depending on whether a character succeeds or fails. For
+example, a Power may force a character to make an Agility save to avoid being trapped
+in entangling vines. On a failed Save, the character is Entangled. On a successful
+Save, the character avoids the vines and is not Entangled. Other Powers might do 2
+damage on a failed save, or cause half damage (1) on a successful Save. Refer to the
+specific wording of the Power to determine the effect. 
+
+Sometimes, environmental effects may force a character to make a Save. In these cases,
+the GM determines the DR and the relevant Attribute. If an effect would cause a
+character to attempt to resist it to avoid damage or a Status Condition, that character
+should make a Save.
+
+<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR --> 
+
+
 ### Epic Events
 
 <!-- Future: revise to refer back to the same example repeatedly -->

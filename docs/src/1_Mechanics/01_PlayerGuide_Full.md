@@ -277,9 +277,9 @@ Some checks will be initiated by a character's actions and require others to res
 pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
-cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
+cases, the character who initiated the action (i.e., the Attacker)
 sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant
-modifier, to a minimum of 0. The character(s) responding are the Target(s). Rules that
+modifier, to a minimum of 0. The character(s) responding are the Target(s), and must draw a Check against the initiator's TC. Rules that
 describe a 
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
 fail individually.
@@ -289,6 +289,22 @@ with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
 Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
 successfully convince Jonas of something in this scenario. 
+
+#### Saves
+
+Saves occur when a character is attempting to resist or shrug off a negative effect.
+Certain Powers, effects, or encounters may force a character to make a Save. When a
+character makes a Save, they draw a card against their own TC and use their Attribute
+Modifier for the relevant domain. A character cannot choose to use a different
+Attribute.
+
+A Save will have a DR determined by the initiator's Skill Modifier used to initiate the
+Save. The DR for a Save is 3 minus half of the initiator's relevant modifier, to a
+minimum of 0. 
+
+Saves may have different effects depending on a success or failure. This can sometimes
+mean a successful Save still results in taking damage or a negative effect. Reference a
+specific Power description for details on the effects.
 
 ### In Combat
 
@@ -375,21 +391,21 @@ Some Status Conditions will impact a character over time. The duration of each C
 is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction
-Check at the start of their turn vs their  own TC. If failed, they may either move or
+Save at the start of their turn vs their  own TC. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until
-they are successful, they may not move and any Agility Checks are made with Lower
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength Save. Until
+they are successful, they may not move and any Agility Saves are made with Lower
 Hand.
 
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
-is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
+is halved, rounding up. All Strength and Agility Saves are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
 1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
-DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
+DR 3 Intuition Save. If they fail, they draw Lower Hand (3) for any
 action requiring the relevant sense.
 
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft
@@ -397,15 +413,15 @@ check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn pas
 since the effect onset). If a Knocked Out Dealer is attacked further, the player begins
 an Epic Event alone.
 
-6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
+6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition Save to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
 7. **Poisoned N** Each poisoning effect adds +1 Poisoned. At the start of their turn, as
-a Free Action, a Dealer makes a DR 3 Vitality Check to shake off the effects of the
+a Free Action, a Dealer makes a DR 3 Vitality Save to shake off the effects of the
 poison. On a failure, they discard N+1 cards.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
-Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
+Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their turn to
 attempt to end the freeze.
 
 ### Health and Armor
@@ -609,13 +625,13 @@ creature may be covered from one direction but not from another direction.
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
 damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.
+This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the penalty from falling.
 
 #### Challenging Terrain
 
 Moving through the environment can sometimes be challenging. When navigating
 through *Challenging Terrain*, moving through one space requires 2 speed. While
-standing in Challenging Terrain, all Agility Checks are made with the Lower Hand. 
+standing in Challenging Terrain, all Agility Saves are made with the Lower Hand. 
 
 ## Character Creation
 
