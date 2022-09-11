@@ -121,11 +121,9 @@ session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
 split it into two 26-card decks and shuffle regularly. 
 
-One deck of cards should be designated the *Minion Deck* and one designated the *World
+One deck of cards should be designated the *NPC Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
-Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to draw Target
-Cards for NPCs, make social checks, and used for drawing a card based on a table out of
-combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the World Deck
+NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to make social checks, and to draw Target Cards representing items and objects in the world. Before each Combat, reshuffle the NPC Deck. You reshuffle the World Deck
 when it is empty. 
 
 Most NPCs won't stick around long enough to use a deck completely, and
