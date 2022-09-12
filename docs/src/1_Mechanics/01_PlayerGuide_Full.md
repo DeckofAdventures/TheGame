@@ -181,7 +181,7 @@ the circles around the bullseye.
 
 Once the DR has been announced, players must make the check. Players may consult with
 their GM to determine if another Attribute or Skill may be used instead. A player will
-draw one card from the top of their deck. Immediately after drawing, a player will apply any relevant
+draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
 within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
 next to the relevant Skill or Attribute related to the Check. Think of it as a
