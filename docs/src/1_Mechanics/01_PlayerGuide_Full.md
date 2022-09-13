@@ -425,7 +425,7 @@ poison. On a failure, they discard N+1 cards.
 Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their turn to
 attempt to end the freeze.
 
-9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 2 Vitality Save. On a failure, take 2 damage. On a success, take 1 damage.
+9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 Vitality Save. On a failure, take 2 damage. On a success, take 1 damage.
 
 ### Health and Armor
 
