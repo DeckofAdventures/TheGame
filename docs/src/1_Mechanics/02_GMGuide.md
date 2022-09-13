@@ -392,7 +392,7 @@ described in the guide or in a Power mechanic.
 
 ### Saves
 
-Saves occur when a character is attempting to resist or shrug off a negative effect(see
+Saves occur when a character is attempting to resist or shrug off a negative effect (see
 [Full Player Guide](./01_PlayerGuide_Full.md#saves) for more info). Certain Powers,
 events, or encounters may force a character to make a Save. 
 
