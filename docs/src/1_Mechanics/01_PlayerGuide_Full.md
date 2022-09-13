@@ -638,9 +638,7 @@ standing in Challenging Terrain, all Agility Saves are made with the Lower Hand.
 
 #### Holding Breath
 
-A character can hold their breath for 1 + N number of additional minutes, where N is the
-character's Vitality Modifier. When this time runs out, or if something causes a
-character to no longer hold their breath while underwater or in a vacuum, the character
+A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage without air reduces this time by 1 minute. After this time, the character
 gains the *Suffocating* Status Condition.
 
 Some Powers or effects can extend this time limit or prevent a character from
