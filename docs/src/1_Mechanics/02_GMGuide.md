@@ -121,12 +121,13 @@ session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
 split it into two 26-card decks and shuffle regularly. 
 
-One deck of cards should be designated the *Minion Deck* and one designated the *World
+One deck of cards should be designated the *NPC Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
-Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to draw Target
-Cards for NPCs, make social checks, and used for drawing a card based on a table out of
-combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the World Deck
-when it is empty. 
+NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying
+negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World
+Deck is used to make social checks, and to draw Target Cards representing items and
+objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World
+Deck empty. 
 
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
@@ -391,6 +392,27 @@ described in the guide or in a Power mechanic.
 3. Sneaking past Target: Initiator Stealth vs. Target Detection
 4. Arm wrestle: Brute vs. Brute
 5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
+
+### Saves
+
+Saves occur when a character is attempting to resist or shrug off a negative effect (see
+[Full Player Guide](./01_PlayerGuide_Full.md#saves). 
+
+When calling for a Save, choose the Attribute that is most relevant to the initiating
+effect. A character cannot choose to use a different Attribute.
+
+Because characters draw against their own TC, Saves will
+never be a Critical Success. You can choose to add an additional effect to a Major Success. 
+
+While all saves will have effects for failure, some may still have effects on success, such as half damage. Refer to the
+specific wording of the initiating effect.  
+
+If an environmental effect initiates a Save, you determine the DR and Attribute as the GM. If an effect would cause a
+character to attempt to resist it to avoid damage or a Status Condition, that character
+should make a Save.
+
+<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR --> 
+
 
 ### Epic Events
 
@@ -954,6 +976,8 @@ create your own Consumables and ask the Community for help as needed.
 | Consumable Name        | Cost  | Effect                                                                                    | Duration |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
 | Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |          |
+| Potion of Water Breath | 10 gp | You are immune to the Suffocating Status Condition                                        | 1 hour   |
+| Potion of Extended Breath | 5 gp | Your ability to hold your breath is extended by 60 minutes                              | 1 hour   |
 | Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks                                                      | 1 min    |
 | Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks                                                       | 1 min    |
 | Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |
