@@ -277,12 +277,12 @@ Some checks will be initiated by a character's actions and require others to res
 pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
-cases, the character who initiated the action (i.e., the Attacker)
-sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant
-modifier, to a minimum of 0. The character(s) responding are the Target(s), and must draw a Check against the initiator's TC. Rules that
-describe a 
+cases, the character who initiated the action (i.e., the Attacker) sets the DR; the DR
+for a Contested Check is 3 minus half of the Attacker's relevant modifier, to a minimum
+of 0. The character(s) responding are the Target(s), and must draw a Check against the
+initiator's TC. Rules that describe a 
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
-fail individually.
+ fail individually.
 
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
 with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
