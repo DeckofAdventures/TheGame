@@ -181,7 +181,7 @@ the circles around the bullseye.
 
 Once the DR has been announced, players must make the check. Players may consult with
 their GM to determine if another Attribute or Skill may be used instead. A player will
-draw one card from the top of their deck. Immediately after drawing, a player will apply any relevant
+draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
 within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
 next to the relevant Skill or Attribute related to the Check. Think of it as a
@@ -292,19 +292,12 @@ successfully convince Jonas of something in this scenario.
 
 #### Saves
 
-Saves occur when a character is attempting to resist or shrug off a negative effect.
-Certain Powers, effects, or encounters may force a character to make a Save. When a
-character makes a Save, they draw a card against their own TC and use their Attribute
-Modifier for the relevant domain. A character cannot choose to use a different
-Attribute.
-
-A Save will have a DR determined by the initiator's Skill Modifier used to initiate the
-Save. The DR for a Save is 3 minus half of the initiator's relevant modifier, to a
-minimum of 0. 
-
-Saves may have different effects depending on a success or failure. This can sometimes
-mean a successful Save still results in taking damage or a negative effect. Reference a
-specific Power description for details on the effects.
+When a character attempts to resist or shrug off a negative effect, they make a Save.
+This could be caused by a Power, Status Condition, or a environmental effect. When a
+character makes a Save, they draw a card against their own TC and use their relevant Attribute
+Modifier, with a DR set by the initiating effect. If the effect is a Power, the DR is
+3 minus half of the initiator's relevant Skill modifier. 
+Saves may still have consequences even on a success, as specified by the initiating effect.
 
 ### In Combat
 
