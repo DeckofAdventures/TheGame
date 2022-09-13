@@ -123,8 +123,11 @@ split it into two 26-card decks and shuffle regularly.
 
 One deck of cards should be designated the *NPC Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
-NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to make social checks, and to draw Target Cards representing items and objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World Deck
-empty. 
+NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying
+negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World
+Deck is used to make social checks, and to draw Target Cards representing items and
+objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World
+Deck empty. 
 
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
