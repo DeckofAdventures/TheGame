@@ -374,7 +374,7 @@ others. If an action specifies a skill, this requires a check.
          you by target(s) who failed
 
  A character can choose to Ready their Major Action to occur on a stated trigger, such
- as "I will make an Attack, Weapon when an enemy moves within 1 space of me." If the
+ as "I will make a Weapon Attack when an enemy moves within 1 space of me." If the
  trigger occurs, the readied Major Action can then be activated. If the trigger does not
  occur before the start of the character's next turn, this Major Action is forfeited,
  along with any Power Points used for the Major Action. 
