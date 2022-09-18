@@ -1,28 +1,28 @@
 Template: # Power name        # Must be unique
-    Type:                     # Passive, Vulny, Major, Minor, Adversary, Free, House. 
+    Type: One of              # Passive, Vulny, Major, Minor, Adversary, Free, House. 
     # Note: Type is required. For Companion actions, type indicates type req for dealer
-    Category:                 # One string or list in sub-cat order
-    XP:
-    PP:
+    Category: One or list     # One string or list in sub-cat order
+    XP: X
+    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
     Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
-        Role:
+        Role: X
         Level: X              # Integer               
-        Skill:                #              
+        Skill: X > 1          #              
         Power:                # Must match unique power name
-    To Hit: X                 # If not specified, assumed  as character's primary skill
+    To Hit: X                 # If not specified, assumed character's primary skill
     Damage: X                 # Integer           
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
-    AOE:                      # Aura, cone, or line followed by integer for size
+    AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
     Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
     Save:                     # Separated here, merged in md
-        Trigger:              # Once, On hit, Start turn, etc
+        Trigger: One of       # Once, On hit, Start turn, etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail
         Succeed: Descrip      # effect on success. Assume no access to above
-    Description:              # Flavor: 1-2 sentences             
-    Tags:
+    Description: Descrip      # Flavor: 1-2 sentences             
+    Tags: One or list
 
 Attack, Weapon:
     Category: 
@@ -42,6 +42,7 @@ Attack, Charge:
     Category: 
         - Combat
         - Weapon Attacks
+        - Example Third
     Type: Major
     Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
     XP: 2
@@ -58,7 +59,6 @@ Attack, Charge:
 Attack, Sweep:
     Category: 
         - Combat
-        - Example Second
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
     Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space 
     Type: Major
@@ -80,7 +80,6 @@ Attack, Sweep:
 Momentum: # Without this power, this should cost a major action.
     Category: 
         - Combat
-        - Control
     Description: By brute strength, force others to move around the battlefield. 
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you
     Type: Passive
@@ -96,7 +95,6 @@ Momentum: # Without this power, this should cost a major action.
 Cunning:
     Category: 
         - Roleplay
-        - None
     Description: You're sharper than the rest when you take your time.
     Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills
     Type: Passive

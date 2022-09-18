@@ -35,12 +35,6 @@ logging.basicConfig(
 )
 
 
-class Powers(object):
-    def __init__(self, input_files):
-        for input_file in input_files:
-            self._data = load_source(input_file)
-
-
 def load_source(input_yml="04_Powers.yml"):
     """Load the yaml file"""
     with open(input_yml, encoding="utf8") as f:
@@ -270,7 +264,8 @@ def make_entries(input_items, input_yml="04_Powers.yml"):
     """Turn each input item into bulleted list with key prefix. Input list of Powers"""
     data = load_source(input_yml)
     entries = ""
-    for item in input_items:  # for power in input list
+    input_list = input_items if isinstance(input_items, list) else [input_items]
+    for item in input_list:  # for power in input list
         power = data[item]
         if "PP" in power:
             pp_list = list_to_or(power["PP"])
@@ -317,18 +312,6 @@ def parse_categories(data):
                 cat_items[concat_str] = []
             cat_items[f"{cat}_{sub}"] += [k]
     return categories, cat_items
-
-
-def md_TOC(categories):
-    """Generate markdown Table of Contents"""
-    pass
-    TOC = "<!-- MarkdownTOC add_links=True -->\n"
-    for k, v in categories.items():
-        TOC += make_link(k)
-        for sub in v:
-            if sub and sub != "None":
-                TOC += make_link(sub, 1)  # indent subcategories
-    return TOC + "<!-- /MarkdownTOC -->\n\n"
 
 
 def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
