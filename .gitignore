@@ -9,8 +9,9 @@ temp*/*
 # Settings
 *toml
 
-# Automation
+# Automation, Python
 docs/src/3_Automation/_Auto*
+*__pycache__/
 
 # Defaults
 .DS_Store

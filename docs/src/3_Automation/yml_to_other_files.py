@@ -21,7 +21,24 @@ out_delim = "\t"  #                                     # delimiter for csv
 
 if any(x in writing for x in ["dot", "png", "svg"]):
     import pydot
+from collections import OrderedDict
 import csv, yaml, logging, os, pathlib
+import logging
+
+# logging
+logging.basicConfig(
+    level=os.environ.get(
+        "LOG_LEVEL", "info"
+    ).upper(),  # debug, info, warning, error, critical
+    format="[%(asctime)s][%(funcName)-8s][%(levelname)-8s]: %(message)s",
+    datefmt="%H:%M:%S",
+)
+
+
+class Powers(object):
+    def __init__(self, input_files):
+        for input_file in input_files:
+            self._data = load_source(input_file)
 
 
 def load_source(input_yml="04_Powers.yml"):
@@ -58,10 +75,10 @@ def quote(s):
 
 def edge_str(a, b=None):
     """Generates a `->` b notation for dot edges"""
-    comparator = ["<", ">", "≤", "≥"]
+    comparators = ["<", ">", "≤", "≥"]
     label = ""
     if b is not None:
-        if any(comp in b for comp in comparator):
+        if any(comp in b for comp in comparators):
             b, comparison = b.split(" ", 1)
             label = f' [label="{comparison}"]'
         return f"{quote(b)} -> {quote(a)}{label}"
@@ -170,41 +187,121 @@ def make_bullet(value, indents=0):
 
 def make_link(value, indents=0):
     """For md table of contents, add brackets, parens and remove spaces"""
-    no_spaces = value.replace(" ", "-")
+    no_spaces = value.lower().replace(" ", "-")
     link = f"[{value}](#{no_spaces})"
     return make_bullet(link, indents)
 
 
+def sort_dict(my_dict, my_list):
+    """Sort dict by list of keys. Return OrderedDict"""
+    index_map = {v: i for i, v in enumerate(my_list)}
+    return OrderedDict(sorted(my_dict.items(), key=lambda pair: index_map[pair[0]]))
+
+
+def sort_power(power_dict):
+    """Given a power, return OrderedDict in markdown read order"""
+    if "Prereq" in power_dict:
+        power_dict["Prereq"] = sort_dict(
+            power_dict["Prereq"], ["Role", "Level", "Skill", "Power"]
+        )
+    if "Save" in power_dict:
+        power_dict["Save"] = sort_dict(
+            power_dict["Save"], ["Trigger", "DR", "Type", "Fail", "Succeed"]
+        )
+
+    return sort_dict(
+        power_dict,
+        [
+            "Type",
+            "Category",
+            "Subcategory",
+            "XP",
+            "PP",
+            "Prereq",
+            "To Hit",
+            "Damage",
+            "Range",
+            "AOE",
+            "Target",
+            "Mechanic",
+            "Save",
+            "Description",
+            "Tags",
+        ],
+    )
+
+
+def list_to_or(entry):
+    """Given string or list, return with joined OR"""
+    entry = [entry] if not isinstance(entry, list) else entry
+    entry = [str(i) for i in entry]
+    return " or ".join(entry)
+
+
+def save_check_to_txt(save: dict):
+    """Given a Save dict, return a sentence"""
+    trigger = save["Trigger"] + ", target(s) make a "
+    if "DR" in save:
+        trigger += "DR " + str(save["DR"]) + " "
+    trigger += list_to_or(save["Type"]) + " Save"
+    output = [trigger, "On fail, target(s) " + save["Fail"]]
+    if "Succeed" in save:
+        output.append("On success, target(s) " + save["Succeed"])
+    return ". ".join(output)
+
+
+def merge_mechanics(power):
+    """Given power dict, merge all appropriate items into Mechanic"""
+    if isinstance(power["Mechanic"], list):  # when mechanics are list, indent after 1st
+        mech_bullets = power["Mechanic"][0] + "\n"
+        for mech_bullet in power["Mechanic"][1:]:
+            mech_bullets += make_bullet(mech_bullet)
+        power["Mechanic"] = mech_bullets[:-1]  # remove last space
+    if "PP" in power:
+        mechanic = "For " + list_to_or(power["PP"]) + " PP, " + power["Mechanic"] + ". "
+    else:
+        mechanic = power["Mechanic"]
+    if "Save" in power:
+        mechanic += save_check_to_txt(power["Save"]) + ". "
+    return "".join([power["Type"], ". ", mechanic])
+
+
 def make_entries(input_items, input_yml="04_Powers.yml"):
-    """Turn each input item into bulleted list with key prefix"""
+    """Turn each input item into bulleted list with key prefix. Input list of Powers"""
     data = load_source(input_yml)
     entries = ""
-    for item in input_items:
-        entries += f"**{item}**\n\n"
-        for k, v in data[item].items():
-            indent = 0
-            if isinstance(v, list):
-                if k == "Mechanic":  # when mechanics are list, want indenting after 1st
-                    mech_bullets = f"{v[0]}\n"
-                    for mech_bullet in v[1:]:
-                        mech_bullets += make_bullet(mech_bullet)
-                    v = mech_bullets[:-1]  # remove last space
-                else:
-                    v = [str(item) for item in v]
-                    v = " or ".join(v)
-            if "Cost" in k:  # additional indenting for cost items
-                indent = 1
-            if v == "None":  # Explicit YAML None is empty in md
-                v = " "
-            if not "egory" in k:  # drop sub/category items
-                entries += make_bullet(f"{k}: {v}", indent)
+    for item in input_items:  # for power in input list
+        power = data[item]
+        if "PP" in power:
+            pp_list = list_to_or(power["PP"])
+            costs = (  # gave extra newline. don't know why. added [:-1]
+                "Costs:\n"
+                + make_bullet(f"XP: {power['XP']}", 1)
+                + make_bullet(f"PP: {pp_list}", 1)
+            )[:-1]
+        else:
+            costs = f"XP Cost: {power['XP']}"
+        entries += (
+            f"**{item}**\n\n"
+            + make_bullet(f"Description: {power['Description']}", 0)
+            + make_bullet(f"Mechanic: {merge_mechanics(power)}", 0)
+            + make_bullet(costs, 0)
+        )
+        if "Prereq" in power:
+            entries += make_bullet("Prereqs:", 0) + "".join(
+                [  # joins all present prereqs
+                    make_bullet(f"{k}: {list_to_or(v)}", 1)
+                    for k, v in power["Prereq"].items()
+                ]
+            )
+        if "Tags" in power:
+            entries += make_bullet(f"Tags: {power['Tags']}")
         entries += "\n"
     return entries
 
 
-def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
-    """Generate markdown from yaml"""
-    data = load_source(input_yml)
+def parse_categories(data):
+    """Get set of Categories and Subcategories"""
     categories = dict()  # category: sub pairing
     cat_items = dict()  # concatenated string: [items]
     for k, v in data.items():  # get set of sub/categories for TOC later
@@ -219,26 +316,37 @@ def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
             if concat_str not in cat_items:
                 cat_items[concat_str] = []
             cat_items[f"{cat}_{sub}"] += [k]
+    return categories, cat_items
 
+
+def md_TOC(categories):
+    """Generate markdown Table of Contents"""
+    pass
+    TOC = "<!-- MarkdownTOC add_links=True -->\n"
+    for k, v in categories.items():
+        TOC += make_link(k)
+        for sub in v:
+            if sub and sub != "None":
+                TOC += make_link(sub, 1)  # indent subcategories
+    return TOC + "<!-- /MarkdownTOC -->\n\n"
+
+
+def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
+    """Generate markdown from yaml"""
+    data = load_source(input_yml)
+    categories, cat_items = parse_categories(data=data)
     file_title = pathlib.Path(input_yml).stem.split("_")[-1]
 
     with open(out_md, "w", newline="") as f:
         f.write(
-            f"# {file_title}\n\n<!-- DEVELOPERS: Please edit corresponding yaml in "
-            + "3_Automation -->\n\n"
-        )  # md Title
-        # f.write("<!-- MarkdownTOC add_links=True -->\n")
-        TOC = ""  # Table of contents
-        for k, v in categories.items():
-            TOC += make_link(k)
-            for sub in v:
-                if sub and sub != "None":
-                    TOC += make_link(sub, 1)  # indent subcategories
-        TOC += "<!-- /MarkdownTOC -->\n\n"
+            f"""# {file_title}\n
+            <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->\n
+            """
+        )
         body = ""
         for cat, sublist in categories.items():  # for each sub/category, load entries
             body += f"## {cat}\n\n"
-            if "None" in sublist:
+            if "None" in sublist:  # Move no subcategory first
                 sublist.remove("None")
                 sublist = ["None"] + list(sublist)
             for sub in sublist:
@@ -248,7 +356,7 @@ def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
                     body += f"### {sub}\n\n"
                     body += make_entries(cat_items[f"{cat}_{sub}"], input_yml=input_yml)
 
-        # f.write(TOC + body)
+        # f.write(md_TOC(categories=categories)) # Commented out TOC
         f.write(body)
 
 
@@ -268,14 +376,6 @@ def validate_input(input_file="04_Powers.yml", out_delim="\t"):
 
 def main(writing=[], input_file="04_Powers.yml", out_delim="\t"):
     """Decide which generating"""
-    # logging
-    logging.basicConfig(
-        level=os.environ.get(
-            "LOG_LEVEL", "info"
-        ).upper(),  # debug, info, warning, error, critical
-        format="[%(asctime)s][%(funcName)-8s][%(levelname)-8s]: %(message)s",
-        datefmt="%H:%M:%S",
-    )
     logging.info("Strarted")
 
     # Check input file, string replace to get various extensions
@@ -318,10 +418,6 @@ def main(writing=[], input_file="04_Powers.yml", out_delim="\t"):
         logging.warning("Did nothing")
 
 
-try:
-    input_file
-except NameError:
-    input_file = "04_Powers.yml"
-
-for input_file in input_files:
-    main(writing, input_file, out_delim)
+if __name__ == "__main__":
+    for input_file in input_files:
+        main(writing, input_file, out_delim)

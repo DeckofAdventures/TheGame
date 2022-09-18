@@ -1,0 +1,50 @@
+Name:                                 # must be unique
+  Type: Boss, Dealer, Bystander, etc. # Required field
+  HP: X                               # Required field
+  AR: X                               # Required field
+  FP: X                               # Required field
+  Skill Mods:                         # List only those that are not 0
+    AGL: ±X                           # + is implied if not explicit
+    CON: ±X
+    GUT: ±X
+    INT: ±X
+    STR: ±X
+    VIT: ±X
+  Powers:                             # List all [] or `-`. 
+  Threat Level: X                     # Consistent comparable rating fitting formula
+  Phases:                             # Only for Boss
+    One:
+      HP: X
+      Allies:
+  Description: Descrip                # Visually descriptive text
+
+
+Name:                                 # must be unique
+  Type: Boss, Dealer, NPC, etc.       # Required field
+  HP: X                               # Required field
+  AR: X                               # Required field
+  PP: X                               # Required field
+  Skill Mods:                         # List only those that apply
+    AGL: ±X                           # + is implied if not explicit
+    CON: ±X
+    GUT: ±X
+    INT: ±X
+    STR: ±X
+    VIT: ±X
+  Threat Level: X                     # Consistent comparable rating fitting formula
+  Description: Descrip                # Full descriptive text
+
+
+Falcon:
+  Type: Companion, level 1
+  HP: 1
+ 
+      
+Poison Plant:
+  Type: NPC
+  HP: 2
+  AP: 0
+  AR: 4
+  Skill Mods:
+    AGL: -1
+    VIT: 1
