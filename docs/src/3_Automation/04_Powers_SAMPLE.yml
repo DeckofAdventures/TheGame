@@ -56,9 +56,8 @@ Attack, Charge:
     Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
     Tags: Attack
 
-Attack, Sweep:
-    Category: 
-        - Combat
+Sweep:
+    Category: Combat
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
     Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space 
     Type: Major
@@ -69,6 +68,10 @@ Attack, Sweep:
         Role:
             - Martial
             - Defender
+        Level: 2
+        Skill: 
+            - Finesse > 0
+            - Brute > 0
     Save:
         Trigger: For 2 PP, on a hit
         DR: 3
@@ -99,6 +102,4 @@ Cunning:
     Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills
     Type: Passive
     XP: 1
-    Prereq:
-        Skill: Intelligence > 0
     Tags:

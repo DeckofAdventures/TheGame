@@ -4,28 +4,18 @@ Takes yml files as input, can generate a series of other files, including
     CSV      - defaults to tab delimited
     dot      - flow char instruction format
     PNG/SVG  - for rendering flow charts
-User should specify the variables below, before the first function
-    input_file  - what to read
-    writing     - list of outputs
-    add loners  - include items in flow chart that have no prereqs/children
-    out_delim   - csv delimiter
-User should also install pydot to generate dot files
-User should inspect output in subfolder before moving moving elsewhere
 """
-
 input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
 writing = ["md"]  # , "dot", "png", "csv", "svg"]  #         # list of options
-add_dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
+dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
 out_delim = "\t"  #                                     # delimiter for csv
 
-if any(x in writing for x in ["dot", "png", "svg"]):
-    import pydot
+import pydot
+import logging
 from collections import OrderedDict
 import csv, yaml, logging, os, pathlib
-import logging
 
-# logging
 logging.basicConfig(
     level=os.environ.get(
         "LOG_LEVEL", "info"
@@ -35,6 +25,379 @@ logging.basicConfig(
 )
 
 
+class Powers(object):
+    def __init__(self, input_files="04_Powers_SAMPLE.yml", limit_types=None):
+        """Initialize"""
+        self._data = {}
+        self._categories = set()
+        input_files = ensure_list(input_files)
+        for input_file in input_files:
+            self._data.update(load_source(input_file))
+        self._template = self._data.pop("Template")
+        self._readable_dict = {}
+        self._stem = os.path.splitext(os.path.basename(input_files[-1]))[0]
+        self._name = self._stem.split("_")[-1]
+        self._limit_types = limit_types
+
+    def save_check_to_txt(self, save: dict):
+        """Given a Save dict, return a sentence"""
+        sentence = save["Trigger"] + ", target(s) make a "
+        sentence += "DR " + str(save["DR"]) + " " if "DR" in save else ""
+        sentence += list_to_or(save["Type"]) + " Save"
+        output = [sentence, "On fail, target(s) " + save["Fail"]]
+        output.append(
+            "On success, target(s) " + save["Succeed"]
+        ) if "Succeed" in save else None
+        return ". ".join(output)
+
+    def merge_mechanics(self, power):
+        """Given power dict, merge all appropriate items into Mechanic"""
+        if isinstance(power["Mechanic"], list):  # when mech are list, indent after 1st
+            mech_bullets = power["Mechanic"][0] + "\n"
+            for mech_bullet in power["Mechanic"][1:]:
+                mech_bullets += make_bullet(mech_bullet)
+            power["Mechanic"] = mech_bullets[:-1]  # remove last space
+        mechanic = (
+            ("For " + list_to_or(power["PP"]) + " PP, " + power["Mechanic"] + ". ")
+            if "PP" in power
+            else power["Mechanic"]
+        )
+        if "Save" in power:
+            mechanic += self.save_check_to_txt(power["Save"]) + ". "
+        power["Mechanic"] = "".join([power["Type"], ". ", mechanic])
+        power["Category"] = ensure_list(power["Category"])
+        power.pop("Save", None)
+        return power
+
+    def flatten_embedded(self, input_dict):
+        """Given embedded dictionary, concat keys for values"""
+        output = {}
+        for k, v in input_dict.items():
+            if isinstance(v, dict):  # and k != "Save":
+                output.update(
+                    {
+                        f"{k}_{embed_k}": list_to_or(embed_v)  # LATE ADD of list func
+                        for embed_k, embed_v in v.items()
+                    }
+                )
+            else:
+                output.update({k: v})
+        return output
+
+    @property
+    def readable_dict(self, limit_types=None):
+        """Return readable dict with Mechanics collapsed. Limit by limit_types list"""
+        if not limit_types and not self._limit_types:
+            limit_types = ["Major", "Minor", "Passive", "Adversary", "House", "Vulny"]
+        else:
+            limit_types = limit_types or self._limit_types
+        if not self._readable_dict:
+            self._readable_dict = {
+                power: {
+                    **self.flatten_embedded(self.merge_mechanics(traits)),
+                }
+                for (power, traits) in self._data.items()
+                if traits["Type"] in limit_types
+            }
+        return self._readable_dict
+
+    @property
+    def categories(self):
+        """Return set of tuples: (categories, subcategories)"""
+        if not self._categories:
+            for v in self._data.values():  # get set of sub/categories for TOC later
+                self._categories.add(tuple(ensure_list(v["Category"])))
+        return sorted(self._categories)
+
+    def by_category(self, category: list = None):
+        if not category:
+            return self.readable_dict
+        else:
+            return {
+                k: v
+                for k, v in self.readable_dict.items()
+                if v["Category"] == list(category)
+            }
+
+
+class Markdown(Powers):
+    def __init__(self, input_files="04_Powers_SAMPLE.yml"):
+        super().__init__(input_files=input_files)
+        self._category_hierarchy = None
+
+    def make_link(self, value, indents=0):
+        """For md table of contents, add brackets, parens and remove spaces"""
+        no_spaces = value.lower().replace(" ", "-")
+        link = f"[{value}](#{no_spaces})"
+        return make_bullet(link, indents)
+
+    def make_header(self, value, level=0):
+        """Return string with level+1 #"""
+        prefix = level * "#"
+        return f"\n#{prefix} {value}\n"
+
+    @property
+    def category_hierarchy(self):
+        if not self._category_hierarchy:
+            categories, indents, category_set, prev_cat_tuple = [], [], [], tuple()
+            for cat_tuple in self.categories:
+                for idx, category in enumerate(cat_tuple):
+                    prev_category = (
+                        prev_cat_tuple[idx] if idx < len(prev_cat_tuple) else None
+                    )
+                    if category != prev_category:
+                        categories.append(category)
+                        indents.append(idx)
+                prev_cat_tuple = cat_tuple
+                category_set.append(cat_tuple)
+            self._category_hierarchy = list(zip(categories, indents, category_set))
+        return self._category_hierarchy
+
+    def md_TOC(self):
+        """Generate markdown Table of Contents"""
+        TOC = "<!-- MarkdownTOC add_links=True -->\n"
+        for (category, indent, _) in self.category_hierarchy:
+            TOC += self.make_link(category, indent)
+        return TOC + "<!-- /MarkdownTOC -->\n"
+
+    def make_entries(self, category_set):
+        """Turn each input item into bulleted list with key prefix. Input list of Powers"""
+        entries = ""
+        for power_name, power in self.by_category(category_set).items():
+            power = sort_power(power)
+            power = {k: power[k] for k in power if k not in ["Category", "Type"]}
+            entries += f"\n**{power_name}**\n\n"
+            for k, v in power.items():
+                entries += make_bullet(f"{k}: {list_to_or(v)}")
+            entries += "\n"
+        return entries
+
+    def write(self, output_fp=None, TOC=False):
+        """Write markdown"""
+        if not output_fp:
+            output_fp = "./_Automated_output/" + self._stem + ".md"
+        output = (
+            "<!-- DEVELOPERS: Please edit corresponding yml in 3_Automation -->\n\n"
+        )
+        if TOC:
+            output += self.md_TOC()
+        for (category, indent, category_set) in self.category_hierarchy:
+            output += self.make_header(category, indent)
+            output += self.make_entries(category_set)
+        with open(output_fp, "w", newline="") as f:
+            f.write(output)
+        logging.info("Wrote md")
+
+
+class Csv(Powers):
+    def __init__(self, input_files="04_Powers_SAMPLE.yml"):
+        super().__init__(input_files=input_files)
+        self._fields = None
+
+    @property
+    def fields(self):
+        """Which fields to write"""
+        if not self._fields:
+            all_fields = sort_power(self._template)
+            all_fields.pop("Save", None)  # remove Save for CSV
+            self._fields = ["Name"] + list(self.flatten_embedded(all_fields).keys())
+        return self._fields
+
+    def write(self, output_fp=None, delimiter="\t"):
+        """Write CSV from YAML, default is tab-delimited"""
+        suffix_dict = {"\t": ".tsv", ",": ".csv"}
+        if not output_fp:
+            output_fp = "./_Automated_output/" + self._stem + suffix_dict[delimiter]
+        rows = []
+        with open(output_fp, "w", newline="") as f_output:
+            csv_output = csv.DictWriter(
+                f_output,
+                fieldnames=self.fields,
+                delimiter=delimiter,
+            )
+            csv_output.writeheader()
+            for k, v in self.readable_dict.items():
+                if v and any(v.values()):
+                    v["Name"] = k
+                    rows.append(v)
+            csv_output.writerows(rows)
+        logging.info("Wrote csv")
+
+
+class Dot(Powers):
+    def __init__(
+        self,
+        input_files="04_Powers_SAMPLE.yml",
+        dependencies: list = None,
+        add_loners=True,
+    ):
+        super().__init__(input_files=input_files)
+        if not dependencies:
+            self._dependencies = [
+                f"Prereq_{dep}" for dep in ["Power", "Skill", "Level", "Role"]
+            ]
+        else:
+            self._dependencies = [f"Prereq_{dep}" for dep in dependencies]
+        self._template = None
+        self._add_loners = add_loners
+        self._dotstring = None
+        self._graph = None
+        self._loners = []
+
+    def quote(self, s):
+        """Return quoted string"""
+        s = str(s) if not isinstance(s, str) else s
+        return '"{}"'.format(s.replace('"', '\\"'))
+
+    def edge_str(self, a, b=None):
+        """Generates a `->` b notation for dot edges"""
+        comparators = ["<", ">", "≤", "≥"]
+        if b is not None:
+            label = ""
+            if any(comp in b for comp in comparators):
+                b, comparison = b.split(" ", 1)
+                label = f' [label="{comparison}"]'
+            return f"{self.quote(b)} -> {self.quote(a)}{label}"
+        else:
+            return f"{self.quote(a)}"
+
+    def get_edges(self, name, children=[]):
+        """Generate full set of child->node given children"""
+        edges = []
+        edges.append(self.edge_str(name))
+        for c in children:
+            if isinstance(c, str):
+                edges.append(self.edge_str(name, c))
+            elif isinstance(c, dict):
+                key = c.keys()[0]
+                edges.append(self.edge_str(name, key))
+                edges = edges + self.get_edges(key, c[key])
+        return edges
+
+    @property
+    def loners(self):
+        """Loners list, generated by dotstring func"""
+        if self._add_loners and not self._loners:
+            self.dotstring  # need to run to get all children then add/remove loners
+            # TODO: gen list of loners
+        return self._loners
+
+    @property
+    def template(self):
+        if not self._template:
+            gen_powers = True if "powers" in self._stem.lower() else False
+
+            dot_frontmatter = (
+                """digraph {concentrate=true; splines=curved; compound=true;\n"""
+            )
+            dot_subgraph_role = (
+                "\n/* Roles */\n"
+                "\tCaster [shape=box style=filled];\n"
+                "\tSupport [shape=box style=filled];\n"
+                "\tMartial [shape=box style=filled];\n"
+                "\tDefender [shape=box style=filled];\n"
+            )
+            dot_subgraph_skill = (
+                "/* Skill */\n"
+                '\tsubgraph cluster_stats { label="Stats/Attributes"\n'
+                '\t\tsubgraph cluster_agility{label="Agility" {Finesse Stealth} };\n'
+                '\t\tsubgraph cluster_Conviction{label="Conviction" {Bluffing Performance} };\n'
+                '\t\tsubgraph cluster_Intuition{label="Intuition" {Detection Craft} };\n'
+                '\t\tsubgraph cluster_Intelligence{label="Intelligence"'
+                "{Knowledge Investigation} };\n"
+                '\t\tsubgraph cluster_Strength{label="Strength"  {Athletics Brute} };\n'
+                '\t\tsubgraph cluster_Vitality{label="Vitality" {Vitality [style = invis]} };'
+                "\n\t}\n\n"
+            )
+            dot_subgraph_level = (
+                "/* Level */\n"
+                '\tsubgraph cluster_levels { label="Levels";\n'
+                "\tLevel_1 [shape=box style=filled];\n"
+                "\tLevel_2 [shape=box style=filled];\n"
+                "\tLevel_3 [shape=box style=filled];\n"
+                "\tLevel_4 [shape=box style=filled];}\n\n"
+            )
+            dot_subgraph_loners = (
+                "/* Loners */\n"
+                '\tsubgraph cluster_levels {label="No Prerequisites";\n\t%s}\n'
+            )
+            if gen_powers:
+                if "Prereq_Role" in self._dependencies:
+                    dot_frontmatter += dot_subgraph_role
+                if "Prereq_Skill" in self._dependencies:
+                    dot_frontmatter += dot_subgraph_skill
+                if "Prereq_Level" in self._dependencies:
+                    dot_frontmatter += dot_subgraph_level
+            if add_loners:
+                dot_frontmatter += dot_subgraph_loners % ";\n\t".join(self.loners)
+            return dot_frontmatter + "\n/* Linked */\n\t" + "%s\n}"
+        return self._template
+
+    def get_children(self, power_dict):
+        """Return child nodes based on dependency list"""
+        if "Prereq_Level" in power_dict.keys():
+            power_dict["Prereq_Level"] = f"Level_{power_dict['Prereq_Level']}"
+        children = [  # returns embedded lists
+            or_to_list(v) for k, v in power_dict.items() if k in self._dependencies
+        ]
+        return [item for sublist in children for item in sublist]
+
+    @property
+    def dotstring(self):
+        """Write dot file"""
+        if not self._dotstring:
+            edges = []
+            for power_name, power in self.readable_dict.items():
+                power_node = self.get_edges(power_name)
+                children = self.get_children(power)
+                if self._add_loners or children:
+                    edges += self.get_edges(power_name, children)
+                    try:
+                        self._loners.remove(power_node)
+                    except:
+                        ValueError
+                if not children:
+                    self._loners += power_node
+            self._dotstring = self.template % ";\n\t".join(edges)
+        return self._dotstring
+
+    @property
+    def graph(self):
+        if not self._graph:
+            self._graph = pydot.graph_from_dot_data(self.dotstring)[0]
+        return self._graph
+
+    def write(self, output_fp=None):
+        """Write dot file"""
+        if not output_fp:
+            output_fp = "./_Automated_output/" + self._stem + ".dot"
+        with open(output_fp, "w", newline="") as f_output:
+            f_output.write(self.dotstring)
+        logging.info("Wrote dot")
+
+    def to_pic(self, output_fp=None, out_format=["png", "svg"]):
+        """Write graph as pic. png and/or svg. output_fp is one string, no suffix"""
+        if not output_fp:
+            output_fp = "./_Automated_output/" + self._stem
+        out_format = ensure_list(out_format)
+        if "png" in out_format:
+            try:
+                self.graph.write_png(output_fp + ".png", prog="dot.exe")
+            except FileNotFoundError:
+                self.graph.write_png(output_fp + ".png")
+            logging.info("Wrote png")
+        if "svg" in out_format:
+            self.graph.write_svg(output_fp + ".svg")
+            logging.info("Wrote svg")
+
+
+def main():
+    logging.info("Strarted")
+
+
+# ---- Helper ----
+
+
 def load_source(input_yml="04_Powers.yml"):
     """Load the yaml file"""
     with open(input_yml, encoding="utf8") as f:
@@ -42,148 +405,20 @@ def load_source(input_yml="04_Powers.yml"):
     return data
 
 
-def write_csv(input_yml="04_Powers.yml", out_csv="temp.tsv", delimiter="\t"):
-    """Write CSV from YAML, default is tab-delimited"""
-    data = load_source(input_yml)
-    rows = []
-    with open(out_csv, "w", newline="") as f_output:
-        csv_output = csv.DictWriter(
-            f_output,
-            fieldnames=["Name"] + list(data["Template"].keys()),
-            delimiter=delimiter,
-        )
-        csv_output.writeheader()
-        for k, v in data.items():
-            if v and any(v.values()):
-                v["Name"] = k
-                rows.append(v)
-        csv_output.writerows(rows)
+def ensure_list(item):
+    return item if isinstance(item, list) else [item]
 
 
-def quote(s):
-    """Return quoted string"""
-    if not isinstance(s, str):
-        s = str(s)
-    return '"{}"'.format(s.replace('"', '\\"'))
+def list_to_or(entry):
+    """Given string or list, return with joined OR"""
+    entry = [entry] if not isinstance(entry, list) else entry
+    entry = [str(i) for i in entry]
+    return " or ".join(entry)
 
 
-def edge_str(a, b=None):
-    """Generates a `->` b notation for dot edges"""
-    comparators = ["<", ">", "≤", "≥"]
-    label = ""
-    if b is not None:
-        if any(comp in b for comp in comparators):
-            b, comparison = b.split(" ", 1)
-            label = f' [label="{comparison}"]'
-        return f"{quote(b)} -> {quote(a)}{label}"
-    else:
-        return f"{quote(a)}"
-
-
-def get_edges(name, children=[]):
-    """Generate full set of child->node given children"""
-    edges = []
-    edges.append(edge_str(name))
-    for c in children:
-        if isinstance(c, str):
-            edges.append(edge_str(name, c))
-        elif isinstance(c, dict):
-            key = c.keys()[0]
-            edges.append(edge_str(name, key))
-            edges = edges + get_edges(key, c[key])
-    return edges
-
-
-def dot_template(input_yml, add_dependencies=add_dependencies, loners=[]):
-    gen_powers = True if "powers" in input_yml.lower() else False
-
-    dot_frontmatter = """digraph {concentrate=true; splines=curved; compound=true;\n"""
-    dot_subgraph_role = (
-        "\n/* Roles */\n"
-        "\tCaster [shape=box style=filled];\n"
-        "\tSupport [shape=box style=filled];\n"
-        "\tMartial [shape=box style=filled];\n"
-        "\tDefender [shape=box style=filled];\n"
-    )
-    dot_subgraph_skill = (
-        "/* Skill */\n"
-        '\tsubgraph cluster_stats { label="Stats/Attributes"\n'
-        '\t\tsubgraph cluster_agility{label="Agility" {Finesse Stealth} };\n'
-        '\t\tsubgraph cluster_Conviction{label="Conviction" {Bluffing Performance} };\n'
-        '\t\tsubgraph cluster_Intuition{label="Intuition" {Detection Craft} };\n'
-        '\t\tsubgraph cluster_Intelligence{label="Intelligence"'
-        "{Knowledge Investigation} };\n"
-        '\t\tsubgraph cluster_Strength{label="Strength"  {Athletics Brute} };\n'
-        '\t\tsubgraph cluster_Vitality{label="Vitality" {Vitality [style = invis]} };'
-        "\n\t}\n\n"
-    )
-    dot_subgraph_level = (
-        "/* Level */\n"
-        '\tsubgraph cluster_levels { label="Levels";\n'
-        "\tLevel_1 [shape=box style=filled];\n"
-        "\tLevel_2 [shape=box style=filled];\n"
-        "\tLevel_3 [shape=box style=filled];\n"
-        "\tLevel_4 [shape=box style=filled];}\n\n"
-    )
-    dot_subgraph_loners = (
-        "/* Loners */\n" '\tsubgraph cluster_levels {label="No Prerequisites";\n\t%s}\n'
-    )
-    if gen_powers:
-        if "Role" in add_dependencies:
-            dot_frontmatter += dot_subgraph_role
-        if "Skill" in add_dependencies:
-            dot_frontmatter += dot_subgraph_skill
-        if "Level" in add_dependencies:
-            dot_frontmatter += dot_subgraph_level
-    if add_loners:
-        dot_frontmatter += dot_subgraph_loners % ";\n\t".join(loners)
-    return dot_frontmatter + "\n/* Linked */\n\t" + "%s\n}"
-
-
-def yaml_to_dot(
-    input_yml="04_Powers.md", out_dot="temp.dot", add_dependencies=["Role"]
-):
-    edges = []
-    loners = []
-    prereq_strings = ["Prereq Power"]
-    if add_dependencies:
-        prereq_strings += [f"Prereq {dep}" for dep in add_dependencies]
-    for node, vals in load_source(input_yml).items():
-        if node != "Template" and vals:  # ignore first template row
-            if "Prereq Level" in vals.keys():
-                vals["Prereq Level"] = f"Level_{vals['Prereq Level']}"
-            prereqs = {k: vals[k] for k in vals.keys() if k in prereq_strings}
-            logging.debug(
-                "Prereqs: ", {k: vals[k] for k in vals.keys() if k in prereq_strings}
-            )
-            children = []
-            for sublist in prereqs.values():
-                if not isinstance(sublist, list):
-                    sublist = [sublist]
-                children.extend(sublist)
-            if children:
-                edges += get_edges(node, children)
-                try:
-                    loners.remove(get_edges(node))
-                except ValueError:
-                    pass
-            elif add_loners:
-                loners += get_edges(node)
-    dot_string = dot_template(input_yml, add_dependencies, loners) % ";\n\t".join(edges)
-    return dot_string
-
-
-def make_bullet(value, indents=0):
-    """Return string with 4 spaces per indent, plus '- '"""
-    spaces = indents * "    "
-    return f"{spaces}- {value}\n"
-
-
-def make_link(value, indents=0):
-    """For md table of contents, add brackets, parens and remove spaces"""
-    no_spaces = value.lower().replace(" ", "-")
-    link = f"[{value}](#{no_spaces})"
-    return make_bullet(link, indents)
+def or_to_list(entry: str):
+    """Given string, return list split by OR"""
+    return entry.split(" or ")
 
 
 def sort_dict(my_dict, my_list):
@@ -208,199 +443,27 @@ def sort_power(power_dict):
         [
             "Type",
             "Category",
-            "Subcategory",
+            "Description",
+            "Mechanic",
             "XP",
             "PP",
             "Prereq",
+            "Prereq_Role",
+            "Prereq_Level",
+            "Prereq_Skill",
+            "Prereq_Power",
             "To Hit",
             "Damage",
             "Range",
             "AOE",
             "Target",
-            "Mechanic",
             "Save",
-            "Description",
             "Tags",
         ],
     )
 
 
-def list_to_or(entry):
-    """Given string or list, return with joined OR"""
-    entry = [entry] if not isinstance(entry, list) else entry
-    entry = [str(i) for i in entry]
-    return " or ".join(entry)
-
-
-def save_check_to_txt(save: dict):
-    """Given a Save dict, return a sentence"""
-    trigger = save["Trigger"] + ", target(s) make a "
-    if "DR" in save:
-        trigger += "DR " + str(save["DR"]) + " "
-    trigger += list_to_or(save["Type"]) + " Save"
-    output = [trigger, "On fail, target(s) " + save["Fail"]]
-    if "Succeed" in save:
-        output.append("On success, target(s) " + save["Succeed"])
-    return ". ".join(output)
-
-
-def merge_mechanics(power):
-    """Given power dict, merge all appropriate items into Mechanic"""
-    if isinstance(power["Mechanic"], list):  # when mechanics are list, indent after 1st
-        mech_bullets = power["Mechanic"][0] + "\n"
-        for mech_bullet in power["Mechanic"][1:]:
-            mech_bullets += make_bullet(mech_bullet)
-        power["Mechanic"] = mech_bullets[:-1]  # remove last space
-    if "PP" in power:
-        mechanic = "For " + list_to_or(power["PP"]) + " PP, " + power["Mechanic"] + ". "
-    else:
-        mechanic = power["Mechanic"]
-    if "Save" in power:
-        mechanic += save_check_to_txt(power["Save"]) + ". "
-    return "".join([power["Type"], ". ", mechanic])
-
-
-def make_entries(input_items, input_yml="04_Powers.yml"):
-    """Turn each input item into bulleted list with key prefix. Input list of Powers"""
-    data = load_source(input_yml)
-    entries = ""
-    input_list = input_items if isinstance(input_items, list) else [input_items]
-    for item in input_list:  # for power in input list
-        power = data[item]
-        if "PP" in power:
-            pp_list = list_to_or(power["PP"])
-            costs = (  # gave extra newline. don't know why. added [:-1]
-                "Costs:\n"
-                + make_bullet(f"XP: {power['XP']}", 1)
-                + make_bullet(f"PP: {pp_list}", 1)
-            )[:-1]
-        else:
-            costs = f"XP Cost: {power['XP']}"
-        entries += (
-            f"**{item}**\n\n"
-            + make_bullet(f"Description: {power['Description']}", 0)
-            + make_bullet(f"Mechanic: {merge_mechanics(power)}", 0)
-            + make_bullet(costs, 0)
-        )
-        if "Prereq" in power:
-            entries += make_bullet("Prereqs:", 0) + "".join(
-                [  # joins all present prereqs
-                    make_bullet(f"{k}: {list_to_or(v)}", 1)
-                    for k, v in power["Prereq"].items()
-                ]
-            )
-        if "Tags" in power:
-            entries += make_bullet(f"Tags: {power['Tags']}")
-        entries += "\n"
-    return entries
-
-
-def parse_categories(data):
-    """Get set of Categories and Subcategories"""
-    categories = dict()  # category: sub pairing
-    cat_items = dict()  # concatenated string: [items]
-    for k, v in data.items():  # get set of sub/categories for TOC later
-        if v and v["Category"]:
-            cat = v["Category"]
-            sub = v["Subcategory"]
-            concat_str = f"{cat}_{sub}"
-            if cat not in categories:
-                categories[cat] = set(["None"])
-                cat_items[f"{cat}_None"] = []
-            categories[cat].add(sub)
-            if concat_str not in cat_items:
-                cat_items[concat_str] = []
-            cat_items[f"{cat}_{sub}"] += [k]
-    return categories, cat_items
-
-
-def yaml_to_md(input_yml="04_Powers.yml", out_md="temp.md"):
-    """Generate markdown from yaml"""
-    data = load_source(input_yml)
-    categories, cat_items = parse_categories(data=data)
-    file_title = pathlib.Path(input_yml).stem.split("_")[-1]
-
-    with open(out_md, "w", newline="") as f:
-        f.write(
-            f"""# {file_title}\n
-            <!-- DEVELOPERS: Please edit corresponding yaml in 3_Automation -->\n
-            """
-        )
-        body = ""
-        for cat, sublist in categories.items():  # for each sub/category, load entries
-            body += f"## {cat}\n\n"
-            if "None" in sublist:  # Move no subcategory first
-                sublist.remove("None")
-                sublist = ["None"] + list(sublist)
-            for sub in sublist:
-                if sub == "None":
-                    body += make_entries(cat_items[f"{cat}_None"], input_yml=input_yml)
-                elif sub and sub != "None":
-                    body += f"### {sub}\n\n"
-                    body += make_entries(cat_items[f"{cat}_{sub}"], input_yml=input_yml)
-
-        # f.write(md_TOC(categories=categories)) # Commented out TOC
-        f.write(body)
-
-
-def validate_input(input_file="04_Powers.yml", out_delim="\t"):
-    """Check input exists, return all possible versions"""
-    assert pathlib.Path(input_file).exists(), f"Couldn't find {input_file}"
-    try:
-        _ = load_source(input_file)
-    except:
-        raise FileNotFoundError(f"Couldn't load {input_file}")
-    stem = "./_Automated_output/" + os.path.splitext(os.path.basename(input_file))[0]
-
-    x = "t" if out_delim == "\t" else "c"  # Write a 'tsv' if tab, else 'csv'
-
-    return f"{stem}.{x}sv", f"{stem}.dot", f"{stem}.png", f"{stem}.svg", f"{stem}.md"
-
-
-def main(writing=[], input_file="04_Powers.yml", out_delim="\t"):
-    """Decide which generating"""
-    logging.info("Strarted")
-
-    # Check input file, string replace to get various extensions
-    out_csv, out_dot, out_png, out_svg, out_md = validate_input(input_file, out_delim)
-
-    if "csv" in writing:
-        write_csv(input_yml=input_file, out_csv=out_csv, delimiter=out_delim)
-        logging.info("Wrote csv")
-
-    if not any(x in writing for x in ["png", "svg"]) and "dot" in writing:
-        # if you want pic, make dot
-        logging.warning("Adding 'dot' in order to generate picture")
-        writing += ["dot"]
-
-    if "dot" in writing:
-        dot_string = yaml_to_dot(
-            input_yml=input_file, out_dot=out_dot, add_dependencies=add_dependencies
-        )
-        with open(out_dot, "w", newline="") as f_output:
-            f_output.write(dot_string)
-        logging.info("Wrote dot")
-        graphs = pydot.graph_from_dot_data(dot_string)
-        graph = graphs[0]
-
-        if "png" in writing:
-            try:
-                graph.write_png(out_png, prog="dot.exe")
-            except FileNotFoundError:
-                graph.write_png(out_png)
-            logging.info("Wrote png")
-        if "svg" in writing:
-            graph.write_svg(out_svg)
-            logging.info("Wrote svg")
-
-    if "md" in writing:
-        yaml_to_md(input_yml=input_file, out_md=out_md)
-        logging.info("Wrote md")
-
-    if not writing:  # if no extensions
-        logging.warning("Did nothing")
-
-
-if __name__ == "__main__":
-    for input_file in input_files:
-        main(writing, input_file, out_delim)
+def make_bullet(value, indents=0):
+    """Return string with 4 spaces per indent, plus '- '"""
+    spaces = indents * "    "
+    return f"{spaces}- {value}\n"
