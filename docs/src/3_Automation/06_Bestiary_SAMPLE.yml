@@ -1,25 +1,4 @@
 Name:                                 # must be unique
-  Type: Boss, Dealer, Bystander, etc. # Required field
-  HP: X                               # Required field
-  AR: X                               # Required field
-  FP: X                               # Required field
-  Skill Mods:                         # List only those that are not 0
-    AGL: ±X                           # + is implied if not explicit
-    CON: ±X
-    GUT: ±X
-    INT: ±X
-    STR: ±X
-    VIT: ±X
-  Powers:                             # List all [] or `-`. 
-  Threat Level: X                     # Consistent comparable rating fitting formula
-  Phases:                             # Only for Boss
-    One:
-      HP: X
-      Allies:
-  Description: Descrip                # Visually descriptive text
-
-
-Name:                                 # must be unique
   Type: Boss, Dealer, NPC, etc.       # Required field
   HP: X                               # Required field
   AR: X                               # Required field
@@ -31,20 +10,99 @@ Name:                                 # must be unique
     INT: ±X
     STR: ±X
     VIT: ±X
+  Powers:                            # Include Powers (just names), Adversary, House
   Threat Level: X                     # Consistent comparable rating fitting formula
+  Phases:
+    One:
+      HP:
+      Allies:
   Description: Descrip                # Full descriptive text
 
 
-Falcon:
-  Type: Companion, level 1
-  HP: 1
- 
-      
-Poison Plant:
+
+Name: Grunt
   Type: NPC
   HP: 2
-  AP: 0
-  AR: 4
+  AR: 3
+  PP: 0
   Skill Mods:
-    AGL: -1
+    AGL: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+  Threat Level: 1
+  Description: A low level soldier.
+
+Name: Grunt, Shielded
+  Type: NPC
+  HP: 2
+  AR: 2
+  AP: 1
+  PP: 0
+  Skill Mods:
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Shield
+  Threat Level: 1
+  Description: A low level soldier with a Shield.
+
+Name: Guard
+  Type: NPC
+  HP: 3
+  AR: 2
+  AP: 1
+  PP: 1
+  Skill Mods:
+    STR: 1
     VIT: 1
+  Powers:
+    - Attack, Weapon
+    - Shield
+    - Attack, Sweep
+    - Momentum
+  Threat Level: 2
+  Description: A decently armored and trained soldier.
+
+Name: Defender Captain
+  Type: Dealer
+  HP: 5
+  AR: 2
+  AP: 2
+  PP: 2
+  Skill Mods:
+    AGL: 1
+    STR: 1
+    VIT: 1
+    CON: 1
+    INT: 1
+    GUT: 1
+  Powers:
+    - Attack, Weapon
+    - Shield
+    - Attack, Sweep
+    - Attack, Charge
+    - Momentum Aura
+  Threat Level: 3
+  Description: A Captain with access to Powers.
+
+Name: Mystic Caster
+  Type: Dealer
+  HP: 5
+  AR: 3
+  AP: 0
+  PP: 3
+  Skill Mods:
+    CON: 1
+    INT: 1
+    STR: -1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Attack, Mystic Cone
+    - Attack, Mystic Confusion
+    - Attack, Mystic Entangle
+  Threat Level: 3
+  Description: A powerful Caster with access to mystic attacks.
+
