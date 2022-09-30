@@ -1,36 +1,46 @@
-Name:                                 # must be unique
-  Type: Boss, Dealer, NPC, etc.       # Required field
-  HP: X                               # Required field
-  AR: X                               # Required field
-  PP: X                               # Required field
-  Skill Mods:                         # List only those that apply
-    AGL: ±X                           # + is implied if not explicit
-    CON: ±X
-    GUT: ±X
-    INT: ±X
-    STR: ±X
-    VIT: ±X
-  Powers:                            # Include Powers (just names), Adversary, House
-  Threat Level: X                     # Consistent comparable rating fitting formula
-  Phases:
-    One:
-      HP:
-      Allies:
-  Description: Descrip                # Full descriptive text
-
-
+Template:               # must be unique
+  Type: One of          # Dealer, Boss, NPC, Companion
+  Level: X              # Only for Dealers
+  Threat: X             # Measure of difficulty
+  HP: X                 # Required field
+  AR: X                 # Required field
+  PP: X                 # Required field
+  Attrib:               # List only Non-sero
+    AGL: ±X             # + is implied if not explicit
+    CON: ±X             #
+    GUT: ±X             #
+    INT: ±X             #
+    STR: ±X             #
+    VIT: ±X             #
+  Skills:               # List if different from corresponding Attrib
+    Finesse: ±X         #
+    Stealth: ±X         #
+    Bluffing: ±X        #
+    Performance: ±X     #
+    Knowledge: ±X       #
+    Investigation: ±X   #
+    Detection: ±X       #
+    Craft: ±X           #
+    Athletics: ±X       #
+    Brute: ±X           #
+  Powers:               # Include Power names as list
+  Phases:               # Only for bosses
+    One:                #
+      HP: X             #
+      Allies: X         # List of who appears. If multiple of same, list mult times
+  Description: Descrip  # Full descriptive text
 
 Name: Grunt
   Type: NPC
   HP: 2
   AR: 3
   PP: 0
-  Skill Mods:
+  Attrib:
     AGL: 1
     INT: -1
   Powers:
     - Attack, Weapon
-  Threat Level: 1
+  Threat: 1
   Description: A low level soldier.
 
 Name: Grunt, Shielded
@@ -39,13 +49,13 @@ Name: Grunt, Shielded
   AR: 2
   AP: 1
   PP: 0
-  Skill Mods:
+  Attrib:
     STR: 1
     INT: -1
   Powers:
     - Attack, Weapon
     - Shield
-  Threat Level: 1
+  Threat: 1
   Description: A low level soldier with a Shield.
 
 Name: Guard
@@ -54,7 +64,7 @@ Name: Guard
   AR: 2
   AP: 1
   PP: 1
-  Skill Mods:
+  Attrib:
     STR: 1
     VIT: 1
   Powers:
@@ -62,16 +72,17 @@ Name: Guard
     - Shield
     - Attack, Sweep
     - Momentum
-  Threat Level: 2
+  Threat: 2
   Description: A decently armored and trained soldier.
 
 Name: Defender Captain
   Type: Dealer
+  Threat: 3
   HP: 5
   AR: 2
   AP: 2
   PP: 2
-  Skill Mods:
+  Attrib:
     AGL: 1
     STR: 1
     VIT: 1
@@ -84,16 +95,16 @@ Name: Defender Captain
     - Attack, Sweep
     - Attack, Charge
     - Momentum Aura
-  Threat Level: 3
   Description: A Captain with access to Powers.
 
 Name: Mystic Caster
   Type: Dealer
+  Level: 3
   HP: 5
   AR: 3
   AP: 0
   PP: 3
-  Skill Mods:
+  Attrib:
     CON: 1
     INT: 1
     STR: -1
@@ -103,6 +114,5 @@ Name: Mystic Caster
     - Attack, Mystic Cone
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
-  Threat Level: 3
   Description: A powerful Caster with access to mystic attacks.
 

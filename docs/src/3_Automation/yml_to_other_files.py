@@ -6,7 +6,7 @@ Takes yml files as input, can generate a series of other files, including
     PNG/SVG  - for rendering flow charts
 """
 input_files = ["04_Powers.yml", "05_Vulnerabilities.yml"]  # edit this, permits multiple
-writing = ["md"]  # , "dot", "png", "csv", "svg"]  #         # list of options
+writing = ["md", "dot", "png", "csv", "svg"]  #         # list of options
 dependencies = ["Skill"]  # "Skill", "Level", "Role"]  # # list of options
 add_loners = False  #                                   # Include items without links?
 out_delim = "\t"  #                                     # delimiter for csv
@@ -23,6 +23,81 @@ logging.basicConfig(
     format="[%(asctime)s][%(funcName)-8s][%(levelname)-8s]: %(message)s",
     datefmt="%H:%M:%S",
 )
+
+
+# ---- Helper ----
+# TODO: move to utils script? Make helper class?
+
+
+def load_source(input_yml="04_Powers.yml"):
+    """Load the yaml file"""
+    with open(input_yml, encoding="utf8") as f:
+        data = yaml.safe_load(f)
+    return data
+
+
+def ensure_list(item):
+    return item if isinstance(item, list) else [item]
+
+
+def list_to_or(entry):
+    """Given string or list, return with joined OR"""
+    entry = [entry] if not isinstance(entry, list) else entry
+    entry = [str(i) for i in entry]
+    return " or ".join(entry)
+
+
+def or_to_list(entry: str):
+    """Given string, return list split by OR"""
+    return entry.split(" or ")
+
+
+def sort_dict(my_dict, my_list):
+    """Sort dict by list of keys. Return OrderedDict"""
+    index_map = {v: i for i, v in enumerate(my_list)}
+    return OrderedDict(sorted(my_dict.items(), key=lambda pair: index_map[pair[0]]))
+
+
+def sort_power(power_dict):
+    """Given a power, return OrderedDict in markdown read order"""
+    if "Prereq" in power_dict:
+        power_dict["Prereq"] = sort_dict(
+            power_dict["Prereq"], ["Role", "Level", "Skill", "Power"]
+        )
+    if "Save" in power_dict:
+        power_dict["Save"] = sort_dict(
+            power_dict["Save"], ["Trigger", "DR", "Type", "Fail", "Succeed"]
+        )
+
+    return sort_dict(
+        power_dict,
+        [
+            "Type",
+            "Category",
+            "Description",
+            "Mechanic",
+            "XP",
+            "PP",
+            "Prereq",
+            "Prereq_Role",
+            "Prereq_Level",
+            "Prereq_Skill",
+            "Prereq_Power",
+            "To Hit",
+            "Damage",
+            "Range",
+            "AOE",
+            "Target",
+            "Save",
+            "Tags",
+        ],
+    )
+
+
+def make_bullet(value, indents=0):
+    """Return string with 4 spaces per indent, plus '- '"""
+    spaces = indents * "    "
+    return f"{spaces}- {value}\n"
 
 
 class Powers(object):
@@ -175,6 +250,7 @@ class Markdown(Powers):
     def write(self, output_fp=None, TOC=False):
         """Write markdown"""
         if not output_fp:
+            # TODO: Change default out to 1_Mechanics?
             output_fp = "./_Automated_output/" + self._stem + ".md"
         output = (
             "<!-- DEVELOPERS: Please edit corresponding yml in 3_Automation -->\n\n"
@@ -391,79 +467,25 @@ class Dot(Powers):
             logging.info("Wrote svg")
 
 
-def main():
-    logging.info("Strarted")
+def main(
+    input_files=input_files,
+    writing=writing,
+    dependencies=dependencies,
+    add_loners=add_loners,
+    out_delim=out_delim,
+):
+    for f in input_files:
+        logging.info(f"Strarted {f}")
+        if "md" in writing:
+            Markdown(f).write()
+        if "csv" in writing:
+            Csv(f).write(delimiter=out_delim)
+        if any(img_out in writing for img_out in ["dot", "png", "svg"]):
+            dot = Dot(f, dependencies=dependencies, add_loners=add_loners)
+            if "dot" in writing:
+                dot.write()
+            dot.to_pic(out_format=[i for i in writing if i in ["png", "svg"]])
 
 
-# ---- Helper ----
-
-
-def load_source(input_yml="04_Powers.yml"):
-    """Load the yaml file"""
-    with open(input_yml, encoding="utf8") as f:
-        data = yaml.safe_load(f)
-    return data
-
-
-def ensure_list(item):
-    return item if isinstance(item, list) else [item]
-
-
-def list_to_or(entry):
-    """Given string or list, return with joined OR"""
-    entry = [entry] if not isinstance(entry, list) else entry
-    entry = [str(i) for i in entry]
-    return " or ".join(entry)
-
-
-def or_to_list(entry: str):
-    """Given string, return list split by OR"""
-    return entry.split(" or ")
-
-
-def sort_dict(my_dict, my_list):
-    """Sort dict by list of keys. Return OrderedDict"""
-    index_map = {v: i for i, v in enumerate(my_list)}
-    return OrderedDict(sorted(my_dict.items(), key=lambda pair: index_map[pair[0]]))
-
-
-def sort_power(power_dict):
-    """Given a power, return OrderedDict in markdown read order"""
-    if "Prereq" in power_dict:
-        power_dict["Prereq"] = sort_dict(
-            power_dict["Prereq"], ["Role", "Level", "Skill", "Power"]
-        )
-    if "Save" in power_dict:
-        power_dict["Save"] = sort_dict(
-            power_dict["Save"], ["Trigger", "DR", "Type", "Fail", "Succeed"]
-        )
-
-    return sort_dict(
-        power_dict,
-        [
-            "Type",
-            "Category",
-            "Description",
-            "Mechanic",
-            "XP",
-            "PP",
-            "Prereq",
-            "Prereq_Role",
-            "Prereq_Level",
-            "Prereq_Skill",
-            "Prereq_Power",
-            "To Hit",
-            "Damage",
-            "Range",
-            "AOE",
-            "Target",
-            "Save",
-            "Tags",
-        ],
-    )
-
-
-def make_bullet(value, indents=0):
-    """Return string with 4 spaces per indent, plus '- '"""
-    spaces = indents * "    "
-    return f"{spaces}- {value}\n"
+if __name__ == "__main__":
+    main()
