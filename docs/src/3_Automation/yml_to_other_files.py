@@ -430,8 +430,8 @@ class Dot(Powers):
                     edges += self.get_edges(power_name, children)
                     try:
                         self._loners.remove(power_node)
-                    except:
-                        ValueError
+                    except ValueError:
+                        pass
                 if not children:
                     self._loners += power_node
             self._dotstring = self.template % ";\n\t".join(edges)
