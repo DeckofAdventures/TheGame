@@ -376,7 +376,7 @@ class Dot(Powers):
             dot_subgraph_skill = (
                 "/* Skill */\n"
                 '\tsubgraph cluster_stats { label="Stats/Attributes"\n'
-                '\t\tsubgraph cluster_agility{label="Agility" {Finesse Stealth} };\n'
+                '\t\tsubgraph cluster_Agility{label="Agility" {Finesse Stealth} };\n'
                 '\t\tsubgraph cluster_Conviction{label="Conviction" {Bluffing Performance} };\n'
                 '\t\tsubgraph cluster_Intuition{label="Intuition" {Detection Craft} };\n'
                 '\t\tsubgraph cluster_Intelligence{label="Intelligence"'

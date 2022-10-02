@@ -172,13 +172,16 @@ Attack, Mystic Cone:
     Mechanic:
         - Choose one effect when you take this power
         - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
-        - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
+        - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down.
     Type: Major
     XP: 2
     PP: 1
     Prereq:
         Power: Attack, Mystic
         Role: Caster
+        Skill:
+            - Knowledge > 1
+            - Craft > 1
     Tags: Multi-target
 
 Attack, Mystic Confusion:
