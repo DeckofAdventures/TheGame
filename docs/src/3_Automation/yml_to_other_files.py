@@ -475,7 +475,7 @@ def main(
     out_delim=out_delim,
 ):
     for f in input_files:
-        logging.info(f"Strarted {f}")
+        logging.info(f"Started {f}")
         if "md" in writing:
             Markdown(f).write()
         if "csv" in writing:
