@@ -49,7 +49,6 @@ Attack, Charge:
     PP: [1, 2]
     Prereq:
         Power: Attack, Weapon
-    Prereq:
         Role:
             - Defender
             - Martial
