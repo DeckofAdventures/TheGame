@@ -66,10 +66,12 @@ Attack, Sweep:
         Fail: Knocked Down
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
         Power: Attack, Weapon
-        Role: [Martial, Defender]
+        Role: 
+            - Martial
+            - Defender
     Tags: Multi-target
 
 Attack, Disarm:
@@ -77,7 +79,7 @@ Attack, Disarm:
         - Combat
         - Weapon Attacks
     Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-    Mechanic: When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.
+    Mechanic: When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield
     Type: Major
     XP: 2
     PP: 1
@@ -148,7 +150,9 @@ Attack, Mystic Aura:
     PP: [1,2]
     Prereq:
         Power: Attack, Mystic
-        Role: [Caster, Support]
+        Role: 
+            - Caster
+            - Support
     Tags:  Multi-target
 
 Attack, Mystic Amplification :
@@ -162,17 +166,19 @@ Attack, Mystic Amplification :
     PP: 1
     Prereq:
         Power: Attack, Mystic
-        Role: [Martial, Caster]
+        Role: 
+            - Martial
+            - Caster
 
 Attack, Mystic Cone:
     Category: 
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
-    Mechanic:
+    Mechanic: # Don't include period on final item - md conversion will add
         - Choose one effect when you take this power
         - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
-        - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down.
+        - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
     Type: Major
     XP: 2
     PP: 1
@@ -195,7 +201,9 @@ Attack, Mystic Confusion:
     PP: [1,2]
     Prereq:
         Power: Attack, Mystic
-        Role: [Support, Caster]
+        Role:
+            - Support
+            - Caster
     Tags: Multi-target
 
 Attack, Mystic Entangle:
@@ -215,7 +223,9 @@ Attack, Mystic Entangle:
         Fail: Entangled
     Prereq:
         Power: Attack, Mystic
-        Role: [Support, Caster]
+        Role: 
+            - Support
+            - Caster
     Tags: Multi-target
 
 Attack, Mystic Deprivation:
@@ -235,7 +245,9 @@ Attack, Mystic Deprivation:
         Fail: Blinded or Deafened unless immune.
     Prereq:
         Power: Attack, Mystic
-        Role: [Support, Caster]
+        Role: 
+            - Support
+            - Caster
     Tags: Multi-target
 
 Attack, Mystic Dual-Shot:
@@ -298,7 +310,9 @@ Momentum: # Without this power, this should cost a major action.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. 
     Save:
         Trigger: If unwilling
-        Type: [STR, AGL] 
+        Type: 
+            - STR
+            - AGL
         Fail: be moved to 1 space of attacker's end position.
     Prereq:
         Role: Defender
@@ -316,7 +330,9 @@ Momentum Aura:
     Mechanic: Your Momentum ability extends to 3 spaces. 
     Save:
         Trigger: If unwilling
-        Type: [STR, AGL] 
+        Type: 
+            - STR
+            - AGL 
         Fail: be moved to 1 space of attacker's end position.
     Prereq:
         Power: Momentum
@@ -407,7 +423,9 @@ Lend Confusion:
     Prereq:
         Level: 2
         Power: Lend Distraction
-        Role: [Support, Caster]
+        Role: 
+            - Support
+            - Caster
 
 Lend Mass Confusion:
     Category: 
@@ -421,7 +439,9 @@ Lend Mass Confusion:
     Prereq:
         Level: 3
         Power: Lend Confusion
-        Role: [Support, Caster]
+        Role:
+            - Support
+            - Caster
     Tags: Multi-target
 
 Lend or Remove Skill:
@@ -429,7 +449,7 @@ Lend or Remove Skill:
         - Combat
         - Support
     Description: You really know how to target an ability and either support it or get in it's way.
-    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn.
+    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn
     Type: Major
     XP: 2
     PP: [1,2]
@@ -457,7 +477,9 @@ Lend Vigor:
     XP: 2
     PP: [1,2]
     Prereq:
-        Role: [Support, Caster]
+        Role:
+            - Support
+            - Caster
 
 Slow:
     Category: 
@@ -470,7 +492,9 @@ Slow:
     PP: 2
     Prereq:
         Level: 3 
-        Role: [Support, Caster]
+        Role:
+            - Support
+            - Caster
 
 Shield, Others:
     Category: 
@@ -619,7 +643,9 @@ Barrier:
     XP: 2
     PP: [1,2]
     Prereq:
-        Role: [Support, Caster]
+        Role:
+            - Support
+            - Caster
 
 Illusion:
     Category: 

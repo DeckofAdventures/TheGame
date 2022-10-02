@@ -250,8 +250,7 @@ class Markdown(Powers):
     def write(self, output_fp=None, TOC=False):
         """Write markdown"""
         if not output_fp:
-            # TODO: Change default out to 1_Mechanics?
-            output_fp = "./_Automated_output/" + self._stem + ".md"
+            output_fp = "../1_Mechanics/" + self._stem + ".md"
         output = (
             "<!-- DEVELOPERS: Please edit corresponding yml in 3_Automation -->\n\n"
         )
@@ -485,6 +484,10 @@ def main(
             if "dot" in writing:
                 dot.write()
             dot.to_pic(out_format=[i for i in writing if i in ["png", "svg"]])
+    if len(input_files) == 2:
+        Csv(["04_Powers.yml", "05_Vulnerabilities.yml"]).write(
+            output_fp="../1_Mechanics/06_Combined.tsv"
+        )
 
 
 if __name__ == "__main__":

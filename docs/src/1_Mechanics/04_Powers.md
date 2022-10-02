@@ -24,17 +24,17 @@
 - Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
 - XP: 1
 - Prereq_Role: Defender
-- Prereq_Skill: Brute > 1
+- Prereq_Skill: Brute > 0
 
 
 **Momentum Aura**
 
 - Description: Your strength is supernatural, bending the gravity around you.
-- Mechanic: Passive. For 1 PP, Your Momentum ability extends to 3 spaces.. If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
+- Mechanic: Major. For 1 PP, Your Momentum ability extends to 3 spaces.. If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
 - XP: 2
 - PP: 1
 - Prereq_Role: Defender
-- Prereq_Skill: Brute > 2
+- Prereq_Skill: Brute > 1
 - Prereq_Power: Momentum
 - Target: 6
 - Tags: Multi-target
@@ -46,6 +46,7 @@
 - Mechanic: Minor. As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
 - XP: 1
 - Prereq_Level: 2
+- Prereq_Skill: Detection > 0
 - Tags: Difficulty Prediction
 
 
@@ -99,6 +100,7 @@
 - XP: 2
 - PP: 1
 - Prereq_Role: Caster
+- Prereq_Skill: Knowledge > 1 or Craft > 1
 - Prereq_Power: Attack, Mystic
 - Tags: Multi-target
 
@@ -143,7 +145,7 @@
 - Description: You are so adept mystic arts you can start another spell before even finishing the first.
 - Mechanic: Minor. On your turn, you may take a second Mystic Attack with Lower Hand.
 - XP: 3
-- Prereq_Skill: Finesse > 1
+- Prereq_Skill: Finesse > 1 or Knowledge > 1 or Craft > 1
 - Prereq_Power: Attack, Mystic
 - Tags: Multi-target
 
@@ -220,7 +222,7 @@
 **Lend or Remove Skill**
 
 - Description: You really know how to target an ability and either support it or get in it's way.
-- Mechanic: Major. For 1 or 2 PP, Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill.. 
+- Mechanic: Major. For 1 or 2 PP, Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn. 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Support
@@ -288,6 +290,7 @@
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Defender or Martial
+- Prereq_Power: Attack, Weapon
 
 
 **Attack, Sweep**
@@ -304,7 +307,7 @@
 **Attack, Disarm**
 
 - Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-- Mechanic: Major. For 1 PP, When you spend an Power Point to disarm, perfom a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield.. 
+- Mechanic: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield. 
 - XP: 2
 - PP: 1
 - Prereq_Role: Martial or Defender
@@ -313,7 +316,7 @@
 **Attack, Vengeance**
 
 - Description: Ever the protector on the field, you leap at the chance to avenge an ally.
-- Mechanic: Major. When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your turn with the Upper Hand.
+- Mechanic: Major. When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your next turn with the Upper Hand.
 - XP: 1
 - Prereq_Role: Defender
 - Prereq_Power: Attack, Weapon
@@ -324,6 +327,7 @@
 - Description: You are adept at wielding two weapons in combat.
 - Mechanic: Minor. On your turn, you may make a second attack as a Minor Action with Lower Hand.
 - XP: 3
+- Prereq_Skill: Finesse > 1 or Brute > 1
 - Prereq_Power: Attack, Weapon
 
 
@@ -343,7 +347,7 @@
 - Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
 - Mechanic: Passive. At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
 - XP: 5
-- Prereq_Skill: Craft > 1 or Knowledge > 1
+- Prereq_Skill: Craft > 0 or Knowledge > 0
 - Tags: Companion
 
 
@@ -389,7 +393,7 @@
 **Luck Shared**
 
 - Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-- Mechanic: Minor. When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
+- Mechanic: Minor. When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. Until the end of their next turn, or for the next 6 seconds if out of combat, all draws are made with the Upper Hand.
 - XP: 1
 - Tags: Suited Hit
 
@@ -448,6 +452,7 @@
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Caster
+- Prereq_Skill: Knowledge > 0
 
 
 ## Fate Cards
@@ -465,7 +470,7 @@
 **Stealthy Surprise**
 
 - Description: An undetected assailant is particularly deadly.
-- Mechanic: Minor. Hide.
+- Mechanic: Minor. You attempt to hide from nearby creatures.
 - XP: 1
 - Prereq_Skill: Stealth > 1
 - Tags: Stealth

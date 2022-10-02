@@ -35,7 +35,7 @@
 
 **Chaotic Companion**
 
-- Description: You and your companion don not always get along, sometimes they don not do exactly what you ask.
+- Description: You and your companion do not always get along, sometimes they do not do exactly what you ask.
 - Mechanic: Vulny. When you draw a Suited Miss to command your companion, the DM gains control of the companion temporarily, with the duration at the DM's discretion (Minor/Major).
 - XP: -1 or -2
 - Prereq_Power: Creature Connection
