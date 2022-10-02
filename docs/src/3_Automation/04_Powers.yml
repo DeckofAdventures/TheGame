@@ -108,6 +108,9 @@ Attack, Dual-Wield:
     XP: 3
     Prereq:
         Power: Attack, Weapon
+        Skill:
+            - Finesse > 1
+            - Brute > 1
 
 Attack, Dual-Wield Master:
     Category: 
