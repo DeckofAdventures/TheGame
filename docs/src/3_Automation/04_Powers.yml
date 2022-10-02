@@ -244,7 +244,11 @@ Attack, Mystic Dual-Shot:
     Type: Minor
     XP: 3
     Prereq:
-        Skill: Finesse > 1
+        Skill: 
+            - Finesse > 1
+            - Knowledge > 1
+            - Craft > 1
+        
         Power: Attack, Mystic
     Tags: Multi-target
 
