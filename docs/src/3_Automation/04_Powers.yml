@@ -299,14 +299,14 @@ Momentum: # Without this power, this should cost a major action.
         Fail: be moved to 1 space of attacker's end position.
     Prereq:
         Role: Defender
-        Skill: Brute > 1
+        Skill: Brute > 0
 
 Momentum Aura:
     Category: 
         - Combat
         - Control
     Description: Your strength is supernatural, bending the gravity around you.
-    Type: Passive
+    Type: Major
     XP: 2
     PP: 1
     Target: 6
@@ -318,7 +318,7 @@ Momentum Aura:
     Prereq:
         Power: Momentum
         Role: Defender
-        Skill: Brute > 2
+        Skill: Brute > 1
     Tags: Multi-target
 
 Find Weakness:
@@ -331,6 +331,7 @@ Find Weakness:
     XP: 1
     Prereq:
         Level: 2
+        Skill: Detection > 0
     Tags: Difficulty Prediction
 
 Pack Tactics:
@@ -425,7 +426,7 @@ Lend or Remove Skill:
         - Combat
         - Support
     Description: You really know how to target an ability and either support it or get in it's way.
-    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill.
+    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -501,8 +502,8 @@ Creature Connection:
     XP: 5
     Prereq:
         Skill: 
-            - Craft > 1
-            - Knowledge > 1
+            - Craft > 0
+            - Knowledge > 0
     Tags: Companion
 
 Creature Link:
@@ -557,7 +558,7 @@ Luck Shared:
         - Game Mechanics
         - Adjust Odds
     Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-    Mechanic: When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. For their next turn, or the next 6 seconds if out of combat, all draws are made with the Upper Hand.
+    Mechanic: When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. Until the end of their next turn, or for the next 6 seconds if out of combat, all draws are made with the Upper Hand.
     Type: Minor
     XP: 1
     Tags: Suited Hit
@@ -627,6 +628,7 @@ Illusion:
     PP: [1,2]
     Prereq:
         Role: Caster
+        Skill: Knowledge > 0
 
 Speedy:
     Category: 
