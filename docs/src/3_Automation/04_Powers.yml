@@ -649,7 +649,7 @@ Stealthy Surprise:
         - Stealth
     Type: Minor
     Description: An undetected assailant is particularly deadly.
-    Mechanic: Hide.
+    Mechanic: You attempt to hide from nearby creatures.
     XP: 1
     Prereq:
         Skill: Stealth > 1
