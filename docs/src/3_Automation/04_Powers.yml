@@ -91,7 +91,7 @@ Attack, Vengeance:
         - Combat
         - Weapon Attacks
     Description: Ever the protector on the field, you leap at the chance to avenge an ally.
-    Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your turn with the Upper Hand. 
+    Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your next turn with the Upper Hand. 
     Type: Major
     XP: 1
     Prereq:
