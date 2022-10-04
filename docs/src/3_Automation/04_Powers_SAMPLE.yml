@@ -1,94 +1,105 @@
-Template:           # This dictates the CSV columns and order thereof
-    Category:       # One string. If none, 'None'
-    Subcategory:    # One string. If none, 'None'
-    Type:           # One string of Passive, Minor, or Major
-    XP Cost:        # One digit
-    PP Cost:        # One or more digits. For multiple [1, 2]
-    # Notes:
-    #        Prereqs must match item in 'Prereq' section.
-    #        For multiple, use [A, B] brackets or indented `-` bullets
-    #        Multiple implies 'OR'. Will require revisions for 'AND'
-    Prereq Skill:   # One or more strings
-    Prereq Level:   # Number
-    Prereq Role:    # One or more strings
-    Prereq Power:   # One or more strings
-    Tags:           # One string
-    Description:    # Flavor: 1-2 sentences
-    Mechanic:       # Rule: 1-2 sentences
-
-# Prereq items
-Finesse > 0:
-Brute > 0:
-Intelligence > 0:
-Defender:
-Martial:
-
-
-# - Name: Attack, Weapon
-#    - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-#    - Mechanic: As an action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
-#    - Type: Minor
-#       + XP Cost: 1
-#    - Prerequisites: Skill: Finesse or Brute > 0
-#    - Tags:
-
-
+Template: # Power name        # Must be unique
+    Type: One of              # Passive, Vulny, Major, Minor, Adversary, Free, House. 
+    # Note: Type is required. For Companion actions, type indicates type req for dealer
+    Category: One or list     # One string or list in sub-cat order
+    XP: X
+    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
+    Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
+        Role: X
+        Level: X              # Integer               
+        Skill: X > 1          #              
+        Power:                # Must match unique power name
+    To Hit: X                 # If not specified, assumed character's primary skill
+    Damage: X                 # Integer           
+    Range: X                  # Integer of spaces. 0 for self, 1 for melee
+    AOE: Shape X              # Aura, cone, or line followed by integer for size
+    Target: X                 # Integer, # of targets
+    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
+    Save:                     # Separated here, merged in md
+        Trigger: One of       # Once, On hit, Start turn, etc. Sentence start.
+        DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
+        Type: MOD             # AGL, CON, etc
+        Fail: Descrip         # effect on fail
+        Succeed: Descrip      # effect on success. Assume no access to above
+    Description: Descrip      # Flavor: 1-2 sentences             
+    Tags: One or list
 
 Attack, Weapon:
-    Category: Combat
-    Subcategory: Weapon Attacks
+    Category: 
+        - Combat
+        - Weapon Attacks
+    Type: Major
+    Mechanic: You make a check to attack an Enemy. This may be performed while under the effects of another Power
+    XP: 1
+    Prereq:
+        Skill:
+            - Finesse > 0
+            - Brute > 0
     Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-    Mechanic: As an action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
-    Type: Minor
-    XP Cost: 1
-    Prereq Skill:
-        - Finesse > 0
-        - Brute > 0
     Tags: Attack
 
 Attack, Charge:
-    Category: Combat
-    Subcategory: Weapon Attacks
+    Category: 
+        - Combat
+        - Weapon Attacks
+        - Example Third
+    Type: Major
+    Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
+    XP: 2
+    PP: 2
+    Prereq:
+        Power: Attack, Weapon
+        Level: 3
+        Role:
+            - Defender
+            - Martial
     Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-    Mechanic: You must move 3 spaces before using this Power. You add +1/2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
-    Type: Major
-    XP Cost: 2
-    PP Cost: 2
-    Prereq Power: Attack, Weapon
-    Prereq Level: 3
-    Prereq Role:
-        - Defender
-        - Martial
-    Tags: Attack+
-Attack, Sweep:
-    Category: Combat
-    Subcategory: Example Second
-    Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 PP, Targets make a DR 3 Agility check vs. your TC to avoid being Knocked Down.
-    Type: Major
-    XP Cost: 2
-    PP Cost: [1, 2]
-    Prereq Power: Attack, Weapon
-    Prereq Role:
-        - Martial
-        - Defender
     Tags: Attack
 
-Cunning:
-    Category: Roleplay
-    Subcategory: None
-    Description: You're sharper than the rest when you take your time.
-    Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
-    Type: Passive
-    XP Cost: 1
-    Prereq Skill: Intelligence > 0
-    Tags:
+Sweep:
+    Category: Combat
+    Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
+    Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space 
+    Type: Major
+    XP: 2
+    PP: [1, 2]
+    Prereq:
+        Power: Attack, Weapon
+        Role:
+            - Martial
+            - Defender
+        Level: 2
+        Skill: 
+            - Finesse > 0
+            - Brute > 0
+    Save:
+        Trigger: For 2 PP, on a hit
+        DR: 3
+        Type: AGL
+        Fail: Knocked Down
+        Succeed: "EXAMPLE: do not copy"
+    Tags: Attack
 
-Focused:
-  Category: Roleplay
-  Subcategory: None
-  Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
-  Mechanic: Choose one Skill. When engaged in a non-instantaneous task that involves that skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
-  Type: Passive
-  XP Cost: 0
-  Tags:
+Momentum: # Without this power, this should cost a major action.
+    Category: 
+        - Combat
+    Description: By brute strength, force others to move around the battlefield. 
+    Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you
+    Type: Passive
+    XP: 1
+    Save:
+        Trigger: If unwilling
+        Type: [STR, AGL] 
+        Fail: be moved to 1 space of attacker's end position
+    Prereq:
+        Role: Defender
+        Skill: Brute > 1
+
+Cunning:
+    Category: 
+        - Roleplay
+    Description: You're sharper than the rest when you take your time.
+    Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills
+    Type: Passive
+    XP: 1
+    Tags:
