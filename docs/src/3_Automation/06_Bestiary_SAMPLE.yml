@@ -3,6 +3,7 @@ Template:               # must be unique
   Level: X              # Only for Dealers
   Threat: X             # Measure of difficulty
   HP: X                 # Required field
+  AP: X                 # 0 is default if blank
   AR: X                 # Required field
   PP: X                 # Required field
   Attrib:               # List only Non-sero
