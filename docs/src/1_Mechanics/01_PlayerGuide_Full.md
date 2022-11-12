@@ -120,7 +120,7 @@ creative!
 
 <!--Add some examples of specific skills being used, with general description of domain --> 
 
-### Dealers, Bystanders, Minions and Companions
+### Dealers, NPCs and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
 considered Dealers and differ from the majority of other characters in the world. The
@@ -135,7 +135,7 @@ the Game Master. They...
     - Can receive and use Fate Cards.
     - Have a Primary Suit, and related mechanics.
 
-2. Bystanders and Minions. All other characters. They...
+2. NPCs. All other characters. They...
     - Are weaker than Dealers
     - Have limited access to Powers
     - Have 1-3 HP.
@@ -183,8 +183,7 @@ Once the DR has been announced, players must make the check. Players may consult
 their GM to determine if another Attribute or Skill may be used instead. A player will
 draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
-within the DR. A Modifier is the maximum value a player may add or subtract; this is
-usually done to get closer to the TC. A Modifier is indicated on the character sheet
+within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
 next to the relevant Skill or Attribute related to the Check. Think of it as a
 character's ability to 'aim' a check to get closer to the TC. 
 
@@ -194,7 +193,7 @@ the player to describe how their character successfully accomplishes the action.
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort to match the task at hand as closely as possible. Remembering
 which card is 5 below a 3 can be tough, so there is a table below as well as a
-[printable tool](./Circlular_TC-DR_Tool/README.md) to help look up the DR range as you
+[printable tool](./Visual_Tools/README.md) to help look up the DR range as you
 get familiar with the system.
 
 **Target Card Range Table**
@@ -278,18 +277,27 @@ Some checks will be initiated by a character's actions and require others to res
 pitting two skills against each other. This might be one character sneaking past
 another (e.g., Stealth vs. Detection), or one character causing a magical effect that
 another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In these
-cases, the character who initiated the action (i.e., the Attacker) reveals a TC and
-sets the DR; the DR for a Contested Check is 3 minus half of the Attacker's relevant
-modifier, to a minimum of 0. The character(s) responding are the Target(s). Rules that
-describe a 
+cases, the character who initiated the action (i.e., the Attacker) sets the DR; the DR
+for a Contested Check is 3 minus half of the Attacker's relevant modifier, to a minimum
+of 0. The character(s) responding are the Target(s), and must draw a Check against the
+initiator's TC. Rules that describe a 
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
-fail individually.
+ fail individually.
 
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
 with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
 Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
 successfully convince Jonas of something in this scenario. 
+
+#### Saves
+
+When a character attempts to resist or shrug off a negative effect, they make a Save.
+This could be caused by a Power, Status Condition, or a environmental effect. When a
+character makes a Save, they draw a card against their own TC and use their relevant Attribute
+Modifier, with a DR set by the initiating effect. If the effect is a Power, the DR is
+3 minus half of the initiator's relevant Skill modifier. 
+Saves may still have consequences even on a success, as specified by the initiating effect.
 
 ### In Combat
 
@@ -300,7 +308,7 @@ teamwork and creativity. To keep up the pace, players should be sure to study th
 character sheets and know their options ahead of combat, and use others’ turns to make
 their choices. Deck of Adventures is all about teamwork, so communication is encouraged.
 
-GMs may provide a grid map and other visual cues like character tokens to help players
+GMs may provide a map and other visual cues like character tokens to help players
 visualize the situation. On a square grid, moving diagonally counts as one space unless
 otherwise ruled by the GM.
 
@@ -315,10 +323,12 @@ draw a Target Card and place it in on the table in view. The values represent th
 order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the same
 Target Card values as an enemy go first. If two players draw the same Target Card, they
 can decide who goes first. Without consensus, the player with the higher Agility
-modifier goes first.
+modifier goes first. In the event of a Surprise Round, the characters who are part of
+the Surprise Round draw their TCs first and take one full round  before the characters
+being surprised draw their TCs.
 
 2. A player may delay their turn in initiative order to intentionally occur before or
-after another player(s)', but their turn is forfeited if they do not announce their
+after another character(s)', but their turn is forfeited if they do not announce their
 action(s) by the end of the round. A GM may skip a player’s turn if they are unprepared
 and need more time to think.
 
@@ -348,7 +358,7 @@ others. If an action specifies a skill, this requires a check.
     2. **Minor**
 
         - *Object interaction*: Pressing a button, pulling a lever, using a disposable
-       item, etc.
+       item, equipping or changing weapons, etc.
         - *Inspect*: Detection or Investigation vs. GM-determined DR; learn something
          about an opponent or the terrain.
         - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
@@ -363,6 +373,12 @@ others. If an action specifies a skill, this requires a check.
         - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
          you by target(s) who failed
 
+ A character can choose to Ready their Major Action to occur on a stated trigger, such
+ as "I will make a Weapon Attack when an enemy moves within 1 space of me." If the
+ trigger occurs, the readied Major Action can then be activated. If the trigger does not
+ occur before the start of the character's next turn, this Major Action is forfeited,
+ along with any Power Points used for the Major Action. 
+
 #### Ending Combat
 
 When the last enemy combatant has been Knocked Out, retreats, or surrenders, Combat is
@@ -376,21 +392,21 @@ Some Status Conditions will impact a character over time. The duration of each C
 is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction
-Check at the start of their turn vs their  own TC. If failed, they may either move or
+Save at the start of their turn vs their  own TC. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength check. Until
-they are successful, they may not move and any Agility Checks are made with Lower
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength Save. Until
+they are successful, they may not move and any Agility Saves are made with Lower
 Hand.
 
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
-is halved, rounding up. All Strength and Agility Checks are made with Lower Hand. When
+is halved, rounding up. All Strength and Agility Saves are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
 1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
-DR 3 Intuition Check vs. their TC. If they fail, they draw Lower Hand (3) for any
+DR 3 Intuition Save. If they fail, they draw Lower Hand (3) for any
 action requiring the relevant sense.
 
 5. **Knocked Out** Knocked Out (KO) Dealers are unable to act until treated by a Craft
@@ -398,16 +414,18 @@ check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn pas
 since the effect onset). If a Knocked Out Dealer is attacked further, the player begins
 an Epic Event alone.
 
-6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition check to stop the
+6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition Save to stop the
 burning. On a failure, they take 1 damage bypassing AP.
 
 7. **Poisoned N** Each poisoning effect adds +1 Poisoned. At the start of their turn, as
-a Free Action, a Dealer makes a DR 3 Vitality Check to shake off the effects of the
+a Free Action, a Dealer makes a DR 3 Vitality Save to shake off the effects of the
 poison. On a failure, they discard N+1 cards.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
-Hand. A Dealer makes a DR 3 Strength Check as a Free Action at the end of their turn to
+Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their turn to
 attempt to end the freeze.
+
+9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 Vitality Save. On a failure, take 2 damage. On a success, take 1 damage.
 
 ### Health and Armor
 
@@ -610,13 +628,21 @@ creature may be covered from one direction but not from another direction.
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
 damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Check to mitigate the penalty from falling.
+This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the penalty from falling.
 
 #### Challenging Terrain
 
 Moving through the environment can sometimes be challenging. When navigating
 through *Challenging Terrain*, moving through one space requires 2 speed. While
-standing in Challenging Terrain, all Agility Checks are made with the Lower Hand. 
+standing in Challenging Terrain, all Agility Saves are made with the Lower Hand. 
+
+#### Holding Breath
+
+A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage without air reduces this time by 1 minute. After this time, the character
+gains the *Suffocating* Status Condition.
+
+Some Powers or effects can extend this time limit or prevent a character from
+Suffocating. 
 
 ## Character Creation
 

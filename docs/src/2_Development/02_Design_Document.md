@@ -23,10 +23,11 @@ hour. This means mechanics should be easy to learn, and easy to explain during a
 session. One only needs a standard deck of playing cards.
 
 Second, Deck of Adventures is designed to be **flexible**, across the many types of
-stories GMs want to tell. While our mechanics have been work shopped with lore from the
-World of Erdania, all core mechanics should be portable to another setting. The flavor
-text that surrounds mechanics will change beyond Erdania, but the features themselves
-should stay the same.
+stories GMs want to tell. While our mechanics have been workshopped with lore from the
+World of Erdania, all core mechanics should be portable to another setting. In other
+words, Deck of Adventures is setting-agnostic. No core mechanic should imply a specific
+setting (e.g., magical fantasy) and all settings should be playable by ignoring or 
+reflavoring a subset of optional mechanics (e.g., the Mystic Aura is EMP tech).
 
 Third, participants should be able to quickly and easily engage in **rich storytelling**
 with only a standard deck of playing cards. Any component that doesn't contribute to

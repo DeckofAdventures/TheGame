@@ -121,12 +121,13 @@ session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
 split it into two 26-card decks and shuffle regularly. 
 
-One deck of cards should be designated the *Minion Deck* and one designated the *World
+One deck of cards should be designated the *NPC Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
-Minion Deck is used during combat and when applying negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World Deck is used to draw Target
-Cards for NPCs, make social checks, and used for drawing a card based on a table out of
-combat. Before each Combat, reshuffle the Minion Deck. You reshuffle the World Deck
-when it is empty. 
+NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying
+negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World
+Deck is used to make social checks, and to draw Target Cards representing items and
+objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World
+Deck empty. 
 
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
@@ -235,7 +236,7 @@ be successful.
 One of the initial barriers a new GM must overcome is helping the Players
 understand this target system. As Players get more familiar with the
 system, speed of play increases, and it is then easier for them to understand
-more complex mechanics. Using the [Circular TC-DR Tool](./Circlular_TC-DR_Tool/1_Assembled.PNG) is a helpful visual
+more complex mechanics. Using the [Circular TC-DR Tool](./Visual_Tools/1_Circular_Assembled.PNG) is a helpful visual
 aid. 
 
 The Target Card System is circular, so an Ace is only 1 away from both a King
@@ -392,6 +393,27 @@ described in the guide or in a Power mechanic.
 4. Arm wrestle: Brute vs. Brute
 5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
 
+### Saves
+
+Saves occur when a character is attempting to resist or shrug off a negative effect (see
+[Full Player Guide](./01_PlayerGuide_Full.md#saves). 
+
+When calling for a Save, choose the Attribute that is most relevant to the initiating
+effect. A character cannot choose to use a different Attribute.
+
+Because characters draw against their own TC, Saves will
+never be a Critical Success. You can choose to add an additional effect to a Major Success. 
+
+While all saves will have effects for failure, some may still have effects on success, such as half damage. Refer to the
+specific wording of the initiating effect.  
+
+If an environmental effect initiates a Save, you determine the DR and Attribute as the GM. If an effect would cause a
+character to attempt to resist it to avoid damage or a Status Condition, that character
+should make a Save.
+
+<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR --> 
+
+
 ### Epic Events
 
 <!-- Future: revise to refer back to the same example repeatedly -->
@@ -543,6 +565,45 @@ GMs should try to include a mix of roleplay and combat in an Adventure, when
 possible. Storming an enemy fortress may result in several Combat Encounters
 back to back. Investigating a crime in a major city may have more social
 investigation-based with relatively little combat.
+
+### Moving in space
+
+Deck of Adventures is designed to be playable using either imperial or metric units, on
+either a square grid or hex map. For units, treat 1 space as either 5 feet or 1 meter.
+You choice of map can impact diagonal movement and area of effect. Following the
+[Player Guide](./01_PlayerGuide_Full#in-combat)
+, moving diagonally on a grid is assumed
+to be the same as moving horizontally. You could alternatively decide that players are
+limited to 2 diagonal moves per round of combat, or that a diagonal move is worth 1.5
+speed.
+
+To measure area of effect (AOE), refer to the images provided in [Visual Tools](https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools). 
+Powers will define an AOE by it's shape and size (e.g., Cone 3). Here, we us N to define
+each shape at any size. 
+
+- **Line**: Pick an edge of the space of the character or object causing this effect. 
+  Draw a straight line perpendicular to this edge N spaces long. Any space touched by
+  this line is affected.
+
+- **Aura**: Unless otherwise specified, the point of origin is assumed to be the 
+  character or object causing the effect. A circle is drawn around this point. Any space
+  caught overlapping with this circle is affected.
+
+    - On a *grid* map, the radius of this circle is at the far edge of the Nth space 
+      away from the point of origin.
+    - On a *hex* map, the radius of this circle is at the far edge of the line segment
+      pointing in the direction of the point of origin.
+
+- **Cone**: Pick an edge of the space of the character or object causing this effect. 
+  The radius is measured from the center point of this edge, with additional lines drawn
+  to endpoints of the arc. Any space caught overlapping with this arc is affected.
+
+    - On a *grid* map, the radius extends N squares away from the origin, with lines 
+      drawn to the corners of the squares included in a perpendicular line N squares 
+      long.
+    - On a *hex* map, the radius extends N minus .5 hex away from this origin, with 
+      lines drawn to the far-most corners of the hex touched by a straight line N hex 
+      long, perpendicular to the radius.
 
 ### Character Types
 
@@ -915,6 +976,8 @@ create your own Consumables and ask the Community for help as needed.
 | Consumable Name        | Cost  | Effect                                                                                    | Duration |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
 | Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |          |
+| Potion of Water Breath | 10 gp | You are immune to the Suffocating Status Condition                                        | 1 hour   |
+| Potion of Extended Breath | 5 gp | Your ability to hold your breath is extended by 60 minutes                              | 1 hour   |
 | Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks                                                      | 1 min    |
 | Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks                                                       | 1 min    |
 | Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |
