@@ -3,6 +3,8 @@
 
 # Combat
 
+## Control
+
 **Battlecharged**
 
 - Description: You're always ready for something to go down.
@@ -60,7 +62,7 @@
 - Tags: Difficulty Prediction
 
 
-## Control
+## Mystic Attacks
 
 **Attack, Mystic**
 
@@ -160,7 +162,7 @@
 - Tags: Multi-target
 
 
-## Mystic Attacks
+## Support
 
 **Heal**
 
@@ -177,24 +179,6 @@
 - Mechanic: Minor. As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
 - XP: 1
 - Prereq_Role: Support
-
-
-**Lend Distraction**
-
-- Description: Just an annoyance in the distance
-- Mechanic: Minor. As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
-- XP: 1
-
-
-**Lend Mass Distraction**
-
-- Description: You know how to cause a scene.
-- Mechanic: Major. For 1 or 2 PP, Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.. 
-- XP: 2
-- PP: 1 or 2
-- Prereq_Level: 2
-- Prereq_Power: Lend Distraction
-- Tags: Multi-target
 
 
 **Lend Confusion**
@@ -273,7 +257,27 @@
 - Prereq_Role: Defender
 
 
-## Support
+### Distract
+
+**Lend Distraction**
+
+- Description: Just an annoyance in the distance
+- Mechanic: Minor. As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
+- XP: 1
+
+
+**Lend Mass Distraction**
+
+- Description: You know how to cause a scene.
+- Mechanic: Major. For 1 or 2 PP, Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.. 
+- XP: 2
+- PP: 1 or 2
+- Prereq_Level: 2
+- Prereq_Power: Lend Distraction
+- Tags: Multi-target
+
+
+## Weapon Attacks
 
 **Attack, Weapon**
 
@@ -340,7 +344,7 @@
 - Prereq_Power: Attack, Dual-Wield
 
 
-## Weapon Attacks
+# Companion
 
 **Creature Connection**
 
@@ -371,7 +375,9 @@
 - Tags: Companion
 
 
-# Companion
+# Game Mechanics
+
+## Adjust Odds
 
 **Fated Draw**
 
@@ -419,7 +425,7 @@
 - Tags: Card Viewing
 
 
-# Game Mechanics
+## Fate Cards
 
 **Aces Wild**
 
@@ -434,7 +440,7 @@
 - Tags: Fate Cards
 
 
-## Adjust Odds
+# Magic
 
 **Barrier**
 
@@ -455,7 +461,9 @@
 - Prereq_Skill: Knowledge > 0
 
 
-## Fate Cards
+# Movement
+
+## Speed
 
 **Speedy**
 
@@ -465,7 +473,7 @@
 - Tags: Combat
 
 
-# Magic
+## Stealth
 
 **Stealthy Surprise**
 
@@ -505,7 +513,7 @@
 - Tags: Stealth or Multi-target
 
 
-# Movement
+# Roleplay
 
 **Calculating**
 

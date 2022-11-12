@@ -393,6 +393,7 @@ Lend Distraction:
     Category: 
         - Combat
         - Support
+        - Distract
     Description: Just an annoyance in the distance
     Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
     Type: Minor
@@ -402,6 +403,7 @@ Lend Mass Distraction:
     Category: 
         - Combat
         - Support
+        - Distract
     Description: You know how to cause a scene.
     Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
     Type: Major
