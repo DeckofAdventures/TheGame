@@ -29,19 +29,20 @@ logging.basicConfig(
 # TODO: move to utils script? Make helper class?
 
 
-def load_source(input_yml="04_Powers.yml"):
+def load_source(input_yml: str = "04_Powers.yml"):
     """Load the yaml file"""
     with open(input_yml, encoding="utf8") as f:
         data = yaml.safe_load(f)
     return data
 
 
-def ensure_list(item):
+def ensure_list(item: str):
+    """If input is not a list, return list of input"""
     return item if isinstance(item, list) else [item]
 
 
 def list_to_or(entry):
-    """Given string or list, return with joined OR"""
+    """Given string or list, return items as string joined OR"""
     entry = [entry] if not isinstance(entry, list) else entry
     entry = [str(i) for i in entry]
     return " or ".join(entry)
@@ -95,14 +96,38 @@ def sort_power(power_dict):
 
 
 def make_bullet(value, indents=0):
-    """Return string with 4 spaces per indent, plus '- '"""
+    """Return string with 4 spaces per indent, plus `- `"""
     spaces = indents * "    "
     return f"{spaces}- {value}\n"
 
 
 class Powers(object):
-    def __init__(self, input_files="04_Powers_SAMPLE.yml", limit_types=None):
-        """Initialize"""
+    """Set of DofA powers
+
+    Attributes:
+        readable_dict (dict): input powers converted to human-readable mechanics
+        categories (set): set of tuples - set((categ, subcat, subsubcat),(categ2))
+    """
+
+    def __init__(self, input_files="04_Powers_SAMPLE.yml", limit_types: list = None):
+        """Initialize. Load file, establish attributes
+
+        Args:
+            input_files (str, optional): String to local file or list of strings.
+                Defaults to "04_Powers_SAMPLE.yml".
+            limit_types (list, optional): Only output items of provided types.
+                Defaults to None, which means all of the following:
+                ["Major", "Minor", "Passive", "Adversary", "House", "Vulny"]
+
+        Attributes:
+            _data (dict): raw input data
+            _categories (set): all power categories
+            _template (dict): Template item from input data
+            _readable_dict (dict): data restructured to sentences.
+            _stem (str): Input file name no extension
+            _name (str): Last string of stem when split by `_`
+            _limit_types (list): See arg above
+        """
         self._data = {}
         self._categories = set()
         input_files = ensure_list(input_files)
@@ -114,8 +139,15 @@ class Powers(object):
         self._name = self._stem.split("_")[-1]
         self._limit_types = limit_types
 
-    def save_check_to_txt(self, save: dict):
-        """Given a Save dict, return a sentence"""
+    def save_check_to_txt(self, save: dict) -> str:
+        """Given a Save dict from a power, return a readable sentence
+
+        Args:
+            save (dict): subset of power dict, save with trigger, DR, type, etc
+
+        Returns:
+            save_string (str): readable sentence detailing all features of a save
+        """
         sentence = save["Trigger"] + ", target(s) make a "
         sentence += "DR " + str(save["DR"]) + " " if "DR" in save else ""
         sentence += list_to_or(save["Type"]) + " Save"
@@ -126,7 +158,14 @@ class Powers(object):
         return ". ".join(output)
 
     def merge_mechanics(self, power):
-        """Given power dict, merge all appropriate items into Mechanic"""
+        """Given power dict, merge all appropriate items into Mechanic
+
+        Args:
+            power (dict): individual power
+
+        Returns:
+            power_merged (dict): power with all mechanic items combined.
+        """
         if isinstance(power["Mechanic"], list):  # when mech are list, indent after 1st
             mech_bullets = power["Mechanic"][0] + "\n"
             for mech_bullet in power["Mechanic"][1:]:
@@ -145,7 +184,16 @@ class Powers(object):
         return power
 
     def flatten_embedded(self, input_dict):
-        """Given embedded dictionary, concat keys for values"""
+        """Check vals in input. If dict, make embedded values new keys in output dict
+
+        Novel keys in output dict are {'key_embedded-key': 'embedded_value'}
+
+        Args:
+            input_dict (dict): any dict
+
+        Returns:
+            output_dict (dict)
+        """
         output = {}
         for k, v in input_dict.items():
             if isinstance(v, dict):  # and k != "Save":
@@ -160,8 +208,16 @@ class Powers(object):
         return output
 
     @property
-    def readable_dict(self, limit_types=None):
-        """Return readable dict with Mechanics collapsed. Limit by limit_types list"""
+    def readable_dict(self, limit_types: str = None) -> dict:
+        """Return readable dict with Mechanics collapsed. Limit by limit_types list
+
+        Args:
+            limit_types (list,optional): List of types (e.g., Major, Vulny) permitted in
+                output
+
+        Returns:
+            readable_dict (dict): filtered dict with mechanic items collapsed
+        """
         if not limit_types and not self._limit_types:
             limit_types = ["Major", "Minor", "Passive", "Adversary", "House", "Vulny"]
         else:
@@ -185,6 +241,15 @@ class Powers(object):
         return sorted(self._categories)
 
     def by_category(self, category: list = None):
+        """Return readable dict of powers limited by category, if present
+
+        Args:
+            category (list, optional): Ordered list/set of [category, subcategory].
+                Defaults to None, meaning no filtering or ordering.
+
+        Returns:
+            readable_dict_subset (dict): Subset of readable dict
+        """
         if not category:
             return self.readable_dict
         else:
@@ -196,47 +261,90 @@ class Powers(object):
 
 
 class Markdown(Powers):
+    """Generate markdown for set of powers
+
+    Args:
+        Powers (powers object): Powers class with relevant attributes
+
+    Attributes:
+        category_heirarchy (list): list of tuples.
+            [(item, indentation, (categ, subcat, subsub, etc.))]
+    """
+
     def __init__(self, input_files="04_Powers_SAMPLE.yml"):
+        """Initialize powers class
+
+        Args:
+            input_files (str, optional): String to local file or list of strings.
+                Defaults to "04_Powers_SAMPLE.yml".
+
+        Arrtibutes:
+            _category_hierarchy (list): list of tuples
+                e.g., [(item, indent, (categ, subcat, subsub, etc.))]
+        """
         super().__init__(input_files=input_files)
         self._category_hierarchy = None
 
-    def make_link(self, value, indents=0):
-        """For md table of contents, add brackets, parens and remove spaces"""
+    def make_link(self, value: str, indents: int = 0) -> str:
+        """Make relative within-doc bulleted link for TOC. [name](#no-spaces)
+
+        Args:
+            value (str): heading name
+            indents (int): indent level for heading
+
+        Returns:
+            link (str): markdown formatted indented bullet with relative path for
+                table of contents. E.g., `    - [Heading name](#heading-name)`
+        """
         no_spaces = value.lower().replace(" ", "-")
         link = f"[{value}](#{no_spaces})"
         return make_bullet(link, indents)
 
-    def make_header(self, value, level=0):
-        """Return string with level+1 #"""
+    def make_header(self, value: str, level: (int) = 0):
+        """Return string with level+1 * `#`
+
+        Args:
+            value (str): heading content
+            level (int): heading level. e.g., `# Zero`, `## One`
+        """
         prefix = level * "#"
         return f"\n#{prefix} {value}\n"
 
     @property
     def category_hierarchy(self):
+        """Return list of tuples: [(item, indent, (categ, subcat, subsub, etc.))]"""
         if not self._category_hierarchy:
-            categories, indents, category_set, prev_cat_tuple = [], [], [], tuple()
-            for cat_tuple in self.categories:
-                for idx, category in enumerate(cat_tuple):
-                    prev_category = (
-                        prev_cat_tuple[idx] if idx < len(prev_cat_tuple) else None
+            categories, indents, category_set, prev_category_tuple = [], [], [], tuple()
+            for category_tuple in self.categories:
+                for idx, category in enumerate(
+                    category_tuple
+                ):  # indent level, category
+                    prev_category = (  # previous category at same heading level
+                        prev_category_tuple[idx]
+                        if idx < len(prev_category_tuple)
+                        else None
                     )
-                    if category != prev_category:
+                    if category != prev_category:  # if new, add
                         categories.append(category)
                         indents.append(idx)
-                prev_cat_tuple = cat_tuple
-                category_set.append(cat_tuple)
+                        # subset of tuple relevant to heading level
+                        category_set.append(category_tuple[0 : idx + 1])
+                prev_category_tuple = category_tuple
             self._category_hierarchy = list(zip(categories, indents, category_set))
         return self._category_hierarchy
 
-    def md_TOC(self):
-        """Generate markdown Table of Contents"""
+    def md_TOC(self) -> str:
+        """Generate markdown Table of Contents with category_heirarchy"""
         TOC = "<!-- MarkdownTOC add_links=True -->\n"
         for (category, indent, _) in self.category_hierarchy:
             TOC += self.make_link(category, indent)
         return TOC + "<!-- /MarkdownTOC -->\n"
 
-    def make_entries(self, category_set):
-        """Turn each input item into bulleted list with key prefix. Input list of Powers"""
+    def make_entries(self, category_set: set) -> str:
+        """All entries into bulleted lists with key prefixes.
+
+        Args:
+            category_set (set): unique set of categories (categ, subcateg)"""
         entries = ""
         for power_name, power in self.by_category(category_set).items():
             power = sort_power(power)
@@ -247,8 +355,14 @@ class Markdown(Powers):
             entries += "\n"
         return entries
 
-    def write(self, output_fp=None, TOC=False):
-        """Write markdown"""
+    def write(self, output_fp: str = None, TOC: bool = False):
+        """Write markdown
+
+        Args:
+            output_fp (str, optional): relative path for writing output file. Default
+                None meaning save to ../1_Mechanics/ parent path with same file name
+            TOC (bool, optional): Write table of contents. Default False
+        """
         if not output_fp:
             output_fp = "../1_Mechanics/" + self._stem + ".md"
         output = (
@@ -265,22 +379,47 @@ class Markdown(Powers):
 
 
 class Csv(Powers):
-    def __init__(self, input_files="04_Powers_SAMPLE.yml"):
+    """Generate csv for set of powers
+
+    Attributes:
+        _fields (list): column headers
+    """
+
+    def __init__(self, input_files: list = "04_Powers_SAMPLE.yml"):
+        """Initialize CSV class
+
+        Args:
+            input_files (list, optional): List of strings, or just one string. R. Defaults to "04_Powers_SAMPLE.yml".
+        """
         super().__init__(input_files=input_files)
         self._fields = None
 
     @property
-    def fields(self):
-        """Which fields to write"""
+    def fields(self) -> list:
+        """Column names for csv. Excludes 'save', hardcoded
+
+        Returns:
+            fields (list): list of column headers for CSV"""
         if not self._fields:
-            all_fields = sort_power(self._template)
+            all_fields = sort_power(self._template)  # get field list from template
             all_fields.pop("Save", None)  # remove Save for CSV
+            # Flatten embedded fields
             self._fields = ["Name"] + list(self.flatten_embedded(all_fields).keys())
         return self._fields
 
-    def write(self, output_fp=None, delimiter="\t"):
-        """Write CSV from YAML, default is tab-delimited"""
+    def write(self, output_fp: str = None, delimiter: str = "\t", ext: str = None):
+        """Write CSV from YAML, default is tab-delimited
+
+        Args:
+            output_fp (str): relative filepath. Default none, which means local
+                _Automated_output subfolder
+            delimeter (str): column delimiter. `\t` for tab or `,` for comma. If other,
+                must provide extension in ext
+            ext (str): file extension if other than `.csv`, `.tsv`. Must include period
+        """
         suffix_dict = {"\t": ".tsv", ",": ".csv"}
+        if ext and ext not in [".tsv", ".csv", "tsv", "csv"]:
+            suffix_dict.update({delimiter: ext})
         if not output_fp:
             output_fp = "./_Automated_output/" + self._stem + suffix_dict[delimiter]
         rows = []
@@ -300,12 +439,30 @@ class Csv(Powers):
 
 
 class Dot(Powers):
+    """Generate dot for set of powers"""
+
     def __init__(
         self,
-        input_files="04_Powers_SAMPLE.yml",
+        input_files: list = "04_Powers_SAMPLE.yml",
         dependencies: list = None,
-        add_loners=True,
+        add_loners: bool = True,
     ):
+        """Initialize Dot class
+
+        Args:
+            input_files (str, optional): Relative path string or list of strings.
+                Defaults to "04_Powers_SAMPLE.yml".
+            dependencies (list, optional): List of dependencies to include. Defaults to
+                None, meaning all: ["Power", "Skill", "Level", "Role"]
+            add_loners (bool, optional): Include items without dependent powers.
+                Defaults to True.
+
+        Additional Attributes:
+            _template (str):
+            _dotstring (str):
+            _graph (str):
+            _loners (list): list of loners
+        """
         super().__init__(input_files=input_files)
         if not dependencies:
             self._dependencies = [
@@ -320,12 +477,17 @@ class Dot(Powers):
         self._loners = []
 
     def quote(self, s):
-        """Return quoted string"""
+        """Return input as quoted string"""
         s = str(s) if not isinstance(s, str) else s
         return '"{}"'.format(s.replace('"', '\\"'))
 
-    def edge_str(self, a, b=None):
-        """Generates a `->` b notation for dot edges"""
+    def edge_str(self, a: str, b: str = None):
+        """Generates a `->` b notation for dot edges
+
+        Args:
+            a (str): first node
+            b (str, optional): Second node. Optionally with comparison e.g., STR > 2
+        """
         comparators = ["<", ">", "≤", "≥"]
         if b is not None:
             label = ""
@@ -339,26 +501,29 @@ class Dot(Powers):
     def get_edges(self, name, children=[]):
         """Generate full set of child->node given children"""
         edges = []
-        edges.append(self.edge_str(name))
-        for c in children:
+        edges.append(self.edge_str(name))  # Add name to list
+        for c in children:  # For each child
             if isinstance(c, str):
-                edges.append(self.edge_str(name, c))
-            elif isinstance(c, dict):
-                key = c.keys()[0]
-                edges.append(self.edge_str(name, key))
+                edges.append(self.edge_str(name, c))  # make node->child string as edge
+            elif isinstance(c, dict):  # if child is dict
+                key = c.keys()[0]  # get first key
+                edges.append(self.edge_str(name, key))  # make node->key string
+                # get edges recursively with key and value from key
                 edges = edges + self.get_edges(key, c[key])
         return edges
 
     @property
     def loners(self):
-        """Loners list, generated by dotstring func"""
+        """Loners list, generated by dotstring func. Not implemented"""
         if self._add_loners and not self._loners:
             self.dotstring  # need to run to get all children then add/remove loners
             # TODO: gen list of loners
+            logging.WARN("Get loners list not implemented")
         return self._loners
 
     @property
-    def template(self):
+    def template(self) -> str:
+        """All dot file frontmatter"""
         if not self._template:
             gen_powers = True if "powers" in self._stem.lower() else False
 
@@ -419,25 +584,27 @@ class Dot(Powers):
 
     @property
     def dotstring(self):
-        """Write dot file"""
+        """Dot file contents"""
         if not self._dotstring:
             edges = []
-            for power_name, power in self.readable_dict.items():
-                power_node = self.get_edges(power_name)
-                children = self.get_children(power)
-                if self._add_loners or children:
-                    edges += self.get_edges(power_name, children)
-                    try:
+            for power_name, power in self.readable_dict.items():  # for each power
+                power_node = self.get_edges(power_name)  # Get `->` notation for power
+                children = self.get_children(power)  # Get power children
+                if self._add_loners or children:  # If keep loners or has children
+                    edges += self.get_edges(power_name, children)  # `->` for children
+                    try:  # b/c children, not loner. try to remove from loner list
                         self._loners.remove(power_node)
-                    except ValueError:
+                    except ValueError:  # if not in loner list, ValueError ok
                         pass
-                if not children:
+                if not children:  # If no children, is loner
                     self._loners += power_node
+            # write list of `->` notations, on new indented lines
             self._dotstring = self.template % ";\n\t".join(edges)
         return self._dotstring
 
     @property
     def graph(self):
+        """Make pydot graph format from dotstring"""
         if not self._graph:
             self._graph = pydot.graph_from_dot_data(self.dotstring)[0]
         return self._graph
@@ -451,7 +618,13 @@ class Dot(Powers):
         logging.info("Wrote dot")
 
     def to_pic(self, output_fp=None, out_format=["png", "svg"]):
-        """Write graph as pic. png and/or svg. output_fp is one string, no suffix"""
+        """Write graph as pic. png and/or svg. output_fp is one string, no suffix
+
+        Args:
+            output_fp (str): Relative output filepath. Default none, meaning local
+                _Automated_output/ folder
+            out_format (list): List of formats or string. png and/or svg
+        """
         if not output_fp:
             output_fp = "./_Automated_output/" + self._stem
         out_format = ensure_list(out_format)
@@ -467,12 +640,22 @@ class Dot(Powers):
 
 
 def main(
-    input_files=input_files,
-    writing=writing,
-    dependencies=dependencies,
-    add_loners=add_loners,
-    out_delim=out_delim,
+    input_files: list = input_files,
+    writing: list = writing,
+    dependencies: list = dependencies,
+    add_loners: bool = add_loners,
+    out_delim: str = out_delim,
 ):
+    """Execute all write functions based on inputs at top of script
+
+    Args:
+        input_files (list, optional): Local relative paths.
+            If len=2, also make combined csv
+        writing (list, optional): List of output formats.
+        dependencies (list, optional): Which dependencies to incldue in dot.
+        add_loners (bool, optional): Include loners in dot.
+        out_delim (str, optional): CSV delimiter - `\t` or `,`
+    """
     for f in input_files:
         logging.info(f"Started {f}")
         if "md" in writing:
