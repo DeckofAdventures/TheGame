@@ -278,7 +278,7 @@ class Markdown(Powers):
             input_files (str, optional): String to local file or list of strings.
                 Defaults to "04_Powers_SAMPLE.yml".
 
-        Arrtibutes:
+        Attributes:
             _category_hierarchy (list): list of tuples
                 e.g., [(item, indent, (categ, subcat, subsub, etc.))]
         """
