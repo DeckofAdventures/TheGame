@@ -10,7 +10,7 @@ temp*/*
 *toml
 
 # Automation, Python
-docs/src/3_Automation/_Auto*
+automation/_output/*
 *__pycache__/
 
 # Defaults

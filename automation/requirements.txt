@@ -1,0 +1,11 @@
+# Formatting
+black
+
+# Importing yml
+pyyaml
+
+# Managing pdfs
+pdf2image
+
+# Generating graphviz objects
+pydot

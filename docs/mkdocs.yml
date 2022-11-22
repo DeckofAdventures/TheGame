@@ -66,6 +66,7 @@ nav:
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
     - License Info:         LICENSE
+  # FUTURE: Add API for autmated items
 
 extra_css:
   - stylesheets/extra.css
@@ -75,7 +76,6 @@ plugins:
     - exclude:
         glob:
           - "temp*"
-          - "3_Automation/*"
     # - include-markdown # https://github.com/mondeja/mkdocs-include-markdown-plugin
     # when use, add mkdocs-include-markdown-plugin to pip list
 

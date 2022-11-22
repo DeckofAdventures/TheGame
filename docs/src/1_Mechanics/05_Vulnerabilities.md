@@ -1,4 +1,4 @@
-<!-- DEVELOPERS: Please edit corresponding yml in 3_Automation -->
+<!-- DEVELOPERS: Please edit corresponding yml -->
 
 
 # Combat
