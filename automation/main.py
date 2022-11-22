@@ -2,7 +2,7 @@ from glob import glob
 from pathlib import Path
 
 from pdf.split_premades import split_pdf  # requires pdf2image package
-from .main import yml_to_other  # if dot, requires pydot package
+from templates.main import yml_to_other  # if dot, requires pydot package
 
 split_pdf(  # This function is slow. Comment out if not using
     dry_run=True,
