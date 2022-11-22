@@ -43,7 +43,7 @@ Attack, Charge:
         - Combat
         - Weapon Attacks
     Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-    Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss.
+    Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
     Type: Major
     XP: 2
     PP: [1, 2]
@@ -144,7 +144,7 @@ Attack, Mystic Aura:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic all around you.
-    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s).
+    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s)
     Type: Major
     XP: 2
     PP: [1,2]
@@ -313,7 +313,7 @@ Momentum: # Without this power, this should cost a major action.
         Type: 
             - STR
             - AGL
-        Fail: be moved to 1 space of attacker's end position.
+        Fail: are moved to 1 space of attacker's end position
     Prereq:
         Role: Defender
         Skill: Brute > 0
@@ -327,7 +327,7 @@ Momentum Aura:
     XP: 2
     PP: 1
     Target: 6
-    Mechanic: Your Momentum ability extends to 3 spaces. 
+    Mechanic: Your Momentum ability extends to 2 spaces. 
     Save:
         Trigger: If unwilling
         Type: 
@@ -383,11 +383,24 @@ Lend Aid:
         - Combat
         - Support
     Description: Just a little help from a friend
-    Mechanic: As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
+    Mechanic: Draw a card, hold it in reserve, and designate one ally. On the ally's next Draw, they may use your card as if they had Upper Hand
     Type: Minor
     XP: 1
     Prereq:
         Role: Support
+
+Lend Aid, Advanced:
+    Category: 
+        - Combat
+        - Support
+    Description: A little help goes a long way
+    Mechanic: Draw a card, hold it in reserve, and designate one ally. At any time before thier next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
+    Type: Minor
+    XP: 1
+    Prereq:
+        Role: Support
+        Power: Lend Aid
+
 
 Lend Distraction:
     Category: 
@@ -474,7 +487,7 @@ Lend Vigor:
         - Combat
         - Support
     Description: "Channel energy to do more than help: inspire!"
-    Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.
+    Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -488,7 +501,7 @@ Slow:
         - Combat
         - Support
     Description: You selectively bend the nature of time
-    Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.
+    Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature
     Type: Major
     XP: 2
     PP: 2
@@ -516,7 +529,7 @@ Shield, Self:
         - Support
     Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
     Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
-    Type: Major
+    Type: Minor
     XP: 2
     PP: [1,2]
     Prereq:
@@ -597,7 +610,7 @@ Scrying:
         - Game Mechanics
         - Adjust Odds
     Description: Your intuition is heightened and you can anticipate moments coming in the near future.
-    Mechanic: You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again.
+    Mechanic: You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again
     Type: Major
     XP: 1
     PP: 1
@@ -653,7 +666,7 @@ Illusion:
     Category: 
         - Magic
     Description: Your skills let you conjure illusory effects. 
-    Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand.
+    Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand
     Type: Major
     XP: 2
     PP: [1,2]
@@ -777,3 +790,36 @@ Keen Eye:
     Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
     Type: Passive
     XP: 1
+
+_Discard Note: # Not sure how this will render
+    Category: Discard
+    Mechanic: A character is limited to one Discard Power
+    Type: Passive
+
+Aggro:
+    Category: Discard
+    Description: Protecting your friends means taking the big hits.
+    Mechanic: Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
+    Type: Minor
+    XP: 0 
+
+Help:
+    Category: Discard
+    Description: You're there just when your friends need you.
+    Mechanic: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
+    Type: Minor
+    XP: 0 
+
+Thwart:
+    Category: Discard
+    Description: You have a few tricks up your sleeve for drawing the enemy's attention.
+    Mechanic: Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
+    Type: Minor
+    XP: 0 
+
+Intensify:
+    Category: Discard
+    Description: An explosive attack might mean running out of gas.
+    Mechanic: Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
+    Type: Minor
+    XP: 0 

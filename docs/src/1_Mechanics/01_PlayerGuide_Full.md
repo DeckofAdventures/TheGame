@@ -63,11 +63,14 @@ Fate Card rather than going to the Discard Pile.
 redraw. Only one redraw is permitted per check.
 
 4. Fate Cards may also be expended to either ... 
+
+    1. *Push Fate*: redraw any check.
+    
+    2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
    
-    1. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
+    3. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
     done before the end of the Player's next turn after recieving damage.
    
-    2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
@@ -285,7 +288,7 @@ initiator's TC. Rules that describe a
  fail individually.
 
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
-with deception), they would use their Bluffing Mod of +1, setting the DR to 3 (4-1). 
+with deception), they would use their Bluffing Mod of +1, setting the DR to 2 (3-1). 
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
 Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
 successfully convince Jonas of something in this scenario. 
@@ -312,9 +315,9 @@ GMs may provide a map and other visual cues like character tokens to help player
 visualize the situation. On a square grid, moving diagonally counts as one space unless
 otherwise ruled by the GM.
 
-In combat, a Critical Success has an additional effect. Damaging or Healing actions deal
-or return 1 additional damage to the target. Other actions will grant benefits at the
-GM's discretion.
+In combat, Powers do 1 damage unless otherwise stated.
+A Major Success does 1 extra damage. A Critical Success may have an additional effect, 
+at the GM's discretion.
 
 #### Taking Turns
 
@@ -545,35 +548,33 @@ one level of *Fatigue*. Reshuffle your deck and draw all Checks with the
 Lower Hand. Each time you need to reshuffle your deck in this way adds
 another level of Fatigue. If you were to suffer a fourth level of Fatigue,
 you are Knocked Out instead. This signifies your character running out of
-Stamina during a long day. 
+Stamina during a long day.
 
-### Discard Mechanics
+### Discard Powers
 
-Each Dealer may have an additional Burn Mechanic. Dealers may discard cards as
+Each Dealer may have one Discard Power. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
 every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
-to a character at a time.
+to a character at a time. Cards are discarded without being turned over, and cannot
+yeild Fate Cards.
 
-Below is a list of possible Discard Mechanics, determined by Role. Work with your GM if you
-would like to use a different Burn Mechanic instead.  
+Below is a list of possible Discard Powers, determined by Role. Work with your GM if you
+would like to use a different Discard Power instead.  
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
-- Clubs ♣️, Aggro: Defense Dealers have a strong foundation and can take the big hits.
-  They can choose to *bury* N cards to force all creatures within 2 spaces to make
-  their next Check to attack targets besides the Defense Dealer at Lower Hand (N/2).
+- Aggro: Discard N cards to force all creatures within 2 spaces to make
+  their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2).
 
-- Diamonds ♦️, Intensify: Casters Dealers have explosive damage but they run out of gas
-  really fast. They can choose to *burn* N cards to make their next Check at Upper
-  Hand (N/2).
+- Help: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks
+  for their next turn.
 
-- Hearts ♥️, Help: Life Dealers are fluid and flexible to adapt the situation. If they
-  are within 6 spaces of an ally, they may *toss* 2 cards to grant their ally Upper
-  Hand(N/2) on their next draw.
+- Thwart: Discard N cards and cause an enemy within 6 spaces to
+  make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn.
 
-- Spades ♠️, Thwart: Offense Dealers deploy all sorts of mechanisms for drawing the eye
-  of enemies away from their allies. They can *scrap* N cards and cause an enemy to
-  make Checks at Lower Hand (N/2) until the start of the Offense Dealer's next turn.
+- Intensify: Discard no cards. Your next attack is treated as an Epic Event. Discard as
+  many cards as you choose until a Major Success. Standard Successes are treated as 
+  Misses.
 
 The discard limit increases with level according to the table below.
 

@@ -51,12 +51,23 @@ outcome via...
   succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and still report a
   successful 3 or 5 draw.
 
+There are two special kinds of Checks:
+
+- A *Contested Check* is triggered by two characters using skills for opposing goals. 
+  The initiator sets the TC (their own card) and the DR (3 - Mod/2). The character 
+  responding makes a simple check against this TC/DR.
+
+- A *Save* is a Check with an Attribute (see below) with a preset DR that a character 
+  makes against their own TC. 
+
 ### Fate Cards
 
 You start with 2 Jokers in your hand as **Fate Cards**. Any Aces drawn during play are
-also reserved as Fate Cards. At any time, you can discard a Fate Card to redraw and
-take the new value, you can discard a Fate Card to regenerate one *Power Point*, or you can discard a Fate Card during combat to nullify one
-damage.
+also reserved as Fate Cards. At any time, you can discard a Fate Card to ...
+
+1. redraw and take the new value.
+2. regenerate one *Power Point* per card discarded
+3. nullify one damage.
 
 ### Characters
 
@@ -115,7 +126,8 @@ of Combat, where each involved character will draw a Target Card to determine tu
 - Your character sheet will give you optional actions that you can take listed under
   Powers, but you can always try something new. Ask your GM if your idea is possible
   under circumstances. 
-- If you get hit, you can expend a Fate card to nullify 1 point of damage.
+- Unless otherwise stated, Powers have a range of 6 and do 1 damage.
+- If you get hit, you can expend a Fate Card to nullify 1 point of damage.
 - Depending on the type of attack or amount of damage, you may get Stunned, Knocked
   Out, Blinded/Deafened or Entangled, and need to undo this effect. For a full list
   of effects and their rules, consult the Full Players Guide.
