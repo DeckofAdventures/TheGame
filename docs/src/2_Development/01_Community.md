@@ -2,12 +2,12 @@
 
 Deck of Adventures developers are deeply appreciative of our active community. We
 welcome proposed contributions from all, but reserve the right to integrate changes as
-they align with our 
+they align with our
 [design principles](./02_Design_Document.md#core-design-principles).
 
-Join our [Discord server](https://discord.gg/dk6RfWgPHF)! 
+Join our [Discord server](https://discord.gg/dk6RfWgPHF)!
 
-*Note: if the above link is expired, please 
+*Note: if the above link is expired, please
 [submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!).*
 
 ## Members
@@ -30,7 +30,7 @@ Join our [Discord server](https://discord.gg/dk6RfWgPHF)!
 
 **Major pull requests** include substantial additions to this repository or revisions of
   multiple existing sessions. An edit is considered major if it has the potential to
-  introduce conflicts with existing material. 
+  introduce conflicts with existing material.
 
 **Minor pull requests** include short clarification phrases or corrections to existing
   work. In the event of confusion, admin decide the scope of the change, and reserve

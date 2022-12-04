@@ -112,7 +112,8 @@ Your character may need to rest to recharge Power Points or heal Health Points.
     - If you run out of cards before you can successfully take a Rest, you may
      shuffle, but must always draw with Lower Hand (1+) until your next Rest.
      This signifies your character running out of Stamina during a long day.
-    - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may also ask for shuffling on Quick Rests.
+    - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may
+    also ask for shuffling on Quick Rests.
 
 ### Combat
 

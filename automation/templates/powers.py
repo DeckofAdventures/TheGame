@@ -36,7 +36,6 @@ class Powers(YamlSpec):
             ]
         )
         self._limit_types = limit_types
-        self._content = None
 
     def sort_template(self, power_dict):
         """Given a power, return OrderedDict in markdown read order"""
@@ -138,20 +137,6 @@ class Powers(YamlSpec):
             for v in self._raw_data.values():  # get set of sub/categories for TOC later
                 self._categories.add(tuple(self.ensure_list(v["Category"])))
         return sorted(self._categories)
-
-    def by_type(self, type_options: list = None):
-        """Returns dict of powers limited by type, if present
-
-        Args:
-            type_options (list, optional): list or set of permitted types
-                Defaults to None, meaning no filtering or ordering.
-
-        Returns:
-            dict: Subset of readable dict
-        """
-        return self.filter_dict_by_key(
-            dict_content=self.content, key_filter="Type", key_options=type_options
-        )
 
     def by_category(self, category: list = None):
         """Returns readable dict of powers limited by category, if present

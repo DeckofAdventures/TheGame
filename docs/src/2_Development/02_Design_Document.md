@@ -48,7 +48,7 @@ context determines how good the outcome is.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
 
-3. **Target Cards remain on a character at all times.** Each character is always 
+3. **Target Cards remain on a character at all times.** Each character is always
 represented by a Target Card. Between combats, the TC remains active on a
 character for any other Checks. A new TC is drawn at the start of the next
 combat to shuffle the turn order around for each combat.

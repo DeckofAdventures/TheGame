@@ -394,7 +394,7 @@ Lend Aid, Advanced:
         - Combat
         - Support
     Description: A little help goes a long way
-    Mechanic: Draw a card, hold it in reserve, and designate one ally. At any time before thier next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
+    Mechanic: Draw a card, hold it in reserve, and designate one ally. At any time before their next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
     Type: Minor
     XP: 1
     Prereq:
@@ -802,6 +802,8 @@ Aggro:
     Mechanic: Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
     Type: Minor
     XP: 0 
+    Prereq:
+        Level: 2
 
 Help:
     Category: Discard
@@ -809,6 +811,8 @@ Help:
     Mechanic: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
     Type: Minor
     XP: 0 
+    Prereq:
+        Level: 2
 
 Thwart:
     Category: Discard
@@ -816,6 +820,8 @@ Thwart:
     Mechanic: Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
     Type: Minor
     XP: 0 
+    Prereq:
+        Level: 2
 
 Intensify:
     Category: Discard
@@ -823,3 +829,5 @@ Intensify:
     Mechanic: Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
     Type: Minor
     XP: 0 
+    Prereq:
+        Level: 2

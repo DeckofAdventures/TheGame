@@ -71,6 +71,7 @@ redraw. Only one redraw is permitted per check.
     3. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
     done before the end of the Player's next turn after recieving damage.
 
+
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
 strengths or weaknesses.
@@ -93,27 +94,27 @@ and allow you to add that number to the DR when making a Check.
 **Complete Attribute and Skill List:**
 
 - Agility AGL
-  - Finesse (Fight)
-  - Stealth
+    - Finesse (Fight)
+    - Stealth
 - Conviction CON
-  - Bluffing
-  - Performance
-  <!-- - Persuasion -->
+    - Bluffing
+    - Performance
+   <!-- - Persuasion -->
 - Intuition GUT
-  - Detection
-  <!-- - Faith -->
-  - Craft
-  <!-- - Naturalism -->
+    - Detection
+   <!-- - Faith -->
+    - Craft
+   <!-- - Naturalism -->
 - Intelligence INT
-  - Knowledge
-  - Investigation
-  <!-- - Science -->
+    - Knowledge
+    - Investigation
+   <!-- - Science -->
 - Strength STR
-  - Athletics
-  - Brute (Fight)
-  <!-- - Intimidation -->
+    - Athletics
+    - Brute (Fight)
+   <!-- - Intimidation -->
 - Vitality VIT
-  <!-- - Vitality Skill to add later -->
+   <!-- - Vitality Skill to add later -->
 
 Each skill is generally related to a domain of expertise a character may possess. A GM
 might call for a Check using a specific Skill, but you can always ask if another
@@ -555,8 +556,7 @@ Each Dealer may have one Discard Power. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
 every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
-to a character at a time. Cards are discarded without being turned over, and cannot
-yeild Fate Cards.
+to a character at a time. Cards are discarded and cannot yeild Fate Cards.
 
 Below is a list of possible Discard Powers, determined by Role. Work with your GM if you
 would like to use a different Discard Power instead.
@@ -566,14 +566,14 @@ would like to use a different Discard Power instead.
   their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2).
 
 - Help: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks
-  for their next turn.
+  until the end of their next turn.
 
 - Thwart: Discard N cards and cause an enemy within 6 spaces to
   make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn.
 
 - Intensify: Discard no cards. Your next attack is treated as an Epic Event. Discard as
   many cards as you choose until a Major Success. Standard Successes are treated as
-  Misses.
+  Misses. You may choose to end this Epic Event at any time as a failure.
 
 The discard limit increases with level according to the table below.
 
