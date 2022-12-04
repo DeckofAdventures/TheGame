@@ -6,14 +6,14 @@ Template:               # must be unique
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
   PP: X                 # Required field
-  Attrib:               # List only Non-sero
+  Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
     CON: ±X             #
     GUT: ±X             #
     INT: ±X             #
     STR: ±X             #
     VIT: ±X             #
-  Skills:               # List if different from corresponding Attrib
+  Skill:                # List if different from corresponding Attrib
     Finesse: ±X         #
     Stealth: ±X         #
     Bluffing: ±X        #
@@ -31,7 +31,7 @@ Template:               # must be unique
       Allies: X         # List of who appears. If multiple of same, list mult times
   Description: Descrip  # Full descriptive text
 
-Name: Grunt
+Grunt:
   Type: NPC
   HP: 2
   AR: 3
@@ -44,7 +44,7 @@ Name: Grunt
   Threat: 1
   Description: A low level soldier.
 
-Name: Grunt, Shielded
+Grunt, Shielded:
   Type: NPC
   HP: 2
   AR: 2
@@ -59,7 +59,7 @@ Name: Grunt, Shielded
   Threat: 1
   Description: A low level soldier with a Shield.
 
-Name: Guard
+Guard:
   Type: NPC
   HP: 3
   AR: 2
@@ -76,7 +76,7 @@ Name: Guard
   Threat: 2
   Description: A decently armored and trained soldier.
 
-Name: Defender Captain
+Defender Captain:
   Type: Dealer
   Threat: 3
   HP: 5
@@ -98,7 +98,7 @@ Name: Defender Captain
     - Momentum Aura
   Description: A Captain with access to Powers.
 
-Name: Mystic Caster
+Mystic Caster:
   Type: Dealer
   Level: 3
   HP: 5

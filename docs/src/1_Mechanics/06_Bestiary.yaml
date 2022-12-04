@@ -6,7 +6,7 @@ Template:               # must be unique
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
   PP: X                 # Required field
-  Attrib:               # List only Non-sero
+  Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
     CON: ±X             #
     GUT: ±X             #
@@ -26,7 +26,7 @@ Template:               # must be unique
     Brute: ±X           #
   Powers:               # Include Power names as list
   Phases:               # Only for bosses
-    1:                  # Integer, phase number
+    One:                # Phase number
       HP: X             #
       Allies: X         # List of who appears. If multiple of same, list mult times
   Description: Descrip  # Full descriptive text

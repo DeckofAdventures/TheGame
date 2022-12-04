@@ -1,10 +1,12 @@
 # Notes
 temp*
 temp*/*
+!templates/
 
 # Editors
 *sublime*
 .vs/*
+*swp
 
 # Settings
 *toml
