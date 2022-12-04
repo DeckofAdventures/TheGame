@@ -10,7 +10,7 @@ session, a Game Master (GM) uses the rules laid out in a game system to set the 
 for a narrative that all players collectively move forward. Moment-to-moment, the GM
 presents a scenario and players respond by attempting actions, either specified by the
 game system or wholly invented. The GM determines a player’s success and failure, and
-guides the group in a meaningful way. 
+guides the group in a meaningful way.
 
 Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when
 starting an adventure and different game systems are better for different things.
@@ -25,18 +25,18 @@ Deck of Adventures just asks you to draw a card from your deck.
 
 In times of uncertainty, defer to the following:
 
-1. Have fun. 
-2. The Game Master (GM) is both the narrator and referee. They work to ensure the 
-entire group has fun. They have the final say of rulings at the table and will work 
+1. Have fun.
+2. The Game Master (GM) is both the narrator and referee. They work to ensure the
+entire group has fun. They have the final say of rulings at the table and will work
 to try and resolve disputes between players that may come up.
 
 ## The Action Deck
 
 Deck of Adventures is based around a 54-card deck: 13 cards (2-10, J, Q, K, and A)
 across 4 suits, as well as Jokers. Each player should have their own Deck, with room
-for a Discard Pile and Fate Card pile. 
+for a Discard Pile and Fate Card pile.
 
-1. Actions with unknown outcomes will require a player to make a Check, which means 
+1. Actions with unknown outcomes will require a player to make a Check, which means
 drawing from their respective decks to inform the outcome.
 
 2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players
@@ -45,7 +45,7 @@ Cards, even when shuffling the deck.
 
 3. Players will use their deck to do most anything; it represents their character's
 stamina until they complete a Rest. When the Action Deck is empty and a player has to
-shuffle between rests, they draw with the 
+shuffle between rests, they draw with the
 [Lower Hand (1+)](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would shuffle when resting.
 
 ## Fate Cards
@@ -59,23 +59,22 @@ there already.
 2. Aces drawn from the deck are played as usual, but remains in the player's hand as a
 Fate Card rather than going to the Discard Pile.
 
-3. Any time a player or the GM draws a card, they may discard one held Fate Card and 
+3. Any time a player or the GM draws a card, they may discard one held Fate Card and
 redraw. Only one redraw is permitted per check.
 
-4. Fate Cards may also be expended to either ... 
+4. Fate Cards may also be expended to either ...
 
     1. *Push Fate*: redraw any check.
-    
+
     2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
-   
+
     3. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
     done before the end of the Player's next turn after recieving damage.
-   
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
 strengths or weaknesses.
-    
+
 ## Characters
 
 ### Attributes, Skills, and Modifiers
@@ -87,48 +86,48 @@ performing certain types of actions. Each Skill is tied to an Attribute, meaning
 improving that Attribute also increases the effectiveness of a related Skill.
 Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and
 Skills are listed below.
-3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain 
+3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain
 and allow you to add that number to the DR when making a Check.
  These modifiers are determined at Character Creation and can be improved as you Level Up.
 
 **Complete Attribute and Skill List:**
 
 - Agility AGL
-    - Finesse (Fight)
-    - Stealth
+  - Finesse (Fight)
+  - Stealth
 - Conviction CON
-    - Bluffing
-    - Performance
-   <!-- - Persuasion -->
+  - Bluffing
+  - Performance
+  <!-- - Persuasion -->
 - Intuition GUT
-    - Detection
-   <!-- - Faith -->
-    - Craft
-   <!-- - Naturalism -->
+  - Detection
+  <!-- - Faith -->
+  - Craft
+  <!-- - Naturalism -->
 - Intelligence INT
-    - Knowledge
-    - Investigation
-   <!-- - Science -->
+  - Knowledge
+  - Investigation
+  <!-- - Science -->
 - Strength STR
-    - Athletics
-    - Brute (Fight)
-   <!-- - Intimidation -->
+  - Athletics
+  - Brute (Fight)
+  <!-- - Intimidation -->
 - Vitality VIT
-   <!-- - Vitality Skill to add later -->
+  <!-- - Vitality Skill to add later -->
 
 Each skill is generally related to a domain of expertise a character may possess. A GM
-might call for a Check using a specific Skill, but you can always ask if another 
+might call for a Check using a specific Skill, but you can always ask if another
 would be applicable in the situation. The GM decides whether the Skill applies, so get
-creative! 
+creative!
 
-<!--Add some examples of specific skills being used, with general description of domain --> 
+<!--Add some examples of specific skills being used, with general description of domain -->
 
 ### Dealers, NPCs and Companions
 
 The Player Characters (PCs) are typically the heroes of the story. PCs are
 considered Dealers and differ from the majority of other characters in the world. The
 GM may control other Dealers who can take the form of powerful allies or adversaries
-the players may encounter along the way. 
+the players may encounter along the way.
 
 1. Dealers. All player characters, and some in-game characters that are controlled by
 the Game Master. They...
@@ -142,7 +141,7 @@ the Game Master. They...
     - Are weaker than Dealers
     - Have limited access to Powers
     - Have 1-3 HP.
-    - Draw from a collective set of cards controlled by the GM. 
+    - Draw from a collective set of cards controlled by the GM.
     - Cannot use either Fate Cards or Primary Suit features.
 
 3. Companions are creatures that can be associated with a Dealer, like a pet or
@@ -176,11 +175,11 @@ to be rude to one’s fellow players.
 
 When the GM or a Player calls for a Check, they announce who will be making this check
 and reveal (a) a Target Card (TC), (b) the Attribute or Skill associated with the
-check, and (c) the Difficulty Range (DR). 
+check, and (c) the Difficulty Range (DR).
 
 A Target Card (TC) is like the bullseye on a target you are hoping to hit. The
 Difficulty Range (DR) is the range around the TC the player might hope to draw, like
-the circles around the bullseye. 
+the circles around the bullseye.
 
 Once the DR has been announced, players must make the check. Players may consult with
 their GM to determine if another Attribute or Skill may be used instead. A player will
@@ -188,10 +187,10 @@ draw one or more cards. Immediately after drawing, a player will apply any relev
 Modifiers before reporting the outcome and whether or not they have successfully fallen
 within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
 next to the relevant Skill or Attribute related to the Check. Think of it as a
-character's ability to 'aim' a check to get closer to the TC. 
+character's ability to 'aim' a check to get closer to the TC.
 
 The GM may describe the nature of the outcome or announce the degree of success and ask
-the player to describe how their character successfully accomplishes the action. 
+the player to describe how their character successfully accomplishes the action.
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort to match the task at hand as closely as possible. Remembering
@@ -200,7 +199,7 @@ which card is 5 below a 3 can be tough, so there is a table below as well as a
 get familiar with the system.
 
 **Target Card Range Table**
-For each card on the left, refer to the column with the corresponding DR. 
+For each card on the left, refer to the column with the corresponding DR.
 Left of 0 is the lower bound, right of 0 is the upper bound.
 
 |**TC**|**-6**|**-5**|**-4**|**-3**|**-2**|**-1**|**0**|**+1**|**+2**|**+3**|**+4**|**+5**|**+6**|
@@ -230,40 +229,40 @@ specific circumstances; for certain character Powers, item types or defenses. Th
 no critical failure in Deck of Adventures.
 
 **For example**, when Xena attempts to jump across a chasm, the GM reveals a TC of
-the 8 of Clubs and a DR of 2, asking for an Athletics check. If the player's Athletics 
+the 8 of Clubs and a DR of 2, asking for an Athletics check. If the player's Athletics
 modifier is +1, the check is ...
 
 1. A Critical Success if they draw the 8 of Clubs. They might perfectly make the
- jump, impressing their allies, and catch a glimpse of something important in the 
+ jump, impressing their allies, and catch a glimpse of something important in the
  distance.
 
-2. A Major Success if they draw any 8. They might make the jump gracefully enough to 
+2. A Major Success if they draw any 8. They might make the jump gracefully enough to
 impress their allies without any other perks.
 
-3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1, 
-this is 5, 6, 7, 9, 10 or J. If Xena draws a J, they may subtract 1 to report a 10, 
+3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 1, and Mod 1,
+this is 5, 6, 7, 9, 10 or J. If Xena draws a J, they may subtract 1 to report a 10,
 within the DR.
 
 4. A Color Success for any Successes that match the color of the TC.
 
-5. A Suited Success for any Successes that match the Suit of the TC. Xena might have a 
-Power that grants benefits to allies on a Suited Success. After crossing, they can 
-improve their ally's chances of crossing. 
+5. A Suited Success for any Successes that match the Suit of the TC. Xena might have a
+Power that grants benefits to allies on a Suited Success. After crossing, they can
+improve their ally's chances of crossing.
 
 6. A Suited or Color Miss if they draw any Club or Spade, respectively below 5 or above
-J. Xena might have a Power that lets them redraw on a Suited Miss, for example. 
+J. Xena might have a Power that lets them redraw on a Suited Miss, for example.
 
 7. A Miss is any Diamond or Heart draw below 5 or above J.
 
 #### Upper and Lower Hand
 
-Sometimes the odds will be in your favor; sometimes they will be against you. 
+Sometimes the odds will be in your favor; sometimes they will be against you.
 
-1. Having the Upper Hand (N) means you draw N additional cards and select the card 
-closest to the TC after applying all relevant mechanics. A player may choose to stop 
+1. Having the Upper Hand (N) means you draw N additional cards and select the card
+closest to the TC after applying all relevant mechanics. A player may choose to stop
 drawing before N cards are drawn.
 
-2. Having the Lower Hand (N) means you draw N additional cards and select the card that 
+2. Having the Lower Hand (N) means you draw N additional cards and select the card that
 is furthest from the TC after applying all relevant mechanics. A play must draw all N
 cards.
 
@@ -283,15 +282,15 @@ another tries to dodge (e.g., Craft vs. Agility). This is a Contested Check. In 
 cases, the character who initiated the action (i.e., the Attacker) sets the DR; the DR
 for a Contested Check is 3 minus half of the Attacker's relevant modifier, to a minimum
 of 0. The character(s) responding are the Target(s), and must draw a Check against the
-initiator's TC. Rules that describe a 
+initiator's TC. Rules that describe a
 "Contested X Check vs. Y" use the attacker's Skill X and Targets' Y. Targets succeed or
  fail individually.
 
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
-with deception), they would use their Bluffing Mod of +1, setting the DR to 2 (3-1). 
-They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of 
-Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would 
-successfully convince Jonas of something in this scenario. 
+with deception), they would use their Bluffing Mod of +1, setting the DR to 2 (3-1).
+They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of
+Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would
+successfully convince Jonas of something in this scenario.
 
 #### Saves
 
@@ -299,7 +298,7 @@ When a character attempts to resist or shrug off a negative effect, they make a 
 This could be caused by a Power, Status Condition, or a environmental effect. When a
 character makes a Save, they draw a card against their own TC and use their relevant Attribute
 Modifier, with a DR set by the initiating effect. If the effect is a Power, the DR is
-3 minus half of the initiator's relevant Skill modifier. 
+3 minus half of the initiator's relevant Skill modifier.
 Saves may still have consequences even on a success, as specified by the initiating effect.
 
 ### In Combat
@@ -316,7 +315,7 @@ visualize the situation. On a square grid, moving diagonally counts as one space
 otherwise ruled by the GM.
 
 In combat, Powers do 1 damage unless otherwise stated.
-A Major Success does 1 extra damage. A Critical Success may have an additional effect, 
+A Major Success does 1 extra damage. A Critical Success may have an additional effect,
 at the GM's discretion.
 
 #### Taking Turns
@@ -343,7 +342,7 @@ they choose. They may also perform any number of Free Actions, within reason, as
 permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
-Speed is the total number of spaces a character can move in a turn. This total may be 
+Speed is the total number of spaces a character can move in a turn. This total may be
 split to occur before, after, and/or between actions. A creature can move through a friendly creature's space as part of their movement but can not end their turn on that space. A creature cannot move through a hostile creature's space or between two hostile creatures' spaces if they are within one space of one another.
 
 2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
@@ -355,7 +354,7 @@ others. If an action specifies a skill, this requires a check.
         - *Observation*: gaining obvious information about the world.
         - *Toughening Up*: discard one or more Fate Cards to nullify one damage per card
          used.
-        - *Exchanging Fate*: discard one or more Fate Cards to gain one Power Point per 
+        - *Exchanging Fate*: discard one or more Fate Cards to gain one Power Point per
         card used.
 
     2. **Minor**
@@ -367,7 +366,7 @@ others. If an action specifies a skill, this requires a check.
         - *Convince*: Bluffing vs. GM-determined DR; convince a target to change their
          course of action
         - *Recall*: Knowledge vs. GM-determined DR; determine if a character knows a
-         specific piece of information 
+         specific piece of information
 
     3. **Major**
 
@@ -380,7 +379,7 @@ others. If an action specifies a skill, this requires a check.
  as "I will make a Weapon Attack when an enemy moves within 1 space of me." If the
  trigger occurs, the readied Major Action can then be activated. If the trigger does not
  occur before the start of the character's next turn, this Major Action is forfeited,
- along with any Power Points used for the Major Action. 
+ along with any Power Points used for the Major Action.
 
 #### Ending Combat
 
@@ -435,7 +434,7 @@ attempt to end the freeze.
 Dealers have 4 health points (HP) plus their level, plus Vitality modifier. The health
 of Companions HP is half the level of their Dealer, rounding up. If a character is
 wounded beyond their health pool, they are Knocked Out. Armor Points (AP) are an
-additional resource that would be removed first in the event of a physical wound. 
+additional resource that would be removed first in the event of a physical wound.
 
 Armor Range (AR) is how hard you are to hit in general and sets the DR for an attack
 against you. Without armor, this is 3 minus half of your Agility modifier rounded down.
@@ -447,7 +446,7 @@ granting bonuses to certain checks or requiring hits to color-match.
 Physical shields and magical effects
 can grant AP, either when equipping the item or activating the Power. Unless otherwise
 specified, damage subtracts from AP first. After AP is
-depleted, additional damage subtracts from HP. Unless otherwise noted, no two pieces of 
+depleted, additional damage subtracts from HP. Unless otherwise noted, no two pieces of
 armor may be worn at the same time.
 
 **Armor Table**
@@ -473,7 +472,7 @@ Event...
 
 1. The GM draws a TC related to a specific task during the event. The GM determines the
 total number of TCs and the amount of successes or failures needed to complete the Epic
-Event. 
+Event.
 
 2. One or more players may announce how they would attempt this task. The GM decides the
 relevant Attribute or Skill, so each player may apply the relevant modifier. The GM
@@ -481,7 +480,7 @@ applies no modifier.
 
 3. Each player involved and the GM take turns drawing on this TC, looking for a Suited
 Hit. If a player succeeds first, this is a success for the party. If the GM succeeds
-first, this is a failure. 
+first, this is a failure.
 
 This process repeats for each TC in the Epic Event. A player may not volunteer for
 sequential TCs. Just as in standard Checks, a failure may be associated with some
@@ -501,10 +500,10 @@ experience in rock formations, and will be making Craft Checks.
 
     1. Xena draws a 3 of Spades with +0 Mod. This is within the DR, but not a Suited
     Match.
-   
-    2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes 
+
+    2. Elise draws a 9 of Hearts with a +1 Mod. This is a Suited Match, the group makes
     good headway.
-   
+
 3. The GM reveals a new TC: a K of Spades, with DR 3. A cultist blocks their path.
 
 4. Genesis volunteers to distract the cultists, using Performance Checks. Genesis and
@@ -519,7 +518,7 @@ Event TCs of DR 4 Vitality Checks. If they take additional damage, they make the
 checks at Lower Hand (+1). If they succeed on two TCs, they remain unconscious and the
 Epic Event is concluded. For a Major Success (same value as TC), they recover 1 HP. For
 a Critical Success, they recover 1 HP and up to 3 PP (PP max permitting). If they fail
-two of these TCs, they are called to the great beyond. 
+two of these TCs, they are called to the great beyond.
 
 ### Rests
 
@@ -560,7 +559,7 @@ to a character at a time. Cards are discarded without being turned over, and can
 yeild Fate Cards.
 
 Below is a list of possible Discard Powers, determined by Role. Work with your GM if you
-would like to use a different Discard Power instead.  
+would like to use a different Discard Power instead.
 <!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
 
 - Aggro: Discard N cards to force all creatures within 2 spaces to make
@@ -573,7 +572,7 @@ would like to use a different Discard Power instead.
   make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn.
 
 - Intensify: Discard no cards. Your next attack is treated as an Epic Event. Discard as
-  many cards as you choose until a Major Success. Standard Successes are treated as 
+  many cards as you choose until a Major Success. Standard Successes are treated as
   Misses.
 
 The discard limit increases with level according to the table below.
@@ -591,17 +590,17 @@ The discard limit increases with level according to the table below.
 Certain types of Checks require light and vision to see the environment or a target
 effectively. The amount of light available impacts Checks for most creatures. There are
 some Powers that affect a creature's abilities depending on the amount of light
-available. 
+available.
 
 **Partial Darkness:** When making a Detection or Investigation Check in partial
   darkness, draw with the Lower Hand. For example...
 
-- A dark alley in a city with some light spilling over from a nearby street. 
-- An underground room with some candles burning lightly. 
+- A dark alley in a city with some light spilling over from a nearby street.
+- An underground room with some candles burning lightly.
 
 **Full Darkness:** When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...
 
-- A moonless night in the countryside without any light source. 
+- A moonless night in the countryside without any light source.
 - Descending into a cave without a light source.
 
 #### Cover
@@ -613,17 +612,17 @@ gain the effects of cover.
   reasonable to hit them. While partially covered the creature gains +1 AR. For example...
 
 - Standing directly between another creature and an attacker.
-- Standing behind a crate or barrel that is half the creature's height. 
+- Standing behind a crate or barrel that is half the creature's height.
 
 **Fully Covered**: when a creature is nearly impossible to see behind something and it
   is unlikely to land a hit on them. While fully covered, the creature gains +2 AR. For example...
 
 - Crouching below a crate that is half the creature's height.
-- Standing behind a pillar or wall that is taller than the creature. 
+- Standing behind a pillar or wall that is taller than the creature.
 
 A creature can go from Fully to Partially Covered or from Fully Covered to Not Covered
 by using their Speed or making a Check. Some Powers may grant these effects as well. A
-creature may be covered from one direction but not from another direction. 
+creature may be covered from one direction but not from another direction.
 
 #### Falling
 
@@ -635,7 +634,7 @@ This speed is recovered after a Rest or if the creature is healed to their maxim
 
 Moving through the environment can sometimes be challenging. When navigating
 through *Challenging Terrain*, moving through one space requires 2 speed. While
-standing in Challenging Terrain, all Agility Saves are made with the Lower Hand. 
+standing in Challenging Terrain, all Agility Saves are made with the Lower Hand.
 
 #### Holding Breath
 
@@ -643,7 +642,7 @@ A character can go without air for 1 + 2 times Vitality Mod minutes. Taking dama
 gains the *Suffocating* Status Condition.
 
 Some Powers or effects can extend this time limit or prevent a character from
-Suffocating. 
+Suffocating.
 
 ## Character Creation
 
@@ -653,10 +652,10 @@ and what skills will be relevant for the story ahead. Custom creation starts wit
 spending Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or
 Skills.
 
-- A [Background](./03_CharacterCreation#decide-your-background) is descriptive about of 
+- A [Background](./03_CharacterCreation#decide-your-background) is descriptive about of
   character's history and where they are when you begin your adventure.
 
-- [A Role](./03_CharacterCreation#choose-your-role) is a general class the unlocks access to 
+- [A Role](./03_CharacterCreation#choose-your-role) is a general class the unlocks access to
   certain abilities.
 
 - Attributes cost more, but also increase corresponding skills.
@@ -664,16 +663,16 @@ Skills.
 - Spending points has diminishing returns. Going from 0 to +1 is relatively cheap,
   but +3 to +4 will take many more points.
 
-- Skill Modifiers start *unskilled* with a 0 Modifier, so choose carefully. 
+- Skill Modifiers start *unskilled* with a 0 Modifier, so choose carefully.
 
 - Vulnerabilities are roleplay and/or combat weaknesses and yield 1 or 2 additional
   Experience Points to spend when they are added to the Character Sheet during
   Character Creation.
 
 - Powers are special features, boons or strengths, that cost 1 or 2 points. Powers may
-  have additional requirements such as Role or Level. 
+  have additional requirements such as Role or Level.
 
-For a full set of character creation options, see our 
+For a full set of character creation options, see our
 [Character Creation page](./03_CharacterCreation.md).
 
 ## Starting your adventure
@@ -682,7 +681,7 @@ There are four steps to starting an adventure of Deck of Adventures:
 
 1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master
 ( GM) and one player, but richer stories can be told with more people bringing more to
-the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group! (if this link is expired, please 
+the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group! (if this link is expired, please
 [submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!))
 
 2. **Discuss play style:** Different players and GMs will have different preferences.

@@ -28,7 +28,8 @@ Building the core ruleset and refining ahead of Beta using Alpha Test Feedback.
 
 **Closed Beta**
 
-Testing the core ruleset across a variety of pre-defined Adventures, without Custom Character Creation.
+Testing the core ruleset across a variety of pre-defined Adventures, without Custom
+Character Creation.
 
 **Open Beta**
 

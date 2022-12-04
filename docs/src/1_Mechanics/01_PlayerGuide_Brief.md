@@ -5,7 +5,7 @@
 Deck of Adventures is a Tabletop Roleplaying Game (TTRPG) where friends tell a
 collaborative narrative story together. This guide is enough to get started, but we
 recommended you read the Full Players Guide to learn all of the rules, mechanics, and
-story-telling devices. 
+story-telling devices.
 
 ## Quick-Start Guide
 
@@ -29,14 +29,14 @@ outcome via...
   the target you are aiming for.
 
 - *Difficulty Range* (DR) that defines how far away from the TC you can be and still
-  succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a 
+  succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a
   King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
 
 - A *Modifier* (Mod) provided by your character sheet, that allows you to add
   that number to the DR, making it easier for you to succeed. This helps you
   aim your Check closer to the bullseye.
 
-- Under some circumstances, you'll be asked to draw with the Upper Hand or the Lower 
+- Under some circumstances, you'll be asked to draw with the Upper Hand or the Lower
   Hand.
     - With the Upper Hand, you can draw an additional card(s) and use the more
      favorable value to increase your odds.
@@ -48,17 +48,17 @@ outcome via...
      each other out.
 
 - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
-  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and still report a
-  successful 3 or 5 draw.
+  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and 
+  still report a successful 3 or 5 draw.
 
 There are two special kinds of Checks:
 
-- A *Contested Check* is triggered by two characters using skills for opposing goals. 
-  The initiator sets the TC (their own card) and the DR (3 - Mod/2). The character 
+- A *Contested Check* is triggered by two characters using skills for opposing goals.
+  The initiator sets the TC (their own card) and the DR (3 - Mod/2). The character
   responding makes a simple check against this TC/DR.
 
-- A *Save* is a Check with an Attribute (see below) with a preset DR that a character 
-  makes against their own TC. 
+- A *Save* is a Check with an Attribute (see below) with a preset DR that a character
+  makes against their own TC.
 
 ### Fate Cards
 
@@ -108,7 +108,7 @@ Your character may need to rest to recharge Power Points or heal Health Points.
     - If the card drawn is the same as the character's Primary Suit, there are additional
       benefits. Reference the Full Guide for more details on taking a Quick Rest.
 
-- On a **Full Rest** you replenish all expended Health, Fate, and Armor. 
+- On a **Full Rest** you replenish all expended Health, Fate, and Armor.
     - If you run out of cards before you can successfully take a Rest, you may
      shuffle, but must always draw with Lower Hand (1+) until your next Rest.
      This signifies your character running out of Stamina during a long day.
@@ -116,16 +116,16 @@ Your character may need to rest to recharge Power Points or heal Health Points.
 
 ### Combat
 
-If your group turns to violence to solve issues, the DM will announce the beginning 
+If your group turns to violence to solve issues, the DM will announce the beginning
 of Combat, where each involved character will draw a Target Card to determine turn order.
 
 - On your turn, you can move and take up to 1 Major and 1 Minor Action, in any order.
   Minor actions include object interactions and some Skill Checks.
 - Your movement is limited by the Speed value on your character sheet, showing the
-  maximum number of spaces you can move. The average speed is 6. 
+  maximum number of spaces you can move. The average speed is 6.
 - Your character sheet will give you optional actions that you can take listed under
   Powers, but you can always try something new. Ask your GM if your idea is possible
-  under circumstances. 
+  under circumstances.
 - Unless otherwise stated, Powers have a range of 6 and do 1 damage.
 - If you get hit, you can expend a Fate Card to nullify 1 point of damage.
 - Depending on the type of attack or amount of damage, you may get Stunned, Knocked
