@@ -1,15 +1,13 @@
 from ..utils.logger import logger
-from .markdown import Markdown
-from .csv import Csv
-from .dot import Dot
+from .powers import Powers
+from .bestiary import Bestiary
 
 
 def yaml_to_other(
     input_files: list = [
         "04_Powers.yaml",
         "05_Vulnerabilities.yaml",
-        "06_Bestiary.yaml",
-    ],
+    ],  # "06_Bestiary.yaml",],
     writing: list = ["md", "dot", "png", "csv", "svg"],
     dependencies: list = ["Skill"],  # "Skill", "Level", "Role"],
     add_loners: bool = False,
@@ -25,21 +23,24 @@ def yaml_to_other(
         add_loners (bool, optional): Include loners in dot.
         out_delim (str, optional): CSV delimiter - `\t` or `,`
     """
-    for f in input_files:
-        logger.info(f"Started {f}")
+    for file in input_files:
+        logger.info(f"Started {file}")
+
+        if "Best" in file:
+            my_class = Bestiary(file)
+        else:
+            my_class = Powers(file)
+
         if "md" in writing:
-            Markdown(f).write()
+            my_class.write_md(output_fp=None, TOC=False)
         if "csv" in writing:
-            Csv(f).write(delimiter=out_delim)
-        if any(img_out in writing for img_out in ["dot", "png", "svg"]):
-            dot = Dot(f, dependencies=dependencies, add_loners=add_loners)
-            if "dot" in writing:
-                dot.write()
-            dot.to_pic(out_format=[i for i in writing if i in ["png", "svg"]])
+            my_class.write_csv(delimiter=out_delim)
+        if "dot" in writing:
+            my_class.write_dot(dependencies=dependencies, add_loners=add_loners)
+        if any(img_out in writing for img_out in ["png", "svg"]):
+            my_class.dot_to_pic(out_format=[i for i in writing if i in ["png", "svg"]])
     if "04_Powers.yaml" in input_files and "05_Vulnerabilities.yaml" in input_files:
-        Csv(["04_Powers.yaml", "05_Vulnerabilities.yaml"]).write(
-            output_fp="../docs/src/1_Mechanics/04_Powers_Combined.tsv"
-        )
+        Powers(input_files=["04_Powers.yaml", "05_Vulnerabilities.yaml"]).write_csv()
 
 
 if __name__ == "__main__":

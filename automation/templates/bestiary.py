@@ -1,11 +1,13 @@
 from collections import OrderedDict
 from .yaml_spec import YamlSpec
+from ..utils.logger import logger
 
 
 class Bestiary(YamlSpec):
+    # TODO: check stat overrides before printing
     def __init__(self, input_files="06_Bestiary_SAMPLE.yaml", limit_types: list = None):
-        input_files = self.ensure_list(input_files)
-        super().__init__(input_files=[file for file in input_files if "Best" in file])
+        input_files = [file for file in self.ensure_list(input_files) if "Best" in file]
+        super().__init__(input_files=input_files)
         self._limit_types = limit_types
         self.list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
         self.list_skills = [
@@ -68,9 +70,20 @@ class Bestiary(YamlSpec):
     def merge_features(self, beast_dict):
         pass  # What needs to be flattened?
 
+    def run_stat_overrides(self, beast_dict):
+        pass
+        if "Stat Overrides" not in beast_dict:
+            return beast_dict
+        list_stats = beast_dict["Stat Overrides"]
+
+    @property
+    def categories(self):
+        raise NotImplementedError
+
     @property
     def content(self) -> dict:
         """Return readable dict."""
+        raise NotImplementedError
         if not self._content:
             self._content = {
                 power: {
@@ -81,3 +94,9 @@ class Bestiary(YamlSpec):
         return self.filter_dict_by_key(  # Filter by types specified when init class
             dict_content=self._content, key_filter="Type", key_options=self._limit_types
         )
+
+    @property
+    def dot_template(self) -> str:
+        """All dot file frontmatter"""
+        logger.warning("Dot template not yet implented for Bestiary")
+        return ""

@@ -24,7 +24,7 @@ Template:               # must be unique
     Craft: ±X           #
     Athletics: ±X       #
     Brute: ±X           #
-  Powers:               # Include Power names as list
+  Powers:               # Include Powers/Vulnerabilities names as list
   Phases:               # Only for bosses
     One:                #
       HP: X             #
@@ -41,6 +41,7 @@ Grunt:
     INT: -1
   Powers:
     - Attack, Weapon
+    - Clumsy, Minor
   Threat: 1
   Description: A low level soldier.
 

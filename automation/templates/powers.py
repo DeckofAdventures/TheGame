@@ -36,6 +36,7 @@ class Powers(YamlSpec):
             ]
         )
         self._limit_types = limit_types
+        self._dot_template = None
 
     def sort_template(self, power_dict):
         """Given a power, return OrderedDict in markdown read order"""
@@ -138,16 +139,53 @@ class Powers(YamlSpec):
                 self._categories.add(tuple(self.ensure_list(v["Category"])))
         return sorted(self._categories)
 
-    def by_category(self, category: list = None):
-        """Returns readable dict of powers limited by category, if present
+    @property
+    def dot_template(self) -> str:
+        if not self._dot_template:
+            gen_powers = True if "powers" in self._stem.lower() else False
 
-        Args:
-            category (list, optional): Ordered list/set of [category, subcategory].
-                Defaults to None, meaning no filtering or ordering.
-
-        Returns:
-            dict: Subset of readable dict
-        """
-        return self.filter_dict_by_key(
-            dict_content=self.content, key_filter="Category", key_options=category
-        )
+            dot_frontmatter = (
+                """digraph {concentrate=true; splines=curved; compound=true;\n"""
+            )
+            dot_subgraph_role = (
+                "\n/* Roles */\n"
+                "\tCaster [shape=box style=filled];\n"
+                "\tSupport [shape=box style=filled];\n"
+                "\tMartial [shape=box style=filled];\n"
+                "\tDefender [shape=box style=filled];\n"
+            )
+            dot_subgraph_skill = (
+                "/* Skill */\n"
+                '\tsubgraph cluster_stats { label="Stats/Attributes"\n'
+                '\t\tsubgraph cluster_Agility{label="Agility" {Finesse Stealth} };\n'
+                '\t\tsubgraph cluster_Conviction{label="Conviction" {Bluffing Performance} };\n'
+                '\t\tsubgraph cluster_Intuition{label="Intuition" {Detection Craft} };\n'
+                '\t\tsubgraph cluster_Intelligence{label="Intelligence"'
+                "{Knowledge Investigation} };\n"
+                '\t\tsubgraph cluster_Strength{label="Strength"  {Athletics Brute} };\n'
+                '\t\tsubgraph cluster_Vitality{label="Vitality" {Vitality [style = invis]} };'
+                "\n\t}\n\n"
+            )
+            dot_subgraph_level = (
+                "/* Level */\n"
+                '\tsubgraph cluster_levels { label="Levels";\n'
+                "\tLevel_1 [shape=box style=filled];\n"
+                "\tLevel_2 [shape=box style=filled];\n"
+                "\tLevel_3 [shape=box style=filled];\n"
+                "\tLevel_4 [shape=box style=filled];}\n\n"
+            )
+            dot_subgraph_loners = (
+                "/* Loners */\n"
+                '\tsubgraph cluster_levels {label="No Prerequisites";\n\t%s}\n'
+            )
+            if gen_powers:
+                if "Prereq_Role" in self._dot_dependencies:
+                    dot_frontmatter += dot_subgraph_role
+                if "Prereq_Skill" in self._dot_dependencies:
+                    dot_frontmatter += dot_subgraph_skill
+                if "Prereq_Level" in self._dot_dependencies:
+                    dot_frontmatter += dot_subgraph_level
+            if self._dot_add_loners:
+                dot_frontmatter += dot_subgraph_loners % ";\n\t".join(self.loners)
+            return dot_frontmatter + "\n/* Linked */\n\t" + "%s\n}"
+        return self._dot_template

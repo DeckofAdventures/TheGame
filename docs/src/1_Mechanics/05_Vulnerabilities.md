@@ -1,4 +1,4 @@
-<!-- DEVELOPERS: Please edit corresponding yml -->
+<!-- DEVELOPERS: Please edit corresponding yaml -->
 
 
 # Combat

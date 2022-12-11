@@ -1,14 +1,14 @@
 from glob import glob
 from pathlib import Path
 from pdf2image import convert_from_path  # install
-from utils.logger import logger
+from ..utils.logger import logger
 
 
 def split_pdf(
     dry_run: bool = True,
     roles: list = ["Defender", "Caster", "Support", "Martial"],
     level_max: int = 3,
-    pdf_path: Path = Path(glob("./_input/*PremadeSheet*pdf")[0]),
+    pdf_path: Path = Path(glob("./automation/_input/*PremadeSheet*pdf")[0]),
     out_folder: Path = Path("../docs/src/1_Mechanics/PremadeCharacters/"),
 ):
     """Splits PDF for premades into individual pngs: Premade_{Role}_Level{#}.png

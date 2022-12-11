@@ -1,6 +1,5 @@
 Template: # Power name        # Must be unique
-    Type: One of              # Passive, Vulny, Major, Minor, Adversary, Free, House. 
-    # Note: Type is required. For Companion actions, type indicates type req for dealer
+    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House. 
     Category: One or list     # One string or list in sub-cat order
     XP: X
     PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
@@ -9,6 +8,7 @@ Template: # Power name        # Must be unique
         Level: X              # Integer               
         Skill: X > 1          #              
         Power:                # Must match unique power name
+    # StatOverride: AGL -2      # One of AGL, STR, Finesse, etc. followed by number
     To Hit: X                 # If not specified, assumed character's primary skill
     Damage: X                 # Integer           
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
@@ -791,13 +791,10 @@ Keen Eye:
     Type: Passive
     XP: 1
 
-_Discard Note: # Not sure how this will render
-    Category: Discard
-    Mechanic: A character is limited to one Discard Power
-    Type: Passive
+# Discard: A character is limited to one Discard Power
 
 Aggro:
-    Category: Discard
+    Category: Discard (limit one per character)
     Description: Protecting your friends means taking the big hits.
     Mechanic: Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
     Type: Minor
@@ -806,7 +803,7 @@ Aggro:
         Level: 2
 
 Help:
-    Category: Discard
+    Category: Discard (limit one per character)
     Description: You're there just when your friends need you.
     Mechanic: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
     Type: Minor
@@ -815,7 +812,7 @@ Help:
         Level: 2
 
 Thwart:
-    Category: Discard
+    Category: Discard (limit one per character)
     Description: You have a few tricks up your sleeve for drawing the enemy's attention.
     Mechanic: Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
     Type: Minor
@@ -824,7 +821,7 @@ Thwart:
         Level: 2
 
 Intensify:
-    Category: Discard
+    Category: Discard (limit one per character)
     Description: An explosive attack might mean running out of gas.
     Mechanic: Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
     Type: Minor
