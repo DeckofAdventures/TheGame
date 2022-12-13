@@ -26,7 +26,7 @@ Second, Deck of Adventures is designed to be **flexible**, across the many types
 stories GMs want to tell. While our mechanics have been workshopped with lore from the
 World of Erdania, all core mechanics should be portable to another setting. In other
 words, Deck of Adventures is setting-agnostic. No core mechanic should imply a specific
-setting (e.g., magical fantasy) and all settings should be playable by ignoring or 
+setting (e.g., magical fantasy) and all settings should be playable by ignoring or
 reflavoring a subset of optional mechanics (e.g., the Mystic Aura is EMP tech).
 
 Third, participants should be able to quickly and easily engage in **rich storytelling**
@@ -48,11 +48,12 @@ context determines how good the outcome is.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
 
-3. **Target Cards remain on a character at all times.** Each character is always represented by a Target Card. Between combats, the TC remains active on a
+3. **Target Cards remain on a character at all times.** Each character is always
+represented by a Target Card. Between combats, the TC remains active on a
 character for any other Checks. A new TC is drawn at the start of the next
-combat to shuffle the turn order around for each combat. 
+combat to shuffle the turn order around for each combat.
 
 4. **Target Cards changing often is important.** When Player Dealers are drawing cards
 constantly aiming at a specific TC, the likelihood of a success decreases as more cards
 that hit are drawn from the deck. Changing TCs to represent each enemy or challenge
-keeps the odds of drawing a success balanced over the course of an Adventure. 
+keeps the odds of drawing a success balanced over the course of an Adventure.

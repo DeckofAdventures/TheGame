@@ -1,4 +1,0 @@
-pydot
-pyyaml
-pdf2image
-black

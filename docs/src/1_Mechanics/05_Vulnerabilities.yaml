@@ -9,6 +9,7 @@ Template: # Power name        # Must be unique
         Power:                # Must match unique power name
     Description: Descrip      # Flavor: 1-2 sentences             
     Tags: One or list
+    # StatOverride: AGL -2   # One of AGL, STR, Finesse, etc. followed by number
     # Rest can be ignored when copy/pasting. Only needed so code can combine
     PP: Ignore
     To Hit: Ignore
@@ -40,6 +41,26 @@ Chaotic Companion:
     Type: Vulny 
     Prereq:
         Power: Creature Connection
+
+# Clumsy, Minor:
+#     Category: Stats
+#     XP: -1
+#     Prereq:
+#         Level: 0
+#     StatOverride: AGL -1
+#     Type: Vulny
+#     Description: You're clumsier than most.
+#     Mechanic: On character creation, you start with -1 AGL
+
+# Clumsy, Major:
+#     Category: Stats
+#     XP: -2
+#     Prereq:
+#         Level: 0
+#     StatOverride: AGL -2
+#     Type: Vulny 
+#     Description: You're clumsier than most.
+#     Mechanic: On character creation, you start with -2 AGL
 
 Oath:
     Category: Roleplay

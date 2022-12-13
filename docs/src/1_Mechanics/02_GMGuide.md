@@ -9,15 +9,15 @@ a continuous narrative. You can bring together close friends in person, or
 find new friends virtually through the [Discord](https://discord.gg/2Wu6ZAb6S9).
 
 If you’ve been a GM elsewhere and are hoping to learn about what’s different
-about being a Deck of Adventures Game Master, you can skip right to [Being a Deck of Adventures Game Master](./02_GMGuide.md#being-a-deck-of-adventures-game-master). 
+about being a Deck of Adventures Game Master, you can skip right to
+[Being a Deck of Adventures Game Master](./02_GMGuide.md#being-a-deck-of-adventures-game-master).
 
 For everyone else, or those GMs who want a refresher, we will dive into what being a GM
-is all about in [Getting Started as a Game Master](./02_GMGuide.md#getting-started-as-a-game-master). 
+is all about in [Getting Started as a Game Master](./02_GMGuide.md#getting-started-as-a-game-master).
 
 If you or your players have questions or need a helping hand, please reach out
 to the team on [Discord](https://discord.gg/2Wu6ZAb6S9) or via GitHub
 issues.
-
 
 ## Getting Started as a Game Master
 
@@ -27,7 +27,7 @@ actor/playwright who brings the various scenes of the story to life and
 voices the majority of the characters who populate the world. You control
 when certain characters come and go, scene changes, and the narration between
 scenes. You build the world, populate it with characters and history, and
-then the Players walk through that world and experience it first-hand. 
+then the Players walk through that world and experience it first-hand.
 
 GMs are responsible for preparing ahead of sessions and guiding a group of
 Players through a collaborative narrative Adventure. You bring the game to
@@ -41,7 +41,7 @@ those with years of experience. This craft takes years to hone, and decades
 to master, but you can be a great GM within your first few sessions by
 following some of the advice in this guide. The DofA Community also is
 available to respond to questions and offer advice, drawing from years of
-collective experience. 
+collective experience.
 
 You should be an impartial force in the world, controlling both allies and
 enemies neutrally. The best sessions feel like everyone is working together
@@ -49,7 +49,7 @@ to complete an objective, even the GM, rather than competition between
 Players and GM. This is a delicate balance, and GMs should ask for Players'
 feedback. It's also a GM's responsibility to provide feedback to the Players
 at the table when necessary, especially if one's play style may be a
-distraction to others at the table. 
+distraction to others at the table.
 
 ### Making Checks
 
@@ -57,14 +57,14 @@ As the GM, you decide when characters should make a Check when attempting an
 action during an Adventure. Some actions just happen, like a character
 opening an unlocked door. Other actions might require the character to
 attempt a Skill Check to see if they are successful. Incorporating luck makes
-Adventures feel more dynamic and exciting. 
+Adventures feel more dynamic and exciting.
 
 When characters make a Check, they are drawing from their expertise
 (or inexperience) with a specific Skill to see how they perform. Their
 Modifier (Mod) indicates their character's expertise with a specific Skill.
 Characters with high Strength would be more likely to succeed on an Athletics
 Check than Characters with low Strength, though by incorporating luck a low
-Strength character still has a chance to succeed on a Strength Check. 
+Strength character still has a chance to succeed on a Strength Check.
 
 You determine when a Check should be made, what Skill should be used, and set
 the Difficulty. A Player might ask if a specific Skill could be used instead,
@@ -72,7 +72,7 @@ and it is your decision whether to allow it in the circumstance. Stepping
 over a crack in the floor should not require a Check, but leaping ten feet
 across a chasm would. Attempting to sneak past a sleeping guard still
 requires a Stealth Check, but it should be less difficult than sneaking past
-the same guard who is on high alert. 
+the same guard who is on high alert.
 
 Flow state is achieved when we are at the peak of our ability and met with the
 exact level of challenge to fit our skills. To keep Players engaged, dial in
@@ -89,37 +89,37 @@ that you'll need to get back to them after the session. You should be open to
 Player questions and ideas, and work with them to tell the story as much as
 possible. Improvisation and spontaneity are two vital ingredients to a great
 session, but having key moments mapped out is important to shaping the
-Players' experience. 
+Players' experience.
 
 What you prepare may not pan out perfectly, and that's part of the fun. The
 Players bring their own creative agency to the table, and that can be
 unpredictable. It's important not to force the Players back into a prescribed
 narrative. If the Players logically lead the the session in a different
 direction, go with it. The Players also may not know when story beats are
-improvised, and these moments can make for the most organic and memorable Adventures. 
+improvised, and these moments can make for the most organic and memorable Adventures.
 
 During a session, GMs keep some information hidden from the Players. This can
 be a physical or virtual GM screen that separates the information that's available to
 the GM and not the players. *Behind the GM screen* also serves as a metaphor
-for what players can and can't see. 
+for what players can and can't see.
 As the GM, you choose what to share and under what circumstances,
 as a result of a Check or just part of the
 narrative. Every GM has their own style of maintaining this division of what
-is hidden and what is revealed. 
+is hidden and what is revealed.
 
 ## Being a Deck of Adventures Game Master
 
 As a Deck of Adventures (DofA) Game Master (GM) you are controlling the flow
 of card draws on both sides of the table. Try to balance card draws between
 Players and NPCs throughout a session, and make sure all Players are
-involved. 
+involved.
 
 ### Game Master Resources
 
 Game Masters (GMs) should have at least two decks of cards available during a
 session to represent allies and enemies. More decks may be useful to
 represent different groups in combat. If you only have one deck available,
-split it into two 26-card decks and shuffle regularly. 
+split it into two 26-card decks and shuffle regularly.
 
 One deck of cards should be designated the *NPC Deck* and one designated the *World
 Deck*. Different color card backs will help distinguish the two throughout play. The
@@ -127,7 +127,7 @@ NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when appl
 negative [Status Conditions](./01_PlayerGuide_Full.md#status-conditions). The World
 Deck is used to make social checks, and to draw Target Cards representing items and
 objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World
-Deck empty. 
+Deck empty.
 
 Most NPCs won't stick around long enough to use a deck completely, and
 therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
@@ -142,31 +142,32 @@ characters. Each Player holds a single deck of 52 cards, with two Fate Cards
 reserved at the beginning of play. Each character has statistics that include
 total Health Points (HP), Power Points (PP), and Armor Points (AP). Your focus
 during a session will be balancing the expenditure of all of these
-resources. 
+resources.
 
 Absolute values are low in Deck of Adventures to promote speed of play and
 simplicity of calculations. With that in mind, Player controlled Dealer HP
-starts at 5, but scales with level and Vitality modifier. 
+starts at 5, but scales with level and Vitality modifier.
 The theoretical maximum is 21 HP, at level 10 with a +6 Vitality modifier. Armor Points are
 similarly small, with a maximum of 3. Maximum Power Points may be larger at
 higher levels of play, the enemies that players face should require
-higher level Powers that balance out this scaling. 
+higher level Powers that balance out this scaling.
 Players will leverage all of their
 resources to survive and succeed in Adventures. As the GM, it is up to you to
-make those resources feel strained and tested. 
+make those resources feel strained and tested.
 
 ### Cards
 
 Think of the Players' decks as their characters' stamina. They should get
 progressively more tired throughout the day as cards are drawn for Checks and
-Powers. If a Player runs out of cards between Rests, they are [Fatigued](./01_PlayerGuide_Full.md#status-conditions) and
+Powers. If a Player runs out of cards between Rests, they are
+[Fatigued](./01_PlayerGuide_Full.md#status-conditions) and
 reshuffle their deck. They then make all checks at Lower Hand until they complete
 a Rest. At lower levels, Players may not reach the end of their decks between
 Rests to incur Lower Hand penalties. As Players level up, both the Powers
 they use and the Encounters they face may require more draws, bringing them
-closer to running out. Some Players will go through cards more quickly than others. 
+closer to running out. Some Players will go through cards more quickly than others.
 Keep this in mind when
-developing Encounters to challenge different Players. 
+developing Encounters to challenge different Players.
 
 ### Resting
 
@@ -176,14 +177,14 @@ Depending on the Encounters they face and the resources
 expended, Players may try to Rest more often. While Resting, the Players will
 regain their HP and PP, and expending Rest Cards. Keep these resources in mind when planning
 Encounters that deal damage. Try to keep
-Players motivated to press on, even without full resources. 
+Players motivated to press on, even without full resources.
 
 To Rest, Players will consult with the GM about whether it may be feasible
 to secure an uninterrupted break. Players
 can only use Rest Cards after a Rest has been successfully completed. If a
 situation is tense, it may not always be possible to gain the benefits of a
 Rest. In the event that a Rest is interrupted, it can be resumed based on the
-remaining time left and extended as necessary. 
+remaining time left and extended as necessary.
 
 For example, a Full Rest would be easy to secure at a comfortable inn in a
 major city. A temporary hiding spot in an enemy bandit camp would me much
@@ -199,7 +200,7 @@ Each character can have one or more Vulnerabilities, which may have
 mechanical and/or roleplay implications. GMs are highly encouraged to keep
 these Vulnerabilities in mind when designing Adventures. For Players, these
 are narrative seeds that can be cultivated into truly meaningful
-moments for the Players. 
+moments for the Players.
 
 For Player Vulnerabilities with more severe mechanical consequences, or those
 that could lead to dangerous situations, GMs should avoid planning too much
@@ -231,18 +232,19 @@ Range (DR), which is the distance between pip values that will still count as
 a success. When thinking about the Target Card System, it may be helpful to
 consider a bullseye, where the TC is the center and
 the DR is the number of circles away from the center you can hit and still
-be successful. 
+be successful.
 
 One of the initial barriers a new GM must overcome is helping the Players
 understand this target system. As Players get more familiar with the
 system, speed of play increases, and it is then easier for them to understand
-more complex mechanics. Using the [Circular TC-DR Tool](./Visual_Tools/1_Circular_Assembled.PNG) is a helpful visual
-aid. 
+more complex mechanics. Using the
+[Circular TC-DR Tool](./Visual_Tools/1_Circular_Assembled.PNG) is a helpful visual
+aid.
 
 The Target Card System is circular, so an Ace is only 1 away from both a King
 and a 2. If you were aiming a Check against a Target Card of an Ace, you
 could consult the below table to understand which cards would be successful
-within the set DR. 
+within the set DR.
 
 | DR   | -6  | -5  | -4  | -3  | -2  | -1  | 0   | +1  | +2  | +3  | +4  | +5  | +6  |
 |---:  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -255,7 +257,7 @@ within the set DR.
     reason.
 
 - **Misses** happen when the drawn card is outside the DR. The character
-    making the Check is not able to accomplish what they intended. 
+    making the Check is not able to accomplish what they intended.
 
 - **Critical Successes** happen when the drawn card exactly matches the TC in
     pip value and suit. At 2% chance, they should feel amazing for the
@@ -268,7 +270,7 @@ within the set DR.
     bonus should happen whenever possible.
 
 - **Color and Suited Successes** happen when the drawn card is within the DR
-    and matches the TC in color or suit. 
+    and matches the TC in color or suit.
 
 - **Fate Cards**  permit a Dealer (Player character or significant NPC) to
     redraw. If this changes the success state, the first draw should be
@@ -301,16 +303,16 @@ Keep this table as a handy reference for setting DRs throughout a session. Do
 you want something to feel extremely difficult? Maybe make it a DR 1. Should
 a Player feel like something is less challenging for their character in a
 moment where the odds are in their favor? Make it a DR 3 with Upper Hand. You
-decide what makes the most sense given a specific situation. 
+decide what makes the most sense given a specific situation.
 
 ### Player Skill Mods and DR Reporting
 
 Players will have Modifiers (Mods) on their Character Sheet that allow them to
-reduce the difficulty of Checks made in the relevant domain. 
+reduce the difficulty of Checks made in the relevant domain.
 A Modifier
 widens the DR, making it more likely their draw will be successful. In some
 circumstances, having a +1 Mod may be the difference between success and
-failure. 
+failure.
 
 Referencing the table above, it's clear to see the difference an additional
 DR +1 can make. As you progress Players through an Adventure, keep these
@@ -373,7 +375,7 @@ more info).
 - STR Strength: Physical limits and boundaries (e.g,. resisting a push).
 
     - Athletics: Exerting oneself in physical sustained challenge.
-    - Brute: Burst force or single lifts. Primary Skill for Defenders. 
+    - Brute: Burst force or single lifts. Primary Skill for Defenders.
 
 - VIT Vitality: Resisting bodily harm. Determines max HP.
 
@@ -387,32 +389,38 @@ The list below features a few examples of Contested Checks, but, as the GM,
 it's up to you to decide what a situation calls for if it is not explicitly
 described in the guide or in a Power mechanic.
 
-1. Tackle Target: Initiator Finesse vs. Target Athletics 
-2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection or (if posessing relevant knowledge) Knowledge
+1. Tackle Target: Initiator Finesse vs. Target Athletics
+
+2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection
+or (if posessing relevant knowledge) Knowledge
+
 3. Sneaking past Target: Initiator Stealth vs. Target Detection
+
 4. Arm wrestle: Brute vs. Brute
+
 5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
 
 ### Saves
 
 Saves occur when a character is attempting to resist or shrug off a negative effect (see
-[Full Player Guide](./01_PlayerGuide_Full.md#saves). 
+[Full Player Guide](./01_PlayerGuide_Full.md#saves).
 
 When calling for a Save, choose the Attribute that is most relevant to the initiating
 effect. A character cannot choose to use a different Attribute.
 
 Because characters draw against their own TC, Saves will
-never be a Critical Success. You can choose to add an additional effect to a Major Success. 
+never be a Critical Success. You can choose to add an additional effect to a Major Success.
 
-While all saves will have effects for failure, some may still have effects on success, such as half damage. Refer to the
-specific wording of the initiating effect.  
+While all saves will have effects for failure, some may still have effects on success,
+such as half damage. Refer to the
+specific wording of the initiating effect.
 
-If an environmental effect initiates a Save, you determine the DR and Attribute as the GM. If an effect would cause a
+If an environmental effect initiates a Save, you determine the DR and Attribute as the
+GM. If an effect would cause a
 character to attempt to resist it to avoid damage or a Status Condition, that character
 should make a Save.
 
-<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR --> 
-
+<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR -->
 
 ### Epic Events
 
@@ -420,7 +428,7 @@ should make a Save.
 
 Epic Events are unique, time-gated scenarios that can occur throughout an
 Adventure. As the Game Master (GM), you determine when an Epic Event will
-happen, set the Difficulty, and decide the stakes. 
+happen, set the Difficulty, and decide the stakes.
 
 Epic Events invoke a specific set of rules for determining the outcome, which
 is different than traditional combat, social interaction, or exploration.
@@ -432,7 +440,7 @@ and participation from every Player.
 
 As the GM, you are actively drawing against the Players on a TC during the
 Epic Event. The odds are skewed in the Players' favor by allowing them to
-draw using Skill Modifiers while you draw with a +0 Mod. Your ability to 
+draw using Skill Modifiers while you draw with a +0 Mod. Your ability to
 modify the challenge of an Epic Event comes from setting the Difficulty.
 
 For more information on Epic Events, visit the [Full Player's Guide](./01_PlayerGuide_Full.md#epic-events)
@@ -457,45 +465,45 @@ fresh and lively for all of your Players.
 
 The GM sets the difficulty ahead by announcing how many Successes will be
 needed before 3 Failures. Setting a difficulty of 4 means that the Players
-need to make 4 successful Checks before reaching 3 failures. 
+need to make 4 successful Checks before reaching 3 failures.
 
 #### Deciding the Stakes
 
 Going into an Epic Event, there is no guarantee of Success, even at lower
 Difficulties. Try to balance the outcomes based on the scope of the Epic
 Event. Not all Epic Events are life-or-death scenarios, and consequences can
-vary depending on the number of success before 3 failures. 
+vary depending on the number of success before 3 failures.
 
 If Players get 3 Failures trying to escape a collapsing dungeon, they may take
 a little damage, discard some cards, or lose a precious object in
 the fray. Likewise, if the Players are successful without any failures, the
-reward for their success can be balanced accordingly. 
+reward for their success can be balanced accordingly.
 
-<!-- Future: a table for difficulty. Assuming X players Difficulty Y has Z% chance --> 
+<!-- Future: a table for difficulty. Assuming X players Difficulty Y has Z% chance -->
 
 #### An Example of an Epic Event
 
-<!-- Future: Modify example as dungeon collapse--> 
+<!-- Future: Modify example as dungeon collapse-->
 
 The Players hear screaming ~ 100 ft away, and rush to investigate. They see a
 group of townsfolk being attacked by a group of monsters. Each of the
 townsfolk is engaged with a different monster. The difficulty is set to 3,
 and 5 target cards are drawn. The Players then declare which skill they will
 use to save one of the townsfolk, and must make a suited hit before the GM
-does to succeed on each TC. 
+does to succeed on each TC.
 
 - The Defender chooses Brute, and intends to ram into a monster while the
   townsperson gets away. The GM decides a corresponding DR of 3 on a 9 of
   Hearts Target Card (TC). The Defender draws a 6 of Hearts and, with the
   Defender's +2 to Brute, this is a Suited Success and a success on the first
-  Epic Event challenge. 
+  Epic Event challenge.
 
 - The Support wants to protect a townsperson using their magic via Craft, with
   a +1 modifier. The GM rules this more difficult, with a DR 2 on a 7 of
   Clubs TC. The Support draws a 3 of Diamonds, which is a miss. The GM then
   draws, without a modifier, against this same TC. They draw a 6 of Spades;
   also a miss. Support and GM each take turns drawing until until the Support
-  draws a 5 of Clubs, which is a success. 
+  draws a 5 of Clubs, which is a success.
 
 - The Martial wants to sneak up to a monster and help the townsperson escape,
   using Stealth. The GM sets a DR 2 on the Jack of Spades TC. The Martial
@@ -521,7 +529,7 @@ Deck of Adventures (DofA) combat is meant to be fast-paced, collaborative, and
 accessible. It is designed around a simple core, while allowing for a lot of
 player freedom based on how they built their character. To run combat in DofA
 successfully, you should plan encounters thoughtfully and be able to adapt on
-the fly when Players make unexpected strategic decisions. 
+the fly when Players make unexpected strategic decisions.
 
 Some sessions may be very focused on combat, with 3-4 combat encounters
 between Full Rests, while others will be more roleplay-oriented. As the Game
@@ -535,7 +543,7 @@ the Players at the table.
 You choose when to declare the beginning of Combat, and this triggers the
 start of Combat Turn Order. The start depends entirely on the scenario. It
 might begin when the Players decide to attack an enemy, or when an enemy
-decides to attack the Players. 
+decides to attack the Players.
 
 To determine Turn Order, every Player will draw a Target Card for themselves.
 As the GM, you will draw a TC for each Minion and Dealer involved in the
@@ -577,32 +585,32 @@ to be the same as moving horizontally. You could alternatively decide that playe
 limited to 2 diagonal moves per round of combat, or that a diagonal move is worth 1.5
 speed.
 
-To measure area of effect (AOE), refer to the images provided in [Visual Tools](https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools). 
+To measure area of effect (AOE), refer to the images provided in [Visual Tools](https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools).
 Powers will define an AOE by it's shape and size (e.g., Cone 3). Here, we us N to define
-each shape at any size. 
+each shape at any size.
 
-- **Line**: Pick an edge of the space of the character or object causing this effect. 
+- **Line**: Pick an edge of the space of the character or object causing this effect.
   Draw a straight line perpendicular to this edge N spaces long. Any space touched by
   this line is affected.
 
-- **Aura**: Unless otherwise specified, the point of origin is assumed to be the 
+- **Aura**: Unless otherwise specified, the point of origin is assumed to be the
   character or object causing the effect. A circle is drawn around this point. Any space
   caught overlapping with this circle is affected.
 
-    - On a *grid* map, the radius of this circle is at the far edge of the Nth space 
+    - On a *grid* map, the radius of this circle is at the far edge of the Nth space
       away from the point of origin.
     - On a *hex* map, the radius of this circle is at the far edge of the line segment
       pointing in the direction of the point of origin.
 
-- **Cone**: Pick an edge of the space of the character or object causing this effect. 
+- **Cone**: Pick an edge of the space of the character or object causing this effect.
   The radius is measured from the center point of this edge, with additional lines drawn
   to endpoints of the arc. Any space caught overlapping with this arc is affected.
 
-    - On a *grid* map, the radius extends N squares away from the origin, with lines 
-      drawn to the corners of the squares included in a perpendicular line N squares 
+    - On a *grid* map, the radius extends N squares away from the origin, with lines
+      drawn to the corners of the squares included in a perpendicular line N squares
       long.
-    - On a *hex* map, the radius extends N minus .5 hex away from this origin, with 
-      lines drawn to the far-most corners of the hex touched by a straight line N hex 
+    - On a *hex* map, the radius extends N minus .5 hex away from this origin, with
+      lines drawn to the far-most corners of the hex touched by a straight line N hex
       long, perpendicular to the radius.
 
 ### Character Types
@@ -616,7 +624,7 @@ each shape at any size.
     might draw from a separate deck of cards for each Dealer. Each starts
     with one Fate Card, and reserves Aces when drawn. Dealers can also take
     Powers and Vulnerabilities, and may possess items. See below for how to
-    turn a Dealer into a Boss. 
+    turn a Dealer into a Boss.
 
 - **Bystanders** are allied or neutral characters that exist throughout the
     world, as anything from a store owner to noble ambassador. These
@@ -628,10 +636,10 @@ each shape at any size.
     Action. Players can invest in Powers to make their Companion more
     powerful. A GM might also grant a temporary Companion as part of an
     Adventure, potentially as a result of a Check, or an exchange for other
-    money or items. 
+    money or items.
 
 - **Bosses** are even more powerful than Dealers, and gain the following
-    benefits: Adversary Actions, House Actions, and Phases. 
+    benefits: Adversary Actions, House Actions, and Phases.
 
 ### Creating a Boss Encounter
 
@@ -647,9 +655,9 @@ enemy. Adversary Actions may be related to resource replenishment, like
 allowing a Boss to recover a small amount of HP or gain Power Points. They may
 allow for an additional attack, or an environmental effect involving a Check
 for the Players. Players who fail might take damage or receive a Status
-Condition like Entangled. 
+Condition like Entangled.
 
-For example, a poisonous monster would have the following Adversary Action: 
+For example, a poisonous monster would have the following Adversary Action:
 *Acid Splash*. A cloud of acid appears in a 4 space cube. Any creature inside
  the cube at the start of their turn makes a DR 3 Agility Check or take 2
  damage. On a success, 1 damage.
@@ -668,37 +676,37 @@ Phases. After running out of HP, they replenish and changes their approach.
 Every time a Boss enters a new Phase, draw a new TC for them. The following
 list features a number of examples that might be triggered by a new Phase:
 
-- Boss escapes to another location 
-- Boss summons Minions 
-- Boss alters the environment to make certain areas 
-    + cause damage (e.g., erupting flame)
-    + require a check (e.g,. Agility check to stay standing on ice) 
+- Boss escapes to another location
+- Boss summons Minions
+- Boss alters the environment to make certain areas
+    - cause damage (e.g., erupting flame)
+    - require a check (e.g,. Agility check to stay standing on ice)
 - Boss disappears, and reappears
-    + when Minions have been defeated 
-    + after a set number of rounds 
-    + after an environmental effect dissipates 
+    - when Minions have been defeated
+    - after a set number of rounds
+    - after an environmental effect dissipates
 - Boss changes features like
-    + core stats
-    + higher or lower AR
-    + drawing with Upper Hand (e.g., putting in more effort)
-    + drawing with Lower Hand (e.g., getting angry/sloppy)
+    - core stats
+    - higher or lower AR
+    - drawing with Upper Hand (e.g., putting in more effort)
+    - drawing with Lower Hand (e.g., getting angry/sloppy)
 
 ### Example Combat Encounter designed for 4 Players at Level 2
 
 In a longer campaign, mix up the types of encounters to see how Players react
 and interact with each other. This will keep things fresh so combat keeps
-Players engaged over time. 
+Players engaged over time.
 Here, the context is kept purposefully blank to fill in with your setting.
 
 **Location.** Start with a wide open space for the Players and enemies to move
   around in, between 10-20 spaces across to allow for movement and let the
-  range influence Player tactics. 
+  range influence Player tactics.
 
 **Setup.** Add 4 Minions close to the entrance and 1 Dealer farther away. 2
   Minions are melee guards and 2 are shooters 3-5 spaces away, to force the
   Players to choose their targets and allow space between each enemy. The
   Players will need to deal with the Minions first in order to reach the
-  Dealer, allowing the Dealer to use their abilities in the first 2+ rounds. 
+  Dealer, allowing the Dealer to use their abilities in the first 2+ rounds.
 
 #### Stat Blocks
 
@@ -707,7 +715,7 @@ their stat block to learn their strengths and weaknesses, and what actions they 
 take in combat.
 
 If you want to make your own custom creature, you can use the sample template provided
-below: 
+below:
 
 ##### Name
 
@@ -715,20 +723,19 @@ below:
 - **AR:** X
 - **PP:** X
 - **Skill Mods:** ±X AGL, ±X CON, ±X GUT, ±X INT, ±X STR, ±X VIT
-- **Passives:** 
+- **Passives:**
     - *Passive*: Descrip
     - *Passive*: Descrip
 - **Vulnys:**
     - *Vulny*: Descrip
-- **Actions:** 
+- **Actions:**
     - **Major:**
-        - *Attack*: ±X hit, X damage, X range, (single/X multi)-target, 
+        - *Attack*: ±X hit, X damage, X range, (single/X multi)-target,
           (AGL, etc, No) Save (, X on save)
     - **Minor:**
         - *Trait*: Descrip
-    - **Adversary:** 
+    - **Adversary:**
         - *Trait*: Descrip
-
 
 ##### Dealer: Captain
 
@@ -736,44 +743,46 @@ below:
 - **AR**: 2
 - **PP**: 2
 - **Skill Mods**: AGL +2, STR +2, VIT +2
-- **Passives**: 
+- **Passives**:
     - *Multiattack*: the Dealer can make two attacks on its turn.
-    - *Lucky*: on a suited miss the Dealer can make one free redraw. 
+    - *Lucky*: on a suited miss the Dealer can make one free redraw.
 - **Vulnys**: Eye for an Eye, if you attack in combat, you must target
   the enemy who hit you most recently.
-- **Actions**: 
-    - **Major**: 
-        - *Attack, Melee*: +2 to hit, 1 damage, 1 range, single target. 
-        - *Attack, Ranged*: +1 to hit, 1 damage, 10 range, single target. 
-    - **Minor**: 
-        - *Speed Boost*: double the Dealer's movement. 
-    - **Adversary**: 
-        - *Break Stun*: when the Dealer is stunned, they can end the stun. This can only be done once per round.
+- **Actions**:
+    - **Major**:
+        - *Attack, Melee*: +2 to hit, 1 damage, 1 range, single target.
+        - *Attack, Ranged*: +1 to hit, 1 damage, 10 range, single target.
+    - **Minor**:
+        - *Speed Boost*: double the Dealer's movement.
+    - **Adversary**:
+        - *Break Stun*: when the Dealer is stunned, they can end the stun. This can only
+        be done once per round.
         - *Command Minions*: the Dealer commands one Minion it can see to attack. The targeted
-        Minion can move up to 3 spaces and take one Major Action. 
+        Minion can move up to 3 spaces and take one Major Action.
 
 ##### Minions 1 + 2: Melee Guards
 
 - **HP**: 2
 - **AP**: 1
 - **AR**: 2
-- **Skill Mods**: AGL +1, STR +1, VIT +1 
+- **Skill Mods**: AGL +1, STR +1, VIT +1
 - **Actions**:
     - **Major**:
-        - **Attack, Melee**: +1 to hit, 1 damage, 1 range, single target. 
-    - **Minor**: 
-        - **Reinforce Armor**: adds 1 AP (up to a maximum of 1).  
+        - **Attack, Melee**: +1 to hit, 1 damage, 1 range, single target.
+    - **Minor**:
+        - **Reinforce Armor**: adds 1 AP (up to a maximum of 1).
 
 ##### Minions 3 + 4: Ranged Shooters
+
 - **HP**: 2
-- **AR**: 3 
+- **AR**: 3
 - **Skill Mods**: AGL +1, GUT +1, INT +1
 - **Actions**:
-    - **Major**: 
+    - **Major**:
         - **Attack, Ranged**: +1 to hit, 1 damage, 10 range, single target.
-    - **Minor**: 
+    - **Minor**:
         - **Ready Aim**: focuses attention on a single target. While that
-        target is in range, draw attacks with the Upper Hand. 
+        target is in range, draw attacks with the Upper Hand.
 
 ## Items
 
@@ -782,8 +791,8 @@ below:
 Every setting may have its own currency and economy, but in Deck of Adventures
 the standard recommendation is to use a system based on rare metals. Gold,
 Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
-fit your setting. 
-By default, currencies are at a 1:10 ratio with the next-most valuable counterpart: 
+fit your setting.
+By default, currencies are at a 1:10 ratio with the next-most valuable counterpart:
 1 Gold
 Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
 (cp). When creating your own currency, use the below tables as a reference
@@ -800,16 +809,17 @@ skills, and careful exploration and examination with additional currency.
 ### Starting Items
 
 All characters start with a basic set of items, depending on choices
-made at Character Creation. This may be setting dependent. 
+made at Character Creation. This may be setting dependent.
 A high fantasy campaign
 may start characters with a Magic Item, while others may simply start the
 characters with a Standard Weapon and Light Armor. Determine what makes the most
 sense for your world.
 
 The general starting items in Deck of Adventures include a standard weapon,
-simple armor, an Adventuring Pack, a Trinket and 50 gp. 
+simple armor, an Adventuring Pack, a Trinket and 50 gp.
 
 **Adventuring Pack** contains the following:
+
 - 1 Bedroll
 - 1 Rations Kit (contains 10 meals)
 - 5 Torches
@@ -817,12 +827,13 @@ simple armor, an Adventuring Pack, a Trinket and 50 gp.
 - 1 Flask
 
 **Trinkets** are simple items, low in monetary value, that are meaninful to the
-  character and may be a part of their backstory. Examples include: 
+  character and may be a part of their backstory. Examples include:
+
 - a small statue
 - a bauble from childhood
 - a broken dagger
 - a worn painting or image
-- an old letter 
+- an old letter
 
 Work with your Players during Character Creation to generate a list of
 Starting Items that make sense for their character.
@@ -849,21 +860,21 @@ this in mind when balancing Encounters or granting Players loot as they Level
 Up. The average costs are meant to guide you as to when Players
 can expect to afford each, but
 these can be given as rewards or made available at
-any price. 
+any price.
 
 ### Armor
 
 Armor and Agility Modifiers are the only way for characters to alter their
 base Armor Range (AR). For characters with low Agility, wearing Armor will
-help them avoid attacks in combat. 
+help them avoid attacks in combat.
 
 Base AR for an unarmored character is 3. Wearing Armor reduces this AR
 depending on Type. Some have Strength Requirements in
-order to wear. A character who ignores this requirment may only use 
+order to wear. A character who ignores this requirment may only use
 their movement speed and must make all
 Agility, Finesse, and Stealth Checks at Lower Hand.
 
-**Armor Type Table** 
+**Armor Type Table**
 
 | AR     | Armor Type  | AP    | Prerequisite  | Average Cost |
 | ------ | ----------  | ----- | ------------  | -----------  |
@@ -876,12 +887,13 @@ Agility, Finesse, and Stealth Checks at Lower Hand.
 | 1      | Gleaming    | 2     | Agility ≥ 3   | 1500 gp      |
 
 Characters may start with Light Armor at Level 1, but must acquire other armor over the
-course of their Adventures, either through purchase or reward.  
+course of their Adventures, either through purchase or reward.
 
 Some armor and items also grant Armor Points (AP). Items like Shields can provide AP
 when readied using an Action, while other types of Armor may have magical effects that
-provide AP (see [Magic Items](./02_GMGuide.md#magic-items)). Shields can be purchased and can be found
-in varying quality. 
+provide AP (see [Magic Items](./02_GMGuide.md#magic-items)). Shields can be purchased
+and can be found
+in varying quality.
 
 **Shield Quality Table**
 
@@ -921,7 +933,7 @@ costs.
 Tools are useful items that a character can use to perform certain Checks more
 easily. A character who uses a Tool to perform a Check may draw with the
 Upper Hand. General domains and trade skills will use a specific tool to make
-a Check. These are listed below. 
+a Check. These are listed below.
 
 **Tools Table**
 
@@ -955,23 +967,23 @@ in some settings some professions' tools may be harder to find.
 | Consumable Type | Use Time     | General Properties                               |
 | --------------- | ------------ | ------------------------------------------------ |
 | Potions         | Minor Action | Short term effects, usually a single effect.     |
-| Charms          | Major Action | Medium-term effects, more complex effects.       | 
-| Meals           | 10 minutes   | Long-term effects, enough to last most of a day. | 
+| Charms          | Major Action | Medium-term effects, more complex effects.       |
+| Meals           | 10 minutes   | Long-term effects, enough to last most of a day. |
 
 These items may vary in supply and cost depending on where the Players are
 looking. In a desolate town that only has a trader pass through once every
 year, these items might be in short supply. In a wealthy merchant district of a major
-city, they would be easy to find. 
+city, they would be easy to find.
 
 It is up to the GM which Consumables to make available, and when. The reason
 to grant access to Consumables over Magical Items is to allow the Players to
 feel like they've gotten something valuable and powerful, but they need to be
 strategic in when to use it. These can create memorable moments of an
-Adventure without permenantly altering the balance of power. 
+Adventure without permenantly altering the balance of power.
 
 The Consumables listed below draw from a selection of possible
 Consumables and their Effects that you can add to your game. Feel free to
-create your own Consumables and ask the Community for help as needed. 
+create your own Consumables and ask the Community for help as needed.
 
 | Consumable Name        | Cost  | Effect                                                                                    | Duration |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
@@ -996,7 +1008,7 @@ create your own Consumables and ask the Community for help as needed.
 
 Some items can have additional effects granted while wielding them, such as
 modifying damage on a Suited Hit or granting additional effects on a Major
-Success. 
+Success.
 
 ### Upgrading Items
 
@@ -1020,54 +1032,52 @@ Attached to armor, the same gemstone might grants +1 Max PP or HP.
 
 - Different length of Adventures: One Shots, Multi-Shots, Campaigns
 - Different types of Adventures: Combat, investigation, contracts,
-  negotiations, etc. 
+  negotiations, etc.
 - Railroad vs. Sandbox
 
 ### Creating NPCs
 
-- Social encounters, Bystanders 
+- Social encounters, Bystanders
 
-- Enemy types: Dealers and Minions 
+- Enemy types: Dealers and Minions
 
-Other sections to build out 
+Other sections to build out
 
 - Leveling up: XP vs. Milestones
 - Giving Players items and balancing Power creep
 - How to get Players to contribute to the World
-- Leveraging Player backstories 
-- Developing Lore and background information 
+- Leveraging Player backstories
+- Developing Lore and background information
 - Managing an increasingly complex World
 
 ## Managing Players (Expectations & Realities)
-
-
 
 - Bringing Players together
 - The importance of Session 0 - establishing a safe space
 - United at the table
 - Creating an open and safe space for your Players
-- Understanding Player motivations and preferences 
+- Understanding Player motivations and preferences
 - Keeping Players engaged
-- Mitigating conflict - in and out of session 
-- How to manage an Evil character at the table 
+- Mitigating conflict - in and out of session
+- How to manage an Evil character at the table
 
 ## Number Crunch
 
 - General numbers on resources like PP/HP/AP/Stamina
 - Making stat decisions for your NPCs
 - Balancing encounters (Difficulty Challenge Formula or advice)
-- Scaling damage over time 
+- Scaling damage over time
 - Item lists or general descriptions/tables (see Issue #33)
 
 ## Continuing Your Journey as a Game Master
 
-This section will contain some more advanced aspects of being a Game Master. 
+This section will contain some more advanced aspects of being a Game Master.
 
 - Balancing higher level encounters
 - Further leveraging player motivations and back story in a narrative
-- Supporting Player and character growth and development 
+- Supporting Player and character growth and development
 - Building a continuous Adventure that sustains over time as a full Campaign
 - Resuming a Campaign after a long break (it's OK - it happens)
-- Seeking help from the community 
+- Seeking help from the community
 
---> 
+-->

@@ -1,4 +1,4 @@
-<!-- DEVELOPERS: Please edit corresponding yml in 3_Automation -->
+<!-- DEVELOPERS: Please edit corresponding yaml -->
 
 
 # Combat
@@ -23,7 +23,7 @@
 **Momentum**
 
 - Description: By brute strength, force others to move around the battlefield.
-- Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
+- Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.If unwilling, target(s) make a STR or AGL Save. On fail, target(s) are moved to 1 space of attacker's end position. 
 - XP: 1
 - Prereq_Role: Defender
 - Prereq_Skill: Brute > 0
@@ -32,7 +32,7 @@
 **Momentum Aura**
 
 - Description: Your strength is supernatural, bending the gravity around you.
-- Mechanic: Major. For 1 PP, Your Momentum ability extends to 3 spaces.. If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
+- Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. 
 - XP: 2
 - PP: 1
 - Prereq_Role: Defender
@@ -75,7 +75,7 @@
 **Attack, Mystic Aura**
 
 - Description: You deploy resources to channel your magic all around you.
-- Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s).. 
+- Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s). 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Caster or Support
@@ -176,9 +176,18 @@
 **Lend Aid**
 
 - Description: Just a little help from a friend
-- Mechanic: Minor. As a Minor Action, designate one ally who, on their next draw, will draw with the Upper Hand.
+- Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. On the ally's next Draw, they may use your card as if they had Upper Hand
 - XP: 1
 - Prereq_Role: Support
+
+
+**Lend Aid, Advanced**
+
+- Description: A little help goes a long way
+- Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. At any time before their next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
+- XP: 1
+- Prereq_Role: Support
+- Prereq_Power: Lend Aid
 
 
 **Lend Confusion**
@@ -223,7 +232,7 @@
 **Lend Vigor**
 
 - Description: Channel energy to do more than help: inspire!
-- Mechanic: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action without penalty and move 2 additional spaces during their movement.. 
+- Mechanic: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.. 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Support or Caster
@@ -232,7 +241,7 @@
 **Slow**
 
 - Description: You selectively bend the nature of time
-- Mechanic: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature.. 
+- Mechanic: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature. 
 - XP: 2
 - PP: 2
 - Prereq_Role: Support or Caster
@@ -251,7 +260,7 @@
 **Shield, Self**
 
 - Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-- Mechanic: Major. For 1 or 2 PP, Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.. 
+- Mechanic: Minor. For 1 or 2 PP, Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.. 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Defender
@@ -290,7 +299,7 @@
 **Attack, Charge**
 
 - Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-- Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss.. 
+- Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss. 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Defender or Martial
@@ -375,6 +384,40 @@
 - Tags: Companion
 
 
+# Discard (limit one per character)
+
+**Aggro**
+
+- Description: Protecting your friends means taking the big hits.
+- Mechanic: Minor. Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
+- XP: 0
+- Prereq_Level: 2
+
+
+**Help**
+
+- Description: You're there just when your friends need you.
+- Mechanic: Minor. Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
+- XP: 0
+- Prereq_Level: 2
+
+
+**Thwart**
+
+- Description: You have a few tricks up your sleeve for drawing the enemy's attention.
+- Mechanic: Minor. Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
+- XP: 0
+- Prereq_Level: 2
+
+
+**Intensify**
+
+- Description: An explosive attack might mean running out of gas.
+- Mechanic: Minor. Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
+- XP: 0
+- Prereq_Level: 2
+
+
 # Game Mechanics
 
 ## Adjust Odds
@@ -407,7 +450,7 @@
 **Scrying**
 
 - Description: Your intuition is heightened and you can anticipate moments coming in the near future.
-- Mechanic: Major. For 1 PP, You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again.. 
+- Mechanic: Major. For 1 PP, You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again. 
 - XP: 1
 - PP: 1
 - Prereq_Level: 2
@@ -454,7 +497,7 @@
 **Illusion**
 
 - Description: Your skills let you conjure illusory effects.
-- Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand.. 
+- Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand. 
 - XP: 2
 - PP: 1 or 2
 - Prereq_Role: Caster
