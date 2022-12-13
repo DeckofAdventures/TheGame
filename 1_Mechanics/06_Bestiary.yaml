@@ -1,0 +1,311 @@
+Template:               # must be unique
+  Type: One of          # Dealer, Boss, NPC, Companion
+  Level: X              # Only for Dealers
+  Threat: X             # Measure of difficulty
+  HP: X                 # Required field
+  AP: X                 # 0 is default if blank
+  AR: X                 # Required field
+  PP: X                 # Required field
+  Attribs:              # List only Non-zero
+    AGL: ±X             # + is implied if not explicit
+    CON: ±X             #
+    GUT: ±X             #
+    INT: ±X             #
+    STR: ±X             #
+    VIT: ±X             #
+  Skills:               # List if different from corresponding Attrib
+    Finesse: ±X         #
+    Stealth: ±X         #
+    Bluffing: ±X        #
+    Performance: ±X     #
+    Knowledge: ±X       #
+    Investigation: ±X   #
+    Detection: ±X       #
+    Craft: ±X           #
+    Athletics: ±X       #
+    Brute: ±X           #
+  Powers:               # Include Power names as list
+  Phases:               # Only for bosses
+    One:                # Phase number
+      HP: X             #
+      Allies: X         # List of who appears. If multiple of same, list mult times
+  Description: Descrip  # Full descriptive text
+
+Falcon:
+  Type: Companion, level 1
+  HP: 1
+  AR: 3
+  Attrib: 
+    AGL: 1
+    STR: -1
+    INT: 1
+    VIT: -1  
+  Powers: 
+    - Attack, Weapon
+    
+Bear:
+  Type: Companion, level 1
+  HP: 3
+  AP: 1
+  AR: 2
+  Attrib: 
+    AGL: -1
+    STR: 1
+    INT: -1
+    VIT: 1  
+  Powers: 
+    - Attack, Weapon
+      
+Wolf:
+  Type: Companion, level 1
+  HP: 2
+  AR: 3
+  Attrib: 
+    AGL: 1
+    STR: 1
+    INT: -1
+    GUT: 1  
+  Powers: 
+    - Attack, Weapon
+    - Pack Tactics
+      
+Horse:
+  Type: Companion, level 1
+  HP: 2
+  AR: 3
+  Attrib: 
+    AGL: 1
+    STR: 1
+    INT: -1
+    GUT: -1  
+  Powers: 
+    - Attack, Weapon
+    - Pack Tactics
+
+Wolf:
+  Type: NPC
+  HP: 2
+  AR: 3
+  Attrib: 
+    AGL: 1
+    STR: 1
+    INT: -1
+    CON: -1  
+  Powers: 
+    - Attack, Weapon
+    - Pack Tactics
+
+Dire Wolf:
+  Type: NPC
+  HP: 3
+  AR: 2
+  Attrib: 
+    AGL: 2
+    STR: 2
+    INT: -1
+    CON: -1      
+  Powers:
+    - Attack, Weapon
+    - Pack Tactics                      
+
+Shrub Golem:
+  Type: NPC
+  HP: 2
+  AR: 4
+  Attrib: 
+    - AGL: -1
+    - STR: 1
+    - INT: -1
+  Powers:
+    - Attack, Weapon
+
+Vine Golem:
+  Type: NPC
+  HP: 2
+  AR: 4
+  Attrib:
+    AGL: -1
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Momentum
+
+  
+Tree Golem:
+  Type: Dealer
+  Level: 2
+  Threat: 2
+  HP: 7
+  AP: 2
+  AR: 3
+  PP: 4
+  Attrib:
+    STR: 2
+    VIT: 2
+    AGL: -1
+    INT: -1
+  Powers: 
+    - Shield, Self
+    - Momentum, Aura
+    - Attack, Sweep
+      
+Poison Plant:
+  Type: NPC
+  HP: 2
+  AR: 4
+  PP: 1
+  Attrib:
+    AGL: -1
+    VIT: 1
+  Powers:
+    - Mystic, Attack
+    - Mystic, Aura
+
+Grunt:
+  Type: NPC
+  HP: 2
+  AR: 3
+  PP: 0
+  Attrib:
+    AGL: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+  Threat: 1
+  Description: A low level soldier.
+
+Grunt, Shielded:
+  Type: NPC
+  HP: 2
+  AP: 1
+  AR: 2
+  PP: 0
+  Attrib:
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Shield, Self
+  Threat: 1
+  Description: A low level soldier with a Shield.
+
+Guard:
+  Type: NPC
+  HP: 3
+  AP: 1
+  AR: 2
+  PP: 1
+  Attrib:
+    STR: 1
+    VIT: 1
+  Powers:
+    - Attack, Weapon
+    - Shield, Self
+    - Attack, Sweep
+    - Momentum
+  Threat: 2
+  Description: A decently armored and trained soldier.
+
+Captain, Defender:
+  Type: Dealer
+  Level: 2
+  Threat: 2
+  HP: 5
+  AP: 2
+  AR: 2
+  PP: 4
+  Attrib:
+    AGL: 1
+    STR: 1
+    VIT: 1
+    GUT: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Shield, Self
+    - Attack, Sweep
+    - Attack, Charge
+    - Momentum Aura
+  Description: A Captain with access to Powers.
+
+Mystic, Caster:
+  Type: Dealer
+  Level: 2
+  Threat: 2
+  HP: 5
+  PP: 2
+  AR: 3
+  PP: 3
+  Attrib:
+    AGL: -1
+    CON: 1
+    INT: 1
+    STR: -1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Attack, Mystic Cone
+    - Attack, Mystic Confusion
+    - Attack, Mystic Entangle
+    - Shield, Self 
+  Description: A powerful Caster with access to mystic attacks.
+
+
+Sentinel, Martial:
+  Type: Dealer
+  Level: 2
+  Threat: 2
+  HP: 6
+  AP: 0
+  AR: 2
+  PP: 3
+  Attrib: 
+    GUT: 1
+    INT: 1
+    STR: -1
+  Powers: 
+    - Attack, Weapon
+    - Attack, Sweep
+    - Attack, Charge
+    - Attack, Disarm
+  Description: A Martial with access to Powers. 
+
+
+Ritualist, Support: 
+  Type: Dealer
+  HP: 4
+  AR: 3
+  PP: 6
+  Attrib:
+    AGL: -1
+    GUT: 1
+    CON: 1
+    INT: 1
+    STR: -1
+    VIT: -1
+  Powers: 
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Heal
+    - Lend Aid
+    - Lend Vigor
+    - Lend Distraction
+    - Slow
+    - Shield, Others
+  Description: A Support with access to Powers. 
+
+Specter:
+  Type: NPC
+  HP: 3
+  AP: 0
+  AR: 2
+  PP: 2
+  Attrib: 
+    GUT: 1
+    INT: 1
+    STR: -1
+  Powers: 
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Slow    
