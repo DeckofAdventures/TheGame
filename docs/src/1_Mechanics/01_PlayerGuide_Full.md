@@ -394,17 +394,17 @@ character until the start of the next combat.
 Some Status Conditions will impact a character over time. The duration of each Condition
 is listed in the Power or effect that causes it.
 
-1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 Conviction
+1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 CON
 Save at the start of their turn vs their  own TC. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
-2. **Entangled** A Dealer may expend a Major Action to make a DR 3 Strength Save. Until
+2. **Entangled** A Dealer may expend a Major Action to make a DR 3 STR Save. Until
 they are successful, they may not move and any Agility Saves are made with Lower
 Hand.
 
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
-is halved, rounding up. All Strength and Agility Saves are made with Lower Hand. When
+is halved, rounding up. All STR and AGL Saves are made with Lower Hand. When
 Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
 1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
 
@@ -417,18 +417,28 @@ check or a Healing Power (DR 5 vs. the KO Dealer's TC, minus 1 for each turn pas
 since the effect onset). If a Knocked Out Dealer is attacked further, the player begins
 an Epic Event alone.
 
-6. **Burned** As a Minor Action, a Dealer can make a DR 3 Intuition Save to stop the
-burning. On a failure, they take 1 damage bypassing AP.
+6. **Burned** As a Minor Action, a Dealer can make a DR 3 GUT Save to stop the
+burning. On failure, they take 1 damage bypassing AP.
 
 7. **Poisoned N** Each poisoning effect adds +1 Poisoned. At the start of their turn, as
-a Free Action, a Dealer makes a DR 3 Vitality Save to shake off the effects of the
-poison. On a failure, they discard N+1 cards.
+a Free Action, a Dealer makes a DR 3 VIT Save to shake off the effects of the
+poison. On failure, they discard N+1 cards.
 
 8. **Frozen** Movement speed is reduced by half and all skill checks are drawn at Lower
 Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their turn to
 attempt to end the freeze.
 
-9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 Vitality Save. On a failure, take 2 damage. On a success, take 1 damage.
+9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 VIT Save. On
+failure, take 2 damage. On a success, take 1 damage.
+
+10. **Charmed** At the beginning of their turn, A Dealer makes a DR 3 GUT Save. On
+failure, they may not take actions against the interests of the creature that caused
+the condition. Another creature may use a Major action to end this effect.
+
+11. **Enthralled** At the beginning of their turn, A Dealer makes a DR 3 CON Save. On
+failure, they must move up to their Speed and/or perform 1 Major Action available to
+them, as directed by the creature that caused the condition. Another creature may use a
+Major action to end this effect.
 
 ### Health and Armor
 

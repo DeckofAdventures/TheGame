@@ -16,7 +16,7 @@ Template: # Power name        # Must be unique
     Target: X                 # Integer, # of targets
     Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
     Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, Start turn, etc. Sentence start.
+        Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail

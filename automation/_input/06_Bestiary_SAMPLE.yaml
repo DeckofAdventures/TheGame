@@ -1,11 +1,11 @@
 Template:               # must be unique
   Type: One of          # Dealer, Boss, NPC, Companion
-  Level: X              # Only for Dealers
-  Threat: X             # Measure of difficulty
+  Level: X              # Dealers: XP progression, Boss: Threat
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
   PP: X                 # Required field
+  Speed: X              # Optional, default 6
   Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
     CON: ±X             #
@@ -13,7 +13,7 @@ Template:               # must be unique
     INT: ±X             #
     STR: ±X             #
     VIT: ±X             #
-  Skill:                # List if different from corresponding Attrib
+  Skills:                # List if different from corresponding Attrib
     Finesse: ±X         #
     Stealth: ±X         #
     Bluffing: ±X        #
@@ -30,6 +30,43 @@ Template:               # must be unique
       HP: X             #
       Allies: X         # List of who appears. If multiple of same, list mult times
   Description: Descrip  # Full descriptive text
+
+Spider Queen:
+  Type: Boss
+  Threat: 2
+  HP: 8
+  AP: 2
+  AR: 2
+  PP: 6
+  Speed: 6
+  Attribs:
+    AGL: 1
+    CON: 2
+    GUT: 2
+    INT: 1
+    STR: 0
+    VIT: 1
+  Skills: # Added to test out code fed sparse data, remove later
+    Finesse: 1 
+    Bluffing: 2
+  Powers:
+    - Adversary Major Action
+    - Amplify Ally 
+    - Barrier
+    - Condition Immunity # Do I need to find a way to specify poison here?
+    - Eye for an Eye
+    - Favored Terrain
+    - Lend Distraction
+    - Lend Vigor
+    - Manifest Terrain
+    - Mystic Attack
+    - Mystic Attack, Dual Shot
+    - Mystic Aura
+    - Mystic Entangle
+    - Obey Me
+    - Shield Others
+    - Terrain Blink
+    - Web Spray
 
 Grunt:
   Type: NPC

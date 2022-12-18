@@ -1,32 +1,32 @@
 Template: # Power name        # Must be unique
-    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House. 
+    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
     Category: One or list     # One string or list in sub-cat order
     XP: X
     PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
     Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
-        Level: X              # Integer               
-        Skill: X > 1          #              
+        Level: X              # Integer
+        Skill: X > 1          #
         Power:                # Must match unique power name
     # StatOverride: AGL -2      # One of AGL, STR, Finesse, etc. followed by number
     To Hit: X                 # If not specified, assumed character's primary skill
-    Damage: X                 # Integer           
+    Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
     Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
     Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, Start turn, etc. Sentence start.
+        Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail
         Succeed: Descrip      # effect on success. Assume no access to above
-    Description: Descrip      # Flavor: 1-2 sentences             
+    Description: Descrip      # Flavor: 1-2 sentences
     Tags: One or list
 
 
 Attack, Weapon:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
@@ -39,7 +39,7 @@ Attack, Weapon:
             - Brute > 0
 
 Attack, Charge:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
@@ -54,11 +54,11 @@ Attack, Charge:
             - Martial
 
 Attack, Sweep:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space. 
+    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space.
     Save:
         Trigger: For 2 PP, on a hit
         DR: 3
@@ -69,13 +69,13 @@ Attack, Sweep:
     PP: [1, 2]
     Prereq:
         Power: Attack, Weapon
-        Role: 
+        Role:
             - Martial
             - Defender
     Tags: Multi-target
 
 Attack, Disarm:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
@@ -84,16 +84,16 @@ Attack, Disarm:
     XP: 2
     PP: 1
     Prereq:
-        Role: 
+        Role:
             - Martial
             - Defender
 
 Attack, Vengeance:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: Ever the protector on the field, you leap at the chance to avenge an ally.
-    Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your next turn with the Upper Hand. 
+    Mechanic: When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your next turn with the Upper Hand.
     Type: Major
     XP: 1
     Prereq:
@@ -101,7 +101,7 @@ Attack, Vengeance:
         Role: Defender
 
 Attack, Dual-Wield:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: You are adept at wielding two weapons in combat.
@@ -115,7 +115,7 @@ Attack, Dual-Wield:
             - Brute > 1
 
 Attack, Dual-Wield Master:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Description: You are a master of wielding two weapons in combat.
@@ -127,7 +127,7 @@ Attack, Dual-Wield Master:
         Power: Attack, Dual-Wield
 
 Attack, Mystic:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
@@ -135,12 +135,12 @@ Attack, Mystic:
     Type: Major
     XP: 1
     Prereq:
-        Skill: 
+        Skill:
             - Knowlege > 0
             - Craft > 0
 
 Attack, Mystic Aura:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic all around you.
@@ -150,13 +150,13 @@ Attack, Mystic Aura:
     PP: [1,2]
     Prereq:
         Power: Attack, Mystic
-        Role: 
+        Role:
             - Caster
             - Support
     Tags:  Multi-target
 
 Attack, Mystic Amplification :
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You channel your talents into a physical weapon, melding the physical and supernatural.
@@ -166,12 +166,12 @@ Attack, Mystic Amplification :
     PP: 1
     Prereq:
         Power: Attack, Mystic
-        Role: 
+        Role:
             - Martial
             - Caster
 
 Attack, Mystic Cone:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
@@ -191,7 +191,7 @@ Attack, Mystic Cone:
     Tags: Multi-target
 
 Attack, Mystic Confusion:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
@@ -207,7 +207,7 @@ Attack, Mystic Confusion:
     Tags: Multi-target
 
 Attack, Mystic Entangle:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to tie your target in place.
@@ -216,20 +216,20 @@ Attack, Mystic Entangle:
     PP: [1,2]
     Target: [1,3]
     Mechanic: Selected targets make a Save.
-    Save: 
+    Save:
         Trigger: Once
         DR: 3
         Type: AGL
         Fail: Entangled
     Prereq:
         Power: Attack, Mystic
-        Role: 
+        Role:
             - Support
             - Caster
     Tags: Multi-target
 
 Attack, Mystic Deprivation:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Type: Major
@@ -245,13 +245,13 @@ Attack, Mystic Deprivation:
         Fail: Blinded or Deafened unless immune.
     Prereq:
         Power: Attack, Mystic
-        Role: 
+        Role:
             - Support
             - Caster
     Tags: Multi-target
 
 Attack, Mystic Dual-Shot:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You are so adept mystic arts you can start another spell before even finishing the first.
@@ -259,16 +259,16 @@ Attack, Mystic Dual-Shot:
     Type: Minor
     XP: 3
     Prereq:
-        Skill: 
+        Skill:
             - Finesse > 1
             - Knowledge > 1
             - Craft > 1
-        
+
         Power: Attack, Mystic
     Tags: Multi-target
 
 Attack, Mystic Dual-Wield Master:
-    Category: 
+    Category:
         - Combat
         - Mystic Attacks
     Description: You are a master of wielding two weapons in combat.
@@ -277,11 +277,11 @@ Attack, Mystic Dual-Wield Master:
     XP: 1
     Prereq:
         Level: 3
-        Power: Attack, Mystic Dual-Shot 
+        Power: Attack, Mystic Dual-Shot
     Tags: Multi-target
 
 Battlecharged:
-    Category: 
+    Category:
         - Combat
         - Control
     Description: You're always ready for something to go down.
@@ -290,7 +290,7 @@ Battlecharged:
     XP: 1
 
 Critical Master:
-    Category: 
+    Category:
         - Combat
         - Control
     Description: When you hit big, you hit BIG. Enemies don't stand a chance against you when you make a critical hit against them.
@@ -301,16 +301,16 @@ Critical Master:
         Level: 3
 
 Momentum: # Without this power, this should cost a major action.
-    Category: 
+    Category:
         - Combat
         - Control
     Type: Passive
     XP: 1
-    Description: By brute strength, force others to move around the battlefield. 
-    Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you. 
+    Description: By brute strength, force others to move around the battlefield.
+    Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you.
     Save:
-        Trigger: If unwilling
-        Type: 
+        Trigger: If unwilling,
+        Type:
             - STR
             - AGL
         Fail: are moved to 1 space of attacker's end position
@@ -319,7 +319,7 @@ Momentum: # Without this power, this should cost a major action.
         Skill: Brute > 0
 
 Momentum Aura:
-    Category: 
+    Category:
         - Combat
         - Control
     Description: Your strength is supernatural, bending the gravity around you.
@@ -327,12 +327,12 @@ Momentum Aura:
     XP: 2
     PP: 1
     Target: 6
-    Mechanic: Your Momentum ability extends to 2 spaces. 
+    Mechanic: Your Momentum ability extends to 2 spaces.
     Save:
-        Trigger: If unwilling
-        Type: 
+        Trigger: If unwilling,
+        Type:
             - STR
-            - AGL 
+            - AGL
         Fail: be moved to 1 space of attacker's end position.
     Prereq:
         Power: Momentum
@@ -341,7 +341,7 @@ Momentum Aura:
     Tags: Multi-target
 
 Find Weakness:
-    Category: 
+    Category:
         - Combat
         - Control
     Type: Minor
@@ -354,7 +354,7 @@ Find Weakness:
     Tags: Difficulty Prediction
 
 Pack Tactics:
-    Category: 
+    Category:
         - Combat
         - Control
     Description: When an enemy is outnumbered, you know just how to take advantage.
@@ -367,7 +367,7 @@ Pack Tactics:
     Tags: Difficulty Prediction
 
 Heal:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: Can channel magical energy or medical training to heal others
@@ -379,7 +379,7 @@ Heal:
         Role: Support
 
 Lend Aid:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: Just a little help from a friend
@@ -390,7 +390,7 @@ Lend Aid:
         Role: Support
 
 Lend Aid, Advanced:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: A little help goes a long way
@@ -403,7 +403,7 @@ Lend Aid, Advanced:
 
 
 Lend Distraction:
-    Category: 
+    Category:
         - Combat
         - Support
         - Distract
@@ -413,7 +413,7 @@ Lend Distraction:
     XP: 1
 
 Lend Mass Distraction:
-    Category: 
+    Category:
         - Combat
         - Support
         - Distract
@@ -428,7 +428,7 @@ Lend Mass Distraction:
     Tags: Multi-target
 
 Lend Confusion:
-    Category: 
+    Category:
         - Combat
         - Support
     Type: Major
@@ -438,12 +438,12 @@ Lend Confusion:
     Prereq:
         Level: 2
         Power: Lend Distraction
-        Role: 
+        Role:
             - Support
             - Caster
 
 Lend Mass Confusion:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
@@ -460,7 +460,7 @@ Lend Mass Confusion:
     Tags: Multi-target
 
 Lend or Remove Skill:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: You really know how to target an ability and either support it or get in it's way.
@@ -472,7 +472,7 @@ Lend or Remove Skill:
         Role: Support
 
 Lend Readiness:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: Your talents bolster you allies' speed and alertness.
@@ -483,7 +483,7 @@ Lend Readiness:
         Role: Support
 
 Lend Vigor:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: "Channel energy to do more than help: inspire!"
@@ -497,7 +497,7 @@ Lend Vigor:
             - Caster
 
 Slow:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: You selectively bend the nature of time
@@ -506,13 +506,13 @@ Slow:
     XP: 2
     PP: 2
     Prereq:
-        Level: 3 
+        Level: 3
         Role:
             - Support
             - Caster
 
 Shield, Others:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: Fortify others by summoning magical armor.
@@ -521,10 +521,10 @@ Shield, Others:
     XP: 2
     PP: [1,2]
     Prereq:
-        Role: Support 
+        Role: Support
 
 Shield, Self:
-    Category: 
+    Category:
         - Combat
         - Support
     Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
@@ -533,23 +533,23 @@ Shield, Self:
     XP: 2
     PP: [1,2]
     Prereq:
-        Role: Defender 
+        Role: Defender
 
 Creature Connection:
-    Category: 
+    Category:
         - Companion
     Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
     Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
     Type: Passive
     XP: 5
     Prereq:
-        Skill: 
+        Skill:
             - Craft > 0
             - Knowledge > 0
     Tags: Companion
 
 Creature Link:
-    Category: 
+    Category:
         - Companion
     Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
     Mechanic: Some checks can now be made through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion.
@@ -561,7 +561,7 @@ Creature Link:
     Tags: Companion
 
 Creature Mastery:
-    Category: 
+    Category:
         - Companion
     Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.
     Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier.
@@ -573,7 +573,7 @@ Creature Mastery:
     Tags: Companion
 
 Fated Draw:
-    Category: 
+    Category:
         - Game Mechanics
         - Adjust Odds
     Description: Your connection to the Fates is heightened and you feel you can shift the odds in your favor.
@@ -585,7 +585,7 @@ Fated Draw:
         Level: 3
 
 Lucky:
-    Category: 
+    Category:
         - Game Mechanics
         - Adjust Odds
     Description: Not everything goes your way, but for one reason or another, you seem to avoid the worst.
@@ -596,7 +596,7 @@ Lucky:
 
 Luck Shared:
     # Is this too much? It needs to be more than Lend Aid
-    Category: 
+    Category:
         - Game Mechanics
         - Adjust Odds
     Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
@@ -606,7 +606,7 @@ Luck Shared:
     Tags: Suited Hit
 
 Scrying:
-    Category: 
+    Category:
         - Game Mechanics
         - Adjust Odds
     Description: Your intuition is heightened and you can anticipate moments coming in the near future.
@@ -616,10 +616,10 @@ Scrying:
     PP: 1
     Prereq:
         Level: 2
-    Tags: Card Viewing 
+    Tags: Card Viewing
 
 Scrying, Advanced:
-    Category: 
+    Category:
         - Game Mechanics
         - Adjust Odds
     Description: Your connection to this divine sense has strengthened.
@@ -630,10 +630,10 @@ Scrying, Advanced:
     Prereq:
         Level: 3
         Power: Scrying
-    Tags: Card Viewing 
+    Tags: Card Viewing
 
 Aces Wild:
-    Category: 
+    Category:
         - Game Mechanics
         - Fate Cards
     Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
@@ -650,7 +650,7 @@ Aces Wild:
     Tags: Fate Cards
 
 Barrier:
-    Category: 
+    Category:
         - Magic
     Description: Your skills allow you to deploy temporary impromptu walls
     Mechanic: You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
@@ -663,9 +663,9 @@ Barrier:
             - Caster
 
 Illusion:
-    Category: 
+    Category:
         - Magic
-    Description: Your skills let you conjure illusory effects. 
+    Description: Your skills let you conjure illusory effects.
     Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand
     Type: Major
     XP: 2
@@ -675,7 +675,7 @@ Illusion:
         Skill: Knowledge > 0
 
 Speedy:
-    Category: 
+    Category:
         - Movement
         - Speed
     Description: You're quicker than the rest.
@@ -685,7 +685,7 @@ Speedy:
     Tags: Combat
 
 Stealthy Surprise:
-    Category: 
+    Category:
         - Movement
         - Stealth
     Type: Minor
@@ -697,7 +697,7 @@ Stealthy Surprise:
     Tags: Stealth
 
 Stealth in the Shadows:
-    Category: 
+    Category:
         - Movement
         - Stealth
     Description: A creature of the dark, you're especially adept at going unseen.
@@ -709,7 +709,7 @@ Stealth in the Shadows:
     Tags: Stealth
 
 Stealth's Call:
-    Category: 
+    Category:
         - Movement
         - Stealth
     Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.
@@ -724,7 +724,7 @@ Stealth's Call:
         - Multi-target
 
 Stealth's Blessing:
-    Category: 
+    Category:
         - Movement
         - Stealth
     Description: You channel a deep energy to go unseen.
@@ -741,10 +741,10 @@ Stealth's Blessing:
         - Multi-target
 
 Calculating:
-    Category: 
+    Category:
         - Roleplay
     Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
-    Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it. 
+    Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it.
     Type: Major
     XP: 1
     PP: 1
@@ -756,7 +756,7 @@ Calculating:
     Tags: Difficulty Prediction
 
 Cunning:
-    Category: 
+    Category:
         - Roleplay
     Description: You're sharper than the rest when you take your time.
     Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
@@ -764,7 +764,7 @@ Cunning:
     XP: 1
 
 Focused:
-    Category: 
+    Category:
         - Roleplay
     Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
     Mechanic: Choose one Skill. When engaged in a non-instantaneous task that involves that skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
@@ -772,19 +772,19 @@ Focused:
     XP: 0
 
 Handy:
-    Category: 
+    Category:
         - Roleplay
     Description: You know how to work with your hands (e.g., machining, lock picking, tailoring).
     Mechanic: Work with your GM to decide a trade with which your character is familiar. When making a check to to perform this craft, draw with the Upper Hand.
     Type: Passive
     XP: 1
     Prereq:
-        Skill: 
+        Skill:
             - Craft > 1
             - Knowledge > 1
 
 Keen Eye:
-    Category: 
+    Category:
         - Roleplay
     Description: You're especially adept at taking in the world around you.
     Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
@@ -798,7 +798,7 @@ Aggro:
     Description: Protecting your friends means taking the big hits.
     Mechanic: Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
     Type: Minor
-    XP: 0 
+    XP: 0
     Prereq:
         Level: 2
 
@@ -807,7 +807,7 @@ Help:
     Description: You're there just when your friends need you.
     Mechanic: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
     Type: Minor
-    XP: 0 
+    XP: 0
     Prereq:
         Level: 2
 
@@ -816,7 +816,7 @@ Thwart:
     Description: You have a few tricks up your sleeve for drawing the enemy's attention.
     Mechanic: Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
     Type: Minor
-    XP: 0 
+    XP: 0
     Prereq:
         Level: 2
 
@@ -825,6 +825,87 @@ Intensify:
     Description: An explosive attack might mean running out of gas.
     Mechanic: Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
     Type: Minor
-    XP: 0 
+    XP: 0
     Prereq:
         Level: 2
+
+Favored Terrain:
+    Type: Passive
+    Category:
+        - Movement
+        - Speed
+    XP: 1
+    Description: Home feels more familiar, granting a speed boost.
+    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). Gain +2 speed on this terrain. 
+
+Terrain Blink:
+    Type: Minor
+    Category:
+        - Movement
+        - Speed
+    XP: 3
+    Description: So at home that you can get anywhere.
+    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
+
+Condition Resilience: 
+    Type: Passive
+    Category: Resilience 
+    XP: 1
+    Prereq:
+        Skill: VIT > 1
+    Description: Through training or sheer will, you brace your body for trials ahead.
+    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand."
+
+Condition Immunity: 
+    Type: Passive
+    Category: Resilience 
+    XP: 3
+    Prereq:
+        Skill: VIT > 1
+    Description: Through training or sheer will, your body is impervious.
+    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. You are now immune to this condition."
+
+Adversary Major Action:
+    Type: Major
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Once per round, you make take an additional Major Action after a Dealer's turn.
+
+Manifest Terrain:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 1
+    Mechanic: you change the area around you to an ensnaring landscape.
+    AOE: Aura 2
+    Save:
+        Trigger: On starting turn,
+        DR: 2
+        Type: AGL
+        Fail: Entangled
+
+Obey Me:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 2
+    Mechanic: enthrall an enemy.
+    Save:
+        Trigger: On starting turn,
+        DR: 2
+        Type: CON
+        Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
+        Success: end effect
+
+Amplify Ally:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Move the chess pieces on your board.
+    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
+    
