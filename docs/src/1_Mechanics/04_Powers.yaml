@@ -14,6 +14,7 @@ Template: # Power name        # Must be unique
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
+    Options: X                # Optional Descrip of options. Replaced by selection.
     Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
     Save:                     # Separated here, merged in md
         Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
@@ -175,10 +176,8 @@ Attack, Mystic Cone:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
-    Mechanic: # Don't include period on final item - md conversion will add
-        - Choose one effect when you take this power
-        - You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.
-        - All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down
+    Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down.
+    Mechanic: All characters in a Cone 3 are subjected to this effect.
     Type: Major
     XP: 2
     PP: 1
@@ -637,12 +636,13 @@ Aces Wild:
         - Game Mechanics
         - Fate Cards
     Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
+    Options: Select two suits to gain the corresponding options.
     Mechanic:
-        - Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.
-        - "Ace of Clubs: you can play this card to interrupt an enemy's turn and make a single Major ction - even if you already went that round"
-        - "Ace of Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP"
-        - "Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares"
-        - "Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing"
+        - "You can trade a held Ace for one of the following effects:"
+        - "Clubs: you can play this card to interrupt an enemy's turn and make a single Major Action - even if you already went that round"
+        - "Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP"
+        - "Hearts: As a Minor Action, you can heal yourself or an ally you can see within 5 squares 2 HP"
+        - "Spades: Select one of your Powers with a cost of up to 1 PP to use as a Minor Action. You may decide if any draws required by this Power succeed or fail."
     Type: Passive
     XP: 2
     Prereq:
@@ -759,7 +759,8 @@ Cunning:
     Category:
         - Roleplay
     Description: You're sharper than the rest when you take your time.
-    Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
+    Options: Choose one Skill other than your Primary Skill. 
+    Mechanic: On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
     Type: Passive
     XP: 1
 
@@ -767,7 +768,8 @@ Focused:
     Category:
         - Roleplay
     Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
-    Mechanic: Choose one Skill. When engaged in a non-instantaneous task that involves that skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
+    Options: Choose one Skill. 
+    Mechanic: When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
     Type: Passive
     XP: 0
 
