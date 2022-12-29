@@ -25,6 +25,7 @@ Template:               # must be unique
     Athletics: ±X       #
     Brute: ±X           #
   Powers:               # Include Powers/Vulnerabilities names as list
+    Example: Option     # Add as key:value when the power allows options
   Phases:               # Only for bosses
     One:                #
       HP: X             #
@@ -53,20 +54,19 @@ Spider Queen:
     - Adversary Major Action
     - Amplify Ally 
     - Barrier
-    - Condition Immunity: Web # Do I need to find a way to specify poison here?
+    - Condition Immunity: Poisoned
     - Eye for an Eye
-    - Favored Terrain
+    - Favored Terrain: Web
     - Lend Distraction
     - Lend Vigor
-    - Manifest Terrain
+    - Manifest Terrain: Web
     - Mystic Attack
     - Mystic Attack, Dual Shot
     - Mystic Aura
     - Mystic Entangle
     - Obey Me
     - Shield Others
-    - Terrain Blink
-    - Web Spray
+    - Terrain Blink: Web
 
 Grunt:
   Type: NPC

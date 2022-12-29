@@ -99,7 +99,7 @@ class Powers(YamlSpec):
 
         Returns:
             power_merged (dict): power with all mechanic items combined.
-        """
+        """  # TODO: Add options. Separate func?
         if isinstance(power["Mechanic"], list):  # when mech are list, indent after 1st
             mech_bullets = power["Mechanic"][0] + "\n"
             for mech_bullet in power["Mechanic"][1:]:

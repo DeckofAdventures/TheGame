@@ -431,14 +431,17 @@ attempt to end the freeze.
 9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 VIT Save. On
 failure, take 2 damage. On a success, take 1 damage.
 
-10. **Charmed** At the beginning of their turn, A Dealer makes a DR 3 GUT Save. On
-failure, they may not take actions against the interests of the creature that caused
-the condition. Another creature may use a Major action to end this effect.
+10. **Charmed** At the end of their turn or whenever taking damage, A Dealer makes a DR
+3 GUT Save. On failure, they may not take actions against the interests of the creature
+that caused the condition. Another creature may use a Major action to end this effect.
+This effects ends automatically if the target is damaged by the creature that caused
+the condition.
 
-11. **Enthralled** At the beginning of their turn, A Dealer makes a DR 3 CON Save. On
-failure, they must move up to their Speed and/or perform 1 Major Action available to
-them, as directed by the creature that caused the condition. Another creature may use a
-Major action to end this effect.
+11. **Enthralled** At the end of their turn or whenever taking damage, A Dealer makes a
+DR 3 CON Save. On failure, they must move up to their Speed and/or perform 1 Major
+Action available to them, as directed by the creature that caused the condition.
+Another creature may use a Major action to end this effect. This effects ends
+automatically if the target is damaged by the creature that caused the condition.
 
 ### Health and Armor
 
