@@ -59,16 +59,36 @@ class Bestiary(YamlSpec):
 
     def set_defaults(self, beast_dict) -> dict:
         """Set zeros as default for AP, Attribs and Skills"""
-        top_level_zero_defaults = ["AP"]
-        for field in top_level_zero_defaults:
-            beast_dict.setdefault(field, 0)
+        beast_dict.setdefault("AP", 0)
+        beast_dict.setdefault("Speed", 6)
         for field in self.list_attribs:
             beast_dict["Attribs"].setdefault(field, 0)
-        for field in self.list_skills:
-            beast_dict["Skills"].setdefault(field, 0)
+        if beast_dict["Type"] == "Dealer":
+            for field in self.list_skills:  # Should pull from attrib
+                beast_dict["Skills"].setdefault(field, 0)
+        return beast_dict
 
-    def merge_features(self, beast_dict):
-        pass  # What needs to be flattened?
+    def stats_to_table(self, beast_dict):
+        beast_dict = self.set_defaults(beast_dict)
+        top_lvl_stats = tuple(
+            beast_dict[stat] for stat in ["HP", "AP", "AR", "PP", "Speed"]
+        )
+        attrib_stats = tuple(beast_dict["Attribs"][stat] for stat in self.list_attribs)
+        table_structure = (
+            f"### {beast_dict['Type']}: Level {beast_dict['Level']}\n\n"
+            + "| HP | AP | AR | PP | SPD |\n"
+            + "| -- | -- | -- | -- | --- |\n"
+            + "| %s  | %s  | %s  | %s  |  %s  |\n\n" % top_lvl_stats
+            + "| AGL | CON | GUT | INT | STR | VIT |\n"
+            + "| --- | --- | --- | --- | --- | --- |\n"
+            + "|  %s  |  %s  |  %s  |  %s  |  %s  |  %s  | \n\n" % attrib_stats
+        )
+        if beast_dict.get("Skills"):
+            skills_has = beast_dict["Skills"].keys()
+            skill_string = " %s, ".join(skills_has) + " %s"
+            skill_stats = tuple(beast_dict["Skills"][stat] for stat in skills_has)
+            table_structure += "**Skills**: " + skill_string % skill_stats + "\n\n"
+        return table_structure
 
     def run_stat_overrides(self, beast_dict):
         pass
@@ -78,7 +98,12 @@ class Bestiary(YamlSpec):
 
     @property
     def categories(self):
-        raise NotImplementedError
+        """Return set of Types for organizing output"""
+        return set(
+            beast_type
+            for beast_type in ["Dealer", "Boss", "NPC", "Companion"]
+            if beast_type not in self._limit_types
+        )
 
     @property
     def content(self) -> dict:

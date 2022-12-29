@@ -1,11 +1,11 @@
 Template:               # must be unique
   Type: One of          # Dealer, Boss, NPC, Companion
-  Level: X              # Only for Dealers
-  Threat: X             # Measure of difficulty
+  Level: X              # Dealers: XP progression, NPCs/Boss: Threat
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
   PP: X                 # Required field
+  Speed: X              # Optional, default 6
   Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
     CON: ±X             #
@@ -35,50 +35,50 @@ Falcon:
   Type: Companion, level 1
   HP: 1
   AR: 3
-  Attrib: 
+  Attrib:
     AGL: 1
     STR: -1
     INT: 1
-    VIT: -1  
-  Powers: 
+    VIT: -1
+  Powers:
     - Attack, Weapon
-    
+
 Bear:
   Type: Companion, level 1
   HP: 3
   AP: 1
   AR: 2
-  Attrib: 
+  Attrib:
     AGL: -1
     STR: 1
     INT: -1
-    VIT: 1  
-  Powers: 
+    VIT: 1
+  Powers:
     - Attack, Weapon
-      
+
 Wolf:
   Type: Companion, level 1
   HP: 2
   AR: 3
-  Attrib: 
+  Attrib:
     AGL: 1
     STR: 1
     INT: -1
-    GUT: 1  
-  Powers: 
+    GUT: 1
+  Powers:
     - Attack, Weapon
     - Pack Tactics
-      
+
 Horse:
   Type: Companion, level 1
   HP: 2
   AR: 3
-  Attrib: 
+  Attrib:
     AGL: 1
     STR: 1
     INT: -1
-    GUT: -1  
-  Powers: 
+    GUT: -1
+  Powers:
     - Attack, Weapon
     - Pack Tactics
 
@@ -86,12 +86,12 @@ Wolf:
   Type: NPC
   HP: 2
   AR: 3
-  Attrib: 
+  Attrib:
     AGL: 1
     STR: 1
     INT: -1
-    CON: -1  
-  Powers: 
+    CON: -1
+  Powers:
     - Attack, Weapon
     - Pack Tactics
 
@@ -99,20 +99,20 @@ Dire Wolf:
   Type: NPC
   HP: 3
   AR: 2
-  Attrib: 
+  Attrib:
     AGL: 2
     STR: 2
     INT: -1
-    CON: -1      
+    CON: -1
   Powers:
     - Attack, Weapon
-    - Pack Tactics                      
+    - Pack Tactics
 
 Shrub Golem:
   Type: NPC
   HP: 2
   AR: 4
-  Attrib: 
+  Attrib:
     - AGL: -1
     - STR: 1
     - INT: -1
@@ -131,7 +131,7 @@ Vine Golem:
     - Attack, Weapon
     - Momentum
 
-  
+
 Tree Golem:
   Type: Dealer
   Level: 2
@@ -145,11 +145,11 @@ Tree Golem:
     VIT: 2
     AGL: -1
     INT: -1
-  Powers: 
+  Powers:
     - Shield, Self
     - Momentum, Aura
     - Attack, Sweep
-      
+
 Poison Plant:
   Type: NPC
   HP: 2
@@ -248,7 +248,7 @@ Mystic, Caster:
     - Attack, Mystic Cone
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
-    - Shield, Self 
+    - Shield, Self
   Description: A powerful Caster with access to mystic attacks.
 
 
@@ -260,19 +260,19 @@ Sentinel, Martial:
   AP: 0
   AR: 2
   PP: 3
-  Attrib: 
+  Attrib:
     GUT: 1
     INT: 1
     STR: -1
-  Powers: 
+  Powers:
     - Attack, Weapon
     - Attack, Sweep
     - Attack, Charge
     - Attack, Disarm
-  Description: A Martial with access to Powers. 
+  Description: A Martial with access to Powers.
 
 
-Ritualist, Support: 
+Ritualist, Support:
   Type: Dealer
   HP: 4
   AR: 3
@@ -284,7 +284,7 @@ Ritualist, Support:
     INT: 1
     STR: -1
     VIT: -1
-  Powers: 
+  Powers:
     - Attack, Mystic
     - Attack, Mystic Aura
     - Heal
@@ -293,7 +293,7 @@ Ritualist, Support:
     - Lend Distraction
     - Slow
     - Shield, Others
-  Description: A Support with access to Powers. 
+  Description: A Support with access to Powers.
 
 Specter:
   Type: NPC
@@ -301,11 +301,11 @@ Specter:
   AP: 0
   AR: 2
   PP: 2
-  Attrib: 
+  Attrib:
     GUT: 1
     INT: 1
     STR: -1
-  Powers: 
+  Powers:
     - Attack, Mystic
     - Attack, Mystic Aura
-    - Slow    
+    - Slow
