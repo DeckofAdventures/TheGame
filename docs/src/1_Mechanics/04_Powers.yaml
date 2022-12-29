@@ -854,6 +854,7 @@ Condition Resilience:
     Category: Resilience 
     XP: 1
     Prereq:
+        Level: 2
         Skill: VIT > 1
     Description: Through training or sheer will, you brace your body for trials ahead.
     Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand."
@@ -863,12 +864,13 @@ Condition Immunity:
     Category: Resilience 
     XP: 3
     Prereq:
-        Skill: VIT > 1
+        Level: 3
+        Skill: VIT > 2
     Description: Through training or sheer will, your body is impervious.
     Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. You are now immune to this condition."
 
 Adversary Major Action:
-    Type: Major
+    Type: Adversary
     Category:
         - Boss-Only
         - Adversary Actions

@@ -1,6 +1,6 @@
 Template:               # must be unique
   Type: One of          # Dealer, Boss, NPC, Companion
-  Level: X              # Dealers: XP progression, Boss: Threat
+  Level: X              # Dealers: XP progression, NPCs/Boss: Threat
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
