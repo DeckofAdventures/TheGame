@@ -88,14 +88,14 @@ class Card(object):
     def range(self, TR: int):
         """Returns list of cards in a TR range"""
         TR = abs(TR)
-        return [self + diff for diff in range(-TR, TR)]
+        return [self + diff for diff in range(-TR, TR+1)]
 
 
 class Deck(object):
     """Full deck of cards
 
     Example use:
-        from automation.simulaiton.deck import Deck
+        from automation.simulation.deck import Deck
         d=Deck()
         d.draw()
         > A♦️
@@ -154,13 +154,13 @@ class Deck(object):
         return card
 
     def exchange_fate(self):
-        """Move fade card from hand. If Ace, add to discard"""
+        """Move fate card from hand. If Ace, add to discard"""
         if len(self.hand) == 0:
             logger.warning("No cards available to exchange")
             return
         card = self.hand.pop()
         if card.val == "A":
-            self.discard.append(card)
+            self.discards.append(card)
         logger.info(f"Exchanged Fate Card: {card}")
 
     def check(self, TC: Card, TR: int, mod: int = 0):
@@ -168,7 +168,7 @@ class Deck(object):
 
         Args:
             TC (Card): Target card
-            TR: (int): Rarget Target range
+            TR: (int): Target Range
             mod (int): TR modifier
         """
         TR = abs(TR) + mod
