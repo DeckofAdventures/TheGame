@@ -64,7 +64,7 @@ class Bestiary(YamlSpec):
         for field in self.list_attribs:
             beast_dict["Attribs"].setdefault(field, 0)
         if beast_dict["Type"] == "Dealer":
-            for field in self.list_skills:
+            for field in self.list_skills:  # Should pull from attrib
                 beast_dict["Skills"].setdefault(field, 0)
         return beast_dict
 
