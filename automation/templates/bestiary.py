@@ -3,25 +3,28 @@ from .yaml_spec import YamlSpec
 from ..utils.logger import logger
 
 
+list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
+list_skills = [
+    "Finesse",
+    "Stealth",
+    "Bluffing",
+    "Performance",
+    "Knowledge",
+    "Investigation",
+    "Detection",
+    "Craft",
+    "Athletics",
+    "Brute",
+]
+list_beast_types = ["PC", "NPC", "Boss"]  # TODO: ADD
+
+
 class Bestiary(YamlSpec):
     # TODO: check stat overrides before printing
     def __init__(self, input_files="06_Bestiary_SAMPLE.yaml", limit_types: list = None):
         input_files = [file for file in self.ensure_list(input_files) if "Best" in file]
         super().__init__(input_files=input_files)
-        self._limit_types = limit_types
-        self.list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
-        self.list_skills = [
-            "Finesse",
-            "Stealth",
-            "Bluffing",
-            "Performance",
-            "Knowledge",
-            "Investigation",
-            "Detection",
-            "Craft",
-            "Athletics",
-            "Brute",
-        ]
+        self._limit_types = limit_types or list_beast_types
 
     def sort_template(self, beast_dict: dict) -> OrderedDict:
         """Given a beast, return OrderedDict in markdown read order"""

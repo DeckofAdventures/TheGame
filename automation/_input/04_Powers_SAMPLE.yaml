@@ -1,27 +1,30 @@
 Template: # Power name        # Must be unique
-    Type: One of              # Passive, Vulny, Major, Minor, Adversary, Free, House. 
-    # Note: Type is required. For Companion actions, type indicates type req for dealer
+    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
     Category: One or list     # One string or list in sub-cat order
+    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
+    Description: Descrip      # Flavor: 1-2 sentences
     XP: X
     PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
     Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
-        Level: X              # Integer               
-        Skill: X > 1          #              
+        Level: X              # Integer
+        Skill: X > 1          #
         Power:                # Must match unique power name
-    To Hit: X                 # If not specified, assumed character's primary skill
-    Damage: X                 # Integer           
+    StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
+        Stat: Stat 
+        Value: X     
+    ToHit: X                  # If not specified, assumed character's primary skill
+    Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
-    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
+    Options: X                # Optional Descrip of options. Replaced by selection.
     Save:                     # Separated here, merged in md
         Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail
         Succeed: Descrip      # effect on success. Assume no access to above
-    Description: Descrip      # Flavor: 1-2 sentences             
     Tags: One or list
 
 Attack, Weapon:
