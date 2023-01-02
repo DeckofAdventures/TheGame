@@ -1,7 +1,11 @@
+from operator import attrgetter
 from collections import OrderedDict
 from .yaml_spec import YamlSpec
-from ..utils.logger import logger
+from ..utils import logger, ensure_list, sort_dict, my_repr
+from .powers import Powers, Power
+from typing import List
 
+from dataclasses import dataclass, field, fields
 
 list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
 list_skills = [
@@ -16,60 +20,18 @@ list_skills = [
     "Athletics",
     "Brute",
 ]
-list_beast_types = ["PC", "NPC", "Boss"]  # TODO: ADD
+list_beast_types = ["PC", "NPC", "Boss", "Companion"]
+list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
 
 
 class Bestiary(YamlSpec):
     # TODO: check stat overrides before printing
     def __init__(self, input_files="06_Bestiary_SAMPLE.yaml", limit_types: list = None):
-        input_files = [file for file in self.ensure_list(input_files) if "Best" in file]
+        input_files = [file for file in ensure_list(input_files) if "Best" in file]
         super().__init__(input_files=input_files)
         self._limit_types = limit_types or list_beast_types
-
-    def sort_template(self, beast_dict: dict) -> OrderedDict:
-        """Given a beast, return OrderedDict in markdown read order"""
-        if "Attrib" in beast_dict:
-            beast_dict["Attrib"] = self.sort_dict(
-                beast_dict["Attrib"], self.list_attribs
-            )
-        if "Skills" in beast_dict:
-            beast_dict["Skills"] = self.sort_dict(
-                beast_dict["Skills"],
-                self.list_skils,
-            )
-        if "Phases" in beast_dict:
-            beast_dict["Phases"] = self.sort_dict(
-                beast_dict["Phases"], ["One", "Two", "Three", "Four", "Five", "Six"]
-            )
-
-        return self.sort_dict(
-            beast_dict,
-            [
-                "Type",
-                "Level",
-                "Threat",
-                "HP",
-                "AP",
-                "AR",
-                "PP",
-                "Attrib",
-                "Skill",
-                "Powers",
-                "Phases",
-                "Description",
-            ],
-        )
-
-    def set_defaults(self, beast_dict) -> dict:
-        """Set zeros as default for AP, Attribs and Skills"""
-        beast_dict.setdefault("AP", 0)
-        beast_dict.setdefault("Speed", 6)
-        for field in self.list_attribs:
-            beast_dict["Attribs"].setdefault(field, 0)
-        if beast_dict["Type"] == "Dealer":
-            for field in self.list_skills:  # Should pull from attrib
-                beast_dict["Skills"].setdefault(field, 0)
-        return beast_dict
+        self._as_dict = {}
+        self._as_list = []
 
     def stats_to_table(self, beast_dict):
         beast_dict = self.set_defaults(beast_dict)
@@ -93,38 +55,126 @@ class Bestiary(YamlSpec):
             table_structure += "**Skills**: " + skill_string % skill_stats + "\n\n"
         return table_structure
 
-    def run_stat_overrides(self, beast_dict):
-        pass
-        if "Stat Overrides" not in beast_dict:
-            return beast_dict
-        list_stats = beast_dict["Stat Overrides"]
+    @property
+    def as_list(self):
+        if not self._as_list:
+            self._as_list = [
+                Beast(Name=k, **v)
+                for k, v in self._raw_data.items()
+                if v.get("Type", None) in self._limit_types
+            ]
+        return self._as_list
+
+    @property
+    def as_dict(self) -> dict:
+        """Return readable dict with Mechanics collapsed."""
+        if not self._as_dict:
+            self._as_dict = {
+                k: Power(Name=k, **v)
+                for k, v in self._raw_data.items()
+                if v.get("Type", None) in self._limit_types
+            }
+        return self._as_dict
 
     @property
     def categories(self):
         """Return set of Types for organizing output"""
-        return set(
-            beast_type
-            for beast_type in ["Dealer", "Boss", "NPC", "Companion"]
-            if beast_type not in self._limit_types
-        )
+        return set(self._limit_types)
 
-    @property
-    def content(self) -> dict:
-        """Return readable dict."""
-        raise NotImplementedError
-        if not self._content:
-            self._content = {
-                power: {
-                    **self.flatten_embedded(self.merge_features(traits)),
-                }
-                for (power, traits) in self._raw_data.items()
-            }
-        return self.filter_dict_by_key(  # Filter by types specified when init class
-            dict_content=self._content, key_filter="Type", key_options=self._limit_types
-        )
 
-    @property
-    def dot_template(self) -> str:
-        """All dot file frontmatter"""
-        logger.warning("Dot template not yet implented for Bestiary")
-        return ""
+@dataclass(order=True)
+class Attribs:
+    AGL: int = 0
+    CON: int = 0
+    GUT: int = 0
+    INT: int = 0
+    STR: int = 0
+    VIT: int = 0
+
+
+@dataclass(order=True)
+class Skills:
+    Finesse: int = 0
+    Stealth: int = 0
+    Bluffing: int = 0
+    Performance: int = 0
+    Knowledge: int = 0
+    Investigation: int = 0
+    Detection: int = 0
+    Craft: int = 0
+    Athletics: int = 0
+    Brute: int = 0
+
+
+@dataclass(order=True)
+class Phase:
+    Name: str
+    Order: int = field(repr=False)
+    HP: int = 1
+    Allies: List[str] = field(default=None)  # Should this be typed as Beast? Recursive?
+
+
+@dataclass(order=True)
+class Beast:
+    sort_index: str = field(init=False, repr=False)
+    Name: str
+    Type: str
+    Level: int = 1
+    HP: int = 1
+    AP: int = 1
+    AR: int = 1
+    PP: int = 1
+    Speed: int = 6
+    Attribs: dict = field(default=None)
+    Skills: dict = field(default=None)
+    Powers: dict = field(default=None, repr=False)
+    Powers_list: list = field(default_factory=list)
+    Phases: list = field(default=None)
+    Description: str = ""
+
+    def __post_init__(self):
+        self.sort_index = self.Type
+        self.Powers = self.fetch_powers()
+        self.Powers_list = [p for p in self.Powers]
+        self.Attribs = Attribs(**self.Attribs) if self.Attribs else None
+        self.Skills = Skills(**self.Skills) if self.Skills else None
+        self.Phases = self.fetch_phases() if self.Phases else None
+
+    def fetch_powers(self):
+        output = {}
+        all_powers = Powers(
+            input_files=[
+                "04_Powers.yaml",
+                "04_Powers_SAMPLE.yaml",
+                "05_Vulnerabilities.yaml",
+            ]
+        ).as_dict
+        self.Powers = ensure_list(self.Powers)
+        for power in self.Powers:
+            if isinstance(power, dict):
+                power_name = list(power.keys())[0]
+                this_power = all_powers.get(power_name, None)
+                output.update(
+                    {power_name: this_power.set_choice(list(power.values())[0])}
+                )
+            else:
+                this_power = all_powers.get(power, None)
+                output.update({power: this_power})
+            if not this_power:
+                logger.warning(f"{self.Name} has a power not in yaml: {power}")
+        return output
+
+    def fetch_phases(self):
+        output = []
+        for order, (phase, phase_dict) in enumerate(self.Phases.items()):
+            # import pdb
+
+            # pdb.set_trace()
+            output.append(Phase(Name=phase, Order=order, **phase_dict))
+        return output
+
+    def override_stats(self):
+        pass  # check if any listed powers have overrides, then do so
+
+    def __repr__(self):
+        return my_repr(self)

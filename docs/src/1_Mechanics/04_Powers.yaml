@@ -840,7 +840,8 @@ Favored Terrain:
         - Speed
     XP: 1
     Description: Home feels more familiar, granting a speed boost.
-    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). Gain +2 speed on this terrain. 
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: Gain +2 speed on this terrain. 
 
 Terrain Blink:
     Type: Minor
@@ -849,7 +850,8 @@ Terrain Blink:
         - Speed
     XP: 3
     Description: So at home that you can get anywhere.
-    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
 
 Condition Resilience: 
     Type: Passive
@@ -859,7 +861,8 @@ Condition Resilience:
         Level: 2
         Skill: VIT > 1
     Description: Through training or sheer will, you brace your body for trials ahead.
-    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand."
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
 
 Condition Immunity: 
     Type: Passive
@@ -869,7 +872,8 @@ Condition Immunity:
         Level: 3
         Skill: VIT > 2
     Description: Through training or sheer will, your body is impervious.
-    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. You are now immune to this condition."
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: You are now immune to this condition.
 
 Adversary Major Action:
     Type: Adversary
@@ -904,7 +908,7 @@ Obey Me:
         DR: 2
         Type: CON
         Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
-        Success: end effect
+        Succeed: end effect
 
 Amplify Ally:
     Type: House

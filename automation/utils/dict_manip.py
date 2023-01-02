@@ -1,6 +1,19 @@
 import yaml
+from operator import attrgetter
 from collections import OrderedDict
 from .list_manip import list_to_or
+
+from dataclasses import fields
+
+
+def my_repr(self):
+    nodef_f_vals = (
+        (f.name, attrgetter(f.name)(self))
+        for f in fields(self)
+        if attrgetter(f.name)(self) != f.default and f.repr
+    )
+    nodef_f_repr = "\n".join(f"{name}={value}" for name, value in nodef_f_vals)
+    return f"{self.__class__.__name__}({nodef_f_repr})"
 
 
 def load_yaml(input_yaml: str):
@@ -32,10 +45,10 @@ def flatten_embedded(input_dict) -> dict:
     """
     output = {}
     for k, v in input_dict.items():
-        if isinstance(v, dict):  # and k != "Save":
+        if isinstance(v, dict):
             output.update(
                 {
-                    f"{k}_{embed_k}": list_to_or(embed_v)  # LATE ADD of list func
+                    f"{k}_{embed_k}": list_to_or(embed_v)
                     for embed_k, embed_v in v.items()
                 }
             )

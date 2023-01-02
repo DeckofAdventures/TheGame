@@ -11,8 +11,7 @@ Template: # Power name        # Must be unique
         Skill: X > 1          #
         Power:                # Must match unique power name
     StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
-        Stat: Stat 
-        Value: X     
+        Stat: X     
     ToHit: X                  # If not specified, assumed character's primary skill
     Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
@@ -26,6 +25,13 @@ Template: # Power name        # Must be unique
         Fail: Descrip         # effect on fail
         Succeed: Descrip      # effect on success. Assume no access to above
     Tags: One or list
+
+Dumb:
+    Type: Vulny
+    Category: Roleplay
+    StatOverride:
+        INT: -2
+    Description: You're dumb as rocks. We're sure you make up for it in other areas.
 
 Attack, Weapon:
     Category: 

@@ -71,7 +71,11 @@ class YamlSpec(ABC):
         return self._raw_data
 
     @abstractmethod
-    def content(self):
+    def as_dict(self):
+        pass
+
+    @abstractmethod
+    def as_list(self):
         pass
 
     @abstractmethod
@@ -89,7 +93,7 @@ class YamlSpec(ABC):
             dict: Subset of readable dict
         """
         return filter_dict_by_key(
-            dict_content=self.content, key_filter="Type", key_options=type_options
+            dict_content=self.as_dict, key_filter="Type", key_options=type_options
         )
 
     def by_category(self, category: list = None):
@@ -103,7 +107,7 @@ class YamlSpec(ABC):
             dict: Subset of readable dict
         """
         return filter_dict_by_key(
-            dict_content=self.content, key_filter="Category", key_options=category
+            dict_content=self.as_dict, key_filter="Category", key_options=category
         )
 
     # ------------------------------- MARKDOWN UTILITIES -------------------------------
@@ -114,8 +118,7 @@ class YamlSpec(ABC):
             categories, indents, category_set, prev_category_tuple = [], [], [], tuple()
             for category_tuple in self.categories:
                 for idx, category in enumerate(category_tuple):  # indent lvl, category
-                    # previous category at same heading level
-                    prev_category = (
+                    prev_category = (  # previous category at same heading level
                         prev_category_tuple[idx]
                         if idx < len(prev_category_tuple)
                         else None
@@ -216,7 +219,7 @@ class YamlSpec(ABC):
                 delimiter=delimiter,
             )
             csv_output.writeheader()
-            for k, v in self.content.items():
+            for k, v in self.as_dict.items():
                 if v and any(v.values()):
                     v["Name"] = k
                     rows.append(v)

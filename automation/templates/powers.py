@@ -7,8 +7,8 @@ from ..utils import (
     make_bullet,
     make_header,
     ensure_list,
-    sort_dict,
     flatten_embedded,
+    my_repr,
 )
 from dataclasses import dataclass, field, fields
 
@@ -50,87 +50,8 @@ class Powers(YamlSpec):
             ]
         )
         self._limit_types = limit_types or list_power_types
-        self._content = {}
+        self._as_dict = {}
         self._as_list = []
-
-    def sort_template(self, power_dict):
-        """Given a power, return OrderedDict in markdown read order"""
-        if "Prereq" in power_dict:
-            power_dict["Prereq"] = sort_dict(
-                power_dict["Prereq"], ["Role", "Level", "Skill", "Power"]
-            )
-        if "Save" in power_dict:
-            power_dict["Save"] = sort_dict(
-                power_dict["Save"], ["Trigger", "DR", "Type", "Fail", "Succeed"]
-            )
-
-        return sort_dict(
-            power_dict,
-            [
-                "Type",
-                "Category",
-                "Description",
-                "Mechanic",
-                "XP",
-                "PP",
-                "Prereq",
-                "Prereq_Role",
-                "Prereq_Level",
-                "Prereq_Skill",
-                "Prereq_Power",
-                "To Hit",
-                "Damage",
-                "Range",
-                "AOE",
-                "Target",
-                "Save",
-                "Tags",
-            ],
-        )
-
-    def save_check_to_txt(self, save: dict) -> str:
-        """Given a Save dict from a power, return a readable sentence
-
-        Args:
-            save (dict): subset of power dict, save with trigger, DR, type, etc
-
-        Returns:
-            save_string (str): readable sentence detailing all features of a save
-        """
-        sentence = save["Trigger"] + ", target(s) make a "
-        sentence += "DR " + str(save["DR"]) + " " if "DR" in save else ""
-        sentence += list_to_or(save["Type"]) + " Save"
-        output = [sentence, "On fail, target(s) " + save["Fail"]]
-        output.append(
-            "On success, target(s) " + save["Succeed"]
-        ) if "Succeed" in save else None
-        return ". ".join(output)
-
-    def merge_mechanics(self, power):
-        """Given power dict, merge all appropriate items into Mechanic
-
-        Args:
-            power (dict): individual power
-
-        Returns:
-            power_merged (dict): power with all mechanic items combined.
-        """  # TODO: Add options. Separate func?
-        if isinstance(power["Mechanic"], list):  # when mech are list, indent after 1st
-            mech_bullets = power["Mechanic"][0] + "\n"
-            for mech_bullet in power["Mechanic"][1:]:
-                mech_bullets += make_bullet(mech_bullet)
-            power["Mechanic"] = mech_bullets[:-1]  # remove last space
-        mechanic = (
-            ("For " + list_to_or(power["PP"]) + " PP, " + power["Mechanic"] + ". ")
-            if "PP" in power
-            else power["Mechanic"]
-        )
-        if "Save" in power:
-            mechanic += self.save_check_to_txt(power["Save"]) + ". "
-        power["Mechanic"] = "".join([power["Type"], ". ", mechanic])
-        power["Category"] = ensure_list(power["Category"])
-        power.pop("Save", None)
-        return power
 
     @property
     def as_list(self):
@@ -140,31 +61,37 @@ class Powers(YamlSpec):
                 for k, v in self._raw_data.items()
                 if v.get("Type", None) in self._limit_types
             ]
+        return self._as_list
 
     @property
-    def content(self) -> dict:
+    def as_dict(self) -> dict:
         """Return readable dict with Mechanics collapsed."""
-        if not self._content:
-            self._content = {
+        if not self._as_dict:
+            self._as_dict = {
                 k: Power(Name=k, **v)
                 for k, v in self._raw_data.items()
                 if v.get("Type", None) in self._limit_types
             }
-        return self._content
+        return self._as_dict
 
     @property
     def categories(self):
         """Return set of tuples: (categories, subcategories)"""
         if not self._categories:
-            for v in self._raw_data.values():  # get set of sub/categories for TOC later
-                self._categories.add(tuple(ensure_list(v["Category"])))
+            for p in self._as_list:  # get set of sub/categories for TOC later
+                self._categories.add(tuple(p.Category))
         return sorted(self._categories)
 
 
 @dataclass(order=True)
 class StatOverride:
-    Stat: str
-    Value: int
+    as_dict: dict = field(repr=False)
+    Stat: str = field(init=False)
+    Value: int = field(init=False)
+
+    def __post_init__(self):  # Assumes only one stat is overridden
+        self.Stat = list(self.as_dict.keys())[0]
+        self.Value = list(self.as_dict.values())[0]
 
     @property
     def text(self) -> str:
@@ -210,13 +137,13 @@ class Save:
 class Power:
     sort_index: str = field(init=False, repr=False)
     Name: str
-    Description: str
-    Mechanic: Union[str, list] = field(repr=False)
-    Merged_Mechanic: str = field(init=False)
     Type: str = field(repr=False)
     Category: Union[str, list] = field(repr=False)
+    Description: str = field(default="")
+    Mechanic: Union[str, list] = field(default="", repr=False)
+    Merged_Mechanic: str = field(init=False)
     XP: int = 1
-    PP: int = 1
+    PP: int = 0
     Range: int = 6
     AOE: str = None
     Target: int = 1
@@ -241,6 +168,8 @@ class Power:
 
     def set_choice(self, choice: str):
         self.Choice = choice
+        self.Merged_Mechanic = self.merge_mechanic()
+        return self
 
     def merge_mechanic(self):
         """Given power dict, merge all appropriate items into Mechanic
@@ -248,19 +177,24 @@ class Power:
         Returns:
             power_merged (dict): power with all mechanic items combined.
         """
-        output = []
         if isinstance(self.Mechanic, list):  # when mech are list, indent after 1st
             mech_bullets = self.Mechanic[0] + "\n"
             for mech_bullet in self.Mechanic[1:]:
                 mech_bullets += make_bullet(mech_bullet)
-            output = mech_bullets[:-1]  # remove last space
-        if self.PP:
-            output.append("For " + list_to_or(self.PP) + " PP, " + self.Mechanic)
-        if self.Save:
-            output.append(self.Save.text)
-        if self.StatOverride:
-            output.append(self.StatOverride)
-        return ". ".join([self.Type, *ensure_list(output)])
+            return mech_bullets[:-1]  # remove last space.
+        else:  # Listed mechanics do not have PP/Save/StatOverride
+            output = []
+            if self.Options:
+                output.append(self.Choice if self.Choice else self.Options)
+            if self.PP != 0:
+                output.append("For " + list_to_or(self.PP) + " PP, " + self.Mechanic)
+            else:
+                output.append(self.Mechanic)
+            if self.StatOverride:
+                output.append(self.StatOverride.text)
+            if self.Save:
+                output.append(self.Save.text)
+            return ". ".join([self.Type, *output])
 
     def markdown(self, level=2):
         output = make_header(self.Name, level=level) + "\n"
@@ -270,13 +204,4 @@ class Power:
         return output
 
     def __repr__(self):
-        nodef_f_vals = (
-            (f.name, attrgetter(f.name)(self))
-            for f in fields(self)
-            if attrgetter(f.name)(self) != f.default and f.repr
-        )
-        # import pdb
-
-        # pdb.set_trace()
-        nodef_f_repr = "\n".join(f"{name}={value}" for name, value in nodef_f_vals)
-        return f"{self.__class__.__name__}({nodef_f_repr})"
+        return my_repr(self)
