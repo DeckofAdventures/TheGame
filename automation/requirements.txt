@@ -1,11 +1,14 @@
 # Formatting
 black
 
-# Importing yml
-pyyaml
-
 # Managing pdfs
 pdf2image
 
+# Checking files before commits
+pre-commit
+
 # Generating graphviz objects
 pydot
+
+# Importing yml
+pyyaml

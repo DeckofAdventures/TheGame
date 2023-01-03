@@ -11,7 +11,7 @@ Template: # Power name        # Must be unique
         Skill: X > 1          #
         Power:                # Must match unique power name
     StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
-        Stat: X     
+        Stat: X
     ToHit: X                  # If not specified, assumed character's primary skill
     Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
@@ -34,7 +34,7 @@ Dumb:
     Description: You're dumb as rocks. We're sure you make up for it in other areas.
 
 Attack, Weapon:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
     Type: Major
@@ -48,7 +48,7 @@ Attack, Weapon:
     Tags: Attack
 
 Attack, Charge:
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
         - Example Third
@@ -68,7 +68,7 @@ Attack, Charge:
 Sweep:
     Category: Combat
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space 
+    Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space
     Type: Major
     XP: 2
     PP: [1, 2]
@@ -78,7 +78,7 @@ Sweep:
             - Martial
             - Defender
         Level: 2
-        Skill: 
+        Skill:
             - Finesse > 0
             - Brute > 0
     Save:
@@ -90,22 +90,22 @@ Sweep:
     Tags: Attack
 
 Momentum: # Without this power, this should cost a major action.
-    Category: 
+    Category:
         - Combat
-    Description: By brute strength, force others to move around the battlefield. 
+    Description: By brute strength, force others to move around the battlefield.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you
     Type: Passive
     XP: 1
     Save:
         Trigger: If unwilling
-        Type: [STR, AGL] 
+        Type: [STR, AGL]
         Fail: be moved to 1 space of attacker's end position
     Prereq:
         Role: Defender
         Skill: Brute > 1
 
 Cunning:
-    Category: 
+    Category:
         - Roleplay
     Description: You're sharper than the rest when you take your time.
     Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills

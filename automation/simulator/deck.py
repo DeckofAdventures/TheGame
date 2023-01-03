@@ -1,6 +1,7 @@
 # Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
+
 from ..utils.logger import logger
 
 
@@ -88,7 +89,7 @@ class Card(object):
     def range(self, TR: int):
         """Returns list of cards in a TR range"""
         TR = abs(TR)
-        return [self + diff for diff in range(-TR, TR+1)]
+        return [self + diff for diff in range(-TR, TR + 1)]
 
 
 class Deck(object):

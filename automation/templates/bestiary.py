@@ -1,11 +1,9 @@
-from operator import attrgetter
-from collections import OrderedDict
-from .yaml_spec import YamlSpec
-from ..utils import logger, ensure_list, sort_dict, my_repr
-from .powers import Powers, Power
+from dataclasses import dataclass, field
 from typing import List
 
-from dataclasses import dataclass, field, fields
+from ..utils import ensure_list, logger, my_repr
+from .powers import Power, Powers
+from .yaml_spec import YamlSpec
 
 list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
 list_skills = [

@@ -48,7 +48,7 @@ Spider Queen:
     STR: 0
     VIT: 1
   Skills: # Added to test out code fed sparse data, remove later
-    Finesse: 1 
+    Finesse: 1
     Bluffing: 2
   Phases:
     One:
@@ -60,9 +60,9 @@ Spider Queen:
       Allies:
         - Grunt
         - Grunt, Shielded
-  Powers:    
+  Powers:
     - Adversary Major Action
-    - Amplify Ally 
+    - Amplify Ally
     - Attack, Mystic
     - Attack, Mystic Aura
     - Attack, Mystic Dual-Shot
@@ -166,4 +166,3 @@ Mystic Caster:
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
   Description: A powerful Caster with access to mystic attacks.
-

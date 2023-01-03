@@ -1,17 +1,16 @@
-from typing import Union
+from dataclasses import dataclass, field, fields
 from operator import attrgetter
-from .yaml_spec import YamlSpec
-from ..utils import (
-    # logger,
+from typing import Union
+
+from ..utils import (  # logger,
+    ensure_list,
+    flatten_embedded,
     list_to_or,
     make_bullet,
     make_header,
-    ensure_list,
-    flatten_embedded,
     my_repr,
 )
-from dataclasses import dataclass, field, fields
-
+from .yaml_spec import YamlSpec
 
 list_power_types = ["Passive", "Vulny", "Major", "Minor", "Adversary", "Free", "House"]
 

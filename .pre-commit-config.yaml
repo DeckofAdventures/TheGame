@@ -41,6 +41,8 @@ repos:
       entry: mdl
       language: ruby
       files: \.(md|mdown|markdown)$
+      args:
+        - "-r ~MD013"
 
 
   # flake8

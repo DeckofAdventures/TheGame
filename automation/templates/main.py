@@ -1,6 +1,6 @@
 from ..utils.logger import logger
-from .powers import Powers
 from .bestiary import Bestiary
+from .powers import Powers
 
 
 def yaml_to_other(
