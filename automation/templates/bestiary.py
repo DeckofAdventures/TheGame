@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field, fields
+from math import floor
 from operator import attrgetter
 from typing import List
 
@@ -24,15 +25,24 @@ list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
 
 
 class Bestiary(YamlSpec):
+    """Bestiary class - load all or a specific type from yamls
+
+    Example:
+        from automation.templates.bestiary import Bestiary, Beast
+        Bestiary().as_dict['MyPC'] # Returns Beast object
+    """
+
     # TODO: check stat overrides before printing
     def __init__(self, input_files="06_Bestiary_SAMPLE.yaml", limit_types: list = None):
         input_files = [file for file in ensure_list(input_files) if "Best" in file]
         super().__init__(input_files=input_files)
+        self._tried_loading = False
         self._limit_types = limit_types or list_beast_types
         self._as_list = []
         self._as_dict = {}
 
     def _build_contents(self):
+        self._tried_loading = True
         for k, v in self.raw_data.items():
             if v.get("Type", None) in self._limit_types:
                 beast = Beast(Name=k, **v)
@@ -41,14 +51,14 @@ class Bestiary(YamlSpec):
 
     @property
     def as_list(self):
-        if not self._as_list:
+        if not self._as_list and not self._tried_loading:
             self._build_contents()
         return self._as_list
 
     @property
     def as_dict(self) -> dict:
         """Return readable dict with Mechanics collapsed."""
-        if not self._as_dict:
+        if not self._as_dict and not self._tried_loading:
             self._build_contents()
         return self._as_dict
 
@@ -106,12 +116,14 @@ class Phase:
 @dataclass(order=True)
 class Beast:
     sort_index: str = field(init=False, repr=False)
-    Name: str
     Type: str
+    Name: str = None
+    Pronouns: str = None
+    Role: str = None
     Level: int = 1
     HP: int = 1
     AP: int = 1
-    AR: int = 1
+    AR: int = field(default=None)
     PP: int = 1
     Speed: int = 6
     Attribs: dict = field(default=None)
@@ -128,6 +140,8 @@ class Beast:
         self.Attribs = Attribs(**self.Attribs) if self.Attribs else None
         self.Skills = Skills(**self.Skills) if self.Skills else None
         self.Phases = self.fetch_phases() if self.Phases else None
+        self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
+        self.RestCards = self.HP + self.PP
         self.override_stats()
 
     def fetch_powers(self):

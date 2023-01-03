@@ -13,7 +13,7 @@ Template:               # must be unique
     INT: ±X             #
     STR: ±X             #
     VIT: ±X             #
-  Skills:                # List if different from corresponding Attrib
+  Skills:               # List if different from corresponding Attrib
     Finesse: ±X         #
     Stealth: ±X         #
     Bluffing: ±X        #
@@ -31,6 +31,35 @@ Template:               # must be unique
       HP: X             #
       Allies: X         # List of who appears. If multiple of same, list multiple times
   Description: Descrip  # Full descriptive text
+
+Clubs1:
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 1
+  HP: 7
+  AP: 2
+  PP: 2
+  Attribs:
+    AGL: 1
+    GUT: 1
+    INT: -1
+    STR: 1
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Knowledge: -1
+    Investigation: -1
+    Athletics: 1
+    Brute: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Momentum
+    - Shield, Self
+    - Oath
+    - Bloodthirsty
 
 Spider Queen:
   Type: Boss
@@ -85,13 +114,13 @@ Grunt:
   HP: 2
   AR: 3
   PP: 0
-  Attrib:
+  Attribs:
     AGL: 1
     INT: -1
   Powers:
     - Attack, Weapon
     - Clumsy, Minor
-  Threat: 1
+  Level: 1
   Description: A low level soldier.
 
 Grunt, Shielded:
@@ -100,13 +129,13 @@ Grunt, Shielded:
   AR: 2
   AP: 1
   PP: 0
-  Attrib:
+  Attribs:
     STR: 1
     INT: -1
   Powers:
     - Attack, Weapon
     - Shield
-  Threat: 1
+  Level: 1
   Description: A low level soldier with a Shield.
 
 Guard:
@@ -115,7 +144,7 @@ Guard:
   AR: 2
   AP: 1
   PP: 1
-  Attrib:
+  Attribs:
     STR: 1
     VIT: 1
   Powers:
@@ -123,17 +152,17 @@ Guard:
     - Shield
     - Attack, Sweep
     - Momentum
-  Threat: 2
+  Level: 2
   Description: A decently armored and trained soldier.
 
 Defender Captain:
   Type: Dealer
-  Threat: 3
+  Level: 3
   HP: 5
   AR: 2
   AP: 2
   PP: 2
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     VIT: 1
@@ -155,7 +184,7 @@ Mystic Caster:
   AR: 3
   AP: 0
   PP: 3
-  Attrib:
+  Attribs:
     CON: 1
     INT: 1
     STR: -1
