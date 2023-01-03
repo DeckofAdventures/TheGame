@@ -216,7 +216,7 @@ Attack, Mystic Entangle:
     XP: 2
     PP: [1,2]
     Target: [1,3]
-    Mechanic: Selected targets make a Save.
+    Mechanic: Selected targets make a Save
     Save:
         Trigger: Once
         DR: 3
@@ -902,7 +902,7 @@ Obey Me:
         - Boss-Only
         - House Actions
     PP: 2
-    Mechanic: enthrall an enemy.
+    Mechanic: enthrall an enemy
     Save:
         Trigger: On starting turn,
         DR: 2

@@ -12,7 +12,7 @@ from ..utils import (  # logger,
 )
 from .yaml_spec import YamlSpec
 
-list_power_types = ["Passive", "Vulny", "Major", "Minor", "Adversary", "Free", "House"]
+list_power_types = ["Passive", "Vulny", "Free", "Major", "Minor", "Adversary", "House"]
 
 
 class Powers(YamlSpec):
@@ -31,16 +31,7 @@ class Powers(YamlSpec):
                 Defaults to "04_Powers_SAMPLE.yaml".
             limit_types (list, optional): Only output items of provided types.
                 Defaults to None, which means all of the following:
-                ["Major", "Minor", "Passive", "Adversary", "House", "Vulny"]
-
-        Attributes:
-            _data (dict): raw input data
-            _categories (set): all power categories
-            _template (dict): Template item from input data
-            _content (dict): data restructured to sentences.
-            _stem (str): Input file name no extension
-            _name (str): Last string of stem when split by `_`
-            _limit_types (list): See arg above
+                ["Major", "Minor", "Passive", "Adversary", "House", "Free", "Vulny"]
         """
         input_files = ensure_list(ambiguous_item=input_files)
         super().__init__(
@@ -51,6 +42,7 @@ class Powers(YamlSpec):
         self._limit_types = limit_types or list_power_types
         self._as_dict = {}
         self._as_list = []
+        # TODO: Add cache of powers by type?
 
     @property
     def as_list(self):
@@ -187,7 +179,7 @@ class Power:
                 output.append(self.Choice if self.Choice else self.Options)
             if self.PP != 0:
                 output.append("For " + list_to_or(self.PP) + " PP, " + self.Mechanic)
-            else:
+            elif self.Mechanic:
                 output.append(self.Mechanic)
             if self.StatOverride:
                 output.append(self.StatOverride.text)
