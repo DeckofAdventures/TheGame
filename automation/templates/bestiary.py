@@ -79,6 +79,8 @@ class Attribs:
 
     @property
     def as_tuple(self):
+        """Just a set of all items as int (0, 1, 2...)"""
+        # TODO: Align match skills equivalent
         return (self.AGL, self.CON, self.GUT, self.INT, self.STR, self.VIT)
 
 
@@ -94,6 +96,15 @@ class Skills:
     Craft: int = 0
     Athletics: int = 0
     Brute: int = 0
+
+    @property
+    def as_tuple(self):
+        """List of tuples (Skill, value)"""
+        output = []
+        for f in fields(self):
+            value = attrgetter(f.name)(self)
+            output.append((f.name, value))
+        return output
 
     @property
     def non_defaults(self):
@@ -124,7 +135,7 @@ class Beast:
     HP: int = 1
     AP: int = 1
     AR: int = field(default=None)
-    PP: int = 1
+    PP: int = None
     Speed: int = 6
     Attribs: dict = field(default=None)
     Skills: dict = field(default=None)
@@ -143,6 +154,11 @@ class Beast:
         self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
         self.RestCards = self.HP + self.PP
         self.override_stats()
+        self._html = None
+        # TODO: Sum PP from all available powers
+
+    def validator(self):
+        pass  # TODO: confirm valid PC
 
     def fetch_powers(self):
         output = {}
@@ -238,6 +254,43 @@ class Beast:
             + self._md_actions()
             + self._md_phases()
         )
+
+    @property
+    def _pc_sheet_stats(self):
+        # TODO: Modify so it aligns with how markdown takes top_level_stats
+        # Why separate AR for the PC sheet but not the markdown?
+        return [
+            ("HP", self.HP),
+            ("AP", self.AP),
+            ("PP", self.PP),
+            ("Speed", self.Speed),
+            ("Rest Cards", self.RestCards),
+        ]
+
+    def make_pc_sheet(self, output_filename=None, items=None):
+        assert self.Type == "PC", "Can only make sheets for PCs"
+
+        import jinja2  # TODO: migrate this elsewhere?
+
+        default_items = [
+            {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
+            {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
+            {"name": "Shortsword", "quantity": "1", "info": "1 damage. 1 handed."},
+            {"name": "Maul", "quantity": "1", "info": "2 damage. 2 handed."},
+        ]
+
+        html = (
+            jinja2.Environment(loader=jinja2.FileSystemLoader("./automation/_input/"))
+            .get_template("PC_template.html")
+            .render(pc=self, items=items if items else default_items)
+        )
+
+        output_folder = "./automation/_output/"
+        if not output_filename:
+            output_filename = f"PC_{self.Name}_level_{self.Level}"
+
+        with open(output_folder + output_filename + ".html", "w") as f:
+            f.write(html)
 
     def __repr__(self):
         return my_repr(self)
