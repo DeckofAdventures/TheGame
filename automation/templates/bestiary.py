@@ -292,5 +292,7 @@ class Beast:
         with open(output_folder + output_filename + ".html", "w") as f:
             f.write(html)
 
+        logger.info(f"Wrote HTML {output_folder + output_filename}.html")
+
     def __repr__(self):
         return my_repr(self)
