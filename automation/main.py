@@ -18,8 +18,6 @@ if __name__ == "__main__":
             "04_Powers.yaml",
             "05_Vulnerabilities.yaml",
         ],  # , "06_Bestiary.yaml"],
-        writing=["md", "dot", "png", "csv", "svg"],
-        dependencies=["Skill"],  # "Skill", "Level", "Role"],
-        add_loners=False,
+        writing=["md", "csv"],
         out_delim="\t",  # or ','
     )

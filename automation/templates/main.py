@@ -8,9 +8,7 @@ def yaml_to_other(
         "04_Powers.yaml",
         "05_Vulnerabilities.yaml",
     ],  # "06_Bestiary.yaml",],
-    writing: list = ["md", "dot", "png", "csv", "svg"],
-    dependencies: list = ["Skill"],  # "Skill", "Level", "Role"],
-    add_loners: bool = False,
+    writing: list = ["md", "csv"],
     out_delim: str = "\t",  # or ','
 ):
     """Execute all write functions based on inputs at top of script
@@ -19,8 +17,6 @@ def yaml_to_other(
         input_files (list, optional): Local relative paths.
             If len=2, also make combined csv
         writing (list, optional): List of output formats.
-        dependencies (list, optional): Which dependencies to incldue in dot.
-        add_loners (bool, optional): Include loners in dot.
         out_delim (str, optional): CSV delimiter - `\t` or `,`
     """
     for file in input_files:
@@ -35,10 +31,6 @@ def yaml_to_other(
             my_class.write_md(output_fp=None, TOC=False)
         if "csv" in writing:
             my_class.write_csv(delimiter=out_delim)
-        if "dot" in writing:
-            my_class.write_dot(dependencies=dependencies, add_loners=add_loners)
-        if any(img_out in writing for img_out in ["png", "svg"]):
-            my_class.dot_to_pic(out_format=[i for i in writing if i in ["png", "svg"]])
     if "04_Powers.yaml" in input_files and "05_Vulnerabilities.yaml" in input_files:
         Powers(input_files=["04_Powers.yaml", "05_Vulnerabilities.yaml"]).write_csv()
 

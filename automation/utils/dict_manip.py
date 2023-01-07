@@ -54,6 +54,7 @@ def flatten_embedded(input_dict) -> dict:
                 {
                     f"{k}_{embed_k}": list_to_or(embed_v)
                     for embed_k, embed_v in v.items()
+                    if embed_v
                 }
             )
         else:

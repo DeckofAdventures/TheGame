@@ -2,15 +2,7 @@ import csv
 import os
 from abc import ABC, abstractmethod
 
-from ..utils import (
-    ensure_list,
-    filter_dict_by_key,
-    load_yaml,
-    logger,
-    make_bullet,
-    make_header,
-    make_link,
-)
+from ..utils import ensure_list, load_yaml, logger, make_header, make_link
 
 
 class YamlSpec(ABC):
@@ -78,36 +70,9 @@ class YamlSpec(ABC):
         pass
 
     @abstractmethod
-    def categories(self):
+    def categories(self) -> dict:
+        """{(heirarchy tuple): [List of names]} dict"""
         pass
-
-    def by_type(self, type_options: list = None):
-        """Returns dict of limited by the type key, if present
-
-        Args:
-            type_options (list, optional): list or set of permitted types
-                Defaults to None, meaning no filtering or ordering.
-
-        Returns:
-            dict: Subset of readable dict
-        """
-        return filter_dict_by_key(
-            dict_content=self.as_dict, key_filter="Type", key_options=type_options
-        )
-
-    def by_category(self, category: list = None):
-        """Returns readable dict of powers limited by category, if present
-
-        Args:
-            category (list, optional): Ordered list/set of [category, subcategory].
-                Defaults to None, meaning no filtering or ordering.
-
-        Returns:
-            dict: Subset of readable dict
-        """
-        return filter_dict_by_key(
-            dict_content=self.as_dict, key_filter="Category", key_options=category
-        )
 
     # ------------------------------- MARKDOWN UTILITIES -------------------------------
     @property
@@ -115,7 +80,7 @@ class YamlSpec(ABC):
         """Return list of tuples: [(item, indent, (categ, subcat, subsub, etc.))]"""
         if not self._category_hierarchy:
             categories, indents, category_set, prev_category_tuple = [], [], [], tuple()
-            for category_tuple in self.categories:
+            for category_tuple in self.categories.keys():
                 for idx, category in enumerate(category_tuple):  # indent lvl, category
                     prev_category = (  # previous category at same heading level
                         prev_category_tuple[idx]
@@ -147,13 +112,8 @@ class YamlSpec(ABC):
         Args:
             category_set (set): unique set of categories (categ, subcateg)"""
         entries = ""
-        for power_name, power in self.by_category(category_set).items():
-            power = self.sort_template(power)
-            power = {k: power[k] for k in power if k not in ["Category", "Type"]}
-            entries += f"\n**{power_name}**\n\n"
-            for k, v in power.items():
-                entries += make_bullet(f"{k}: {self.list_to_or(v)}")
-            entries += "\n"
+        for item_name in self.categories.get(category_set, []):
+            entries += self.as_dict[item_name].markdown
         return entries
 
     def write_md(self, output_fp: str = None, TOC: bool = False):
@@ -166,7 +126,10 @@ class YamlSpec(ABC):
         """
         if not output_fp:
             output_fp = self.filepath_mechanics + self._stem + ".md"
-        output = "<!-- DEVELOPERS: Please edit corresponding yaml -->\n\n"
+        output = (
+            "<!-- markdownlint-disable MD013 MD024 -->\n"
+            + "<!-- DEVELOPERS: Please edit corresponding yaml -->\n"
+        )
         if TOC:
             output += self.md_TOC
         for (category, indent, category_set) in self.category_hierarchy:
@@ -178,22 +141,15 @@ class YamlSpec(ABC):
 
     # --------------------------------- CSV UTILITIES ----------------------------------
 
-    @property
-    def fields(self) -> list:
-        """Column names for csv. Excludes 'save', hardcoded
+    @abstractmethod
+    def csv_fields(self) -> list:
+        """Column names for csv
 
         Returns:
             fields (list): list of column headers for CSV"""
-        if not self._fields:
-            all_fields = self.sort_template(
-                self._template
-            )  # get field list from template
-            all_fields.pop("Save", None)  # remove Save for CSV
-            # Flatten embedded fields
-            self._fields = ["Name"] + list(self.flatten_embedded(all_fields).keys())
-        return self._fields
+        pass
 
-    def write_csv(self, output_fp: str = None, delimiter: str = "\t", ext: str = None):
+    def write_csv(self, output_fp: str = None, delimiter: str = "\t"):
         """Write CSV from YAML, default is tab-delimited
 
         Args:
@@ -204,8 +160,6 @@ class YamlSpec(ABC):
             ext (str): file extension if other than `.csv`, `.tsv`. Must include period
         """
         suffix_dict = {"\t": ".tsv", ",": ".csv"}
-        if ext and ext not in [".tsv", ".csv", "tsv", "csv"]:
-            suffix_dict.update({delimiter: ext})
         if not output_fp:
             output_fp = (
                 self.filepath_default_output + self._stem + suffix_dict[delimiter]
@@ -214,13 +168,11 @@ class YamlSpec(ABC):
         with open(output_fp, "w", newline="") as f_output:
             csv_output = csv.DictWriter(
                 f_output,
-                fieldnames=self.fields,
+                fieldnames=self.csv_fields,
                 delimiter=delimiter,
             )
             csv_output.writeheader()
-            for k, v in self.as_dict.items():
-                if v and any(v.values()):
-                    v["Name"] = k
-                    rows.append(v)
+            for i in self.as_list:
+                rows.append(i.csv_dict)
             csv_output.writerows(rows)
         logger.info(f"Wrote csv: {output_fp}")

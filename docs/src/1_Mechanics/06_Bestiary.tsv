@@ -1,0 +1,18 @@
+Type	Name	Level	Role	Descriptions	Pronouns	RestCards	Speed	HP	PP	AP	AR	Attrib_AGL	Attrib_CON	Attrib_GUT	Attrib_INT	Attrib_STR	Attrib_VIT	Description
+Companion	Falcon	1				1	6	1	0	1	3	1			1	-1	-1	
+Companion	Bear	1				3	6	3	0	1	2	-1			-1	1	1	
+NPC	Wolf	1				2	6	2	0	1	3	1	-1		-1	1		
+Companion	Horse	1				2	6	2	0	1	3	1		-1	-1	1		
+NPC	Dire Wolf	1				3	6	3	0	1	2	2	-1		-1	2		
+NPC	Shrub Golem	1				2	6	2	0	1	4	-1			-1	1		
+NPC	Vine Golem	1				2	6	2	0	1	4	-1			-1	1		
+Dealer	Tree Golem	2				11	6	7	4	2	3	-1			-1	2	2	
+NPC	Poison Plant	1				3	6	2	1	1	4	-1					1	
+NPC	Grunt	1				2	6	2	0	1	3	1			-1			A low level soldier.
+NPC	Grunt, Shielded	1				2	6	2	0	1	2				-1	1		A low level soldier with a Shield.
+NPC	Guard	2				4	6	3	1	1	2					1	1	A decently armored and trained soldier.
+Dealer	Captain, Defender	2				9	6	5	4	2	2	1		1	-1	1	1	A Captain with access to Powers.
+Dealer	Mystic, Caster	2				8	6	5	3	1	3	-1	1		1	-1		A powerful Caster with access to mystic attacks.
+Dealer	Sentinel, Martial	2				9	6	6	3	0	2			1	1	-1		A Martial with access to Powers.
+Dealer	Ritualist, Support	1				10	6	4	6	1	3	-1	1	1	1	-1	-1	A Support with access to Powers.
+NPC	Specter	1				5	6	3	2	0	2			1	1	-1		

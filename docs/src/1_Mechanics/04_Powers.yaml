@@ -20,7 +20,7 @@ Template: # Power name        # Must be unique
     Target: X                 # Integer, # of targets
     Options: X                # Optional Descrip of options. Replaced by selection.
     Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
+        Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail
@@ -238,12 +238,12 @@ Attack, Mystic Deprivation:
     PP: [1,2]
     Target: [1, 3]
     Description: You channel your abilities deprive a target of their senses.
-    Mechanic: Select the Blinded or Deafened effect.
+    Mechanic: Select the Blinded or Deafened effect
     Save:
-        Trigger: Once,
+        Trigger: Once
         DR: 3
         Type: GUT
-        Fail: Blinded or Deafened unless immune.
+        Fail: Blinded or Deafened unless immune
     Prereq:
         Power: Attack, Mystic
         Role:
@@ -310,7 +310,7 @@ Momentum: # Without this power, this should cost a major action.
     Description: By brute strength, force others to move around the battlefield.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you.
     Save:
-        Trigger: If unwilling,
+        Trigger: If unwilling
         Type:
             - STR
             - AGL
@@ -330,7 +330,7 @@ Momentum Aura:
     Target: 6
     Mechanic: Your Momentum ability extends to 2 spaces.
     Save:
-        Trigger: If unwilling,
+        Trigger: If unwilling
         Type:
             - STR
             - AGL
@@ -888,10 +888,10 @@ Manifest Terrain:
         - Boss-Only
         - House Actions
     PP: 1
-    Mechanic: you change the area around you to an ensnaring landscape.
+    Mechanic: you change the area around you to an ensnaring landscape
     AOE: Aura 2
     Save:
-        Trigger: On starting turn,
+        Trigger: On starting turn
         DR: 2
         Type: AGL
         Fail: Entangled
@@ -904,7 +904,7 @@ Obey Me:
     PP: 2
     Mechanic: enthrall an enemy
     Save:
-        Trigger: On starting turn,
+        Trigger: On starting turn
         DR: 2
         Type: CON
         Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn

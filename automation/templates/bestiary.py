@@ -3,7 +3,15 @@ from math import floor
 from operator import attrgetter
 from typing import List
 
-from ..utils import ensure_list, logger, make_bullet, make_header, my_repr
+from ..utils import (
+    ensure_list,
+    flatten_embedded,
+    logger,
+    make_bullet,
+    make_header,
+    my_repr,
+    sort_dict,
+)
 from .powers import Powers, list_power_types
 from .yaml_spec import YamlSpec
 
@@ -20,7 +28,7 @@ list_skills = [
     "Athletics",
     "Brute",
 ]
-list_beast_types = ["PC", "NPC", "Boss", "Companion"]
+list_beast_types = ["PC", "Dealer", "NPC", "Boss", "Companion"]
 list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
 
 
@@ -40,6 +48,9 @@ class Bestiary(YamlSpec):
         self._limit_types = limit_types or list_beast_types
         self._as_list = []
         self._as_dict = {}
+        self._categories = {}
+        self._categories_set = set()
+        self._csv_fields = set()
 
     def _build_contents(self):
         self._tried_loading = True
@@ -65,7 +76,35 @@ class Bestiary(YamlSpec):
     @property
     def categories(self):
         """Return set of Types for organizing output"""
-        return set(self._limit_types)
+        if not self._categories:
+            for b in self.as_list:
+                cat_tuple = tuple([b.Type])  # Differs from powers
+                self._categories.setdefault(cat_tuple, [])
+                self._categories[cat_tuple].append(b.Name)
+                self._categories_set.add(cat_tuple)
+                self._csv_fields = self._csv_fields.union(list(b.csv_dict.keys()))
+        return sort_dict(self._categories, sorted(self._categories_set))
+
+    @property
+    def csv_fields(self) -> list:
+        if not self._csv_fields:
+            _ = self.categories
+        move_front = [
+            "Type",
+            "Name",
+            "Level",
+            "Role",
+            "Descriptions",
+            "Pronouns",
+            "RestCards",
+            "Speed",
+            "HP",
+            "PP",
+        ]
+        return [
+            *move_front,
+            *[i for i in sorted(list(self._csv_fields)) if i not in move_front],
+        ]
 
 
 @dataclass(order=True)
@@ -82,6 +121,10 @@ class Attribs:
         """Just a set of all items as int (0, 1, 2...)"""
         # TODO: Align match skills equivalent
         return (self.AGL, self.CON, self.GUT, self.INT, self.STR, self.VIT)
+
+    @property
+    def flat(self) -> dict:
+        return flatten_embedded(dict(Attrib=self.__dict__))
 
 
 @dataclass(order=True)
@@ -115,13 +158,18 @@ class Skills:
                 output.append((f.name, value))
         return output
 
+    @property
+    def flat(self) -> dict:
+        return flatten_embedded(dict(Skill=self.__dict__))
+
 
 @dataclass(order=True)
 class Phase:
+    # TODO: Should allies be typed as Beast? Recursive?
     Name: str
     Order: int = field(repr=False)
     HP: int = 1
-    Allies: List[str] = field(default=None)  # Should this be typed as Beast? Recursive?
+    Allies: List[str] = field(default=None)
 
 
 @dataclass(order=True)
@@ -135,7 +183,7 @@ class Beast:
     HP: int = 1
     AP: int = 1
     AR: int = field(default=None)
-    PP: int = None
+    PP: int = 0
     Speed: int = 6
     Attribs: dict = field(default=None)
     Skills: dict = field(default=None)
@@ -210,24 +258,22 @@ class Beast:
             + "| %s  | %s  | %s  | %s  |  %s  |\n\n" % top_lvl_stats
             + "| AGL | CON | GUT | INT | STR | VIT |\n"
             + "| --- | --- | --- | --- | --- | --- |\n"
-            + "|  %s  |  %s  |  %s  |  %s  |  %s  |  %s  |\n\n" % self.Attribs.as_tuple
+            + "|  %s  |  %s  |  %s  |  %s  |  %s  |  %s  |\n" % self.Attribs.as_tuple
         )
-        if self.Skills.non_defaults:
-            output += (
-                "**Skills**: "
-                + ", ".join(["%s %s" % s for s in self.Skills.non_defaults])
-                + "\n"
-            )
+        if self.Skills:
+            if self.Skills.non_defaults:
+                output += (
+                    "\n**Skills**: "
+                    + ", ".join(["%s %s" % s for s in self.Skills.non_defaults])
+                    + "\n"
+                )
         return output
 
     def _md_actions(self):
         output = make_header("Powers", 2)
         for power_type in list_power_types:
-            # import pdb
-
-            # pdb.set_trace()
             powers_subset = [
-                make_bullet(f"**{p.Name}**: {p.Merged_Mechanic}")
+                make_bullet(f"**{p.Name}**: {p.Mechanic}")
                 for p in self.Powers_list
                 if getattr(p, "Type", "None") == power_type
             ]
@@ -237,11 +283,11 @@ class Beast:
 
     def _md_phases(self):
         if not self.Phases:
-            return
+            return ""
         output = make_header("Phases", 2)
         for phase in self.Phases:
             output += make_header(f"Phase {phase.Name}", 3) + "\n"
-            output += f"Set HP to {phase.HP} and add the following all(y/ies):\n"
+            output += f"Set HP to {phase.HP} and add the following all(y/ies):\n\n"
             output += "".join([make_bullet(ally) for ally in phase.Allies])
         return output
 
@@ -293,6 +339,23 @@ class Beast:
             f.write(html)
 
         logger.info(f"Wrote HTML {output_folder + output_filename}.html")
+
+    @property
+    def csv_dict(self):
+        removed = [
+            "sort_index",
+            "Powers",
+            "Powers_list",
+            "Attribs",
+            "Skills",
+            "Phases",
+            "_html",
+        ]
+        output = {k: v for k, v in self.__dict__.items() if k not in removed}
+        for attrib in [self.Attribs, self.Skills]:
+            if attrib:
+                output.update({**attrib.flat})
+        return output
 
     def __repr__(self):
         return my_repr(self)

@@ -32,6 +32,7 @@ Dumb:
     StatOverride:
         INT: -2
     Description: You're dumb as rocks. We're sure you make up for it in other areas.
+    XP: -2
 
 Attack, Weapon:
     Category:

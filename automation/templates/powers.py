@@ -2,13 +2,13 @@ from dataclasses import dataclass, field, fields
 from operator import attrgetter
 from typing import Union
 
-from ..utils import (  # logger,
+from ..utils import (
     ensure_list,
     flatten_embedded,
     list_to_or,
     make_bullet,
-    make_header,
     my_repr,
+    sort_dict,
 )
 from .yaml_spec import YamlSpec
 
@@ -42,7 +42,10 @@ class Powers(YamlSpec):
         self._limit_types = limit_types or list_power_types
         self._as_dict = {}
         self._as_list = []
-        # TODO: Add cache of powers by type?
+        self._categories = {}
+        self._categories_set = set()
+        self._csv_fields = set()
+        self._type_dict = {k: [] for k in self._limit_types}
 
     @property
     def as_list(self):
@@ -66,12 +69,33 @@ class Powers(YamlSpec):
         return self._as_dict
 
     @property
-    def categories(self):
+    def categories(self) -> list:
         """Return set of tuples: (categories, subcategories)"""
         if not self._categories:
-            for p in self._as_list:  # get set of sub/categories for TOC later
-                self._categories.add(tuple(p.Category))
-        return sorted(self._categories)
+            for p in self.as_list:
+                cat_tuple = tuple(p.Category)
+                self._categories.setdefault(cat_tuple, [])
+                self._categories[cat_tuple].append(p.Name)
+                self._categories_set.add(cat_tuple)
+                self._csv_fields = self._csv_fields.union(list(p.csv_dict.keys()))
+        return sort_dict(self._categories, sorted(self._categories_set))
+
+    @property
+    def type_dict(self):
+        if not any(self._type_dict.values()):
+            for p in self.as_list:
+                self._type_dict[p.Type].append(p.Name)
+        return self._type_dict
+
+    @property
+    def csv_fields(self):
+        if not self._csv_fields:
+            _ = self.categories
+        move_front = ["Type", "Name", "XP", "Mechanic"]
+        return [
+            *move_front,
+            *[i for i in sorted(list(self._csv_fields)) if i not in move_front],
+        ]
 
 
 @dataclass(order=True)
@@ -88,6 +112,12 @@ class StatOverride:
     def text(self) -> str:
         return f"Set {self.Stat} to {self.Value}"
 
+    @property
+    def flat(self) -> dict:
+        return flatten_embedded(
+            {"StatOverride": {"Stat": self.Stat, "Value": self.Value}}
+        )
+
 
 @dataclass(order=True)
 class Prereq:
@@ -103,11 +133,11 @@ class Prereq:
 
 @dataclass(order=True)
 class Save:
-    Trigger: str
+    Trigger: str = field(repr=False)
     Type: str
-    Fail: str
     DR: int = 3
-    Succeed: str = None
+    Fail: str = field(default=None, repr=False)
+    Succeed: str = field(default=None, repr=False)
 
     @property
     def text(self) -> str:
@@ -121,7 +151,11 @@ class Save:
         sentence += list_to_or(self.Type) + " Save"
         output = [sentence, "On fail, target(s) " + self.Fail]
         output.append("On success, target(s) " + self.Succeed) if self.Succeed else None
-        return ". ".join(output)
+        return ". ".join(output) + "."
+
+    @property
+    def flat(self) -> dict:
+        return flatten_embedded({"Save": {"Type": self.Type, "DR": self.DR}})
 
 
 @dataclass(order=True)
@@ -131,10 +165,10 @@ class Power:
     Type: str = field(repr=False)
     Category: Union[str, list] = field(repr=False)
     Description: str = field(default="")
-    Mechanic: Union[str, list] = field(default="", repr=False)
-    Merged_Mechanic: str = field(init=False)
-    XP: int = 1
-    PP: int = 0
+    Mechanic: Union[str, list] = field(default="")
+    Mechanic_raw: str = field(init=False, repr=False)
+    XP: int = ""
+    PP: int = field(default=0, repr=False)
     Range: int = 6
     AOE: str = None
     Target: int = 1
@@ -143,7 +177,7 @@ class Power:
     Damage: int = 1
     ToHit: int = 1
     Save: dict = field(default=None, repr=False)
-    Prereq: dict = field(default=None, repr=False)
+    Prereq: dict = field(default=None)
     StatOverride: dict = field(default=None, repr=False)
     Tags: list = None
 
@@ -155,43 +189,74 @@ class Power:
         self.StatOverride = (
             StatOverride(self.StatOverride) if self.StatOverride else None
         )
-        self.Merged_Mechanic = self.merge_mechanic()
+        self.Mechanic_raw = self.Mechanic
+        self.Mechanic = self.merge_mechanic()
 
     def set_choice(self, choice: str):
         self.Choice = choice
-        self.Merged_Mechanic = self.merge_mechanic()
+        self.Mechanic = self.merge_mechanic()
         return self
 
     def merge_mechanic(self):
         """Given power dict, merge all appropriate items into Mechanic
 
+        Assumes Listed mechanics do not have PP/Save/StatOverride
+
         Returns:
             power_merged (dict): power with all mechanic items combined.
         """
-        if isinstance(self.Mechanic, list):  # when mech are list, indent after 1st
-            mech_bullets = self.Mechanic[0] + "\n"
-            for mech_bullet in self.Mechanic[1:]:
-                mech_bullets += make_bullet(mech_bullet)
+        if isinstance(self.Mechanic_raw, list):  # when mech are list, indent after 1st
+            mech_bullets = self.Type + ". " + self.Mechanic_raw[0] + "\n"
+            for mech_bullet in self.Mechanic_raw[1:]:
+                mech_bullets += make_bullet(mech_bullet, 1)
             return mech_bullets[:-1]  # remove last space.
-        else:  # Listed mechanics do not have PP/Save/StatOverride
+        else:
             output = []
             if self.Options:
                 output.append(self.Choice if self.Choice else self.Options)
             if self.PP != 0:
-                output.append("For " + list_to_or(self.PP) + " PP, " + self.Mechanic)
-            elif self.Mechanic:
-                output.append(self.Mechanic)
+                output.append(
+                    "For " + list_to_or(self.PP) + " PP, " + self.Mechanic_raw
+                )
+            elif self.Mechanic_raw:
+                output.append(self.Mechanic_raw)
             if self.StatOverride:
                 output.append(self.StatOverride.text)
             if self.Save:
                 output.append(self.Save.text)
             return ". ".join([self.Type, *output])
 
-    def markdown(self, level=2):
-        output = make_header(self.Name, level=level) + "\n"
+    @property
+    def markdown(self):
+        output = f"\n**{self.Name}**\n\n"
         for f in fields(self):
-            if attrgetter(f.name)(self) != f.default and f.repr:
-                output += make_bullet(f"{f.name}: {attrgetter(f.name)(self)}")
+            if attrgetter(f.name)(self) != f.default and f.name != "Name" and f.repr:
+                if f.name == "Prereq":
+                    for key, value in self.Prereq.flat.items():
+                        title = key.replace("_", " ")
+                        output += make_bullet(f"{title}: {value}")
+                else:
+                    output += make_bullet(
+                        f"{f.name}: {list_to_or(attrgetter(f.name)(self))}"
+                    )
+        return output
+
+    @property
+    def csv_dict(self):
+        removed = [
+            "sort_index",
+            "Mechanic_raw",
+            "Options",
+            "Choice",
+            "StatOverride",
+            "Save",
+            "Prereq",
+            "Description",
+        ]
+        output = {k: v for k, v in self.__dict__.items() if k not in removed}
+        for attrib in [self.StatOverride, self.Save, self.Prereq]:
+            if attrib:
+                output.update({**attrib.flat})
         return output
 
     def __repr__(self):
