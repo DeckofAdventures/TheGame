@@ -76,7 +76,7 @@ Attribute or a Skill, or remove a Vulnerability. Total XP is
 equal to 6 + (Level * 3). You may have leftover XP after a level up, but your XP can
 never be negative.
 
-On level up, a GM may allow you to respecialize (known as respec). This allows you to
+On level up, a GM may allow you to re-specialize (known as respec). This allows you to
 exchange Powers for their
 equivalent XP value, and reduce any Attributes or Skills down to 0. You may also choose
 at this time to change your Role, though you can no longer access any Powers that require
@@ -179,7 +179,7 @@ Experience Points and the resulting modifier for Attributes and Skills.
 
 **XP Cost for Attributes (left) and Skills (Right)**
 
-| XP Cost | Atrib<br />Mod | XP Cost | Skill<br />Mod |
+| XP Cost | Attrib<br />Mod| XP Cost | Skill<br />Mod |
 |  :---:  |    :---:       |  :---:  |    :---:       |
 |     -4  | -2             |     -2  | -2             |
 |     -2  | -1             |     -1  | -1             |

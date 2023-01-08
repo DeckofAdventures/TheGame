@@ -1,0 +1,216 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <style>
+      body {
+        background-color: lightgrey;
+      }
+      .column {
+        float: left;
+        width: 50%;
+      }
+
+      h1 {
+        font-family: Lato, sans-serif;
+      }
+
+      table {
+        font-family: Lato, sans-serif;
+        font-size: 14pt;
+        color: black;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      caption {
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      th {
+        background-color: gray;
+        text-align: center;
+      }
+
+      td {
+        text-align: left;
+        border: 1px solid gray;
+        background-color: white;
+        padding: 5px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        table {
+          width: 100%;
+        }
+
+        th,
+        td {
+          width: 50%;
+        }
+      }
+    </style>
+
+    <title>Deck of Adventures Character Sheet for: {{ pc.Name }}</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>{{ pc.Name }}, Level {{pc.Level}} {{pc.Role}}</h1>
+    </div>
+
+    <div style="border: 1px solid black; margin-bottom: 15px"></div>
+
+    <div class="column">
+      <table style="float: left">
+        <thead>
+          <tr>
+            <th style="font-size: 8pt">Name</th>
+          </tr>
+          <tr>
+            <td>{{pc.Name}}</td>
+          </tr>
+          <tr>
+            <th style="font-size: 8pt">Pronouns</th>
+          </tr>
+          <tr>
+            <td>{{pc.Pronouns}}</td>
+          </tr>
+          <tr>
+            <th style="font-size: 8pt">Role</th>
+          </tr>
+          <tr>
+            <td>{{pc.Role}}</td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="column">
+      <table style="float: left">
+        <thead>
+          <tr>
+            <th>Primary Skill</th>
+            <td>{{pc.Primary_Skill}}</td>
+          </tr>
+        </thead>
+        <tr>
+          <th>Level</th>
+          <td>{{pc.Level}}</td>
+        </tr>
+        <tr>
+          <th>AR</th>
+          <td>{{pc.AR}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <br style="clear: both" />
+
+    <table style="float: left; font-size: 12pt">
+      <thead>
+        <tr>
+          {% for attribute in pc.Attribs.__dataclass_fields__.keys() %}
+          <th>{{attribute}}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tr>
+        {% for attrib_val in pc.Attribs.as_tuple %}
+        <td>{{attrib_val}}</td>
+        {% endfor %}
+      </tr>
+    </table>
+
+    <br style="clear: both" />
+
+    <div class="column">
+      <table style="float: left">
+        <tr>
+          <th>Skills</th>
+          <th>Modifier</th>
+        </tr>
+        {% for skill_tuple in pc.Skills.as_tuple %}
+        <tr>
+          <td>{{skill_tuple[0]}}</td>
+          <td>{{skill_tuple[1]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="column">
+      <table style="float: left">
+        <tr>
+          <th>Stat</th>
+          <th>Current</th>
+          <th>Max</th>
+        </tr>
+        {% for stat in pc._pc_sheet_stats %}
+        <tr>
+          <td>{{stat[0]}}</td>
+          <td>{{stat[1]}}</td>
+          <!-- Beast class does not yet hold depleted values -->
+          <td>{{stat[1]}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <br />
+    <table>
+      <tr>
+        <th>Inventory</th>
+        <th>Quantity</th>
+        <th>Info</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.quantity}}</td>
+        <td>{{item.info}}</td>
+        {% endfor %}
+      </tr>
+    </table>
+
+    <br style="clear: both" />
+
+    <div>
+      <table>
+        <tr>
+          <th>Power</th>
+          <th>Type</th>
+          <th>PP</th>
+          <th>Mechanic</th>
+        </tr>
+        {% for power in pc.Powers_list if power.Type != "Vulny" %}
+        <tr>
+          <td>{{power.Name}}</td>
+          <td>{{power.Type}}</td>
+          <td>{{power.PP}}</td>
+          <td>{{power.Mechanic}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Vulnerability</th>
+          <th>Type</th>
+          <th>Mechanic</th>
+        </tr>
+        {% for vulny in pc.Powers_list if vulny.Type == "Vulny" %}
+        <tr>
+          <td>{{vulny.Name}}</td>
+          <td>{{vulny.Type}}</td>
+          <td>{{vulny.Mechanic}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+    </div>
+
+    <br style="clear: both" />
+  </body>
+</html>

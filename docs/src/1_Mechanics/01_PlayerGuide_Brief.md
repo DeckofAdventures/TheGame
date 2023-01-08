@@ -48,7 +48,7 @@ outcome via...
      each other out.
 
 - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
-  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and 
+  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and
   still report a successful 3 or 5 draw.
 
 There are two special kinds of Checks:
@@ -104,9 +104,9 @@ The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 Your character may need to rest to recharge Power Points or heal Health Points.
 
 - On a **Quick Rest** (30 minutes), each player can draw a number of **Rest Cards**.
-    - Each Rest Card can regain 1 Health or Power Point, or be used to regain Armor Points.
-    - If the card drawn is the same as the character's Primary Suit, there are additional
-      benefits. Reference the Full Guide for more details on taking a Quick Rest.
+    - Each Rest Card is used in a check to regain 1 or 2 Health or Power Points.
+    - At the end of the rest, shuffle 10 plus twice Vitality modifier cards back into
+      your deck.
 
 - On a **Full Rest** you replenish all expended Health, Fate, and Armor.
     - If you run out of cards before you can successfully take a Rest, you may
@@ -114,6 +114,9 @@ Your character may need to rest to recharge Power Points or heal Health Points.
      This signifies your character running out of Stamina during a long day.
     - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may
     also ask for shuffling on Quick Rests.
+
+If you run out of cards in your deck before you are able to take a rest, you'll become
+*Fatigued*, which will make it more difficult to succeed going forward.
 
 ### Combat
 

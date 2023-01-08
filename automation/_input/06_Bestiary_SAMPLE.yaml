@@ -13,7 +13,7 @@ Template:               # must be unique
     INT: ±X             #
     STR: ±X             #
     VIT: ±X             #
-  Skills:                # List if different from corresponding Attrib
+  Skills:               # List if different from corresponding Attrib
     Finesse: ±X         #
     Stealth: ±X         #
     Bluffing: ±X        #
@@ -29,12 +29,42 @@ Template:               # must be unique
   Phases:               # Only for bosses
     One:                #
       HP: X             #
-      Allies: X         # List of who appears. If multiple of same, list mult times
+      Allies: X         # List of who appears. If multiple of same, list multiple times
   Description: Descrip  # Full descriptive text
+
+Clubs1:
+  Type: PC
+  Pronouns: "He/Him"
+  Role: Defender
+  Level: 1
+  Primary_Skill: STR
+  HP: 7
+  AP: 2
+  PP: 2
+  Attribs:
+    AGL: 1
+    GUT: 1
+    INT: -1
+    STR: 1
+    VIT: 1
+  Skills:
+    Finesse: 1
+    Stealth: 1
+    Knowledge: -1
+    Investigation: -1
+    Athletics: 1
+    Brute: 1
+  Powers:
+    - Attack, Weapon
+    - Attack, Vengeance
+    - Momentum
+    - Shield, Self
+    - Oath
+    - Bloodthirsty
 
 Spider Queen:
   Type: Boss
-  Threat: 2
+  Level: 2
   HP: 8
   AP: 2
   AR: 2
@@ -48,24 +78,36 @@ Spider Queen:
     STR: 0
     VIT: 1
   Skills: # Added to test out code fed sparse data, remove later
-    Finesse: 1 
+    Finesse: 1
     Bluffing: 2
+  Phases:
+    One:
+      HP: 2
+      Allies:
+        - Grunt
+    Two:
+      HP: 3
+      Allies:
+        - Grunt
+        - Grunt, Shielded
   Powers:
     - Adversary Major Action
-    - Amplify Ally 
+    - Amplify Ally
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Attack, Mystic Dual-Shot
+    - Attack, Mystic Entangle
     - Barrier
     - Condition Immunity: Poisoned
+    - Dumb
+    - DoesNotExist
     - Eye for an Eye
     - Favored Terrain: Web
     - Lend Distraction
     - Lend Vigor
     - Manifest Terrain: Web
-    - Mystic Attack
-    - Mystic Attack, Dual Shot
-    - Mystic Aura
-    - Mystic Entangle
     - Obey Me
-    - Shield Others
+    - Shield, Others
     - Terrain Blink: Web
 
 Grunt:
@@ -73,13 +115,13 @@ Grunt:
   HP: 2
   AR: 3
   PP: 0
-  Attrib:
+  Attribs:
     AGL: 1
     INT: -1
   Powers:
     - Attack, Weapon
     - Clumsy, Minor
-  Threat: 1
+  Level: 1
   Description: A low level soldier.
 
 Grunt, Shielded:
@@ -88,13 +130,13 @@ Grunt, Shielded:
   AR: 2
   AP: 1
   PP: 0
-  Attrib:
+  Attribs:
     STR: 1
     INT: -1
   Powers:
     - Attack, Weapon
-    - Shield
-  Threat: 1
+    - Shield, Self
+  Level: 1
   Description: A low level soldier with a Shield.
 
 Guard:
@@ -103,25 +145,25 @@ Guard:
   AR: 2
   AP: 1
   PP: 1
-  Attrib:
+  Attribs:
     STR: 1
     VIT: 1
   Powers:
     - Attack, Weapon
-    - Shield
+    - Shield, Self
     - Attack, Sweep
     - Momentum
-  Threat: 2
+  Level: 2
   Description: A decently armored and trained soldier.
 
 Defender Captain:
   Type: Dealer
-  Threat: 3
+  Level: 3
   HP: 5
   AR: 2
   AP: 2
   PP: 2
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     VIT: 1
@@ -130,7 +172,7 @@ Defender Captain:
     GUT: 1
   Powers:
     - Attack, Weapon
-    - Shield
+    - Shield, Self
     - Attack, Sweep
     - Attack, Charge
     - Momentum Aura
@@ -143,7 +185,7 @@ Mystic Caster:
   AR: 3
   AP: 0
   PP: 3
-  Attrib:
+  Attribs:
     CON: 1
     INT: 1
     STR: -1
@@ -154,4 +196,3 @@ Mystic Caster:
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
   Description: A powerful Caster with access to mystic attacks.
-

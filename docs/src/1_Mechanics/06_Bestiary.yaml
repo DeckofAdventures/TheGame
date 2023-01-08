@@ -1,6 +1,6 @@
 Template:               # must be unique
   Type: One of          # Dealer, Boss, NPC, Companion
-  Level: X              # Dealers: XP progression, NPCs/Boss: Threat
+  Level: X              # Dealers: XP progression, NPCs/Boss: Level
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
@@ -28,14 +28,15 @@ Template:               # must be unique
   Phases:               # Only for bosses
     One:                # Phase number
       HP: X             #
-      Allies: X         # List of who appears. If multiple of same, list mult times
+      Allies: X         # List of who appears. If multiple of same, list N times
   Description: Descrip  # Full descriptive text
 
 Falcon:
-  Type: Companion, level 1
+  Type: Companion
+  Level: 1
   HP: 1
   AR: 3
-  Attrib:
+  Attribs:
     AGL: 1
     STR: -1
     INT: 1
@@ -44,11 +45,12 @@ Falcon:
     - Attack, Weapon
 
 Bear:
-  Type: Companion, level 1
+  Type: Companion
+  Level: 1
   HP: 3
   AP: 1
   AR: 2
-  Attrib:
+  Attribs:
     AGL: -1
     STR: 1
     INT: -1
@@ -57,10 +59,11 @@ Bear:
     - Attack, Weapon
 
 Wolf:
-  Type: Companion, level 1
+  Type: Companion
+  Level: 1
   HP: 2
   AR: 3
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     INT: -1
@@ -70,10 +73,11 @@ Wolf:
     - Pack Tactics
 
 Horse:
-  Type: Companion, level 1
+  Type: Companion
+  Level: 1
   HP: 2
   AR: 3
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     INT: -1
@@ -86,7 +90,7 @@ Wolf:
   Type: NPC
   HP: 2
   AR: 3
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     INT: -1
@@ -99,7 +103,7 @@ Dire Wolf:
   Type: NPC
   HP: 3
   AR: 2
-  Attrib:
+  Attribs:
     AGL: 2
     STR: 2
     INT: -1
@@ -112,10 +116,10 @@ Shrub Golem:
   Type: NPC
   HP: 2
   AR: 4
-  Attrib:
-    - AGL: -1
-    - STR: 1
-    - INT: -1
+  Attribs:
+    AGL: -1
+    STR: 1
+    INT: -1
   Powers:
     - Attack, Weapon
 
@@ -123,7 +127,7 @@ Vine Golem:
   Type: NPC
   HP: 2
   AR: 4
-  Attrib:
+  Attribs:
     AGL: -1
     STR: 1
     INT: -1
@@ -135,19 +139,18 @@ Vine Golem:
 Tree Golem:
   Type: Dealer
   Level: 2
-  Threat: 2
   HP: 7
   AP: 2
   AR: 3
   PP: 4
-  Attrib:
+  Attribs:
     STR: 2
     VIT: 2
     AGL: -1
     INT: -1
   Powers:
     - Shield, Self
-    - Momentum, Aura
+    - Momentum Aura
     - Attack, Sweep
 
 Poison Plant:
@@ -155,24 +158,24 @@ Poison Plant:
   HP: 2
   AR: 4
   PP: 1
-  Attrib:
+  Attribs:
     AGL: -1
     VIT: 1
   Powers:
-    - Mystic, Attack
-    - Mystic, Aura
+    - Attack, Mystic
+    - Attack, Mystic Aura
 
 Grunt:
   Type: NPC
   HP: 2
   AR: 3
   PP: 0
-  Attrib:
+  Attribs:
     AGL: 1
     INT: -1
   Powers:
     - Attack, Weapon
-  Threat: 1
+  Level: 1
   Description: A low level soldier.
 
 Grunt, Shielded:
@@ -181,13 +184,13 @@ Grunt, Shielded:
   AP: 1
   AR: 2
   PP: 0
-  Attrib:
+  Attribs:
     STR: 1
     INT: -1
   Powers:
     - Attack, Weapon
     - Shield, Self
-  Threat: 1
+  Level: 1
   Description: A low level soldier with a Shield.
 
 Guard:
@@ -196,7 +199,7 @@ Guard:
   AP: 1
   AR: 2
   PP: 1
-  Attrib:
+  Attribs:
     STR: 1
     VIT: 1
   Powers:
@@ -204,18 +207,17 @@ Guard:
     - Shield, Self
     - Attack, Sweep
     - Momentum
-  Threat: 2
+  Level: 2
   Description: A decently armored and trained soldier.
 
 Captain, Defender:
   Type: Dealer
   Level: 2
-  Threat: 2
   HP: 5
   AP: 2
   AR: 2
   PP: 4
-  Attrib:
+  Attribs:
     AGL: 1
     STR: 1
     VIT: 1
@@ -232,12 +234,11 @@ Captain, Defender:
 Mystic, Caster:
   Type: Dealer
   Level: 2
-  Threat: 2
   HP: 5
   PP: 2
   AR: 3
   PP: 3
-  Attrib:
+  Attribs:
     AGL: -1
     CON: 1
     INT: 1
@@ -255,12 +256,12 @@ Mystic, Caster:
 Sentinel, Martial:
   Type: Dealer
   Level: 2
-  Threat: 2
+  Level: 2
   HP: 6
   AP: 0
   AR: 2
   PP: 3
-  Attrib:
+  Attribs:
     GUT: 1
     INT: 1
     STR: -1
@@ -277,7 +278,7 @@ Ritualist, Support:
   HP: 4
   AR: 3
   PP: 6
-  Attrib:
+  Attribs:
     AGL: -1
     GUT: 1
     CON: 1
@@ -301,7 +302,7 @@ Specter:
   AP: 0
   AR: 2
   PP: 2
-  Attrib:
+  Attribs:
     GUT: 1
     INT: 1
     STR: -1

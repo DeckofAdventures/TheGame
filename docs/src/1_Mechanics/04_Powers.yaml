@@ -1,6 +1,8 @@
 Template: # Power name        # Must be unique
     Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
     Category: One or list     # One string or list in sub-cat order
+    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
+    Description: Descrip      # Flavor: 1-2 sentences
     XP: X
     PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
     Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
@@ -8,21 +10,21 @@ Template: # Power name        # Must be unique
         Level: X              # Integer
         Skill: X > 1          #
         Power:                # Must match unique power name
-    # StatOverride: AGL -2      # One of AGL, STR, Finesse, etc. followed by number
-    To Hit: X                 # If not specified, assumed character's primary skill
+    StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
+        Stat: Stat 
+        Value: X     
+    ToHit: X                  # If not specified, assumed character's primary skill
     Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
     Options: X                # Optional Descrip of options. Replaced by selection.
-    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
     Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
+        Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
         DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
         Type: MOD             # AGL, CON, etc
         Fail: Descrip         # effect on fail
         Succeed: Descrip      # effect on success. Assume no access to above
-    Description: Descrip      # Flavor: 1-2 sentences
     Tags: One or list
 
 
@@ -137,7 +139,7 @@ Attack, Mystic:
     XP: 1
     Prereq:
         Skill:
-            - Knowlege > 0
+            - Knowledge > 0
             - Craft > 0
 
 Attack, Mystic Aura:
@@ -214,7 +216,7 @@ Attack, Mystic Entangle:
     XP: 2
     PP: [1,2]
     Target: [1,3]
-    Mechanic: Selected targets make a Save.
+    Mechanic: Selected targets make a Save
     Save:
         Trigger: Once
         DR: 3
@@ -236,12 +238,12 @@ Attack, Mystic Deprivation:
     PP: [1,2]
     Target: [1, 3]
     Description: You channel your abilities deprive a target of their senses.
-    Mechanic: Select the Blinded or Deafened effect.
+    Mechanic: Select the Blinded or Deafened effect
     Save:
-        Trigger: Once,
+        Trigger: Once
         DR: 3
         Type: GUT
-        Fail: Blinded or Deafened unless immune.
+        Fail: Blinded or Deafened unless immune
     Prereq:
         Power: Attack, Mystic
         Role:
@@ -308,7 +310,7 @@ Momentum: # Without this power, this should cost a major action.
     Description: By brute strength, force others to move around the battlefield.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you.
     Save:
-        Trigger: If unwilling,
+        Trigger: If unwilling
         Type:
             - STR
             - AGL
@@ -328,7 +330,7 @@ Momentum Aura:
     Target: 6
     Mechanic: Your Momentum ability extends to 2 spaces.
     Save:
-        Trigger: If unwilling,
+        Trigger: If unwilling
         Type:
             - STR
             - AGL
@@ -838,7 +840,8 @@ Favored Terrain:
         - Speed
     XP: 1
     Description: Home feels more familiar, granting a speed boost.
-    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). Gain +2 speed on this terrain. 
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: Gain +2 speed on this terrain. 
 
 Terrain Blink:
     Type: Minor
@@ -847,7 +850,8 @@ Terrain Blink:
         - Speed
     XP: 3
     Description: So at home that you can get anywhere.
-    Mechanic: Work with your GM to decide a favored terrain (e.g., mountains). When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
 
 Condition Resilience: 
     Type: Passive
@@ -857,7 +861,8 @@ Condition Resilience:
         Level: 2
         Skill: VIT > 1
     Description: Through training or sheer will, you brace your body for trials ahead.
-    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand."
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
 
 Condition Immunity: 
     Type: Passive
@@ -867,7 +872,8 @@ Condition Immunity:
         Level: 3
         Skill: VIT > 2
     Description: Through training or sheer will, your body is impervious.
-    Mechanic: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. You are now immune to this condition."
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: You are now immune to this condition.
 
 Adversary Major Action:
     Type: Adversary
@@ -882,10 +888,10 @@ Manifest Terrain:
         - Boss-Only
         - House Actions
     PP: 1
-    Mechanic: you change the area around you to an ensnaring landscape.
+    Mechanic: you change the area around you to an ensnaring landscape
     AOE: Aura 2
     Save:
-        Trigger: On starting turn,
+        Trigger: On starting turn
         DR: 2
         Type: AGL
         Fail: Entangled
@@ -896,13 +902,13 @@ Obey Me:
         - Boss-Only
         - House Actions
     PP: 2
-    Mechanic: enthrall an enemy.
+    Mechanic: enthrall an enemy
     Save:
-        Trigger: On starting turn,
+        Trigger: On starting turn
         DR: 2
         Type: CON
         Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
-        Success: end effect
+        Succeed: end effect
 
 Amplify Ally:
     Type: House

@@ -14,12 +14,7 @@ if __name__ == "__main__":
     )
 
     yaml_to_other(
-        input_files=[
-            "04_Powers.yaml",
-            "05_Vulnerabilities.yaml",
-        ],  # , "06_Bestiary.yaml"],
-        writing=["md", "dot", "png", "csv", "svg"],
-        dependencies=["Skill"],  # "Skill", "Level", "Role"],
-        add_loners=False,
-        out_delim="\t",  # or ','
+        input_files=["04_Powers.yaml", "05_Vulnerabilities.yaml", "06_Bestiary.yaml"],
+        writing=["md", "csv", "html"],
+        out_delim="\t",  # or ',' # for csv
     )

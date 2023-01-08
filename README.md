@@ -1,11 +1,11 @@
 # Welcome to Deck of Adventures, The Game
 
-This repository establishes the version history of the Deck of Adventure tabletop
+This repository establishes the version history of the Deck of Adventures tabletop
 roleplaying game. A magical world awaits, where Players come first. In Deck of
-Adventure, it’s your turn, your choice.
+Adventures, it’s your turn, your choice.
 
 Deck of Adventures is a collaborative roleplaying system, built with an open source
-ethos. Please vist our
+ethos. Please visit our
 [Development Guide](./docs/src/2_Development/) to learn more about this project. Or
 visit our [Mechanics Guide](./docs/src/1_Mechanics/01_PlayerGuide_Full.md) to learn more
 about how to play.
@@ -21,7 +21,7 @@ about how to play.
 
 While not strictly enforced, we ask that you observe
 [Markdown Linting](https://github.com/DavidAnson/markdownlint). The following can be
-added to a vscode settings file. The [Rewrap](https://github.com/stkb/Rewrap/) entension
+added to a vscode settings file. The [Rewrap](https://github.com/stkb/Rewrap/) extension
 supports wrapping to 88 characters.
 
 ```json

@@ -392,13 +392,13 @@ described in the guide or in a Power mechanic.
 1. Tackle Target: Initiator Finesse vs. Target Athletics
 
 2. Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection
-or (if posessing relevant knowledge) Knowledge
+or (if possessing relevant knowledge) Knowledge
 
 3. Sneaking past Target: Initiator Stealth vs. Target Detection
 
 4. Arm wrestle: Brute vs. Brute
 
-5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Ingestigation
+5. Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Investigation
 
 ### Saves
 
@@ -711,78 +711,8 @@ Here, the context is kept purposefully blank to fill in with your setting.
 #### Stat Blocks
 
 Every creature has a set of statistics that govern their actions in the game. Consult
-their stat block to learn their strengths and weaknesses, and what actions they can
-take in combat.
-
-If you want to make your own custom creature, you can use the sample template provided
-below:
-
-##### Name
-
-- **HP:** X
-- **AR:** X
-- **PP:** X
-- **Skill Mods:** ±X AGL, ±X CON, ±X GUT, ±X INT, ±X STR, ±X VIT
-- **Passives:**
-    - *Passive*: Descrip
-    - *Passive*: Descrip
-- **Vulnys:**
-    - *Vulny*: Descrip
-- **Actions:**
-    - **Major:**
-        - *Attack*: ±X hit, X damage, X range, (single/X multi)-target,
-          (AGL, etc, No) Save (, X on save)
-    - **Minor:**
-        - *Trait*: Descrip
-    - **Adversary:**
-        - *Trait*: Descrip
-
-##### Dealer: Captain
-
-- **HP**: 5
-- **AR**: 2
-- **PP**: 2
-- **Skill Mods**: AGL +2, STR +2, VIT +2
-- **Passives**:
-    - *Multiattack*: the Dealer can make two attacks on its turn.
-    - *Lucky*: on a suited miss the Dealer can make one free redraw.
-- **Vulnys**: Eye for an Eye, if you attack in combat, you must target
-  the enemy who hit you most recently.
-- **Actions**:
-    - **Major**:
-        - *Attack, Melee*: +2 to hit, 1 damage, 1 range, single target.
-        - *Attack, Ranged*: +1 to hit, 1 damage, 10 range, single target.
-    - **Minor**:
-        - *Speed Boost*: double the Dealer's movement.
-    - **Adversary**:
-        - *Break Stun*: when the Dealer is stunned, they can end the stun. This can only
-        be done once per round.
-        - *Command Minions*: the Dealer commands one Minion it can see to attack. The targeted
-        Minion can move up to 3 spaces and take one Major Action.
-
-##### Minions 1 + 2: Melee Guards
-
-- **HP**: 2
-- **AP**: 1
-- **AR**: 2
-- **Skill Mods**: AGL +1, STR +1, VIT +1
-- **Actions**:
-    - **Major**:
-        - **Attack, Melee**: +1 to hit, 1 damage, 1 range, single target.
-    - **Minor**:
-        - **Reinforce Armor**: adds 1 AP (up to a maximum of 1).
-
-##### Minions 3 + 4: Ranged Shooters
-
-- **HP**: 2
-- **AR**: 3
-- **Skill Mods**: AGL +1, GUT +1, INT +1
-- **Actions**:
-    - **Major**:
-        - **Attack, Ranged**: +1 to hit, 1 damage, 10 range, single target.
-    - **Minor**:
-        - **Ready Aim**: focuses attention on a single target. While that
-        target is in range, draw attacks with the Upper Hand.
+their stat block in the [Bestiary](./06_Bestiary.md) to learn their strengths and
+weaknesses, and what actions they can take in combat.
 
 ## Items
 
@@ -826,7 +756,7 @@ simple armor, an Adventuring Pack, a Trinket and 50 gp.
 - 1 Flint & Tinder
 - 1 Flask
 
-**Trinkets** are simple items, low in monetary value, that are meaninful to the
+**Trinkets** are simple items, low in monetary value, that are meaningful to the
   character and may be a part of their backstory. Examples include:
 
 - a small statue
@@ -870,7 +800,7 @@ help them avoid attacks in combat.
 
 Base AR for an unarmored character is 3. Wearing Armor reduces this AR
 depending on Type. Some have Strength Requirements in
-order to wear. A character who ignores this requirment may only use
+order to wear. A character who ignores this requirement may only use
 their movement speed and must make all
 Agility, Finesse, and Stealth Checks at Lower Hand.
 
@@ -979,7 +909,7 @@ It is up to the GM which Consumables to make available, and when. The reason
 to grant access to Consumables over Magical Items is to allow the Players to
 feel like they've gotten something valuable and powerful, but they need to be
 strategic in when to use it. These can create memorable moments of an
-Adventure without permenantly altering the balance of power.
+Adventure without permanently altering the balance of power.
 
 The Consumables listed below draw from a selection of possible
 Consumables and their Effects that you can add to your game. Feel free to

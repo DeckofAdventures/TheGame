@@ -9,19 +9,19 @@ Commons BY-NC-SA nature of this community. When contributing, please provide mod
 with your preferred name, pronouns, and a URL to link to your other work. You can make a
 contribution by opening a GitHub issue. For more major contributions, see our
 [design document](./2_Development/02_Design_Document.md) for design principles, and
-[community document](./2_Development/01_Community.md) for information about GitHub pull 
+[community document](./2_Development/01_Community.md) for information about GitHub pull
 request permissions.
 
 ## GitHub Issues
 
-This repository has the following issue templates: 
+This repository has the following issue templates:
 
 1. [Bug reports](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=bug_report.md&title=)
-for inconsistencies, either in mechanics or lore. 
+for inconsistencies, either in mechanics or lore.
 2. [Minor fixes](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=minor_fix.md&title=).
-Find a typo or grammatical error? Let us know. 
+Find a typo or grammatical error? Let us know.
 3. [Question](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=question&template=question.md&title=),
-to start dialogs about the design process or anything that's not clear. 
+to start dialogs about the design process or anything that's not clear.
 4. [Feature requests](https://github.com/DeckofAdventure/TheGame/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=).
 What should the team prioritize next? Feel free to submit your own ideas here, as a
 general idea others could expand upon or a first draft.
@@ -52,18 +52,18 @@ Contributions are always welcome as GitHub issues. GitHub pull requests should b
 reserved for major changes to at least one section, or minor changes across many
 sections (e.g., for terminology changes).
 
-<!--LOCK: Adding section for how we handle community contributions as Issues and the stages of consideration, development, playtesting, and integration into the core ruleset -->
+<!--LOCK: Adding section for how we handle community contributions as Issues and the stages of consideration, development, play testing, and integration into the core rule set -->
 
 Contributions may take the form of suggested ideas or mechanics that could be
 implemented into the existing version. The Deck of Adventures admins reserve
 the right to choose which proposals and contributions are considered for
-integration, which are modified, adapted, playtested, and ultimately
+integration, which are modified, adapted, play tested, and ultimately
 integrated into the current or future version.
 
 An Issue will be tagged as "Under Consideration", "In Development", "In
-Playtesting", and "Integrated" to establish where it is in the development
+Play testing", and "Integrated" to establish where it is in the development
 cycle. Not all ideas will make it to the Integrated step, but every
-Contribution and comment from the Community is valued. 
+Contribution and comment from the Community is valued.
 
 ## Commercial Use Waiver
 

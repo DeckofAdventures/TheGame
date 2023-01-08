@@ -1,6 +1,8 @@
 from glob import glob
 from pathlib import Path
+
 from pdf2image import convert_from_path  # install
+
 from ..utils.logger import logger
 
 
