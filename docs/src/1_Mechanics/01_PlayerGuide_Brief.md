@@ -48,7 +48,7 @@ outcome via...
      each other out.
 
 - For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
-  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and 
+  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and
   still report a successful 3 or 5 draw.
 
 There are two special kinds of Checks:

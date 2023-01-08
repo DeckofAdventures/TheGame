@@ -546,14 +546,16 @@ their breath or healing their wounds. A Full Rest is an 8-hour period of time wh
 characters get some sleep and recover from a long day.
 
 During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
-Players start with a number of Rest Cards equal to the sum of their maximum Health and
-Power Points. Each Rest Cards drawn regains 1 Health or Power Point. If the card drawn is
-the same as the players's Primary Suit, regain an additional 1 Health or Power Point. To
-recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
-Skill check of DR 7 minus the number of points they are attempting to recover. If the
-Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand. For
-standard play, Shuffle your discard pile back into your deck after completing a Quick
-Rest. For hardcore play, continue without shuffling.
+Players start with a number of Rest Cards equal to their maximum Health.
+Each Rest Card can be used as a DR 3 draw against one's own target card. On a miss,
+recover one HP or PP, your choice. On a success, recover two total points across HP and
+PP, your choice.
+To
+recover Armor Points, a player may make a Craft or Knowledge
+Skill check of DR 7 minus the number of points they are attempting to recover. If
+missed, a player may retry by attempting to recover one fewer AP.
+At the end of a Quick Rest, shuffle the discard pile and draw 10 plus twice Vitality
+back into your deck.
 
 After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
