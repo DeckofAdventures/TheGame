@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from dataclasses import dataclass, field, fields
 from math import floor
 from operator import attrgetter
@@ -53,6 +54,7 @@ class Bestiary(YamlSpec):
         self._csv_fields = set()
 
     def _build_contents(self):
+        """Loop over items in the raw dict format. Generate list and dict versions"""
         self._tried_loading = True
         for k, v in self.raw_data.items():
             if v.get("Type", None) in self._limit_types:
@@ -62,20 +64,25 @@ class Bestiary(YamlSpec):
 
     @property
     def as_list(self):
+        """Beasts in a list of the Beast class"""
         if not self._as_list and not self._tried_loading:
             self._build_contents()
         return self._as_list
 
     @property
     def as_dict(self) -> dict:
-        """Return readable dict with Mechanics collapsed."""
+        """Beasts as a dict, callable via string name, value as Beast class
+
+        Return readable dict with Mechanics collapsed.
+
+        """
         if not self._as_dict and not self._tried_loading:
             self._build_contents()
         return self._as_dict
 
     @property
-    def categories(self):
-        """Return set of Types for organizing output"""
+    def categories(self) -> OrderedDict:
+        """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
         if not self._categories:
             for b in self.as_list:
                 cat_tuple = tuple([b.Type])  # Differs from powers
@@ -87,6 +94,7 @@ class Bestiary(YamlSpec):
 
     @property
     def csv_fields(self) -> list:
+        """Return a list of fields for the CSV output in the desired order"""
         if not self._csv_fields:
             _ = self.categories
         move_front = [
@@ -109,6 +117,8 @@ class Bestiary(YamlSpec):
 
 @dataclass(order=True)
 class Attribs:
+    """Class to represent a beast's Attributes"""
+
     AGL: int = 0
     CON: int = 0
     GUT: int = 0
@@ -124,11 +134,14 @@ class Attribs:
 
     @property
     def flat(self) -> dict:
+        """Return flatted dict {'Attrib_example': value} pairs for csv export"""
         return flatten_embedded(dict(Attrib=self.__dict__))
 
 
 @dataclass(order=True)
 class Skills:
+    """Class to represent a beast's Skills"""
+
     Finesse: int = 0
     Stealth: int = 0
     Bluffing: int = 0
@@ -151,6 +164,7 @@ class Skills:
 
     @property
     def non_defaults(self):
+        """Return as_tuple above, but only non-default items"""
         output = []
         for f in fields(self):
             value = attrgetter(f.name)(self)
@@ -160,11 +174,14 @@ class Skills:
 
     @property
     def flat(self) -> dict:
+        """Return flatted dict {'Skill_example': value} pairs for csv export"""
         return flatten_embedded(dict(Skill=self.__dict__))
 
 
 @dataclass(order=True)
 class Phase:
+    """Class for representing boss phases"""
+
     # TODO: Should allies be typed as Beast? Recursive?
     Name: str
     Order: int = field(repr=False)
@@ -174,16 +191,22 @@ class Phase:
 
 @dataclass(order=True)
 class Beast:
+    """Class for representing all creatures (e.g., PCs, bosses, etc.)"""
+
+    # TODO:
+    #  - Add validator to confirm valid PC
+    #  - Accept list of items, the values of which may impact other stats
+
     sort_index: str = field(init=False, repr=False)
     Type: str
-    Name: str = None
+    Name: str = None  # Must be unique. Do we need a diff unique ID? Name+Level?
     Pronouns: str = None
     Role: str = None
     Level: int = 1
     HP: int = 1
     AP: int = 1
     AR: int = field(default=None)
-    PP: int = 0
+    PP: int = 0  # TODO: migrate to post-init, sum PP from all available powers
     Speed: int = 6
     Attribs: dict = field(default=None)
     Skills: dict = field(default=None)
@@ -194,6 +217,7 @@ class Beast:
     Description: str = ""
 
     def __post_init__(self):
+        """Generate values not given on initialization"""
         self.sort_index = self.Type
         self.Powers = self.fetch_powers()
         self.Powers_list = [p for p in self.Powers.values()]
@@ -203,12 +227,9 @@ class Beast:
         self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
         self.RestCards = self.HP + self.PP
         self.override_stats()
-        # TODO: Sum PP from all available powers
 
-    def validator(self):
-        pass  # TODO: confirm valid PC
-
-    def fetch_powers(self):
+    def fetch_powers(self) -> dict:
+        """Given a list of powers by name, generate a dict {Name: Power class}"""
         output = {}
         all_powers = Powers(
             input_files=[
@@ -232,14 +253,15 @@ class Beast:
                 logger.warning(f"{self.Name} has a power not in yaml: {power}")
         return output
 
-    def fetch_phases(self):
+    def fetch_phases(self) -> list:
+        """Turn phase input into list of phase class items"""
         output = []
         for order, (phase, phase_dict) in enumerate(self.Phases.items()):
             output.append(Phase(Name=phase, Order=order, **phase_dict))
         return output
 
-    def override_stats(self):
-        """Check for any StatOverride powers. Apply overrides"""
+    def override_stats(self) -> None:
+        """Check for any StatOverride powers. Apply overrides, sum with current value"""
         # TODO: Also use this to take attribs and apply them to corresponding skills?
         for power in self.Powers.values():
             override = getattr(power, "StatOverride", None)
@@ -247,9 +269,14 @@ class Beast:
                 attrib_or_skill = (
                     self.Attribs if override.Stat in list_attribs else self.Skills
                 )
-                setattr(attrib_or_skill, override.Stat, override.Value)
+                setattr(
+                    attrib_or_skill,
+                    override.Stat,
+                    attrgetter(override.Stat)(attrib_or_skill) + override.Value,
+                )
 
-    def _md_stats_table(self):
+    def _md_stats_table(self) -> str:
+        """Generate string for stats table included in markdown bestiary"""
         top_lvl_stats = (self.HP, self.AP, self.AR, self.PP, self.Speed)
         output = (
             f"### {self.Type}: Level {self.Level}\n\n"
@@ -269,7 +296,8 @@ class Beast:
                 )
         return output
 
-    def _md_actions(self):
+    def _md_actions(self) -> str:
+        """Generate markdown list of powers separated by type"""
         output = make_header("Powers", 2)
         for power_type in list_power_types:
             powers_subset = [
@@ -281,7 +309,8 @@ class Beast:
                 output += make_header(power_type, 3) + "\n" + "".join(powers_subset)
         return output
 
-    def _md_phases(self):
+    def _md_phases(self) -> str:
+        """Generate markdown string for phases"""
         if not self.Phases:
             return ""
         output = make_header("Phases", 2)
@@ -292,7 +321,8 @@ class Beast:
         return output
 
     @property
-    def markdown(self):
+    def markdown(self) -> str:
+        """Concatenate info relevant to markdown export"""
         return (
             make_header(self.Name, 1)
             + "\n"
@@ -302,7 +332,8 @@ class Beast:
         )
 
     @property
-    def _pc_sheet_stats(self):
+    def _pc_sheet_stats(self) -> tuple:
+        """Generate top-level stats for PC sheet"""
         # TODO: Modify so it aligns with how markdown takes top_level_stats
         # Why separate AR for the PC sheet but not the markdown?
         return [
@@ -314,6 +345,7 @@ class Beast:
         ]
 
     def _html(self, items=None):
+        """Generate html from jinja template representing PC"""
         import jinja2  # intentional lazy import
 
         assert self.Type in ["PC", "Dealer"], "Can only make html for PCs"
@@ -331,8 +363,15 @@ class Beast:
             .render(pc=self, items=items if items else default_items)
         )
 
-    def make_pc_html(self, output_filename=None, items=None):
+    def make_pc_html(self, output_filename: str = None, items: list = None):
+        """Save pc html as html file
 
+        Args:
+            output_filename (str, optional): Filename, no extension. Always in _output
+                folder. Defaults to PC_{Name}_level_{Level}.
+            items (list, optional): List of dicts with item name, quantity and info.
+                Defaults a set of items store in the _html function.
+        """
         if not output_filename:
             output_filename = f"PC_{self.Name}_level_{self.Level}"
         output_file = "./automation/_output/" + output_filename + ".html"
@@ -340,10 +379,18 @@ class Beast:
             f.write(self._html(items))
         logger.info(f"Wrote HTML {output_file}")
 
-    def make_pc_img(self, output_filename=None, items=None):
+    def make_pc_img(self, output_filename: str = None, items: list = None):
+        """Save pc html as png file
+
+        Args:
+            output_filename (str, optional): Filename, no extension. Always in _output
+                folder. Defaults to PC_{Name}_level_{Level}.
+            items (list, optional): List of dicts with item name, quantity and info.
+                Defaults a set of items store in the _html function.
+        """
         from html2image import Html2Image
 
-        if not output_filename:
+        if not output_filename:  # TODO: remove repetition with make_pc_html function
             output_filename = f"PC_{self.Name}_level_{self.Level}"
         output_filename += ".png"
         hti = Html2Image()
@@ -356,7 +403,8 @@ class Beast:
         logger.info(f"Wrote HTML as image: {output_filename}")
 
     @property
-    def csv_dict(self):
+    def csv_dict(self) -> dict:
+        """Set of information to be added as a row in the output csv"""
         removed = [
             "sort_index",
             "Powers",
@@ -373,4 +421,5 @@ class Beast:
         return output
 
     def __repr__(self):
+        """Print non-default beast items with repr property and linebreaks"""
         return my_repr(self)

@@ -26,7 +26,7 @@ def yaml_to_other(
         if "Best" in file:
             my_class = Bestiary(file)
             if "html" in writing:
-                for pc in my_class.categories[("PC",)]:
+                for pc in my_class.categories.get(("PC",), []):
                     my_class.as_dict[pc].make_pc_img()
         else:
             my_class = Powers(file)

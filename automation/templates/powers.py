@@ -49,6 +49,7 @@ class Powers(YamlSpec):
 
     @property
     def as_list(self):
+        """Return list of powers"""
         if not self._as_list:
             self._as_list = [
                 Power(Name=k, **v)
@@ -59,7 +60,7 @@ class Powers(YamlSpec):
 
     @property
     def as_dict(self) -> dict:
-        """Return readable dict with Mechanics collapsed."""
+        """Return dict of {Name:Power class}"""
         if not self._as_dict:
             self._as_dict = {
                 k: Power(Name=k, **v)
@@ -81,7 +82,8 @@ class Powers(YamlSpec):
         return sort_dict(self._categories, sorted(self._categories_set))
 
     @property
-    def type_dict(self):
+    def type_dict(self) -> dict:
+        """Cache of powers by type {Major: [a, b]}"""
         if not any(self._type_dict.values()):
             for p in self.as_list:
                 self._type_dict[p.Type].append(p.Name)
@@ -89,6 +91,7 @@ class Powers(YamlSpec):
 
     @property
     def csv_fields(self):
+        """Return a list of fields for the CSV output in the desired order"""
         if not self._csv_fields:
             _ = self.categories
         move_front = ["Type", "Name", "XP", "Mechanic"]
@@ -100,6 +103,8 @@ class Powers(YamlSpec):
 
 @dataclass(order=True)
 class StatOverride:
+    """Class representing attrib or skill number to add (e.g., Dumb vulny redudces INT)"""
+
     as_dict: dict = field(repr=False)
     Stat: str = field(init=False)
     Value: int = field(init=False)
@@ -110,10 +115,12 @@ class StatOverride:
 
     @property
     def text(self) -> str:
-        return f"Set {self.Stat} to {self.Value}"
+        """Return mechanic text of override: Add value to stat"""
+        return f"Add {self.Value} to {self.Stat}"
 
     @property
     def flat(self) -> dict:
+        """Return flatted dict {'Prereq_example': value} pairs for csv export"""
         return flatten_embedded(
             {"StatOverride": {"Stat": self.Stat, "Value": self.Value}}
         )
@@ -121,6 +128,8 @@ class StatOverride:
 
 @dataclass(order=True)
 class Prereq:
+    """Class representing prerequisites for a given power"""
+
     Role: str = None
     Level: int = None
     Skill: str = None
@@ -128,11 +137,14 @@ class Prereq:
 
     @property
     def flat(self) -> dict:
+        """Return flatted dict {'Prereq_example': value} pairs for csv export"""
         return flatten_embedded(dict(Prereq=self.__dict__))
 
 
 @dataclass(order=True)
 class Save:
+    """Class representing a save triggered by a power"""
+
     Trigger: str = field(repr=False)
     Type: str
     DR: int = 3
@@ -155,11 +167,14 @@ class Save:
 
     @property
     def flat(self) -> dict:
+        """Return flatted dict {'Save_example': value} pairs for csv export"""
         return flatten_embedded({"Save": {"Type": self.Type, "DR": self.DR}})
 
 
 @dataclass(order=True)
 class Power:
+    """Class representing a Power"""
+
     sort_index: str = field(init=False, repr=False)
     Name: str
     Type: str = field(repr=False)
@@ -182,6 +197,7 @@ class Power:
     Tags: list = None
 
     def __post_init__(self):
+        """Generate values not given on initialization"""
         self.sort_index = self.Type
         self.Category = ensure_list(self.Category)
         self.Save = Save(**self.Save) if self.Save else None
@@ -193,11 +209,12 @@ class Power:
         self.Mechanic = self.merge_mechanic()
 
     def set_choice(self, choice: str):
+        """Given a choice among options, revise merged mechanic property"""
         self.Choice = choice
         self.Mechanic = self.merge_mechanic()
         return self
 
-    def merge_mechanic(self):
+    def merge_mechanic(self) -> str:
         """Given power dict, merge all appropriate items into Mechanic
 
         Assumes Listed mechanics do not have PP/Save/StatOverride
@@ -227,7 +244,8 @@ class Power:
             return ". ".join([self.Type, *output])
 
     @property
-    def markdown(self):
+    def markdown(self) -> str:
+        """Concatenate info relevant to markdown export"""
         output = f"\n**{self.Name}**\n\n"
         for f in fields(self):
             if attrgetter(f.name)(self) != f.default and f.name != "Name" and f.repr:
@@ -242,7 +260,8 @@ class Power:
         return output
 
     @property
-    def csv_dict(self):
+    def csv_dict(self) -> dict:
+        """Set of information to be added as a row in the output csv"""
         removed = [
             "sort_index",
             "Mechanic_raw",
@@ -260,4 +279,5 @@ class Power:
         return output
 
     def __repr__(self):
+        """Print non-default power items with repr property and linebreaks"""
         return my_repr(self)

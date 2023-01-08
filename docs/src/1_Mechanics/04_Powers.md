@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 -->
+<!-- markdownlint-disable MD013 MD024 -->
 <!-- DEVELOPERS: Please edit corresponding yaml -->
 
 # Boss-Only
@@ -426,7 +426,7 @@
 **Aces Wild**
 
 - Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
-- Mechanic: You can trade a held Ace for one of the following effects:
+- Mechanic: Passive. You can trade a held Ace for one of the following effects:
     - Clubs: you can play this card to interrupt an enemy's turn and make a single Major Action - even if you already went that round
     - Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP
     - Hearts: As a Minor Action, you can heal yourself or an ally you can see within 5 squares 2 HP
