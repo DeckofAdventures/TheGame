@@ -190,6 +190,7 @@ class Beast:
     Powers: dict = field(default=None, repr=False)
     Powers_list: list = field(default_factory=list)
     Phases: list = field(default=None)
+    Primary_Skill: str = field(default=None)
     Description: str = ""
 
     def __post_init__(self):
@@ -202,7 +203,6 @@ class Beast:
         self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
         self.RestCards = self.HP + self.PP
         self.override_stats()
-        self._html = None
         # TODO: Sum PP from all available powers
 
     def validator(self):
@@ -313,10 +313,10 @@ class Beast:
             ("Rest Cards", self.RestCards),
         ]
 
-    def make_pc_sheet(self, output_filename=None, items=None):
-        assert self.Type == "PC", "Can only make sheets for PCs"
+    def _html(self, items=None):
+        import jinja2  # intentional lazy import
 
-        import jinja2  # TODO: migrate this elsewhere?
+        assert self.Type in ["PC", "Dealer"], "Can only make html for PCs"
 
         default_items = [
             {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
@@ -325,20 +325,35 @@ class Beast:
             {"name": "Maul", "quantity": "1", "info": "2 damage. 2 handed."},
         ]
 
-        html = (
+        return (
             jinja2.Environment(loader=jinja2.FileSystemLoader("./automation/_input/"))
             .get_template("PC_template.html")
             .render(pc=self, items=items if items else default_items)
         )
 
-        output_folder = "./automation/_output/"
+    def make_pc_html(self, output_filename=None, items=None):
+
         if not output_filename:
             output_filename = f"PC_{self.Name}_level_{self.Level}"
+        output_file = "./automation/_output/" + output_filename + ".html"
+        with open(output_file, "w") as f:
+            f.write(self._html(items))
+        logger.info(f"Wrote HTML {output_file}")
 
-        with open(output_folder + output_filename + ".html", "w") as f:
-            f.write(html)
+    def make_pc_img(self, output_filename=None, items=None):
+        from html2image import Html2Image
 
-        logger.info(f"Wrote HTML {output_folder + output_filename}.html")
+        if not output_filename:
+            output_filename = f"PC_{self.Name}_level_{self.Level}"
+        output_filename += ".png"
+        hti = Html2Image()
+        hti.output_path = "./automation/_output/"
+        hti.size = (950, 1200)
+        hti.screenshot(
+            html_str=self._html(items),
+            save_as=output_filename,
+        )
+        logger.info(f"Wrote HTML as image: {output_filename}")
 
     @property
     def csv_dict(self):

@@ -3,6 +3,9 @@
     <meta charset="utf-8" />
 
     <style>
+      body {
+        background-color: lightgrey;
+      }
       .column {
         float: left;
         width: 50%;
@@ -27,7 +30,7 @@
       }
 
       th {
-        background-color: lightgray;
+        background-color: gray;
         text-align: center;
       }
 
@@ -64,7 +67,7 @@
       <table style="float: left">
         <thead>
           <tr>
-            <th style="font-size: 8pt">Character Name</th>
+            <th style="font-size: 8pt">Name</th>
           </tr>
           <tr>
             <td>{{pc.Name}}</td>
@@ -90,7 +93,7 @@
         <thead>
           <tr>
             <th>Primary Skill</th>
-            <td>TBD</td>
+            <td>{{pc.Primary_Skill}}</td>
           </tr>
         </thead>
         <tr>

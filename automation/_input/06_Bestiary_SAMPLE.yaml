@@ -37,6 +37,7 @@ Clubs1:
   Pronouns: "He/Him"
   Role: Defender
   Level: 1
+  Primary_Skill: STR
   HP: 7
   AP: 2
   PP: 2
@@ -134,7 +135,7 @@ Grunt, Shielded:
     INT: -1
   Powers:
     - Attack, Weapon
-    - Shield
+    - Shield, Self
   Level: 1
   Description: A low level soldier with a Shield.
 
@@ -149,7 +150,7 @@ Guard:
     VIT: 1
   Powers:
     - Attack, Weapon
-    - Shield
+    - Shield, Self
     - Attack, Sweep
     - Momentum
   Level: 2
