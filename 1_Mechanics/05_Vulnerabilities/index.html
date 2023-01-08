@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://DeckofAdventures.github.io/TheGame/1_Mechanics/05_Vulnerabilities/">
       
+      
+        <link rel="prev" href="../04_Powers/">
+      
+      
+        <link rel="next" href="../99_Glossary/">
+      
       <link rel="icon" href="../../assets/spade.svg">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -128,8 +133,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="my-default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -137,8 +140,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -277,12 +278,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Mechanics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -447,12 +449,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -600,12 +603,12 @@
                 
                   
 
-  <a href="https://github.com/DeckofAdventures/TheGame/blob/main/docs/src/1_Mechanics/05_Vulnerabilities.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
+
+<!-- markdownlint-disable MD013 MD024 -->
 <!-- DEVELOPERS: Please edit corresponding yaml -->
 
 <h1 id="combat">Combat<a class="headerlink" href="#combat" title="Permanent link">&para;</a></h1>
@@ -639,7 +642,7 @@
 <li>Description: You and your companion do not always get along, sometimes they do not do exactly what you ask.</li>
 <li>Mechanic: Vulny. When you draw a Suited Miss to command your companion, the DM gains control of the companion temporarily, with the duration at the DM's discretion (Minor/Major).</li>
 <li>XP: -1 or -2</li>
-<li>Prereq_Power: Creature Connection</li>
+<li>Prereq Power: Creature Connection</li>
 </ul>
 <h1 id="roleplay">Roleplay<a class="headerlink" href="#roleplay" title="Permanent link">&para;</a></h1>
 <p><strong>Oath</strong></p>
@@ -653,7 +656,7 @@
 <li>Description: You mistakenly believe everything is about you, and even fail to understand any conversation topic that doesn't pertain to you.</li>
 <li>Mechanic: Vulny. If you make a check to understand a topic or observe another creature, you must justify why your character thinks it's about themselves, or draw with the Lower Hand.</li>
 <li>XP: -2</li>
-<li>Prereq_Skill: Intelligence and Intuition &lt; +1</li>
+<li>Prereq Skill: Intelligence and Intuition &lt; +1</li>
 </ul>
 <p><strong>Eye for an Eye</strong></p>
 <ul>
@@ -672,7 +675,7 @@
 <li>Description: Never having been trained, the printed word is a mystery to you. You can recognize the general shape, and return to the same street sign, but couldn't pronounce the word.</li>
 <li>Mechanic: Vulny. You're unable to complete an action that requires understanding text.  The skill prerequisite only applies at the time the Vulnerability is taken.</li>
 <li>XP: -1</li>
-<li>Prereq_Skill: Intelligence &lt; 1</li>
+<li>Prereq Skill: Intelligence &lt; 1</li>
 </ul>
 <p><strong>Inattentive</strong></p>
 <ul>
@@ -710,9 +713,11 @@
 <p><strong>Inorganic</strong></p>
 <ul>
 <li>Description: You were not born, but instead created. You are not a slave to the bodily needs of the rest, but may instead be called to a prescribed purpose.</li>
-<li>Mechanic: Vulny. You do not need to breathe, eat or sleep (but still rest to recover Health/Power Points). Choose one of the following when you take this Vulnerability</li>
+<li>Mechanic: Vulny. You do not need to breathe, eat or sleep (but still rest to recover Health/Power Points). Choose one of the following when you take this Vulnerability<ul>
 <li>Your creator or society at large consider you to have a function that you do not wish to pursue, such as a dangerous and laborious profession.</li>
 <li>You require a rare form of fuel that is difficult to obtain and are rendered catatonic without regular access. Work with your GM to see what makes sense for your character in the setting.</li>
+</ul>
+</li>
 <li>XP: -2</li>
 </ul>
 <p><strong>Outsider</strong></p>
@@ -751,9 +756,7 @@
               
                 
               
-              
-                Thanks for your feedback!
-              
+              Thanks for your feedback!
             </div>
           
             <div data-md-value="0" hidden>
@@ -761,9 +764,7 @@
               
                 
               
-              
-                Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Vulnerabilities+-+/1_Mechanics/05_Vulnerabilities/" target="_blank" rel="noopener">GitHub issue</a>.
-              
+              Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Vulnerabilities+-+/1_Mechanics/05_Vulnerabilities/" target="_blank" rel="noopener">GitHub issue</a>.
             </div>
           
         </div>
@@ -787,42 +788,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../04_Powers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Powers" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Powers
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../99_Glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Glossary
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -862,12 +827,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>

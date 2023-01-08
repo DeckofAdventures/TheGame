@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://DeckofAdventures.github.io/TheGame/CHANGELOG/">
       
+      
+        <link rel="prev" href="../2_Development/03_Development_Timeline/">
+      
+      
+        <link rel="next" href="../CONTRIBUTING/">
+      
       <link rel="icon" href="../assets/spade.svg">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -128,8 +133,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="my-default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -137,8 +140,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -275,12 +276,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
           Mechanics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -437,12 +439,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -758,10 +761,9 @@
                 
                   
 
-  <a href="https://github.com/DeckofAdventures/TheGame/blob/main/docs/src/CHANGELOG.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
@@ -770,8 +772,8 @@
 <a href="https://semver.org/">Semantic Versioning</a>: Major:Minor:Patch. As much of this convention
 is specific to software development, we make the following general adjustments.</p>
 <ol>
-<li>MAJOR versions are for significant changes that may not be backwards compatible. </li>
-<li>MINOR versions add new features that are backwards compatible. </li>
+<li>MAJOR versions are for significant changes that may not be backwards compatible.</li>
+<li>MINOR versions add new features that are backwards compatible.</li>
 <li>PATCH versions are backwards compatible adjustments to central governing documents.</li>
 </ol>
 <p>While untracked edits may change individual pages and patches may systematically change
@@ -779,11 +781,12 @@ multiple pages, minor and major versions will be accompanied by descriptors deta
 the nature of these changes.</p>
 <h2 id="100a5-unreleased">[1.0.0a5] - UNRELEASED<a class="headerlink" href="#100a5-unreleased" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Added Beastiary YAML</li>
 <li>Updated name of Fate Points to Power Points</li>
 <li>Updated repo structure for mkdocs</li>
 <li>Added combined Power/Vulnerability spreadsheet</li>
-<li>Updated python conversion tool to be object oriented</li>
+<li>Add python conversion tool to import yaml, output csv and markdown</li>
+<li>Added dataclass object to handle Power and Beast information</li>
+<li>Added Bestiary</li>
 </ul>
 <h2 id="100a4-2022-08-14">[1.0.0a4] - 2022-08-14<a class="headerlink" href="#100a4-2022-08-14" title="Permanent link">&para;</a></h2>
 <ul>
@@ -811,7 +814,7 @@ the nature of these changes.</p>
 </ul>
 <h2 id="000a2-2022-02-10">[0.0.0a2] - 2022-02-10<a class="headerlink" href="#000a2-2022-02-10" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Changed Suit mechanic to start at Level 1 per 
+<li>Changed Suit mechanic to start at Level 1 per
   <a href="https://github.com/DeckofAdventures/TheGame/issues/15">Issue #15</a></li>
 </ul>
 <h2 id="000a1-2022-01-14">[0.0.0a1] - 2022-01-14<a class="headerlink" href="#000a1-2022-01-14" title="Permanent link">&para;</a></h2>
@@ -854,9 +857,7 @@ the nature of these changes.</p>
               
                 
               
-              
-                Thanks for your feedback!
-              
+              Thanks for your feedback!
             </div>
           
             <div data-md-value="0" hidden>
@@ -864,9 +865,7 @@ the nature of these changes.</p>
               
                 
               
-              
-                Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Change%20Log+-+/CHANGELOG/" target="_blank" rel="noopener">GitHub issue</a>.
-              
+              Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Change%20Log+-+/CHANGELOG/" target="_blank" rel="noopener">GitHub issue</a>.
             </div>
           
         </div>
@@ -890,42 +889,6 @@ the nature of these changes.</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../2_Development/03_Development_Timeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Timeline" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Timeline
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../CONTRIBUTING/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributions" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Contributions
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -965,12 +928,11 @@ the nature of these changes.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>

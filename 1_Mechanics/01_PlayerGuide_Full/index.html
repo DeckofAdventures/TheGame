@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://DeckofAdventures.github.io/TheGame/1_Mechanics/01_PlayerGuide_Full/">
       
+      
+        <link rel="prev" href="../01_PlayerGuide_Brief/">
+      
+      
+        <link rel="next" href="../02_GMGuide/">
+      
       <link rel="icon" href="../../assets/spade.svg">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -128,8 +133,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="my-default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -137,8 +140,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -277,12 +278,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Mechanics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -528,6 +530,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fatigue" class="md-nav__link">
+    Fatigue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#discard-powers" class="md-nav__link">
     Discard Powers
   </a>
@@ -725,12 +734,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1053,6 +1063,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#fatigue" class="md-nav__link">
+    Fatigue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#discard-powers" class="md-nav__link">
     Discard Powers
   </a>
@@ -1140,10 +1157,9 @@
                 
                   
 
-  <a href="https://github.com/DeckofAdventures/TheGame/blob/main/docs/src/1_Mechanics/01_PlayerGuide_Full.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
+
 
 
 <h1 id="deck-of-adventures-core-mechanics">Deck of Adventures Core Mechanics<a class="headerlink" href="#deck-of-adventures-core-mechanics" title="Permanent link">&para;</a></h1>
@@ -1190,7 +1206,8 @@ Cards, even when shuffling the deck.</p>
 <p>Players will use their deck to do most anything; it represents their character's
 stamina until they complete a Rest. When the Action Deck is empty and a player has to
 shuffle between rests, they draw with the
-<a href="./#upper-and-lower-hand">Lower Hand (1+)</a> until they would shuffle when resting.</p>
+<a href="./#upper-and-lower-hand">Lower Hand (1+)</a> until they would
+shuffle when resting.</p>
 </li>
 </ol>
 <h2 id="fate-cards">Fate Cards<a class="headerlink" href="#fate-cards" title="Permanent link">&para;</a></h2>
@@ -1220,7 +1237,7 @@ redraw. Only one redraw is permitted per check.</p>
 </li>
 <li>
 <p><em>Toughen Up</em>: ignore damage equal to the number of Fate Cards used. This must be
-done before the end of the Player's next turn after recieving damage.</p>
+done before the end of the Player's next turn after receiving damage.</p>
 </li>
 </ol>
 </li>
@@ -1365,9 +1382,9 @@ the circles around the bullseye.</p>
 their GM to determine if another Attribute or Skill may be used instead. A player will
 draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
-within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
-next to the relevant Skill or Attribute related to the Check. Think of it as a
-character's ability to 'aim' a check to get closer to the TC.</p>
+within the DR. A Modifier is added to the DR when a check is made. A Modifier is
+indicated on the character sheet next to the relevant Skill or Attribute related to the
+Check. Think of it as a character's ability to 'aim' a check to get closer to the TC.</p>
 <p>The GM may describe the nature of the outcome or announce the degree of success and ask
 the player to describe how their character successfully accomplishes the action.</p>
 <p>Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
@@ -1728,13 +1745,16 @@ and need more time to think.</p>
 <h4 id="in-combat-actions">In Combat Actions<a class="headerlink" href="#in-combat-actions" title="Permanent link">&para;</a></h4>
 <p>Each turn represents 6 seconds of game time passing. On a turn, a character may
 (a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order
-they choose. They may also perform any number of Free Actions, within reason, as
-permitted by the GM.</p>
+they choose. They may also perform any number of Free Actions, within reason (approx 5),
+as permitted by the GM.</p>
 <ol>
 <li>
 <p><strong>Movement</strong> By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be
-split to occur before, after, and/or between actions. A creature can move through a friendly creature's space as part of their movement but can not end their turn on that space. A creature cannot move through a hostile creature's space or between two hostile creatures' spaces if they are within one space of one another.</p>
+split to occur before, after, and/or between actions. A creature can move through a
+friendly creature's space as part of their movement but can not end their turn on that
+space. A creature cannot move through a hostile creature's space or between two hostile
+creatures' spaces if they are within one space of one another.</p>
 </li>
 <li>
 <p><strong>Actions</strong> The list below are possible Minor/Major Actions, but a GM may permit
@@ -1791,21 +1811,22 @@ character until the start of the next combat.</p>
 is listed in the Power or effect that causes it.</p>
 <ol>
 <li>
-<p><strong>Stunned</strong> If a Dealer is hit by a critical attack, they make a DR 3 Conviction
+<p><strong>Stunned</strong> If a Dealer is hit by a critical attack, they make a DR 3 CON
 Save at the start of their turn vs their  own TC. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.</p>
 </li>
 <li>
-<p><strong>Entangled</strong> A Dealer may expend a Major Action to make a DR 3 Strength Save. Until
+<p><strong>Entangled</strong> A Dealer may expend a Major Action to make a DR 3 STR Save. Until
 they are successful, they may not move and any Agility Saves are made with Lower
 Hand.</p>
 </li>
 <li>
 <p><strong>Knocked Down</strong> A Dealer must expend a Minor Action to get up. Their movement speed
-is halved, rounding up. All Strength and Agility Saves are made with Lower Hand. When
-Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
-1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.</p>
+is halved, rounding up. All STR and AGL Saves are made with Lower Hand. When Knocked
+Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space
+away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of
+their movement, gaining the Knocked Down status.</p>
 </li>
 <li>
 <p><strong>Blinded, Deafened</strong> At the start of their turn, as a Free Action, a Dealer makes a
@@ -1819,13 +1840,13 @@ since the effect onset). If a Knocked Out Dealer is attacked further, the player
 an Epic Event alone.</p>
 </li>
 <li>
-<p><strong>Burned</strong> As a Minor Action, a Dealer can make a DR 3 Intuition Save to stop the
-burning. On a failure, they take 1 damage bypassing AP.</p>
+<p><strong>Burned</strong> As a Minor Action, a Dealer can make a DR 3 GUT Save to stop the
+burning. On failure, they take 1 damage bypassing AP.</p>
 </li>
 <li>
 <p><strong>Poisoned N</strong> Each poisoning effect adds +1 Poisoned. At the start of their turn, as
-a Free Action, a Dealer makes a DR 3 Vitality Save to shake off the effects of the
-poison. On a failure, they discard N+1 cards.</p>
+a Free Action, a Dealer makes a DR 3 VIT Save to shake off the effects of the
+poison. On failure, they discard N+1 cards.</p>
 </li>
 <li>
 <p><strong>Frozen</strong> Movement speed is reduced by half and all skill checks are drawn at Lower
@@ -1833,7 +1854,22 @@ Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their t
 attempt to end the freeze.</p>
 </li>
 <li>
-<p><strong>Suffocating</strong> At the beginning of their turn, a Dealer makes a DR 3 Vitality Save. On a failure, take 2 damage. On a success, take 1 damage.</p>
+<p><strong>Suffocating</strong> At the beginning of their turn, a Dealer makes a DR 3 VIT Save. On
+failure, take 2 damage. On a success, take 1 damage.</p>
+</li>
+<li>
+<p><strong>Charmed</strong> At the end of their turn or whenever taking damage, A Dealer makes a DR
+3 GUT Save. On failure, they may not take actions against the interests of the creature
+that caused the condition. Another creature may use a Major action to end this effect.
+This effects ends automatically if the target is damaged by the creature that caused
+the condition.</p>
+</li>
+<li>
+<p><strong>Enthralled</strong> At the end of their turn or whenever taking damage, A Dealer makes a
+DR 3 CON Save. On failure, they must move up to their Speed and/or perform 1 Major
+Action available to them, as directed by the creature that caused the condition.
+Another creature may use a Major action to end this effect. This effects ends
+automatically if the target is damaged by the creature that caused the condition.</p>
 </li>
 </ol>
 <h3 id="health-and-armor">Health and Armor<a class="headerlink" href="#health-and-armor" title="Permanent link">&para;</a></h3>
@@ -1983,33 +2019,41 @@ represents a short 30-minute break, where characters may be catching
 their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.</p>
 <p>During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
-Players start with a number of Rest Cards equal to the sum of their maximum Health and
-Power Points. Each Rest Cards drawn regains 1 Health or Power Point. If the card drawn is
-the same as the players's Primary Suit, regain an additional 1 Health or Power Point. To
-recover Armor Points, a player may expend one Rest Card to make a Craft or Knowledge
-Skill check of DR 7 minus the number of points they are attempting to recover. If the
-Rest Card drawn matches they player's Primary Suit, make this check at Upper Hand. For
-standard play, Shuffle your discard pile back into your deck after completing a Quick
-Rest. For hardcore play, continue without shuffling.</p>
+Players start with a number of Rest Cards equal to their maximum Health.
+Each Rest Card can be used as a DR 3 draw against one's own target card. On a miss,
+recover one HP or PP, your choice. On a success, recover two total points across HP and
+PP, your choice.
+To
+recover Armor Points, a player may make a Craft or Knowledge
+Skill check of DR 7 minus the number of points they are attempting to recover. If
+missed, a player may retry by attempting to recover one fewer AP.
+At the end of a Quick Rest, shuffle the discard pile and draw 10 plus twice Vitality
+back into your deck.</p>
 <p>After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
 used. Fate, Health, and Armor Points all return to
 their maximum. Rest Cards return to their full value after a Full Rest.</p>
+<h3 id="fatigue">Fatigue<a class="headerlink" href="#fatigue" title="Permanent link">&para;</a></h3>
 <p>If you run out of cards before you can successfully take a Rest, you suffer
-one level of <em>Fatigue</em>. Reshuffle your deck and draw all Checks with the
-Lower Hand. Each time you need to reshuffle your deck in this way adds
-another level of Fatigue. If you were to suffer a fourth level of Fatigue,
-you are Knocked Out instead. This signifies your character running out of
-Stamina during a long day.</p>
+one level of <em>Fatigue</em>. This signifies your character running out of
+Stamina during a long day. Consult the list below for the consequences at each level of
+fatigue.</p>
+<ol>
+<li>Lower hand (1) on saves.</li>
+<li>Lower hand (1) on all checks.</li>
+<li>Movement halved and Fate Cards cannot be used to gain Upper Hand.</li>
+<li>PP expenditure requirements doubled.</li>
+<li>Knocked Out</li>
+</ol>
 <h3 id="discard-powers">Discard Powers<a class="headerlink" href="#discard-powers" title="Permanent link">&para;</a></h3>
 <p>Each Dealer may have one Discard Power. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
 every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
-to a character at a time. Cards are discarded and cannot yeild Fate Cards.</p>
+to a character at a time. Cards are discarded and cannot yield Fate Cards.</p>
 <p>Below is a list of possible Discard Powers, determined by Role. Work with your GM if you
 would like to use a different Discard Power instead.</p>
-<!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
+<!-- Specifying in combat until we can revisit non-combat uses of aggro and thwart -->
 
 <ul>
 <li>
@@ -2069,7 +2113,8 @@ available.</p>
 <li>A dark alley in a city with some light spilling over from a nearby street.</li>
 <li>An underground room with some candles burning lightly.</li>
 </ul>
-<p><strong>Full Darkness:</strong> When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...</p>
+<p><strong>Full Darkness:</strong> When making a Detection or Investigation Check in full darkness, draw
+with the Lower Hand (3). For example...</p>
 <ul>
 <li>A moonless night in the countryside without any light source.</li>
 <li>Descending into a cave without a light source.</li>
@@ -2094,14 +2139,17 @@ by using their Speed or making a Check. Some Powers may grant these effects as w
 creature may be covered from one direction but not from another direction.</p>
 <h4 id="falling">Falling<a class="headerlink" href="#falling" title="Permanent link">&para;</a></h4>
 <p>Falling from a great height is dangerous. At the end of a fall, a creature takes 1
-damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the penalty from falling.</p>
+damage and applies -1 speed for every 2 space equivalent in height it fell and the
+creature is Knocked Down. This speed is recovered after a Rest or if the creature is
+healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the
+penalty from falling.</p>
 <h4 id="challenging-terrain">Challenging Terrain<a class="headerlink" href="#challenging-terrain" title="Permanent link">&para;</a></h4>
 <p>Moving through the environment can sometimes be challenging. When navigating
 through <em>Challenging Terrain</em>, moving through one space requires 2 speed. While
 standing in Challenging Terrain, all Agility Saves are made with the Lower Hand.</p>
 <h4 id="holding-breath">Holding Breath<a class="headerlink" href="#holding-breath" title="Permanent link">&para;</a></h4>
-<p>A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage without air reduces this time by 1 minute. After this time, the character
+<p>A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage
+without air reduces this time by 1 minute. After this time, the character
 gains the <em>Suffocating</em> Status Condition.</p>
 <p>Some Powers or effects can extend this time limit or prevent a character from
 Suffocating.</p>
@@ -2117,8 +2165,8 @@ Skills.</p>
   character's history and where they are when you begin your adventure.</p>
 </li>
 <li>
-<p><a href="./03_CharacterCreation#choose-your-role">A Role</a> is a general class the unlocks access to
-  certain abilities.</p>
+<p><a href="./03_CharacterCreation#choose-your-role">A Role</a> is a general class the unlocks
+  access to certain abilities.</p>
 </li>
 <li>
 <p>Attributes cost more, but also increase corresponding skills.</p>
@@ -2148,7 +2196,8 @@ Skills.</p>
 <li>
 <p><strong>Find a group:</strong> Deck of Adventures requires as few as two people, one Game Master
 ( GM) and one player, but richer stories can be told with more people bringing more to
-the table. Join the Deck of Adventures <a href="https://discord.gg/dk6RfWgPHF">Discord Server</a> to find a group! (if this link is expired, please
+the table. Join the Deck of Adventures <a href="https://discord.gg/dk6RfWgPHF">Discord Server</a>
+to find a group! (if this link is expired, please
 <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&amp;labels=bug&amp;template=bug_report.md&amp;title=Expired%20Discord%20Link!">submit an issue</a>)</p>
 </li>
 <li>
@@ -2221,9 +2270,7 @@ remember.</p>
               
                 
               
-              
-                Thanks for your feedback!
-              
+              Thanks for your feedback!
             </div>
           
             <div data-md-value="0" hidden>
@@ -2231,9 +2278,7 @@ remember.</p>
               
                 
               
-              
-                Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Full%20Guide+-+/1_Mechanics/01_PlayerGuide_Full/" target="_blank" rel="noopener">GitHub issue</a>.
-              
+              Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Full%20Guide+-+/1_Mechanics/01_PlayerGuide_Full/" target="_blank" rel="noopener">GitHub issue</a>.
             </div>
           
         </div>
@@ -2257,42 +2302,6 @@ remember.</p>
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../01_PlayerGuide_Brief/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Brief Guide" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Brief Guide
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../02_GMGuide/" class="md-footer__link md-footer__link--next" aria-label="Next: GM Guide" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              GM Guide
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2332,12 +2341,11 @@ remember.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>

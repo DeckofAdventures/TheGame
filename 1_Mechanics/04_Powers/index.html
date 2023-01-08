@@ -14,8 +14,14 @@
       
         <link rel="canonical" href="https://DeckofAdventures.github.io/TheGame/1_Mechanics/04_Powers/">
       
+      
+        <link rel="prev" href="../03_CharacterCreation/">
+      
+      
+        <link rel="next" href="../05_Vulnerabilities/">
+      
       <link rel="icon" href="../../assets/spade.svg">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
     
     
       
@@ -23,11 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
       
       
 
@@ -86,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#combat" class="md-skip">
+        <a href="#boss-only" class="md-skip">
           Skip to content
         </a>
       
@@ -128,8 +133,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="my-default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -137,8 +140,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -277,12 +278,13 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
-      
-        <label class="md-nav__link" for="__nav_2">
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="true">
           Mechanics
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -390,42 +392,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#control" class="md-nav__link">
-    Control
+  <a href="#adversary-actions" class="md-nav__link">
+    Adversary Actions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mystic-attacks" class="md-nav__link">
-    Mystic Attacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    Support
-  </a>
-  
-    <nav class="md-nav" aria-label="Support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#distract" class="md-nav__link">
-    Distract
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weapon-attacks" class="md-nav__link">
-    Weapon Attacks
+  <a href="#house-actions" class="md-nav__link">
+    House Actions
   </a>
   
 </li>
@@ -512,12 +487,13 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
-      
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
           Development
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -660,42 +636,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#control" class="md-nav__link">
-    Control
+  <a href="#adversary-actions" class="md-nav__link">
+    Adversary Actions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mystic-attacks" class="md-nav__link">
-    Mystic Attacks
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    Support
-  </a>
-  
-    <nav class="md-nav" aria-label="Support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#distract" class="md-nav__link">
-    Distract
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#weapon-attacks" class="md-nav__link">
-    Weapon Attacks
+  <a href="#house-actions" class="md-nav__link">
+    House Actions
   </a>
   
 </li>
@@ -714,14 +663,35 @@
                 
                   
 
-  <a href="https://github.com/DeckofAdventures/TheGame/blob/main/docs/src/1_Mechanics/04_Powers.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+  
+  
 
 
+
+<!-- markdownlint-disable MD013 MD024 -->
 <!-- DEVELOPERS: Please edit corresponding yaml -->
 
+<h1 id="boss-only">Boss-Only<a class="headerlink" href="#boss-only" title="Permanent link">&para;</a></h1>
+<h2 id="adversary-actions">Adversary Actions<a class="headerlink" href="#adversary-actions" title="Permanent link">&para;</a></h2>
+<p><strong>Adversary Major Action</strong></p>
+<ul>
+<li>Mechanic: Adversary. Once per round, you make take an additional Major Action after a Dealer's turn.</li>
+</ul>
+<h2 id="house-actions">House Actions<a class="headerlink" href="#house-actions" title="Permanent link">&para;</a></h2>
+<p><strong>Manifest Terrain</strong></p>
+<ul>
+<li>Mechanic: House. For 1 PP, you change the area around you to an ensnaring landscape. On starting turn, target(s) make a DR 2 AGL Save. On fail, target(s) Entangled.</li>
+<li>AOE: Aura 2</li>
+</ul>
+<p><strong>Obey Me</strong></p>
+<ul>
+<li>Mechanic: House. For 2 PP, enthrall an enemy. On starting turn, target(s) make a DR 2 CON Save. On fail, target(s) must move up to 4 spaces and/or take one Major Action at your direction on each turn. On success, target(s) end effect.</li>
+</ul>
+<p><strong>Amplify Ally</strong></p>
+<ul>
+<li>Description: Move the chess pieces on your board.</li>
+<li>Mechanic: House. Select one ally. They can immediately move up to 4 spaces and take one Action.</li>
+</ul>
 <h1 id="combat">Combat<a class="headerlink" href="#combat" title="Permanent link">&para;</a></h1>
 <h2 id="control">Control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h2>
 <p><strong>Battlecharged</strong></p>
@@ -735,26 +705,25 @@
 <li>Description: When you hit big, you hit BIG. Enemies don't stand a chance against you when you make a critical hit against them.</li>
 <li>Mechanic: Passive. All Critical Success attacks now deal double damage instead of adding +1 damage.</li>
 <li>XP: 1</li>
-<li>Prereq_Level: 3</li>
+<li>Prereq Level: 3</li>
 </ul>
 <p><strong>Momentum</strong></p>
 <ul>
 <li>Description: By brute strength, force others to move around the battlefield.</li>
-<li>Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.If unwilling, target(s) make a STR or AGL Save. On fail, target(s) are moved to 1 space of attacker's end position. </li>
+<li>Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) are moved to 1 space of attacker's end position.</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Defender</li>
-<li>Prereq_Skill: Brute &gt; 0</li>
+<li>Prereq Role: Defender</li>
+<li>Prereq Skill: Brute &gt; 0</li>
 </ul>
 <p><strong>Momentum Aura</strong></p>
 <ul>
 <li>Description: Your strength is supernatural, bending the gravity around you.</li>
-<li>Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.. </li>
+<li>Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position..</li>
 <li>XP: 2</li>
-<li>PP: 1</li>
-<li>Prereq_Role: Defender</li>
-<li>Prereq_Skill: Brute &gt; 1</li>
-<li>Prereq_Power: Momentum</li>
 <li>Target: 6</li>
+<li>Prereq Role: Defender</li>
+<li>Prereq Skill: Brute &gt; 1</li>
+<li>Prereq Power: Momentum</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Find Weakness</strong></p>
@@ -762,17 +731,16 @@
 <li>Description: You can size up an opponent and discover their weaknesses.</li>
 <li>Mechanic: Minor. As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.</li>
 <li>XP: 1</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Skill: Detection &gt; 0</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Skill: Detection &gt; 0</li>
 <li>Tags: Difficulty Prediction</li>
 </ul>
 <p><strong>Pack Tactics</strong></p>
 <ul>
 <li>Description: When an enemy is outnumbered, you know just how to take advantage.</li>
-<li>Mechanic: Minor. For 1 PP, When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.. </li>
+<li>Mechanic: Minor. For 1 PP, When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.</li>
 <li>XP: 2</li>
-<li>PP: 1</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 <li>Tags: Difficulty Prediction</li>
 </ul>
 <h2 id="mystic-attacks">Mystic Attacks<a class="headerlink" href="#mystic-attacks" title="Permanent link">&para;</a></h2>
@@ -781,70 +749,62 @@
 <li>Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.</li>
 <li>Mechanic: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.</li>
 <li>XP: 1</li>
-<li>Prereq_Skill: Knowlege &gt; 0 or Craft &gt; 0</li>
+<li>Prereq Skill: Knowledge &gt; 0 or Craft &gt; 0</li>
 </ul>
 <p><strong>Attack, Mystic Aura</strong></p>
 <ul>
 <li>Description: You deploy resources to channel your magic all around you.</li>
-<li>Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s). </li>
+<li>Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Caster or Support</li>
-<li>Prereq_Power: Attack, Mystic</li>
+<li>Prereq Role: Caster or Support</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Amplification</strong></p>
 <ul>
 <li>Description: You channel your talents into a physical weapon, melding the physical and supernatural.</li>
-<li>Mechanic: Major. For 1 PP, Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.. </li>
+<li>Mechanic: Major. For 1 PP, Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.</li>
 <li>XP: 1</li>
-<li>PP: 1</li>
-<li>Prereq_Role: Martial or Caster</li>
-<li>Prereq_Power: Attack, Mystic</li>
+<li>Prereq Role: Martial or Caster</li>
+<li>Prereq Power: Attack, Mystic</li>
 </ul>
 <p><strong>Attack, Mystic Cone</strong></p>
 <ul>
 <li>Description: You deploy resources to channel your magic in a wide blast in front of you.</li>
-<li>Mechanic: Major. For 1 PP, Choose one effect when you take this power</li>
-<li>You perform your Mystic Attack on all characters within a cone of 3 spaces in front of you.</li>
-<li>All characters in a 3 space cone in front of you make a Contested Conviction check. On failure, they are Knocked Down. </li>
+<li>Mechanic: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down.. For 1 PP, All characters in a Cone 3 are subjected to this effect.</li>
 <li>XP: 2</li>
-<li>PP: 1</li>
-<li>Prereq_Role: Caster</li>
-<li>Prereq_Skill: Knowledge &gt; 1 or Craft &gt; 1</li>
-<li>Prereq_Power: Attack, Mystic</li>
+<li>Prereq Role: Caster</li>
+<li>Prereq Skill: Knowledge &gt; 1 or Craft &gt; 1</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Confusion</strong></p>
 <ul>
 <li>Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.</li>
-<li>Mechanic: Major. For 1 or 2 PP, You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Power: Attack, Mystic</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Entangle</strong></p>
 <ul>
 <li>Description: You channel your abilities to tie your target in place.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Selected targets make a Save.. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Selected targets make a Save. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Power: Attack, Mystic</li>
 <li>Target: 1 or 3</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Deprivation</strong></p>
 <ul>
 <li>Description: You channel your abilities deprive a target of their senses.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Select the Blinded or Deafened effect.. Once,, target(s) make a DR 3 GUT Save. On fail, target(s) Blinded or Deafened unless immune.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Select the Blinded or Deafened effect. Once, target(s) make a DR 3 GUT Save. On fail, target(s) Blinded or Deafened unless immune.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Power: Attack, Mystic</li>
 <li>Target: 1 or 3</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Dual-Shot</strong></p>
@@ -852,8 +812,8 @@
 <li>Description: You are so adept mystic arts you can start another spell before even finishing the first.</li>
 <li>Mechanic: Minor. On your turn, you may take a second Mystic Attack with Lower Hand.</li>
 <li>XP: 3</li>
-<li>Prereq_Skill: Finesse &gt; 1 or Knowledge &gt; 1 or Craft &gt; 1</li>
-<li>Prereq_Power: Attack, Mystic</li>
+<li>Prereq Skill: Finesse &gt; 1 or Knowledge &gt; 1 or Craft &gt; 1</li>
+<li>Prereq Power: Attack, Mystic</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Mystic Dual-Wield Master</strong></p>
@@ -861,101 +821,94 @@
 <li>Description: You are a master of wielding two weapons in combat.</li>
 <li>Mechanic: Minor. On your turn, you may take a second Mystic Attack as a Minor Action.</li>
 <li>XP: 1</li>
-<li>Prereq_Level: 3</li>
-<li>Prereq_Power: Attack, Mystic Dual-Shot</li>
+<li>Prereq Level: 3</li>
+<li>Prereq Power: Attack, Mystic Dual-Shot</li>
 <li>Tags: Multi-target</li>
 </ul>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
 <p><strong>Heal</strong></p>
 <ul>
 <li>Description: Can channel magical energy or medical training to heal others</li>
-<li>Mechanic: Major. For 1 or 2 PP, Heal yourself or another you can see for 1 or 3 Health Points. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Heal yourself or another you can see for 1 or 3 Health Points</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support</li>
+<li>Prereq Role: Support</li>
 </ul>
 <p><strong>Lend Aid</strong></p>
 <ul>
 <li>Description: Just a little help from a friend</li>
 <li>Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. On the ally's next Draw, they may use your card as if they had Upper Hand</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Support</li>
+<li>Prereq Role: Support</li>
 </ul>
 <p><strong>Lend Aid, Advanced</strong></p>
 <ul>
 <li>Description: A little help goes a long way</li>
 <li>Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. At any time before their next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Support</li>
-<li>Prereq_Power: Lend Aid</li>
+<li>Prereq Role: Support</li>
+<li>Prereq Power: Lend Aid</li>
 </ul>
 <p><strong>Lend Confusion</strong></p>
 <ul>
 <li>Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.</li>
 <li>Mechanic: Major. Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Power: Lend Distraction</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Power: Lend Distraction</li>
 </ul>
 <p><strong>Lend Mass Confusion</strong></p>
 <ul>
 <li>Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.</li>
-<li>Mechanic: Major. For 2 PP, You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.. </li>
+<li>Mechanic: Major. For 2 PP, You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.</li>
 <li>XP: 2</li>
-<li>PP: 2</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Level: 3</li>
-<li>Prereq_Power: Lend Confusion</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Level: 3</li>
+<li>Prereq Power: Lend Confusion</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Lend or Remove Skill</strong></p>
 <ul>
 <li>Description: You really know how to target an ability and either support it or get in it's way.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support</li>
+<li>Prereq Role: Support</li>
 </ul>
 <p><strong>Lend Readiness</strong></p>
 <ul>
 <li>Description: Your talents bolster you allies' speed and alertness.</li>
 <li>Mechanic: Minor. Select one character. Until the end of the next combat, this character draws their Target Card with the Upper Hand. This effect is maintained even if you use another Power.</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Support</li>
+<li>Prereq Role: Support</li>
 </ul>
 <p><strong>Lend Vigor</strong></p>
 <ul>
 <li>Description: Channel energy to do more than help: inspire!</li>
-<li>Mechanic: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support or Caster</li>
+<li>Prereq Role: Support or Caster</li>
 </ul>
 <p><strong>Slow</strong></p>
 <ul>
 <li>Description: You selectively bend the nature of time</li>
-<li>Mechanic: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature. </li>
+<li>Mechanic: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature</li>
 <li>XP: 2</li>
-<li>PP: 2</li>
-<li>Prereq_Role: Support or Caster</li>
-<li>Prereq_Level: 3</li>
+<li>Prereq Role: Support or Caster</li>
+<li>Prereq Level: 3</li>
 </ul>
 <p><strong>Shield, Others</strong></p>
 <ul>
 <li>Description: Fortify others by summoning magical armor.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support</li>
+<li>Prereq Role: Support</li>
 </ul>
 <p><strong>Shield, Self</strong></p>
 <ul>
 <li>Description: Fortify yourself even further, adjusting your shield or summoning magical armor.</li>
-<li>Mechanic: Minor. For 1 or 2 PP, Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.. </li>
+<li>Mechanic: Minor. For 1 or 2 PP, Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Defender</li>
+<li>Prereq Role: Defender</li>
 </ul>
 <h3 id="distract">Distract<a class="headerlink" href="#distract" title="Permanent link">&para;</a></h3>
 <p><strong>Lend Distraction</strong></p>
@@ -967,11 +920,10 @@
 <p><strong>Lend Mass Distraction</strong></p>
 <ul>
 <li>Description: You know how to cause a scene.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Power: Lend Distraction</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Power: Lend Distraction</li>
 <li>Tags: Multi-target</li>
 </ul>
 <h2 id="weapon-attacks">Weapon Attacks<a class="headerlink" href="#weapon-attacks" title="Permanent link">&para;</a></h2>
@@ -980,58 +932,55 @@
 <li>Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.</li>
 <li>Mechanic: Major. As a Major Action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.</li>
 <li>XP: 1</li>
-<li>Prereq_Skill: Finesse &gt; 0 or Brute &gt; 0</li>
+<li>Prereq Skill: Finesse &gt; 0 or Brute &gt; 0</li>
 </ul>
 <p><strong>Attack, Charge</strong></p>
 <ul>
 <li>Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.</li>
-<li>Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss. </li>
+<li>Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Defender or Martial</li>
-<li>Prereq_Power: Attack, Weapon</li>
+<li>Prereq Role: Defender or Martial</li>
+<li>Prereq Power: Attack, Weapon</li>
 </ul>
 <p><strong>Attack, Sweep</strong></p>
 <ul>
 <li>Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!</li>
-<li>Mechanic: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down. </li>
+<li>Mechanic: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Martial or Defender</li>
-<li>Prereq_Power: Attack, Weapon</li>
+<li>Prereq Role: Martial or Defender</li>
+<li>Prereq Power: Attack, Weapon</li>
 <li>Tags: Multi-target</li>
 </ul>
 <p><strong>Attack, Disarm</strong></p>
 <ul>
 <li>Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.</li>
-<li>Mechanic: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield. </li>
+<li>Mechanic: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield</li>
 <li>XP: 2</li>
-<li>PP: 1</li>
-<li>Prereq_Role: Martial or Defender</li>
+<li>Prereq Role: Martial or Defender</li>
 </ul>
 <p><strong>Attack, Vengeance</strong></p>
 <ul>
 <li>Description: Ever the protector on the field, you leap at the chance to avenge an ally.</li>
 <li>Mechanic: Major. When an ally takes damage in combat, you may take a Weapon Attack against the attacker on your next turn with the Upper Hand.</li>
 <li>XP: 1</li>
-<li>Prereq_Role: Defender</li>
-<li>Prereq_Power: Attack, Weapon</li>
+<li>Prereq Role: Defender</li>
+<li>Prereq Power: Attack, Weapon</li>
 </ul>
 <p><strong>Attack, Dual-Wield</strong></p>
 <ul>
 <li>Description: You are adept at wielding two weapons in combat.</li>
 <li>Mechanic: Minor. On your turn, you may make a second attack as a Minor Action with Lower Hand.</li>
 <li>XP: 3</li>
-<li>Prereq_Skill: Finesse &gt; 1 or Brute &gt; 1</li>
-<li>Prereq_Power: Attack, Weapon</li>
+<li>Prereq Skill: Finesse &gt; 1 or Brute &gt; 1</li>
+<li>Prereq Power: Attack, Weapon</li>
 </ul>
 <p><strong>Attack, Dual-Wield Master</strong></p>
 <ul>
 <li>Description: You are a master of wielding two weapons in combat.</li>
 <li>Mechanic: Minor. On your turn, you may make a second attack as a Minor Action. When making this attack, you no longer draw with the Lower Hand.</li>
 <li>XP: 1</li>
-<li>Prereq_Level: 3</li>
-<li>Prereq_Power: Attack, Dual-Wield</li>
+<li>Prereq Level: 3</li>
+<li>Prereq Power: Attack, Dual-Wield</li>
 </ul>
 <h1 id="companion">Companion<a class="headerlink" href="#companion" title="Permanent link">&para;</a></h1>
 <p><strong>Creature Connection</strong></p>
@@ -1039,7 +988,7 @@
 <li>Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.</li>
 <li>Mechanic: Passive. At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.</li>
 <li>XP: 5</li>
-<li>Prereq_Skill: Craft &gt; 0 or Knowledge &gt; 0</li>
+<li>Prereq Skill: Craft &gt; 0 or Knowledge &gt; 0</li>
 <li>Tags: Companion</li>
 </ul>
 <p><strong>Creature Link</strong></p>
@@ -1047,8 +996,8 @@
 <li>Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.</li>
 <li>Mechanic: Passive. Some checks can now be made through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion.</li>
 <li>XP: 2</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Power: Creature Connection</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Power: Creature Connection</li>
 <li>Tags: Companion</li>
 </ul>
 <p><strong>Creature Mastery</strong></p>
@@ -1056,8 +1005,8 @@
 <li>Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.</li>
 <li>Mechanic: Passive. Your Companion gains 1 Health Point and +1 to their Primary Skill modifier.</li>
 <li>XP: 2</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Power: Creature Connection</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Power: Creature Connection</li>
 <li>Tags: Companion</li>
 </ul>
 <h1 id="discard-limit-one-per-character">Discard (limit one per character)<a class="headerlink" href="#discard-limit-one-per-character" title="Permanent link">&para;</a></h1>
@@ -1066,38 +1015,37 @@
 <li>Description: Protecting your friends means taking the big hits.</li>
 <li>Mechanic: Minor. Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)</li>
 <li>XP: 0</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 </ul>
 <p><strong>Help</strong></p>
 <ul>
 <li>Description: You're there just when your friends need you.</li>
 <li>Mechanic: Minor. Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn</li>
 <li>XP: 0</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 </ul>
 <p><strong>Thwart</strong></p>
 <ul>
 <li>Description: You have a few tricks up your sleeve for drawing the enemy's attention.</li>
 <li>Mechanic: Minor. Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn</li>
 <li>XP: 0</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 </ul>
 <p><strong>Intensify</strong></p>
 <ul>
 <li>Description: An explosive attack might mean running out of gas.</li>
 <li>Mechanic: Minor. Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses</li>
 <li>XP: 0</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 </ul>
 <h1 id="game-mechanics">Game Mechanics<a class="headerlink" href="#game-mechanics" title="Permanent link">&para;</a></h1>
 <h2 id="adjust-odds">Adjust Odds<a class="headerlink" href="#adjust-odds" title="Permanent link">&para;</a></h2>
 <p><strong>Fated Draw</strong></p>
 <ul>
 <li>Description: Your connection to the Fates is heightened and you feel you can shift the odds in your favor.</li>
-<li>Mechanic: Major. For 2 PP, When making a Check, you can draw with the Upper Hand (3).. </li>
+<li>Mechanic: Major. For 2 PP, When making a Check, you can draw with the Upper Hand (3).</li>
 <li>XP: 2</li>
-<li>PP: 2</li>
-<li>Prereq_Level: 3</li>
+<li>Prereq Level: 3</li>
 </ul>
 <p><strong>Lucky</strong></p>
 <ul>
@@ -1116,52 +1064,50 @@
 <p><strong>Scrying</strong></p>
 <ul>
 <li>Description: Your intuition is heightened and you can anticipate moments coming in the near future.</li>
-<li>Mechanic: Major. For 1 PP, You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again. </li>
+<li>Mechanic: Major. For 1 PP, You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again</li>
 <li>XP: 1</li>
-<li>PP: 1</li>
-<li>Prereq_Level: 2</li>
+<li>Prereq Level: 2</li>
 <li>Tags: Card Viewing</li>
 </ul>
 <p><strong>Scrying, Advanced</strong></p>
 <ul>
 <li>Description: Your connection to this divine sense has strengthened.</li>
-<li>Mechanic: Major. For 2 PP, You can a look at your top 3 cards of your deck and discard up to three of them. You must make a Draw before using this Power again.. </li>
+<li>Mechanic: Major. For 2 PP, You can a look at your top 3 cards of your deck and discard up to three of them. You must make a Draw before using this Power again.</li>
 <li>XP: 2</li>
-<li>PP: 2</li>
-<li>Prereq_Level: 3</li>
-<li>Prereq_Power: Scrying</li>
+<li>Prereq Level: 3</li>
+<li>Prereq Power: Scrying</li>
 <li>Tags: Card Viewing</li>
 </ul>
 <h2 id="fate-cards">Fate Cards<a class="headerlink" href="#fate-cards" title="Permanent link">&para;</a></h2>
 <p><strong>Aces Wild</strong></p>
 <ul>
 <li>Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.</li>
-<li>Mechanic: Passive. Rather than re-drawing using an Ace, you can use Aces as an Action to trigger an effect corresponding to their suit. When you choose this Power (up to twice), select two of the following effects.</li>
-<li>Ace of Clubs: you can play this card to interrupt an enemy's turn and make a single Major ction - even if you already went that round</li>
-<li>Ace of Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP</li>
-<li>Ace of Hearts: As a Minor Action, you can heal 2 HP for yourself or an ally you can see within 5 squares</li>
-<li>Ace of Spades: As a Minor Action, you can strike an enemy with an automatic hit with a Power of your choosing</li>
+<li>Mechanic: Passive. You can trade a held Ace for one of the following effects:<ul>
+<li>Clubs: you can play this card to interrupt an enemy's turn and make a single Major Action - even if you already went that round</li>
+<li>Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP</li>
+<li>Hearts: As a Minor Action, you can heal yourself or an ally you can see within 5 squares 2 HP</li>
+<li>Spades: Select one of your Powers with a cost of up to 1 PP to use as a Minor Action. You may decide if any draws required by this Power succeed or fail.</li>
+</ul>
+</li>
 <li>XP: 2</li>
-<li>Prereq_Level: 3</li>
+<li>Prereq Level: 3</li>
 <li>Tags: Fate Cards</li>
 </ul>
 <h1 id="magic">Magic<a class="headerlink" href="#magic" title="Permanent link">&para;</a></h1>
 <p><strong>Barrier</strong></p>
 <ul>
 <li>Description: Your skills allow you to deploy temporary impromptu walls</li>
-<li>Mechanic: Major. For 1 or 2 PP, You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Support or Caster</li>
+<li>Prereq Role: Support or Caster</li>
 </ul>
 <p><strong>Illusion</strong></p>
 <ul>
 <li>Description: Your skills let you conjure illusory effects.</li>
-<li>Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand. </li>
+<li>Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Role: Caster</li>
-<li>Prereq_Skill: Knowledge &gt; 0</li>
+<li>Prereq Role: Caster</li>
+<li>Prereq Skill: Knowledge &gt; 0</li>
 </ul>
 <h1 id="movement">Movement<a class="headerlink" href="#movement" title="Permanent link">&para;</a></h1>
 <h2 id="speed">Speed<a class="headerlink" href="#speed" title="Permanent link">&para;</a></h2>
@@ -1172,13 +1118,25 @@
 <li>XP: 1</li>
 <li>Tags: Combat</li>
 </ul>
+<p><strong>Favored Terrain</strong></p>
+<ul>
+<li>Description: Home feels more familiar, granting a speed boost.</li>
+<li>Mechanic: Passive. Work with your GM to decide a favored terrain (e.g., mountains). Gain +2 speed on this terrain.</li>
+<li>XP: 1</li>
+</ul>
+<p><strong>Terrain Blink</strong></p>
+<ul>
+<li>Description: So at home that you can get anywhere.</li>
+<li>Mechanic: Minor. Work with your GM to decide a favored terrain (e.g., mountains). When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.</li>
+<li>XP: 3</li>
+</ul>
 <h2 id="stealth">Stealth<a class="headerlink" href="#stealth" title="Permanent link">&para;</a></h2>
 <p><strong>Stealthy Surprise</strong></p>
 <ul>
 <li>Description: An undetected assailant is particularly deadly.</li>
 <li>Mechanic: Minor. You attempt to hide from nearby creatures.</li>
 <li>XP: 1</li>
-<li>Prereq_Skill: Stealth &gt; 1</li>
+<li>Prereq Skill: Stealth &gt; 1</li>
 <li>Tags: Stealth</li>
 </ul>
 <p><strong>Stealth in the Shadows</strong></p>
@@ -1186,48 +1144,62 @@
 <li>Description: A creature of the dark, you're especially adept at going unseen.</li>
 <li>Mechanic: Passive. When you make a Stealth check in dim light or darkness, you draw with the Upper Hand.</li>
 <li>XP: 1</li>
-<li>Prereq_Skill: Stealth &gt; 1</li>
+<li>Prereq Skill: Stealth &gt; 1</li>
 <li>Tags: Stealth</li>
 </ul>
 <p><strong>Stealth's Call</strong></p>
 <ul>
 <li>Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.</li>
-<li>Mechanic: Major. For 1 PP, You cause an illusory sound to emanate from a point you can see within 10 spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand until they leave the area.. </li>
+<li>Mechanic: Major. For 1 PP, You cause an illusory sound to emanate from a point you can see within 10 spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand until they leave the area.</li>
 <li>XP: 1</li>
-<li>PP: 1</li>
-<li>Prereq_Skill: Stealth &gt; 1</li>
+<li>Prereq Skill: Stealth &gt; 1</li>
 <li>Tags: Stealth or Multi-target</li>
 </ul>
 <p><strong>Stealth's Blessing</strong></p>
 <ul>
 <li>Description: You channel a deep energy to go unseen.</li>
-<li>Mechanic: Major. For 1 or 2 PP, Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.. </li>
+<li>Mechanic: Major. For 1 or 2 PP, Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.</li>
 <li>XP: 2</li>
-<li>PP: 1 or 2</li>
-<li>Prereq_Skill: Stealth &gt; 2</li>
+<li>Prereq Skill: Stealth &gt; 2</li>
 <li>Tags: Stealth or Multi-target</li>
+</ul>
+<h1 id="resilience">Resilience<a class="headerlink" href="#resilience" title="Permanent link">&para;</a></h1>
+<p><strong>Condition Resilience</strong></p>
+<ul>
+<li>Description: Through training or sheer will, you brace your body for trials ahead.</li>
+<li>Mechanic: Passive. Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand.</li>
+<li>XP: 1</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Skill: VIT &gt; 1</li>
+</ul>
+<p><strong>Condition Immunity</strong></p>
+<ul>
+<li>Description: Through training or sheer will, your body is impervious.</li>
+<li>Mechanic: Passive. Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. You are now immune to this condition.</li>
+<li>XP: 3</li>
+<li>Prereq Level: 3</li>
+<li>Prereq Skill: VIT &gt; 2</li>
 </ul>
 <h1 id="roleplay">Roleplay<a class="headerlink" href="#roleplay" title="Permanent link">&para;</a></h1>
 <p><strong>Calculating</strong></p>
 <ul>
 <li>Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.</li>
-<li>Mechanic: Major. For 1 PP, Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., &gt; 2) of this action before anyone chooses to take it.. </li>
+<li>Mechanic: Major. For 1 PP, Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., &gt; 2) of this action before anyone chooses to take it.</li>
 <li>XP: 1</li>
-<li>PP: 1</li>
-<li>Prereq_Level: 2</li>
-<li>Prereq_Skill: Knowledge &gt; 1 or Investigation &gt; 1</li>
+<li>Prereq Level: 2</li>
+<li>Prereq Skill: Knowledge &gt; 1 or Investigation &gt; 1</li>
 <li>Tags: Difficulty Prediction</li>
 </ul>
 <p><strong>Cunning</strong></p>
 <ul>
 <li>Description: You're sharper than the rest when you take your time.</li>
-<li>Mechanic: Passive. Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.</li>
+<li>Mechanic: Passive. Choose one Skill other than your Primary Skill.. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.</li>
 <li>XP: 1</li>
 </ul>
 <p><strong>Focused</strong></p>
 <ul>
 <li>Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.</li>
-<li>Mechanic: Passive. Choose one Skill. When engaged in a non-instantaneous task that involves that skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.</li>
+<li>Mechanic: Passive. Choose one Skill.. When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.</li>
 <li>XP: 0</li>
 </ul>
 <p><strong>Handy</strong></p>
@@ -1235,7 +1207,7 @@
 <li>Description: You know how to work with your hands (e.g., machining, lock picking, tailoring).</li>
 <li>Mechanic: Passive. Work with your GM to decide a trade with which your character is familiar. When making a check to to perform this craft, draw with the Upper Hand.</li>
 <li>XP: 1</li>
-<li>Prereq_Skill: Craft &gt; 1 or Knowledge &gt; 1</li>
+<li>Prereq Skill: Craft &gt; 1 or Knowledge &gt; 1</li>
 </ul>
 <p><strong>Keen Eye</strong></p>
 <ul>
@@ -1273,9 +1245,7 @@
               
                 
               
-              
-                Thanks for your feedback!
-              
+              Thanks for your feedback!
             </div>
           
             <div data-md-value="0" hidden>
@@ -1283,9 +1253,7 @@
               
                 
               
-              
-                Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Powers+-+/1_Mechanics/04_Powers/" target="_blank" rel="noopener">GitHub issue</a>.
-              
+              Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+Powers+-+/1_Mechanics/04_Powers/" target="_blank" rel="noopener">GitHub issue</a>.
             </div>
           
         </div>
@@ -1309,42 +1277,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../03_CharacterCreation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Character Creation" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Character Creation
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../05_Vulnerabilities/" class="md-footer__link md-footer__link--next" aria-label="Next: Vulnerabilities" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Vulnerabilities
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1384,12 +1316,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
       
-    
     
   </body>
 </html>
