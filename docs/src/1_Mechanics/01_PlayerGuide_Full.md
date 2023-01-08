@@ -562,12 +562,18 @@ with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they
 used. Fate, Health, and Armor Points all return to
 their maximum. Rest Cards return to their full value after a Full Rest.
 
+### Fatigue
+
 If you run out of cards before you can successfully take a Rest, you suffer
-one level of *Fatigue*. Reshuffle your deck and draw all Checks with the
-Lower Hand. Each time you need to reshuffle your deck in this way adds
-another level of Fatigue. If you were to suffer a fourth level of Fatigue,
-you are Knocked Out instead. This signifies your character running out of
-Stamina during a long day.
+one level of *Fatigue*. This signifies your character running out of
+Stamina during a long day. Consult the list below for the consequences at each level of
+fatigue.
+
+1. Lower hand (1) on saves.
+2. Lower hand (1) on all checks.
+3. Movement halved and Fate Cards cannot be used to gain Upper Hand.
+4. PP expenditure requirements doubled.
+5. Knocked Out
 
 ### Discard Powers
 
