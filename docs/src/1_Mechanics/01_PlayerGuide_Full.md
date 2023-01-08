@@ -46,7 +46,8 @@ Cards, even when shuffling the deck.
 3. Players will use their deck to do most anything; it represents their character's
 stamina until they complete a Rest. When the Action Deck is empty and a player has to
 shuffle between rests, they draw with the
-[Lower Hand (1+)](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would shuffle when resting.
+[Lower Hand (1+)](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would
+shuffle when resting.
 
 ## Fate Cards
 
@@ -69,8 +70,7 @@ redraw. Only one redraw is permitted per check.
     2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
 
     3. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This must be
-    done before the end of the Player's next turn after recieving damage.
-
+    done before the end of the Player's next turn after receiving damage.
 
 5. A GM may award a Fate Card (as pulled from the player's discard pile or signified by
 another token) to a player for excellent play, including exemplifying their character’s
@@ -186,9 +186,9 @@ Once the DR has been announced, players must make the check. Players may consult
 their GM to determine if another Attribute or Skill may be used instead. A player will
 draw one or more cards. Immediately after drawing, a player will apply any relevant
 Modifiers before reporting the outcome and whether or not they have successfully fallen
-within the DR. A Modifier is added to the DR when a check is made. A Modifier is indicated on the character sheet
-next to the relevant Skill or Attribute related to the Check. Think of it as a
-character's ability to 'aim' a check to get closer to the TC.
+within the DR. A Modifier is added to the DR when a check is made. A Modifier is
+indicated on the character sheet next to the relevant Skill or Attribute related to the
+Check. Think of it as a character's ability to 'aim' a check to get closer to the TC.
 
 The GM may describe the nature of the outcome or announce the degree of success and ask
 the player to describe how their character successfully accomplishes the action.
@@ -339,12 +339,15 @@ and need more time to think.
 
 Each turn represents 6 seconds of game time passing. On a turn, a character may
 (a) move, (b) perform 1 Major Action, and/or (c) perform 1 Minor Action in any order
-they choose. They may also perform any number of Free Actions, within reason, as
-permitted by the GM.
+they choose. They may also perform any number of Free Actions, within reason (approx 5),
+as permitted by the GM.
 
 1. **Movement** By default, character speed is equal to 6, but may be faster or slower.
 Speed is the total number of spaces a character can move in a turn. This total may be
-split to occur before, after, and/or between actions. A creature can move through a friendly creature's space as part of their movement but can not end their turn on that space. A creature cannot move through a hostile creature's space or between two hostile creatures' spaces if they are within one space of one another.
+split to occur before, after, and/or between actions. A creature can move through a
+friendly creature's space as part of their movement but can not end their turn on that
+space. A creature cannot move through a hostile creature's space or between two hostile
+creatures' spaces if they are within one space of one another.
 
 2. **Actions** The list below are possible Minor/Major Actions, but a GM may permit
 others. If an action specifies a skill, this requires a check.
@@ -404,9 +407,10 @@ they are successful, they may not move and any Agility Saves are made with Lower
 Hand.
 
 3. **Knocked Down** A Dealer must expend a Minor Action to get up. Their movement speed
-is halved, rounding up. All STR and AGL Saves are made with Lower Hand. When
-Knocked Down, attackers within 1 space draw with Upper Hand and attackers further than
-1 space away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of their movement, gaining the Knocked Down status.
+is halved, rounding up. All STR and AGL Saves are made with Lower Hand. When Knocked
+Down, attackers within 1 space draw with Upper Hand and attackers further than 1 space
+away draw with Lower Hand. A creature can spend 1 speed to willingly go prone as part of
+their movement, gaining the Knocked Down status.
 
 4. **Blinded, Deafened** At the start of their turn, as a Free Action, a Dealer makes a
 DR 3 Intuition Save. If they fail, they draw Lower Hand (3) for any
@@ -569,11 +573,11 @@ Each Dealer may have one Discard Power. Dealers may discard cards as
 a Minor Action for additional benefits in combat starting at Level 2. For
 every 2 cards discarded, up to a limit of 4, an Upper/Lower Hand +1 is
 granted described below. These effects do not stack; only one may be applied
-to a character at a time. Cards are discarded and cannot yeild Fate Cards.
+to a character at a time. Cards are discarded and cannot yield Fate Cards.
 
 Below is a list of possible Discard Powers, determined by Role. Work with your GM if you
 would like to use a different Discard Power instead.
-<!-- Specifying in combat until we can revsit non-combat uses of agro and thwart -->
+<!-- Specifying in combat until we can revisit non-combat uses of aggro and thwart -->
 
 - Aggro: Discard N cards to force all creatures within 2 spaces to make
   their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2).
@@ -611,7 +615,8 @@ available.
 - A dark alley in a city with some light spilling over from a nearby street.
 - An underground room with some candles burning lightly.
 
-**Full Darkness:** When making a Detection or Investigation Check in full darkness, draw with the Lower Hand (3). For example...
+**Full Darkness:** When making a Detection or Investigation Check in full darkness, draw
+with the Lower Hand (3). For example...
 
 - A moonless night in the countryside without any light source.
 - Descending into a cave without a light source.
@@ -640,8 +645,10 @@ creature may be covered from one direction but not from another direction.
 #### Falling
 
 Falling from a great height is dangerous. At the end of a fall, a creature takes 1
-damage and applies -1 speed for every 2 space equivalent in height it fell and the creature is Knocked Down.
-This speed is recovered after a Rest or if the creature is healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the penalty from falling.
+damage and applies -1 speed for every 2 space equivalent in height it fell and the
+creature is Knocked Down. This speed is recovered after a Rest or if the creature is
+healed to their maximum HP. Your GM may allow for an Agility Save to mitigate the
+penalty from falling.
 
 #### Challenging Terrain
 
@@ -651,7 +658,8 @@ standing in Challenging Terrain, all Agility Saves are made with the Lower Hand.
 
 #### Holding Breath
 
-A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage without air reduces this time by 1 minute. After this time, the character
+A character can go without air for 1 + 2 times Vitality Mod minutes. Taking damage
+without air reduces this time by 1 minute. After this time, the character
 gains the *Suffocating* Status Condition.
 
 Some Powers or effects can extend this time limit or prevent a character from
@@ -668,8 +676,8 @@ Skills.
 - A [Background](./03_CharacterCreation#decide-your-background) is descriptive about of
   character's history and where they are when you begin your adventure.
 
-- [A Role](./03_CharacterCreation#choose-your-role) is a general class the unlocks access to
-  certain abilities.
+- [A Role](./03_CharacterCreation#choose-your-role) is a general class the unlocks
+  access to certain abilities.
 
 - Attributes cost more, but also increase corresponding skills.
 
@@ -694,7 +702,8 @@ There are four steps to starting an adventure of Deck of Adventures:
 
 1. **Find a group:** Deck of Adventures requires as few as two people, one Game Master
 ( GM) and one player, but richer stories can be told with more people bringing more to
-the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF) to find a group! (if this link is expired, please
+the table. Join the Deck of Adventures [Discord Server](https://discord.gg/dk6RfWgPHF)
+to find a group! (if this link is expired, please
 [submit an issue](https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=bug&template=bug_report.md&title=Expired%20Discord%20Link!))
 
 2. **Discuss play style:** Different players and GMs will have different preferences.

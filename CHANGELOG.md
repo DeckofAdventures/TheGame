@@ -16,11 +16,12 @@ the nature of these changes.
 
 ## [1.0.0a5] - UNRELEASED
 
-+ Added Bestiary YAML
 + Updated name of Fate Points to Power Points
 + Updated repo structure for mkdocs
 + Added combined Power/Vulnerability spreadsheet
-+ Updated python conversion tool to be object oriented
++ Add python conversion tool to import yaml, output csv and markdown
++ Added dataclass object to handle Power and Beast information
++ Added Bestiary
 
 ## [1.0.0a4] - 2022-08-14
 
