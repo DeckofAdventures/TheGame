@@ -100,7 +100,6 @@ Spider Queen:
     - Barrier
     - Condition Immunity: Poisoned
     - Dumb
-    - DoesNotExist
     - Eye for an Eye
     - Favored Terrain: Web
     - Lend Distraction
@@ -120,7 +119,6 @@ Grunt:
     INT: -1
   Powers:
     - Attack, Weapon
-    - Clumsy, Minor
   Level: 1
   Description: A low level soldier.
 

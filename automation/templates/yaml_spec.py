@@ -13,6 +13,7 @@ class YamlSpec(ABC):
 
         If file not found at input_file relative path, adds ./automation/_input/
         """
+        self._md_TOC = ""
         self._raw_data = {}
         self._categories = set()
         self._category_hierarchy = None

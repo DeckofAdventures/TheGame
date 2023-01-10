@@ -225,7 +225,14 @@ class Beast:
         self.Skills = Skills(**self.Skills) if self.Skills else None
         self.Phases = self.fetch_phases() if self.Phases else None
         self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
-        self.RestCards = self.HP + self.PP
+        self.HP_Max = self.HP  # assume providing max when initializing
+        self.AP_Max = self.AP
+        self.AR_Max = self.AR
+        self.PP_Max = self.PP
+        self.Speed_Max = self.Speed
+        self.RestCards = self.HP
+        self.RestCards_Max = self.HP
+
         self.override_stats()
 
     def fetch_powers(self) -> dict:
@@ -337,11 +344,11 @@ class Beast:
         # TODO: Modify so it aligns with how markdown takes top_level_stats
         # Why separate AR for the PC sheet but not the markdown?
         return [
-            ("HP", self.HP),
-            ("AP", self.AP),
-            ("PP", self.PP),
-            ("Speed", self.Speed),
-            ("Rest Cards", self.RestCards),
+            ("HP", self.HP, self.HP_Max),
+            ("AP", self.AP, self.AP_Max),
+            ("PP", self.PP, self.PP_Max),
+            ("Speed", self.Speed, self.Speed_Max),
+            ("Rest Cards", self.RestCards, self.RestCards_Max),
         ]
 
     def _html(self, items=None):

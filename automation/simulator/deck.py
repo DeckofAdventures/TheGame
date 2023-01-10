@@ -1,6 +1,7 @@
 # Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
+from typing import Union
 
 from ..utils.logger import logger
 
@@ -99,7 +100,7 @@ class Deck(object):
         from automation.simulation.deck import Deck
         d=Deck()
         d.draw()
-        > A♦️
+        > A<>
         d.check(TC=Card("S","A"),TR=3)
         > [INFO]: Drew ♦️ 8 vs ♠️ A with TR 3: Miss
 
@@ -120,6 +121,17 @@ class Deck(object):
         self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
         self.hand.extend(self._jokers)
         self.shuffle()
+        self.result_types = {
+            "Critical Success": 5,
+            "Major Success": 4,
+            "Suited Hit": 3,
+            "Color Hit": 2,
+            "Hit": 1,
+            "Suited Miss": -1,
+            "Color Miss": -2,
+            "Miss": -3,
+        }
+        self.result_types.update(dict([reversed(i) for i in self.result_types.items()]))
 
     def __repr__(self):
         """Result of print(Deck)"""
@@ -164,15 +176,16 @@ class Deck(object):
             self.discards.append(card)
         logger.info(f"Exchanged Fate Card: {card}")
 
-    def check(self, TC: Card, TR: int, mod: int = 0):
+    def _basic_check(self, TC: Card, TR: int) -> Union[None, int]:
         """Return string corresponding to check 'Hit/Miss/Color/Suit' etc
 
         Args:
             TC (Card): Target card
             TR: (int): Target Range
             mod (int): TR modifier
+            return_val (bool): Return the string. Default False.
         """
-        TR = abs(TR) + mod
+        TR = abs(TR)
         draw = self.draw()
         result = ""
         if draw is None:
@@ -187,4 +200,58 @@ class Deck(object):
             elif draw.color == TC.color:
                 result += "Color "
             result += "Hit" if draw.val in TC.range(TR) else "Miss"
-        logger.info(f"Drew {draw} vs {TC} with TR {TR}: {result}")
+        return (draw, self.result_types[result])  # Return (draw, int)
+
+    def check(
+        self,
+        TC: Card,
+        TR: int,
+        mod: int = 0,
+        upper_lower: str = "none",
+        draw_n: int = 1,
+        draw_all: bool = False,
+        return_val: bool = False,
+    ) -> Union[None, int]:
+        """Log string corresponding to check 'Hit/Miss/Color/Suit' etc
+
+        Args:
+            TC (Card): Target card
+            TR: (int): Target Range
+            mod (int): TR modifier
+            upper_lower (str): 'upper' or 'lower' Hand ('u' or 'l'). Default neither.
+            draw_n (int): How many to draw. If upper/lower, default 2. Otherwise 1.
+            draw_all (bool): If upper hand, draw all before stopping. Default false.
+            return_val (bool): Return the string. Default False.
+        """
+        TR = abs(TR) + mod  # Apply mod to non-negative TR
+        draw_n = abs(draw_n)  # Ensure not negative
+        upper_lower = upper_lower[0].upper()
+
+        if upper_lower == "N":
+            draw_n = 1
+        elif draw_n == 1:  # If upper or lower, make sure is minimum 2
+            draw_n = 2
+
+        results = []
+        draws = []
+
+        for _ in range(draw_n):
+            draw, this_result = self._basic_check(TC, TR)
+            draws.append(draw)
+            results.append(this_result)
+            if results[-1] > 0 and not draw_all and upper_lower == "U":
+                break  # If success (>0) and not draw-all with upper, stop drawing
+
+        ul_str = ""
+        if upper_lower == "U":
+            ul_str = f" at Upper Hand {draw_n}"
+        elif upper_lower == "L":
+            ul_str = f" at Lower Hand {draw_n}"
+
+        result = max(results) if upper_lower == "U" else min(results)
+        logger.info(
+            f"Drew {draws} vs {TC} with TR {TR}{ul_str}: {self.result_types[result]}"
+        )
+
+        if return_val:
+            return result
