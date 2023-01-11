@@ -114,7 +114,7 @@ class Deck(object):
         hand (list): jokers and fate cards in hand
     """
 
-    def __init__(self):
+    def __init__(self, use_TC=True):
         self.cards, self.hand, self.discards = [], [], []
         self._jokers = [Card("B", "Joker"), Card("R", "Joker")]
         self.suits = ("C", "D", "H", "S")
@@ -122,6 +122,7 @@ class Deck(object):
         # "Start" with all discarded. Shuffle assumes only shuffle from discard to cards
         self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
         self.hand.extend(self._jokers)
+        self._use_TC = use_TC
         self._TC = None
         self.shuffle()
         self.result_types = {
@@ -159,11 +160,12 @@ class Deck(object):
         self.cards.extend(self.discards[:limit])
         self.discards = self.discards[limit:]
         random.shuffle(self.cards)
-        self.draw_TC()
+        if self._use_TC:
+            self.draw_TC()
 
     @property
     def TC(self):
-        if not self._TC:
+        if not self._TC and self._use_TC:
             self.draw_TC
         return self._TC
 
@@ -181,6 +183,11 @@ class Deck(object):
         else:
             self.discards.append(card)
         return card
+
+    def discard(self, n):
+        """Draw n cards, return none. Discard/hand as normal"""
+        for _ in range(n):
+            _ = self.draw()
 
     def exchange_fate(self):
         """Move fate card from hand. If Ace, add to discard"""
