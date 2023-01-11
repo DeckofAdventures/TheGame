@@ -7,7 +7,7 @@ import yaml
 from .list_manip import list_to_or
 
 
-def my_repr(self):
+def my_repr(self, seperator: str = "\n", indent: int = 0):
     """Print formatting for custom dataclasses"""
     nodef_f_vals = (
         (f.name, attrgetter(f.name)(self))
@@ -15,9 +15,12 @@ def my_repr(self):
         # Only print if it is not the default, and it is marked for inclusion in repr
         if attrgetter(f.name)(self) != f.default and f.repr
     )
+    tabs = "\t" * indent
     # Separate fields with \n newlines
-    nodef_f_repr = "\n".join(f"{name}={value}" for name, value in nodef_f_vals)
-    return f"{self.__class__.__name__}\n({nodef_f_repr})"
+    nodef_f_repr = f"{seperator}{tabs}".join(
+        f"{name}={value}" for name, value in nodef_f_vals
+    )
+    return f"{self.__class__.__name__}{seperator}{tabs}({nodef_f_repr})"
 
 
 def load_yaml(input_yaml: str):

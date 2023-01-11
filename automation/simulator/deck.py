@@ -1,8 +1,10 @@
 # Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
+from dataclasses import fields
 from typing import Union
 
+from ..templates.bestiary import Beast
 from ..utils.logger import logger
 
 
@@ -87,10 +89,10 @@ class Card(object):
         """Returns unique value to represent card"""
         return hash((self.suit, self.val))
 
-    def range(self, TR: int):
+    def range(self, DR: int):
         """Returns list of cards in a TR range"""
-        TR = abs(TR)
-        return [self + diff for diff in range(-TR, TR + 1)]
+        DR = abs(DR)
+        return [self + diff for diff in range(-DR, DR + 1)]
 
 
 class Deck(object):
@@ -100,7 +102,7 @@ class Deck(object):
         from automation.simulation.deck import Deck
         d=Deck()
         d.draw()
-        > A<>
+        > ♦️ A
         d.check(TC=Card("S","A"),TR=3)
         > [INFO]: Drew ♦️ 8 vs ♠️ A with TR 3: Miss
 
@@ -120,6 +122,7 @@ class Deck(object):
         # "Start" with all discarded. Shuffle assumes only shuffle from discard to cards
         self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
         self.hand.extend(self._jokers)
+        self._TC = None
         self.shuffle()
         self.result_types = {
             "Critical Success": 5,
@@ -127,6 +130,7 @@ class Deck(object):
             "Suited Hit": 3,
             "Color Hit": 2,
             "Hit": 1,
+            "No result": 0,
             "Suited Miss": -1,
             "Color Miss": -2,
             "Miss": -3,
@@ -135,9 +139,11 @@ class Deck(object):
 
     def __repr__(self):
         """Result of print(Deck)"""
-        output = f"Deck: {[c for c in self.cards]}\n"
-        output += f"Discards: {[d for d in self.discards]}\n"
-        output += f"Hand {[h for h in self.hand]}\n"
+        output = ""
+        output += f"TC      : {self.TC}\n"
+        output += f"Hand    :  {len(self.hand):02d}\n"
+        output += f"Deck    :  {len(self.cards):02d}\n"
+        output += f"Discards:  {len(self.discards):02d}\n"
         return output
 
     def shuffle(self, limit=None):
@@ -153,8 +159,18 @@ class Deck(object):
         self.cards.extend(self.discards[:limit])
         self.discards = self.discards[limit:]
         random.shuffle(self.cards)
+        self.draw_TC()
 
-    def draw(self):
+    @property
+    def TC(self):
+        if not self._TC:
+            self.draw_TC
+        return self._TC
+
+    def draw_TC(self):
+        self._TC = self.draw()
+
+    def draw(self) -> Card:
         """Draw a card. If any available, return card"""
         if len(self.cards) == 0:
             logger.warning("No cards available in deck. Exhaustion not yet simulated.")
@@ -176,7 +192,7 @@ class Deck(object):
             self.discards.append(card)
         logger.info(f"Exchanged Fate Card: {card}")
 
-    def _basic_check(self, TC: Card, TR: int) -> Union[None, int]:
+    def _basic_check(self, TC: Card, DR: int) -> Union[None, int]:
         """Return string corresponding to check 'Hit/Miss/Color/Suit' etc
 
         Args:
@@ -185,7 +201,7 @@ class Deck(object):
             mod (int): TR modifier
             return_val (bool): Return the string. Default False.
         """
-        TR = abs(TR)
+        DR = abs(DR)
         draw = self.draw()
         result = ""
         if draw is None:
@@ -199,18 +215,19 @@ class Deck(object):
                 result += "Suited "
             elif draw.color == TC.color:
                 result += "Color "
-            result += "Hit" if draw.val in TC.range(TR) else "Miss"
+            result += "Hit" if draw.val in TC.range(DR) else "Miss"
         return (draw, self.result_types[result])  # Return (draw, int)
 
     def check(
         self,
         TC: Card,
-        TR: int,
+        DR: int,
         mod: int = 0,
         upper_lower: str = "none",
         draw_n: int = 1,
         draw_all: bool = False,
         return_val: bool = False,
+        verbose=True,
     ) -> Union[None, int]:
         """Log string corresponding to check 'Hit/Miss/Color/Suit' etc
 
@@ -223,7 +240,7 @@ class Deck(object):
             draw_all (bool): If upper hand, draw all before stopping. Default false.
             return_val (bool): Return the string. Default False.
         """
-        TR = abs(TR) + mod  # Apply mod to non-negative TR
+        DR = abs(DR) + mod  # Apply mod to non-negative TR
         draw_n = abs(draw_n)  # Ensure not negative
         upper_lower = upper_lower[0].upper()
 
@@ -236,7 +253,7 @@ class Deck(object):
         draws = []
 
         for _ in range(draw_n):
-            draw, this_result = self._basic_check(TC, TR)
+            draw, this_result = self._basic_check(TC, DR)
             draws.append(draw)
             results.append(this_result)
             if results[-1] > 0 and not draw_all and upper_lower == "U":
@@ -249,9 +266,132 @@ class Deck(object):
             ul_str = f" at Lower Hand {draw_n}"
 
         result = max(results) if upper_lower == "U" else min(results)
-        logger.info(
-            f"Drew {draws} vs {TC} with TR {TR}{ul_str}: {self.result_types[result]}"
-        )
+        if verbose:
+            logger.info(
+                f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
+            )
 
         if return_val:
             return result
+
+
+class Player(Deck):
+    def __init__(self, pc: Beast):
+        Deck.__init__(self)
+        self.pc = pc
+        self._valid_attribs = [f.name for f in fields(self.pc.Attribs)]
+        self._valid_mods = self._valid_attribs + [
+            f.name for f in fields(self.pc.Skills)
+        ]
+
+    def __repr__(self):
+        """Result of print(Player)"""
+        output = ""
+        output += "TC       : %02s | pc.HP : %d/%d\n" % (
+            self.TC,
+            self.pc.HP,
+            self.pc.HP_Max,
+        )
+        output += "Hand     :  %02d | pc.PP : %d/%d\n" % (
+            len(self.hand),
+            self.pc.PP,
+            self.pc.PP_Max,
+        )
+        output += "Deck     :  %02d | pc.AP : %d/%d\n" % (
+            len(self.cards),
+            self.pc.AP,
+            self.pc.AP_Max,
+        )
+        output += "Discards :  %02d | pc.AR : %d\n" % (len(self.discards), self.pc.AR)
+        return output
+
+    def check_by_skill(self, TC: Card, DR: int, skill: str, **kwargs):
+        """Accepts any Skill or Attrib. Accepts any valid args of Deck.check"""
+        assert (
+            skill in self._valid_mods
+        ), f"Could not find {skill} in {self._valid_mods}"
+        mod = getattr(self.pc.Skills, skill, None) or getattr(
+            self.pc.Attribs, skill, None
+        )
+        return self.check(TC, DR, mod=mod, **kwargs)
+
+    def save(self, DR: int = 3, attrib="None", **kwargs):
+        """Accepts any Attrib. Accepts any valid args of Deck.check"""
+        if attrib != "None":  # Default to mod of 0 when "None"
+            assert (
+                attrib in self._valid_attribs
+            ), f"Could not find {attrib} in {self._valid_attribs}"
+        return self.check(
+            TC=self.TC, DR=DR, mod=getattr(self.pc.Attribs, attrib, 0), **kwargs
+        )
+
+    def full_rest(self, **kwargs):
+        self.shuffle()
+        for i in ["HP", "PP", "AP", "RestCards"]:
+            setattr(self.pc, i, getattr(self.pc, i + "_Max"))
+
+    def quick_rest(self, **kwargs):
+        # Never uses Fate cards here
+        point_total = 0  # Recover HP/PP
+        while self.pc.RestCards > 0 and (
+            (self.pc.HP < self.pc.HP_Max) or (self.pc.PP < self.pc.PP_Max)
+        ):  # Will always fully recover with available rest cards
+            draw = self.save(return_val=True, **kwargs)
+            if not draw:
+                break
+            points = 2 if draw > 0 else 1
+            point_total += points
+            logger.debug(f"Recovering {points} with cards")
+            for _ in range(points):  # Prioritizes HP over PP
+                if self.pc.HP < self.pc.HP_Max:
+                    self.pc.HP += 1
+                    logger.debug(f"   1 HP to {self.pc.HP}")
+                    continue
+                if self.pc.PP < self.pc.PP_Max:
+                    self.pc.PP += 1
+                    logger.debug(f"   1 PP to {self.pc.PP}")
+            self.pc.RestCards -= 1
+
+        AP_check_mod = max([self.pc.Skills.Knowledge, self.pc.Skills.Craft])
+        down_AP = self.pc.AP_Max - self.pc.AP
+        while down_AP > 0:
+            draw = self.check(
+                TC=self.TC,
+                DR=max(0, 7 - down_AP),  # of below 7, 0
+                mod=AP_check_mod,
+                return_val=True,
+                **kwargs,
+            )
+            if not draw:
+                break
+            elif draw < 0:
+                down_AP -= 1  # Try again with recovering one less
+            else:
+                self.pc.AP += down_AP
+                logger.debug(f"Recovering {down_AP} AP to {self.pc.AP}")
+                point_total += down_AP
+                break
+
+        logger.info(f"Recovered {point_total} HP/PP/AP during Quick Rest")
+        self.shuffle(limit=(10 + self.pc.Attribs.VIT * 2))
+
+
+# class NPC(object):
+#     def __init__(self, TC: Card, TR:int, HP: int):
+#         self.TC = TC
+#         self.TR = TR
+#         self.HP = HP # This will need a setter property
+
+
+# class Encounter(object):
+#     def __init__(self):
+#         self.enemies = []
+#         gmdeck = Deck()
+
+#     def add_enemy(self, name: NPC):
+#         self.enemies.append()
+
+#     def attack_enemy(self, player: Player, enemy):
+#         result = player.deck.check(enemy.TC,enemy.TR,player.primary_skill_mod)
+#         # assigning result needs modification to check above to return val
+#         if 'Hit' in result or 'Success' result: enemy.HP -= 1

@@ -327,8 +327,8 @@ order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the s
 Target Card values as an enemy go first. If two players draw the same Target Card, they
 can decide who goes first. Without consensus, the player with the higher Agility
 modifier goes first. In the event of a Surprise Round, the characters who are part of
-the Surprise Round draw their TCs first and take one full round  before the characters
-being surprised draw their TCs.
+the Surprise Round draw their take one full round before the characters
+being surprised.
 
 2. A player may delay their turn in initiative order to intentionally occur before or
 after another character(s)', but their turn is forfeited if they do not announce their
@@ -554,13 +554,15 @@ To
 recover Armor Points, a player may make a Craft or Knowledge
 Skill check of DR 7 minus the number of points they are attempting to recover. If
 missed, a player may retry by attempting to recover one fewer AP.
-At the end of a Quick Rest, shuffle the discard pile and draw 10 plus twice Vitality
-back into your deck.
+At the end of a Quick Rest, discard your TC, shuffle the discard pile and draw 10 plus
+twice Vitality
+back into your deck. Then, redraw your TC.
 
-After completing a Full Rest, shuffle your discard pile back into your deck, along
+After completing a Full Rest, discard your TC, shuffle your discard pile back into your
+deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
-used. Fate, Health, and Armor Points all return to
-their maximum. Rest Cards return to their full value after a Full Rest.
+used. Fate, Health, and Armor Points, as well as Rest Cards, all return to
+their maximum values.
 
 ### Fatigue
 
