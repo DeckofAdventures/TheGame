@@ -349,14 +349,16 @@ class Player(Deck):
             points = 2 if draw > 0 else 1
             point_total += points
             logger.debug(f"Recovering {points} with cards")
-            for _ in range(points):  # Prioritizes HP over PP
-                if self.pc.HP < self.pc.HP_Max:
-                    self.pc.HP += 1
-                    logger.debug(f"   1 HP to {self.pc.HP}")
-                    continue
-                if self.pc.PP < self.pc.PP_Max:
-                    self.pc.PP += 1
-                    logger.debug(f"   1 PP to {self.pc.PP}")
+            for _ in range(points):  # Prioritizes 'where am I missing more?'
+                attr_diffs = {
+                    "HP": abs(self.pc.HP - self.pc.HP_Max),
+                    "PP": abs(self.pc.PP - self.pc.PP_Max),
+                }
+                increment_this = max(attr_diffs, key=attr_diffs.get)
+                setattr(self.pc, increment_this, getattr(self.pc, increment_this) + 1)
+                logger.debug(
+                    f"   1 {increment_this} to {getattr(self.pc,increment_this,'?')}"
+                )
             self.pc.RestCards -= 1
 
         AP_check_mod = max([self.pc.Skills.Knowledge, self.pc.Skills.Craft])
