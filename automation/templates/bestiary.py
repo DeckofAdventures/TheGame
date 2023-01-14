@@ -369,12 +369,16 @@ class Beast:
 
         assert self.Type in ["PC", "Dealer"], "Can only make html for PCs"
 
-        default_items = [
-            {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
-            {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
-            {"name": "Shortsword", "quantity": "1", "info": "1 damage. 1 handed."},
-            {"name": "Maul", "quantity": "1", "info": "2 damage. 2 handed."},
-        ]
+        default_items = (
+            self.Items
+            if self.Items
+            else [
+                {"name": "Armor", "quantity": "1", "info": "Chain Mail. AR 2."},
+                {"name": "Shield", "quantity": "1", "info": "Heavy Shield. 2 AP."},
+                {"name": "Shortsword", "quantity": "1", "info": "1 damage. 1 handed."},
+                {"name": "Maul", "quantity": "1", "info": "2 damage. 2 handed."},
+            ]
+        )
 
         return (
             jinja2.Environment(loader=jinja2.FileSystemLoader("./automation/_input/"))
