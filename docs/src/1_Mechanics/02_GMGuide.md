@@ -723,9 +723,7 @@ the standard recommendation is to use a system based on rare metals. Gold,
 Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
 fit your setting.
 By default, currencies are at a 1:10 ratio with the next-most valuable counterpart:
-1 Gold
-Piece (gp) = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces
-(cp). When creating your own currency, use the below tables as a reference
+1 Platinum Piece (pp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below tables as a reference
 for adapting these items to your setting.
 
 The GM can grant currency as a reward for completing an Adventure, defeating
@@ -780,10 +778,10 @@ quality of that weapon determines how much damage.
 
 | Damage | Descriptor | Average Cost |
 | ------ | ---------- | ------------ |
-| 1      | Standard   | 5 gp         |
-| 2      | Improved   | 500 gp       |
-| 3      | Heroic     | 2,500 gp     |
-| 4      | Legendary  | 5,000 gp     |
+| 1      | Standard   | 15 sp        |
+| 2      | Improved   | 25 gp        |
+| 3      | Heroic     | 25 pp        |
+| 4      | Legendary  | 100 pp       |
 
 Characters with high quality weapons are able to deal damage quickly, so keep
 this in mind when balancing Encounters or granting Players loot as they Level
@@ -809,12 +807,12 @@ Agility, Finesse, and Stealth Checks at Lower Hand.
 | AR     | Armor Type  | AP    | Prerequisite  | Average Cost |
 | ------ | ----------  | ----- | ------------  | -----------  |
 | 3      | Unarmored   | 0     | -             | -            |
-| 3      | Light       | 0     | -             | 5 gp         |
-| 2      | Medium      | 0     | -             | 25 gp        |
-| 2      | Fortified   | 1     | Strength ≥ 0  | 100 gp       |
-| 1      | Heavy       | 2     | Strength ≥ 1  | 500 gp       |
-| 1      | Massive     | 3     | Strength ≥ 2  | 1500 gp      |
-| 1      | Gleaming    | 2     | Agility ≥ 3   | 1500 gp      |
+| 3      | Light       | 0     | -             | 5 sp         |
+| 2      | Medium      | 0     | -             | 20 sp        |
+| 2      | Fortified   | 1     | Strength ≥ 0  | 15 gp        |
+| 1      | Heavy       | 2     | Strength ≥ 1  | 50 gp        |
+| 1      | Massive     | 3     | Strength ≥ 2  | 20 pp        |
+| 1      | Gleaming    | 2     | Agility ≥ 3   | 100 pp       |
 
 Characters may start with Light Armor at Level 1, but must acquire other armor over the
 course of their Adventures, either through purchase or reward.
@@ -829,9 +827,9 @@ in varying quality.
 
 | AP | Descriptor | Average Cost |
 | -- | ---------- | ------------ |
-| 1  | Standard   | 5 gp         |
-| 2  | Hardened   | 200 gp       |
-| 3  | Impervious | 1,500 gp     |
+| 1  | Standard   | 5 sp         |
+| 2  | Hardened   | 10 gp        |
+| 3  | Impervious | 25 pp        |
 
 ### General Items
 
@@ -844,19 +842,19 @@ costs.
 
 | Item Name      | Cost  |
 | -------------- | ----- |
-| Hammer         | 5 sp  |
-| Backpack       | 8 sp  |
-| Empty Vial     | 2 sp  |
-| Canvas Pouch   | 2 sp  |
-| Tent           | 1 gp  |
-| Torches        | 5 sp  |
-| Flint & Tinder | 5 sp  |
-| Bedroll        | 8 sp  |
-| Rations Kit    | 5 sp  |
-| Flask          | 1 gp  |
-| Lantern        | 2 gp  |
-| Mirror         | 1 gp  |
-| Crowbar        | 1 gp  |
+| Hammer         | 5 cp  |
+| Backpack       | 8 cp  |
+| Empty Vial     | 2 cp  |
+| Canvas Pouch   | 2 cp  |
+| Tent           | 1 sp  |
+| Torches        | 5 cp  |
+| Flint & Tinder | 5 cp  |
+| Bedroll        | 8 cp  |
+| Rations Kit    | 5 cp  |
+| Flask          | 1 sp  |
+| Lantern        | 2 sp  |
+| Mirror         | 1 sp  |
+| Crowbar        | 1 sp  |
 
 ### Tools
 
@@ -874,19 +872,19 @@ in some settings some professions' tools may be harder to find.
 
 | Profession Name    | Cost   |
 | ------------------ | ------ |
-| Blacksmith         | 5 gp   |
-| Locksmith          | 5 gp   |
-| Chef               | 3 gp   |
-| Carpenter          | 3 gp   |
-| Sailor             | 2 gp   |
-| Leatherworker      | 5 gp   |
-| Clothier           | 5 gp   |
-| Navigator          | 1 gp   |
-| Alchemist          | 3 gp   |
-| Herbalist          | 1 gp   |
-| Mountaineer        | 3 gp   |
-| Jeweler            | 10 gp  |
-| Cartographer       | 5 gp   |
+| Blacksmith         | 1 gp   |
+| Locksmith          | 1 gp   |
+| Chef               | 5 sp   |
+| Carpenter          | 5 sp   |
+| Sailor             | 2 sp   |
+| Leatherworker      | 5 sp   |
+| Clothier           | 1 gp   |
+| Navigator          | 2 sp   |
+| Alchemist          | 3 sp   |
+| Herbalist          | 2 sp   |
+| Mountaineer        | 3 sp   |
+| Jeweler            | 1 gp   |
+| Cartographer       | 1 gp   |
 
 ### Consumables
 
@@ -917,22 +915,22 @@ create your own Consumables and ask the Community for help as needed.
 
 | Consumable Name        | Cost  | Effect                                                                                    | Duration |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------------- | -------- |
-| Potion of Healing      | 5 gp  | Regain 1 HP immediately                                                                   |          |
-| Potion of Water Breath | 10 gp | You are immune to the Suffocating Status Condition                                        | 1 hour   |
-| Potion of Extended Breath | 5 gp | Your ability to hold your breath is extended by 60 minutes                              | 1 hour   |
+| Potion of Healing      | 2 gp  | Regain 1 HP immediately                                                                   |          |
+| Potion of Water Breath | 5 gp | You are immune to the Suffocating Status Condition                                        | 1 hour   |
+| Potion of Extended Breath | 2 gp | Your ability to hold your breath is extended by 60 minutes                              | 1 hour   |
 | Potion of Strength     | 15 gp | Gain +1 to all Strength-based Checks                                                      | 1 min    |
 | Potion of Agility      | 15 gp | Gain +1 to all Agility-based Checks                                                       | 1 min    |
 | Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |
 | Potion of Intelligence | 15 gp | Gain +1 to all Intelligence-based Checks                                                  | 1 min    |
 | Potion of Intuition    | 15 gp | Gain +1 to all Intuition-based Checks                                                     | 1 min    |
-| Potion of Vitality     | 25 gp | Gain +1 Maximum HP and +1 to all Vitality-based Checks                                    | 1 min    |
-| Charm of Efficiency    | 65 gp | You cannot draw with Upper or Lower Hand                                                  | 1 hour   |
-| Charm of True Aim      | 40 gp | All Attacks are made with Upper Hand                                                      | 1 hour   |
-| Charm of Amplification | 55 gp | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
-| Charm of Wounding      | 30 gp | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
-| Hearty Stew            | 10 gp | Gain +1 HP and +1 to your Maximum HP                                                                | 8 hours  |
-| Focusing Beverage      | 10 gp | Gain +1 HP and +1 to your Maximum PP                                                                | 8 hours  |
-| Fortifying Feast       | 10 gp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
+| Potion of Vitality     | 2 pp  | Gain +1 Maximum HP and +1 to all Vitality-based Checks                                    | 1 min    |
+| Charm of Efficiency    | 6 pp  | You cannot draw with Upper or Lower Hand                                                  | 1 hour   |
+| Charm of True Aim      | 4 pp  | All Attacks are made with Upper Hand                                                      | 1 hour   |
+| Charm of Amplification | 5 pp  | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
+| Charm of Wounding      | 3 pp  | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
+| Hearty Stew            | 1 pp | Gain +1 HP and +1 to your Maximum HP                                                                | 8 hours  |
+| Focusing Beverage      | 1 pp | Gain +1 HP and +1 to your Maximum PP                                                                | 8 hours  |
+| Fortifying Feast       | 1 pp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
 
 ### Magic Items
 
