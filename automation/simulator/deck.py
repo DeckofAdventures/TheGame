@@ -279,12 +279,35 @@ class Deck(object):
 
         result = max(results) if upper_lower == "U" else min(results)
         if verbose:
-            logger.info(
+            logger.debug(
                 f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
             )
 
         if return_val:
             return result
+
+
+class GMDeck(Deck):
+    """Special version of a deck that suffles when it reaches the end"""
+
+    def __init__(self, use_TC=False):
+        super().__init__(use_TC)
+        self.Name = "GM"
+
+    def draw(self) -> Card:
+        """Draw a card. If any available, return card"""
+        if len(self.cards) == 0:
+            self.shuffle()
+        card = self.cards.pop()
+        if card.val == "A":
+            self.hand.append(card)
+        else:
+            self.discards.append(card)
+        return card
+
+    def check_by_skill(self, **kwargs):
+        kwargs.pop("skill", None)
+        return self.check(**kwargs)
 
 
 class Player(Deck, Beast):
@@ -368,15 +391,20 @@ class Player(Deck, Beast):
             self._statuses["_fatigue5"] = True
             self._statuses["Knocked Out"] = self._statuses.get("Knocked Out", 0) + 1
 
-    def check_by_skill(self, TC: Card, DR: int, skill: str, **kwargs):
+    def check_by_skill(self, TC: Card, DR: int, skill: str = None, **kwargs):
         """Accepts any Skill or Attrib. Accepts any valid args of Deck.check"""
-        assert (
-            skill in self._valid_mods
-        ), f"Could not find {skill} in {self._valid_mods}"
-        if isinstance(skill, list):  # if list, use the better skill
-            skill_vals = {a: getattr(self.PC.Attribs, a) for a in skill}
-            skill = max(skill_vals, key=skill_vals.get)
-        mod = getattr(self.Skills, skill, None) or getattr(self.Attribs, skill, None)
+        if skill:
+            assert (
+                skill in self._valid_mods
+            ), f"Could not find {skill} in {self._valid_mods}"
+            if isinstance(skill, list):  # if list, use the better skill
+                skill_vals = {a: getattr(self.PC.Attribs, a) for a in skill}
+                skill = max(skill_vals, key=skill_vals.get)
+            mod = getattr(self.Skills, skill, None) or getattr(
+                self.Attribs, skill, None
+            )
+        else:
+            mod = 0
         new_kwargs = self._apply_upper_lower("check", kwargs, skill=skill)
         result = self.check(TC, DR, mod=mod, **new_kwargs)
         if result == 0:
@@ -457,7 +485,6 @@ class Player(Deck, Beast):
         self.shuffle(limit=(10 + self.Attribs.VIT * 2))
 
     def wound(self, wound_val, bypass_HP=False):
-        # Add Charmed Enthralled checks here
         for _ in range(wound_val):
             if self.AP > 0 and not bypass_HP:
                 self.AP -= 1
@@ -471,6 +498,7 @@ class Player(Deck, Beast):
                 )
             else:
                 self._statuses["Knocked Out"] = 1
+        self._shake_status(["Charmed", "Enthralled"])
 
     def take_action(self, type="Major") -> Power:
         if self.HP <= 0:
@@ -479,17 +507,10 @@ class Player(Deck, Beast):
             self.info(f"{self.Name} stunned, skipping Minor Action.")
             return
         if self._statuses.get("Burned") and type == "Minor":
-            if self.save(attrib="GUT", return_val=True) > 0:
-                self._statuses["Burned"] = 0
-                logger.info(f"{self.Name} used Minor Action to stop burning.")
-                return
-            else:
-                self.wound(1, bypass_HP=True)
-                return
+            self._shake_status(["Burned"])
+            return
         if self._statuses.get("Entangled") and type == "Major":
-            if self.save(attrib="STR", return_val=True) > 0:
-                self._statuses["Entangled"] = 0
-                logger.info(f"{self.Name} is no longer stunned.")
+            self._shake_status(["Entangled"])
             return
         options = [
             p
@@ -525,6 +546,8 @@ class Player(Deck, Beast):
             "Poisoned": {"attrib": "VIT", "fail": self.discard, "succeed": self._pass},
             "Frozen": {"attrib": "STR", "fail": self._pass, "succeed": self._pass},
             "Suffocating": {"attrib": "VIT", "fail": self.wound, "succeed": self.wound},
+            "Burned": {"attrib": "GUT", "fail": self.wound, "succeed": self._pass},
+            "Entangled": {"attrib": "STR", "fail": self._pass, "succeed": self._pass},
         }
         for status in statuses:
             if self._statuses.get(status):
@@ -534,7 +557,6 @@ class Player(Deck, Beast):
                     status_dict[status]["succeed"](
                         self._statuses[status], bypass_HP=True
                     )
-                    logger.info(f"{self.Name} is no longer {status}.")
                 else:
                     logger.info(f"{self.Name} remains {status}")
                     status_dict[status]["fail"](
@@ -548,6 +570,7 @@ class Encounter(object):
     def __init__(
         self, PCs: List[Union[Player, Beast]], Enemies: List[Union[Player, Beast]]
     ):
+        self.gm_deck = GMDeck(use_TC=False)
         self.PCs = [p if isinstance(p, Player) else Player(**p) for p in PCs]
         self.enemies = [p if isinstance(p, Player) else Player(**p) for p in Enemies]
         self.turn_order = [*self.PCs, *self.enemies]
@@ -612,6 +635,8 @@ class Encounter(object):
                 if result > 0:
                     wound = damage + 1 if result > 3 else damage
                     target.wound(wound)
+                    if result > 3:
+                        target._statuses["Stunned"] = 1
                     logger.info(
                         f"{attacker.Name} wounded {target.Name} by "
                         + f"{wound}: AP {target.AP}/{target.AP_Max}, HP "
@@ -623,7 +648,6 @@ class Encounter(object):
         random.shuffle(actions)  # Randomize major vs minor first
 
         attacker.start_turn()
-        logger.info(f"{attacker.Name} start turn")
         for action in actions:
             self._apply_power(attacker, targets, attacker.take_action(action))
         attacker.end_turn()
@@ -634,3 +658,57 @@ class Encounter(object):
                 logger.info(f"{char.Name} is Knocked Out, no turn")
             else:
                 self._take_turn(char, self.enemies if char in self.PCs else self.PCs)
+
+    def sim_epic_event(
+        self,
+        TC=None,
+        DR=3,
+        participants: List[Player] = None,
+        skills: List[str] = None,
+        successes_needed=1,
+    ):
+        """Run epic event. Players go first, them GM.
+
+        Args:
+            TC: target card. Default draw from gm_deck
+            participants: list of those involved on a TC. Default all PCs
+            skill: Type of check for each participant in particpant order. Default 0 mod
+                e.g., participants=[PC1, PC2], skill=['STR','Finesse'].
+                If same for all, provide as string
+            successes_needed: N suited hits before end. Default 1
+        """
+        if not TC:
+            TC = self.gm_deck.draw()
+        if not participants:
+            participants = self.PCs
+        else:
+            participants = ensure_list(participants)
+        if not isinstance(skills, list):
+            skills = [skills] * len(participants)
+
+        participants.append(self.gm_deck)
+        skills.append(None)
+
+        player_successes = 0
+        gm_successes = 0
+        draw_count = 0
+
+        while player_successes < successes_needed and gm_successes < successes_needed:
+            for participant, skill in zip(participants, skills):
+                draw_count += 1
+                result = participant.check_by_skill(
+                    TC=TC, DR=DR, skill=skill, return_val=True
+                )
+                success = True if result > 2 else False
+                if success and isinstance(participant, GMDeck):
+                    gm_successes += 1
+                elif success:
+                    player_successes += 1
+
+                if success:
+                    logger.info(
+                        f"Party {player_successes}, GM {gm_successes} | "
+                        + f"{participant.Name} {participant.result_types[result]}"
+                    )
+        victor = "GM" if gm_successes > player_successes else "Party"
+        logger.info(f"{victor} wins after {draw_count} total cards drawn")
