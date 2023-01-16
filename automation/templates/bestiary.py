@@ -58,7 +58,8 @@ class Bestiary(YamlSpec):
         self._tried_loading = True
         for k, v in self.raw_data.items():
             if v.get("Type", None) in self._limit_types:
-                beast = Beast(Name=k, **v)
+                id = v["Name"] + str(v["Level"]) if v.get("Name") else k
+                beast = Beast(id=id, **v)
                 self.as_list.append(beast)
                 self._as_dict.update({k: beast})
 
@@ -194,7 +195,7 @@ class Phase:
     Name: str
     Order: int = field(repr=False)
     HP: int = 1
-    Allies: List[str] = field(default=None)
+    Allies: List[str] = None
 
     def __repr__(self):
         """Print non-default beast items with repr property and linebreaks"""
@@ -211,26 +212,29 @@ class Beast:
 
     sort_index: str = field(init=False, repr=False)
     Type: str
-    Name: str = None  # Must be unique. Do we need a diff unique ID? Name+Level?
+    id: str
+    Name: str = None
     Pronouns: str = None
     Role: str = None
     Level: int = 1
     HP: int = 1
     AP: int = 1
-    AR: int = field(default=None)
+    AR: int = None
     PP: int = 0  # TODO: migrate to post-init, sum PP from all available powers
     Speed: int = 6
-    Primary_Skill: str = field(default=None)
-    Attribs: dict = field(default=None)
-    Skills: dict = field(default=None)
+    Primary_Skill: str = None
+    Attribs: dict = None
+    Skills: dict = None
     Powers: dict = field(default=None, repr=False)
     Powers_list: list = field(default_factory=list, repr=False)
-    Phases: list = field(default=None)
+    Phases: list = None
+    Items: dict = None
     Description: str = ""
 
     def __post_init__(self):
         """Generate values not given on initialization"""
         self.sort_index = self.Type
+        self.Name = self.Name if self.Name else self.id
         self.Powers = self.fetch_powers()
         self.Powers_list = [p for p in self.Powers.values()]
         self.Attribs = Attribs(**self.Attribs) if self.Attribs else None
@@ -244,7 +248,6 @@ class Beast:
         self.Speed_Max = self.Speed
         self.RestCards = self.HP
         self.RestCards_Max = self.HP
-
         self.override_stats()
 
     def fetch_powers(self) -> dict:

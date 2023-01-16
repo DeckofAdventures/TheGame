@@ -147,7 +147,7 @@ class Save:
 
     Trigger: str = field(repr=False)
     Type: str
-    DR: int = 3
+    DR: int = None
     Fail: str = field(default=None, repr=False)
     Succeed: str = field(default=None, repr=False)
 
@@ -161,6 +161,11 @@ class Save:
         sentence = self.Trigger + ", target(s) make a "
         sentence += "DR " + str(self.DR) + " " if self.DR else ""
         sentence += list_to_or(self.Type) + " Save"
+        sentence += (
+            ""
+            if self.DR
+            else "with a DR of 3 minus half the Primary Skill of the Attacker"
+        )
         output = [sentence, "On fail, target(s) " + self.Fail]
         output.append("On success, target(s) " + self.Succeed) if self.Succeed else None
         return ". ".join(output) + "."
@@ -186,7 +191,8 @@ class Power:
     PP: int = field(default=0, repr=False)
     Range: int = 6
     AOE: str = None
-    Target: int = 1
+    Targets: int = 1
+    Draw: str = "None"
     Options: str = field(default=None, repr=False)
     Choice: str = field(default=None, repr=False)
     Damage: int = 1
@@ -205,14 +211,20 @@ class Power:
         self.StatOverride = (
             StatOverride(self.StatOverride) if self.StatOverride else None
         )
+        self.Damage = 0 if self.Type in ["Vulny", "Passive"] else self.Damage
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
+        self.upper_lower_int = self._get_upper_lower_int()
 
     def set_choice(self, choice: str):
         """Given a choice among options, revise merged mechanic property"""
         self.Choice = choice
         self.Mechanic = self.merge_mechanic()
         return self
+
+    def _get_upper_lower_int(self):
+        upper_lower = self.Draw.upper()[0]
+        return 2 if upper_lower == "U" else -2 if upper_lower == "L" else 0
 
     def merge_mechanic(self) -> str:
         """Given power dict, merge all appropriate items into Mechanic
