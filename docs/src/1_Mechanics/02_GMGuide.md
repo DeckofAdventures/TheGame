@@ -719,11 +719,12 @@ weaknesses, and what actions they can take in combat.
 ### Standard Currency
 
 Every setting may have its own currency and economy, but in Deck of Adventures
-the standard recommendation is to use a system based on rare metals. Gold,
+the standard recommendation is to use a system based on rare metals or minerals. Diamond, Gold,
 Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
 fit your setting.
+
 By default, currencies are at a 1:10 ratio with the next-most valuable counterpart:
-1 Platinum Piece (pp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below tables as a reference
+1 Diamond Piece (dp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below tables as a reference
 for adapting these items to your setting.
 
 The GM can grant currency as a reward for completing an Adventure, defeating
@@ -780,8 +781,8 @@ quality of that weapon determines how much damage.
 | ------ | ---------- | ------------ |
 | 1      | Standard   | 15 sp        |
 | 2      | Improved   | 25 gp        |
-| 3      | Heroic     | 25 pp        |
-| 4      | Legendary  | 100 pp       |
+| 3      | Heroic     | 25 dp        |
+| 4      | Legendary  | 100 dp       |
 
 Characters with high quality weapons are able to deal damage quickly, so keep
 this in mind when balancing Encounters or granting Players loot as they Level
@@ -811,8 +812,8 @@ Agility, Finesse, and Stealth Checks at Lower Hand.
 | 2      | Medium      | 0     | -             | 20 sp        |
 | 2      | Fortified   | 1     | Strength ≥ 0  | 15 gp        |
 | 1      | Heavy       | 2     | Strength ≥ 1  | 50 gp        |
-| 1      | Massive     | 3     | Strength ≥ 2  | 20 pp        |
-| 1      | Gleaming    | 2     | Agility ≥ 3   | 100 pp       |
+| 1      | Massive     | 3     | Strength ≥ 2  | 20 dp        |
+| 1      | Gleaming    | 2     | Agility ≥ 3   | 100 dp       |
 
 Characters may start with Light Armor at Level 1, but must acquire other armor over the
 course of their Adventures, either through purchase or reward.
@@ -829,7 +830,7 @@ in varying quality.
 | -- | ---------- | ------------ |
 | 1  | Standard   | 5 sp         |
 | 2  | Hardened   | 10 gp        |
-| 3  | Impervious | 25 pp        |
+| 3  | Impervious | 25 dp        |
 
 ### General Items
 
@@ -923,14 +924,14 @@ create your own Consumables and ask the Community for help as needed.
 | Potion of Conviction   | 15 gp | Gain +1 to all Conviction-based Checks                                                    | 1 min    |
 | Potion of Intelligence | 15 gp | Gain +1 to all Intelligence-based Checks                                                  | 1 min    |
 | Potion of Intuition    | 15 gp | Gain +1 to all Intuition-based Checks                                                     | 1 min    |
-| Potion of Vitality     | 2 pp  | Gain +1 Maximum HP and +1 to all Vitality-based Checks                                    | 1 min    |
-| Charm of Efficiency    | 6 pp  | You cannot draw with Upper or Lower Hand                                                  | 1 hour   |
-| Charm of True Aim      | 4 pp  | All Attacks are made with Upper Hand                                                      | 1 hour   |
-| Charm of Amplification | 5 pp  | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
-| Charm of Wounding      | 3 pp  | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
-| Hearty Stew            | 1 pp | Gain +1 HP and +1 to your Maximum HP                                                                | 8 hours  |
-| Focusing Beverage      | 1 pp | Gain +1 HP and +1 to your Maximum PP                                                                | 8 hours  |
-| Fortifying Feast       | 1 pp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
+| Potion of Vitality     | 2 dp  | Gain +1 Maximum HP and +1 to all Vitality-based Checks                                    | 1 min    |
+| Charm of Efficiency    | 6 dp  | You cannot draw with Upper or Lower Hand                                                  | 1 hour   |
+| Charm of True Aim      | 4 dp  | All Attacks are made with Upper Hand                                                      | 1 hour   |
+| Charm of Amplification | 5 dp  | All Upper Hand and Lower Hand effects are doubled                                         | 1 hour   |
+| Charm of Wounding      | 3 dp  | When dealing damage with an Attack or Power, add +1 damage to the total                   | 1 hour   |
+| Hearty Stew            | 1 dp | Gain +1 HP and +1 to your Maximum HP                                                                | 8 hours  |
+| Focusing Beverage      | 1 dp | Gain +1 HP and +1 to your Maximum PP                                                                | 8 hours  |
+| Fortifying Feast       | 1 dp | Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP  | 8 hours  |
 
 ### Magic Items
 
