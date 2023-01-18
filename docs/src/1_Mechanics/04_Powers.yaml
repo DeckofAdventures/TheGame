@@ -923,7 +923,7 @@ Craft Light:
     Category:
         - Magic
     Description: Your skills let you conjure illusory effects.
-    Mechanic: Make a DR 3 Craft Check. On a Success you create an 8 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 200 spaces away from you, it disappears
+    Mechanic: Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears
     Type: Minor
     XP: 2
     PP: 1
@@ -1074,7 +1074,7 @@ Aura of Defensive Damage:
         Role: Defender
         Level: 2
         Skill: Brute > 0
-    Range: 6
+    AOE: Aura 6
     Duration: 1 minute
 
 Aura of Regeneration:
@@ -1083,7 +1083,7 @@ Aura of Regeneration:
         - Aura
         - Combat
         - Crusader
-    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP. This can only happen once per round. 
+    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round. 
     Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all. 
     XP: 2
     PP: 2
@@ -1116,4 +1116,3 @@ Staggering Blow:
         Trigger: On a successful hit, 
         Type: VIT
         Fail: they are Stunned
-        Succeed: no effect 

@@ -397,7 +397,7 @@ Some Status Conditions will impact a character over time. The duration of each C
 is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 CON
-Save at the start of their turn vs their own TC. If failed, they may either move or
+Save at the start of their turn. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
