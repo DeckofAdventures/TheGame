@@ -1,11 +1,9 @@
 # Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
-from dataclasses import fields
-from typing import List, Union
+from typing import Union
 
-from ..templates import Beast, Power
-from ..utils import ensure_list, logger
+from ..utils import logger
 
 
 class Card(object):
@@ -90,7 +88,7 @@ class Card(object):
         return hash((self.suit, self.val))
 
     def range(self, DR: int):
-        """Returns list of cards in a TR range"""
+        """Returns list of cards in a DR"""
         DR = abs(DR)
         return [self + diff for diff in range(-DR, DR + 1)]
 
@@ -103,8 +101,8 @@ class Deck(object):
         d=Deck()
         d.draw()
         > ♦️ A
-        d.check(TC=Card("S","A"),TR=3)
-        > [INFO]: Drew ♦️ 8 vs ♠️ A with TR 3: Miss
+        d.check(TC=Card("S","A"),DR=3)
+        > [INFO]: Drew ♦️ 8 vs ♠️ A with DR 3: Miss
 
     Attributes:
         suits (tuple): all suits in deck
@@ -123,6 +121,7 @@ class Deck(object):
         self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
         self.hand.extend(self._jokers)
         self._use_TC = use_TC
+        self.Name = "GM" if not self._use_TC else "Deck"
         self._TC = None
         self.shuffle()
         self.result_types = {
@@ -174,15 +173,23 @@ class Deck(object):
 
     def draw(self) -> Card:
         """Draw a card. If any available, return card"""
-        if len(self.cards) == 0:
+        if len(self.cards) == 0 and self._use_TC:
             logger.warning("No cards available in deck.")
             return None
+        elif len(self.cards) == 0 and not self.use_TC:
+            self.shuffle()  # for GMs, just shuffle
         card = self.cards.pop()
         if card.val == "A":
             self.hand.append(card)
         else:
             self.discards.append(card)
         return card
+
+    def check_by_skill(self, **kwargs):
+        if self._use_TC:
+            logger.error("check_by_skill method envoked on a non-GM deck")
+        kwargs.pop("skill", None)
+        return self.check(**kwargs)
 
     def discard(self, n, **_):
         """Draw n cards, return none. Discard/hand as normal"""
@@ -285,430 +292,3 @@ class Deck(object):
 
         if return_val:
             return result
-
-
-class GMDeck(Deck):
-    """Special version of a deck that suffles when it reaches the end"""
-
-    def __init__(self, use_TC=False):
-        super().__init__(use_TC)
-        self.Name = "GM"
-
-    def draw(self) -> Card:
-        """Draw a card. If any available, return card"""
-        if len(self.cards) == 0:
-            self.shuffle()
-        card = self.cards.pop()
-        if card.val == "A":
-            self.hand.append(card)
-        else:
-            self.discards.append(card)
-        return card
-
-    def check_by_skill(self, **kwargs):
-        kwargs.pop("skill", None)
-        return self.check(**kwargs)
-
-
-class Player(Deck, Beast):
-    # TODO: STATUS EFFECT SAVES CAN'T CURRENTLY FATIGUE
-    # TODO: REFACTOR TO CENTRALIZE STATUS EFFECT SAVES
-    def __init__(self, use_TC=True, **kwargs):
-        Deck.__init__(self, use_TC)
-        Beast.__init__(self, **kwargs)
-        self._valid_attribs = [f.name for f in fields(self.Attribs)]
-        self._valid_mods = self._valid_attribs + [f.name for f in fields(self.Skills)]
-        self._fatigue = 0
-        self._PP_mult = 1
-        self._statuses = {
-            "upper_lower_save": 0,
-            "upper_lower_check": 0,
-            "upper_lower_next_save": 0,
-            "upper_lower_next_check": 0,
-            "Entangled": 0,
-            "Knocked Down": 0,
-            "Knocked Out": 0,
-        }
-        self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
-
-    def __repr__(self):
-        """Result of print(Player)"""
-        output = self.Name + "\n"
-        output += "TC       : %02s | pc.HP : %d/%d\n" % (
-            self.TC,
-            self.HP,
-            self.HP_Max,
-        )
-        output += "Hand     :  %02d | pc.PP : %d/%d\n" % (
-            len(self.hand),
-            self.PP,
-            self.PP_Max,
-        )
-        output += "Deck     :  %02d | pc.AP : %d/%d\n" % (
-            len(self.cards),
-            self.AP,
-            self.AP_Max,
-        )
-        output += "Discards :  %02d | RestC : %d/%d\n" % (
-            len(self.discards),
-            self.RestCards,
-            self.RestCards_Max,
-        )
-        return output
-
-    def _apply_upper_lower(self, save_check: str, kwarg_dict: dict, skill="") -> dict:
-        all_type = "upper_lower_" + save_check
-        next_type = "upper_lower_next_" + save_check
-        extra = 0
-        if self._statuses.get("Entagled", False) and skill == "AGL":
-            extra -= 1
-        if self._statuses.get("Knocked Down", False) and skill in ["AGL", "STR"]:
-            extra -= 1
-        if self._statuses.get("Frozen", False) and type == "skill":
-            extra -= 1
-        if self._fatigue > 0 and type == "save":
-            extra -= 1
-        elif self._fatigue > 1:
-            extra -= 1
-        kwarg_dict["upper_lower_int"] = (
-            kwarg_dict.get("upper_lower_int", 0)
-            + self._statuses.get(all_type, 0)
-            + self._statuses.get(next_type, 0)
-            + extra
-        )
-        self._statuses[next_type] = 0
-        return kwarg_dict
-
-    def modify_fatigue(self, change=1):
-        self._fatigue += change
-        if self._fatigue >= 3 and not self._statuses.get("_fatigue3"):
-            self._statuses["_fatigue3"] = True
-            self.Speed = self.Speed / 2
-        if self._fatigue >= 4 and not self._statuses.get("_fatigue4"):
-            self._statuses["_fatigue4"] = True
-            self._PP_mult = 2
-        if self._fatigue >= 5 and not self._statuses.get("_fatigue5"):
-            self._statuses["_fatigue5"] = True
-            self._statuses["Knocked Out"] = self._statuses.get("Knocked Out", 0) + 1
-
-    def check_by_skill(self, TC: Card, DR: int, skill: str = None, **kwargs):
-        """Accepts any Skill or Attrib. Accepts any valid args of Deck.check"""
-        if skill:
-            assert (
-                skill in self._valid_mods
-            ), f"Could not find {skill} in {self._valid_mods}"
-            if isinstance(skill, list):  # if list, use the better skill
-                skill_vals = {a: getattr(self.PC.Attribs, a) for a in skill}
-                skill = max(skill_vals, key=skill_vals.get)
-            mod = getattr(self.Skills, skill, None) or getattr(
-                self.Attribs, skill, None
-            )
-        else:
-            mod = 0
-        new_kwargs = self._apply_upper_lower("check", kwargs, skill=skill)
-        result = self.check(TC, DR, mod=mod, **new_kwargs)
-        if result == 0:
-            self.modify_fatigue()
-            self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
-        return result
-
-    def save(self, DR: int = 3, attrib="None", **kwargs):
-        """Accepts any Attrib. Accepts any valid args of Deck.check"""
-        if isinstance(attrib, list):  # if list, use the better attrib
-            attr_vals = {a: getattr(self.PC.Attribs, a) for a in attrib}
-            attrib = max(attr_vals, key=attr_vals.get)
-        if attrib != "None":  # Default to mod of 0 when "None"
-            assert (
-                attrib in self._valid_attribs
-            ), f"Could not find {attrib} in {self._valid_attribs}"
-        new_kwargs = self._apply_upper_lower("save", kwargs, skill=attrib)
-        result = self.check(
-            TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
-        )
-        if result == 0:
-            self.modify_fatigue()
-            self.save(DR=DR, attrib=attrib, **kwargs)
-            pass
-        return result
-
-    def full_rest(self, **_):
-        self.shuffle()
-        for i in ["HP", "PP", "AP", "RestCards", "Speed"]:
-            setattr(self.pc, i, getattr(self.pc, i + "_Max"))
-        self._statuses = {}
-
-    def quick_rest(self, **kwargs):
-        # Never uses Fate cards here
-        point_total = 0  # Recover HP/PP
-        while self.RestCards > 0 and (
-            (self.HP < self.HP_Max) or (self.PP < self.PP_Max)
-        ):  # Will always fully recover with available rest cards
-            draw = self.save(return_val=True, **kwargs)
-            if not draw:
-                break
-            points = 2 if draw > 0 else 1
-            point_total += points
-            logger.debug(f"Recovering {points} with cards")
-            for _ in range(points):  # Prioritizes 'where am I missing more?'
-                attr_diffs = {
-                    "HP": abs(self.HP - self.HP_Max),
-                    "PP": abs(self.PP - self.PP_Max),
-                }
-                increment_this = max(attr_diffs, key=attr_diffs.get)
-                setattr(self.pc, increment_this, getattr(self.pc, increment_this) + 1)
-                logger.debug(
-                    f"   1 {increment_this} to {getattr(self.pc,increment_this,'?')}"
-                )
-            self.RestCards -= 1
-
-        AP_check_mod = max([self.Skills.Knowledge, self.Skills.Craft])
-        down_AP = self.AP_Max - self.AP
-        while down_AP > 0:
-            draw = self.check(
-                TC=self.TC,
-                DR=max(0, 7 - down_AP),  # of below 7, 0
-                mod=AP_check_mod,
-                return_val=True,
-                **kwargs,
-            )
-            if not draw:
-                break
-            elif draw < 0:
-                down_AP -= 1  # Try again with recovering one less
-            else:
-                self.AP += down_AP
-                logger.debug(f"Recovering {down_AP} AP to {self.AP}")
-                point_total += down_AP
-                break
-
-        logger.info(f"Recovered {point_total} HP/PP/AP during Quick Rest")
-        self.shuffle(limit=(10 + self.Attribs.VIT * 2))
-
-    def wound(self, wound_val, bypass_HP=False):
-        for _ in range(wound_val):
-            if self.AP > 0 and not bypass_HP:
-                self.AP -= 1
-            else:
-                self.HP -= 1
-        if self.HP <= 0:
-            if self._statuses.get("Knocked Out"):
-                logger.info(
-                    f"{self.Name} attacked again while KO. "
-                    + "Epic Event not simulated."
-                )
-            else:
-                self._statuses["Knocked Out"] = 1
-        self._shake_status(["Charmed", "Enthralled"])
-
-    def take_action(self, type="Major") -> Power:
-        if self.HP <= 0:
-            return
-        if self._statuses.get("Stunned") and type == "Minor":
-            self.info(f"{self.Name} stunned, skipping Minor Action.")
-            return
-        if self._statuses.get("Burned") and type == "Minor":
-            self._shake_status(["Burned"])
-            return
-        if self._statuses.get("Entangled") and type == "Major":
-            self._shake_status(["Entangled"])
-            return
-        options = [
-            p
-            for p in self.Powers_list  # ASSUME: Always use lesser PP option
-            if p.Type == type and ensure_list(p.PP)[0] <= self.PP * self._PP_mult
-        ]
-        choice = random.choice(options) if options else None
-        if choice:
-            logger.info(
-                f"{self.Name} used {ensure_list(choice.PP)[0]}/{self.PP} PP "
-                + f"with {choice.Name}"
-            )
-        else:
-            logger.info(f"{self.Name} no {type} choices")
-        self.PP -= ensure_list(getattr(choice, "PP", 0))[0] * self._PP_mult
-        return choice
-
-    def start_turn(self):
-        if self._statuses.get("Knocked Down"):
-            logger.info(f"{self.Name} gets up")
-            self._statuses["Knocked Down"] = 0
-        self._shake_status(["Stunned", "Poisoned"])
-
-    def end_turn(self):
-        self._shake_status(["Frozen", "Suffocating"])
-
-    def _pass(self, *args, **kwargs):
-        pass
-
-    def _shake_status(self, statuses: list):
-        status_dict = {
-            "Stunned": {"attrib": "CON", "fail": self._pass, "succeed": self._pass},
-            "Poisoned": {"attrib": "VIT", "fail": self.discard, "succeed": self._pass},
-            "Frozen": {"attrib": "STR", "fail": self._pass, "succeed": self._pass},
-            "Suffocating": {"attrib": "VIT", "fail": self.wound, "succeed": self.wound},
-            "Burned": {"attrib": "GUT", "fail": self.wound, "succeed": self._pass},
-            "Entangled": {"attrib": "STR", "fail": self._pass, "succeed": self._pass},
-        }
-        for status in statuses:
-            if self._statuses.get(status):
-                if self.save(attrib=status_dict[status]["attrib"], return_val=True) > 0:
-                    logger.info(f"{self.Name} shakes off {status}")
-                    self._statuses[status] = 0
-                    status_dict[status]["succeed"](
-                        self._statuses[status], bypass_HP=True
-                    )
-                else:
-                    logger.info(f"{self.Name} remains {status}")
-                    status_dict[status]["fail"](
-                        self._statuses[status] + 1, bypass_HP=True
-                    )
-            if len(self.cards) == 0:
-                self.modify_fatigue(1)
-
-
-class Encounter(object):
-    def __init__(
-        self, PCs: List[Union[Player, Beast]], Enemies: List[Union[Player, Beast]]
-    ):
-        self.gm_deck = GMDeck(use_TC=False)
-        self.PCs = [p if isinstance(p, Player) else Player(**p) for p in PCs]
-        self.enemies = [p if isinstance(p, Player) else Player(**p) for p in Enemies]
-        self.turn_order = [*self.PCs, *self.enemies]
-        random.shuffle(self.turn_order)
-        self.status_list = [
-            "Stunned",
-            "Entangled",
-            "Knocked",
-            "Blinded",
-            "Deafened",
-            "Knocked Out",
-            "Knocked Down",
-            "Burned",
-            "Poisoned",
-            "Frozen",
-            "Suffocating",
-            "Charmed",
-            "Enthralled",
-        ]
-        self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
-
-    def add_enemy(self, name: Player):
-        self.enemies.append(name)
-
-    def _apply_power(self, attacker, targets: List[Player], power=None):
-        if not power:
-            return
-        for _ in range(ensure_list(power.Targets)[0]):
-            target = random.choice(targets)
-            if power.Save:
-                result = target.save(
-                    DR=power.Save.DR, attrib=power.Save.Type, return_val=True
-                )
-                if result < 0:
-                    if power.Save.Fail in self.status_list:
-                        target._statuses[power.Save.Fail] = (
-                            target._statuses.get(power.Save.Fail, 0) + 1
-                        )
-                        logger.info(
-                            f"{target.Name} is {power.Save.Fail} 🔥: "
-                            + f"{target._statuses.get(power.Save.Fail, 0)}"
-                        )
-                        if power.Save.Fail in self._not_simulated:
-                            logger.warning(
-                                f"{target.Name} {power.Save.Fail} not simulated"
-                            )
-                    else:
-                        logger.info(target.Name + " " + power.Save.Fail)
-                elif result > 0:
-                    logger.info(f"{target.Name} resisted {power.Save.Fail}")
-                elif power.Save.Succeed:
-                    logger.info(target.Name + power.Save.Succeed + ". Not simulated")
-            if power.Damage:
-                damage = ensure_list(power.Damage)[0]
-                result = attacker.check_by_skill(
-                    TC=target.TC,
-                    DR=target.AR,
-                    skill=attacker.Primary_Skill,
-                    upper_lower_int=power.upper_lower_int,
-                    return_val=True,
-                )
-                if result > 0:
-                    wound = damage + 1 if result > 3 else damage
-                    target.wound(wound)
-                    if result > 3:
-                        target._statuses["Stunned"] = 1
-                    logger.info(
-                        f"{attacker.Name} wounded {target.Name} by "
-                        + f"{wound}: AP {target.AP}/{target.AP_Max}, HP "
-                        + f"{target.HP}/{target.HP_Max}"
-                    )
-
-    def _take_turn(self, attacker: Player, targets: List[Player]):
-        actions = ["Major", "Minor"]
-        random.shuffle(actions)  # Randomize major vs minor first
-
-        attacker.start_turn()
-        for action in actions:
-            self._apply_power(attacker, targets, attacker.take_action(action))
-        attacker.end_turn()
-
-    def sim_round(self):
-        for char in self.turn_order:
-            if char.HP <= 0:
-                logger.info(f"{char.Name} is Knocked Out, no turn")
-            else:
-                self._take_turn(char, self.enemies if char in self.PCs else self.PCs)
-
-    def sim_epic_event(
-        self,
-        TC=None,
-        DR=3,
-        participants: List[Player] = None,
-        skills: List[str] = None,
-        successes_needed=1,
-    ):
-        """Run epic event. Players go first, them GM.
-
-        Args:
-            TC: target card. Default draw from gm_deck
-            participants: list of those involved on a TC. Default all PCs
-            skill: Type of check for each participant in particpant order. Default 0 mod
-                e.g., participants=[PC1, PC2], skill=['STR','Finesse'].
-                If same for all, provide as string
-            successes_needed: N suited hits before end. Default 1
-        """
-        if not TC:
-            TC = self.gm_deck.draw()
-        if not participants:
-            participants = self.PCs
-        else:
-            participants = ensure_list(participants)
-        if not isinstance(skills, list):
-            skills = [skills] * len(participants)
-
-        participants.append(self.gm_deck)
-        skills.append(None)
-
-        player_successes = 0
-        gm_successes = 0
-        draw_count = 0
-
-        while player_successes < successes_needed and gm_successes < successes_needed:
-            for participant, skill in zip(participants, skills):
-                draw_count += 1
-                result = participant.check_by_skill(
-                    TC=TC, DR=DR, skill=skill, return_val=True
-                )
-                success = True if result > 2 else False
-                if success and isinstance(participant, GMDeck):
-                    gm_successes += 1
-                elif success:
-                    player_successes += 1
-
-                if success:
-                    logger.info(
-                        f"Party {player_successes}, GM {gm_successes} | "
-                        + f"{participant.Name} {participant.result_types[result]}"
-                    )
-        victor = "GM" if gm_successes > player_successes else "Party"
-        logger.info(f"{victor} wins after {draw_count} total cards drawn")

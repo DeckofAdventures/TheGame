@@ -212,7 +212,7 @@ class Beast:
 
     sort_index: str = field(init=False, repr=False)
     Type: str
-    id: str
+    id: str = field(repr=False)
     Name: str = None
     Pronouns: str = None
     Role: str = None

@@ -13,10 +13,10 @@ Template: # Power name        # Must be unique
     StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
         Stat: X
     ToHit: X                  # If not specified, assumed character's primary skill
-    Damage: X                 # Integer
+    Damage: X                 # Integer. Default 1 unless Passive or Vulny, then 0
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
-    Target: X                 # Integer, # of targets
+    Targets: X                 # Integer, # of targets
     Options: X                # Optional Descrip of options. Replaced by selection.
     Save:                     # Separated here, merged in md
         Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
@@ -33,6 +33,36 @@ Dumb:
         INT: -2
     Description: You're dumb as rocks. We're sure you make up for it in other areas.
     XP: -2
+
+Sear:
+    Type: Minor
+    Category: Status Effect
+    Damage: 0
+    Save:
+        Trigger: On starting turn
+        DR: 1
+        Type: INT
+        Fail: Burned
+
+Gas:
+    Type: Minor
+    Category: Status Effect
+    Damage: 0
+    Save:
+        Trigger: On starting turn
+        DR: 1
+        Type: INT
+        Fail: Poisoned
+
+Drown:
+    Type: Minor
+    Category: Status Effect
+    Damage: 0
+    Save:
+        Trigger: On starting turn
+        DR: 1
+        Type: INT
+        Fail: Suffocating
 
 Attack, Weapon:
     Category:
@@ -56,7 +86,8 @@ Attack, Charge:
     Type: Major
     Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
     XP: 2
-    PP: 2
+    PP: [1, 2]
+    Damage: [2, 3]
     Prereq:
         Power: Attack, Weapon
         Level: 3
@@ -72,7 +103,8 @@ Sweep:
     Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space
     Type: Major
     XP: 2
-    PP: [1, 2]
+    PP: 2
+    Targets: 2
     Prereq:
         Power: Attack, Weapon
         Role:
@@ -87,8 +119,21 @@ Sweep:
         DR: 3
         Type: AGL
         Fail: Knocked Down
-        Succeed: "EXAMPLE: do not copy"
     Tags: Attack
+
+
+Shield, Self:
+    Category:
+        - Combat
+        - Support
+    Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
+    Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
+    Type: Minor
+    XP: 2
+    PP: [1,2]
+    Damage: 0
+    Prereq:
+        Role: Defender
 
 Momentum: # Without this power, this should cost a major action.
     Category:
@@ -113,3 +158,10 @@ Cunning:
     Type: Passive
     XP: 1
     Tags:
+
+Multi-Attack 2:
+    Type: Major
+    Category: Boss-Only
+    PP: 0
+    Targets: 2
+    Mechanic: Make 2 attacks as a Major Action

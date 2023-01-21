@@ -33,11 +33,12 @@ Template:               # must be unique
   Description: Descrip  # Full descriptive text
 
 Clubs1:
+  Name: Clubs
   Type: PC
   Pronouns: "He/Him"
   Role: Defender
   Level: 1
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 7
   AP: 2
   PP: 2
@@ -56,15 +57,18 @@ Clubs1:
     Brute: 1
   Powers:
     - Attack, Weapon
-    - Attack, Vengeance
+    - Attack, Charge
+    # - Shield, Self
+    - Attack, Dual-Wield
     - Momentum
-    - Shield, Self
-    - Oath
-    - Bloodthirsty
+    - Dumb
+    - Sweep
+    - Drown
 
 Spider Queen:
   Type: Boss
   Level: 2
+  Primary_Skill: Finesse
   HP: 8
   AP: 2
   AR: 2
@@ -91,23 +95,24 @@ Spider Queen:
         - Grunt
         - Grunt, Shielded
   Powers:
-    - Adversary Major Action
-    - Amplify Ally
+    # - Adversary Major Action
+    # - Amplify Ally
     - Attack, Mystic
-    - Attack, Mystic Aura
-    - Attack, Mystic Dual-Shot
+    # - Attack, Mystic Aura
+    - Multi-Attack 2
     - Attack, Mystic Entangle
     - Barrier
     - Condition Immunity: Poisoned
     - Dumb
     - Eye for an Eye
-    - Favored Terrain: Web
-    - Lend Distraction
-    - Lend Vigor
-    - Manifest Terrain: Web
+    - Sear
+    # - Favored Terrain: Web
+    # - Lend Distraction
+    # - Lend Vigor
+    # - Manifest Terrain: Web
     - Obey Me
-    - Shield, Others
-    - Terrain Blink: Web
+    # - Shield, Others
+    # - Terrain Blink: Web
 
 Grunt:
   Type: NPC
