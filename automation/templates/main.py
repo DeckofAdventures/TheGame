@@ -9,7 +9,7 @@ def yaml_to_other(
         "05_Vulnerabilities.yaml",
         "06_Bestiary.yaml",
     ],
-    writing: list = ["md", "csv", "html"],
+    writing: list = ["md", "csv", "png"],
     out_delim: str = "\t",  # or ','
 ):
     """Execute all write functions based on inputs at top of script
@@ -25,7 +25,7 @@ def yaml_to_other(
 
         if "Best" in file:
             my_class = Bestiary(file)
-            if "html" in writing:
+            if "png" in writing:
                 for pc in my_class.categories.get(("PC",), []):
                     my_class.as_dict[pc].make_pc_img()
         else:

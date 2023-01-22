@@ -1,6 +1,8 @@
 black # Code formatting
+csv_logger # Logging data to CSV
 html2image # Generating images from html
 jupyter # Running notebooks
+jupytext # For syncing notebooks with py_scripts
 notebook # Running notebooks
 pdf2image # Splitting pdfs
 pre-commit # Checking files before commits

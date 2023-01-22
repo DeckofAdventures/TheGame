@@ -389,7 +389,10 @@ class Beast:
             .render(pc=self, items=items if items else default_items)
         )
 
-    def make_pc_html(self, output_filename: str = None, items: list = None):
+    def _pc_file_info(self, suffix: str):
+        return "./automation/_output/", f"PC_{self.Name}_level_{self.Level}.{suffix}"
+
+    def make_pc_html(self, items: list = None):
         """Save pc html as html file
 
         Args:
@@ -398,14 +401,13 @@ class Beast:
             items (list, optional): List of dicts with item name, quantity and info.
                 Defaults a set of items store in the _html function.
         """
-        if not output_filename:
-            output_filename = f"PC_{self.Name}_level_{self.Level}"
-        output_file = "./automation/_output/" + output_filename + ".html"
+        output_dir, output_filename = self._pc_file_info("html")
+        output_file = output_dir + output_filename
         with open(output_file, "w") as f:
             f.write(self._html(items))
         logger.info(f"Wrote HTML {output_file}")
 
-    def make_pc_img(self, output_filename: str = None, items: list = None):
+    def make_pc_img(self, items: list = None):
         """Save pc html as png file
 
         Args:
@@ -416,11 +418,9 @@ class Beast:
         """
         from html2image import Html2Image
 
-        if not output_filename:  # TODO: remove repetition with make_pc_html function
-            output_filename = f"PC_{self.Name}_level_{self.Level}"
-        output_filename += ".png"
         hti = Html2Image()
-        hti.output_path = "./automation/_output/"
+
+        hti.output_path, output_filename = self._pc_file_info(".png")
         hti.size = (950, 1200)
         hti.screenshot(
             html_str=self._html(items),

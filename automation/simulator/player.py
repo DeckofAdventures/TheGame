@@ -2,7 +2,7 @@ import random
 from dataclasses import fields
 
 from ..templates import Beast, Power
-from ..utils import ensure_list, logger
+from ..utils import drawlog, ensure_list, logger, restlog
 from .deck import Card, Deck
 
 
@@ -25,6 +25,7 @@ class Player(Deck, Beast):
             "Knocked Out": 0,
         }
         self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
+        self._CSV_LOGGING = False
 
     def __repr__(self):
         """Result of print(Player)"""
@@ -106,16 +107,34 @@ class Player(Deck, Beast):
         """Accepts any Skill or Attrib. Accepts any valid args of Deck.check"""
         if not skill:
             skill = "None"
+        if self._CSV_LOGGING:
+            kwargs["return_val"] = True
         skill, mod = self._find_highest_stat(skill)
         new_kwargs = self._apply_upper_lower("check", kwargs, skill=skill)
         result = self.check(TC, DR, mod=mod, **new_kwargs)
         if result == 0:
             self.modify_fatigue()
-            self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
+            result = self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
+        # NOTE: drawlog doesn't know if had options
+        drawlog.info(
+            [
+                self.Name,
+                "check",
+                result,
+                self.result_types.get(result, None),
+                DR,
+                skill,
+                mod,
+                kwargs.get("upper_lower", "n"),
+                kwargs.get("draw_n", 1),
+            ]
+        )
         return result
 
     def save(self, DR: int = 3, attrib="None", **kwargs):
         """Accepts any Attrib. Accepts any valid args of Deck.check"""
+        if self._CSV_LOGGING:
+            kwargs["return_val"] = True
         attrib, mod = self._find_highest_stat(attrib)
         assert (
             attrib in self._valid_attribs
@@ -127,17 +146,69 @@ class Player(Deck, Beast):
         if result == 0:
             self.modify_fatigue()
             self.save(DR=DR, attrib=attrib, **kwargs)
-            pass
+        # NOTE: drawlog doesn't know if had options
+        drawlog.info(
+            [
+                self.Name,
+                "save",
+                result,
+                self.result_types.get(result),
+                DR,
+                attrib,
+                mod,
+                kwargs.get("upper_lower", "n"),
+                kwargs.get("draw_n", 1),
+            ]
+        )
         return result
 
     def full_rest(self, **_):
+        restlog.info(
+            [
+                self.Name,
+                "before",
+                "full",
+                len(self.discards),
+                len(self.hand),
+                self.HP,
+                self.AP,
+                self.PP,
+                self.RestCards,
+            ]
+        )
         self.shuffle()
         for i in ["HP", "PP", "AP", "RestCards", "Speed"]:
             setattr(self, i, getattr(self, i + "_Max"))
         self._statuses = {}
+        restlog.info(
+            [
+                self.Name,
+                "after",
+                "full",
+                len(self.discards),
+                len(self.hand),
+                self.HP,
+                self.AP,
+                self.PP,
+                self.RestCards,
+            ]
+        )
 
     def quick_rest(self, **kwargs):
         # Never uses Fate cards here
+        restlog.info(
+            [
+                self.Name,
+                "before",
+                "quick",
+                len(self.discards),
+                len(self.hand),
+                self.HP,
+                self.AP,
+                self.PP,
+                self.RestCards,
+            ]
+        )
         point_total = 0  # Recover HP/PP
         while self.RestCards > 0 and (
             (self.HP < self.HP_Max) or (self.PP < self.PP_Max)
@@ -159,6 +230,19 @@ class Player(Deck, Beast):
                     f"   1 {increment_this} to {getattr(self,increment_this,'?')}"
                 )
             self.RestCards -= 1
+        restlog.info(
+            [
+                self.Name,
+                "after",
+                "quick",
+                len(self.discards),
+                len(self.hand),
+                self.HP,
+                self.AP,
+                self.PP,
+                self.RestCards,
+            ]
+        )
 
         AP_check_mod = max([self.Skills.Knowledge, self.Skills.Craft])
         down_AP = self.AP_Max - self.AP

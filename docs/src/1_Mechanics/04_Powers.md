@@ -45,7 +45,7 @@
 **Momentum**
 
 - Description: By brute strength, force others to move around the battlefield.
-- Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) are moved to 1 space of attacker's end position.
+- Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) are moved to 1 space of attacker's end position.
 - XP: 1
 - Prereq Role: Defender
 - Prereq Skill: Brute > 0
@@ -53,9 +53,9 @@
 **Momentum Aura**
 
 - Description: Your strength is supernatural, bending the gravity around you.
-- Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position..
+- Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position..
 - XP: 2
-- Target: 6
+- Targets: 6
 - Prereq Role: Defender
 - Prereq Skill: Brute > 1
 - Prereq Power: Momentum
@@ -128,7 +128,7 @@
 - Description: You channel your abilities to tie your target in place.
 - Mechanic: Major. For 1 or 2 PP, Selected targets make a Save. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled.
 - XP: 2
-- Target: 1 or 3
+- Targets: 1 or 3
 - Prereq Role: Support or Caster
 - Prereq Power: Attack, Mystic
 - Tags: Multi-target
@@ -138,7 +138,7 @@
 - Description: You channel your abilities deprive a target of their senses.
 - Mechanic: Major. For 1 or 2 PP, Select the Blinded or Deafened effect. Once, target(s) make a DR 3 GUT Save. On fail, target(s) Blinded or Deafened unless immune.
 - XP: 2
-- Target: 1 or 3
+- Targets: 1 or 3
 - Prereq Role: Support or Caster
 - Prereq Power: Attack, Mystic
 - Tags: Multi-target
@@ -310,6 +310,7 @@
 - Description: You are adept at wielding two weapons in combat.
 - Mechanic: Minor. On your turn, you may make a second attack as a Minor Action with Lower Hand.
 - XP: 3
+- Draw: Lower
 - Prereq Skill: Finesse > 1 or Brute > 1
 - Prereq Power: Attack, Weapon
 

@@ -34,6 +34,10 @@ class Encounter(object):
         ]
         self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
 
+    def set_csv_logging(self, setting: bool):
+        for char in self.turn_order:
+            char._CSV_LOGGING = setting
+
     def add_enemy(self, name: Player):
         self.enemies.append(name)
 

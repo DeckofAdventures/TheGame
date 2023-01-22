@@ -15,6 +15,6 @@ if __name__ == "__main__":
 
     yaml_to_other(
         input_files=["04_Powers.yaml", "05_Vulnerabilities.yaml", "06_Bestiary.yaml"],
-        writing=["md", "csv", "html"],
+        writing=["md", "csv", "png"],
         out_delim="\t",  # or ',' # for csv
     )

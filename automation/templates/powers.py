@@ -164,7 +164,7 @@ class Save:
         sentence += (
             ""
             if self.DR
-            else "with a DR of 3 minus half the Primary Skill of the Attacker"
+            else " with a DR of 3 minus half the Primary Skill of the Attacker"
         )
         output = [sentence, "On fail, target(s) " + self.Fail]
         output.append("On success, target(s) " + self.Succeed) if self.Succeed else None
@@ -195,7 +195,7 @@ class Power:
     Draw: str = "None"
     Options: str = field(default=None, repr=False)
     Choice: str = field(default=None, repr=False)
-    Damage: int = 1
+    Damage: int = field(default=1, repr=True)
     ToHit: int = 1
     Save: dict = field(default=None, repr=False)
     Prereq: dict = field(default=None)
@@ -265,6 +265,8 @@ class Power:
                     for key, value in self.Prereq.flat.items():
                         title = key.replace("_", " ")
                         output += make_bullet(f"{title}: {value}")
+                elif f.name == "Damage" and self.Type in ["Vulny", "Passive"]:
+                    continue
                 else:
                     output += make_bullet(
                         f"{f.name}: {list_to_or(attrgetter(f.name)(self))}"

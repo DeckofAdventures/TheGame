@@ -79,7 +79,7 @@
 
 #### Major
 
-- **Momentum Aura**: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position..
+- **Momentum Aura**: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position..
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
 
 #### Minor
@@ -104,8 +104,8 @@
 
 - **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
-- **Attack, Charge**: Major. For 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
-- **Momentum Aura**: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position..
+- **Attack, Charge**: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
+- **Momentum Aura**: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position..
 
 #### Minor
 
@@ -155,7 +155,7 @@
 
 - **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
-- **Attack, Charge**: Major. For 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
+- **Attack, Charge**: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
 - **Attack, Disarm**: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield
 
 ## Ritualist, Support
@@ -266,7 +266,7 @@
 
 #### Passive
 
-- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.
+- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position.
 
 #### Major
 
@@ -347,7 +347,7 @@
 
 #### Passive
 
-- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a DR 3 STR or AGL Save. On fail, target(s) be moved to 1 space of attacker's end position.
+- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position.
 
 #### Major
 
