@@ -118,7 +118,7 @@ class Player(Deck, Beast):
         # NOTE: drawlog doesn't know if had options
         drawlog.info(
             [
-                self.Name,
+                self.id,
                 "check",
                 result,
                 self.result_types.get(result, None),
@@ -149,7 +149,7 @@ class Player(Deck, Beast):
         # NOTE: drawlog doesn't know if had options
         drawlog.info(
             [
-                self.Name,
+                self.id,
                 "save",
                 result,
                 self.result_types.get(result),
@@ -165,7 +165,7 @@ class Player(Deck, Beast):
     def full_rest(self, **_):
         restlog.info(
             [
-                self.Name,
+                self.id,
                 "before",
                 "full",
                 len(self.discards),
@@ -182,7 +182,7 @@ class Player(Deck, Beast):
         self._statuses = {}
         restlog.info(
             [
-                self.Name,
+                self.id,
                 "after",
                 "full",
                 len(self.discards),
@@ -198,7 +198,7 @@ class Player(Deck, Beast):
         # Never uses Fate cards here
         restlog.info(
             [
-                self.Name,
+                self.id,
                 "before",
                 "quick",
                 len(self.discards),
@@ -232,7 +232,7 @@ class Player(Deck, Beast):
             self.RestCards -= 1
         restlog.info(
             [
-                self.Name,
+                self.id,
                 "after",
                 "quick",
                 len(self.discards),

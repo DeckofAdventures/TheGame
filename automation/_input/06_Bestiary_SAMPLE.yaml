@@ -32,38 +32,38 @@ Template:               # must be unique
       Allies: X         # List of who appears. If multiple of same, list multiple times
   Description: Descrip  # Full descriptive text
 
-Clubs1:
-  Name: Clubs
-  Type: PC
-  Pronouns: "He/Him"
-  Role: Defender
-  Level: 1
-  Primary_Skill: Brute
-  HP: 7
-  AP: 2
-  PP: 2
-  Attribs:
-    AGL: 1
-    GUT: 1
-    INT: -1
-    STR: 1
-    VIT: 1
-  Skills:
-    Finesse: 1
-    Stealth: 1
-    Knowledge: -1
-    Investigation: -1
-    Athletics: 1
-    Brute: 1
-  Powers:
-    - Attack, Weapon
-    - Attack, Charge
-    # - Shield, Self
-    - Attack, Dual-Wield
-    - Momentum
-    - Dumb
-    - Sweep
-    - Drown
+# Clubs1:
+#   Name: Clubs
+#   Type: PC
+#   Pronouns: "He/Him"
+#   Role: Defender
+#   Level: 1
+#   Primary_Skill: Brute
+#   HP: 7
+#   AP: 2
+#   PP: 2
+#   Attribs:
+#     AGL: 1
+#     GUT: 1
+#     INT: -1
+#     STR: 1
+#     VIT: 1
+#   Skills:
+#     Finesse: 1
+#     Stealth: 1
+#     Knowledge: -1
+#     Investigation: -1
+#     Athletics: 1
+#     Brute: 1
+#   Powers:
+#     - Attack, Weapon
+#     - Attack, Charge
+#     # - Shield, Self
+#     - Attack, Dual-Wield
+#     - Momentum
+#     - Dumb
+#     - Sweep
+#     - Drown
 
 Spider Queen:
   Type: Boss

@@ -8,7 +8,7 @@ delimiter = ","
 size_limit = 8192  # 8 kilobytes
 drawheader = [
     "date",
-    "name",
+    "id",
     "check_save",
     "result_int",
     "result_str",
@@ -37,7 +37,7 @@ drawlog = CsvLogger(
 
 restheader = [
     "date",
-    "name",
+    "id",
     "before_after",
     "type",
     "discards",
