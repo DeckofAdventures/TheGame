@@ -298,7 +298,9 @@ class Player(Deck, Beast):
         options = [
             p
             for p in self.Powers_list  # ASSUME: Always use lesser PP option
-            if p.Type == type and ensure_list(p.PP)[0] <= self.PP * self._PP_mult
+            if p is not None
+            and p.Type == type
+            and ensure_list(p.PP)[0] <= self.PP * self._PP_mult
         ]
         choice = random.choice(options) if options else None
         if choice:
