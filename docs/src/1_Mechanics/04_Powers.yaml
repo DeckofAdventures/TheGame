@@ -18,7 +18,6 @@ Template: # Power name        # Must be unique
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
     Target: X                 # Integer, # of targets
-    Duration: X               # String, to specify '1 hour' or '10 minutes' or '1 round'
     Options: X                # Optional Descrip of options. Replaced by selection.
     Save:                     # Separated here, merged in md
         Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
@@ -1033,7 +1032,7 @@ Create Poison:
     Type: Major
     Category:
         - Consumable
-    Mechanic: Create a Poison Bottle. Apply to a Physical Weapon to force a DR 2 VIT Save, on a failure they take 1 damage bypassing AP. All Poison Bottles created last until the end of your next Full Rest.
+    Mechanic: Create a Poison Bottle. Poison Bottle can be applied to a weapon. For 1 minute, all Weapon Attacks force a DR 2 VIT Save, on a failure they take 1 damage bypassing AP. All Poison Bottles created last until the end of your next Full Rest.
     Description: It's not wise to get on someone's bad side, especially when they have friends. 
     XP: 2
     PP: 1
@@ -1042,7 +1041,6 @@ Create Poison:
         Level: 3
         Skill: Craft > 1
         Power: Create Potion
-    Duration: 1 minute
     Tags:  
         - Alchemist
 
