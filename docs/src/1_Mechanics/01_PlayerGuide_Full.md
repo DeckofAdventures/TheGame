@@ -14,8 +14,8 @@ guides the group in a meaningful way.
 
 Choosing which Tabletop Roleplaying Game (TTRPG) to play is an important step when
 starting an adventure and different game systems are better for different things.
-Common game systems include Dungeons and Dragons 5th Edition (5e) and Savage Worlds
-Adventure Edition (SWADE); rules, supplements, and other materials for game systems can
+Common game systems range from high fantasy to space-faring, typically using many-sided dice;
+rules, supplements, and other materials for various TTRPG game systems can
 be found in published volumes and elsewhere online. Deck of Adventures sets itself
 apart by swapping out dedicated many-sided dice for a standard deck of playing cards.
 While other TTRPGs rely on using dice to determine the results of an uncertain action,
@@ -45,8 +45,7 @@ Cards, even when shuffling the deck.
 
 3. Players will use their deck to do most anything; it represents their character's
 stamina until they complete a Rest. When the Action Deck is empty and a player has to
-shuffle between rests, they draw with the
-[Lower Hand (1+)](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would
+shuffle between rests, they suffer from [Fatigue](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would
 shuffle when resting.
 
 ## Fate Cards
@@ -114,7 +113,7 @@ and allow you to add that number to the DR when making a Check.
     - Brute (Fight)
    <!-- - Intimidation -->
 - Vitality VIT
-   <!-- - Vitality Skill to add later -->
+   <!-- - Grit -->
 
 Each skill is generally related to a domain of expertise a character may possess. A GM
 might call for a Check using a specific Skill, but you can always ask if another
@@ -288,7 +287,7 @@ initiator's TC. Rules that describe a
  fail individually.
 
 **For example,** Xena attempts to convince Jonas of something (either truthfully or
-with deception), they would use their Bluffing Mod of +1, setting the DR to 2 (3-1).
+with deception), they would use their Bluffing Mod of +2, setting the DR to 2 (3-1).
 They draw a TC of 3 of Diamonds, permitting a card between A and 6. Jonas draws an 8 of
 Spades with a +1 Modifier to Detection and reports a 7, still outside the DR. Xena would
 successfully convince Jonas of something in this scenario.
@@ -398,7 +397,7 @@ Some Status Conditions will impact a character over time. The duration of each C
 is listed in the Power or effect that causes it.
 
 1. **Stunned** If a Dealer is hit by a critical attack, they make a DR 3 CON
-Save at the start of their turn vs their  own TC. If failed, they may either move or
+Save at the start of their turn. If failed, they may either move or
 make one Action on their turn, not both. Some creatures can cause the Stunned Condition
 as part of their attacks.
 
@@ -433,15 +432,15 @@ Hand. A Dealer makes a DR 3 Strength Save as a Free Action at the end of their t
 attempt to end the freeze.
 
 9. **Suffocating** At the beginning of their turn, a Dealer makes a DR 3 VIT Save. On
-failure, take 2 damage. On a success, take 1 damage.
+failure, take 2 damage bypassing AP. On a success, take 1 damage.
 
-10. **Charmed** At the end of their turn or whenever taking damage, A Dealer makes a DR
+10. **Charmed** At the start of their turn or whenever taking damage, a Dealer makes a DR
 3 GUT Save. On failure, they may not take actions against the interests of the creature
 that caused the condition. Another creature may use a Major action to end this effect.
 This effects ends automatically if the target is damaged by the creature that caused
 the condition.
 
-11. **Enthralled** At the end of their turn or whenever taking damage, A Dealer makes a
+11. **Enthralled** At the start of their turn or whenever taking damage, a Dealer makes a
 DR 3 CON Save. On failure, they must move up to their Speed and/or perform 1 Major
 Action available to them, as directed by the creature that caused the condition.
 Another creature may use a Major action to end this effect. This effects ends
@@ -545,17 +544,14 @@ represents a short 30-minute break, where characters may be catching
 their breath or healing their wounds. A Full Rest is an 8-hour period of time where
 characters get some sleep and recover from a long day.
 
-During a Quick Rest, each player who is resting draw from their deck using Rest Cards.
+During a Quick Rest, each player who is resting draws from their deck using Rest Cards.
 Players start with a number of Rest Cards equal to their maximum Health.
-Each Rest Card can be used as a DR 3 draw against one's own target card. On a miss,
+Each Rest Card can be used as a DR 3 draw against one's own target card without modifiers. On a miss,
 recover one HP or PP, your choice. On a success, recover two total points across HP and
 PP, your choice.
-To
-recover Armor Points, a player may make a Craft or Knowledge
-Skill check of DR 7 minus the number of points they are attempting to recover. If
-missed, a player may retry by attempting to recover one fewer AP.
+
 At the end of a Quick Rest, shuffle the discard pile and draw 10 plus twice Vitality
-back into your deck.
+back into your deck. A player can only gain the benefits of a Quick Rest twice per Full Rest.
 
 After completing a Full Rest, shuffle your discard pile back into your deck, along
 with any Aces from your hand. Add both Jokers to your hand as Fate Cards if they were
