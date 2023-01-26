@@ -736,7 +736,6 @@ Stealth's Blessing:
     PP: [1,2]
     Prereq:
         Level: 2
-    Prereq:
         Skill: Stealth > 2
     Tags:
         - Stealth
@@ -918,4 +917,206 @@ Amplify Ally:
     PP: 0
     Description: Move the chess pieces on your board.
     Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
-    
+
+Craft Light:
+    Category:
+        - Magic
+    Description: Your skills let you conjure illusory effects.
+    Mechanic: Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears
+    Type: Minor
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: 
+            - Caster
+            - Support
+        Skill: Craft > 0
+
+Hidden Strike: 
+    Type: Passive
+    Category: 
+        - Stealth
+        - Combat  
+    Mechanic: When attacking an enemy that is unaware of your presence or engaged with an ally within 1 space, you draw with Upper Hand. Any attacks that are successful deal +1 damage
+    Description: You move silently in the shadows, and are especially deadly when unseen. 
+    XP: 2
+    Prereq:
+        Role: Martial
+        Level: 2
+        Skill: Stealth > 0
+    Tags:
+        - Assassin  
+
+Vanishing Step: 
+    Type: Major
+    Category: 
+        - Movement
+        - Stealth
+    Mechanic: Choose a point you can see within 10 spaces of you. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
+    Description: Sometimes, moving in the shadows is easiest when no one knows where you're going.
+    XP: 2
+    PP: 2
+    Prereq:
+        Role: Martial
+        Level: 3
+        Skill: Stealth > 1
+        Power: Hidden Strike
+    Range: 10
+    Tags:
+        - Assassin 
+
+Summon Creature:
+    Type: Major
+    Category:
+        - Companion
+    Mechanic: Summon a creature to assist you. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
+    Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
+    XP: 2
+    PP: 2
+    Prereq:
+        Role: Caster
+        Level: 2
+        Skill: Knowledge > 0
+    Duration: 1 hour
+    Tags:  
+        - Summoner
+
+Phase Swap:
+    Type: Minor
+    Category:
+        - Movement
+    Mechanic: Use half your speed to swap spaces with a Summoned Creature 
+    Description: It can often be better to change places with a friendly creature. You'd prefer to be there, or they'd prefer to be here.
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: Caster
+        Level: 3
+        Skill: Knowledge > 1
+        Power: Summon Creature
+    Range: 10
+    Tags:  
+        - Summoner
+
+Life Link: 
+    Type: Passive
+    Category: 
+        - Companion  
+    Mechanic: While you have at least one summoned creature active, when you take damage you can choose to apply that damage to your summoned creature instead.
+    Description: Channeling energy between friends can sometimes be mutually beneficial. Other times, it's simply beneficial.
+    XP: 2
+    Prereq:
+        Role: Caster
+        Level: 3
+        Skill: Knowledge > 1
+        Power: Summon Creature
+    Tags:  
+        - Summoner
+
+Create Potion:
+    Type: Major
+    Category:
+        - Consumable
+    Mechanic: Create a Potion of Healing. After successfully completing a Quick Rest, you can exchange one Rest Card for a Potion of Healing without expending Power Points. All Potions created last until the end of your next Full Rest.
+    Description: It's always good to have some spare healing on hand. 
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: Support
+        Level: 2
+        Skill: Craft > 0
+    Tags:  
+        - Alchemist
+
+Create Poison:
+    Type: Major
+    Category:
+        - Consumable
+    Mechanic: Create a Poison Bottle. Poison Bottle can be applied to a weapon. For 1 minute, all Weapon Attacks force a DR 2 VIT Save, on a failure they take 1 damage bypassing AP. All Poison Bottles created last until the end of your next Full Rest.
+    Description: It's not wise to get on someone's bad side, especially when they have friends. 
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: Support
+        Level: 3
+        Skill: Craft > 1
+        Power: Create Potion
+    Tags:  
+        - Alchemist
+
+
+Potent Brew: 
+    Type: Passive
+    Category: 
+        - Consumable
+    Mechanic: When using a Power that creates a consumable, increase the damage healed or dealt by 1. 
+    Description: Sometimes its a matter of skill, other times its a matter of ingredients, but often making a potent brew requires both. 
+    XP: 2
+    Prereq:
+        Role: Support
+        Level: 3
+        Skill: Craft > 1
+        Power: Create Potion
+    Tags:  
+        - Alchemist
+
+
+Aura of Defensive Damage:
+    Type: Minor
+    Category:
+        - Combat
+        - Aura
+    Mechanic: Allied creatures within range gain the effects of your Aura. When a creature is hit by a melee attack, the attacker takes 1 damage.   
+    Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: Defender
+        Level: 2
+        Skill: Brute > 0
+    AOE: Aura 6
+    Duration: 1 minute
+    Tags:    
+        - Crusader
+
+Aura of Regeneration:
+    Type: Minor
+    Category:
+        - Combat
+        - Aura
+    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round. 
+    Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all. 
+    XP: 2
+    PP: 2
+    Prereq:
+        Role: Defender
+        Level: 3
+        Skill: Brute > 1
+    Range: 6
+    Duration: 1 minute
+    Tags:    
+        - Crusader
+
+Staggering Blow: 
+    Type: Major
+    Category: 
+        - Combat
+    Mechanic: Make a Weapon Attack against a creature
+    Description: Getting something to stay still is just a matter of applying pressure in the right spot. Or hitting that spot really hard. 
+    XP: 2
+    PP: 1
+    Prereq:
+        Role: Defender
+        Level: 3
+        Skill: Brute > 1
+        Power: 
+            - Attack, Weapon
+            - Aura of Defensive Damage
+    Range: 1
+    Target: 1
+    Save:
+        Trigger: On a successful hit, 
+        Type: VIT
+        Fail: they are Stunned
+    Tags: 
+        - Crusader
