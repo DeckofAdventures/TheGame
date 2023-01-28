@@ -99,6 +99,14 @@ Horse:
     - Attack, Weapon
     - Pack Tactics
 
+Commoner:
+  Type: NPC
+  HP: 3
+  AR: 3
+  Powers:
+    - Attack, Weapon
+  Description: A common humanoid that is found throughout villages, towns, and cities.
+
 Gray Wolf:
   Type: NPC
   HP: 2
@@ -125,7 +133,7 @@ Dire Wolf:
     - Attack, Weapon
     - Pack Tactics
 
-Shrub Golem:
+Small Golem:
   Type: NPC
   HP: 2
   AR: 4
@@ -136,7 +144,7 @@ Shrub Golem:
   Powers:
     - Attack, Weapon
 
-Vine Golem:
+Medium Golem:
   Type: NPC
   HP: 2
   AR: 4
@@ -148,7 +156,7 @@ Vine Golem:
     - Attack, Weapon
     - Momentum
 
-Tree Golem:
+Huge Golem:
   Type: Dealer
   Level: 2
   HP: 7
@@ -165,7 +173,7 @@ Tree Golem:
     - Momentum Aura
     - Attack, Sweep
 
-Poison Plant:
+Mystic Golem:
   Type: NPC
   HP: 2
   AR: 4
@@ -263,7 +271,6 @@ Mystic, Caster:
     - Shield, Self
   Description: A powerful Caster with access to mystic attacks.
 
-
 Sentinel, Martial:
   Type: Dealer
   Level: 2
@@ -281,7 +288,6 @@ Sentinel, Martial:
     - Attack, Charge
     - Attack, Disarm
   Description: A Martial with access to Powers.
-
 
 Ritualist, Support:
   Type: Dealer
@@ -320,3 +326,58 @@ Specter:
     - Attack, Mystic
     - Attack, Mystic Aura
     - Slow
+
+Necromancer Aspect: 
+  Type: Boss
+  HP: 5
+  AP: 0
+  AR: 2
+  PP: 4
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Stunning Glare
+    - Drain Life
+    - Summon Ally
+    - Phase Shift
+    - Ally Swap
+  Description: The manifestation of a Necromancer's will. A less powerful version of the Necromancer themselves.
+
+Necromancer: 
+  Type: Boss
+  HP: 8
+  AP: 0
+  AR: 2
+  PP: 6
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Undying
+    - Undying Vulnerability
+    - Life Link
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Stunning Glare
+    - Drain Life
+    - Shake Enemy
+    - Summon Creature
+    - Summon Ally
+    - Phase Shift
+    - Adversary Major Action
+    - Drain Stamina
+    - Ally Swap
+    - Wall Grab
+    - Amplify Ally
+  Description: A master of death, typically in command of a horde of undead minions. 
