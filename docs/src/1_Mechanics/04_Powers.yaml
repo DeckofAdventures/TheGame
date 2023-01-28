@@ -540,7 +540,7 @@ Creature Connection:
     Category:
         - Companion
     Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
-    Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
+    Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check. Your Companion can be commanded using a Minor Action. 
     Type: Passive
     XP: 5
     Prereq:
@@ -553,7 +553,7 @@ Creature Link:
     Category:
         - Companion
     Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
-    Mechanic: Some checks can now be made through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion.
+    Mechanic: You can now make certain checks through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion. While within 20 spaces, your Companion can communicate with you. 
     Type: Passive
     XP: 2
     Prereq:
@@ -565,7 +565,7 @@ Creature Mastery:
     Category:
         - Companion
     Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.
-    Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier.
+    Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier. They now draw their own TC in combat and act independently on their own turn. 
     Type: Passive
     XP: 2
     Prereq:
@@ -922,10 +922,9 @@ Craft Light:
     Category:
         - Magic
     Description: Your skills let you conjure illusory effects.
-    Mechanic: Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears
+    Mechanic: Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears. Only one instance of Craft Light can be active at any given time. 
     Type: Minor
-    XP: 2
-    PP: 1
+    XP: 1
     Prereq:
         Role: 
             - Caster
@@ -969,7 +968,7 @@ Summon Creature:
     Type: Major
     Category:
         - Companion
-    Mechanic: Summon a creature to assist you. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
+    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
     Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
     XP: 2
     PP: 2
@@ -977,7 +976,6 @@ Summon Creature:
         Role: Caster
         Level: 2
         Skill: Knowledge > 0
-    Duration: 1 hour
     Tags:  
         - Summoner
 
