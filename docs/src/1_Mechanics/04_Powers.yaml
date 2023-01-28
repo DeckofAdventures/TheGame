@@ -874,12 +874,66 @@ Condition Immunity:
     Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
     Mechanic: You are now immune to this condition.
 
+Stunning Glare:
+    Type: Major
+    Category:
+        - Boss-Only
+    Range: 10
+    Mechanic: Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned. 
+
+Drain Life:
+    Type: Major
+    Category:
+        - Boss-Only
+    Aura: 2
+    Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
+
 Adversary Major Action:
     Type: Adversary
     Category:
         - Boss-Only
         - Adversary Actions
     Mechanic: Once per round, you make take an additional Major Action after a Dealer's turn.
+
+Drain Stamina:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards. 
+    Aura: 2
+
+Phase Shift:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a space within 10 spaces and move there instantly.  
+
+Shake Enemy:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.  
+
+Summon Ally:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Your authority allows you to call for reinforcements.
+    Mechanic: Select N creatures from the Bestiary and summon them to the battlefield. The GM determines how many creatures are summoned.
+
+Wall Grab:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Even the walls of your House obey you. Hold still!
+    Mechanic: All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.   
 
 Manifest Terrain:
     Type: House
