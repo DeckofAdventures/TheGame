@@ -874,6 +874,18 @@ Condition Immunity:
     Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
     Mechanic: You are now immune to this condition.
 
+Undying:
+    Type: Passive
+    Category:
+        - Boss-Only
+    Mechanic: This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect. 
+
+Undying Vulnerability:
+    Type: Passive
+    Category:  
+        - Boss-Only
+    Mechanic: While the creature is at 0 HP, when they are exposed to this Vulnerability they are instead killed. A GM determines the nature of Vulnerability that a creature possesses to trigger this effect, such as exposure to sunlight.
+
 Stunning Glare:
     Type: Major
     Category:
@@ -887,6 +899,13 @@ Drain Life:
         - Boss-Only
     Aura: 2
     Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
+
+Ally Swap:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a friendly creature within 10 spaces and swap places with them. That creature can then make one Attack, Weapon to a creature within 1 space after the swap is complete.
 
 Adversary Major Action:
     Type: Adversary
