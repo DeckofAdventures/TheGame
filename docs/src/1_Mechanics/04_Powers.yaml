@@ -281,6 +281,15 @@ Attack, Mystic Dual-Wield Master:
         Power: Attack, Mystic Dual-Shot
     Tags: Multi-target
 
+Attack, Mystic Far Range:
+    Category:
+        - Combat
+        - Mystic Attacks
+    Description: Your reach has extended, allowing for better aim at far distances.
+    Mechanic: When making a Mystic Attack, your effective Range is increased by 4.
+    Type: Passive
+    XP: 1
+
 Battlecharged:
     Category:
         - Combat
