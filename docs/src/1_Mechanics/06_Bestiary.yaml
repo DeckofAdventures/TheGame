@@ -75,7 +75,7 @@ Wolf:
 Summoned Creature:
   Type: Companion
   Level: 1
-  HP: 3
+  HP: 4
   AR: 3
   Attribs:
     AGL: 1
@@ -84,6 +84,7 @@ Summoned Creature:
     CON: -1
   Powers:
     - Attack, Weapon
+    - Attack, Mystic
 
 Horse:
   Type: Companion
