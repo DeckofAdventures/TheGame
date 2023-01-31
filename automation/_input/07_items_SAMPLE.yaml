@@ -1,0 +1,155 @@
+Template:               # must be unique
+  Type: One of          # Armor, Weapon, Shield, Tool, Consumable, General
+  Cost: X               # Currency cost, in cp, sp, or gp, default is assumed gp
+  Rarity: One of        # Common, Uncommon, Rare, Legendary
+  Use:
+    Time:               # Time it takes to use (e.g., Major Action, 1 min)
+    Effect: Descrip     # On use, this effect. Use StatOverride for persistent effects
+    Duration: Descrip   # Use effect is in place for this. If none, persistent effect
+    Limit: X            # Limit uses
+  AR: X                 # For Armor, this is the set AR while worn. Replaces prev val
+  AP: X                 # For Armor, Default 0
+  Prereq:               # For multiple, implies 'OR'. Use [A, B] or `-`
+    Role: One of        # Martial, Defender, Support, Caster
+    Level: X            # Integer
+    Skill: X > 1        # Attrib or Skill > value
+  Save:                 # Separated here, merged in md
+      Trigger: One of   # Once, On hit, On starting turn, etc. Sentence start.
+      DR: X             # If primary skill modifier of actor, none [3-(MOD/2)]
+      Type: MOD         # AGL, CON, etc
+      Fail: Descrip     # effect on fail
+      Succeed: Descrip  # effect on success. Assume no access to above
+  Range: X              # Default 6
+  AOE: Shape N          #
+  Damage: X             # For Weapons, Default 1
+  Description: Descrip  # Full descriptive text
+  Tags: List            # e.g., 2-handed, Ranged - used to sort later # NOT NEEDED?
+
+Shield, Standard:
+  Type: Shield
+  Cost: 5 gp
+  Rarity: Common
+  Use:
+    Time: Major Action
+  AP: 1
+  Description: A standard shield. Comes in a variety of shapes and plain materials.
+
+Shield, Hardened:
+  Type: Shield
+  Cost: 200 gp
+  Rarity: Common
+  Use:
+    Time: Major Action
+  Prereq:
+    Skill: STR > 1
+  AP: 2
+  Description: A heavy shield. Comes in a variety of shapes and refined materials.
+
+Shield, Impervious:
+  Type: Shield
+  Cost: 1,500 gp
+  Rarity: Uncommon
+  Use:
+    Time: Major Action
+  Prereq:
+    Skill: STR > 2
+  AP: 3
+  Description: A nearly impenetrable shield. Comes in a variety of shapes and rare materials.
+
+Massive Armor:
+  Type: Armor
+  AR: 1
+  AP: 3
+  Rarity: Rare
+  Prereq:
+    Skill: STR > 2
+  Cost: 1,500 gp
+
+Maul:
+  Type: Weapon
+  Damage: 2
+  Range: 1
+  Cost: 500 gp
+  Rarity: Uncommon
+  Prereq:
+    Skill: STR > 1
+  Tags: 2-handed
+
+Whip:
+  Type: Weapon
+  Damage: 0
+  Cost: 500 gp
+  Rarity: Uncommon
+  Use:
+    Time: Major action
+  Save:
+    Trigger: On use
+    DR: 3
+    Type: AGL
+    Fail: Knocked Down
+  Tags: 2-handed
+
+Wand of Frost A: # Should this be a 'Power'?
+  Type: Weapon
+  Damage: 1
+  Range: 3
+  AOE: Cone 3
+  Cost: 500 gp
+  Rarity: Rare
+  Use:
+    Time: Major action
+  Save:
+    Trigger: On use
+    DR: 3
+    Type: AGL
+    Fail: Frozen
+    # Succeed: implied 1 damage
+
+Wand of Frost B: # Draft as power
+  Type: [Weapon, Consumable]
+  Cost: 500 gp
+  Rarity: Rare
+  Use:
+    Time: Major action
+    Limit: 3
+    Power: Attack, Mystic Cone
+
+Longbow:
+  Type: Weapon
+  Damage: 2
+  Cost: 500 gp
+  Rarity: Uncommon
+  Prereq:
+    Skill:
+      - STR > 1
+      - AGL > 1
+  Tags: [Ranged, 2-handed]
+  Range: 10
+
+Elixir of Vigor:
+  Type: Consumable
+  Rarity: Legendary
+  Cost: 5,000 gp
+  Use:
+    Time: Minor Action
+  StatOverride:
+    HP_Max: 1
+
+Cloak of the Rotund:
+  Type: General
+  Rarity: Legendary
+  Cost: 5,000 gp
+  Prereq:
+    Role: Defender
+  StatOverride:
+    VIT: 1
+    Finesse: -1
+
+Potion of Healing:
+  Type: Consumable
+  Rarity: Uncommon
+  Cost: 5 gp
+  Use:
+    Time: Minor Action
+  StatOverride:
+    HP: 1
