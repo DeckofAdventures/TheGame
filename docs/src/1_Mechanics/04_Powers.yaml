@@ -77,20 +77,6 @@ Attack, Sweep:
             - Defender
     Tags: Multi-target
 
-Attack, Disarm:
-    Category:
-        - Combat
-        - Weapon Attacks
-    Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-    Mechanic: When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield
-    Type: Major
-    XP: 2
-    PP: 1
-    Prereq:
-        Role:
-            - Martial
-            - Defender
-
 Attack, Vengeance:
     Category:
         - Combat
@@ -116,18 +102,6 @@ Attack, Dual-Wield:
         Skill:
             - Finesse > 1
             - Brute > 1
-
-Attack, Dual-Wield Master:
-    Category:
-        - Combat
-        - Weapon Attacks
-    Description: You are a master of wielding two weapons in combat.
-    Mechanic: On your turn, you may make a second attack as a Minor Action. When making this attack, you no longer draw with the Lower Hand.
-    Type: Minor
-    XP: 1
-    Prereq:
-        Level: 3
-        Power: Attack, Dual-Wield
 
 Attack, Mystic:
     Category:
@@ -158,21 +132,6 @@ Attack, Mystic Aura:
             - Support
     Tags:  Multi-target
 
-Attack, Mystic Amplification :
-    Category:
-        - Combat
-        - Mystic Attacks
-    Description: You channel your talents into a physical weapon, melding the physical and supernatural.
-    Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
-    Type: Major
-    XP: 1
-    PP: 1
-    Prereq:
-        Power: Attack, Mystic
-        Role:
-            - Martial
-            - Caster
-
 Attack, Mystic Cone:
     Category:
         - Combat
@@ -189,22 +148,6 @@ Attack, Mystic Cone:
         Skill:
             - Knowledge > 1
             - Craft > 1
-    Tags: Multi-target
-
-Attack, Mystic Confusion:
-    Category:
-        - Combat
-        - Mystic Attacks
-    Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-    Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
-    Type: Major
-    XP: 2
-    PP: [1,2]
-    Prereq:
-        Power: Attack, Mystic
-        Role:
-            - Support
-            - Caster
     Tags: Multi-target
 
 Attack, Mystic Entangle:
@@ -229,58 +172,6 @@ Attack, Mystic Entangle:
             - Caster
     Tags: Multi-target
 
-Attack, Mystic Deprivation:
-    Category:
-        - Combat
-        - Mystic Attacks
-    Type: Major
-    XP: 2
-    PP: [1,2]
-    Target: [1, 3]
-    Description: You channel your abilities deprive a target of their senses.
-    Mechanic: Select the Blinded or Deafened effect
-    Save:
-        Trigger: Once
-        DR: 3
-        Type: GUT
-        Fail: Blinded or Deafened unless immune
-    Prereq:
-        Power: Attack, Mystic
-        Role:
-            - Support
-            - Caster
-    Tags: Multi-target
-
-Attack, Mystic Dual-Shot:
-    Category:
-        - Combat
-        - Mystic Attacks
-    Description: You are so adept mystic arts you can start another spell before even finishing the first.
-    Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
-    Type: Minor
-    XP: 3
-    Prereq:
-        Skill:
-            - Finesse > 1
-            - Knowledge > 1
-            - Craft > 1
-
-        Power: Attack, Mystic
-    Tags: Multi-target
-
-Attack, Mystic Dual-Wield Master:
-    Category:
-        - Combat
-        - Mystic Attacks
-    Description: You are a master of wielding two weapons in combat.
-    Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
-    Type: Minor
-    XP: 1
-    Prereq:
-        Level: 3
-        Power: Attack, Mystic Dual-Shot
-    Tags: Multi-target
-
 Attack, Mystic Far Range:
     Category:
         - Combat
@@ -298,17 +189,6 @@ Battlecharged:
     Mechanic: When drawing initiative, Draw with Upper Hand.
     Type: Passive
     XP: 1
-
-Critical Master:
-    Category:
-        - Combat
-        - Control
-    Description: When you hit big, you hit BIG. Enemies don't stand a chance against you when you make a critical hit against them.
-    Mechanic: All Critical Success attacks now deal double damage instead of adding +1 damage.
-    Type: Passive
-    XP: 1
-    Prereq:
-        Level: 3
 
 Momentum: # Without this power, this should cost a major action.
     Category:
@@ -350,19 +230,6 @@ Momentum Aura:
         Skill: Brute > 1
     Tags: Multi-target
 
-Find Weakness:
-    Category:
-        - Combat
-        - Control
-    Type: Minor
-    Description: You can size up an opponent and discover their weaknesses.
-    Mechanic: As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
-    XP: 1
-    Prereq:
-        Level: 2
-        Skill: Detection > 0
-    Tags: Difficulty Prediction
-
 Pack Tactics:
     Category:
         - Combat
@@ -399,19 +266,6 @@ Lend Aid:
     Prereq:
         Role: Support
 
-Lend Aid, Advanced:
-    Category:
-        - Combat
-        - Support
-    Description: A little help goes a long way
-    Mechanic: Draw a card, hold it in reserve, and designate one ally. At any time before their next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
-    Type: Minor
-    XP: 1
-    Prereq:
-        Role: Support
-        Power: Lend Aid
-
-
 Lend Distraction:
     Category:
         - Combat
@@ -437,61 +291,6 @@ Lend Mass Distraction:
         Power: Lend Distraction
     Tags: Multi-target
 
-Lend Confusion:
-    Category:
-        - Combat
-        - Support
-    Type: Major
-    Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
-    Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
-    XP: 1
-    Prereq:
-        Level: 2
-        Power: Lend Distraction
-        Role:
-            - Support
-            - Caster
-
-Lend Mass Confusion:
-    Category:
-        - Combat
-        - Support
-    Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
-    Mechanic: You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
-    Type: Major
-    XP: 2
-    PP: 2
-    Prereq:
-        Level: 3
-        Power: Lend Confusion
-        Role:
-            - Support
-            - Caster
-    Tags: Multi-target
-
-Lend or Remove Skill:
-    Category:
-        - Combat
-        - Support
-    Description: You really know how to target an ability and either support it or get in it's way.
-    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn
-    Type: Major
-    XP: 2
-    PP: [1,2]
-    Prereq:
-        Role: Support
-
-Lend Readiness:
-    Category:
-        - Combat
-        - Support
-    Description: Your talents bolster you allies' speed and alertness.
-    Mechanic: Select one character. Until the end of the next combat, this character draws their Target Card with the Upper Hand. This effect is maintained even if you use another Power.
-    Type: Minor
-    XP: 1
-    Prereq:
-        Role: Support
-
 Lend Vigor:
     Category:
         - Combat
@@ -502,21 +301,6 @@ Lend Vigor:
     XP: 2
     PP: [1,2]
     Prereq:
-        Role:
-            - Support
-            - Caster
-
-Slow:
-    Category:
-        - Combat
-        - Support
-    Description: You selectively bend the nature of time
-    Mechanic: Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature
-    Type: Major
-    XP: 2
-    PP: 2
-    Prereq:
-        Level: 3
         Role:
             - Support
             - Caster
@@ -604,17 +388,6 @@ Lucky:
     XP: 1
     Tags: Suited Miss
 
-Luck Shared:
-    # Is this too much? It needs to be more than Lend Aid
-    Category:
-        - Game Mechanics
-        - Adjust Odds
-    Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-    Mechanic: When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. Until the end of their next turn, or for the next 6 seconds if out of combat, all draws are made with the Upper Hand.
-    Type: Minor
-    XP: 1
-    Tags: Suited Hit
-
 Scrying:
     Category:
         - Game Mechanics
@@ -627,38 +400,6 @@ Scrying:
     Prereq:
         Level: 2
     Tags: Card Viewing
-
-Scrying, Advanced:
-    Category:
-        - Game Mechanics
-        - Adjust Odds
-    Description: Your connection to this divine sense has strengthened.
-    Mechanic: You can a look at your top 3 cards of your deck and discard up to three of them. You must make a Draw before using this Power again.
-    Type: Major
-    XP: 2
-    PP: 2
-    Prereq:
-        Level: 3
-        Power: Scrying
-    Tags: Card Viewing
-
-Aces Wild:
-    Category:
-        - Game Mechanics
-        - Fate Cards
-    Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
-    Options: Select two suits to gain the corresponding options.
-    Mechanic:
-        - "You can trade a held Ace for one of the following effects:"
-        - "Clubs: you can play this card to interrupt an enemy's turn and make a single Major Action - even if you already went that round"
-        - "Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP"
-        - "Hearts: As a Minor Action, you can heal yourself or an ally you can see within 5 squares 2 HP"
-        - "Spades: Select one of your Powers with a cost of up to 1 PP to use as a Minor Action. You may decide if any draws required by this Power succeed or fail."
-    Type: Passive
-    XP: 2
-    Prereq:
-        Level: 3
-    Tags: Fate Cards
 
 Barrier:
     Category:
@@ -719,37 +460,6 @@ Stealth in the Shadows:
         Skill: Stealth > 1
     Tags: Stealth
 
-Stealth's Call:
-    Category:
-        - Movement
-        - Stealth
-    Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.
-    Mechanic: You cause an illusory sound to emanate from a point you can see within 10 spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand until they leave the area.
-    Type: Major
-    XP: 1
-    PP: 1
-    Prereq:
-        Skill: Stealth > 1
-    Tags:
-        - Stealth
-        - Multi-target
-
-Stealth's Blessing:
-    Category:
-        - Movement
-        - Stealth
-    Description: You channel a deep energy to go unseen.
-    Mechanic: Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
-    Type: Major
-    XP: 2
-    PP: [1,2]
-    Prereq:
-        Level: 2
-        Skill: Stealth > 2
-    Tags:
-        - Stealth
-        - Multi-target
-
 Calculating:
     Category:
         - Roleplay
@@ -774,15 +484,6 @@ Cunning:
     Type: Passive
     XP: 1
 
-Focused:
-    Category:
-        - Roleplay
-    Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
-    Options: Choose one Skill. 
-    Mechanic: When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
-    Type: Passive
-    XP: 0
-
 Handy:
     Category:
         - Roleplay
@@ -794,14 +495,6 @@ Handy:
         Skill:
             - Craft > 1
             - Knowledge > 1
-
-Keen Eye:
-    Category:
-        - Roleplay
-    Description: You're especially adept at taking in the world around you.
-    Mechanic: When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
-    Type: Passive
-    XP: 1
 
 # Discard: A character is limited to one Discard Power
 
@@ -840,6 +533,8 @@ Intensify:
     XP: 0
     Prereq:
         Level: 2
+
+# GM NPC and Dealer Powers
 
 Favored Terrain:
     Type: Passive
