@@ -27,7 +27,6 @@ Template: # Power name        # Must be unique
         Succeed: Descrip      # effect on success. Assume no access to above
     Tags: One or list
 
-
 Attack, Weapon:
     Category:
         - Combat
@@ -275,31 +274,17 @@ Lend Distraction:
     Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
     Type: Minor
     XP: 1
-
-Lend Mass Distraction:
-    Category:
-        - Combat
-        - Support
-        - Distract
-    Description: You know how to cause a scene.
-    Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
-    Type: Major
-    XP: 2
-    PP: [1,2]
-    Prereq:
-        Level: 2
-        Power: Lend Distraction
-    Tags: Multi-target
+    PP: 1
 
 Lend Vigor:
     Category:
         - Combat
         - Support
-    Description: "Channel energy to do more than help: inspire!"
-    Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
+    Description: Channel energy to do more than help; inspire!
+    Mechanic: Designate 1 creature who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: 2
     Prereq:
         Role:
             - Support
@@ -393,8 +378,8 @@ Scrying:
         - Game Mechanics
         - Adjust Odds
     Description: Your intuition is heightened and you can anticipate moments coming in the near future.
-    Mechanic: You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again
-    Type: Major
+    Mechanic: You can look at your top 2 cards of your deck and choose to discard up to two of them. You must make a Draw before using this Power again
+    Type: Minor
     XP: 1
     PP: 1
     Prereq:
@@ -405,7 +390,7 @@ Barrier:
     Category:
         - Magic
     Description: Your skills allow you to deploy temporary impromptu walls
-    Mechanic: You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
+    Mechanic: You create a wall 3 or 5 spaces wide that lasts 10 minutes. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -443,18 +428,6 @@ Stealthy Surprise:
     Type: Minor
     Description: An undetected assailant is particularly deadly.
     Mechanic: You attempt to hide from nearby creatures.
-    XP: 1
-    Prereq:
-        Skill: Stealth > 1
-    Tags: Stealth
-
-Stealth in the Shadows:
-    Category:
-        - Movement
-        - Stealth
-    Description: A creature of the dark, you're especially adept at going unseen.
-    Mechanic: When you make a Stealth check in dim light or darkness, you draw with the Upper Hand.
-    Type: Passive
     XP: 1
     Prereq:
         Skill: Stealth > 1
@@ -534,167 +507,6 @@ Intensify:
     Prereq:
         Level: 2
 
-# GM NPC and Dealer Powers
-
-Favored Terrain:
-    Type: Passive
-    Category:
-        - Movement
-        - Speed
-    XP: 1
-    Description: Home feels more familiar, granting a speed boost.
-    Options: Work with your GM to decide a favored terrain (e.g., mountains)
-    Mechanic: Gain +2 speed on this terrain. 
-
-Terrain Blink:
-    Type: Minor
-    Category:
-        - Movement
-        - Speed
-    XP: 3
-    Description: So at home that you can get anywhere.
-    Options: Work with your GM to decide a favored terrain (e.g., mountains)
-    Mechanic: When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
-
-Condition Resilience: 
-    Type: Passive
-    Category: Resilience 
-    XP: 1
-    Prereq:
-        Level: 2
-        Skill: VIT > 1
-    Description: Through training or sheer will, you brace your body for trials ahead.
-    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
-    Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
-
-Condition Immunity: 
-    Type: Passive
-    Category: Resilience 
-    XP: 3
-    Prereq:
-        Level: 3
-        Skill: VIT > 2
-    Description: Through training or sheer will, your body is impervious.
-    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
-    Mechanic: You are now immune to this condition.
-
-Undying:
-    Type: Passive
-    Category:
-        - Boss-Only
-    Mechanic: This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect. 
-
-Undying Vulnerability:
-    Type: Passive
-    Category:  
-        - Boss-Only
-    Mechanic: While the creature is at 0 HP, when they are exposed to this Vulnerability they are instead killed. A GM determines the nature of Vulnerability that a creature possesses to trigger this effect, such as exposure to sunlight.
-
-Stunning Glare:
-    Type: Major
-    Category:
-        - Boss-Only
-    Range: 10
-    Mechanic: Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned. 
-
-Drain Life:
-    Type: Major
-    Category:
-        - Boss-Only
-    Aura: 2
-    Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
-
-Ally Swap:
-    Type: Adversary
-    Category:
-        - Boss-Only
-        - Adversary Actions
-    Mechanic: Choose a friendly creature within 10 spaces and swap places with them. That creature can then make one Attack, Weapon to a creature within 1 space after the swap is complete.
-
-Adversary Major Action:
-    Type: Adversary
-    Category:
-        - Boss-Only
-        - Adversary Actions
-    Mechanic: Once per round, you make take an additional Major Action after a Dealer's turn.
-
-Drain Stamina:
-    Type: Adversary
-    Category:
-        - Boss-Only
-        - Adversary Actions
-    Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards. 
-    Aura: 2
-
-Phase Shift:
-    Type: Adversary
-    Category:
-        - Boss-Only
-        - Adversary Actions
-    Mechanic: Choose a space within 10 spaces and move there instantly.  
-
-Shake Enemy:
-    Type: Adversary
-    Category:
-        - Boss-Only
-        - Adversary Actions
-    Mechanic: Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.  
-
-Summon Ally:
-    Type: House
-    Category:
-        - Boss-Only
-        - House Actions
-    PP: 0
-    Description: Your authority allows you to call for reinforcements.
-    Mechanic: Select N creatures from the Bestiary and summon them to the battlefield. The GM determines how many creatures are summoned.
-
-Wall Grab:
-    Type: House
-    Category:
-        - Boss-Only
-        - House Actions
-    PP: 0
-    Description: Even the walls of your House obey you. Hold still!
-    Mechanic: All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.   
-
-Manifest Terrain:
-    Type: House
-    Category:
-        - Boss-Only
-        - House Actions
-    PP: 1
-    Mechanic: you change the area around you to an ensnaring landscape
-    AOE: Aura 2
-    Save:
-        Trigger: On starting turn
-        DR: 2
-        Type: AGL
-        Fail: Entangled
-
-Obey Me:
-    Type: House
-    Category:
-        - Boss-Only
-        - House Actions
-    PP: 2
-    Mechanic: enthrall an enemy
-    Save:
-        Trigger: On starting turn
-        DR: 2
-        Type: CON
-        Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
-        Succeed: end effect
-
-Amplify Ally:
-    Type: House
-    Category:
-        - Boss-Only
-        - House Actions
-    PP: 0
-    Description: Move the chess pieces on your board.
-    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
-
 Craft Light:
     Category:
         - Magic
@@ -722,6 +534,21 @@ Hidden Strike:
         Skill: Stealth > 0
     Tags:
         - Assassin  
+
+Stealth in the Shadows:
+    Category:
+        - Movement
+        - Stealth
+    Description: A creature of the dark, you're especially adept at going unseen.
+    Mechanic: When you make a Stealth check in dim light or darkness, you draw with the Upper Hand.
+    Type: Passive
+    XP: 1
+    Prereq:
+        Skill: Stealth > 1
+        Level: 2
+    Tags: 
+    - Stealth
+    - Assassin
 
 Vanishing Step: 
     Type: Major
@@ -895,3 +722,164 @@ Staggering Blow:
         Fail: they are Stunned
     Tags: 
         - Crusader
+
+# GM NPC and Dealer Powers
+
+Favored Terrain:
+    Type: Passive
+    Category:
+        - Movement
+        - Speed
+    XP: 1
+    Description: Home feels more familiar, granting a speed boost.
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: Gain +2 speed on this terrain. 
+
+Terrain Blink:
+    Type: Minor
+    Category:
+        - Movement
+        - Speed
+    XP: 3
+    Description: So at home that you can get anywhere.
+    Options: Work with your GM to decide a favored terrain (e.g., mountains)
+    Mechanic: When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
+
+Condition Resilience: 
+    Type: Passive
+    Category: Resilience 
+    XP: 1
+    Prereq:
+        Level: 2
+        Skill: VIT > 1
+    Description: Through training or sheer will, you brace your body for trials ahead.
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
+
+Condition Immunity: 
+    Type: Passive
+    Category: Resilience 
+    XP: 3
+    Prereq:
+        Level: 3
+        Skill: VIT > 2
+    Description: Through training or sheer will, your body is impervious.
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: You are now immune to this condition.
+
+Undying:
+    Type: Passive
+    Category:
+        - Boss-Only
+    Mechanic: This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect. 
+
+Undying Vulnerability:
+    Type: Passive
+    Category:  
+        - Boss-Only
+    Mechanic: While the creature is at 0 HP, when they are exposed to this Vulnerability they are instead killed. A GM determines the nature of Vulnerability that a creature possesses to trigger this effect, such as exposure to sunlight.
+
+Stunning Glare:
+    Type: Major
+    Category:
+        - Boss-Only
+    Range: 10
+    Mechanic: Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned. 
+
+Drain Life:
+    Type: Major
+    Category:
+        - Boss-Only
+    Aura: 2
+    Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
+
+Ally Swap:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a friendly creature within 10 spaces and swap places with them. That creature can then make one Attack, Weapon to a creature within 1 space after the swap is complete.
+
+Adversary Major Action:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Once per round, you make take an additional Major Action after a Dealer's turn.
+
+Drain Stamina:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards. 
+    Aura: 2
+
+Phase Shift:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a space within 10 spaces and move there instantly.  
+
+Shake Enemy:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.  
+
+Summon Ally:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Your authority allows you to call for reinforcements.
+    Mechanic: Select N creatures from the Bestiary and summon them to the battlefield. The GM determines how many creatures are summoned.
+
+Wall Grab:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Even the walls of your House obey you. Hold still!
+    Mechanic: All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.   
+
+Manifest Terrain:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 1
+    Mechanic: you change the area around you to an ensnaring landscape
+    AOE: Aura 2
+    Save:
+        Trigger: On starting turn
+        DR: 2
+        Type: AGL
+        Fail: Entangled
+
+Obey Me:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 2
+    Mechanic: enthrall an enemy
+    Save:
+        Trigger: On starting turn
+        DR: 2
+        Type: CON
+        Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
+        Succeed: end effect
+
+Amplify Ally:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Move the chess pieces on your board.
+    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
