@@ -45,7 +45,7 @@ Attack, Charge:
     Category:
         - Combat
         - Weapon Attacks
-    Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
+    Description: Your weapon training allows you to throw your weight into an enemy, heightening your damage.
     Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
     Type: Major
     XP: 2
@@ -179,7 +179,7 @@ Attack, Mystic Cone:
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
     Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down.
-    Mechanic: All characters in a Cone 3 are subjected to this effect.
+    Mechanic: All creatures in a Cone 3 are subjected to this effect.
     Type: Major
     XP: 2
     PP: 1
@@ -196,10 +196,16 @@ Attack, Mystic Confusion:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-    Mechanic: You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+    Mechanic: You force 1 to 2 creatures to make a GUT Save. On a failure, those creatures are Stunned. 
     Type: Major
     XP: 2
     PP: [1,2]
+    Target: [1,2]
+    Save:
+        Trigger: Once
+        DR: 3
+        Type: GUT
+        Fail: Stunned
     Prereq:
         Power: Attack, Mystic
         Role:
@@ -212,11 +218,11 @@ Attack, Mystic Entangle:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to tie your target in place.
+    Mechanic: Target creatures make an Agility Save. On a failure, those creatures are Entangled.
     Type: Major
     XP: 2
     PP: [1,2]
-    Target: [1,3]
-    Mechanic: Selected targets make a Save
+    Target: [1,2]
     Save:
         Trigger: Once
         DR: 3
@@ -233,12 +239,12 @@ Attack, Mystic Deprivation:
     Category:
         - Combat
         - Mystic Attacks
+    Description: You channel your abilities to  a target of their hearing or sight.
+    Mechanic: Choose to either Blind or Deafen target creatures. Targets must make a GUT Save. On a failure, those creatures are Blinded or Deafened.
     Type: Major
     XP: 2
     PP: [1,2]
-    Target: [1, 3]
-    Description: You channel your abilities deprive a target of their senses.
-    Mechanic: Select the Blinded or Deafened effect
+    Target: [1, 2]
     Save:
         Trigger: Once
         DR: 3
@@ -264,7 +270,6 @@ Attack, Mystic Dual-Shot:
             - Finesse > 1
             - Knowledge > 1
             - Craft > 1
-
         Power: Attack, Mystic
     Tags: Multi-target
 
@@ -305,7 +310,7 @@ Momentum: # Without this power, this should cost a major action.
     Category:
         - Combat
         - Control
-    Type: Passive
+    Type: Major # By our current definition, this power is not a Passive.
     XP: 1
     Description: By brute strength, force others to move around the battlefield.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you.
@@ -372,7 +377,7 @@ Heal:
         - Combat
         - Support
     Description: Can channel magical energy or medical training to heal others
-    Mechanic: Heal yourself or another you can see for 1 or 3 Health Points
+    Mechanic: Heal yourself or another you can see for 1 or 2 Health Points
     Type: Major
     XP: 2
     PP: [1,2]
@@ -403,13 +408,13 @@ Lend Aid, Advanced:
         Power: Lend Aid
 
 
-Lend Distraction:
+Lend Distraction: 
     Category:
         - Combat
         - Support
         - Distract
     Description: Just an annoyance in the distance
-    Mechanic: As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
+    Mechanic: As a Minor Action, target creature makes a Contested Conviction Check vs. your Bluffing or Performance Modifier. On a failure, target creature draws with the Lower Hand on their next Draw.
     Type: Minor
     XP: 1
 
@@ -419,7 +424,7 @@ Lend Mass Distraction:
         - Support
         - Distract
     Description: You know how to cause a scene.
-    Mechanic: Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
+    Mechanic: As a Major Action, 2 or 3 targets make a Contested Conviction Check vs. your Bluffing or Performance Modifier. On a failure, target creatures draw with the Lower Hand on any actions or checks made during their next turn.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -434,8 +439,9 @@ Lend Confusion:
         - Support
     Type: Major
     Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
-    Mechanic: Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
+    Mechanic: Select one creature to put under the effect of the Lend Distraction Power. At the end of each of their turns this creature makes a Contested Conviction Check against your Primary Skill to end the effect.
     XP: 1
+    PP: 1
     Prereq:
         Level: 2
         Power: Lend Distraction
@@ -447,8 +453,8 @@ Lend Mass Confusion:
     Category:
         - Combat
         - Support
-    Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
-    Mechanic: You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
+    Description: You're such a distracting presence that you bury into the mind of many targets, having a sustained effect.
+    Mechanic: 2 or 3 targets make a Contested Conviction Check against your Primary Skill. On a failure, targets draw with the Lower Hand during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
     Type: Major
     XP: 2
     PP: 2
@@ -465,7 +471,7 @@ Lend or Remove Skill:
         - Combat
         - Support
     Description: You really know how to target an ability and either support it or get in it's way.
-    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn
+    Mechanic: Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -488,10 +494,10 @@ Lend Vigor:
         - Combat
         - Support
     Description: "Channel energy to do more than help: inspire!"
-    Mechanic: Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
+    Mechanic: Target creature can take an additional Major Action and move 2 additional spaces during their movement on their next turn.
     Type: Major
-    XP: 2
-    PP: [1,2]
+    XP: 3
+    PP: [2]
     Prereq:
         Role:
             - Support
