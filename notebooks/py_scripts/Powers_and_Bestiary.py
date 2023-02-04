@@ -24,13 +24,13 @@ import os
 
 if os.path.basename(os.getcwd()) != "TheGame":
     os.chdir("..")
-
 # -
 
 # Next, import what you need:
 #
 
-from automation.templates import Bestiary, Powers
+from automation.templates.powers import Powers
+from automation.templates.bestiary import Bestiary
 
 # ### Loading Powers
 #
@@ -58,14 +58,12 @@ from automation.templates import Bestiary, Powers
 
 all_powers = Powers(input_files=["04_Powers.yaml", "05_Vulnerabilities.yaml"])
 
-
 # This class offers a number of options, including looking at categories, writing the set to markdown or csv, and looking at individual items.
 #
 
 # all_powers.categories
 # all_powers.write_md()
 all_powers.as_dict["Attack, Mystic Aura"]
-
 
 # ### Loading Bestiary
 #
@@ -91,16 +89,13 @@ all_powers.as_dict["Attack, Mystic Aura"]
 
 bestiary = Bestiary(input_files="06_Bestiary.yaml")
 
-
 # This class has similar capabilities as the `Powers` class for saving output as well as looking at individual cases.
 #
 
 bestiary.as_dict["Mystic, Caster"]
 
-
 caster = bestiary.as_dict["Mystic, Caster"]
 caster
-
 
 # These classes are really useful, however, when we add them to an [Encounter](./Encounters.ipynb).
 #
@@ -120,5 +115,6 @@ yaml_to_other(
     writing=["md", "csv", "png"],
     out_delim="\t",  # CSV delimiter - "," is also available
 )
-
 # -
+
+

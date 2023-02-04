@@ -1,6 +1,5 @@
 from collections import OrderedDict
 from dataclasses import dataclass, field, fields
-from math import floor
 from operator import attrgetter
 from typing import List
 
@@ -11,9 +10,8 @@ from ..utils import (
     make_bullet,
     make_header,
     my_repr,
-    sort_dict,
 )
-from .powers import Powers, list_power_types
+from .powers import list_power_types, load_all_powers
 from .yaml_spec import YamlSpec
 
 list_attribs = ["AGL", "CON", "GUT", "INT", "STR", "VIT"]
@@ -29,8 +27,11 @@ list_skills = [
     "Athletics",
     "Brute",
 ]
+list_stats = {list_attribs[n]: list_skills[n * 2 : n * 2 + 2] for n in range(5)}
 list_beast_types = ["PC", "Dealer", "NPC", "Boss", "Companion"]
 list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
+
+all_powers = load_all_powers().as_dict
 
 
 class Bestiary(YamlSpec):
@@ -43,55 +44,30 @@ class Bestiary(YamlSpec):
 
     # TODO: check stat overrides before printing
     def __init__(self, input_files="06_Bestiary_SAMPLE.yaml", limit_types: list = None):
-        input_files = [file for file in ensure_list(input_files) if "Best" in file]
+        input_files = [
+            file
+            for file in ensure_list(input_files)
+            if "best" in file.lower() or "pc" in file.lower()
+        ]
         super().__init__(input_files=input_files)
         self._tried_loading = False
         self._limit_types = limit_types or list_beast_types
-        self._as_list = []
         self._as_dict = {}
         self._categories = {}
         self._categories_set = set()
         self._csv_fields = set()
 
-    def _build_contents(self):
-        """Loop over items in the raw dict format. Generate list and dict versions"""
-        self._tried_loading = True
-        for k, v in self.raw_data.items():
-            if v.get("Type", None) in self._limit_types:
-                id = v["Name"] + str(v["Level"]) if v.get("Name") else k
-                beast = Beast(id=id, **v)
-                self.as_list.append(beast)
-                self._as_dict.update({k: beast})
-
-    @property
-    def as_list(self):
-        """Beasts in a list of the Beast class"""
-        if not self._as_list and not self._tried_loading:
-            self._build_contents()
-        return self._as_list
-
     @property
     def as_dict(self) -> dict:
-        """Beasts as a dict, callable via string name, value as Beast class
-
-        Return readable dict with Mechanics collapsed.
-
-        """
+        """Beasts as a dict, callable via string name, value as Beast class"""
         if not self._as_dict and not self._tried_loading:
-            self._build_contents()
+            self._build_contents(Beast, "Level")
         return self._as_dict
 
     @property
     def categories(self) -> OrderedDict:
         """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
-        if not self._categories:
-            for b in self.as_list:
-                cat_tuple = tuple([b.Type])  # Differs from powers
-                self._categories.setdefault(cat_tuple, [])
-                self._categories[cat_tuple].append(b.Name)
-                self._categories_set.add(cat_tuple)
-                self._csv_fields = self._csv_fields.union(list(b.csv_dict.keys()))
-        return sort_dict(self._categories, sorted(self._categories_set))
+        return self._build_categories(build_with="Type")
 
     @property
     def csv_fields(self) -> list:
@@ -147,16 +123,16 @@ class Attribs:
 class Skills:
     """Class to represent a beast's Skills"""
 
-    Finesse: int = 0
-    Stealth: int = 0
-    Bluffing: int = 0
-    Performance: int = 0
-    Knowledge: int = 0
-    Investigation: int = 0
-    Detection: int = 0
-    Craft: int = 0
-    Athletics: int = 0
-    Brute: int = 0
+    Finesse: int = None
+    Stealth: int = None
+    Bluffing: int = None
+    Performance: int = None
+    Knowledge: int = None
+    Investigation: int = None
+    Detection: int = None
+    Craft: int = None
+    Athletics: int = None
+    Brute: int = None
 
     @property
     def as_tuple(self):
@@ -220,27 +196,28 @@ class Beast:
     HP: int = 1
     AP: int = 1
     AR: int = None
-    PP: int = 0  # TODO: migrate to post-init, sum PP from all available powers
+    PP: int = 0
     Speed: int = 6
     Primary_Skill: str = None
     Attribs: dict = None
     Skills: dict = None
     Powers: dict = field(default=None, repr=False)
-    Powers_list: list = field(default_factory=list, repr=False)
     Phases: list = None
-    Items: dict = None
+    Items: dict = field(default_factory=dict)
     Description: str = ""
 
     def __post_init__(self):
         """Generate values not given on initialization"""
+        if self.PP != 0:
+            logger.warning("Yaml PP is no longer used. Now summed from powers")
         self.sort_index = self.Type
         self.Name = self.Name if self.Name else self.id
-        self.Powers = self.fetch_powers()
-        self.Powers_list = [p for p in self.Powers.values()]
+        self.Powers, self.PP, self._powers_XP = self.fetch_powers()
         self.Attribs = Attribs(**self.Attribs) if self.Attribs else None
         self.Skills = Skills(**self.Skills) if self.Skills else None
+        self.adjust_stats()
         self.Phases = self.fetch_phases() if self.Phases else None
-        self.AR = self.AR if self.AR else (3 - floor(self.Attribs.AGL / 2))  # default
+        self.AR = self.AR if self.AR else (3 - (self.Attribs.AGL // 2))  # default
         self.HP_Max = self.HP  # assume providing max when initializing
         self.AP_Max = self.AP
         self.AR_Max = self.AR
@@ -248,32 +225,27 @@ class Beast:
         self.Speed_Max = self.Speed
         self.RestCards = self.HP
         self.RestCards_Max = self.HP
-        self.override_stats()
 
     def fetch_powers(self) -> dict:
         """Given a list of powers by name, generate a dict {Name: Power class}"""
-        output = {}
-        all_powers = Powers(
-            input_files=[
-                "04_Powers.yaml",
-                "04_Powers_SAMPLE.yaml",
-                "05_Vulnerabilities.yaml",
-            ]
-        ).as_dict
+        output_powers = {}
+        powers_pp = 0
+        powers_xp = 0
         self.Powers = ensure_list(self.Powers)
         for power in self.Powers:
             if isinstance(power, dict):
-                power_name = list(power.keys())[0]
-                this_power = all_powers.get(power_name, None)
-                output.update(
-                    {power_name: this_power.set_choice(list(power.values())[0])}
-                )
+                power_name, choice = next(iter(power.items()))
             else:
-                this_power = all_powers.get(power, None)
-                output.update({power: this_power})
+                power_name, choice = power, None
+            this_power = all_powers.get(power_name, None)
             if not this_power:
                 logger.warning(f"{self.Name} has a power not in yaml: {power}")
-        return output
+                continue
+
+            output_powers.update({power_name: this_power.set_choice(choice)})
+            powers_pp += max(ensure_list(this_power.PP))
+            powers_xp += this_power.XP
+        return output_powers, powers_pp, powers_xp
 
     def fetch_phases(self) -> list:
         """Turn phase input into list of phase class items"""
@@ -282,20 +254,44 @@ class Beast:
             output.append(Phase(Name=phase, Order=order, **phase_dict))
         return output
 
-    def override_stats(self) -> None:
-        """Check for any StatOverride powers. Apply overrides, sum with current value"""
-        # TODO: Also use this to take attribs and apply them to corresponding skills?
-        for power in self.Powers.values():
-            override = getattr(power, "StatOverride", None)
-            if override:
-                attrib_or_skill = (
-                    self.Attribs if override.Stat in list_attribs else self.Skills
-                )
-                setattr(
-                    attrib_or_skill,
-                    override.Stat,
-                    attrgetter(override.Stat)(attrib_or_skill) + override.Value,
-                )
+    def _adjust_stats_via_attribs(self):
+        for attrib, skills in list_stats.items():
+            for skill in skills:
+                if not getattr(self.Skills, skill):
+                    logger.debug(
+                        f"Set {self.Name} {skill} to {getattr(self.Attribs, attrib)}"
+                    )
+                    setattr(self.Skills, skill, getattr(self.Attribs, attrib))
+
+    def _adjust_stats_powers_items(self):
+        adjs = [getattr(power, "StatAdjusts", []) for power in self.Powers.values()]
+        adjs += [getattr(item, "StatAdjusts", []) for item in self.Items.values()]
+        adjs = [item for adj in adjs if adj is not None for item in adj]  # Unpack lists
+
+        for adjust in adjs:
+            if adjust.Stat in list_attribs:
+                adjusted_val = self.Attribs
+            elif adjust.Stat in list_skills:
+                adjusted_val = self.Skills
+            else:
+                adjusted_val = self
+            current = getattr(adjusted_val, adjust.Stat, 0) if adjust.add else 0
+            logger.debug(f"Set {self.Name} {adjust.Stat} to {current} + {adjust.Value}")
+            setattr(adjusted_val, adjust.Stat, current + adjust.Value)
+
+    def adjust_stats(self) -> None:
+        """Check for any StatAdjust powers. Apply overrides, sum with current value"""
+        self._adjust_stats_powers_items()
+        self._adjust_stats_via_attribs()
+
+    def check_valid(self):
+        pass
+
+    def __repr__(self):
+        """Print non-default beast items with repr property and linebreaks"""
+        return my_repr(self)
+
+    # ------------------------------- Output functions -------------------------------
 
     def _md_stats_table(self) -> str:
         """Generate string for stats table included in markdown bestiary"""
@@ -324,7 +320,7 @@ class Beast:
         for power_type in list_power_types:
             powers_subset = [
                 make_bullet(f"**{p.Name}**: {p.Mechanic}")
-                for p in self.Powers_list
+                for p in self.Powers.values()
                 if getattr(p, "Type", "None") == power_type
             ]
             if powers_subset:
@@ -434,7 +430,6 @@ class Beast:
         removed = [
             "sort_index",
             "Powers",
-            "Powers_list",
             "Attribs",
             "Skills",
             "Phases",
@@ -445,7 +440,3 @@ class Beast:
             if attrib:
                 output.update({**attrib.flat})
         return output
-
-    def __repr__(self):
-        """Print non-default beast items with repr property and linebreaks"""
-        return my_repr(self)

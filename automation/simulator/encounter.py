@@ -2,7 +2,7 @@ import copy
 import random
 from typing import List, Union
 
-from ..templates import Beast
+from ..templates.bestiary import Beast
 from ..utils import ensure_list, logger
 from .deck import Deck
 from .player import Player

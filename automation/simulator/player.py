@@ -1,7 +1,8 @@
 import random
 from dataclasses import fields
 
-from ..templates import Beast, Power
+from ..templates.bestiary import Beast
+from ..templates.powers import Power
 from ..utils import drawlog, ensure_list, logger, restlog
 from .deck import Card, Deck
 

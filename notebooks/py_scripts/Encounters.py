@@ -24,16 +24,15 @@ import os
 
 if os.path.basename(os.getcwd()) != "TheGame":
     os.chdir("..")
-
 # -
 
 # Next, import what you need:
 #
 
 import copy
-
-from automation.simulator import Deck, Encounter
-from automation.templates import Bestiary
+from automation.templates.bestiary import Bestiary
+from automation.simulator.deck import Deck
+from automation.simulator.encounter import Encounter
 
 # Use the Bestiary to provide dictionaries for each of the combatants. We can use emojis to represent them in the combat output. The Name value will be shown in the log.
 #
@@ -48,7 +47,6 @@ c2.update(dict(Name="👽", id="B"))
 s = b["Spider Queen"]
 s.update(dict(Name="🎇", id="C"))
 
-
 # Initialize the encounter. We can see who is involved and resource information by looking at the encounter's `PCs`, `enemies`, or `turn_order` properties.
 #
 # Note that this may differ from a real encounter because each participant has their own hand and deck. In a true encounter, a GM might manage many characters with the same deck.
@@ -57,24 +55,20 @@ s.update(dict(Name="🎇", id="C"))
 e = Encounter(PCs=[c1, c2], Enemies=[s])
 e.turn_order
 
-
 # Next, we can simulate a couple rounds of combat. Here, each participant will choose a Power available to them (if sufficient PP) and apply it to an enemy at random. This does not yet cover buffing powers (e.g., Shield, Lend Aid) or mind control status effects (i.e., Charmed, Enthralled).
 #
 
 e.sim_round(3)
-
 
 # We can even simulate epic events.
 #
 
 e.sim_epic_event(successes_needed=3)
 
-
 # Let's see how everyone is doing.
 #
 
 e.turn_order
-
 
 # If you're interested in draining a specific character's resources, we can index them directly and subtract values.
 #
@@ -83,37 +77,29 @@ spider_queen = e.enemies[0]
 spider_queen.HP = 1
 spider_queen
 
-
 # The only thing that can't be set directly is the deck. This has to be managed by either drawing, using a fate card, or shuffling.
 #
 
 spider_queen.draw()
 
-
 spider_queen.exchange_fate()
-
 
 spider_queen.shuffle(2)
 spider_queen
-
 
 # We can give some or all participants a rest.
 #
 
 e.sim_quick_rest(participants=e.PCs)  # If no participants specified, all
 
-
 e.turn_order
-
 
 # Or a full rest.
 #
 
 e.sim_full_rest()
 
-
 e.turn_order
-
 
 # ## Logging
 #
@@ -129,7 +115,6 @@ logger.setLevel("DEBUG")  # Most information
 # logger.setLevel('CRITICAL') # No information
 spider_queen.save(DR=3, attrib=["AGL", "STR"], upper_lower="lower", draw_n=2)
 e.sim_round()
-
 # -
 
 # For a more detailed record of checks, saves, and rests, turn on CSV logging. This will save logs of who performed which check/save or rest and some associated values.
@@ -139,10 +124,11 @@ e.set_csv_logging(True)
 e.sim_round()
 e.sim_quick_rest()
 
-
 # The following uses system commands rather than Python to look at the output. To use this data more meaningfully, try loading the data with [pandas](https://pythonbasics.org/read-csv-with-pandas/).
 #
 
 # !head automation/_output/log_draws.csv
 
 # !head automation/_output/log_rests.csv
+
+
