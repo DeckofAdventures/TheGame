@@ -2,17 +2,29 @@ from dataclasses import dataclass, field, fields
 from operator import attrgetter
 from typing import Union
 
-from ..utils import (
-    ensure_list,
-    flatten_embedded,
-    list_to_or,
-    make_bullet,
-    my_repr,
-    sort_dict,
-)
+from ..utils import ensure_list, flatten_embedded, list_to_or, make_bullet, my_repr
 from .yaml_spec import YamlSpec
 
-list_power_types = ["Passive", "Vulny", "Free", "Major", "Minor", "Adversary", "House"]
+list_power_types = [
+    "Passive",
+    "Vulny",
+    "Free",
+    "Major",
+    "Minor",
+    "Adversary",
+    "House",
+    "Channel",
+]
+
+
+def load_all_powers():
+    return Powers(
+        input_files=[
+            "04_Powers.yaml",
+            "04_Powers_SAMPLE.yaml",
+            "05_Vulnerabilities.yaml",
+        ]
+    )
 
 
 class Powers(YamlSpec):
@@ -41,53 +53,21 @@ class Powers(YamlSpec):
         )
         self._limit_types = limit_types or list_power_types
         self._as_dict = {}
-        self._as_list = []
         self._categories = {}
         self._categories_set = set()
         self._csv_fields = set()
-        self._type_dict = {k: [] for k in self._limit_types}
-
-    @property
-    def as_list(self):
-        """Return list of powers"""
-        if not self._as_list:
-            self._as_list = [
-                Power(Name=k, **v)
-                for k, v in self._raw_data.items()
-                if v.get("Type", None) in self._limit_types
-            ]
-        return self._as_list
 
     @property
     def as_dict(self) -> dict:
         """Return dict of {Name:Power class}"""
-        if not self._as_dict:
-            self._as_dict = {
-                k: Power(Name=k, **v)
-                for k, v in self._raw_data.items()
-                if v.get("Type", None) in self._limit_types
-            }
+        if not self._as_dict and not self._tried_loading:
+            self._build_contents(Power)
         return self._as_dict
 
     @property
     def categories(self) -> list:
         """Return set of tuples: (categories, subcategories)"""
-        if not self._categories:
-            for p in self.as_list:
-                cat_tuple = tuple(p.Category)
-                self._categories.setdefault(cat_tuple, [])
-                self._categories[cat_tuple].append(p.Name)
-                self._categories_set.add(cat_tuple)
-                self._csv_fields = self._csv_fields.union(list(p.csv_dict.keys()))
-        return sort_dict(self._categories, sorted(self._categories_set))
-
-    @property
-    def type_dict(self) -> dict:
-        """Cache of powers by type {Major: [a, b]}"""
-        if not any(self._type_dict.values()):
-            for p in self.as_list:
-                self._type_dict[p.Type].append(p.Name)
-        return self._type_dict
+        return self._build_categories(build_with="Category")
 
     @property
     def csv_fields(self):
@@ -102,27 +82,29 @@ class Powers(YamlSpec):
 
 
 @dataclass(order=True)
-class StatOverride:
+class StatAdjust:
     """Class representing attrib or skill number to add (e.g., Dumb vulny redudces INT)"""
 
-    as_dict: dict = field(repr=False)
-    Stat: str = field(init=False)
-    Value: int = field(init=False)
+    Stat: str
+    Value: int
+    add: bool = True
 
     def __post_init__(self):  # Assumes only one stat is overridden
-        self.Stat = list(self.as_dict.keys())[0]
-        self.Value = list(self.as_dict.values())[0]
+        if isinstance(self.add, str):
+            self.add = self.add.lower() == "add"
 
     @property
     def text(self) -> str:
         """Return mechanic text of override: Add value to stat"""
-        return f"Add {self.Value} to {self.Stat}"
+        if self.add:
+            return f"Add {self.Value} to {self.Stat}"
+        return f"Replace {self.Stat} with {self.Value}"
 
     @property
     def flat(self) -> dict:
         """Return flatted dict {'Prereq_example': value} pairs for csv export"""
         return flatten_embedded(
-            {"StatOverride": {"Stat": self.Stat, "Value": self.Value}}
+            {"StatAdjust": {"Stat": self.Stat, "Value": self.Value, "Add": self.add}}
         )
 
 
@@ -184,6 +166,7 @@ class Power:
     Name: str
     Type: str = field(repr=False)
     Category: Union[str, list] = field(repr=False)
+    id: str = field(default="", repr=False)
     Description: str = field(default="")
     Mechanic: Union[str, list] = field(default="")
     Mechanic_raw: str = field(init=False, repr=False)
@@ -199,7 +182,7 @@ class Power:
     ToHit: int = 1
     Save: dict = field(default=None, repr=False)
     Prereq: dict = field(default=None)
-    StatOverride: dict = field(default=None, repr=False)
+    StatAdjust: dict = field(default=None, repr=False)
     Tags: list = None
 
     def __post_init__(self):
@@ -208,16 +191,19 @@ class Power:
         self.Category = ensure_list(self.Category)
         self.Save = Save(**self.Save) if self.Save else None
         self.Prereq = Prereq(**self.Prereq) if self.Prereq else None
-        self.StatOverride = (
-            StatOverride(self.StatOverride) if self.StatOverride else None
-        )
         self.Damage = 0 if self.Type in ["Vulny", "Passive"] else self.Damage
+        self.StatAdjusts = (
+            self._compose_adjust(self.StatAdjust) if self.StatAdjust else None
+        )
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
         self.upper_lower_int = self._get_upper_lower_int()
 
-    def set_choice(self, choice: str):
+    def set_choice(self, choice: str = None):
         """Given a choice among options, revise merged mechanic property"""
+        if not choice:
+            return self
+
         self.Choice = choice
         self.Mechanic = self.merge_mechanic()
         return self
@@ -226,10 +212,19 @@ class Power:
         upper_lower = self.Draw.upper()[0]
         return 2 if upper_lower == "U" else -2 if upper_lower == "L" else 0
 
+    def _compose_adjust(self, stat_adjust_items):
+        output = []
+        for k, v in stat_adjust_items.items():
+            if k.lower() in ["add", "replace"]:
+                output += [StatAdjust(Stat=s, Value=val, add=k) for s, val in v.items()]
+            else:
+                output.append(StatAdjust(Stat=k, Value=v, add=True))
+        return output
+
     def merge_mechanic(self) -> str:
         """Given power dict, merge all appropriate items into Mechanic
 
-        Assumes Listed mechanics do not have PP/Save/StatOverride
+        Assumes Listed mechanics do not have PP/Save/StatAdjust
 
         Returns:
             power_merged (dict): power with all mechanic items combined.
@@ -249,8 +244,8 @@ class Power:
                 )
             elif self.Mechanic_raw:
                 output.append(self.Mechanic_raw)
-            if self.StatOverride:
-                output.append(self.StatOverride.text)
+            if self.StatAdjust:
+                output += [adjust.text for adjust in self.StatAdjusts]
             if self.Save:
                 output.append(self.Save.text)
             return ". ".join([self.Type, *output])
@@ -281,13 +276,13 @@ class Power:
             "Mechanic_raw",
             "Options",
             "Choice",
-            "StatOverride",
+            "StatAdjust",
             "Save",
             "Prereq",
             "Description",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
-        for attrib in [self.StatOverride, self.Save, self.Prereq]:
+        for attrib in [self.StatAdjust, self.Save, self.Prereq]:
             if attrib:
                 output.update({**attrib.flat})
         return output
