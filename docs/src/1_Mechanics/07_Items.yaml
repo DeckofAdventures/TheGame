@@ -1,21 +1,26 @@
-
-
 Light Armor:
   Type: Armor
-  AR: 3
+  StatAdjust:
+    Replace:
+      AR: 3
   Cost: 5 gp
 
 Medium Armor:
   Type: Armor
-  AR: 2
+  StatAdjust:
+    Replace:
+      AR: 2
   Prereq:
     Skill: STR > 0
   Cost: 25 gp
 
 Fortified Armor:
   Type: Armor
-  AR: 2
-  AP: 1
+  StatAdjust:
+    Replace:
+      AR: 2
+    Add:
+      AP: 1
   Prereq:
     Skill: STR > 1
   Cost: 100 gp

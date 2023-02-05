@@ -1,12 +1,21 @@
 from dataclasses import dataclass, field, fields
 from operator import attrgetter
 
-from ..utils import ensure_list, flatten_embedded, list_to_or, make_bullet, my_repr
-from .powers import Prereq, Save, StatAdjust
+from ..utils import (
+    ensure_list,
+    flatten_embedded,
+    list_to_or,
+    logger,
+    make_bullet,
+    my_repr,
+)
+from .powers import Prereq, Save, StatAdjust, list_power_types, load_all_powers
 from .yaml_spec import YamlSpec
 
 list_item_types = ["General", "Consumable", "Tool", "Armor", "Weapon", "Shield"]
 list_item_rarities = ["Common", "Uncommon", "Rare", "Legendary"]
+list_currencies = ["dp", "gp", "sp", "cp"]
+all_powers = load_all_powers().as_dict
 
 
 def load_all_items():
@@ -69,11 +78,77 @@ class Use:
     Effect: int = None
     Duration: str = None
     Limit: str = None
+    Power: str = None
+    PowerFull: str = field(default=None, repr=False)
+    PowerMechanic: str = field(default=None, repr=False)
+
+    def __post_init__(self):
+        if self.Time:
+            dur, measure = self.Time.lower().split(" ")
+            if measure == "action" and dur not in map(str.lower, list_power_types):
+                logger.warning(f"{dir} not a known action type.")
+            elif measure != "action" and not dur.isnumeric():
+                logger.warning(f"Expected number for non-action use time: {self.Time}")
+        if self.Limit and self.Limit.isnumeric():
+            self.Limit += "times"
+        if self.Power:
+            if isinstance(self.Power, list):
+                power_name, choice = next(iter(self.Power[0].items()))
+            else:
+                power_name, choice = self.Power, None
+
+            self.PowerFull = all_powers[power_name].set_choice(choice)
+            self.Power = self.PowerFull.Name
+            self.PowerMechanic = self.PowerFull._mechanic_for_item
+        if self.Effect and self.Power:
+            logger.warning(
+                f"Use expected effect or power, not both: {self.Effect}, {power_name}"
+            )
+
+    @property
+    def non_defaults(self):
+        """Return non-default repr items"""
+        return {
+            f.name: attrgetter(f.name)(self)
+            for f in fields(self)
+            if f.repr and (attrgetter(f.name)(self) is not None)
+        }
 
     @property
     def flat(self) -> dict:
-        """Return flatted dict {'Prereq_example': value} pairs for csv export"""
-        return flatten_embedded(dict(Prereq=self.__dict__))
+        return flatten_embedded(dict(Use=self.non_defaults))
+
+    @property
+    def merged_string(self) -> str:
+        output = f"Up to {self.Limit}, " if self.Limit else ""
+        output += f"take {self.Time} to activate. " if self.Time else ""
+        output = output.capitalize()
+        output += self.PowerMechanic or self.Effect
+        output += "." if output[-1] != "." else ""
+        output += f" Lasts {self.Duration}."
+        return output
+
+    def __repr__(self) -> str:
+        return my_repr(self)
+
+
+@dataclass(order=True)
+class Cost:
+    raw: str = field(repr=False)
+    Value: int = field(init=False)
+    Denomination: str = field(init=False)
+
+    def __post_intit__(self):
+        self.Value, self.Denomination = self.Cost.split(" ")
+        if self.Denomination not in list_currencies:
+            logger.warning(f"Unexpected currency type: {self.Denomination}")
+
+    @property
+    def flat(self) -> dict:
+        return flatten_embedded(dict(Cost=self.__dict__))
+
+    def __repr__(self) -> str:
+        return self.raw
 
 
 @dataclass(order=True)
@@ -81,15 +156,16 @@ class Item:
     """Class representing an item"""
 
     sort_index: str = field(init=False, repr=False)
-    id: str
+    id: str = field(repr=False)
     Name: str
-    Type: str = field(default="General")
+    Type: str = field(default="General", repr=False)
+    Cost: str = None
     Rarity: str = field(default="Common")
     Description: str = field(default="")
-    Use: dict = field(default=None, repr=False)
+    Use: dict = field(default=None)
     Range: int = 6
     AOE: str = None
-    Damage: int = 1
+    Damage: int = 0
     Save: dict = field(default=None, repr=False)
     Prereq: dict = field(default=None)
     StatAdjust: dict = field(default=None, repr=False)
@@ -98,15 +174,24 @@ class Item:
     def __post_init__(self):
         """Generate values not given on initialization"""
         self.sort_index = self.Type
-        self.Category = ensure_list(self.Category)
         self.Save = Save(**self.Save) if self.Save else None
         self.Prereq = Prereq(**self.Prereq) if self.Prereq else None
-        self.Prereq = Prereq(**self.Use) if self.Use else None
-        self.StatAdjust = (
-            [StatAdjust(s) for s in ensure_list(self.StatAdjust)]
-            if self.StatAdjust
-            else None
+        self.Use = Use(**self.Use) if self.Use else None
+        self.StatAdjusts = (
+            self._compose_adjust(self.StatAdjust) if self.StatAdjust else None
         )
+        self.Cost = Cost(self.Cost) if self.Cost else None
+        if self.StatAdjusts and not self.Description:
+            self.Description = ". ".join([s.text for s in self.StatAdjusts]) + "."
+
+    def _compose_adjust(self, stat_adjust_items):
+        output = []
+        for k, v in stat_adjust_items.items():
+            if k.lower() in ["add", "replace"]:
+                output += [StatAdjust(Stat=s, Value=val, add=k) for s, val in v.items()]
+            else:
+                output.append(StatAdjust(Stat=k, Value=v, add=True))
+        return output
 
     @property
     def markdown(self) -> str:
@@ -118,6 +203,12 @@ class Item:
                     for key, value in self.Prereq.flat.items():
                         title = key.replace("_", " ")
                         output += make_bullet(f"{title}: {value}")
+                elif f.name == "Cost":
+                    output += make_bullet(f"Cost: {self.Cost.raw}")
+                elif f.name == "Use":
+                    output += make_bullet(f"Use: {self.Use.merged_string}")
+                elif f.name == "Tags":
+                    output += make_bullet(f"Tags: {', '.join(ensure_list(self.Tags))}")
                 else:
                     output += make_bullet(
                         f"{f.name}: {list_to_or(attrgetter(f.name)(self))}"
@@ -129,20 +220,20 @@ class Item:
         """Set of information to be added as a row in the output csv"""
         removed = [
             "sort_index",
-            "Mechanic_raw",
-            "Options",
-            "Choice",
             "StatAdjust",
-            "Save",
+            "StatAdjusts",
             "Prereq",
             "Description",
+            "id",
+            "Use",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
-        for attrib in [self.StatAdjust, self.Save, self.Prereq]:
-            if attrib:
-                output.update({**attrib.flat})
+        for attrib in [self.Prereq, self.Use]:
+            for a in ensure_list(attrib):
+                if a:
+                    output.update({**a.flat})
         return output
 
     def __repr__(self):
-        """Print non-default power items with repr property and linebreaks"""
+        """Print non-default items with repr property and linebreaks"""
         return my_repr(self)

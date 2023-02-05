@@ -5,58 +5,61 @@ Template:               # must be unique
   Cost: X               # Currency cost, in cp, sp, or gp, default is assumed gp
   Use:
     Time: Descrip       # Time it takes to use (e.g., Major Action, 1 min)
-    Effect: Descrip     # On use, this effect. Use StatAdjust for persistent effects
     Duration: Descrip   # Use effect is in place for this. If none, persistent effect
     Limit: X            # Limit uses
-  StatAdjust:
-    AR: X               # For Armor, this is the set AR while worn. Replaces prev val
-    AP: X               # For Armor, Default 0
+    Effect: Descrip     # On use, this effect. Effect OR Power not both
+    Power: Name         # Named power it grants the wielder, from full Powers list
+  StatAdjust:           # If neither 'Add' nor 'Replace', assumed 'Add'
+      Add:              # For items that add/subtract to/from current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
+      Replace:          # For items that replace current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
   Prereq:               # For multiple, implies 'OR'. Use [A, B] or `-`
     Role: One of        # Martial, Defender, Support, Caster
     Level: X            # Integer
     Skill: X > 1        # Attrib or Skill > value
   Save:                 # Separated here, merged in md
-      Trigger: One of   # Once, On hit, On starting turn, etc. Sentence start.
-      DR: X             # If primary skill modifier of actor, none [3-(MOD/2)]
-      Type: MOD         # AGL, CON, etc
-      Fail: Descrip     # effect on fail
-      Succeed: Descrip  # effect on success. Assume no access to above
   Range: X              # Default 6
   AOE: Shape N          #
   Damage: X             # For Weapons, Default 1
   Tags: List            # e.g., 2-handed, Ranged - used to sort later # NOT NEEDED?
 
+
+Wand of Frost:
+  Type: Weapon
+  Cost: 500 gp
+  Rarity: Rare
+  Use:
+    Time: Major Action
+    Limit: 3 times per day
+    Power:
+      - Attack, Mystic Cone: Mystic Attack
+  StatAdjust:
+    Replace:
+      Craft: -3
+    Add:
+      AP: 6
+  Damage: 2
+  Range: 3
+  AOE: Aura 2
+  Tags: ['2-handed', 'Other Tag']
+
+
 Shield, Standard:
   Type: Shield
   Cost: 5 gp
-  Use:
-    Time: Major Action
   StatAdjust:
     AP: 1
-  Description: A standard shield. Comes in a variety of shapes and plain materials.
+  Description: A standard shield increases AP by 1. Comes in a variety of shapes and plain materials.
 
 Shield, Hardened:
   Type: Shield
   Cost: 200 gp
-  Use:
-    Time: Major Action
   Prereq:
     Skill: STR > 1
   StatAdjust:
     AP: 2
-  Description: A heavy shield. Comes in a variety of shapes and refined materials.
-
-Shield, Impervious:
-  Type: Shield
-  Cost: 1,500 gp
-  Rarity: Uncommon
-  Use:
-    Time: Major Action
-  Prereq:
-    Skill: STR > 2
-  StatAdjust:
-    AP: 3
-  Description: A nearly impenetrable shield. Comes in a variety of shapes and rare materials.
+  Description: A heavy shield increases AP by 2. Comes in a variety of shapes and refined materials.
 
 Massive Armor:
   Type: Armor
@@ -85,37 +88,8 @@ Whip:
   Rarity: Uncommon
   Use:
     Time: Major action
-  Save:
-    Trigger: On use
-    DR: 3
-    Type: AGL
-    Fail: Knocked Down
+    Power: Sweep
   Tags: 2-handed
-
-Wand of Frost A: # Should this be a 'Power'?
-  Type: Weapon
-  Damage: 1
-  Range: 3
-  AOE: Cone 3
-  Cost: 500 gp
-  Rarity: Rare
-  Use:
-    Time: Major action
-  Save:
-    Trigger: On use
-    DR: 3
-    Type: AGL
-    Fail: Frozen
-    # Succeed: implied 1 damage
-
-Wand of Frost B: # Draft as power
-  Type: [Weapon, Consumable]
-  Cost: 500 gp
-  Rarity: Rare
-  Use:
-    Time: Major action
-    Limit: 3
-    Power: Attack, Mystic Cone
 
 Longbow:
   Type: Weapon
@@ -135,8 +109,7 @@ Elixir of Vigor:
   Cost: 5,000 gp
   Use:
     Time: Minor Action
-  StatAdjust:
-    HP_Max: 1
+    Effect: increase Max HP by 1 for 1 hour
 
 Cloak of the Rotund:
   Type: General
@@ -154,5 +127,4 @@ Potion of Healing:
   Cost: 5 gp
   Use:
     Time: Minor Action
-  StatAdjust:
-    HP: 1
+    Effect: increase HP by 1

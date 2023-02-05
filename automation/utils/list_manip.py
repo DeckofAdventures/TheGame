@@ -1,6 +1,20 @@
+from collections import Iterable
+
+
 def ensure_list(ambiguous_item):
     """If input is not a list, return list of input"""
     return ambiguous_item if isinstance(ambiguous_item, list) else [ambiguous_item]
+
+
+def flatten_list(my_list):
+    for item in my_list:
+        if not item:
+            continue
+        if isinstance(item, Iterable) and not isinstance(item, str):
+            for x in flatten_list(item):
+                yield x
+        else:
+            yield item
 
 
 def list_to_or(entry):

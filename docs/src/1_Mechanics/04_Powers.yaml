@@ -181,7 +181,7 @@ Attack, Mystic Cone:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
-    Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down.
+    Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down
     Mechanic: All characters in a Cone 3 are subjected to this effect.
     Type: Major
     XP: 2

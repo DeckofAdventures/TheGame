@@ -251,6 +251,11 @@ class Power:
             return ". ".join([self.Type, *output])
 
     @property
+    def _mechanic_for_item(self) -> str:
+        choice = self.Choice + ". " if self.Choice else ""
+        return choice + self.Mechanic_raw
+
+    @property
     def markdown(self) -> str:
         """Concatenate info relevant to markdown export"""
         output = f"\n**{self.Name}**\n\n"

@@ -6,11 +6,13 @@ from typing import List
 from ..utils import (
     ensure_list,
     flatten_embedded,
+    flatten_list,
     logger,
     make_bullet,
     make_header,
     my_repr,
 )
+from .items import load_all_items
 from .powers import list_power_types, load_all_powers
 from .yaml_spec import YamlSpec
 
@@ -38,6 +40,7 @@ xp_progession = dict(  # Value: XP cost
 stat_cap = {1: 2, 2: 2, 3: 3, 4: 3, 5: 3, 6: 4, 7: 4, 8: 5, 9: 5, 10: 6}
 
 all_powers = load_all_powers().as_dict
+all_items = load_all_items().as_dict
 
 
 class Bestiary(YamlSpec):
@@ -217,11 +220,7 @@ class Beast:
         self.sort_index = self.Type
         self.Name = self.Name if self.Name else self.id
         self.Powers, self._pow_PP, self._pow_XP, self._vulny_XP = self.fetch_powers()
-        if self.PP != 0 and self.Type in ["PC"]:
-            logger.warning(
-                f"{self.Name} has PP in yaml, which is not. Now summed from powers"
-            )
-            self.PP = self._pow_PP
+        self.Items = self.fetch_items() if self.Items else None
         self.Attribs = Attribs(**self.Attribs) if self.Attribs else Attribs()
         self.Skills = Skills(**self.Skills) if self.Skills else Skills()
         self.Phases = self.fetch_phases() if self.Phases else None
@@ -233,11 +232,18 @@ class Beast:
         self.Speed_Max = self.Speed
         self.RestCards = self.HP
         self.RestCards_Max = self.HP
-        self.check_valid()
+        if self.Type in ["PC"]:
+            if self.PP != 0:
+                logger.warning(
+                    f"{self.Name} has PP in yaml, which is not. Now summed from powers"
+                )
+            self.PP = self._pow_PP
+            self.check_valid()
         self.adjust_stats()
 
     def fetch_powers(self) -> dict:
         """Given a list of powers by name, generate a dict {Name: Power class}"""
+        # TODO: check prereqs in validation
         output_powers = {}
         powers_pp = 0
         powers_xp = 0
@@ -265,6 +271,16 @@ class Beast:
                 vulny_xp += xp
         return output_powers, powers_pp, powers_xp, vulny_xp
 
+    def fetch_items(self) -> dict:
+        output_items = {}
+        for listed_item in ensure_list(self.Items):
+            item = all_items.get(listed_item)
+            if not item:
+                logger.warning(f"{self.Name} has item not in yaml: {listed_item}")
+                continue
+            output_items.update({listed_item: item})
+        return output_items
+
     def fetch_phases(self) -> list:
         """Turn phase input into list of phase class items"""
         output = []
@@ -283,16 +299,22 @@ class Beast:
                     setattr(self.Skills, skill, attrib_val)
 
     def _adjust_stats_powers_items(self):
-        adjs = [getattr(power, "StatAdjusts", []) for power in self.Powers.values()]
-        # adjs += [getattr(item, "StatAdjusts", []) for item in self.Items.values()]
+        adjs = []
+        if self.Powers:
+            adjs.append(
+                getattr(power, "StatAdjusts", []) for power in self.Powers.values()
+            )
+        if self.Items:
+            adjs.append(
+                getattr(item, "StatAdjusts", []) for item in self.Items.values()
+            )
         adjs = [item for adj in adjs if adj is not None for item in adj]  # Unpack lists
 
-        adjust_corresponding_skill = False
-
-        for adjust in adjs:
+        for adjust in flatten_list(adjs):
+            if isinstance(adjust, list):
+                raise ValueError("Got StatAdjust as list")
             if adjust.Stat in list_attribs:
                 adjusted_val = self.Attribs
-                adjust_corresponding_skill = False
             elif adjust.Stat in list_skills:
                 adjusted_val = self.Skills
             else:
@@ -301,7 +323,7 @@ class Beast:
             logger.debug(f"Set {self.Name} {adjust.Stat} to {current} + {adjust.Value}")
             setattr(adjusted_val, adjust.Stat, current + adjust.Value)
 
-            if adjust_corresponding_skill:
+            if adjust.Stat in list_attribs:
                 self._adjust_skill_via_attribs(adjust.Stat)
 
     def adjust_stats(self) -> None:
