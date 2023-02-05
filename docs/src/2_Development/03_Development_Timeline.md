@@ -18,7 +18,7 @@ Started GitHub Repo and initial foundation of the core ruleset.
 
 **Pre-Alpha**
 
-Developed the First Target Card System, dveloped a series of intro Adventures to test.
+Developed the First Target Card System, developed a series of intro Adventures to test.
 
 **Alpha Development Feedback - HERE AS OF JUNE 2022**
 

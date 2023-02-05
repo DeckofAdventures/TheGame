@@ -1,0 +1,51 @@
+// cSpell Settings
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    // language - current active spelling language
+    "language": "en",
+    "dictionaries": [
+        "en",
+        "en-US",
+        "aws",
+        "companies",
+        "python",
+        "python-common",
+        "latex",
+        "public-licenses",
+        "softwareTerm",
+        "custom-dictionary"
+    ],
+    // words - list of words to be always considered correct
+    "words": [
+        "Attribs",
+        "Battlecharged",
+        "codemirror",
+        "delim",
+        "Erdania",
+        "kernelspec",
+        "nbconvert",
+        "nbformat",
+        "premade",
+        "Premade",
+        "premades",
+        "pydot",
+        "reflavoring",
+        "remixable",
+        "roleplay",
+        "Roleplay",
+        "ruleset",
+        "Shortbow",
+        "Shortsword",
+        "Thadius",
+        "TTRPG",
+        "TTRPGs",
+        "workshopped"
+    ],
+    // flagWords - list of words to be always considered incorrect
+    // This is useful for offensive words and common spelling errors.
+    // For example "hte" should be "the"
+    "flagWords": [
+        "hte"
+    ]
+}
