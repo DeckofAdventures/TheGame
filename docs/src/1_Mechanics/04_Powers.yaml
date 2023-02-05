@@ -32,19 +32,50 @@ Attack, Weapon:
         - Combat
         - Weapon Attacks
     Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-    Mechanic: As a Major Action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
+    Mechanic: As a Major Action in combat, you make a Check to attack an Enemy always with your primary skill modifier. This may be performed while under the effects of another Power.
+    Type: Major
+    XP: 1
+
+Attack, Weapon Two: 
+    Category: 
+        - Combat
+        - Weapon Attacks
+    Description: Your skills are sharpening, just like your weapon. 
+    Mechanic: Your Attacks as Major Actions now add an additional +1 to damage. 
     Type: Major
     XP: 1
     Prereq:
-        Skill:
+        Skill: 
             - Finesse > 0
             - Brute > 0
+        Power: Attack, Weapon
+        Level: 
+            Level > 2
+
+Attack, Weapon Three: 
+    Category: 
+        - Combat
+        - Weapon Attacks
+    Description: Your basic weapons training is complete. 
+    Mechanic: Your Attacks as Major Actions now add an additional +2 to damage. 
+    Type: Major
+    XP: 1
+    Prereq:
+        Role: 
+            - Martial 
+            - Defender
+        Skill: 
+            - Finesse > 0
+            - Brute > 0
+        Power: Attack, Weapon
+        Level: 
+            Level > 4
 
 Attack, Charge:
     Category:
         - Combat
         - Weapon Attacks
-    Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
+    Description: Your weapon training allows you to throw your weight into an enemy, heightening your damage.
     Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
     Type: Major
     XP: 2
@@ -60,7 +91,7 @@ Attack, Sweep:
         - Combat
         - Weapon Attacks
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space.
+    Mechanic: You perform your Weapon Attack on multiple contiguous characters within 1 space.
     Save:
         Trigger: For 2 PP, on a hit
         DR: 3
@@ -68,7 +99,7 @@ Attack, Sweep:
         Fail: Knocked Down
     Type: Major
     XP: 2
-    PP: [1, 2]
+    PP: [2]
     Prereq:
         Power: Attack, Weapon
         Role:
@@ -88,7 +119,7 @@ Attack, Vengeance:
         Power: Attack, Weapon
         Role: Defender
 
-Attack, Dual-Wield:
+Attack, Dual-Wield: #This isn't as good as Attack, Mystic Dual-Wield. 
     Category:
         - Combat
         - Weapon Attacks
@@ -120,7 +151,7 @@ Attack, Mystic Aura:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic all around you.
-    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s)
+    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s) of you. 
     Type: Major
     XP: 2
     PP: [1,2]
@@ -131,13 +162,28 @@ Attack, Mystic Aura:
             - Support
     Tags:  Multi-target
 
+Attack, Mystic Amplification :
+    Category:
+        - Combat
+        - Mystic Attacks
+    Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+    Mechanic: Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. The weapon's damage increases by 1. This property is lost when you use another Power.
+    Type: Major
+    XP: 2
+    PP: 1
+    Prereq:
+        Power: Attack, Mystic
+        Role:
+            - Martial
+            - Caster
+
 Attack, Mystic Cone:
     Category:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
     Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down.
-    Mechanic: All characters in a Cone 3 are subjected to this effect.
+    Mechanic: All creatures in a Cone 3 are subjected to this effect. On a successful save, each creature takes 1 damage. 
     Type: Major
     XP: 2
     PP: 1
@@ -149,16 +195,38 @@ Attack, Mystic Cone:
             - Craft > 1
     Tags: Multi-target
 
+Attack, Mystic Confusion:
+    Category:
+        - Combat
+        - Mystic Attacks
+    Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
+    Mechanic: You force 1 to 2 creatures to make a GUT Save. On a failure, those creatures are Stunned. 
+    Type: Major
+    XP: 2
+    PP: [1,2]
+    Target: [1,2]
+    Save:
+        Trigger: Once
+        DR: 3
+        Type: GUT
+        Fail: Stunned
+    Prereq:
+        Power: Attack, Mystic
+        Role:
+            - Support
+            - Caster
+    Tags: Multi-target
+
 Attack, Mystic Entangle:
     Category:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to tie your target in place.
+    Mechanic: Choose a point within range. All creatures within Aura 3 must make an Agility Save. On a failure, they are Entangled. 
     Type: Major
     XP: 2
-    PP: [1,2]
-    Target: [1,3]
-    Mechanic: Selected targets make a Save
+    PP: [1]
+    Range: 12
     Save:
         Trigger: Once
         DR: 3
@@ -171,14 +239,32 @@ Attack, Mystic Entangle:
             - Caster
     Tags: Multi-target
 
-Attack, Mystic Far Range:
+Attack, Mystic Dual-Shot:
     Category:
         - Combat
         - Mystic Attacks
-    Description: Your reach has extended, allowing for better aim at far distances.
-    Mechanic: When making a Mystic Attack, your effective Range is increased by 4.
-    Type: Passive
-    XP: 1
+    Description: You are so adept mystic arts you can start another spell before even finishing the first.
+    Mechanic: On your turn, you may take a second Mystic Attack with Lower Hand.
+    Type: Minor
+    XP: 3
+    Prereq:
+        Skill:
+            - Finesse > 1
+            - Knowledge > 1
+            - Craft > 1
+        Level: 2
+        Power: Attack, Mystic
+    Tags: Multi-target
+
+Attack, Mystic Dual-Wield Master:
+    Category:
+        - Combat
+        - Mystic Attacks
+    Description: You are a master of wielding two weapons in combat.
+    Mechanic: On your turn, you may take a second Mystic Attack as a Minor Action.
+    Type: Minor
+    Prereq:
+        Level: 3
 
 Battlecharged:
     Category:
@@ -193,7 +279,7 @@ Momentum: # Without this power, this should cost a major action.
     Category:
         - Combat
         - Control
-    Type: Passive
+    Type: Minor
     XP: 1
     Description: By brute strength, force others to move around the battlefield.
     Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you.
@@ -213,10 +299,10 @@ Momentum Aura:
         - Control
     Description: Your strength is supernatural, bending the gravity around you.
     Type: Major
-    XP: 2
+    XP: 1
     PP: 1
     Target: 6
-    Mechanic: Your Momentum ability extends to 2 spaces.
+    Mechanic: As part of your movement, you attempt to move all creatures within 1 space of you to your end location.
     Save:
         Trigger: If unwilling
         Type:
@@ -227,6 +313,7 @@ Momentum Aura:
         Power: Momentum
         Role: Defender
         Skill: Brute > 1
+        Level: 2
     Tags: Multi-target
 
 Pack Tactics:
@@ -234,25 +321,37 @@ Pack Tactics:
         - Combat
         - Control
     Description: When an enemy is outnumbered, you know just how to take advantage.
-    Mechanic: When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
-    Type: Minor
+    Mechanic: When an enemy is next to one or more of your allies, you have Upper Hand (+1) on your attack for each ally within 1 of their space.
+    Type: Passive
     XP: 2
     PP: 1
     Prereq:
         Level: 2
-    Tags: Difficulty Prediction
 
 Heal:
     Category:
         - Combat
         - Support
     Description: Can channel magical energy or medical training to heal others
-    Mechanic: Heal yourself or another you can see for 1 or 3 Health Points
+    Mechanic: Heal yourself or another you can see for 1 or 2 Health Points
     Type: Major
     XP: 2
     PP: [1,2]
     Prereq:
         Role: Support
+
+Heal Two:
+    Category:
+        - Combat
+        - Support
+    Description: Can channel magical energy or medical training to heal others
+    Mechanic: Heal yourself or another you can see for 2 or 3 Health Points
+    Type: Major
+    XP: 2
+    PP: [1,2]
+    Prereq:
+        Role: Support
+        Power: Heal
 
 Lend Aid:
     Category:
@@ -280,63 +379,54 @@ Lend Vigor:
     Category:
         - Combat
         - Support
-    Description: Channel energy to do more than help; inspire!
-    Mechanic: Designate 1 creature who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
+    Description: "Channel energy to do more than help: inspire!"
+    Mechanic: Target creature can take an additional Major Action and move 2 additional spaces during their movement on their next turn.
     Type: Major
-    XP: 2
+    XP: 3
     PP: 2
     Prereq:
         Role:
             - Support
             - Caster
+        Level: 2
 
-Shield, Others:
+Slow:
+    Category:
+        - Combat
+        - Support
+    Description: You selectively bend time.  
+    Mechanic: Pick a point in space you can see within range. All creatures within Aura 2 must make a STR Save. On a failure, their speed is halved and they are limited to one action per turn. A creature that starts their turn outside of the area is no longer affected.
+    Type: Major
+    XP: 2
+    PP: 2
+    Range: 12
+    AOE: Aura 2
+    Prereq:
+        Role:
+            - Support
+            - Caster
+
+Shield:
     Category:
         - Combat
         - Support
     Description: Fortify others by summoning magical armor.
-    Mechanic: Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
-    Type: Major
+    Mechanic: Add 1 AP to a creature you can see, including yourself. This effect does not stack with other Powers that grant AP. 
     XP: 2
-    PP: [1,2]
+    PP: 1
+    Range: 6
     Prereq:
-        Role: Support
-
-Shield, Self:
-    Category:
-        - Combat
-        - Support
-    Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-    Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
-    Type: Minor
-    XP: 2
-    PP: [1,2]
-    Prereq:
-        Role: Defender
-
-Creature Connection:
-    Category:
-        - Companion
-    Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
-    Mechanic: At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check. Your Companion can be commanded using a Minor Action. 
-    Type: Passive
-    XP: 5
-    Prereq:
-        Skill:
-            - Craft > 0
-            - Knowledge > 0
-    Tags: Companion
+        Role: 
+            - Defender
+            - Support
 
 Creature Link:
     Category:
         - Companion
     Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
-    Mechanic: You can now make certain checks through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion. While within 20 spaces, your Companion can communicate with you. 
+    Mechanic:  At the end of a Full Rest, you connect with a creature, physical or ephemoral, and take them as a Companion. You can inhabit the senses of your Companion using their Skills and Attributes as a Minor Action.
     Type: Passive
-    XP: 2
-    Prereq:
-        Level: 2
-        Power: Creature Connection
+    XP: 3
     Tags: Companion
 
 Creature Mastery:
@@ -345,10 +435,10 @@ Creature Mastery:
     Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.
     Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier. They now draw their own TC in combat and act independently on their own turn. 
     Type: Passive
-    XP: 2
+    XP: 3
     Prereq:
-        Level: 2
-        Power: Creature Connection
+        Level: 3
+        Power: Creature Link
     Tags: Companion
 
 Fated Draw:
@@ -356,10 +446,10 @@ Fated Draw:
         - Game Mechanics
         - Adjust Odds
     Description: Your connection to the Fates is heightened and you feel you can shift the odds in your favor.
-    Mechanic: When making a Check, you can draw with the Upper Hand (3).
-    Type: Major
+    Mechanic: You can view the top card of your deck. 
+    Type: Minor
     XP: 2
-    PP: 2
+    PP: 1
     Prereq:
         Level: 3
 
@@ -373,24 +463,11 @@ Lucky:
     XP: 1
     Tags: Suited Miss
 
-Scrying:
-    Category:
-        - Game Mechanics
-        - Adjust Odds
-    Description: Your intuition is heightened and you can anticipate moments coming in the near future.
-    Mechanic: You can look at your top 2 cards of your deck and choose to discard up to two of them. You must make a Draw before using this Power again
-    Type: Minor
-    XP: 1
-    PP: 1
-    Prereq:
-        Level: 2
-    Tags: Card Viewing
-
 Barrier:
     Category:
         - Magic
     Description: Your skills allow you to deploy temporary impromptu walls
-    Mechanic: You create a wall 3 or 5 spaces wide that lasts 10 minutes. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
+    Mechanic: You create an opaque wall 3 or 5 spaces wide and 3 spaces tall. You may dismiss this wall at any time as a Free Action. This wall has 6 Hit Points.
     Type: Major
     XP: 2
     PP: [1,2]
@@ -416,7 +493,7 @@ Speedy:
         - Movement
         - Speed
     Description: You're quicker than the rest.
-    Mechanic: When you take this Power, your combat speed increases by 2 squares.
+    Mechanic: When you take this Power, your speed increases by 2 squares.
     Type: Passive
     XP: 1
     Tags: Combat
@@ -427,26 +504,40 @@ Stealthy Surprise:
         - Stealth
     Type: Minor
     Description: An undetected assailant is particularly deadly.
-    Mechanic: You attempt to hide from nearby creatures.
+    Mechanic: When attacking a target while hidden, you deal an additional 1 damage on a hit. 
+    XP: 2
+    Prereq:
+        Skill: Stealth > 0
+    Tags: Stealth
+
+Stealth in the Shadows:
+    Category:
+        - Movement
+        - Stealth
+    Description: A creature of the dark, you're especially adept at going unseen.
+    Mechanic: When you make a Stealth check in dim light or darkness, you draw with the Upper Hand.
+    Type: Passive
     XP: 1
     Prereq:
         Skill: Stealth > 1
     Tags: Stealth
 
-Calculating:
+Focused:
     Category:
         - Roleplay
-    Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
-    Mechanic: Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it.
-    Type: Major
+    Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
+    Options: Choose one Skill. 
+    Mechanic: When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
+    Type: Passive
+    XP: 0
+
+Keen Eye:
+    Category:
+        - Roleplay
+    Description: You're especially adept at taking in the world around you.
+    Mechanic: When you make a Detection check to observe the world around you (visual, auditory, etc.), draw with the Upper Hand.
+    Type: Passive
     XP: 1
-    PP: 1
-    Prereq:
-        Level: 2
-        Skill:
-            - Knowledge > 1
-            - Investigation > 1
-    Tags: Difficulty Prediction
 
 Cunning:
     Category:
@@ -501,19 +592,86 @@ Thwart:
 Intensify:
     Category: Discard (limit one per character)
     Description: An explosive attack might mean running out of gas.
-    Mechanic: Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
+    Mechanic: On your next Attack, discard cards until you reach a Major Success. Standard Successes are treated as Misses.
     Type: Minor
     XP: 0
     Prereq:
         Level: 2
 
+Condition Resilience: 
+    Type: Passive
+    Category: Resilience 
+    XP: 1
+    Prereq:
+        Level: 2
+        Skill: VIT > 1
+    Description: Through training or sheer will, you brace your body for trials ahead.
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
+
+Condition Immunity: 
+    Type: Passive
+    Category: Resilience 
+    XP: 3
+    Prereq:
+        Level: 3
+        Skill: VIT > 2
+    Description: Through training or sheer will, your body is impervious.
+    Options: "Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
+    Mechanic: You are now immune to this condition.
+
+Adversary Major Action:
+    Type: Adversary
+    Category:
+        - Boss-Only
+        - Adversary Actions
+    Mechanic: Once per round, you make take an additional Major Action after a Dealer's turn.
+
+Manifest Terrain:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 1
+    Mechanic: you change the area around you to an ensnaring landscape
+    AOE: Aura 2
+    Save:
+        Trigger: On starting turn
+        DR: 2
+        Type: AGL
+        Fail: Entangled
+
+Obey Me:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 2
+    Mechanic: enthrall an enemy
+    Save:
+        Trigger: On starting turn
+        DR: 2
+        Type: CON
+        Fail: must move up to 4 spaces and/or take one Major Action at your direction on each turn
+        Succeed: end effect
+
+Amplify Ally:
+    Type: House
+    Category:
+        - Boss-Only
+        - House Actions
+    PP: 0
+    Description: Move the chess pieces on your board.
+    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
+
 Craft Light:
     Category:
         - Magic
-    Description: Your skills let you conjure illusory effects.
-    Mechanic: Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears. Only one instance of Craft Light can be active at any given time. 
+    Description: Your skills let you conjure illusory radiance.
+    Mechanic: You can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action. 
     Type: Minor
     XP: 1
+    PP: 0 
     Prereq:
         Role: 
             - Caster
