@@ -170,7 +170,7 @@ class Power:
     Description: str = field(default="")
     Mechanic: Union[str, list] = field(default="")
     Mechanic_raw: str = field(init=False, repr=False)
-    XP: int = ""
+    XP: int = 0
     PP: int = field(default=0, repr=False)
     Range: int = 6
     AOE: str = None
@@ -282,9 +282,10 @@ class Power:
             "Description",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
-        for attrib in [self.StatAdjust, self.Save, self.Prereq]:
-            if attrib:
-                output.update({**attrib.flat})
+        for attrib in [self.StatAdjusts, self.Save, self.Prereq]:
+            for a in ensure_list(attrib):
+                if a:
+                    output.update({**a.flat})
         return output
 
     def __repr__(self):

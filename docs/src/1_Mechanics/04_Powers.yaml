@@ -1,23 +1,26 @@
-Template: # Power name        # Must be unique
-    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
+Template:                     # Power ID, Must be unique
+    Name: Descrip             # Display Name. If none, defaults to ID
+    Type: Required            # Passive, Vulny, Major, Minor, Adversary, Free, House, Channel
     Category: One or list     # One string or list in sub-cat order
-    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
-    Description: Descrip      # Flavor: 1-2 sentences
+    Mechanic: Descrip         # Rule/effect. Additional info added later. No ending periods.
+    Description: Descrip      # Flavor: 1-2 sentences. Only for markdown.
     XP: X
     PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
     Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
         Level: X              # Integer
         Skill: X > 1          #
-        Power:                # Must match unique power name
-    StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
-        Stat: Stat 
-        Value: X     
+        Power:                # Must match unique power id
+    StatAdjust:               # If neither 'Add' nor 'Replace', assumed 'Add'
+        Add:                  # For items that add/subtract to/from current value
+            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
+        Replace:              # For items that replace current value
+            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
     ToHit: X                  # If not specified, assumed character's primary skill
     Damage: X                 # Integer
     Range: X                  # Integer of spaces. 0 for self, 1 for melee
     AOE: Shape X              # Aura, cone, or line followed by integer for size
-    Target: X                 # Integer, # of targets
+    Targets: X                # Integer, # of targets
     Options: X                # Optional Descrip of options. Replaced by selection.
     Save:                     # Separated here, merged in md
         Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
@@ -215,7 +218,7 @@ Attack, Mystic Entangle:
     Type: Major
     XP: 2
     PP: [1,2]
-    Target: [1,3]
+    Targets: [1,3]
     Mechanic: Selected targets make a Save
     Save:
         Trigger: Once
@@ -236,7 +239,7 @@ Attack, Mystic Deprivation:
     Type: Major
     XP: 2
     PP: [1,2]
-    Target: [1, 3]
+    Targets: [1, 3]
     Description: You channel your abilities deprive a target of their senses.
     Mechanic: Select the Blinded or Deafened effect
     Save:
@@ -327,7 +330,7 @@ Momentum Aura:
     Type: Major
     XP: 2
     PP: 1
-    Target: 6
+    Targets: 6
     Mechanic: Your Momentum ability extends to 2 spaces.
     Save:
         Trigger: If unwilling
@@ -969,7 +972,7 @@ Summon Creature:
     Type: Major
     Category:
         - Companion
-    Mechanic: Summon a creature to assist you. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
+    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
     Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
     XP: 2
     PP: 2
@@ -977,7 +980,6 @@ Summon Creature:
         Role: Caster
         Level: 2
         Skill: Knowledge > 0
-    Duration: 1 hour
     Tags:  
         - Summoner
 
@@ -1066,7 +1068,7 @@ Aura of Defensive Damage:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When a creature is hit by a melee attack, the attacker takes 1 damage.   
+    Mechanic: Allied creatures within range gain the effects of your Aura for 1 minute. When a creature is hit by a melee attack, the attacker takes 1 damage.   
     Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
     XP: 2
     PP: 1
@@ -1075,7 +1077,6 @@ Aura of Defensive Damage:
         Level: 2
         Skill: Brute > 0
     AOE: Aura 6
-    Duration: 1 minute
     Tags:    
         - Crusader
 
@@ -1084,7 +1085,7 @@ Aura of Regeneration:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round. 
+    Mechanic: Allied creatures within range gain the effects of your Aura for 1 minute. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round. 
     Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all. 
     XP: 2
     PP: 2
@@ -1093,7 +1094,6 @@ Aura of Regeneration:
         Level: 3
         Skill: Brute > 1
     Range: 6
-    Duration: 1 minute
     Tags:    
         - Crusader
 
@@ -1113,7 +1113,7 @@ Staggering Blow:
             - Attack, Weapon
             - Aura of Defensive Damage
     Range: 1
-    Target: 1
+    Targets: 1
     Save:
         Trigger: On a successful hit, 
         Type: VIT

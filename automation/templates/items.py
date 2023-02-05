@@ -1,13 +1,16 @@
 from dataclasses import dataclass, field, fields
 from operator import attrgetter
-from typing import Union
 
-from ..utils import ensure_list, list_to_or, make_bullet, my_repr, sort_dict
-from .powers import Prereq, Save, StatOverride
+from ..utils import ensure_list, flatten_embedded, list_to_or, make_bullet, my_repr
+from .powers import Prereq, Save, StatAdjust
 from .yaml_spec import YamlSpec
 
 list_item_types = ["General", "Consumable", "Tool", "Armor", "Weapon", "Shield"]
 list_item_rarities = ["Common", "Uncommon", "Rare", "Legendary"]
+
+
+def load_all_items():
+    return Items(input_files=["07_Items.yaml", "07_Items_SAMPLE.yaml"])
 
 
 class Items(YamlSpec):
@@ -29,60 +32,29 @@ class Items(YamlSpec):
         )
         self._limit_types = limit_types or list_item_types
         self._as_dict = {}
-        self._as_list = []
         self._categories = {}
         self._categories_set = set()
         self._csv_fields = set()
         self._type_dict = {k: [] for k in self._limit_types}
 
     @property
-    def as_list(self):
-        """Return list of items"""
-        if not self._as_list:
-            self._as_list = [
-                Item(Name=k, **v)
-                for k, v in self._raw_data.items()
-                if v.get("Type", None) in self._limit_types
-            ]
-        return self._as_list
-
-    @property
     def as_dict(self) -> dict:
         """Return dict of {Name:Item class}"""
-        if not self._as_dict:
-            self._as_dict = {
-                k: Item(Name=k, **v)
-                for k, v in self._raw_data.items()
-                if v.get("Type", None) in self._limit_types
-            }
+        if not self._as_dict and not self._tried_loading:
+            self._build_contents(Item, "Rarity")
         return self._as_dict
 
     @property
     def categories(self) -> list:
         """Return set of tuples: (categories, subcategories)"""
-        if not self._categories:
-            for p in self.as_list:
-                cat_tuple = tuple(p.Category)
-                self._categories.setdefault(cat_tuple, [])
-                self._categories[cat_tuple].append(p.Name)
-                self._categories_set.add(cat_tuple)
-                self._csv_fields = self._csv_fields.union(list(p.csv_dict.keys()))
-        return sort_dict(self._categories, sorted(self._categories_set))
-
-    @property
-    def type_dict(self) -> dict:
-        """Cache of powers by type {Major: [a, b]}"""
-        if not any(self._type_dict.values()):
-            for p in self.as_list:
-                self._type_dict[p.Type].append(p.Name)
-        return self._type_dict
+        return self._build_categories(build_with="Type")
 
     @property
     def csv_fields(self):
         """Return a list of fields for the CSV output in the desired order"""
         if not self._csv_fields:
             _ = self.categories
-        move_front = ["Type", "Name", "XP", "Mechanic"]
+        move_front = ["Type", "Name", "Rarity", "Cost"]
         return [
             *move_front,
             *[i for i in sorted(list(self._csv_fields)) if i not in move_front],
@@ -90,28 +62,37 @@ class Items(YamlSpec):
 
 
 @dataclass(order=True)
+class Use:
+    """Class representing prerequisites for a given power"""
+
+    Time: str = None
+    Effect: int = None
+    Duration: str = None
+    Limit: str = None
+
+    @property
+    def flat(self) -> dict:
+        """Return flatted dict {'Prereq_example': value} pairs for csv export"""
+        return flatten_embedded(dict(Prereq=self.__dict__))
+
+
+@dataclass(order=True)
 class Item:
-    """Class representing a Power"""
+    """Class representing an item"""
 
     sort_index: str = field(init=False, repr=False)
+    id: str
     Name: str
-    Type: str = field(repr=False)
-    Category: Union[str, list] = field(repr=False)
+    Type: str = field(default="General")
+    Rarity: str = field(default="Common")
     Description: str = field(default="")
-    Mechanic: Union[str, list] = field(default="")
-    Mechanic_raw: str = field(init=False, repr=False)
-    XP: int = ""
-    PP: int = field(default=0, repr=False)
+    Use: dict = field(default=None, repr=False)
     Range: int = 6
     AOE: str = None
-    Target: int = 1
-    Options: str = field(default=None, repr=False)
-    Choice: str = field(default=None, repr=False)
     Damage: int = 1
-    ToHit: int = 1
     Save: dict = field(default=None, repr=False)
     Prereq: dict = field(default=None)
-    StatOverride: dict = field(default=None, repr=False)
+    StatAdjust: dict = field(default=None, repr=False)
     Tags: list = None
 
     def __post_init__(self):
@@ -120,46 +101,12 @@ class Item:
         self.Category = ensure_list(self.Category)
         self.Save = Save(**self.Save) if self.Save else None
         self.Prereq = Prereq(**self.Prereq) if self.Prereq else None
-        self.StatOverride = (
-            StatOverride(self.StatOverride) if self.StatOverride else None
+        self.Prereq = Prereq(**self.Use) if self.Use else None
+        self.StatAdjust = (
+            [StatAdjust(s) for s in ensure_list(self.StatAdjust)]
+            if self.StatAdjust
+            else None
         )
-        self.Mechanic_raw = self.Mechanic
-        self.Mechanic = self.merge_mechanic()
-
-    def set_choice(self, choice: str):
-        """Given a choice among options, revise merged mechanic property"""
-        self.Choice = choice
-        self.Mechanic = self.merge_mechanic()
-        return self
-
-    def merge_mechanic(self) -> str:
-        """Given power dict, merge all appropriate items into Mechanic
-
-        Assumes Listed mechanics do not have PP/Save/StatOverride
-
-        Returns:
-            power_merged (dict): power with all mechanic items combined.
-        """
-        if isinstance(self.Mechanic_raw, list):  # when mech are list, indent after 1st
-            mech_bullets = self.Type + ". " + self.Mechanic_raw[0] + "\n"
-            for mech_bullet in self.Mechanic_raw[1:]:
-                mech_bullets += make_bullet(mech_bullet, 1)
-            return mech_bullets[:-1]  # remove last space.
-        else:
-            output = []
-            if self.Options:
-                output.append(self.Choice if self.Choice else self.Options)
-            if self.PP != 0:
-                output.append(
-                    "For " + list_to_or(self.PP) + " PP, " + self.Mechanic_raw
-                )
-            elif self.Mechanic_raw:
-                output.append(self.Mechanic_raw)
-            if self.StatOverride:
-                output.append(self.StatOverride.text)
-            if self.Save:
-                output.append(self.Save.text)
-            return ". ".join([self.Type, *output])
 
     @property
     def markdown(self) -> str:
@@ -185,13 +132,13 @@ class Item:
             "Mechanic_raw",
             "Options",
             "Choice",
-            "StatOverride",
+            "StatAdjust",
             "Save",
             "Prereq",
             "Description",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
-        for attrib in [self.StatOverride, self.Save, self.Prereq]:
+        for attrib in [self.StatAdjust, self.Save, self.Prereq]:
             if attrib:
                 output.update({**attrib.flat})
         return output

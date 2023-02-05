@@ -27,6 +27,41 @@
 
 # Combat
 
+**Staggering Blow**
+
+- Description: Getting something to stay still is just a matter of applying pressure in the right spot. Or hitting that spot really hard.
+- Mechanic: Major. For 1 PP, Make a Weapon Attack against a creature. On a successful hit,, target(s) make a VIT Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) they are Stunned.
+- XP: 2
+- Range: 1
+- Prereq Role: Defender
+- Prereq Level: 3
+- Prereq Skill: Brute > 1
+- Prereq Power: Attack, Weapon or Aura of Defensive Damage
+- Tags: Crusader
+
+## Aura
+
+**Aura of Defensive Damage**
+
+- Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
+- Mechanic: Minor. For 1 PP, Allied creatures within range gain the effects of your Aura for 1 minute. When a creature is hit by a melee attack, the attacker takes 1 damage.
+- XP: 2
+- AOE: Aura 6
+- Prereq Role: Defender
+- Prereq Level: 2
+- Prereq Skill: Brute > 0
+- Tags: Crusader
+
+**Aura of Regeneration**
+
+- Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all.
+- Mechanic: Minor. For 2 PP, Allied creatures within range gain the effects of your Aura for 1 minute. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
+- XP: 2
+- Prereq Role: Defender
+- Prereq Level: 3
+- Prereq Skill: Brute > 1
+- Tags: Crusader
+
 ## Control
 
 **Battlecharged**
@@ -310,7 +345,6 @@
 - Description: You are adept at wielding two weapons in combat.
 - Mechanic: Minor. On your turn, you may make a second attack as a Minor Action with Lower Hand.
 - XP: 3
-- Draw: Lower
 - Prereq Skill: Finesse > 1 or Brute > 1
 - Prereq Power: Attack, Weapon
 
@@ -350,34 +384,85 @@
 - Prereq Power: Creature Connection
 - Tags: Companion
 
+**Summon Creature**
+
+- Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
+- Mechanic: Major. For 2 PP, Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form.
+- XP: 2
+- Prereq Role: Caster
+- Prereq Level: 2
+- Prereq Skill: Knowledge > 0
+- Tags: Summoner
+
+**Life Link**
+
+- Description: Channeling energy between friends can sometimes be mutually beneficial. Other times, it's simply beneficial.
+- Mechanic: Passive. While you have at least one summoned creature active, when you take damage you can choose to apply that damage to your summoned creature instead.
+- XP: 2
+- Prereq Role: Caster
+- Prereq Level: 3
+- Prereq Skill: Knowledge > 1
+- Prereq Power: Summon Creature
+- Tags: Summoner
+
+# Consumable
+
+**Create Potion**
+
+- Description: It's always good to have some spare healing on hand.
+- Mechanic: Major. For 1 PP, Create a Potion of Healing. After successfully completing a Quick Rest, you can exchange one Rest Card for a Potion of Healing without expending Power Points. All Potions created last until the end of your next Full Rest.
+- XP: 2
+- Prereq Role: Support
+- Prereq Level: 2
+- Prereq Skill: Craft > 0
+- Tags: Alchemist
+
+**Create Poison**
+
+- Description: It's not wise to get on someone's bad side, especially when they have friends.
+- Mechanic: Major. For 1 PP, Create a Poison Bottle. Poison Bottle can be applied to a weapon. For 1 minute, all Weapon Attacks force a DR 2 VIT Save, on a failure they take 1 damage bypassing AP. All Poison Bottles created last until the end of your next Full Rest.
+- XP: 2
+- Prereq Role: Support
+- Prereq Level: 3
+- Prereq Skill: Craft > 1
+- Prereq Power: Create Potion
+- Tags: Alchemist
+
+**Potent Brew**
+
+- Description: Sometimes its a matter of skill, other times its a matter of ingredients, but often making a potent brew requires both.
+- Mechanic: Passive. When using a Power that creates a consumable, increase the damage healed or dealt by 1.
+- XP: 2
+- Prereq Role: Support
+- Prereq Level: 3
+- Prereq Skill: Craft > 1
+- Prereq Power: Create Potion
+- Tags: Alchemist
+
 # Discard (limit one per character)
 
 **Aggro**
 
 - Description: Protecting your friends means taking the big hits.
 - Mechanic: Minor. Discard N cards to force all creatures within 2 spaces to make their next Check to attack targets besides the triggering Dealer at Lower Hand (N/2)
-- XP: 0
 - Prereq Level: 2
 
 **Help**
 
 - Description: You're there just when your friends need you.
 - Mechanic: Minor. Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
-- XP: 0
 - Prereq Level: 2
 
 **Thwart**
 
 - Description: You have a few tricks up your sleeve for drawing the enemy's attention.
 - Mechanic: Minor. Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
-- XP: 0
 - Prereq Level: 2
 
 **Intensify**
 
 - Description: An explosive attack might mean running out of gas.
 - Mechanic: Minor. Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
-- XP: 0
 - Prereq Level: 2
 
 # Game Mechanics
@@ -453,7 +538,27 @@
 - Prereq Role: Caster
 - Prereq Skill: Knowledge > 0
 
+**Craft Light**
+
+- Description: Your skills let you conjure illusory effects.
+- Mechanic: Minor. For 1 PP, Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears
+- XP: 2
+- Prereq Role: Caster or Support
+- Prereq Skill: Craft > 0
+
 # Movement
+
+**Phase Swap**
+
+- Description: It can often be better to change places with a friendly creature. You'd prefer to be there, or they'd prefer to be here.
+- Mechanic: Minor. For 1 PP, Use half your speed to swap spaces with a Summoned Creature
+- XP: 2
+- Range: 10
+- Prereq Role: Caster
+- Prereq Level: 3
+- Prereq Skill: Knowledge > 1
+- Prereq Power: Summon Creature
+- Tags: Summoner
 
 ## Speed
 
@@ -507,8 +612,21 @@
 - Description: You channel a deep energy to go unseen.
 - Mechanic: Major. For 1 or 2 PP, Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
 - XP: 2
+- Prereq Level: 2
 - Prereq Skill: Stealth > 2
 - Tags: Stealth or Multi-target
+
+**Vanishing Step**
+
+- Description: Sometimes, moving in the shadows is easiest when no one knows where you're going.
+- Mechanic: Major. For 2 PP, Choose a point you can see within 10 spaces of you. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
+- XP: 2
+- Range: 10
+- Prereq Role: Martial
+- Prereq Level: 3
+- Prereq Skill: Stealth > 1
+- Prereq Power: Hidden Strike
+- Tags: Assassin
 
 # Resilience
 
@@ -549,7 +667,6 @@
 
 - Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
 - Mechanic: Passive. Choose one Skill.. When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
-- XP: 0
 
 **Handy**
 
@@ -563,3 +680,17 @@
 - Description: You're especially adept at taking in the world around you.
 - Mechanic: Passive. When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
 - XP: 1
+
+# Stealth
+
+## Combat
+
+**Hidden Strike**
+
+- Description: You move silently in the shadows, and are especially deadly when unseen.
+- Mechanic: Passive. When attacking an enemy that is unaware of your presence or engaged with an ally within 1 space, you draw with Upper Hand. Any attacks that are successful deal +1 damage
+- XP: 2
+- Prereq Role: Martial
+- Prereq Level: 2
+- Prereq Skill: Stealth > 0
+- Tags: Assassin

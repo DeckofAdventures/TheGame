@@ -15,6 +15,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  1  |  0  |  0  |  1  |  -1  |  -1  |
 
+**Skills**: Finesse 1, Stealth 1, Detection 1, Craft 1, Athletics -1, Brute -1
+
 ### Powers
 
 #### Major
@@ -33,6 +35,52 @@
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  0  |  0  |  -1  |  1  |  1  |
 
+**Skills**: Finesse -1, Stealth -1, Detection -1, Craft -1, Athletics 1, Brute 1
+
+### Powers
+
+#### Major
+
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+
+## Wolf
+
+### Companion: Level 1
+
+| HP | AP | AR | PP | SPD |
+| -- | -- | -- | -- | --- |
+| 2  | 1  | 3  | 0  |  6  |
+
+| AGL | CON | GUT | INT | STR | VIT |
+| --- | --- | --- | --- | --- | --- |
+|  1  |  0  |  1  |  -1  |  1  |  0  |
+
+**Skills**: Finesse 1, Stealth 1, Knowledge 1, Investigation 1, Detection -1, Craft -1, Athletics 1, Brute 1
+
+### Powers
+
+#### Major
+
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+
+#### Minor
+
+- **Pack Tactics**: Minor. For 1 PP, When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+
+## Summoned Creature
+
+### Companion: Level 1
+
+| HP | AP | AR | PP | SPD |
+| -- | -- | -- | -- | --- |
+| 3  | 1  | 3  | 0  |  6  |
+
+| AGL | CON | GUT | INT | STR | VIT |
+| --- | --- | --- | --- | --- | --- |
+|  1  |  -1  |  0  |  -1  |  1  |  0  |
+
+**Skills**: Finesse 1, Stealth 1, Bluffing -1, Performance -1, Detection -1, Craft -1, Athletics 1, Brute 1
+
 ### Powers
 
 #### Major
@@ -50,6 +98,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  1  |  0  |  -1  |  -1  |  1  |  0  |
+
+**Skills**: Finesse 1, Stealth 1, Knowledge -1, Investigation -1, Detection -1, Craft -1, Athletics 1, Brute 1
 
 ### Powers
 
@@ -75,6 +125,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  0  |  0  |  -1  |  2  |  2  |
 
+**Skills**: Finesse -1, Stealth -1, Detection -1, Craft -1, Athletics 2, Brute 2
+
 ### Powers
 
 #### Major
@@ -98,6 +150,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  1  |  0  |  1  |  -1  |  1  |  1  |
 
+**Skills**: Finesse 1, Stealth 1, Knowledge 1, Investigation 1, Detection -1, Craft -1, Athletics 1, Brute 1
+
 ### Powers
 
 #### Major
@@ -117,11 +171,13 @@
 
 | HP | AP | AR | PP | SPD |
 | -- | -- | -- | -- | --- |
-| 5  | 1  | 3  | 3  |  6  |
+| 5  | 1  | 3  | 2  |  6  |
 
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  1  |  0  |  1  |  -1  |  0  |
+
+**Skills**: Finesse -1, Stealth -1, Bluffing 1, Performance 1, Detection 1, Craft 1, Athletics -1, Brute -1
 
 ### Powers
 
@@ -149,6 +205,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  0  |  0  |  1  |  1  |  -1  |  0  |
 
+**Skills**: Knowledge 1, Investigation 1, Detection 1, Craft 1, Athletics -1, Brute -1
+
 ### Powers
 
 #### Major
@@ -170,6 +228,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  1  |  1  |  1  |  -1  |  -1  |
 
+**Skills**: Finesse -1, Stealth -1, Bluffing 1, Performance 1, Knowledge 1, Investigation 1, Detection 1, Craft 1, Athletics -1, Brute -1
+
 ### Powers
 
 #### Major
@@ -188,7 +248,7 @@
 
 # NPC
 
-## Wolf
+## Gray Wolf
 
 ### NPC: Level 1
 
@@ -199,6 +259,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  1  |  -1  |  0  |  -1  |  1  |  0  |
+
+**Skills**: Finesse 1, Stealth 1, Bluffing -1, Performance -1, Detection -1, Craft -1, Athletics 1, Brute 1
 
 ### Powers
 
@@ -222,6 +284,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  2  |  -1  |  0  |  -1  |  2  |  0  |
 
+**Skills**: Finesse 2, Stealth 2, Bluffing -1, Performance -1, Detection -1, Craft -1, Athletics 2, Brute 2
+
 ### Powers
 
 #### Major
@@ -244,6 +308,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  0  |  0  |  -1  |  1  |  0  |
 
+**Skills**: Finesse -1, Stealth -1, Detection -1, Craft -1, Athletics 1, Brute 1
+
 ### Powers
 
 #### Major
@@ -261,6 +327,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  0  |  0  |  -1  |  1  |  0  |
+
+**Skills**: Finesse -1, Stealth -1, Detection -1, Craft -1, Athletics 1, Brute 1
 
 ### Powers
 
@@ -284,6 +352,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  -1  |  0  |  0  |  0  |  0  |  1  |
 
+**Skills**: Finesse -1, Stealth -1
+
 ### Powers
 
 #### Major
@@ -303,6 +373,8 @@
 | --- | --- | --- | --- | --- | --- |
 |  1  |  0  |  0  |  -1  |  0  |  0  |
 
+**Skills**: Finesse 1, Stealth 1, Detection -1, Craft -1
+
 ### Powers
 
 #### Major
@@ -320,6 +392,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  0  |  0  |  0  |  -1  |  1  |  0  |
+
+**Skills**: Detection -1, Craft -1, Athletics 1, Brute 1
 
 ### Powers
 
@@ -342,6 +416,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  0  |  0  |  0  |  0  |  1  |  1  |
+
+**Skills**: Athletics 1, Brute 1
 
 ### Powers
 
@@ -369,6 +445,8 @@
 | AGL | CON | GUT | INT | STR | VIT |
 | --- | --- | --- | --- | --- | --- |
 |  0  |  0  |  1  |  1  |  -1  |  0  |
+
+**Skills**: Knowledge 1, Investigation 1, Detection 1, Craft 1, Athletics -1, Brute -1
 
 ### Powers
 

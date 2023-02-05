@@ -1,36 +1,13 @@
-Template: # Power name        # Must be unique
-    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
-    Category: One or list     # One string or list in sub-cat order
-    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
-    Description: Descrip      # Flavor: 1-2 sentences
-    XP: X
-    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
-    Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
-        Role: X
-        Level: X              # Integer
-        Skill: X > 1          #
-        Power:                # Must match unique power name
-    StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
-        Stat: X
-    ToHit: X                  # If not specified, assumed character's primary skill
-    Damage: X                 # Integer. Default 1 unless Passive or Vulny, then 0
-    Range: X                  # Integer of spaces. 0 for self, 1 for melee
-    AOE: Shape X              # Aura, cone, or line followed by integer for size
-    Targets: X                 # Integer, # of targets
-    Options: X                # Optional Descrip of options. Replaced by selection.
-    Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, On starting turn, etc. Sentence start.
-        DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
-        Type: MOD             # AGL, CON, etc
-        Fail: Descrip         # effect on fail
-        Succeed: Descrip      # effect on success. Assume no access to above
-    Tags: One or list
-
 Dumb:
     Type: Vulny
     Category: Roleplay
-    StatOverride:
-        INT: -2
+    StatAdjust:
+        Add:
+            INT: -2
+            AP: 1
+        Replace:
+            AGL: 5
+            PP: 0
     Description: You're dumb as rocks. We're sure you make up for it in other areas.
     XP: -2
 
@@ -38,6 +15,8 @@ Sear:
     Type: Minor
     Category: Status Effect
     Damage: 0
+    StatAdjust:
+        INT: -2
     Save:
         Trigger: On starting turn
         DR: 1

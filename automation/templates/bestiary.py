@@ -28,8 +28,14 @@ list_skills = [
     "Brute",
 ]
 list_stats = {list_attribs[n]: list_skills[n * 2 : n * 2 + 2] for n in range(5)}
+list_stats.update(dict(VIT=[]))
 list_beast_types = ["PC", "Dealer", "NPC", "Boss", "Companion"]
 list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
+xp_progession = dict(  # Value: XP cost
+    attrib={-2: -4, -1: -2, 0: 0, 1: 2, 2: 4, 3: 8, 4: 12, 5: 18, 6: 24},
+    skills={-2: -2, -1: -1, 0: 0, 1: 1, 2: 2, 3: 4, 4: 6, 5: 9, 6: 12},
+)
+stat_cap = {1: 2, 2: 2, 3: 3, 4: 3, 5: 3, 6: 4, 7: 4, 8: 5, 9: 5, 10: 6}
 
 all_powers = load_all_powers().as_dict
 
@@ -149,7 +155,7 @@ class Skills:
         output = []
         for f in fields(self):
             value = attrgetter(f.name)(self)
-            if value != f.default:
+            if value not in [0, None]:
                 output.append((f.name, value))
         return output
 
@@ -208,14 +214,16 @@ class Beast:
 
     def __post_init__(self):
         """Generate values not given on initialization"""
-        if self.PP != 0:
-            logger.warning("Yaml PP is no longer used. Now summed from powers")
         self.sort_index = self.Type
         self.Name = self.Name if self.Name else self.id
-        self.Powers, self.PP, self._powers_XP = self.fetch_powers()
-        self.Attribs = Attribs(**self.Attribs) if self.Attribs else None
-        self.Skills = Skills(**self.Skills) if self.Skills else None
-        self.adjust_stats()
+        self.Powers, self._pow_PP, self._pow_XP, self._vulny_XP = self.fetch_powers()
+        if self.PP != 0 and self.Type in ["PC"]:
+            logger.warning(
+                f"{self.Name} has PP in yaml, which is not. Now summed from powers"
+            )
+            self.PP = self._pow_PP
+        self.Attribs = Attribs(**self.Attribs) if self.Attribs else Attribs()
+        self.Skills = Skills(**self.Skills) if self.Skills else Skills()
         self.Phases = self.fetch_phases() if self.Phases else None
         self.AR = self.AR if self.AR else (3 - (self.Attribs.AGL // 2))  # default
         self.HP_Max = self.HP  # assume providing max when initializing
@@ -225,27 +233,37 @@ class Beast:
         self.Speed_Max = self.Speed
         self.RestCards = self.HP
         self.RestCards_Max = self.HP
+        self.check_valid()
+        self.adjust_stats()
 
     def fetch_powers(self) -> dict:
         """Given a list of powers by name, generate a dict {Name: Power class}"""
         output_powers = {}
         powers_pp = 0
         powers_xp = 0
+        vulny_xp = 0
         self.Powers = ensure_list(self.Powers)
-        for power in self.Powers:
-            if isinstance(power, dict):
-                power_name, choice = next(iter(power.items()))
+        for listed_power in self.Powers:
+            if isinstance(listed_power, dict):
+                power_name, choice = next(iter(listed_power.items()))
             else:
-                power_name, choice = power, None
-            this_power = all_powers.get(power_name, None)
-            if not this_power:
-                logger.warning(f"{self.Name} has a power not in yaml: {power}")
-                continue
+                power_name, choice = listed_power, None
 
-            output_powers.update({power_name: this_power.set_choice(choice)})
-            powers_pp += max(ensure_list(this_power.PP))
-            powers_xp += this_power.XP
-        return output_powers, powers_pp, powers_xp
+            power = all_powers.get(power_name, None)
+
+            if not power:
+                logger.warning(f"{self.Name} has a power not in yaml: {power.Name}")
+                continue
+            if self.Type != "Boss" and "Boss-Only" in power.Category:
+                logger.warning(f"{self.Name} was given a Boss-Only power: {power.Name}")
+
+            output_powers.update({power_name: power.set_choice(choice)})
+            powers_pp += max(ensure_list(power.PP))
+            xp = ensure_list(power.XP)[-1]
+            powers_xp += xp
+            if power.Type == "Vulny":
+                vulny_xp += xp
+        return output_powers, powers_pp, powers_xp, vulny_xp
 
     def fetch_phases(self) -> list:
         """Turn phase input into list of phase class items"""
@@ -254,23 +272,27 @@ class Beast:
             output.append(Phase(Name=phase, Order=order, **phase_dict))
         return output
 
-    def _adjust_stats_via_attribs(self):
-        for attrib, skills in list_stats.items():
-            for skill in skills:
-                if not getattr(self.Skills, skill):
-                    logger.debug(
-                        f"Set {self.Name} {skill} to {getattr(self.Attribs, attrib)}"
-                    )
-                    setattr(self.Skills, skill, getattr(self.Attribs, attrib))
+    def _adjust_skill_via_attribs(self, attribs: list = None):
+        if not attribs:
+            attribs = list_attribs  # All
+        for attrib in ensure_list(attribs):
+            attrib_val = getattr(self.Attribs, attrib, 0)
+            for skill in list_stats[attrib]:
+                if not getattr(self.Skills, skill, None):
+                    logger.debug(f"{self.Name}:set {skill} to {attrib_val}")
+                    setattr(self.Skills, skill, attrib_val)
 
     def _adjust_stats_powers_items(self):
         adjs = [getattr(power, "StatAdjusts", []) for power in self.Powers.values()]
-        adjs += [getattr(item, "StatAdjusts", []) for item in self.Items.values()]
+        # adjs += [getattr(item, "StatAdjusts", []) for item in self.Items.values()]
         adjs = [item for adj in adjs if adj is not None for item in adj]  # Unpack lists
+
+        adjust_corresponding_skill = False
 
         for adjust in adjs:
             if adjust.Stat in list_attribs:
                 adjusted_val = self.Attribs
+                adjust_corresponding_skill = False
             elif adjust.Stat in list_skills:
                 adjusted_val = self.Skills
             else:
@@ -279,13 +301,41 @@ class Beast:
             logger.debug(f"Set {self.Name} {adjust.Stat} to {current} + {adjust.Value}")
             setattr(adjusted_val, adjust.Stat, current + adjust.Value)
 
+            if adjust_corresponding_skill:
+                self._adjust_skill_via_attribs(adjust.Stat)
+
     def adjust_stats(self) -> None:
         """Check for any StatAdjust powers. Apply overrides, sum with current value"""
+        self._adjust_skill_via_attribs()
         self._adjust_stats_powers_items()
-        self._adjust_stats_via_attribs()
 
     def check_valid(self):
-        pass
+        remaining_XP = 6 + (self.Level * 3) - self._pow_XP
+
+        self._adjust_skill_via_attribs()
+        max_stat = 0
+        for attrib, skills in list_stats.items():
+            attrib_val = getattr(self.Attribs, attrib, 0)
+            attrib_xp = xp_progession["attrib"][attrib_val]
+            max_stat = max(max_stat, attrib_val)
+            remaining_XP -= attrib_xp
+            for skill in skills:
+                skill_val = getattr(self.Skills, skill, 0)
+                remaining_XP -= xp_progession["skills"][skill_val - attrib_val]
+                max_stat = max(max_stat, skill_val)
+
+        if remaining_XP < 0:
+            logger.warning(f"{self.Name} used {abs(remaining_XP)} excess XP")
+        if max_stat > stat_cap[self.Level]:
+            logger.warning(
+                f"{self.Name} has a stat at {max_stat}, above the "
+                + f"{stat_cap[self.Level]} cap for level {self.Level}"
+            )
+        if self._vulny_XP < -4:
+            logger.warning(
+                f"{self.Name} has {abs(self._vulny_XP)} XP from Vulnys. Limit 4."
+                + "\nNote: this check assumes more negative XP value from each Vulny."
+            )
 
     def __repr__(self):
         """Print non-default beast items with repr property and linebreaks"""

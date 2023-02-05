@@ -4,7 +4,6 @@ Template:               # must be unique
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
-  PP: X                 # Required field
   Speed: X              # Optional, default 6
   Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
@@ -41,7 +40,6 @@ Template:               # must be unique
 #   Primary_Skill: Brute
 #   HP: 7
 #   AP: 2
-#   PP: 2
 #   Attribs:
 #     AGL: 1
 #     GUT: 1
@@ -72,7 +70,6 @@ Spider Queen:
   HP: 8
   AP: 2
   AR: 2
-  PP: 6
   Speed: 6
   Attribs:
     AGL: 1
@@ -106,7 +103,7 @@ Spider Queen:
     - Dumb
     - Eye for an Eye
     - Sear
-    # - Favored Terrain: Web
+    - Favored Terrain: Web
     # - Lend Distraction
     # - Lend Vigor
     # - Manifest Terrain: Web
@@ -118,7 +115,6 @@ Grunt:
   Type: NPC
   HP: 2
   AR: 3
-  PP: 0
   Attribs:
     AGL: 1
     INT: -1
@@ -132,7 +128,6 @@ Grunt, Shielded:
   HP: 2
   AR: 2
   AP: 1
-  PP: 0
   Attribs:
     STR: 1
     INT: -1
@@ -147,7 +142,6 @@ Guard:
   HP: 3
   AR: 2
   AP: 1
-  PP: 1
   Attribs:
     STR: 1
     VIT: 1
@@ -165,7 +159,6 @@ Defender Captain:
   HP: 5
   AR: 2
   AP: 2
-  PP: 2
   Attribs:
     AGL: 1
     STR: 1
@@ -187,7 +180,6 @@ Mystic Caster:
   HP: 5
   AR: 3
   AP: 0
-  PP: 3
   Attribs:
     CON: 1
     INT: 1

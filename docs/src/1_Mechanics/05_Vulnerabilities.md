@@ -119,3 +119,77 @@
 - Description: You're a stranger in a strange land. You may be unfamiliar with customs, somehow ostracized by the community, or even hunted based on group membership.
 - Mechanic: Vulny. For any Conviction check to interact with the dominant society, you draw with the Lower Hand. If chosen as Major, work with the GM to decide some feature of your background that makes you unwelcome in most public places.
 - XP: -1 or -2
+
+# Stats
+
+**Clumsy, Minor**
+
+- Description: You're clumsier than most.
+- Mechanic: Vulny. On character creation, you start with -1 AGL. Add -1 to AGL
+- XP: -1
+
+**Clumsy, Major**
+
+- Description: You're clumsier than most.
+- Mechanic: Vulny. On character creation, you start with -2 AGL. Add -2 to AGL
+- XP: -2
+
+**Dumb, Minor**
+
+- Description: You're dumber than most.
+- Mechanic: Vulny. On character creation, you start with -1 INT. Add -1 to INT
+- XP: -1
+
+**Dumb, Major**
+
+- Description: You're dumber than most.
+- Mechanic: Vulny. On character creation, you start with -2 INT. Add -2 to INT
+- XP: -2
+
+**Counterintuitive, Minor**
+
+- Description: You're less intuitive than most.
+- Mechanic: Vulny. On character creation, you start with -1 GUT. Add -1 to GUT
+- XP: -1
+
+**Counterintuitive, Major**
+
+- Description: You're less intuitive than most.
+- Mechanic: Vulny. On character creation, you start with -2 GUT. Add -2 to GUT
+- XP: -2
+
+**Frail, Minor**
+
+- Description: You're frailer than most.
+- Mechanic: Vulny. On character creation, you start with -1 VIT. Add -1 to VIT
+- XP: -1
+
+**Frail, Major**
+
+- Description: You're frailer than most.
+- Mechanic: Vulny. On character creation, you start with -2 VIT. Add -2 to VIT
+- XP: -2
+
+**Uncertain, Minor**
+
+- Description: You're less certain than most.
+- Mechanic: Vulny. On character creation, you start with -1 CON. Add -1 to CON
+- XP: -1
+
+**Uncertain, Major**
+
+- Description: You're less certain than most.
+- Mechanic: Vulny. On character creation, you start with -2 CON. Add -2 to CON
+- XP: -2
+
+**Weak, Minor**
+
+- Description: You're weaker than most.
+- Mechanic: Vulny. On character creation, you start with -1 STR. Add -1 to STR
+- XP: -1
+
+**Weak, Major**
+
+- Description: You're weaker than most.
+- Mechanic: Vulny. On character creation, you start with -2 STR. Add -2 to STR
+- XP: -2

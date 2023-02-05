@@ -1,5 +1,6 @@
 from ..utils.logger import logger
 from .bestiary import Bestiary
+from .items import Items
 from .powers import Powers
 
 
@@ -8,6 +9,7 @@ def yaml_to_other(
         "04_Powers.yaml",
         "05_Vulnerabilities.yaml",
         "06_Bestiary.yaml",
+        # "07_Items.yaml",
     ],
     writing: list = ["md", "csv", "png"],
     out_delim: str = "\t",  # or ','
@@ -23,13 +25,18 @@ def yaml_to_other(
     for file in input_files:
         logger.info(f"Started {file}")
 
-        if "Best" in file:
+        if "best" in file.lower() or "pc" in file.lower():
             my_class = Bestiary(file)
             if "png" in writing:
                 for pc in my_class.categories.get(("PC",), []):
                     my_class.as_dict[pc].make_pc_img()
-        else:
+        elif "power" in file.lower() or "vuln" in file.lower():
             my_class = Powers(file)
+        elif "item" in file.lower():
+            my_class = Items(file)
+        else:
+            raise ValueError("Could not infer ingestion routine by file name.")
+
         if "md" in writing:
             my_class.write_md(output_fp=None, TOC=False)
         if "csv" in writing:
