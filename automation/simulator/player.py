@@ -3,7 +3,7 @@ from dataclasses import fields
 
 from ..templates.bestiary import Beast
 from ..templates.powers import Power
-from ..utils import drawlog, ensure_list, logger, restlog
+from ..utils import draw_log, ensure_list, logger, restlog
 from .deck import Card, Deck
 
 
@@ -117,7 +117,7 @@ class Player(Deck, Beast):
             self.modify_fatigue()
             result = self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
         # NOTE: drawlog doesn't know if had options
-        drawlog.info(
+        draw_log.info(
             [
                 self.id,
                 "check",
@@ -148,7 +148,7 @@ class Player(Deck, Beast):
             self.modify_fatigue()
             self.save(DR=DR, attrib=attrib, **kwargs)
         # NOTE: drawlog doesn't know if had options
-        drawlog.info(
+        draw_log.info(
             [
                 self.id,
                 "save",

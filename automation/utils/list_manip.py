@@ -1,4 +1,5 @@
 from collections import Iterable
+from typing import Generator
 
 
 def ensure_list(ambiguous_item):
@@ -6,7 +7,8 @@ def ensure_list(ambiguous_item):
     return ambiguous_item if isinstance(ambiguous_item, list) else [ambiguous_item]
 
 
-def flatten_list(my_list):
+def flatten_list(my_list) -> Generator:
+    """For a list containing embedded lists, generate 1d list with no 'None' vals"""
     for item in my_list:
         if not item:
             continue

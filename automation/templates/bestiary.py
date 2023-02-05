@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from dataclasses import dataclass, field, fields
 from operator import attrgetter
-from typing import List
+from typing import List, Tuple
 
 from ..utils import (
     ensure_list,
@@ -33,7 +33,7 @@ list_stats = {list_attribs[n]: list_skills[n * 2 : n * 2 + 2] for n in range(5)}
 list_stats.update(dict(VIT=[]))
 list_beast_types = ["PC", "Dealer", "NPC", "Boss", "Companion"]
 list_boss_phases = ["One", "Two", "Three", "Four", "Five", "Six"]
-xp_progession = dict(  # Value: XP cost
+xp_progression = dict(  # Value: XP cost
     attrib={-2: -4, -1: -2, 0: 0, 1: 2, 2: 4, 3: 8, 4: 12, 5: 18, 6: 24},
     skills={-2: -2, -1: -1, 0: 0, 1: 1, 2: 2, 3: 4, 4: 6, 5: 9, 6: 12},
 )
@@ -44,7 +44,7 @@ all_items = load_all_items().as_dict
 
 
 class Bestiary(YamlSpec):
-    """Bestiary class - load all or a specific type from yamls
+    """Bestiary class - load all or a specific type from YAMLs
 
     Example:
         from automation.templates.bestiary import Bestiary, Beast
@@ -76,7 +76,9 @@ class Bestiary(YamlSpec):
     @property
     def categories(self) -> OrderedDict:
         """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
-        return self._build_categories(build_with="Type")
+        if not self._categories:
+            self._categories = self._build_categories(build_with="Type")
+        return self._categories
 
     @property
     def csv_fields(self) -> list:
@@ -115,7 +117,6 @@ class Attribs:
     @property
     def as_tuple(self):
         """Just a set of all items as int (0, 1, 2...)"""
-        # TODO: Align match skills equivalent
         return (self.AGL, self.CON, self.GUT, self.INT, self.STR, self.VIT)
 
     @property
@@ -125,7 +126,7 @@ class Attribs:
 
     def __repr__(self):
         """Print non-default beast items with repr property and linebreaks"""
-        return my_repr(self, seperator=", ", indent=0)
+        return my_repr(self, separator=", ", indent=0)
 
 
 @dataclass(order=True)
@@ -169,14 +170,14 @@ class Skills:
 
     def __repr__(self):
         """Print non-default beast items with repr property and linebreaks"""
-        return my_repr(self, seperator=", ", indent=0)
+        return my_repr(self, separator=", ", indent=0)
 
 
 @dataclass(order=True)
 class Phase:
     """Class for representing boss phases"""
 
-    # TODO: Should allies be typed as Beast? Recursive?
+    # TODO: Should allies be typed as Beast recursively?
     Name: str
     Order: int = field(repr=False)
     HP: int = 1
@@ -190,10 +191,6 @@ class Phase:
 @dataclass(order=True)
 class Beast:
     """Class for representing all creatures (e.g., PCs, bosses, etc.)"""
-
-    # TODO:
-    #  - Add validator to confirm valid PC
-    #  - Accept list of items, the values of which may impact other stats
 
     sort_index: str = field(init=False, repr=False)
     Type: str
@@ -241,8 +238,15 @@ class Beast:
             self.check_valid()
         self.adjust_stats()
 
-    def fetch_powers(self) -> dict:
-        """Given a list of powers by name, generate a dict {Name: Power class}"""
+    def fetch_powers(self) -> Tuple[dict, int, int, int]:
+        """Given a list of powers by name, generate a dict {Name: Power class}
+
+        Returns:
+            output_powers (dict): Dictionary of {name: Power class} for this char powers
+            powers_pp (int): number of max power points summed across all powers
+            powers_xp (int): number of across all powers
+            vulny_xp (int): number of xp from vulnerabilities alone
+        """
         # TODO: check prereqs in validation
         output_powers = {}
         powers_pp = 0
@@ -272,6 +276,11 @@ class Beast:
         return output_powers, powers_pp, powers_xp, vulny_xp
 
     def fetch_items(self) -> dict:
+        """Return a dict of {item_name: item class} for all items wielded by this char
+
+        Returns:
+            dict: set of items as a dictionary
+        """
         output_items = {}
         for listed_item in ensure_list(self.Items):
             item = all_items.get(listed_item)
@@ -289,6 +298,12 @@ class Beast:
         return output
 
     def _adjust_skill_via_attribs(self, attribs: list = None):
+        """For each attrib passed (if none, all), if skill 0 or None, use attrib value
+
+        Args:
+            attribs (list, optional): Set of attribs for which we should adjust skills.
+                Defaults to None, which assumes all attribs.
+        """
         if not attribs:
             attribs = list_attribs  # All
         for attrib in ensure_list(attribs):
@@ -299,20 +314,18 @@ class Beast:
                     setattr(self.Skills, skill, attrib_val)
 
     def _adjust_stats_powers_items(self):
-        adjs = []
+        """For each power and item, check for StatAdjust fields and modify relevant"""
+        adjusts = []
         if self.Powers:
-            adjs.append(
+            adjusts.append(
                 getattr(power, "StatAdjusts", []) for power in self.Powers.values()
             )
         if self.Items:
-            adjs.append(
+            adjusts.append(
                 getattr(item, "StatAdjusts", []) for item in self.Items.values()
             )
-        adjs = [item for adj in adjs if adj is not None for item in adj]  # Unpack lists
 
-        for adjust in flatten_list(adjs):
-            if isinstance(adjust, list):
-                raise ValueError("Got StatAdjust as list")
+        for adjust in flatten_list(adjusts):
             if adjust.Stat in list_attribs:
                 adjusted_val = self.Attribs
             elif adjust.Stat in list_skills:
@@ -332,18 +345,19 @@ class Beast:
         self._adjust_stats_powers_items()
 
     def check_valid(self):
+        """Check that this beast is a valid PC. If not, log warnings with flaws"""
         remaining_XP = 6 + (self.Level * 3) - self._pow_XP
 
         self._adjust_skill_via_attribs()
         max_stat = 0
         for attrib, skills in list_stats.items():
             attrib_val = getattr(self.Attribs, attrib, 0)
-            attrib_xp = xp_progession["attrib"][attrib_val]
+            attrib_xp = xp_progression["attrib"][attrib_val]
             max_stat = max(max_stat, attrib_val)
             remaining_XP -= attrib_xp
             for skill in skills:
                 skill_val = getattr(self.Skills, skill, 0)
-                remaining_XP -= xp_progession["skills"][skill_val - attrib_val]
+                remaining_XP -= xp_progression["skills"][skill_val - attrib_val]
                 max_stat = max(max_stat, skill_val)
 
         if remaining_XP < 0:
@@ -457,7 +471,8 @@ class Beast:
             .render(pc=self, items=items if items else default_items)
         )
 
-    def _pc_file_info(self, suffix: str):
+    def _pc_file_info(self, suffix: str) -> Tuple[str, str]:
+        """Return _output relative file path and name for PC file given suffix"""
         return "./automation/_output/", f"PC_{self.Name}_level_{self.Level}.{suffix}"
 
     def make_pc_html(self, items: list = None):

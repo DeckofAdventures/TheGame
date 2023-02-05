@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Provides 2 loggers that send output to CSVs with configs set here.
+    draw_log - saves info relevant to draws
+    rest_log - saves info before and after rests
+"""
 
 import logging
 
@@ -6,7 +11,7 @@ from csv_logger import CsvLogger
 
 delimiter = ","
 size_limit = 8192  # 8 kilobytes
-drawheader = [
+draw_header = [
     "date",
     "id",
     "check_save",
@@ -19,7 +24,7 @@ drawheader = [
     "draw_n",
 ]
 
-drawlog = CsvLogger(
+draw_log = CsvLogger(
     filename="./automation/_output/log_draws.csv",
     delimiter=delimiter,
     level=logging.INFO,
@@ -29,13 +34,13 @@ drawlog = CsvLogger(
     datefmt="%m/%d %H:%M:%S",
     max_size=size_limit,
     max_files=4,  # 4 rotating files
-    header=drawheader,
+    header=draw_header,
 )
 
-# drawlog.check([int,str,DR,type,mod,upper_lower,draw_n])
-# restlog.before([type,discards,hand,HP,AP,PP,RestCards])
+# draw_log.check([int,str,DR,type,mod,upper_lower,draw_n])
+# rest_log.before([type,discards,hand,HP,AP,PP,RestCards])
 
-restheader = [
+rest_header = [
     "date",
     "id",
     "before_after",
@@ -48,15 +53,14 @@ restheader = [
     "RestCards",
 ]
 
-restlog = CsvLogger(
+rest_log = CsvLogger(
     filename="./automation/_output/log_rests.csv",
     delimiter=delimiter,
     level=logging.INFO,
-    # add_level_names=["before", "after"],
     add_level_nums=None,
     fmt=f"%(asctime)s{delimiter}%(message)s",
     datefmt="%m/%d %H:%M:%S",
     max_size=size_limit,
     max_files=4,  # 4 rotating files
-    header=restheader,
+    header=rest_header,
 )

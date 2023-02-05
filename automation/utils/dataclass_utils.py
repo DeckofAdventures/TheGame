@@ -2,7 +2,7 @@ from dataclasses import fields
 from operator import attrgetter
 
 
-def my_repr(self, seperator: str = "\n", indent: int = 0):
+def my_repr(self, separator: str = "\n", indent: int = 0):
     """Print formatting for custom dataclasses"""
     nodef_f_vals = (
         (f.name, attrgetter(f.name)(self))
@@ -12,7 +12,7 @@ def my_repr(self, seperator: str = "\n", indent: int = 0):
     )
     tabs = "\t" * indent
     # Separate fields with \n newlines
-    nodef_f_repr = f"{seperator}{tabs}".join(
+    nodef_f_repr = f"{separator}{tabs}".join(
         f"{name}={value}" for name, value in nodef_f_vals
     )
-    return f"{self.__class__.__name__}{seperator}{tabs}({nodef_f_repr})"
+    return f"{self.__class__.__name__}{separator}{tabs}({nodef_f_repr})"

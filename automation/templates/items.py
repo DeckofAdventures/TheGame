@@ -83,6 +83,14 @@ class Use:
     PowerMechanic: str = field(default=None, repr=False)
 
     def __post_init__(self):
+        """After initializing, run checks.
+
+        Checks:
+            1. Time is either a valid action or numeric prefix before another word
+            2. If Limit is just a number add 'times'
+            3. If passed a Power name (with option), set option and retrieve power.
+            4. If passed both Power and Effect, log warning. Default to power on print.
+        """
         if self.Time:
             dur, measure = self.Time.lower().split(" ")
             if measure == "action" and dur not in map(str.lower, list_power_types):
@@ -107,7 +115,7 @@ class Use:
 
     @property
     def non_defaults(self):
-        """Return non-default repr items"""
+        """Return non-default items with field.repr==True"""
         return {
             f.name: attrgetter(f.name)(self)
             for f in fields(self)
@@ -116,10 +124,12 @@ class Use:
 
     @property
     def flat(self) -> dict:
+        """Return a single dictionary with Use_X as key for each Use field"""
         return flatten_embedded(dict(Use=self.non_defaults))
 
     @property
     def merged_string(self) -> str:
+        """Return a single string representing item, like MergedMechanic for Power"""
         output = f"Up to {self.Limit}, " if self.Limit else ""
         output += f"take {self.Time} to activate. " if self.Time else ""
         output = output.capitalize()
@@ -134,20 +144,25 @@ class Use:
 
 @dataclass(order=True)
 class Cost:
+    """Item cost split by number and currency. Useful for csv comparisons"""
+
     raw: str = field(repr=False)
     Value: int = field(init=False)
     Denomination: str = field(init=False)
 
-    def __post_intit__(self):
-        self.Value, self.Denomination = self.Cost.split(" ")
+    def __post_init__(self):
+        """Check that currency is in list of valid currencies (e.g., gp, cp)"""
+        self.Value, self.Denomination = self.raw.split(" ")
         if self.Denomination not in list_currencies:
             logger.warning(f"Unexpected currency type: {self.Denomination}")
 
     @property
     def flat(self) -> dict:
+        """Return single dictionary with {Cost_Value: Value, Cost_Denom: denom}"""
         return flatten_embedded(dict(Cost=self.__dict__))
 
     def __repr__(self) -> str:
+        """When printing, just use raw form e.g. 2 gp"""
         return self.raw
 
 
@@ -184,7 +199,8 @@ class Item:
         if self.StatAdjusts and not self.Description:
             self.Description = ". ".join([s.text for s in self.StatAdjusts]) + "."
 
-    def _compose_adjust(self, stat_adjust_items):
+    def _compose_adjust(self, stat_adjust_items) -> list:
+        """Compose list of StatAdjust class objects, respecting Add vs. Replace"""
         output = []
         for k, v in stat_adjust_items.items():
             if k.lower() in ["add", "replace"]:

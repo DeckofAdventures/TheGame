@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from dataclasses import dataclass, field, fields
 from operator import attrgetter
 from typing import Union
@@ -31,8 +32,8 @@ class Powers(YamlSpec):
     """Set of DofA powers
 
     Attributes:
-        content (dict): input powers converted to human-readable mechanics
-        categories (set): set of tuples - set((categ, subcat, subsubcat),(categ2))
+        as_dict (dict): dictionary of powers with ids as keys
+        categories
     """
 
     def __init__(self, input_files="04_Powers_SAMPLE.yaml", limit_types: list = None):
@@ -65,12 +66,21 @@ class Powers(YamlSpec):
         return self._as_dict
 
     @property
-    def categories(self) -> list:
-        """Return set of tuples: (categories, subcategories)"""
-        return self._build_categories(build_with="Category")
+    def categories(self) -> OrderedDict(tuple=list):
+        """Return set of ordered dict with category set key and power name list as value
+
+        Each power may be in multiple categories. This property serves as a cache to
+        look up the powers associated with a unique set of categories
+
+        Example:
+            {(Combat,) : ['Sweep', 'Momentum'], ('Combat', 'Support'), ['Shield, Self']}
+        """
+        if not self._categories:
+            self._categories = self._build_categories(build_with="Category")
+        return self._categories
 
     @property
-    def csv_fields(self):
+    def csv_fields(self) -> list:
         """Return a list of fields for the CSV output in the desired order"""
         if not self._csv_fields:
             _ = self.categories
@@ -83,26 +93,26 @@ class Powers(YamlSpec):
 
 @dataclass(order=True)
 class StatAdjust:
-    """Class representing attrib or skill number to add (e.g., Dumb vulny redudces INT)"""
+    """Class representing attrib or skill number to add (e.g., Dumb vulny reduces INT)"""
 
     Stat: str
     Value: int
     add: bool = True
 
-    def __post_init__(self):  # Assumes only one stat is overridden
+    def __post_init__(self):
         if isinstance(self.add, str):
             self.add = self.add.lower() == "add"
 
     @property
     def text(self) -> str:
-        """Return mechanic text of override: Add value to stat"""
+        """Return mechanic text of override: Add X to stat or Replace stat with X"""
         if self.add:
             return f"Add {self.Value} to {self.Stat}"
         return f"Replace {self.Stat} with {self.Value}"
 
     @property
     def flat(self) -> dict:
-        """Return flatted dict {'Prereq_example': value} pairs for csv export"""
+        """Return flatted dict {'StatAdjust_X': value} pairs for csv export"""
         return flatten_embedded(
             {"StatAdjust": {"Stat": self.Stat, "Value": self.Value, "Add": self.add}}
         )
@@ -175,7 +185,7 @@ class Power:
     Range: int = 6
     AOE: str = None
     Targets: int = 1
-    Draw: str = "None"
+    Draw: str = None
     Options: str = field(default=None, repr=False)
     Choice: str = field(default=None, repr=False)
     Damage: int = field(default=1, repr=True)
@@ -197,10 +207,23 @@ class Power:
         )
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
-        self.upper_lower_int = self._get_upper_lower_int()
+        self.upper_lower_int = self._get_upper_lower_int() if self.Draw else "None"
 
     def set_choice(self, choice: str = None):
-        """Given a choice among options, revise merged mechanic property"""
+        """Given a choice among options, revise merged mechanic property
+
+        Example:
+            Power yaml:
+                Options: Select on of the following X when taking this power: A, B, C
+                Mechanic: When X, do Y for selected option.
+            Power MergedMechanic: Select.... When X, do Y for selected option.
+            >>> power.set_choice(choice='A') # A is of type X
+            Power MergedMechanic: A. When X, do Y for selected option.
+
+        Args:
+            choice (str): Optional. Default no change. Sets choice and compiles merged
+                mechanic to reflect selected choice.
+        """
         if not choice:
             return self
 
@@ -208,7 +231,13 @@ class Power:
         self.Mechanic = self.merge_mechanic()
         return self
 
-    def _get_upper_lower_int(self):
+    def _get_upper_lower_int(self) -> int:
+        """When value passed as Draw in yaml, return relevant integer.
+
+        Example:
+            Upper, Lower, None, -3, 4 would return 2, -2, 0, -3, 4 respectively
+
+        """
         upper_lower = self.Draw.upper()[0]
         return 2 if upper_lower == "U" else -2 if upper_lower == "L" else 0
 
@@ -224,10 +253,8 @@ class Power:
     def merge_mechanic(self) -> str:
         """Given power dict, merge all appropriate items into Mechanic
 
-        Assumes Listed mechanics do not have PP/Save/StatAdjust
-
         Returns:
-            power_merged (dict): power with all mechanic items combined.
+            power_merged (str): power sentence with all mechanic items combined.
         """
         if isinstance(self.Mechanic_raw, list):  # when mech are list, indent after 1st
             mech_bullets = self.Type + ". " + self.Mechanic_raw[0] + "\n"
@@ -252,6 +279,7 @@ class Power:
 
     @property
     def _mechanic_for_item(self) -> str:
+        """String of choice and raw mechanic for items. No other aspects of Power"""
         choice = self.Choice + ". " if self.Choice else ""
         return choice + self.Mechanic_raw
 

@@ -4,6 +4,9 @@
     "version": "0.2",
     // language - current active spelling language
     "language": "en",
+    "enabledLanguageIds": [
+        "markdown", "yaml", "python"
+    ],
     "dictionaries": [
         "en",
         "en-US",
@@ -22,8 +25,11 @@
         "Battlecharged",
         "codemirror",
         "delim",
+        "excepthook",
         "Erdania",
         "kernelspec",
+        "levelname",
+        "manip",
         "nbconvert",
         "nbformat",
         "premade",
@@ -40,7 +46,10 @@
         "Thadius",
         "TTRPG",
         "TTRPGs",
-        "workshopped"
+        "workshopped",
+        "Vuln",
+        "Vulny",
+        "Vulnys"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

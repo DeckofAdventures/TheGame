@@ -1,4 +1,7 @@
-"""This logger is adapted from the DataJoint Python API logger"""
+"""
+This logger is adapted from the DataJoint Python API logger in the following format:
+    [Hour:Min][Loglevel]: Content
+"""
 import logging
 import os
 import sys
