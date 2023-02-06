@@ -191,7 +191,7 @@ Attack, Mystic Cone:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
-    Mechanic: You force the creatures within the cone to make an AGL Save. On a failure, those creatures take 1 damage and are Knocked Down.
+    Mechanic: You force the creatures within a Cone 3 to make an AGL Save. On a failure, those creatures take 1 damage and are Knocked Down.
     Type: Major
     XP: 2
     PP: 2
@@ -516,7 +516,7 @@ Speedy:
         - Movement
         - Speed
     Description: You're quicker than the rest.
-    Mechanic: When you take this Power, your speed increases by 2 squares.
+    Mechanic: When you take this Power, your speed increases by 2.
     Type: Passive
     XP: 1
 
@@ -606,7 +606,7 @@ Vanishing Step:
     Category: 
         - Movement
         - Stealth
-    Mechanic: Choose a point you can see. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
+    Mechanic: Choose a point you can see within 10 spaces. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
     Description: Sometimes, moving in the shadows is easiest when no one knows where you're going.
     XP: 2
     PP: 2
@@ -891,7 +891,7 @@ Drain Life:
     Type: Major
     Category:
         - Boss-Only
-    Aura: 2
+    AOE: Aura 2
     Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
 
 # Boss-Only Adversary Actions
