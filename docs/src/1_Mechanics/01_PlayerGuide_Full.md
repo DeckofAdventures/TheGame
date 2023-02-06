@@ -628,7 +628,8 @@ with the Lower Hand (3). For example...
 
 **Hidden:** A creature might be considered *Hidden* when out of view or otherwise
 undetected by nearby creatures. When attempting to notice or look for a creature that
-is Hidden, all Detection or Investigation Checks are made at the Lower Hand.
+is Hidden, all Detection or Investigation Checks are made at the Lower Hand. All attacks
+made against a Hidden creature are made with Lower Hand.
 
 #### Cover
 
