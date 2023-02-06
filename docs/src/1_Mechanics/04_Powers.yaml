@@ -806,7 +806,7 @@ Thwart:
 Intensify:
     Category: Discard (limit one per character)
     Description: An explosive attack might mean running out of gas.
-    Mechanic: On your next Attack, discard cards until you reach a Major Success. Standard Successes are treated as Misses.
+    Mechanic: On your next Attack, discard cards until you reach a Major Success. Standard Successes are treated as Misses. You can choose to end this effect early.
     Type: Minor
     XP: 0
     Prereq:
