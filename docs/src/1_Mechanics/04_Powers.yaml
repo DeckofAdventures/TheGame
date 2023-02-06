@@ -377,9 +377,10 @@ Lend Aid:
         - Combat
         - Support
     Description: Just a little help from a friend
-    Mechanic: Draw a card, hold it in reserve, and designate one ally. On the ally's next Draw, they may use your card as if they had Upper Hand
+    Mechanic: Draw a card, hold it in reserve, and designate one creature within 12 spaces. On the creature's next Draw, they may use your card as if they had Upper Hand
     Type: Minor
     XP: 1
+    Range: 12
     Prereq:
         Role: Support
 
@@ -389,9 +390,10 @@ Lend Distraction:
         - Support
         - Distract
     Description: Just an annoyance in the distance
-    Mechanic: As a Minor Action, designate a creature who, on their next draw, will draw with the Lower Hand.
+    Mechanic: Draw a card, hold it in reserve, and designate one creature within 12 spaces. On the creature's next Draw, they use your card as if they had Lower Hand.
     Type: Minor
     XP: 1
+    Range: 12
     PP: 1
 
 Lend Vigor:
