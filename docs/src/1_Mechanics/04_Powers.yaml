@@ -237,7 +237,7 @@ Attack, Mystic Entangle:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to tie your target in place.
-    Mechanic: Choose a point within range. All creatures within Aura 3 must make an AGL Save. On a failure, they are Entangled. 
+    Mechanic: Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save. 
     Type: Major
     XP: 2
     PP: 1
