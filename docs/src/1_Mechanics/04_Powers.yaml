@@ -400,7 +400,7 @@ Lend Aid:
         - Combat
         - Support
     Description: Just a little help from a friend
-    Mechanic: Draw a card, hold it in reserve, and designate one creature within 12 spaces. On the creature's next Draw, they may use your card as if they had Upper Hand
+    Mechanic: Draw a card, hold it in reserve, and designate one creature within 12 spaces. At any time within the next 1 minute, the creature may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
     Type: Minor
     XP: 1
     Range: 12
