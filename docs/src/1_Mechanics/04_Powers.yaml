@@ -1,4 +1,5 @@
 Template: # Power name        # Must be unique
+    Name: X                   # Optional. Used for rendering Powers with same name.
     Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
     Category: One or list     # One string or list in sub-cat order
     Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
@@ -28,6 +29,7 @@ Template: # Power name        # Must be unique
     Tags: One or list
 
 Attack, Weapon:
+    Name: Weapon Attack
     Category:
         - Combat
         - Weapon Attacks
@@ -36,7 +38,8 @@ Attack, Weapon:
     Type: Major
     XP: 1
 
-Attack, Weapon Two: 
+Attack, Weapon 2: 
+    Name: Weapon Attack
     Category: 
         - Combat
         - Weapon Attacks
@@ -129,6 +132,7 @@ Attack, Dual-Wield Master:
         Level: 3
 
 Attack, Mystic:
+    Name: Mystic Attack
     Category:
         - Combat
         - Mystic Attacks
@@ -143,7 +147,8 @@ Attack, Mystic:
             - Knowledge > 0
             - Craft > 0
 
-Attack, Mystic Two:
+Attack, Mystic 2:
+    Name: Mystic Attack
     Category:
         - Combat
         - Mystic Attacks
@@ -174,7 +179,21 @@ Attack, Mystic Aura:
             - Support
     Tags:  Multi-target
 
-Attack, Mystic Amplification :
+Attack, Mystic Amplification:
+    Name: Mystic Amplification
+    Category:
+        - Combat
+        - Mystic Attacks
+    Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+    Mechanic: Designate a weapon you are wielding. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
+    Type: Major
+    XP: 2
+    PP: 1
+    Prereq:
+        Power: Attack, Mystic
+
+Attack, Mystic Amplification 2:
+    Name: Mystic Amplification
     Category:
         - Combat
         - Mystic Attacks
@@ -184,7 +203,9 @@ Attack, Mystic Amplification :
     XP: 2
     PP: 1
     Prereq:
-        Power: Attack, Mystic
+        Power: 
+            - Attack, Mystic
+            - Attack, Mystic Amplification
 
 Attack, Mystic Cone:
     Category:
@@ -347,6 +368,7 @@ Pack Tactics:
         Level: 2
 
 Heal:
+    Name: Heal
     Category:
         - Combat
         - Support
@@ -358,7 +380,8 @@ Heal:
     Prereq:
         Role: Support
 
-Heal Two:
+Heal 2:
+    Name: Heal
     Category:
         - Combat
         - Support
