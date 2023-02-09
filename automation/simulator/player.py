@@ -68,7 +68,9 @@ class Player(Deck, Beast):
         elif self._fatigue > 1:
             extra -= 1
         kwarg_dict["upper_lower_int"] = (
-            kwarg_dict.get("upper_lower_int", 0)
+            0 + kwarg_dict.get("upper_lower_int", 0)
+            if kwarg_dict.get("upper_lower_int", 0)
+            else 0
             + self._statuses.get(all_type, 0)
             + self._statuses.get(next_type, 0)
             + extra
