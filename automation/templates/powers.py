@@ -21,8 +21,8 @@ list_power_types = [
 def load_all_powers():
     return Powers(
         input_files=[
-            "04_Powers.yaml",
             "04_Powers_SAMPLE.yaml",
+            "04_Powers.yaml",
             "05_Vulnerabilities.yaml",
         ]
     )

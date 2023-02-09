@@ -262,10 +262,10 @@ class Beast:
             power = all_powers.get(power_name, None)
 
             if not power:
-                logger.warning(f"{self.Name} has a power not in yaml: {power.Name}")
+                logger.warning(f"{self.Name} has a power not in yaml: {power_name}")
                 continue
             if self.Type != "Boss" and "Boss-Only" in power.Category:
-                logger.warning(f"{self.Name} was given a Boss-Only power: {power.Name}")
+                logger.warning(f"{self.Name} was given a Boss-Only power: {power_name}")
 
             output_powers.update({power_name: power.set_choice(choice)})
             powers_pp += max(ensure_list(power.PP))
