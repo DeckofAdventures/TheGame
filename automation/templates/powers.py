@@ -207,7 +207,7 @@ class Power:
         )
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
-        self.upper_lower_int = self._get_upper_lower_int() if self.Draw else "None"
+        self.upper_lower_int = self._get_upper_lower_int() if self.Draw else None
 
     def set_choice(self, choice: str = None):
         """Given a choice among options, revise merged mechanic property
