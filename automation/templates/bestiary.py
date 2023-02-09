@@ -222,13 +222,7 @@ class Beast:
         self.Skills = Skills(**self.Skills) if self.Skills else Skills()
         self.Phases = self.fetch_phases() if self.Phases else None
         self.AR = self.AR if self.AR else (3 - (self.Attribs.AGL // 2))  # default
-        self.HP_Max = self.HP  # assume providing max when initializing
-        self.AP_Max = self.AP
-        self.AR_Max = self.AR
-        self.PP_Max = self.PP
-        self.Speed_Max = self.Speed
         self.RestCards = self.HP
-        self.RestCards_Max = self.HP
         if self.Type in ["PC"]:
             if self.PP != 0:
                 logger.warning(
@@ -237,6 +231,12 @@ class Beast:
             self.PP = self._pow_PP
             self.check_valid()
         self.adjust_stats()
+        self.RestCards_Max = self.HP
+        self.HP_Max = self.HP  # assume providing max when initializing
+        self.AP_Max = self.AP
+        self.AR_Max = self.AR
+        self.PP_Max = self.PP
+        self.Speed_Max = self.Speed
 
     def fetch_powers(self) -> Tuple[dict, int, int, int]:
         """Given a list of powers by name, generate a dict {Name: Power class}
