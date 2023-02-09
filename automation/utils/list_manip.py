@@ -1,5 +1,4 @@
-from collections import Iterable
-from typing import Generator
+from typing import Generator, Iterable
 
 
 def ensure_list(ambiguous_item):
