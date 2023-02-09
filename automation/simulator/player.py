@@ -298,7 +298,7 @@ class Player(Deck, Beast):
             return
         options = [
             p
-            for p in self.Powers_list  # ASSUME: Always use lesser PP option
+            for p in self.Powers.values()
             if p is not None
             and p.Type == type
             and ensure_list(p.PP)[0] <= self.PP * self._PP_mult
