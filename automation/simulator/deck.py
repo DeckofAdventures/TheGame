@@ -10,7 +10,7 @@ class Card(object):
     """Card class
 
     Example use:
-        from automation.simulaiton.deck import Card
+        from automation.simulation.deck import Card
         Card("SA") OR Card("S","A")
 
     Attributes:

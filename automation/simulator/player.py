@@ -3,7 +3,7 @@ from dataclasses import fields
 
 from ..templates.bestiary import Beast
 from ..templates.powers import Power
-from ..utils import draw_log, ensure_list, logger, restlog
+from ..utils import draw_log, ensure_list, logger, rest_log
 from .deck import Card, Deck
 
 
@@ -31,7 +31,7 @@ class Player(Deck, Beast):
     def __repr__(self):
         """Result of print(Player)"""
         output = self.Name + "\n"
-        output += "TC       : %02s | pc.HP : %d/%d\n" % (
+        output += "TC       :%02s | pc.HP : %d/%d\n" % (
             self.TC,
             self.HP,
             self.HP_Max,
@@ -164,7 +164,7 @@ class Player(Deck, Beast):
         return result
 
     def full_rest(self, **_):
-        restlog.info(
+        rest_log.info(
             [
                 self.id,
                 "before",
@@ -181,7 +181,7 @@ class Player(Deck, Beast):
         for i in ["HP", "PP", "AP", "RestCards", "Speed"]:
             setattr(self, i, getattr(self, i + "_Max"))
         self._statuses = {}
-        restlog.info(
+        rest_log.info(
             [
                 self.id,
                 "after",
@@ -197,7 +197,7 @@ class Player(Deck, Beast):
 
     def quick_rest(self, **kwargs):
         # Never uses Fate cards here
-        restlog.info(
+        rest_log.info(
             [
                 self.id,
                 "before",
@@ -231,7 +231,7 @@ class Player(Deck, Beast):
                     f"   1 {increment_this} to {getattr(self,increment_this,'?')}"
                 )
             self.RestCards -= 1
-        restlog.info(
+        rest_log.info(
             [
                 self.id,
                 "after",
