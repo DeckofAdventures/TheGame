@@ -8,8 +8,8 @@ temp*/*
 .vs/*
 *swp
 
-# Settings
-*toml
+# pip
+*egg-info*
 
 # Automation, Python
 automation/_output/*

@@ -20,8 +20,9 @@ class YamlSpec(ABC):
         self._category_hierarchy = None
         self._content = dict()
         self._fields = None
-        self._filepath_default_input = "./automation/_input/"
-        self._filepath_default_output = "./automation/_output/"
+        self._default_root = os.getenv('THEGAME_ROOT') or "./automation/"
+        self._filepath_default_input = self._default_root + "_input/"
+        self._filepath_default_output = self._default_root + "_output/"
         self._filepath_mechanics = "./docs/src/1_Mechanics/"
         self._tried_loading = False
         self._limit_types = []

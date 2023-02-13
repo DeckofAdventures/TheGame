@@ -3,7 +3,9 @@ from dataclasses import fields
 
 from ..templates.bestiary import Beast
 from ..templates.powers import Power
-from ..utils import draw_log, ensure_list, logger, rest_log
+from ..utils.logger_csv import draw_log, rest_log
+from ..utils.logger import logger
+from ..utils.list_manip import ensure_list
 from .deck import Card, Deck
 
 
