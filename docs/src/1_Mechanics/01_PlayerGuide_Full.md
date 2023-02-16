@@ -374,7 +374,7 @@ others. If an action specifies a skill, this requires a check.
     3. **Major**
 
         - *Rush*: double movement
-        - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be *Entangled*
+        - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be *Grappled*
         - *Hide*: Stealth vs. target(s) Detection; become *Hidden*
 
  A character can choose to Ready their Major Action to occur on a stated trigger, such
@@ -447,6 +447,15 @@ DR 3 CON Save. On failure, they must move up to their Speed and/or perform 1 Maj
 Action available to them, as directed by the creature that caused the condition.
 Another creature may use a Major action to end this effect. This effects ends
 automatically if the target is damaged by the creature that caused the condition.
+
+12. **Invisible** All attacks made by an Invisible creature are drawn at Upper Hand. When
+making a Check to detect an Invisible creature, draw with Lower Hand. Unless otherwise
+stated, using a Power ends the Invisible condition.
+
+13. **Grappled** Movement speed is reduced to 0 and a Grappled creature cannot gain
+the benefit of additional speed. They have Lower Hand when using any Power. A
+creature can end the Grappled condition by making a successful Contested Brute or 
+Finesse Check against target's Brute.
 
 ### Health and Armor
 
@@ -626,10 +635,16 @@ with the Lower Hand (3). For example...
 - A moonless night in the countryside without any light source.
 - Descending into a cave without a light source.
 
-**Hidden:** A creature might be considered *Hidden* when out of view or otherwise
-undetected by nearby creatures. When attempting to notice or look for a creature that
-is Hidden, all Detection or Investigation Checks are made at the Lower Hand. All attacks
-made against a Hidden creature are made with Lower Hand.
+**Hidden:** Upon a successful Stealth check a creature is considered *Hidden* with
+respect to other creatures. Attacks against unaware creatures have Upper Hand, and
+attacks against a Hidden creature have Lower Hand.
+
+Unless otherwise stated, a creature is no longer Hidden whenever another creature makes
+a Successful Detection Check or if the creature:
+
+- Uses a Power
+- Takes Damage
+- Fails a Stealth Check
 
 #### Cover
 
