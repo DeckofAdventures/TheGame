@@ -41,7 +41,10 @@ class Encounter(object):
     def add_enemy(self, name: Player):
         self.enemies.append(name)
 
-    def _apply_power(self, attacker, targets: List[Player], power=None):
+    def _apply_power(
+        self, attacker, targets: List[Player], power=None, return_string=False
+    ):
+        result_strings = []
         if not power:
             return
         for _ in range(ensure_list(power.Targets)[0]):
@@ -55,7 +58,7 @@ class Encounter(object):
                         target._statuses[power.Save.Fail] = (
                             target._statuses.get(power.Save.Fail, 0) + 1
                         )
-                        logger.info(
+                        result_strings.append(
                             f"{target.Name} is {power.Save.Fail}: "
                             + f"{target._statuses.get(power.Save.Fail, 0)}"
                         )
@@ -64,11 +67,13 @@ class Encounter(object):
                                 f"{target.Name} {power.Save.Fail} not simulated"
                             )
                     else:
-                        logger.info(target.Name + " " + power.Save.Fail)
+                        result_strings.append(f"{target.Name} {power.Save.Fail}")
                 elif result > 0:
-                    logger.info(f"{target.Name} resisted {power.Save.Fail}")
+                    result_strings.append(f"{target.Name} resisted {power.Save.Fail}")
                 elif power.Save.Succeed:
-                    logger.info(target.Name + power.Save.Succeed + ". Not simulated")
+                    result_strings.append(
+                        target.Name + power.Save.Succeed + ". Not simulated"
+                    )
             if power.Damage:
                 damage = ensure_list(power.Damage)[0]
                 result = attacker.check_by_skill(
@@ -83,11 +88,16 @@ class Encounter(object):
                     target.wound(wound)
                     if result > 3:
                         target._statuses["Stunned"] = 1
-                    logger.info(
+                    result_strings.append(
                         f"{attacker.Name} wounded {target.Name} by "
                         + f"{wound}: AP {target.AP}/{target.AP_Max}, HP "
                         + f"{target.HP}/{target.HP_Max}"
                     )
+            if not return_string:
+                logger.info(result_strings)
+                result_strings = []
+        if return_string:
+            return "\n".join(result_strings)
 
     def _take_turn(self, attacker: Player, targets: List[Player]):
         actions = ["Major", "Minor"]

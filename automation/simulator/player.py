@@ -3,9 +3,9 @@ from dataclasses import fields
 
 from ..templates.bestiary import Beast
 from ..templates.powers import Power
-from ..utils.logger_csv import draw_log, rest_log
-from ..utils.logger import logger
 from ..utils.list_manip import ensure_list
+from ..utils.logger import logger
+from ..utils.logger_csv import draw_log, rest_log
 from .deck import Card, Deck
 
 
@@ -167,7 +167,7 @@ class Player(Deck, Beast):
         )
         return result
 
-    def full_rest(self, **_):
+    def full_rest(self, return_string=False, **_):
         rest_log.info(
             [
                 self.id,
@@ -198,8 +198,10 @@ class Player(Deck, Beast):
                 self.RestCards,
             ]
         )
+        if return_string:
+            return f"{self.Name} fully rested."
 
-    def quick_rest(self, **kwargs):
+    def quick_rest(self, return_string=False, **kwargs):
         # Never uses Fate cards here
         rest_log.info(
             [
@@ -269,8 +271,11 @@ class Player(Deck, Beast):
                 point_total += down_AP
                 break
 
-        logger.info(f"{self.Name} recovered {point_total} HP/PP/AP during Quick Rest")
+        result = f"{self.Name} recovered {point_total} HP/PP/AP during Quick Rest"
+        logger.info(result)
         self.shuffle(limit=(10 + self.Attribs.VIT * 2))
+        if return_string:
+            return result
 
     def wound(self, wound_val, bypass_HP=False):
         for _ in range(wound_val):

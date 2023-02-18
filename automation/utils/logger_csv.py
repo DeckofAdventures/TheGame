@@ -4,8 +4,8 @@ Provides 2 loggers that send output to CSVs with configs set here.
     draw_log - saves info relevant to draws
     rest_log - saves info before and after rests
 """
-
 import logging
+import os
 
 from csv_logger import CsvLogger
 
@@ -24,8 +24,10 @@ draw_header = [
     "draw_n",
 ]
 
+output_path = os.getenv('THEGAME_ROOT') or "./automation/"
+
 draw_log = CsvLogger(
-    filename="./automation/_output/log_draws.csv",
+    filename= output_path + "_output/log_draws.csv",
     delimiter=delimiter,
     level=logging.INFO,
     # add_level_names=["check", "save"],
@@ -54,7 +56,7 @@ rest_header = [
 ]
 
 rest_log = CsvLogger(
-    filename="./automation/_output/log_rests.csv",
+    filename= output_path + "_output/log_rests.csv",
     delimiter=delimiter,
     level=logging.INFO,
     add_level_nums=None,
