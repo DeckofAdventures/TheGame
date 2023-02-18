@@ -1,31 +1,31 @@
 Template: # Power name        # Must be unique
-    Name: X                   # Optional. Used for rendering Powers with same name.
-    Type: One of              # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
-    Category: One or list     # One string or list in sub-cat order
-    Mechanic: Descrip         # Rule/effect. Save info added after. No ending periods.
-    Description: Descrip      # Flavor: 1-2 sentences
+    Name: X # Optional. Used for rendering Powers with same name.
+    Type: One of # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
+    Category: One or list # One string or list in sub-cat order
+    Mechanic: Descrip # Rule/effect. Save info added after. No ending periods.
+    Description: Descrip # Flavor: 1-2 sentences
     XP: X
-    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
-    Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
+    PP: X # For multiple, implies 'OR'. Use [A, B] or `-`
+    Prereq: # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
-        Level: X              # Integer
-        Skill: X > 1          #
-        Power:                # Must match unique power name
-    StatOverride:             # One of AGL, STR, Finesse, etc. followed by number
-        Stat: Stat 
-        Value: X     
-    ToHit: X                  # If not specified, assumed character's primary skill
-    Damage: X                 # Integer
-    Range: X                  # Integer of spaces. 0 for self, 1 for melee
-    AOE: Shape X              # Aura, cone, or line followed by integer for size
-    Target: X                 # Integer, # of targets
-    Options: X                # Optional Descrip of options. Replaced by selection.
-    Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
-        DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
-        Type: MOD             # AGL, CON, etc
-        Fail: Descrip         # effect on fail
-        Succeed: Descrip      # effect on success. Assume no access to above
+        Level: X # Integer
+        Skill: X > 1 #
+        Power: # Must match unique power name
+    StatOverride: # One of AGL, STR, Finesse, etc. followed by number
+        Stat: Stat
+        Value: X
+    ToHit: X # If not specified, assumed character's primary skill
+    Damage: X # Integer
+    Range: X # Integer of spaces. 0 for self, 1 for melee
+    AOE: Shape X # Aura, cone, or line followed by integer for size
+    Target: X # Integer, # of targets
+    Options: X # Optional Descrip of options. Replaced by selection.
+    Save: # Separated here, merged in md
+        Trigger: One of # Once, On hit, On starting turn etc. Sentence start.
+        DR: X # If primary skill modifier of actor, none [3-(MOD/2)]
+        Type: MOD # AGL, CON, etc
+        Fail: Descrip # effect on fail
+        Succeed: Descrip # effect on success. Assume no access to above
     Tags: One or list
 
 Attack, Weapon:
@@ -38,17 +38,17 @@ Attack, Weapon:
     Type: Major
     XP: 1
 
-Attack, Weapon 2: 
+Attack, Weapon 2:
     Name: Weapon Attack
-    Category: 
+    Category:
         - Combat
         - Weapon Attacks
-    Description: Your skills are sharpening, just like your weapon. 
-    Mechanic: Your Weapon Attack now deals an additional +1 damage. 
+    Description: Your skills are sharpening, just like your weapon.
+    Mechanic: Your Weapon Attack now deals an additional +1 damage.
     Type: Major
     XP: 2
     Prereq:
-        Skill: 
+        Skill:
             - Finesse > 0
             - Brute > 0
         Power: Attack, Weapon
@@ -102,7 +102,7 @@ Attack, Vengeance:
         Power: Attack, Weapon
         Role: Defender
 
-Attack, Dual-Wield: 
+Attack, Dual-Wield:
     Category:
         - Combat
         - Weapon Attacks
@@ -116,7 +116,7 @@ Attack, Dual-Wield:
             - Finesse > 0
             - Brute > 0
 
-Attack, Dual-Wield Master: 
+Attack, Dual-Wield Master:
     Category:
         - Combat
         - Weapon Attacks
@@ -168,16 +168,16 @@ Attack, Mystic Aura:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic all around you.
-    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s) of you. 
+    Mechanic: You perform your Mystic Attack on all characters within 1 or 2 space(s) of you.
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
         Power: Attack, Mystic
         Role:
             - Caster
             - Support
-    Tags:  Multi-target
+    Tags: Multi-target
 
 Attack, Mystic Amplification:
     Name: Mystic Amplification
@@ -203,7 +203,7 @@ Attack, Mystic Amplification 2:
     XP: 2
     PP: 1
     Prereq:
-        Power: 
+        Power:
             - Attack, Mystic
             - Attack, Mystic Amplification
 
@@ -220,9 +220,11 @@ Attack, Mystic Cone:
         Trigger: Once
         DR: 3
         Type: AGL
-        Fail: Knocked Down, take 1 damage.
+        Fail: Knocked Down, take 2 damage.
+        Success: Take half damage.
     AOE: Cone 3
     Prereq:
+        Level: 3
         Power: Attack, Mystic
         Role: Caster
         Skill:
@@ -235,11 +237,11 @@ Attack, Mystic Confusion:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-    Mechanic: You force 1 to 2 creatures to make a GUT Save. On a failure, those creatures are Stunned. 
+    Mechanic: You force 1 to 2 creatures to make a GUT Save. On a failure, those creatures are Stunned.
     Type: Major
     XP: 2
-    PP: [1,2]
-    Target: [1,2]
+    PP: [1, 2]
+    Target: [1, 2]
     Range: 12
     Save:
         Trigger: Once
@@ -258,7 +260,7 @@ Attack, Mystic Entangle:
         - Combat
         - Mystic Attacks
     Description: You channel your abilities to tie your target in place.
-    Mechanic: Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save. 
+    Mechanic: Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save.
     Type: Major
     XP: 2
     PP: 1
@@ -376,7 +378,7 @@ Heal:
     Mechanic: Heal yourself or another you can see for 1 or 2 Health Points
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
         Role: Support
 
@@ -389,7 +391,7 @@ Heal 2:
     Mechanic: Heal yourself or another you can see for 2 or 3 Health Points
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
         Role: Support
         Power: Heal
@@ -438,8 +440,8 @@ Slow:
     Category:
         - Combat
         - Support
-    Description: You selectively bend time.  
-    Mechanic: Pick a point in space you can see within range. All creatures within Aura 2 must make a STR Save. On a failure, their speed is halved and they are limited to one Action on their next turn. 
+    Description: You selectively bend time.
+    Mechanic: Pick a point in space you can see within range. All creatures within Aura 2 must make a STR Save. On a failure, their speed is halved and they are limited to one Action on their next turn.
     Type: Major
     XP: 2
     PP: 2
@@ -455,12 +457,12 @@ Shield:
         - Combat
         - Support
     Description: Fortify others by summoning magical armor.
-    Mechanic: Add 1 AP to a creature you can see, including yourself. This effect does not stack with other Powers that grant AP. 
+    Mechanic: Add 1 AP to a creature you can see, including yourself. This effect does not stack with other Powers that grant AP.
     XP: 2
     PP: 1
     Range: 6
     Prereq:
-        Role: 
+        Role:
             - Defender
             - Support
 
@@ -468,7 +470,7 @@ Creature Link:
     Category:
         - Companion
     Description: You are able to bond to a Companion who follows you and obeys your commands.
-    Mechanic:  At the end of a Full Rest, you connect with a creature, physical or ephemeral, and take them as a Companion. You can command them as a Minor Action, or inhabit their senses using their Skills and Attributes.
+    Mechanic: At the end of a Full Rest, you connect with a creature, physical or ephemeral, and take them as a Companion. You can command them as a Minor Action, or inhabit their senses using their Skills and Attributes.
     Type: Passive
     XP: 3
     Tags: Companion
@@ -477,7 +479,7 @@ Creature Mastery:
     Category:
         - Companion
     Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.
-    Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier. They now draw their own TC in combat and act independently on their own turn. 
+    Mechanic: Your Companion gains 1 Health Point and +1 to their Primary Skill modifier. They now draw their own TC in combat and act independently on their own turn.
     Type: Passive
     XP: 3
     Prereq:
@@ -514,7 +516,7 @@ Barrier:
     Mechanic: You create an opaque wall 3 or 5 spaces wide and 3 spaces tall. You may dismiss this wall at any time as a Free Action. This wall has 6 Hit Points.
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
         Role:
             - Support
@@ -527,12 +529,12 @@ Illusion:
     Mechanic: You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Detection Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Prereq:
-        Role: 
+        Role:
             - Caster
             - Support
-        Skill: 
+        Skill:
             - Knowledge > 0
             - Craft > 0
 
@@ -549,7 +551,7 @@ Focused:
     Category:
         - Roleplay
     Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
-    Options: Choose one Skill. 
+    Options: Choose one Skill.
     Mechanic: When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
     Type: Passive
     XP: 1
@@ -566,7 +568,7 @@ Cunning:
     Category:
         - Roleplay
     Description: You're sharper than the rest when you take your time.
-    Options: Choose one Skill other than your Primary Skill. 
+    Options: Choose one Skill other than your Primary Skill.
     Mechanic: On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
     Type: Passive
     XP: 1
@@ -587,29 +589,29 @@ Craft Light:
     Category:
         - Magic
     Description: Your skills let you conjure illusory radiance.
-    Mechanic: You can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action. 
+    Mechanic: You can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action.
     Type: Minor
     XP: 1
     Prereq:
-        Role: 
+        Role:
             - Caster
             - Support
         Skill: Craft > 0
 
-Hidden Strike: 
+Hidden Strike:
     Type: Passive
-    Category: 
+    Category:
         - Stealth
-        - Combat  
+        - Combat
     Mechanic: When attacking an enemy that is unaware of your presence or engaged with an ally within 1 space, you draw with Upper Hand. Any attacks that are successful deal +1 damage
-    Description: You move silently in the shadows, and are especially deadly when unseen. 
+    Description: You move silently in the shadows, and are especially deadly when unseen.
     XP: 2
     Prereq:
         Role: Martial
         Level: 2
         Skill: Stealth > 0
     Tags:
-        - Assassin  
+        - Assassin
 
 Stealth in the Shadows:
     Category:
@@ -622,13 +624,13 @@ Stealth in the Shadows:
     Prereq:
         Skill: Stealth > 0
         Level: 2
-    Tags: 
-    - Stealth
-    - Assassin
+    Tags:
+        - Stealth
+        - Assassin
 
-Vanishing Step: 
+Vanishing Step:
     Type: Major
-    Category: 
+    Category:
         - Movement
         - Stealth
     Mechanic: Choose a point you can see within 10 spaces. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
@@ -642,13 +644,13 @@ Vanishing Step:
         Skill: Stealth > 1
         Power: Hidden Strike
     Tags:
-        - Assassin 
+        - Assassin
 
 Summon Creature:
     Type: Major
     Category:
         - Companion
-    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
+    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form.
     Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
     XP: 2
     PP: 2
@@ -656,14 +658,14 @@ Summon Creature:
         Role: Caster
         Level: 2
         Skill: Knowledge > 0
-    Tags:  
+    Tags:
         - Summoner
 
 Phase Swap:
     Type: Minor
     Category:
         - Movement
-    Mechanic: Use half your speed to swap spaces with a Summoned Creature 
+    Mechanic: Use half your speed to swap spaces with a Summoned Creature
     Description: It can often be better to change places with a friendly creature. You'd prefer to be there, or they'd prefer to be here.
     XP: 2
     PP: 1
@@ -673,13 +675,13 @@ Phase Swap:
         Level: 3
         Skill: Knowledge > 1
         Power: Summon Creature
-    Tags:  
+    Tags:
         - Summoner
 
-Life Link: 
+Life Link:
     Type: Passive
-    Category: 
-        - Companion  
+    Category:
+        - Companion
     Mechanic: While you have at least one summoned creature active, when you take damage you can choose to apply that damage to your summoned creature instead.
     Description: Channeling energy between friends can sometimes be mutually beneficial. Other times, it's simply beneficial.
     XP: 2
@@ -688,7 +690,7 @@ Life Link:
         Level: 3
         Skill: Knowledge > 1
         Power: Summon Creature
-    Tags:  
+    Tags:
         - Summoner
 
 Create Potion:
@@ -696,14 +698,14 @@ Create Potion:
     Category:
         - Consumable
     Mechanic: Create a Potion of Healing. After successfully completing a Quick Rest, you can exchange one Rest Card to create a Potion of Healing without expending Power Points. All Potions created last until the end of your next Full Rest.
-    Description: It's always good to have some spare healing on hand. 
+    Description: It's always good to have some spare healing on hand.
     XP: 2
     PP: 1
     Prereq:
         Role: Support
         Level: 2
         Skill: Craft > 0
-    Tags:  
+    Tags:
         - Alchemist
 
 Create Poison:
@@ -711,7 +713,7 @@ Create Poison:
     Category:
         - Consumable
     Mechanic: Create a Poison Bottle. Poison Bottle can be applied to a weapon. For 1 minute, all Weapon Attacks force a DR 2 VIT Save, on a failure they take 1 damage bypassing AP. All Poison Bottles created last until the end of your next Full Rest.
-    Description: It's not wise to get on someone's bad side, especially when they have friends. 
+    Description: It's not wise to get on someone's bad side, especially when they have friends.
     XP: 2
     PP: 1
     Prereq:
@@ -719,22 +721,22 @@ Create Poison:
         Level: 3
         Skill: Craft > 1
         Power: Create Potion
-    Tags:  
+    Tags:
         - Alchemist
 
-Potent Brew: 
+Potent Brew:
     Type: Passive
-    Category: 
+    Category:
         - Consumable
-    Mechanic: When using a Power that creates a consumable, increase the damage healed or dealt by 1. 
-    Description: Sometimes its a matter of skill, other times its a matter of the right ingredients, but often making a potent brew requires both. 
+    Mechanic: When using a Power that creates a consumable, increase the damage healed or dealt by 1.
+    Description: Sometimes its a matter of skill, other times its a matter of the right ingredients, but often making a potent brew requires both.
     XP: 2
     Prereq:
         Role: Support
         Level: 3
         Skill: Craft > 1
         Power: Create Potion
-    Tags:  
+    Tags:
         - Alchemist
 
 Aura of Defensive Damage:
@@ -742,7 +744,7 @@ Aura of Defensive Damage:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When a creature is hit by a melee attack, the attacker takes 1 damage.   
+    Mechanic: Allied creatures within range gain the effects of your Aura. When a creature is hit by a melee attack, the attacker takes 1 damage.
     Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
     XP: 2
     PP: 1
@@ -752,7 +754,7 @@ Aura of Defensive Damage:
         Skill: Brute > 0
     AOE: Aura 6
     Duration: 1 minute
-    Tags:    
+    Tags:
         - Crusader
 
 Aura of Regeneration:
@@ -760,8 +762,8 @@ Aura of Regeneration:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round. 
-    Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all. 
+    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
+    Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all.
     XP: 2
     PP: 2
     AOE: Aura 6
@@ -770,31 +772,31 @@ Aura of Regeneration:
         Level: 2
         Skill: Brute > 1
     Duration: 1 minute
-    Tags:    
+    Tags:
         - Crusader
 
-Staggering Blow: 
+Staggering Blow:
     Type: Major
-    Category: 
+    Category:
         - Combat
     Mechanic: Make a Weapon Attack against a creature
-    Description: Getting something to stay still is just a matter of applying pressure in the right spot. Or hitting that spot really hard. 
+    Description: Getting something to stay still is just a matter of applying pressure in the right spot. Or hitting that spot really hard.
     XP: 2
     PP: 1
     Prereq:
         Role: Defender
         Level: 3
         Skill: Brute > 1
-        Power: 
+        Power:
             - Attack, Weapon
             - Aura of Defensive Damage
     Range: 1
     Target: 1
     Save:
-        Trigger: On a successful hit, 
+        Trigger: On a successful hit,
         Type: VIT
         Fail: they are Stunned
-    Tags: 
+    Tags:
         - Crusader
 
 # Discard: A character is limited to one Discard Power
@@ -837,9 +839,9 @@ Intensify:
 
 # GM NPC, Dealer, and Boss-Only Powers
 
-Condition Resilience: 
+Condition Resilience:
     Type: Passive
-    Category: Resilience 
+    Category: Resilience
     XP: 1
     Prereq:
         Level: 2
@@ -848,9 +850,9 @@ Condition Resilience:
     Options: "Select one of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating"
     Mechanic: If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
 
-Condition Immunity: 
+Condition Immunity:
     Type: Passive
-    Category: Resilience 
+    Category: Resilience
     XP: 3
     Prereq:
         Level: 3
@@ -880,7 +882,7 @@ Favored Terrain:
     XP: 1
     Description: Home feels more familiar, granting a speed boost.
     Options: Work with your GM to decide a favored terrain (e.g., mountains)
-    Mechanic: Gain +2 speed on this terrain. 
+    Mechanic: Gain +2 speed on this terrain.
 
 Terrain Blink:
     Type: Minor
@@ -897,11 +899,11 @@ Undying:
     Type: Passive
     Category:
         - Boss-Only
-    Mechanic: This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect. 
+    Mechanic: This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect.
 
 Undying Vulnerability:
     Type: Vulny
-    Category:  
+    Category:
         - Boss-Only
     Mechanic: When the creature is exposed to this Vulnerability, they take 1 damage. While the creature is at 0 HP, when they are exposed to this Vulnerability they are instead killed. A GM determines the nature of Vulnerability that a creature possesses to trigger this effect, such as exposure to sunlight.
 
@@ -910,14 +912,14 @@ Stunning Glare:
     Category:
         - Boss-Only
     Range: 10
-    Mechanic: Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned. 
+    Mechanic: Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned.
 
 Drain Life:
     Type: Major
     Category:
         - Boss-Only
     AOE: Aura 2
-    Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt. 
+    Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt.
 
 # Boss-Only Adversary Actions
 
@@ -940,7 +942,7 @@ Drain Stamina:
     Category:
         - Boss-Only
         - Adversary Actions
-    Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards. 
+    Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards.
     Aura: 2
 
 Phase Shift:
@@ -948,14 +950,14 @@ Phase Shift:
     Category:
         - Boss-Only
         - Adversary Actions
-    Mechanic: Choose a space within 10 spaces and move there instantly.  
+    Mechanic: Choose a space within 10 spaces and move there instantly.
 
 Shake Enemy:
     Type: Adversary
     Category:
         - Boss-Only
         - Adversary Actions
-    Mechanic: Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.  
+    Mechanic: Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.
 
 # Boss-Only House Actions
 
@@ -975,7 +977,7 @@ Amplify Ally:
         - House Actions
     PP: 0
     Description: Move the chess pieces on your board.
-    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.  
+    Mechanic: Select one ally. They can immediately move up to 4 spaces and take one Action.
 
 Wall Grab:
     Type: House
@@ -984,7 +986,7 @@ Wall Grab:
         - House Actions
     PP: 0
     Description: Even the walls of your House obey you. Hold still!
-    Mechanic: All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.   
+    Mechanic: All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.
 
 Obey Me:
     Type: House
