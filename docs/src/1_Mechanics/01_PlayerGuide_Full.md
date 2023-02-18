@@ -448,9 +448,10 @@ Action available to them, as directed by the creature that caused the condition.
 Another creature may use a Major action to end this effect. This effects ends
 automatically if the target is damaged by the creature that caused the condition.
 
-12. **Invisible** All attacks made by an Invisible creature are drawn at Upper Hand. When
+12. **Invisible** When
 making a Check to detect an Invisible creature, draw with Lower Hand. Unless otherwise
-stated, using a Power ends the Invisible condition.
+stated, using a Power ends the Invisible condition. The attack that ends Invisibility is 
+drawn at Upper Hand.
 
 13. **Grappled** Movement speed is reduced to 0 and a Grappled creature cannot gain
 the benefit of additional speed. They have Lower Hand when using any Power. A
