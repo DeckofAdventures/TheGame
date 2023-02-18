@@ -277,6 +277,28 @@ Attack, Mystic Entangle:
             - Caster
     Tags: Multi-target
 
+Attack, Mystic Deprivation:
+    Category:
+        - Combat
+        - Mystic Attacks
+    Type: Major
+    XP: 2
+    PP: [1, 2]
+    Target: [1, 3]
+    Description: You channel your abilities deprive a target of their senses.
+    Mechanic: Select the Blinded or Deafened effect
+    Save:
+        Trigger: Once
+        DR: 3
+        Type: GUT
+        Fail: Blinded or Deafened unless immune
+    Prereq:
+        Power: Attack, Mystic
+        Role:
+            - Support
+            - Caster
+    Tags: Multi-target
+
 Attack, Mystic Dual-Shot:
     Category:
         - Combat
@@ -920,6 +942,13 @@ Drain Life:
         - Boss-Only
     AOE: Aura 2
     Mechanic: Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt.
+
+Grant Invisibility:
+    Type: Major
+    Category:
+        - Boss-Only
+    Range: 10
+    Mechanic: Target a creature within range. That creature gains the *Invisible* condition.
 
 # Boss-Only Adversary Actions
 
