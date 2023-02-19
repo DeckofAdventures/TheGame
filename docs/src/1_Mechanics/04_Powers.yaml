@@ -1,31 +1,33 @@
-Template: # Power name        # Must be unique
-    Name: X # Optional. Used for rendering Powers with same name.
-    Type: One of # Required. Passive, Vulny, Major, Minor, Adversary, Free, House.
-    Category: One or list # One string or list in sub-cat order
-    Mechanic: Descrip # Rule/effect. Save info added after. No ending periods.
-    Description: Descrip # Flavor: 1-2 sentences
+Template:                     # Power ID, Must be unique
+    Name: Descrip             # Display Name. If none, defaults to ID
+    Type: Required            # Passive, Vulny, Major, Minor, Adversary, Free, House, Channel
+    Category: One or list     # One string or list in sub-cat order
+    Mechanic: Descrip         # Rule/effect. Additional info added later. No ending periods.
+    Description: Descrip      # Flavor: 1-2 sentences. Only for markdown.
     XP: X
-    PP: X # For multiple, implies 'OR'. Use [A, B] or `-`
-    Prereq: # For multiple, implies 'OR'. Use [A, B] or `-`
+    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
+    Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
-        Level: X # Integer
-        Skill: X > 1 #
-        Power: # Must match unique power name
-    StatOverride: # One of AGL, STR, Finesse, etc. followed by number
-        Stat: Stat
-        Value: X
-    ToHit: X # If not specified, assumed character's primary skill
-    Damage: X # Integer
-    Range: X # Integer of spaces. 0 for self, 1 for melee
-    AOE: Shape X # Aura, cone, or line followed by integer for size
-    Target: X # Integer, # of targets
-    Options: X # Optional Descrip of options. Replaced by selection.
-    Save: # Separated here, merged in md
-        Trigger: One of # Once, On hit, On starting turn etc. Sentence start.
-        DR: X # If primary skill modifier of actor, none [3-(MOD/2)]
-        Type: MOD # AGL, CON, etc
-        Fail: Descrip # effect on fail
-        Succeed: Descrip # effect on success. Assume no access to above
+        Level: X              # Integer
+        Skill: X > 1          #
+        Power:                # Must match unique power id
+    StatAdjust:               # If neither 'Add' nor 'Replace', assumed 'Add'
+        Add:                  # For items that add/subtract to/from current value
+            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
+        Replace:              # For items that replace current value
+            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
+    ToHit: X                  # If not specified, assumed character's primary skill
+    Damage: X                 # Integer
+    Range: X                  # Integer of spaces. 0 for self, 1 for melee
+    AOE: Shape X              # Aura, cone, or line followed by integer for size
+    Targets: X                # Integer, # of targets
+    Options: X                # Optional Descrip of options. Replaced by selection.
+    Save:                     # Separated here, merged in md
+        Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
+        DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
+        Type: MOD             # AGL, CON, etc
+        Fail: Descrip         # effect on fail
+        Succeed: Descrip      # effect on success. Assume no access to above
     Tags: One or list
 
 Attack, Weapon:
