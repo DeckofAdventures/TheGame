@@ -374,15 +374,17 @@ others. If an action specifies a skill, this requires a check.
     3. **Major**
 
         - *Rush*: double movement
-        - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be entangled
-        - *Hide*: Stealth vs. target(s) Detection; impose Lower Hand on attacks against
-         you by target(s) who failed
+        - *Grapple*: Brute vs. target Finesse or Brute; cause one creature to be *Grappled*
+        - *Hide*: Stealth vs. target(s) Detection; become *Hidden*
 
  A character can choose to Ready their Major Action to occur on a stated trigger, such
  as "I will make a Weapon Attack when an enemy moves within 1 space of me." If the
  trigger occurs, the readied Major Action can then be activated. If the trigger does not
  occur before the start of the character's next turn, this Major Action is forfeited,
  along with any Power Points used for the Major Action.
+
+ Some Powers specify multiple options that have different Power Point costs. On using a Power,
+ a character must declare the option being used and spend the associated Power Point cost.
 
 #### Ending Combat
 
@@ -445,6 +447,16 @@ DR 3 CON Save. On failure, they must move up to their Speed and/or perform 1 Maj
 Action available to them, as directed by the creature that caused the condition.
 Another creature may use a Major action to end this effect. This effects ends
 automatically if the target is damaged by the creature that caused the condition.
+
+12. **Invisible** When
+making a Check to detect an Invisible creature, draw with Lower Hand. Unless otherwise
+stated, using a Power ends the Invisible condition. The attack that ends Invisibility is 
+drawn at Upper Hand.
+
+13. **Grappled** Movement speed is reduced to 0 and a Grappled creature cannot gain
+the benefit of additional speed. They have Lower Hand when using any Power. A
+creature can end the Grappled condition by making a successful Contested Brute or 
+Finesse Check against target's Brute.
 
 ### Health and Armor
 
@@ -592,9 +604,8 @@ would like to use a different Discard Power instead.
 - Thwart: Discard N cards and cause an enemy within 6 spaces to
   make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn.
 
-- Intensify: Discard no cards. Your next attack is treated as an Epic Event. Discard as
-  many cards as you choose until a Major Success. Standard Successes are treated as
-  Misses. You may choose to end this Epic Event at any time as a failure.
+- Intensify: On your next Attack, discard cards until you reach a Major Success.
+  Standard Successes are treated as Misses. You can choose to end this effect early.
 
 The discard limit increases with level according to the table below.
 
@@ -624,6 +635,17 @@ with the Lower Hand (3). For example...
 
 - A moonless night in the countryside without any light source.
 - Descending into a cave without a light source.
+
+**Hidden:** Upon a successful Stealth check a creature is considered *Hidden* with
+respect to other creatures. Attacks against unaware creatures have Upper Hand, and
+attacks against a Hidden creature have Lower Hand.
+
+Unless otherwise stated, a creature is no longer Hidden whenever another creature makes
+a Successful Detection Check or if the creature:
+
+- Uses a Power
+- Takes Damage
+- Fails a Stealth Check
 
 #### Cover
 
