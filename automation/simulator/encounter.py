@@ -44,7 +44,8 @@ class Encounter(object):
     def _apply_power(
         self, attacker, targets: List[Player], power=None, return_string=False
     ):
-        result_strings = []
+        targets = ensure_list(targets)
+        result_strings = [f"{attacker.Name} used {power.Name}"]
         if not power:
             return
         for _ in range(ensure_list(power.Targets)[0]):

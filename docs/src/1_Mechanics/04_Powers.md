@@ -142,7 +142,7 @@
 **Attack, Mystic Cone**
 
 - Description: You deploy resources to channel your magic in a wide blast in front of you.
-- Mechanic: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down.. For 1 PP, All characters in a Cone 3 are subjected to this effect.
+- Mechanic: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down. For 1 PP, All characters in a Cone 3 are subjected to this effect.
 - XP: 2
 - Prereq Role: Caster
 - Prereq Skill: Knowledge > 1 or Craft > 1

@@ -6,6 +6,10 @@ from typing import Union
 from ..utils import logger
 
 
+all_suits = ("C", "D", "H", "S")
+all_vals = ("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
+
+
 class Card(object):
     """Card class
 
@@ -18,13 +22,25 @@ class Card(object):
         val (str): one of [A, K, Q, J, T] for Ace to Ten. Or 2 to 9.
     """
 
-    def __init__(self, suit, val=None):
+    def __init__(self, suit, val=" "):
         if len(suit) == 2:
             self.suit = suit[0].upper()
             self.val = suit[1].upper()
+        elif val.lower() == "joker":
+            self.suit = suit[0].upper()
+            self.val = "Joker"
         else:
-            self.suit = suit.upper()
-            self.val = val.upper()
+            self.suit = suit[0].upper()
+            self.val = val[0].upper()
+
+        if self.val != "Joker" and (
+            self.suit not in all_suits or self.val not in all_vals
+        ):
+            if suit.lower() != "random":
+                logger.warning(f"Couldn't make card value from input: {suit}, {val}")
+            self.suit = random.choice(all_suits)
+            self.val = random.choice(all_vals)
+
         self._val_to_num = {  # A:1, 2:2, ... T:10
             "A": 1,
             "2": 2,
@@ -115,10 +131,8 @@ class Deck(object):
     def __init__(self, use_TC=True):
         self.cards, self.hand, self.discards = [], [], []
         self._jokers = [Card("B", "Joker"), Card("R", "Joker")]
-        self.suits = ("C", "D", "H", "S")
-        self.vals = ("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
         # "Start" with all discarded. Shuffle assumes only shuffle from discard to cards
-        self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
+        self.discards.extend([Card(s, v) for s in all_suits for v in all_vals])
         self.hand.extend(self._jokers)
         self._use_TC = use_TC
         self.Name = "GM" if not self._use_TC else "Deck"
@@ -191,20 +205,29 @@ class Deck(object):
         kwargs.pop("skill", None)
         return self.check(**kwargs)
 
-    def discard(self, n, **_):
+    def discard(self, n, return_string=False, **_):
         """Draw n cards, return none. Discard/hand as normal"""
+        draws = []
         for _ in range(n):
-            _ = self.draw()
+            draws.append(self.draw())
 
-    def exchange_fate(self):
+        if return_string:
+            return f"Drew {draws}"
+
+    def exchange_fate(self, return_string=False):
         """Move fate card from hand. If Ace, add to discard"""
         if len(self.hand) == 0:
-            logger.warning("No cards available to exchange")
-            return
-        card = self.hand.pop()
-        if card.val == "A":
-            self.discards.append(card)
-        logger.info(f"Exchanged Fate Card: {card}")
+            result = "No cards available to exchange"
+        else:
+            card = self.hand.pop()
+            if card.val == "A":
+                self.discards.append(card)
+            result = f"Exchanged Fate Card: {card}"
+
+        if return_string:
+            return result
+
+        logger.info(result)
 
     def _basic_check(self, TC: Card, DR: int) -> Union[None, int]:
         """Return string corresponding to check 'Hit/Miss/Color/Suit' etc
@@ -242,6 +265,7 @@ class Deck(object):
         upper_lower_int: int = 0,
         draw_all: bool = False,
         return_val: bool = False,
+        return_string: bool = False,
         verbose=True,
     ) -> Union[None, int]:
         """Log string corresponding to check 'Hit/Miss/Color/Suit' etc
@@ -285,10 +309,14 @@ class Deck(object):
             ul_str = f" at Lower Hand {draw_n}"
 
         result = max(results) if upper_lower == "U" else min(results)
-        if verbose:
-            logger.debug(
-                f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
-            )
+        result_string = (
+            f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
+        )
 
-        if return_val:
+        if verbose:
+            logger.debug(result_string)
+
+        if return_string:
+            return result_string, result
+        elif return_val:
             return result

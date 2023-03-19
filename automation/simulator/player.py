@@ -116,7 +116,13 @@ class Player(Deck, Beast):
             kwargs["return_val"] = True
         skill, mod = self._find_highest_stat(skill)
         new_kwargs = self._apply_upper_lower("check", kwargs, skill=skill)
-        result = self.check(TC, DR, mod=mod, **new_kwargs)
+
+        # Need to account for return_string for bot and result for checking result
+        if new_kwargs.get("return_string"):
+            result_string, result = self.check(TC, DR, mod=mod, **new_kwargs)
+        else:
+            result = self.check(TC, DR, mod=mod, **new_kwargs)
+
         if result == 0:
             self.modify_fatigue()
             result = self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
@@ -134,6 +140,8 @@ class Player(Deck, Beast):
                 kwargs.get("draw_n", 1),
             ]
         )
+        if new_kwargs.get("return_string"):
+            return result_string
         return result
 
     def save(self, DR: int = 3, attrib="None", **kwargs):
@@ -145,9 +153,17 @@ class Player(Deck, Beast):
             attrib in self._valid_attribs
         ), f"Could not find {attrib} in {self._valid_attribs}"
         new_kwargs = self._apply_upper_lower("save", kwargs, skill=attrib)
-        result = self.check(
-            TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
-        )
+
+        # Need to account for return_string for bot and result for checking result
+        if new_kwargs.get("return_string"):
+            result_string, result = self.check(
+                TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
+            )
+        else:
+            result = self.check(
+                TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
+            )
+
         if result == 0:
             self.modify_fatigue()
             self.save(DR=DR, attrib=attrib, **kwargs)
@@ -165,7 +181,9 @@ class Player(Deck, Beast):
                 kwargs.get("draw_n", 1),
             ]
         )
-        return result
+
+        if new_kwargs.get("return_string"):
+            return result_string
 
     def full_rest(self, return_string=False, **_):
         rest_log.info(
