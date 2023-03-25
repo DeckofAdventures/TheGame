@@ -88,7 +88,8 @@ Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attribute
 Skills are listed below.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain
 and allow you to add that number to the DR when making a Check.
- These modifiers are determined at Character Creation and can be improved as you Level Up.
+
+These modifiers are determined at Character Creation and can be improved as you Level Up.
 
 **Complete Attribute and Skill List:**
 
@@ -450,12 +451,12 @@ automatically if the target is damaged by the creature that caused the condition
 
 12. **Invisible** When
 making a Check to detect an Invisible creature, draw with Lower Hand. Unless otherwise
-stated, using a Power ends the Invisible condition. The attack that ends Invisibility is 
+stated, using a Power ends the Invisible condition. The attack that ends Invisibility is
 drawn at Upper Hand.
 
 13. **Grappled** Movement speed is reduced to 0 and a Grappled creature cannot gain
 the benefit of additional speed. They have Lower Hand when using any Power. A
-creature can end the Grappled condition by making a successful Contested Brute or 
+creature can end the Grappled condition by making a successful Contested Brute or
 Finesse Check against target's Brute.
 
 ### Health and Armor
