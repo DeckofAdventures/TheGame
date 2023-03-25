@@ -87,8 +87,7 @@ improving that Attribute also increases the effectiveness of a related Skill.
 Athletics is a Strength skill, but Bluffing is a Conviction skill. All Attributes and
 Skills are listed below.
 3. Modifiers reflect a character’s level of expertise given Attribute or Skill domain
-and allow you to add that number to the DR when making a Check.
-
+and allow you to add that number to the Difficulty Range (DR) when making a Check.
 These modifiers are determined at Character Creation and can be improved as you Level Up.
 
 **Complete Attribute and Skill List:**
@@ -218,6 +217,23 @@ Left of 0 is the lower bound, right of 0 is the upper bound.
 |**J** | 5  | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  |
 |**Q** | 6  | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  |
 |**K** | 7  | 8  | 9  | 10 | J  | Q  | K  | A  | 2  | 3  | 4  | 5  | 6  |
+
+#### Effective Difficulty Range and Negative DRs
+
+Effective Difficulty Range is the DR plus the corresponding Modifier of a specific check.
+This helps players understand whether a check is possible to complete or not. A Check can
+only be attempted if the Effective DR is -2 or higher. A -1 Effective DR requires a Color
+Major Success, while a -2 Effective DR requires a Suited Major Success (a Critical Success).
+
+During an adventure, there will be tasks of varying degrees of difficulty. As
+characters grow in level their skill modifiers increase and tasks previously considered
+challenging are made easier. Higher level characters will be faced with more difficult
+challenges than they faced before, and the corresponding Difficulty Range will change to
+reflect the degree of difficulty. The lowest DR a GM can set is -6, and the highest DR a
+GM can set is +6. Higher level characters will have high enough modifiers that certain
+checks set at a negative DR will still have positive Effective DRs, while other characters
+with negative modifiers may find the Effective DR of certain checks outside the scope of
+being able to attempt.
 
 #### Degrees of Success
 
