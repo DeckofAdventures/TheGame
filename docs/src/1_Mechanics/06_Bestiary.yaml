@@ -382,3 +382,54 @@ Necromancer:
     - Wall Grab
     - Amplify Ally
   Description: A master of death, typically in command of a horde of undead minions. 
+
+Spider Queen: 
+  Type: Boss
+  HP: 11
+  AR: 2
+  PP: 6
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Summon Ally
+    - Amplify Ally 
+    - Shake Enemy
+    - Favored Terrain 
+    - Manifest Terrain
+    - Condition Immunity, Poisoned
+    - Condition Resilience, Blinded
+    - Terrain Blink
+    - Conjure Terrain 
+    - Adversary Major Action
+    - Shake Enemy
+    - Wall Grab
+    - Obey Me
+  Description: A queen of her minions, trusted and obeyed without question.
+
+Scorpion Beast: 
+  Type: Boss
+  HP: 8
+  AP: 2
+  AR: 2
+  PP: 4
+  Attribs:
+    AGL: 1
+    CON: 0
+    INT: -1
+    GUT: 1
+    STR: 2
+    VIT: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Sweep
+    - Attack, Dual-Wield Master
+    - Momentum Aura
+    - Staggering Blow
+  Description: A fierce beast capable of intense violence and destruction.
