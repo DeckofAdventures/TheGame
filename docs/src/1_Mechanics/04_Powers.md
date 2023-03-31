@@ -118,7 +118,7 @@
 **Attack, Mystic**
 
 - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
-- Mechanic: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- Mechanic: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - XP: 1
 - Prereq Skill: Knowledge > 0 or Craft > 0
 
@@ -304,7 +304,7 @@
 **Attack, Weapon**
 
 - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-- Mechanic: Major. As a Major Action in combat, you make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- Mechanic: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - XP: 1
 - Prereq Skill: Finesse > 0 or Brute > 0
 

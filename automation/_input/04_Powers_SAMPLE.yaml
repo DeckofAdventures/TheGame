@@ -1,146 +1,31 @@
-Dumb:
-    Type: Vulny
-    Category: Roleplay
-    StatAdjust:
-        Add:
-            INT: -2
-            AP: 1
-        Replace:
-            AGL: 5
-            PP: 0
-    Description: You're dumb as rocks. We're sure you make up for it in other areas.
-    XP: -2
+Destructive Beam:
+  Type: Major
+  Category: Magic
+  Mechanic: A beam of energy erupts from the source. All creatures within a Line 12 must make an AGL Save
+  Description: Channel destructive energy into a massive beam that causes great damage.
+  XP: 2
+  PP: 2
+  Prereq:
+    Role: Caster
+    Level: 3
+    Skill: Knowledge > 1
+  Damage: 2
+  AOE: Line 12
+  Save:
+    Trigger: Once
+    Type: AGL
+    Fail: take 2 damage
+    Succeed: take 1 damage
 
-Sear:
-    Type: Minor
-    Category: Status Effect
-    Damage: 0
-    StatAdjust:
-        INT: -2
-    Save:
-        Trigger: On starting turn
-        DR: 1
-        Type: INT
-        Fail: Burned
-
-Gas:
-    Type: Minor
-    Category: Status Effect
-    Damage: 0
-    Save:
-        Trigger: On starting turn
-        DR: 1
-        Type: INT
-        Fail: Poisoned
-
-Drown:
-    Type: Minor
-    Category: Status Effect
-    Damage: 0
-    Save:
-        Trigger: On starting turn
-        DR: 1
-        Type: INT
-        Fail: Suffocating
-
-Attack, Weapon:
-    Category:
-        - Combat
-        - Weapon Attacks
-    Type: Major
-    Mechanic: You make a check to attack an Enemy. This may be performed while under the effects of another Power
-    XP: 1
-    Prereq:
-        Skill:
-            - Finesse > 0
-            - Brute > 0
-    Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-    Tags: Attack
-
-Attack, Charge:
-    Category:
-        - Combat
-        - Weapon Attacks
-        - Example Third
-    Type: Major
-    Mechanic: You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
-    XP: 2
-    PP: [1, 2]
-    Damage: [2, 3]
-    Prereq:
-        Power: Attack, Weapon
-        Level: 3
-        Role:
-            - Defender
-            - Martial
-    Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-    Tags: Attack
-
-Sweep:
-    Category: Combat
-    Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: Perform your Weapon Attack on multiple contiguous characters within 1 space
-    Type: Major
-    XP: 2
-    PP: 2
-    Targets: 2
-    Prereq:
-        Power: Attack, Weapon
-        Role:
-            - Martial
-            - Defender
-        Level: 2
-        Skill:
-            - Finesse > 0
-            - Brute > 0
-    Save:
-        Trigger: For 2 PP, on a hit
-        DR: 3
-        Type: AGL
-        Fail: Knocked Down
-    Tags: Attack
-
-
-Shield, Self:
-    Category:
-        - Combat
-        - Support
-    Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-    Mechanic: Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
-    Type: Minor
-    XP: 2
-    PP: [1,2]
-    Damage: 0
-    Prereq:
-        Role: Defender
-
-Momentum: # Without this power, this should cost a major action.
-    Category:
-        - Combat
-    Description: By brute strength, force others to move around the battlefield.
-    Mechanic: As part of your movement, you attempt to move a character who is within 1 space of you
-    Type: Passive
-    XP: 1
-    Save:
-        Trigger: If unwilling
-        Type: [STR, AGL]
-        Fail: be moved to 1 space of attacker's end position
-    Prereq:
-        Role: Defender
-        Skill: Brute > 1
-
-Cunning:
-    Category:
-        - Roleplay
-    Description: You're sharper than the rest when you take your time.
-    Mechanic: Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills
-    Type: Passive
-    XP: 1
-    Tags:
-
-Multi-Attack 2:
-    Type: Major
-    Category: Boss-Only
-    PP: 0
-    Targets: 2
-    Mechanic: Make 2 attacks as a Major Action
+Distracting Call:
+  Type: Major
+  Category: Magic
+  Mechanic: Generate a distracting sound that causes all creatures within Aura 6 to make a GUT Save. On a failure, they draw all Checks at Lower Hand for 1 round.
+  Description: Keep them distracted by any means necessary.
+  XP: 2
+  PP: 2
+  AOE: Aura 6
+  Save:
+    Trigger: Once
+    Type: GUT
+    Fail: draw all Checks at Lower hand for 1 round

@@ -31,163 +31,53 @@ Template:               # must be unique
       Allies: X         # List of who appears. If multiple of same, list multiple times
   Description: Descrip  # Full descriptive text
 
-# Clubs1:
-#   Name: Clubs
-#   Type: PC
-#   Pronouns: "He/Him"
-#   Role: Defender
-#   Level: 1
-#   Primary_Skill: Brute
-#   HP: 7
-#   AP: 2
-#   Attribs:
-#     AGL: 1
-#     GUT: 1
-#     INT: -1
-#     STR: 1
-#     VIT: 1
-#   Skills:
-#     Finesse: 1
-#     Stealth: 1
-#     Knowledge: -1
-#     Investigation: -1
-#     Athletics: 1
-#     Brute: 1
-#   Powers:
-#     - Attack, Weapon
-#     - Attack, Charge
-#     # - Shield, Self
-#     - Attack, Dual-Wield
-#     - Momentum
-#     - Dumb
-#     - Sweep
-#     - Drown
-
 Spider Queen:
   Type: Boss
-  Level: 2
-  Primary_Skill: Finesse
-  HP: 8
-  AP: 2
+  HP: 11
   AR: 2
-  Speed: 6
+  PP: 6
   Attribs:
-    AGL: 1
+    AGL: -1
     CON: 2
+    INT: 2
     GUT: 2
-    INT: 1
-    STR: 0
-    VIT: 1
-  Skills: # Added to test out code fed sparse data, remove later
-    Finesse: 1
-    Bluffing: 2
-  Phases:
-    One:
-      HP: 2
-      Allies:
-        - Grunt
-    Two:
-      HP: 3
-      Allies:
-        - Grunt
-        - Grunt, Shielded
-  Powers:
-    # - Adversary Major Action
-    # - Amplify Ally
-    - Attack, Mystic
-    # - Attack, Mystic Aura
-    - Multi-Attack 2
-    - Attack, Mystic Entangle
-    - Barrier
-    - Condition Immunity: Poisoned
-    - Dumb
-    - Eye for an Eye
-    - Sear
-    - Favored Terrain: Web
-    # - Lend Distraction
-    # - Lend Vigor
-    # - Manifest Terrain: Web
-    - Obey Me
-    # - Shield, Others
-    # - Terrain Blink: Web
-
-Grunt:
-  Type: NPC
-  HP: 2
-  AR: 3
-  Attribs:
-    AGL: 1
-    INT: -1
-  Powers:
-    - Attack, Weapon
-  Level: 1
-  Description: A low level soldier.
-
-Grunt, Shielded:
-  Type: NPC
-  HP: 2
-  AR: 2
-  AP: 1
-  Attribs:
-    STR: 1
-    INT: -1
-  Powers:
-    - Attack, Weapon
-    - Shield, Self
-  Level: 1
-  Description: A low level soldier with a Shield.
-
-Guard:
-  Type: NPC
-  HP: 3
-  AR: 2
-  AP: 1
-  Attribs:
-    STR: 1
-    VIT: 1
-  Powers:
-    - Attack, Weapon
-    - Shield, Self
-    - Attack, Sweep
-    - Momentum
-  Level: 2
-  Description: A decently armored and trained soldier.
-
-Defender Captain:
-  Type: Dealer
-  Level: 3
-  HP: 5
-  AR: 2
-  AP: 2
-  Attribs:
-    AGL: 1
-    STR: 1
-    VIT: 1
-    CON: 1
-    INT: 1
-    GUT: 1
-  Powers:
-    - Attack, Weapon
-    - Shield, Self
-    - Attack, Sweep
-    - Attack, Charge
-    - Momentum Aura
-  Description: A Captain with access to Powers.
-
-Mystic Caster:
-  Type: Dealer
-  Level: 3
-  HP: 5
-  AR: 3
-  AP: 0
-  Attribs:
-    CON: 1
-    INT: 1
     STR: -1
+    VIT: 1
   Powers:
     - Attack, Mystic
     - Attack, Mystic Aura
-    - Attack, Mystic Cone
-    - Attack, Mystic Confusion
-    - Attack, Mystic Entangle
-  Description: A powerful Caster with access to mystic attacks.
+    - Summon Ally
+    - Amplify Ally
+    - Shake Enemy
+    - Favored Terrain
+    - Manifest Terrain
+    - Condition Immunity, Poisoned
+    - Condition Resilience, Blinded
+    - Terrain Blink
+    - Conjure Terrain
+    - Adversary Major Action
+    - Shake Enemy
+    - Wall Grab
+    - Obey Me
+  Description: A queen of her minions, trusted and obeyed without question.
+
+Scorpion Beast:
+  Type: Boss
+  HP: 8
+  AP: 2
+  AR: 2
+  PP: 4
+  Attribs:
+    AGL: 1
+    CON: 0
+    INT: -1
+    GUT: 1
+    STR: 2
+    VIT: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Sweep
+    - Attack, Dual-Wield Master
+    - Momentum Aura
+    - Staggering Blow
+  Description: A fierce beast capable of intense violence and destruction.

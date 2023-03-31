@@ -463,7 +463,6 @@ Crusader2:
   Skills:
     Finesse: 1
     Stealth: 1
-    Detection: 1
     Athletics: 2
     Brute: 2
   Powers:
@@ -496,7 +495,6 @@ Crusader3:
   Skills:
     Finesse: 1
     Stealth: 1
-    Detection: 1
     Athletics: 2
     Brute: 2
   Powers:

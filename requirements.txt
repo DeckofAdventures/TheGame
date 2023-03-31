@@ -7,3 +7,4 @@ notebook # Running notebooks
 pre-commit # Checking files before commits
 pydot # Generating graphviz objects
 pyyaml # Importing yml
+python-dotenv # Loading .env viles

@@ -100,14 +100,19 @@ class Use:
         if self.Limit and self.Limit.isnumeric():
             self.Limit += "times"
         if self.Power:
-            if isinstance(self.Power, list):
-                power_name, choice = next(iter(self.Power[0].items()))
+            # Handles multiple powers listed, without choices
+            if isinstance(self.Power, list) and not isinstance(self.Power[0], dict):
+                self.Power = "Choose the effects of " + list_to_or(self.Power)
+                choice = None  # no full power mechanic
             else:
-                power_name, choice = self.Power, None
+                if isinstance(self.Power, list):  # handles 1 Power: choice
+                    power_name, choice = next(iter(self.Power[0].items()))
+                else:  # handles 1 Power
+                    power_name, choice = self.Power, None
 
-            self.PowerFull = all_powers[power_name].set_choice(choice)
-            self.Power = self.PowerFull.Name
-            self.PowerMechanic = self.PowerFull._mechanic_for_item
+                self.PowerFull = all_powers[power_name].set_choice(choice)
+                self.Power = self.PowerFull.Name
+                self.PowerMechanic = self.PowerFull._mechanic_for_item
         if self.Effect and self.Power:
             logger.warning(
                 f"Use expected effect or power, not both: {self.Effect}, {power_name}"
@@ -133,9 +138,9 @@ class Use:
         output = f"Up to {self.Limit}, " if self.Limit else ""
         output += f"take {self.Time} to activate. " if self.Time else ""
         output = output.capitalize()
-        output += self.PowerMechanic or self.Effect
+        output += self.PowerMechanic or self.Effect or self.Power
         output += "." if output[-1] != "." else ""
-        output += f" Lasts {self.Duration}."
+        output += f" Lasts {self.Duration}." if self.Duration else ""
         return output
 
     def __repr__(self) -> str:

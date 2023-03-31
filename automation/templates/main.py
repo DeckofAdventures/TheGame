@@ -9,10 +9,11 @@ def yaml_to_other(
         "04_Powers.yaml",
         "05_Vulnerabilities.yaml",
         "06_Bestiary.yaml",
-        # "07_Items.yaml",
+        "07_Items.yaml",
     ],
     writing: list = ["md", "csv", "png"],
     out_delim: str = "\t",  # or ','
+    run_samples=False,
 ):
     """Execute all write functions based on inputs at top of script
 
@@ -23,6 +24,9 @@ def yaml_to_other(
         out_delim (str, optional): CSV delimiter - `\t` or `,`
     """
     for file in input_files:
+        if run_samples and "Vuln" not in file:
+            file = file.split(".")[0] + "_SAMPLE.yaml"
+
         logger.info(f"Started {file}")
 
         if "best" in file.lower() or "pc" in file.lower():

@@ -21,7 +21,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Bear
 
@@ -41,7 +41,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Wolf
 
@@ -61,7 +61,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 #### Minor
 
@@ -85,7 +85,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Horse
 
@@ -105,7 +105,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 #### Minor
 
@@ -156,7 +156,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
 - **Attack, Charge**: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
 - **Momentum Aura**: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position..
@@ -183,9 +183,9 @@
 
 #### Major
 
-- **Attack, Mystic**: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- **Attack, Mystic**: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Mystic Aura**: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)
-- **Attack, Mystic Cone**: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down.. For 1 PP, All characters in a Cone 3 are subjected to this effect.
+- **Attack, Mystic Cone**: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down. For 1 PP, All characters in a Cone 3 are subjected to this effect.
 - **Attack, Mystic Confusion**: Major. For 1 or 2 PP, You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
 - **Attack, Mystic Entangle**: Major. For 1 or 2 PP, Selected targets make a Save. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled.
 
@@ -211,7 +211,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
 - **Attack, Charge**: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
 - **Attack, Disarm**: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield
@@ -234,7 +234,7 @@
 
 #### Major
 
-- **Attack, Mystic**: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- **Attack, Mystic**: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Mystic Aura**: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)
 - **Heal**: Major. For 1 or 2 PP, Heal yourself or another you can see for 1 or 3 Health Points
 - **Lend Vigor**: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
@@ -266,7 +266,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 #### Minor
 
@@ -290,7 +290,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 #### Minor
 
@@ -314,7 +314,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Vine Golem
 
@@ -334,11 +334,11 @@
 
 #### Passive
 
-- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position.
+- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) are moved to 1 space of attacker's end position.
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Poison Plant
 
@@ -358,7 +358,7 @@
 
 #### Major
 
-- **Attack, Mystic**: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- **Attack, Mystic**: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Mystic Aura**: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)
 
 ## Grunt
@@ -379,7 +379,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 ## Grunt, Shielded
 
@@ -399,7 +399,7 @@
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 
 #### Minor
 
@@ -423,11 +423,11 @@
 
 #### Passive
 
-- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position.
+- **Momentum**: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) are moved to 1 space of attacker's end position.
 
 #### Major
 
-- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power
+- **Attack, Weapon**: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Sweep**: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
 
 #### Minor
@@ -452,6 +452,6 @@
 
 #### Major
 
-- **Attack, Mystic**: Major. As a Major Action in combat, you can make a check to attack an Enemy. This may be performed while under the effects of another Power.
+- **Attack, Mystic**: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - **Attack, Mystic Aura**: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)
 - **Slow**: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature
