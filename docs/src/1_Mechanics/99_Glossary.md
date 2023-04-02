@@ -63,3 +63,5 @@
   inhibit a Dealer in some way, either combat- or roleplay-based.
 - [XP, Experience Points](03_CharacterCreation#using-experience-points-xp): Resource for
   building a character awarded on leveling up.
+- [Hidden](01_PlayerGuide_Full.md#light-and-vision): A property of a creature that is
+  unseen or undetected.
