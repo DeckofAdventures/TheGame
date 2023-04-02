@@ -1,0 +1,32 @@
+Mystic Bulwark:
+  Type: Shield
+  Rarity: Rare
+  Cost: 1,000 gp
+  Use:
+    Time: Major Action
+    Limit: 2 times per rest
+    Power: Shield, Self
+  StatAdjust:
+    Add:
+      AR: -1
+
+Wand of Flame:
+  Type: Weapon
+  Cost: 500 gp
+  Rarity: Rare
+  Use:
+    Time: Major Action
+    Limit: 3 times per day
+    Power:
+      - Attack, Mystic Cone
+      - Attack, Mystic Aura
+      - Attack, Mystic 
+  StatAdjust:
+    Add:
+      Craft: 1
+    Replace:
+      STR: 0
+  Damage: 2
+  Range: 12
+  AOE: Aura 2
+  Tags: ["2-handed", "Other Tag"]

@@ -13,7 +13,7 @@ def split_pdf(
     pdf_path: Path = Path(glob("./automation/_input/*PremadeSheet*pdf")[0]),
     out_folder: Path = Path("../docs/src/1_Mechanics/PremadeCharacters/"),
 ):
-    """Splits PDF for premades into individual pngs: Premade_{Role}_Level{#}.png
+    """Splits PDF for premades into individual png files: Premade_{Role}_Level{#}.png
 
     Args:
         dry_run (bool, optional): If true (default), just logs filename as info.

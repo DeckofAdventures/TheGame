@@ -38,13 +38,13 @@ with creativity fueled by the wide array of choices.
 
 ## Design Axioms
 
-Though itterative design, developers have landed on the following as touchstones.
+Though iterative design, developers have landed on the following as touchstones.
 
 1. **Pip value is contextual.** The number on the card has no inherent value. There's
 nothing good or bad about a `2` or a `King`, a `Spade` or a `Club`. The randomized
 context determines how good the outcome is.
 
-2. **PP = HP = AP.** During rests, players decide which of these reources to replenish.
+2. **PP = HP = AP.** During rests, players decide which of these resources to replenish.
 Characters may have different maximum, but expending one should feel roughly equivalent
 to the others.
 

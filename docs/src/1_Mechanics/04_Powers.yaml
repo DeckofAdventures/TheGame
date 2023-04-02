@@ -36,7 +36,7 @@ Attack, Weapon:
         - Combat
         - Weapon Attacks
     Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
-    Mechanic: Attack an Enemy within the Range of your weapon, dealing damage according to the weapon used. This may be performed while under the effects of another Power.
+    Mechanic: You make a check to attack an Enemy. This may be performed while under the effects of another Power.
     Type: Major
     XP: 1
 
@@ -76,7 +76,7 @@ Attack, Sweep:
         - Combat
         - Weapon Attacks
     Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-    Mechanic: You perform your Weapon Attack on multiple contiguous characters within 1 space.
+    Mechanic: You perform you Weapon Attack on multiple contiguous characters within 1 space
     Save:
         Trigger: For 2 PP, on a hit
         DR: 3
@@ -138,8 +138,8 @@ Attack, Mystic:
     Category:
         - Combat
         - Mystic Attacks
-    Description: You've been trained in some form of Magic or Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
-    Mechanic: Attack an Enemy. This may be performed while under the effects of another Power.
+    Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
+    Mechanic: You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
     Type: Major
     XP: 1
     Damage: 1
@@ -214,7 +214,8 @@ Attack, Mystic Cone:
         - Combat
         - Mystic Attacks
     Description: You deploy resources to channel your magic in a wide blast in front of you.
-    Mechanic: You force the creatures within a Cone 3 to make an AGL Save. On a failure, those creatures take 1 damage and are Knocked Down.
+    Options: Mystic Attack or DR 3 CON Save to avoid being Knocked Down
+    Mechanic: All characters in a Cone 3 are subjected to this effect.
     Type: Major
     XP: 2
     PP: 2
@@ -265,8 +266,9 @@ Attack, Mystic Entangle:
     Mechanic: Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save.
     Type: Major
     XP: 2
-    PP: 1
-    Range: 12
+    PP: [1,2]
+    Targets: [1,3]
+    Mechanic: Selected targets make a Save
     Save:
         Trigger: Once
         DR: 3
@@ -285,8 +287,8 @@ Attack, Mystic Deprivation:
         - Mystic Attacks
     Type: Major
     XP: 2
-    PP: [1, 2]
-    Target: [1, 3]
+    PP: [1,2]
+    Targets: [1, 3]
     Description: You channel your abilities deprive a target of their senses.
     Mechanic: Select the Blinded or Deafened effect
     Save:
@@ -367,8 +369,8 @@ Momentum Aura:
     Type: Major
     XP: 1
     PP: 1
-    Target: 6
-    Mechanic: As part of your movement, you attempt to move all creatures within 1 space of you to your end location.
+    Targets: 6
+    Mechanic: Your Momentum ability extends to 2 spaces.
     Save:
         Trigger: If unwilling
         Type:
@@ -779,7 +781,7 @@ Summon Creature:
     Type: Major
     Category:
         - Companion
-    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form.
+    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
     Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
     XP: 2
     PP: 2
@@ -787,6 +789,7 @@ Summon Creature:
         Role: Caster
         Level: 2
         Skill: Knowledge > 0
+    Tags:
     Tags:
         - Summoner
 
@@ -920,7 +923,7 @@ Staggering Blow:
             - Attack, Weapon
             - Aura of Defensive Damage
     Range: 1
-    Target: 1
+    Targets: 1
     Save:
         Trigger: On a successful hit,
         Type: VIT

@@ -1,0 +1,10 @@
+black # Code formatting
+csv_logger # Logging data to CSV
+html2image # Generating images from html
+jupyter # Running notebooks
+jupytext # For syncing notebooks with py_scripts
+notebook # Running notebooks
+pre-commit # Checking files before commits
+pydot # Generating graphviz objects
+pyyaml # Importing yml
+python-dotenv # Loading .env viles

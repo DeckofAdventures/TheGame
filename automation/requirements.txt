@@ -1,6 +1,0 @@
-black # Code formatting
-html2image # Generating images from html
-pdf2image # Splitting pdfs
-pre-commit # Checking files before commits
-pydot # Generating graphviz objects
-pyyaml # Importing yml

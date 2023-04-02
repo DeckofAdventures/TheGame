@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automation"
+authors = [{name = "Chris Broz", email = "broz@DeckOfAdventures.com"}]
+description = "ADD LATER"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["ADD", "LATER"]
+license = {text = "CC BY-NC-SA 4.0"}
+classifiers = ["Programming Language :: Python :: 3"]
+version = "1.0.0a5"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+pdf = ["pdf2image"]
+
+[project.urls]
+homepage = "https://deckofadventures.github.io/TheGame"
+# documentation = "https://readthedocs.org"
+
+[project.scripts]
+yaml-to-other = "automation.templates.main:yaml_to_other"
+
+[tool.black]
+line-length = 88
+target-version = 'py39'
+
+[tool.isort]
+line_length = 88
+profile = 'black'
+
+[tool.setuptools]
+py-modules = ["automation"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
