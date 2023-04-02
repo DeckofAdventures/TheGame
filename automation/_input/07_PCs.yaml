@@ -4,7 +4,6 @@ Template:               # must be unique
   HP: X                 # Required field
   AP: X                 # 0 is default if blank
   AR: X                 # Required field
-  PP: X                 # Required field
   Speed: X              # Optional, default 6
   Attribs:              # List only Non-zero
     AGL: ±X             # + is implied if not explicit
@@ -40,7 +39,6 @@ Clubs1:
   Primary_Skill: STR
   HP: 6
   AP: 2
-  PP: 2
   AR: 2
   Speed: 6
   Attribs:
@@ -71,7 +69,6 @@ Clubs2:
   Primary_Skill: STR
   HP: 7
   AP: 2
-  PP: 3
   AR: 2
   Speed: 6
   Attribs:
@@ -103,7 +100,6 @@ Clubs3:
   Primary_Skill: STR
   HP: 8
   AP: 2
-  PP: 5
   AR: 2
   Speed: 6
   Attribs:
@@ -136,7 +132,6 @@ Diamonds1:
   Primary_Skill: INT
   HP: 6
   AP: 0
-  PP: 3
   AR: 3
   Speed: 4
   Attribs:
@@ -168,7 +163,6 @@ Diamonds2:
   Primary_Skill: INT
   HP: 7
   AP: 0
-  PP: 4
   AR: 3
   Speed: 4
   Attribs:
@@ -201,7 +195,6 @@ Diamonds3:
   Primary_Skill: INT
   HP: 8
   AP: 0
-  PP: 6
   AR: 3
   Speed: 4
   Attribs:
@@ -235,7 +228,6 @@ Hearts1:
   Primary_Skill: GUT
   HP: 4
   AP: 0
-  PP: 6
   AR: 3
   Speed: 6
   Attribs:
@@ -269,7 +261,6 @@ Hearts2:
   Primary_Skill: GUT
   HP: 6
   AP: 0
-  PP: 6
   AR: 3
   Speed: 6
   Attribs:
@@ -301,7 +292,6 @@ Hearts3:
   Primary_Skill: GUT
   HP: 7
   AP: 0
-  PP: 8
   AR: 3
   Speed: 6
   Attribs:
@@ -334,7 +324,6 @@ Spades1:
   Primary_Skill: AGL
   HP: 5
   AP: 0
-  PP: 4
   AR: 2
   Speed: 6
   Attribs:
@@ -366,7 +355,6 @@ Spades2:
   Primary_Skill: AGL
   HP: 7
   AP: 0
-  PP: 4
   AR: 2
   Speed: 6
   Attribs:
@@ -399,7 +387,6 @@ Spades3:
   Primary_Skill: AGL
   HP: 8
   AP: 0
-  PP: 4
   AR: 2
   Speed: 6
   Attribs:
@@ -434,7 +421,6 @@ Crusader1:
   Primary_Skill: STR
   HP: 6
   AP: 2
-  PP: 2
   AR: 2
   Speed: 6
   Attribs:
@@ -465,7 +451,6 @@ Crusader2:
   Primary_Skill: STR
   HP: 7
   AP: 2
-  PP: 3
   AR: 2
   Speed: 6
   Attribs:
@@ -478,7 +463,6 @@ Crusader2:
   Skills:
     Finesse: 1
     Stealth: 1
-    Detection: 1
     Athletics: 2
     Brute: 2
   Powers:
@@ -499,7 +483,6 @@ Crusader3:
   Primary_Skill: STR
   HP: 8
   AP: 2
-  PP: 6
   AR: 2
   Speed: 6
   Attribs:
@@ -512,7 +495,6 @@ Crusader3:
   Skills:
     Finesse: 1
     Stealth: 1
-    Detection: 1
     Athletics: 2
     Brute: 2
   Powers:
@@ -534,7 +516,6 @@ Summoner1:
   Primary_Skill: INT
   HP: 6
   AP: 0
-  PP: 3
   AR: 3
   Speed: 6
   Attribs:
@@ -566,7 +547,6 @@ Summoner2:
   Primary_Skill: INT
   HP: 7
   AP: 0
-  PP: 5
   AR: 3
   Speed: 6
   Attribs:
@@ -599,7 +579,6 @@ Summoner3:
   Primary_Skill: INT
   HP: 8
   AP: 0
-  PP: 5
   AR: 3
   Speed: 6
   Attribs:
@@ -634,7 +613,6 @@ Alchemist1:
   Primary_Skill: GUT
   HP: 5
   AP: 0
-  PP: 2
   AR: 3
   Speed: 6
   Attribs:
@@ -665,7 +643,6 @@ Alchemist2:
   Primary_Skill: GUT
   HP: 6
   AP: 0
-  PP: 4
   AR: 3
   Speed: 6
   Attribs:
@@ -697,7 +674,6 @@ Alchemist3:
   Primary_Skill: GUT
   HP: 7
   AP: 0
-  PP: 6
   AR: 3
   Speed: 6
   Attribs:
@@ -731,7 +707,6 @@ Assassin1:
   Primary_Skill: AGL
   HP: 5
   AP: 0
-  PP: 2
   AR: 2
   Speed: 6
   Attribs:
@@ -763,7 +738,6 @@ Assassin2:
   Primary_Skill: AGL
   HP: 6
   AP: 0
-  PP: 3
   AR: 2
   Speed: 6
   Attribs:
@@ -797,7 +771,6 @@ Assassin3:
   Primary_Skill: AGL
   HP: 7
   AP: 0
-  PP: 5
   AR: 2
   Speed: 6
   Attribs:

@@ -1,15 +1,20 @@
 # Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
+from typing import Union
 
-from ..utils.logger import logger
+from ..utils import logger
+
+
+all_suits = ("C", "D", "H", "S")
+all_vals = ("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
 
 
 class Card(object):
     """Card class
 
     Example use:
-        from automation.simulaiton.deck import Card
+        from automation.simulation.deck import Card
         Card("SA") OR Card("S","A")
 
     Attributes:
@@ -17,13 +22,25 @@ class Card(object):
         val (str): one of [A, K, Q, J, T] for Ace to Ten. Or 2 to 9.
     """
 
-    def __init__(self, suit, val=None):
+    def __init__(self, suit, val=" "):
         if len(suit) == 2:
             self.suit = suit[0].upper()
             self.val = suit[1].upper()
+        elif val.lower() == "joker":
+            self.suit = suit[0].upper()
+            self.val = "Joker"
         else:
-            self.suit = suit.upper()
-            self.val = val.upper()
+            self.suit = suit[0].upper()
+            self.val = val[0].upper()
+
+        if self.val != "Joker" and (
+            self.suit not in all_suits or self.val not in all_vals
+        ):
+            if suit.lower() != "random":
+                logger.warning(f"Couldn't make card value from input: {suit}, {val}")
+            self.suit = random.choice(all_suits)
+            self.val = random.choice(all_vals)
+
         self._val_to_num = {  # A:1, 2:2, ... T:10
             "A": 1,
             "2": 2,
@@ -86,10 +103,10 @@ class Card(object):
         """Returns unique value to represent card"""
         return hash((self.suit, self.val))
 
-    def range(self, TR: int):
-        """Returns list of cards in a TR range"""
-        TR = abs(TR)
-        return [self + diff for diff in range(-TR, TR + 1)]
+    def range(self, DR: int):
+        """Returns list of cards in a DR"""
+        DR = abs(DR)
+        return [self + diff for diff in range(-DR, DR + 1)]
 
 
 class Deck(object):
@@ -99,9 +116,9 @@ class Deck(object):
         from automation.simulation.deck import Deck
         d=Deck()
         d.draw()
-        > A♦️
-        d.check(TC=Card("S","A"),TR=3)
-        > [INFO]: Drew ♦️ 8 vs ♠️ A with TR 3: Miss
+        > ♦️ A
+        d.check(TC=Card("S","A"),DR=3)
+        > [INFO]: Drew ♦️ 8 vs ♠️ A with DR 3: Miss
 
     Attributes:
         suits (tuple): all suits in deck
@@ -111,21 +128,36 @@ class Deck(object):
         hand (list): jokers and fate cards in hand
     """
 
-    def __init__(self):
+    def __init__(self, use_TC=True):
         self.cards, self.hand, self.discards = [], [], []
         self._jokers = [Card("B", "Joker"), Card("R", "Joker")]
-        self.suits = ("C", "D", "H", "S")
-        self.vals = ("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
         # "Start" with all discarded. Shuffle assumes only shuffle from discard to cards
-        self.discards.extend([Card(s, v) for s in self.suits for v in self.vals])
+        self.discards.extend([Card(s, v) for s in all_suits for v in all_vals])
         self.hand.extend(self._jokers)
+        self._use_TC = use_TC
+        self.Name = "GM" if not self._use_TC else "Deck"
+        self._TC = None
         self.shuffle()
+        self.result_types = {
+            "Critical Success": 5,
+            "Major Success": 4,
+            "Suited Hit": 3,
+            "Color Hit": 2,
+            "Hit": 1,
+            "No result": 0,
+            "Suited Miss": -1,
+            "Color Miss": -2,
+            "Miss": -3,
+        }
+        self.result_types.update(dict([reversed(i) for i in self.result_types.items()]))
 
     def __repr__(self):
         """Result of print(Deck)"""
-        output = f"Deck: {[c for c in self.cards]}\n"
-        output += f"Discards: {[d for d in self.discards]}\n"
-        output += f"Hand {[h for h in self.hand]}\n"
+        output = ""
+        output += f"TC      : {self.TC}\n"
+        output += f"Hand    :  {len(self.hand):02d}\n"
+        output += f"Deck    :  {len(self.cards):02d}\n"
+        output += f"Discards:  {len(self.discards):02d}\n"
         return output
 
     def shuffle(self, limit=None):
@@ -141,12 +173,25 @@ class Deck(object):
         self.cards.extend(self.discards[:limit])
         self.discards = self.discards[limit:]
         random.shuffle(self.cards)
+        if self._use_TC:
+            self.draw_TC()
 
-    def draw(self):
+    @property
+    def TC(self):
+        if not self._TC and self._use_TC:
+            self.draw_TC
+        return self._TC
+
+    def draw_TC(self):
+        self._TC = self.draw()
+
+    def draw(self) -> Card:
         """Draw a card. If any available, return card"""
-        if len(self.cards) == 0:
-            logger.warning("No cards available in deck. Exhaustion not yet simulated.")
-            return
+        if len(self.cards) == 0 and self._use_TC:
+            logger.warning("No cards available in deck.")
+            return None
+        elif len(self.cards) == 0 and not self.use_TC:
+            self.shuffle()  # for GMs, just shuffle
         card = self.cards.pop()
         if card.val == "A":
             self.hand.append(card)
@@ -154,25 +199,46 @@ class Deck(object):
             self.discards.append(card)
         return card
 
-    def exchange_fate(self):
+    def check_by_skill(self, **kwargs):
+        if self._use_TC:
+            logger.error("check_by_skill method envoked on a non-GM deck")
+        kwargs.pop("skill", None)
+        return self.check(**kwargs)
+
+    def discard(self, n, return_string=False, **_):
+        """Draw n cards, return none. Discard/hand as normal"""
+        draws = []
+        for _ in range(n):
+            draws.append(self.draw())
+
+        if return_string:
+            return f"Drew {draws}"
+
+    def exchange_fate(self, return_string=False):
         """Move fate card from hand. If Ace, add to discard"""
         if len(self.hand) == 0:
-            logger.warning("No cards available to exchange")
-            return
-        card = self.hand.pop()
-        if card.val == "A":
-            self.discards.append(card)
-        logger.info(f"Exchanged Fate Card: {card}")
+            result = "No cards available to exchange"
+        else:
+            card = self.hand.pop()
+            if card.val == "A":
+                self.discards.append(card)
+            result = f"Exchanged Fate Card: {card}"
 
-    def check(self, TC: Card, TR: int, mod: int = 0):
+        if return_string:
+            return result
+
+        logger.info(result)
+
+    def _basic_check(self, TC: Card, DR: int) -> Union[None, int]:
         """Return string corresponding to check 'Hit/Miss/Color/Suit' etc
 
         Args:
             TC (Card): Target card
             TR: (int): Target Range
             mod (int): TR modifier
+            return_val (bool): Return the string. Default False.
         """
-        TR = abs(TR) + mod
+        DR = abs(DR)
         draw = self.draw()
         result = ""
         if draw is None:
@@ -186,5 +252,71 @@ class Deck(object):
                 result += "Suited "
             elif draw.color == TC.color:
                 result += "Color "
-            result += "Hit" if draw.val in TC.range(TR) else "Miss"
-        logger.info(f"Drew {draw} vs {TC} with TR {TR}: {result}")
+            result += "Hit" if draw.val in TC.range(DR) else "Miss"
+        return (draw, self.result_types[result])  # Return (draw, int)
+
+    def check(
+        self,
+        TC: Card,
+        DR: int,
+        mod: int = 0,
+        upper_lower: str = "none",
+        draw_n: int = 1,
+        upper_lower_int: int = 0,
+        draw_all: bool = False,
+        return_val: bool = False,
+        return_string: bool = False,
+        verbose=True,
+    ) -> Union[None, int]:
+        """Log string corresponding to check 'Hit/Miss/Color/Suit' etc
+
+        Args:
+            TC (Card): Target card
+            TR: (int): Target Range
+            mod (int): TR modifier
+            upper_lower (str): 'upper' or 'lower' Hand ('u' or 'l'). Default neither.
+            draw_n (int): How many to draw. If upper/lower, default 2. Otherwise 1.
+            upper_lower_int (int): Instead of passing upper_lower and draw_n, use
+                positive/negative for upper/lower with int of draw_n -1.
+                for example, -1 for draw 2 lower
+            draw_all (bool): If upper hand, draw all before stopping. Default false.
+            return_val (bool): Return the string. Default False.
+        """
+        DR = max(0, abs(DR) + mod)  # Apply mod to non-negative TR
+        if upper_lower_int:
+            upper_lower = (
+                "U" if upper_lower_int > 0 else "L" if upper_lower_int < 0 else "N"
+            )
+            draw_n = 1 if upper_lower == "N" else abs(upper_lower_int) + 1
+        else:
+            upper_lower = upper_lower[0].upper()
+            draw_n = 1 if upper_lower == "N" else 2 if abs(draw_n) == 1 else abs(draw_n)
+
+        results = []
+        draws = []
+
+        for _ in range(draw_n):
+            draw, this_result = self._basic_check(TC, DR)
+            draws.append(draw)
+            results.append(this_result)
+            if results[-1] > 0 and not draw_all and upper_lower == "U":
+                break  # If success (>0) and not draw-all with upper, stop drawing
+
+        ul_str = ""
+        if upper_lower == "U":
+            ul_str = f" at Upper Hand {draw_n}"
+        elif upper_lower == "L":
+            ul_str = f" at Lower Hand {draw_n}"
+
+        result = max(results) if upper_lower == "U" else min(results)
+        result_string = (
+            f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
+        )
+
+        if verbose:
+            logger.debug(result_string)
+
+        if return_string:
+            return result_string, result
+        elif return_val:
+            return result

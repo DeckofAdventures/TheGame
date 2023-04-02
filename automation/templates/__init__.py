@@ -1,5 +1,4 @@
-from .bestiary import Bestiary
-from .powers import Powers
-from .yaml_spec import YamlSpec
+from dotenv import load_dotenv
 
-__all__ = ["YamlSpec", "Powers", "Bestiary"]
+load_dotenv()
+load_dotenv("TheBot/the_bot/.env")

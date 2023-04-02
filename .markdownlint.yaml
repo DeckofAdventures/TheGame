@@ -5,6 +5,7 @@ MD013:
     line_length: "88" # Line length limits
     tables: false # disable for tables
     headings: false # disable for headings
+MD025: false # permit adjacent headings
 MD026: false # permit trailing punctuation in headings
 MD033: # HTML elements allowed
     allowed_elements:

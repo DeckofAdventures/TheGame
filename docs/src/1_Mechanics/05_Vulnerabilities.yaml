@@ -9,7 +9,7 @@ Template: # Power name        # Must be unique
         Power:                # Must match unique power name
     Description: Descrip      # Flavor: 1-2 sentences             
     Tags: One or list
-    # StatOverride: AGL -2   # One of AGL, STR, Finesse, etc. followed by number
+    # StatAdjust: AGL -2   # One of AGL, STR, Finesse, etc. followed by number
     # Rest can be ignored when copy/pasting. Only needed so code can combine
     PP: Ignore
     To Hit: Ignore
@@ -169,96 +169,108 @@ Wanted:
 
 Clumsy, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         AGL: -1
     Description: You're clumsier than most.
     Mechanic: On character creation, you start with -1 AGL
 
 Clumsy, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride: 
+    StatAdjust: 
         AGL: -2
     Description: You're clumsier than most.
     Mechanic: On character creation, you start with -2 AGL
 
 Dumb, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         INT: -1
     Description: You're dumber than most.
     Mechanic: On character creation, you start with -1 INT
 
 Dumb, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride: 
+    StatAdjust: 
         INT: -2
     Description: You're dumber than most.
     Mechanic: On character creation, you start with -2 INT
 
 Counterintuitive, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         GUT: -1
     Description: You're less intuitive than most.
     Mechanic: On character creation, you start with -1 GUT
 
 Counterintuitive, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride:
+    StatAdjust:
         GUT: -2
     Description: You're less intuitive than most.
     Mechanic: On character creation, you start with -2 GUT
 
 Frail, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         VIT: -1
     Description: You're frailer than most.
     Mechanic: On character creation, you start with -1 VIT
 
 Frail, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride: 
+    StatAdjust: 
         VIT: -2 
     Description: You're frailer than most.
     Mechanic: On character creation, you start with -2 VIT
 
 Uncertain, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         CON: -1
     Description: You're less certain than most.
     Mechanic: On character creation, you start with -1 CON
 
 Uncertain, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride: 
+    StatAdjust: 
         CON: -2 
     Description: You're less certain than most.
     Mechanic: On character creation, you start with -2 CON
 
 Weak, Minor:
     Category: Stats
+    Type: Vulny
     XP: -1
-    StatOverride: 
+    StatAdjust: 
         STR: -1
     Description: You're weaker than most.
     Mechanic: On character creation, you start with -1 STR
 
 Weak, Major:
     Category: Stats
+    Type: Vulny
     XP: -2
-    StatOverride: 
+    StatAdjust: 
         STR: -2 
     Description: You're weaker than most.
     Mechanic: On character creation, you start with -2 STR

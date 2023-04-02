@@ -1,8 +1,9 @@
 import csv
 import os
 from abc import ABC, abstractmethod
+from collections import OrderedDict
 
-from ..utils import ensure_list, load_yaml, logger, make_header, make_link
+from ..utils import ensure_list, load_yaml, logger, make_header, make_link, sort_dict
 
 
 class YamlSpec(ABC):
@@ -13,14 +14,20 @@ class YamlSpec(ABC):
 
         If file not found at input_file relative path, adds ./automation/_input/
         """
+        self._md_TOC = ""
         self._raw_data = {}
         self._categories = set()
         self._category_hierarchy = None
         self._content = dict()
         self._fields = None
-        self._filepath_default_input = "./automation/_input/"
-        self._filepath_default_output = "./automation/_output/"
+        self._default_root = os.getenv('THEGAME_ROOT') or "./automation/"
+        self._filepath_default_input = self._default_root + "_input/"
+        self._filepath_default_output = self._default_root + "_output/"
         self._filepath_mechanics = "./docs/src/1_Mechanics/"
+        self._tried_loading = False
+        self._limit_types = []
+        self._as_dict = {}
+        self._type_dict = {k: [] for k in self._limit_types}
 
         input_files = ensure_list(input_files)
         if len(input_files) > 1:
@@ -36,7 +43,7 @@ class YamlSpec(ABC):
                 input_file = self._filepath_default_input + input_file
             logger.debug(f"Loading {input_file}")
             self._raw_data.update(load_yaml(input_file))
-        self._template = self._raw_data.pop("Template")
+        self._template = self._raw_data.pop("Template", None)
         self._name = self._stem.split("_")[-1]
 
     # ------------------------------- FILEPATH UTILITIES -------------------------------
@@ -57,6 +64,29 @@ class YamlSpec(ABC):
         )
 
     # -------------------------------- CORE PROPERTIES ---------------------------------
+    def _build_contents(self, this_data_class, id_component="", **kwargs):
+        """Loop over items in the raw dict format. Generate list and dict versions"""
+        self._tried_loading = True
+        for k, v in self.raw_data.items():
+            if v.get("Type", None) in self._limit_types:
+                id = v["Name"] + str(v.get(id_component)) if v.get("Name") else k
+                _ = v.setdefault("Name", k)
+                self._as_dict.update({k: this_data_class(id=id, **v, **kwargs)})
+
+    def _build_categories(self, build_with="Type") -> OrderedDict:
+        """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
+        if not self._categories:
+            for b in self.as_dict.values():
+                cat_tuple = tuple(ensure_list(getattr(b, build_with)))
+                self._categories.setdefault(cat_tuple, [])
+                self._categories[cat_tuple].append(b.Name)
+                self._categories_set.add(cat_tuple)
+                self._csv_fields = self._csv_fields.union(list(b.csv_dict.keys()))
+                self._categories = sort_dict(
+                    self._categories, sorted(self._categories_set)
+                )
+        return self._categories
+
     @property
     def raw_data(self):
         return self._raw_data
@@ -66,13 +96,17 @@ class YamlSpec(ABC):
         pass
 
     @abstractmethod
-    def as_list(self):
-        pass
-
-    @abstractmethod
     def categories(self) -> dict:
         """{(heirarchy tuple): [List of names]} dict"""
         pass
+
+    @property
+    def type_dict(self) -> dict:
+        """Cache of items by type e.g. {Major: [a, b]}"""
+        if not any(self._type_dict.values()):
+            for item in self.as_dict.values():
+                self._type_dict[item.Type].append(item.id)
+        return self._type_dict
 
     # ------------------------------- MARKDOWN UTILITIES -------------------------------
     @property
@@ -172,7 +206,7 @@ class YamlSpec(ABC):
                 delimiter=delimiter,
             )
             csv_output.writeheader()
-            for i in self.as_list:
+            for i in self.as_dict.values():
                 rows.append(i.csv_dict)
             csv_output.writerows(rows)
         logger.info(f"Wrote csv: {output_fp}")

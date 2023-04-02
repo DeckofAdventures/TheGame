@@ -16,36 +16,39 @@ the nature of these changes.
 
 ## [1.0.0a5] - UNRELEASED
 
-+ Updated name of Fate Points to Power Points
-+ Updated repo structure for mkdocs
-+ Added combined Power/Vulnerability spreadsheet
-+ Add python conversion tool to import yaml, output csv and markdown
-+ Added dataclass object to handle Power and Beast information
-+ Added Bestiary
++ Update name of Fate Points to Power Points
++ Update repo structure for mkdocs
++ Add combined Power/Vulnerability spreadsheet
++ Add conversion tools to import yaml, output csv, markdown, and html-based png files
++ Add dataclass object to handle Power, Beast, and Item information
++ Add Bestiary and Items list
++ Add simulator to reflect structure of Card, Deck, Player, and Encounter with
+   methods relevant to each, including simulating draws, attacks, rests and Epic Events
++ Add spelling config for cspell extension
 
 ## [1.0.0a4] - 2022-08-14
 
-+ Added v1 GM Guide
-+ Added Adversary and House Actions
-+ Updated name of Primary Suit to Burn Mechanics
-+ Updated DR + Mod on Report
-+ Added 'Fatigued' Status Condition
++ Add v1 GM Guide
++ Add Adversary and House Actions
++ Update name of Primary Suit to Burn Mechanics
++ Update DR + Mod on Report
++ Add 'Fatigued' Status Condition
 
 ## [1.0.0a3] - 2022-06-09
 
-+ Added Fate Point naming convention
-+ Added premade level 1 characters
-+ Updated Epic Events
-+ Updated Rest Mechanics
++ Add Fate Point naming convention
++ Add premade level 1 characters
++ Update Epic Events
++ Update Rest Mechanics
 
 ## [1.0.0a2] - 2022-03-19
 
-+ Updated core mechanic, from banded capped to circular.
-+ Added tools for circular: printout
++ Update core mechanic, from banded capped to circular.
++ Add tools for circular: printout
 
 ## [1.0.0a1] - 2022-03-01
 
-+ Updated core mechanic, from threshold to banded target.
++ Update core mechanic, from threshold to banded target.
 
 ## [0.0.0a2] - 2022-02-10
 
@@ -55,7 +58,7 @@ the nature of these changes.
 ## [0.0.0a1] - 2022-01-14
 
 + Began porting notes to GitHub
-+ Added primary suit feature
++ Add primary suit feature
 + Further additions pending work on spells and backgrounds
 
 ## [0.0.0a0] - 2021-12-10
