@@ -14,7 +14,7 @@ While untracked edits may change individual pages and patches may systematically
 multiple pages, minor and major versions will be accompanied by descriptors detailing
 the nature of these changes.
 
-## [1.0.0a5] - UNRELEASED
+## [1.0.0a5] - 2023-04-02
 
 + Update name of Fate Points to Power Points
 + Update repo structure for mkdocs
