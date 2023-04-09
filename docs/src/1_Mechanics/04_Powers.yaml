@@ -615,10 +615,10 @@ Small Power Gain:
     Type: Passive
     Category:
         - Power Points
-    Mechanic: You gain 1 additional Power Point.
+    Mechanic: You gain 2 additional Power Points.
     StatAdjust:
         Add:
-            PP: 1
+            PP: 2
     Description: Harnessing more stored power allows for greater achievements.
     XP: 1
 
@@ -626,10 +626,10 @@ Large Power Gain:
     Type: Passive
     Category:
         - Power Points
-    Mechanic: You gain 3 additional Power Points.
+    Mechanic: You gain 4 additional Power Points.
     StatAdjust:
         Add:
-            PP: 3
+            PP: 4
     Description: Gathering power is one of the paths to true mastery of the self.
     XP: 2
 
@@ -638,7 +638,7 @@ Craft Light:
     Category:
         - Magic
     Description: Your skills let you conjure illusory radiance.
-    Mechanic: You can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action. Additionally, you may expend 1 PP to force a target within 6 spaces to make a DR 2 GUT Save or become Blinded for 1 round.
+    Mechanic: For 0 PP you can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action. For 1 PP you can force a target within 6 spaces to make a DR 2 GUT Save or become Blinded for 1 round.
     XP: 1
     PP: [0, 1]
     Save:
@@ -658,7 +658,7 @@ Minor Levitation:
     Category:
         - Magic
     Description: Your skills allow you to momentarily suspend the laws of gravity.
-    Mechanic: You can infuse an object of less than 100 lbs with levitation, reducing its effective weight to 0 lbs and allowing it to float in the air. Additionally, you may expend 1 PP to force a target within 6 spaces to make a DR 2 STR Save or reduce their speed to 0 and float 1 space off the ground for 1 round.
+    Mechanic: For 0 PP you can infuse an object of less than 100 lbs with levitation, reducing its effective weight to 0 lbs and allowing it to float in the air. For 1 PP, you can force a target within 6 spaces to make a DR 2 STR Save or reduce their speed to 0 and float 1 space off the ground for 1 round.
     XP: 1
     PP: [0, 1]
     Save:
@@ -680,7 +680,7 @@ Produce Sound:
     Category:
         - Magic
     Description: Your skills let you create illusory sounds.
-    Mechanic: You can create a harmless sound or auditory effect emanating from a point you can see such as music, wind, rustling leaves, etc. for 1 minute. Additionally, you may expend 1 PP to attempt to feign the voice or noise of someone not there. A nearby creature must make a DR 2 Detection check to determine if the sound is illusory.
+    Mechanic: For 0 PP you can create a harmless sound or auditory effect emanating from a point you can see such as music, wind, rustling leaves, etc. for 1 minute. For 1 PP you can feign the voice or noise of someone not there. A nearby creature must make a DR 2 Detection check to determine if the sound is illusory.
     XP: 1
     PP: [0, 1]
     Range: 12
@@ -697,7 +697,7 @@ Mystic Cleanse:
     Category:
         - Magic
     Description: Your skills let you cleanse objects and creatures.
-    Mechanic: You can clean objects within 1 space, removing any dirt or grime. Damaged objects are not repaired, but dirt and debris around the damage is cleaned. Additionally, for 1 PP you can target a creature within 6 spaces and remove one of the following Status Conditions from them; Burned, Frozen, Poisoned, Blinded, Deafened, Charmed, Enthralled.
+    Mechanic: For 0 PP you can clean objects within 1 space, removing any dirt or grime. Damaged objects are not repaired, but dirt and debris around the damage is cleaned. For 1 PP you can target a creature within 6 spaces and remove one of the following Status Conditions from them; Burned, Frozen, Poisoned, Blinded, Deafened, Charmed, Enthralled.
     XP: 1
     PP: [0, 1]
     Range: 6
@@ -714,20 +714,16 @@ Illusory Appearance:
     Category:
         - Magic
     Description: Your skills let you conjure illusory effects on your person.
-    Mechanic: You can alter the appearance of your eye or hair color for 1 hour. Additionally, for 1 PP you can alter your appearance in a more meaningful way or produce an illusory aspect of your appearance for 1 hour. During this time, gain the Upper Hand on Conviction Checks made to convince others of your new appearance.
+    Mechanic: For 0 PP you can alter the appearance of your eye or hair color for 1 hour. For 1 PP you can alter your appearance entirely, changing some or all physical characteristics. Occupying additional space (e.g., gaining height) produces illusions that may be readily detected if dramatically different from your original form. For the next hour, you gain the Upper Hand on Conviction Checks made to convince others of your new appearance.
     XP: 1
     PP: [0, 1]
-    Save:
-        Trigger: Once
-        DR: 2
-        Type: GUT
-        Fail: Blinded
-    Range: 6
     Prereq:
         Role:
             - Caster
             - Support
-        Skill: Craft > 0
+        Skill: 
+            - Craft > 0
+            - Knowledge > 0
 
 Hidden Strike:
     Type: Passive
