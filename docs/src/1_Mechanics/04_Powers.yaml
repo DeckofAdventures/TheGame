@@ -1,33 +1,33 @@
-Template:                     # Power ID, Must be unique
-    Name: Descrip             # Display Name. If none, defaults to ID
-    Type: Required            # Passive, Vulny, Major, Minor, Adversary, Free, House, Channel
-    Category: One or list     # One string or list in sub-cat order
-    Mechanic: Descrip         # Rule/effect. Additional info added later. No ending periods.
-    Description: Descrip      # Flavor: 1-2 sentences. Only for markdown.
+Template:                               # Power ID, Must be unique
+    Name: Descrip                       # Display Name. If none, defaults to ID
+    Type: Required                      # Passive, Vulny, Major, Minor, Adversary, Free, House, Channel
+    Category: One or list               # One string or list in sub-cat order
+    Mechanic: Descrip                   # Rule/effect. Additional info added later. No ending periods.
+    Description: Descrip                # Flavor: 1-2 sentences. Only for markdown.
     XP: X
-    PP: X                     # For multiple, implies 'OR'. Use [A, B] or `-`
-    Prereq:                   # For multiple, implies 'OR'. Use [A, B] or `-`
+    PP: X                               # For multiple, implies 'OR'. Use [A, B] or `-`
+    Prereq:                             # For multiple, implies 'OR'. Use [A, B] or `-`
         Role: X
-        Level: X              # Integer
-        Skill: X > 1          #
-        Power:                # Must match unique power id
-    StatAdjust:               # If neither 'Add' nor 'Replace', assumed 'Add'
-        Add:                  # For items that add/subtract to/from current value
-            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
-        Replace:              # For items that replace current value
-            Stat: X           # AGL, STR, Finesse, AP, AR, etc.
-    ToHit: X                  # If not specified, assumed character's primary skill
-    Damage: X                 # Integer
-    Range: X                  # Integer of spaces. 0 for self, 1 for melee
-    AOE: Shape X              # Aura, cone, or line followed by integer for size
-    Targets: X                # Integer, # of targets
-    Options: X                # Optional Descrip of options. Replaced by selection.
-    Save:                     # Separated here, merged in md
-        Trigger: One of       # Once, On hit, On starting turn etc. Sentence start.
-        DR: X                 # If primary skill modifier of actor, none [3-(MOD/2)]
-        Type: MOD             # AGL, CON, etc
-        Fail: Descrip         # effect on fail
-        Succeed: Descrip      # effect on success. Assume no access to above
+        Level: X                        # Integer
+        Skill: X > 1 
+        Power:                          # Must match unique power id
+    StatAdjust:                         # If neither 'Add' nor 'Replace', assumed 'Add'
+        Add:                            # For items that add/subtract to/from current value
+            Stat: X                     # AGL, STR, Finesse, AP, AR, etc.
+        Replace:                        # For items that replace current value
+            Stat: X                     # AGL, STR, Finesse, AP, AR, etc.
+    ToHit: X                            # If not specified, assumed character's primary skill
+    Damage: X                           # Integer
+    Range: X                            # Integer of spaces. 0 for self, 1 for melee
+    AOE: Shape X                        # Aura, cone, or line followed by integer for size
+    Targets: X                          # Integer, # of targets
+    Options: X                          # Optional Descrip of options. Replaced by selection.
+    Save:                               # Separated here, merged in md
+        Trigger: One of                 # Once, On hit, On starting turn etc. Sentence start.
+        DR: X                           # If primary skill modifier of actor, none [3-(MOD/2)]
+        Type: MOD                       # AGL, CON, etc
+        Fail: Descrip                   # effect on fail
+        Succeed: Descrip                # effect on success. Assume no access to above
     Tags: One or list
 
 Attack, Weapon:
@@ -266,9 +266,8 @@ Attack, Mystic Entangle:
     Mechanic: Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save.
     Type: Major
     XP: 2
-    PP: [1,2]
-    Targets: [1,3]
-    Mechanic: Selected targets make a Save
+    PP: [1, 2]
+    Targets: [1, 3]
     Save:
         Trigger: Once
         DR: 3
@@ -287,7 +286,7 @@ Attack, Mystic Deprivation:
         - Mystic Attacks
     Type: Major
     XP: 2
-    PP: [1,2]
+    PP: [1, 2]
     Targets: [1, 3]
     Description: You channel your abilities deprive a target of their senses.
     Mechanic: Select the Blinded or Deafened effect
@@ -721,7 +720,7 @@ Illusory Appearance:
         Role:
             - Caster
             - Support
-        Skill: 
+        Skill:
             - Craft > 0
             - Knowledge > 0
 
@@ -777,7 +776,7 @@ Summon Creature:
     Type: Major
     Category:
         - Companion
-    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form. 
+    Mechanic: Summon a creature to assist you for 1 hour. This creature uses the 'Summoned Creature' stat block and is treated as a Companion for the duration. You choose the creature's form.
     Description: It's good to have a friend, even when you have to summon them from somewhere else. Who ever said no to a little extra help?
     XP: 2
     PP: 2
@@ -785,7 +784,6 @@ Summon Creature:
         Role: Caster
         Level: 2
         Skill: Knowledge > 0
-    Tags:
     Tags:
         - Summoner
 
