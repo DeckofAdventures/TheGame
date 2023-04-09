@@ -229,11 +229,8 @@ During an adventure, there will be tasks of varying degrees of difficulty. As
 characters grow in level their skill modifiers increase and tasks previously considered
 challenging are made easier. Higher level characters will be faced with more difficult
 challenges than they faced before, and the corresponding Difficulty Range will change to
-reflect the degree of difficulty. The lowest DR a GM can set is -6, and the highest DR a
-GM can set is +6. Higher level characters will have high enough modifiers that certain
-checks set at a negative DR will still have positive Effective DRs, while other characters
-with negative modifiers may find the Effective DR of certain checks outside the scope of
-being able to attempt.
+reflect the degree of difficulty. An effective DR of +6 is an assured success, while an
+effective DR of -2 is assured failure.
 
 #### Degrees of Success
 
