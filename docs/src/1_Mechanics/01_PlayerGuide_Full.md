@@ -230,7 +230,7 @@ characters grow in level their skill modifiers increase and tasks previously con
 challenging are made easier. Higher level characters will be faced with more difficult
 challenges than they faced before, and the corresponding Difficulty Range will change to
 reflect the degree of difficulty. An effective DR of +6 is an assured success, while an
-effective DR of -2 is assured failure.
+effective DR of -3 is assured failure.
 
 #### Degrees of Success
 
