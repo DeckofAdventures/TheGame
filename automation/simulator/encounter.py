@@ -45,9 +45,11 @@ class Encounter(object):
         self, attacker, targets: List[Player], power=None, return_string=False
     ):
         targets = ensure_list(targets)
-        result_strings = [f"{attacker.Name} used {power.Name}"]
         if not power:
             return
+
+        result_strings = [f"{attacker.Name} used {power.Name}"]
+
         for _ in range(ensure_list(power.Targets)[0]):
             target = random.choice(targets)
             if power.Save:
@@ -97,6 +99,7 @@ class Encounter(object):
             if not return_string:
                 logger.info(result_strings)
                 result_strings = []
+
         if return_string:
             return "\n".join(result_strings)
 

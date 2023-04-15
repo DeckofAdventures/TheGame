@@ -148,7 +148,9 @@ class Player(Deck, Beast):
         """Accepts any Attrib. Accepts any valid args of Deck.check"""
         if self._CSV_LOGGING:
             kwargs["return_val"] = True
+
         attrib, mod = self._find_highest_stat(attrib)
+
         assert (
             attrib in self._valid_attribs
         ), f"Could not find {attrib} in {self._valid_attribs}"
@@ -167,6 +169,7 @@ class Player(Deck, Beast):
         if result == 0:
             self.modify_fatigue()
             self.save(DR=DR, attrib=attrib, **kwargs)
+
         # NOTE: drawlog doesn't know if had options
         draw_log.info(
             [
@@ -184,6 +187,8 @@ class Player(Deck, Beast):
 
         if new_kwargs.get("return_string"):
             return result_string
+        if new_kwargs.get("return_val"):
+            return result
 
     def full_rest(self, return_string=False, **_):
         rest_log.info(

@@ -46,18 +46,17 @@ Spider Queen:
   Powers:
     - Attack, Mystic
     - Attack, Mystic Aura
-    - Summon Ally
+    # - Summon Ally
     - Amplify Ally
-    - Shake Enemy
+    # - Shake Enemy
     - Favored Terrain
     - Manifest Terrain
-    - Condition Immunity, Poisoned
-    - Condition Resilience, Blinded
+    # - Condition Immunity, Poisoned
+    # - Condition Resilience, Blinded
     - Terrain Blink
-    - Conjure Terrain
+    # - Conjure Terrain
     - Adversary Major Action
-    - Shake Enemy
-    - Wall Grab
+    # - Wall Grab
     - Obey Me
   Description: A queen of her minions, trusted and obeyed without question.
 
