@@ -224,7 +224,7 @@ Attack, Mystic Cone:
         DR: 3
         Type: AGL
         Fail: Knocked Down, take 2 damage.
-        Success: Take half damage.
+        Succeed: Take half damage.
     AOE: Cone 3
     Prereq:
         Level: 3
@@ -244,7 +244,7 @@ Attack, Mystic Confusion:
     Type: Major
     XP: 2
     PP: [1, 2]
-    Target: [1, 2]
+    Targets: [1, 2]
     Range: 12
     Save:
         Trigger: Once
@@ -483,6 +483,7 @@ Shield:
         - Support
     Description: Fortify others by summoning magical armor.
     Mechanic: Add 1 AP to a creature you can see, including yourself. This effect does not stack with other Powers that grant AP.
+    Type: Major
     XP: 2
     PP: 1
     Range: 6
@@ -870,7 +871,7 @@ Aura of Defensive Damage:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When a creature is hit by a melee attack, the attacker takes 1 damage.
+    Mechanic: Allied creatures within range gain the effects of your Aura. For one minute, when a creature is hit by a melee attack, the attacker takes 1 damage.
     Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
     XP: 2
     PP: 1
@@ -879,7 +880,7 @@ Aura of Defensive Damage:
         Level: 2
         Skill: Brute > 0
     AOE: Aura 6
-    Duration: 1 minute
+    # Duration: 1 minute
     Tags:
         - Crusader
 
@@ -888,7 +889,7 @@ Aura of Regeneration:
     Category:
         - Combat
         - Aura
-    Mechanic: Allied creatures within range gain the effects of your Aura. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
+    Mechanic: Allied creatures within range gain the effects of your Aura. For one minute, when they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
     Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all.
     XP: 2
     PP: 2
@@ -897,7 +898,7 @@ Aura of Regeneration:
         Role: Defender
         Level: 2
         Skill: Brute > 1
-    Duration: 1 minute
+    # Duration: 1 minute
     Tags:
         - Crusader
 
@@ -1076,7 +1077,7 @@ Drain Stamina:
         - Boss-Only
         - Adversary Actions
     Mechanic: All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards.
-    Aura: 2
+    AOE: Aura 2
 
 Phase Shift:
     Type: Adversary

@@ -237,6 +237,15 @@ class Beast:
         self.AR_Max = self.AR
         self.PP_Max = self.PP
         self.Speed_Max = self.Speed
+        self.Primary_Skill_Mod = (
+            getattr(
+                self.Attribs if self.Primary_Skill in list_attribs else self.Skills,
+                self.Primary_Skill,
+                0,
+            )
+            if self.Primary_Skill
+            else None
+        )
 
     def fetch_powers(self) -> Tuple[dict, int, int, int]:
         """Given a list of powers by name, generate a dict {Name: Power class}

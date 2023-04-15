@@ -5,7 +5,7 @@ Mystic Bulwark:
   Use:
     Time: Major Action
     Limit: 2 times per rest
-    Power: Shield, Self
+    Power: Shield
   StatAdjust:
     Add:
       AR: -1

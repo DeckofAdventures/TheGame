@@ -36,7 +36,7 @@ Clubs1:
   Pronouns: "He/Him"
   Role: Defender
   Level: 1
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 6
   AP: 2
   AR: 2
@@ -57,7 +57,7 @@ Clubs1:
     - Attack, Weapon
     - Attack, Vengeance
     - Momentum
-    - Shield, Self
+    - Shield
     - Oath
     - Bloodthirsty
 
@@ -66,7 +66,7 @@ Clubs2:
   Pronouns: "He/Him"
   Role: Defender
   Level: 2
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 7
   AP: 2
   AR: 2
@@ -88,7 +88,7 @@ Clubs2:
     - Attack, Vengeance
     - Momentum
     - Momentum Aura
-    - Shield, Self
+    - Shield
     - Oath
     - Bloodthirsty
 
@@ -97,7 +97,7 @@ Clubs3:
   Pronouns: "He/Him"
   Role: Defender
   Level: 3
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 8
   AP: 2
   AR: 2
@@ -120,7 +120,7 @@ Clubs3:
     - Attack, Charge
     - Momentum
     - Momentum Aura
-    - Shield, Self
+    - Shield
     - Oath
     - Bloodthirsty
 
@@ -129,7 +129,7 @@ Diamonds1:
   Pronouns: "She/Her"
   Role: Caster
   Level: 1
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 6
   AP: 0
   AR: 3
@@ -160,7 +160,7 @@ Diamonds2:
   Pronouns: "She/Her"
   Role: Caster
   Level: 2
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 7
   AP: 0
   AR: 3
@@ -192,7 +192,7 @@ Diamonds3:
   Pronouns: "She/Her"
   Role: Caster
   Level: 3
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 8
   AP: 0
   AR: 3
@@ -225,7 +225,7 @@ Hearts1:
   Pronouns: "They/Them"
   Role: Support
   Level: 1
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 4
   AP: 0
   AR: 3
@@ -258,7 +258,7 @@ Hearts2:
   Pronouns: "They/Them"
   Role: Support
   Level: 2
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 6
   AP: 0
   AR: 3
@@ -289,7 +289,7 @@ Hearts3:
   Pronouns: "They/Them"
   Role: Support
   Level: 3
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 7
   AP: 0
   AR: 3
@@ -321,7 +321,7 @@ Spades1:
   Pronouns: "He/Him"
   Role: Martial
   Level: 1
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 5
   AP: 0
   AR: 2
@@ -352,7 +352,7 @@ Spades2:
   Pronouns: "He/Him"
   Role: Martial
   Level: 2
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 7
   AP: 0
   AR: 2
@@ -384,7 +384,7 @@ Spades3:
   Pronouns: "He/Him"
   Role: Martial
   Level: 3
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 8
   AP: 0
   AR: 2
@@ -418,7 +418,7 @@ Crusader1:
   Pronouns: "He/Him"
   Role: Defender
   Level: 1
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 6
   AP: 2
   AR: 2
@@ -439,7 +439,7 @@ Crusader1:
     - Attack, Weapon
     - Attack, Vengeance
     - Momentum
-    - Shield, Self
+    - Shield
     - Oath
     - Savior
 
@@ -448,7 +448,7 @@ Crusader2:
   Pronouns: "He/Him"
   Role: Defender
   Level: 2
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 7
   AP: 2
   AR: 2
@@ -469,7 +469,7 @@ Crusader2:
     - Attack, Weapon
     - Attack, Vengeance
     - Aura of Defensive Damage
-    - Shield, Self
+    - Shield
     - Momentum
     - Battlecharged
     - Oath
@@ -480,7 +480,7 @@ Crusader3:
   Pronouns: "He/Him"
   Role: Defender
   Level: 3
-  Primary_Skill: STR
+  Primary_Skill: Brute
   HP: 8
   AP: 2
   AR: 2
@@ -502,7 +502,7 @@ Crusader3:
     - Attack, Vengeance
     - Aura of Defensive Damage
     - Aura of Regeneration
-    - Shield, Self
+    - Shield
     - Staggering Blow
     - Momentum
     - Oath
@@ -513,7 +513,7 @@ Summoner1:
   Pronouns: "She/Her"
   Role: Caster
   Level: 1
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 6
   AP: 0
   AR: 3
@@ -544,7 +544,7 @@ Summoner2:
   Pronouns: "She/Her"
   Role: Caster
   Level: 2
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 7
   AP: 0
   AR: 3
@@ -576,7 +576,7 @@ Summoner3:
   Pronouns: "She/Her"
   Role: Caster
   Level: 3
-  Primary_Skill: INT
+  Primary_Skill: Knowledge
   HP: 8
   AP: 0
   AR: 3
@@ -610,7 +610,7 @@ Alchemist1:
   Pronouns: "They/Them"
   Role: Support
   Level: 1
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 5
   AP: 0
   AR: 3
@@ -640,7 +640,7 @@ Alchemist2:
   Pronouns: "They/Them"
   Role: Support
   Level: 2
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 6
   AP: 0
   AR: 3
@@ -671,7 +671,7 @@ Alchemist3:
   Pronouns: "They/Them"
   Role: Support
   Level: 2
-  Primary_Skill: GUT
+  Primary_Skill: Craft
   HP: 7
   AP: 0
   AR: 3
@@ -704,7 +704,7 @@ Assassin1:
   Pronouns: "He/Him"
   Role: Martial
   Level: 1
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 5
   AP: 0
   AR: 2
@@ -735,7 +735,7 @@ Assassin2:
   Pronouns: "He/Him"
   Role: Martial
   Level: 2
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 6
   AP: 0
   AR: 2
@@ -768,7 +768,7 @@ Assassin3:
   Pronouns: "He/Him"
   Role: Martial
   Level: 3
-  Primary_Skill: AGL
+  Primary_Skill: Finesse
   HP: 7
   AP: 0
   AR: 2

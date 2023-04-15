@@ -20,7 +20,7 @@ class YamlSpec(ABC):
         self._category_hierarchy = None
         self._content = dict()
         self._fields = None
-        self._default_root = os.getenv('THEGAME_ROOT') or "./automation/"
+        self._default_root = os.getenv("THEGAME_ROOT") or "./automation/"
         self._filepath_default_input = self._default_root + "_input/"
         self._filepath_default_output = self._default_root + "_output/"
         self._filepath_mechanics = "./docs/src/1_Mechanics/"
@@ -68,10 +68,15 @@ class YamlSpec(ABC):
         """Loop over items in the raw dict format. Generate list and dict versions"""
         self._tried_loading = True
         for k, v in self.raw_data.items():
-            if v.get("Type", None) in self._limit_types:
+            type = v.get("Type", None)
+            if not type:
+                logger.warning(f"YAML item missing Type: {k}")
+            elif type in self._limit_types:
                 id = v["Name"] + str(v.get(id_component)) if v.get("Name") else k
                 _ = v.setdefault("Name", k)
                 self._as_dict.update({k: this_data_class(id=id, **v, **kwargs)})
+            elif type not in self._limit_types:
+                logger.debug(f"Skipping YAML item due to excluded Type: {k}")
 
     def _build_categories(self, build_with="Type") -> OrderedDict:
         """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
@@ -135,7 +140,7 @@ class YamlSpec(ABC):
         """Generate markdown Table of Contents with category_heirarchy"""
         if not self._md_TOC:
             TOC = "<!-- MarkdownTOC add_links=True -->\n"
-            for (category, indent, _) in self.category_hierarchy:
+            for category, indent, _ in self.category_hierarchy:
                 TOC += make_link(category, indent)
             self._md_TOC = TOC + "<!-- /MarkdownTOC -->\n"
         return self._md_TOC
@@ -166,7 +171,7 @@ class YamlSpec(ABC):
         )
         if TOC:
             output += self.md_TOC
-        for (category, indent, category_set) in self.category_hierarchy:
+        for category, indent, category_set in self.category_hierarchy:
             output += make_header(category, indent)
             output += self.make_entries(category_set)
         with open(output_fp, "w", newline="") as f:

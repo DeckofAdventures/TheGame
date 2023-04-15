@@ -1,6 +1,7 @@
 import copy
 import random
 from typing import List, Union
+from math import floor
 
 from ..templates.bestiary import Beast
 from ..utils import ensure_list, logger
@@ -53,9 +54,8 @@ class Encounter(object):
         for _ in range(ensure_list(power.Targets)[0]):
             target = random.choice(targets)
             if power.Save:
-                result = target.save(
-                    DR=power.Save.DR, attrib=power.Save.Type, return_val=True
-                )
+                DR = power.Save.DR or 3 - floor(attacker.Primary_Skill_Mod / 2)
+                result = target.save(DR=DR, attrib=power.Save.Type, return_val=True)
                 if result < 0:
                     if power.Save.Fail in self.status_list:
                         target._statuses[power.Save.Fail] = (

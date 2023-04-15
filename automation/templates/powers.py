@@ -3,7 +3,14 @@ from dataclasses import dataclass, field, fields
 from operator import attrgetter
 from typing import Union
 
-from ..utils import ensure_list, flatten_embedded, list_to_or, make_bullet, my_repr
+from ..utils import (
+    ensure_list,
+    flatten_embedded,
+    list_to_or,
+    make_bullet,
+    my_repr,
+    logger,
+)
 from .yaml_spec import YamlSpec
 
 list_power_types = [
@@ -208,6 +215,7 @@ class Power:
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
         self.upper_lower_int = self._get_upper_lower_int() if self.Draw else None
+        logger.debug(f"Loaded {self.Name}")
 
     def set_choice(self, choice: str = None):
         """Given a choice among options, revise merged mechanic property

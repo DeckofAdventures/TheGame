@@ -28,7 +28,7 @@ class Player(Deck, Beast):
             "Knocked Out": 0,
         }
         self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
-        self._CSV_LOGGING = False
+        self._CSV_LOGGING = False  # Toggled at Encounter level
 
     def __repr__(self):
         """Result of print(Player)"""
