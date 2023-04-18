@@ -74,12 +74,12 @@ the nature of these changes.
 
 + Started discussions and drafts
 
-[1.0.0a6] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a6
-[1.0.0a5] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a5
-[1.0.0a4] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a4
-[1.0.0a3] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a3
-[1.0.0a2] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a2
-[1.0.0a1] : https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a1
-[0.0.0] : https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0
-[0.0.0a1] : https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0a1
-[0.0.0a0] : https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0a0
+[1.0.0a6]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a6
+[1.0.0a5]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a5
+[1.0.0a4]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a4
+[1.0.0a3]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a3
+[1.0.0a2]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a2
+[1.0.0a1]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a1
+[0.0.0]: https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0
+[0.0.0a1]: https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0a1
+[0.0.0a0]: https://github.com/DeckofAdventures/TheGame/releases/tag/0.0.0a0
