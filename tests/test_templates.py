@@ -1,6 +1,6 @@
-from automation.templates.powers import Powers
 from automation.templates.bestiary import Bestiary
 from automation.templates.items import Items
+from automation.templates.powers import Powers
 
 # TODO: Add isinstance assertions of dataclass subfields
 

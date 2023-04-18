@@ -14,6 +14,9 @@ temp*/*
 # Automation, Python
 automation/_output/*
 *__pycache__/
+
+# Tests
+.cov*
 tests/test_data/*
 
 # Defaults

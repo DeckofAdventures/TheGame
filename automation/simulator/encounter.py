@@ -1,7 +1,7 @@
 import copy
 import random
-from typing import List, Union
 from math import floor
+from typing import List, Union
 
 from ..templates.bestiary import Beast
 from ..utils import ensure_list, logger

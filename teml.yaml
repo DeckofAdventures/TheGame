@@ -20,7 +20,7 @@ Destructive Beam:
 Distracting Call:
   Type: Major
   Category: Magic
-  Mechanic: All creatures within Aura 6 to make a GUT Save. 
+  Mechanic: All creatures within Aura 6 to make a GUT Save.
   Description: Call description.
   XP: 2
   PP: 2
@@ -96,7 +96,7 @@ Wand of Flame:
     Power:
       - Attack, Mystic Cone
       - Attack, Mystic Aura
-      - Attack, Mystic 
+      - Attack, Mystic
   StatAdjust:
     Add:
       Craft: 1

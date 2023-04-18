@@ -1,17 +1,19 @@
 import copy
+import logging
 import os
 import sys
-import pytest
-import logging
-import yaml
-from pathlib import Path
 from contextlib import nullcontext
-from automation.templates.powers import Powers
-from automation.templates.bestiary import Bestiary, all_powers, all_items
-from automation.templates.items import Items
-from automation.simulator.encounter import Encounter
+from pathlib import Path
+
+import pytest
+import yaml
+
 from automation.simulator.deck import Card
+from automation.simulator.encounter import Encounter
 from automation.simulator.player import Player
+from automation.templates.bestiary import Bestiary, all_items, all_powers
+from automation.templates.items import Items
+from automation.templates.powers import Powers
 from automation.utils.logger import logger
 from automation.utils.logger_csv import draw_log, rest_log
 
@@ -162,11 +164,10 @@ def yaml_data(setup):
                     "Mechanic": "Add 1 AP to a creature you can see, including yourself"
                     + ". This effect does not stack with other Powers that grant A.",
                     "Type": "Major",
-                    "XP": 2,
                     "PP": 1,
                     "Range": 6,
                     "StatAdjust": {"AP": 1},
-                    "XP": 1,
+                    "XP": 2,
                 },
                 "Test Passsive": {
                     "Name": "Fake passive",

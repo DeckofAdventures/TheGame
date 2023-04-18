@@ -5,7 +5,6 @@ from typing import Union
 
 from ..utils import logger
 
-
 all_suits = ("C", "D", "H", "S")
 all_vals = ("A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2")
 

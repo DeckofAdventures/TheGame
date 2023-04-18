@@ -7,9 +7,9 @@ from ..utils import (
     ensure_list,
     flatten_embedded,
     list_to_or,
+    logger,
     make_bullet,
     my_repr,
-    logger,
 )
 from .yaml_spec import YamlSpec
 

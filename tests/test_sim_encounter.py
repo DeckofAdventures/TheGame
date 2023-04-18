@@ -56,7 +56,7 @@ def test_apply_status_power(sample_encounter):
     assert "Stunned" in e.PCs[0]._statuses
 
 
-def test_apply_status_power(sample_encounter):
+def test_apply_status_no_sim(sample_encounter):
     e = sample_encounter
     success_string = e._apply_power(
         attacker=e.enemies[0],

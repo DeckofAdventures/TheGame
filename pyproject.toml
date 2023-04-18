@@ -30,7 +30,7 @@ exclude = "notebooks"
 
 [tool.black]
 line-length = 88
-target-version = "py39"
+target-version = ["py39"]
 exclude = ".env"
 
 [tool.isort]

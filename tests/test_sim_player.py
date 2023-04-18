@@ -70,13 +70,13 @@ def test_no_action(setup, sample_player):
     with verbose_context:
         p = sample_player
         p._statuses = {"Stunned": 1}
-        assert p.take_action(type="Minor") == None
+        assert not p.take_action(type="Minor")
 
         p._statuses = {"Burned": 1}
-        assert p.take_action(type="Minor") == None
+        assert not p.take_action(type="Minor")
 
         p._statuses = {"Entangled": 1}
-        assert p.take_action() == None
+        assert not p.take_action()
 
         p.HP = 0
-        assert p.take_action() == None
+        assert not p.take_action()

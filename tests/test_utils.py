@@ -1,4 +1,4 @@
-from automation.utils.dict_manip import flatten_embedded, filter_dict_by_key
+from automation.utils.dict_manip import filter_dict_by_key, flatten_embedded
 
 basic_dict = {"a": 1}
 embed_dict = {"a": {"b": 1}, "c": {"b": 2}, "d": {"b": 3}}

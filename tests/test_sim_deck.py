@@ -1,5 +1,6 @@
-from automation.simulator.deck import Card, Deck
 import pytest
+
+from automation.simulator.deck import Card, Deck
 
 
 def test_gen_card(sample_card):
