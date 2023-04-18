@@ -43,7 +43,12 @@ class Encounter(object):
         self.enemies.append(name)
 
     def _apply_power(
-        self, attacker, targets: List[Player], power=None, return_string=False
+        self,
+        attacker,
+        targets: List[Player],
+        power=None,
+        return_string: bool = False,
+        force_result: int = None,  # Force outcome
     ):
         targets = ensure_list(targets)
         if not power:
@@ -56,6 +61,8 @@ class Encounter(object):
             if power.Save:
                 DR = power.Save.DR or 3 - floor(attacker.Primary_Skill_Mod / 2)
                 result = target.save(DR=DR, attrib=power.Save.Type, return_val=True)
+                if force_result:
+                    result = force_result
                 if result < 0:
                     if power.Save.Fail in self.status_list:
                         target._statuses[power.Save.Fail] = (
@@ -73,10 +80,10 @@ class Encounter(object):
                         result_strings.append(f"{target.Name} {power.Save.Fail}")
                 elif result > 0:
                     result_strings.append(f"{target.Name} resisted {power.Save.Fail}")
-                elif power.Save.Succeed:
-                    result_strings.append(
-                        target.Name + power.Save.Succeed + ". Not simulated"
-                    )
+                    if power.Save.Succeed:
+                        result_strings.append(
+                            target.Name + " " + power.Save.Succeed + ". Not simulated"
+                        )
             if power.Damage:
                 damage = ensure_list(power.Damage)[0]
                 result = attacker.check_by_skill(
@@ -141,7 +148,8 @@ class Encounter(object):
         DR=3,
         participants: List[Player] = None,
         skills: List[str] = None,
-        successes_needed=1,
+        successes_needed: int = 1,
+        return_string: bool = False,
     ):
         """Run epic event. Players go first, them GM.
 
@@ -187,4 +195,9 @@ class Encounter(object):
                         + f"{participant.Name} {participant.result_types[result]}"
                     )
         victor = "GM" if gm_successes > player_successes else "Party"
-        logger.info(f"{victor} wins after {draw_count} total cards drawn")
+        result_string = f"{victor} wins after {draw_count} total cards drawn"
+
+        if return_string:
+            return result_string
+
+        logger.info(result_string)

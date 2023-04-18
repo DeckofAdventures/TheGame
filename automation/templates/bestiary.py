@@ -226,7 +226,7 @@ class Beast:
         if self.Type in ["PC"]:
             if self.PP != 0:
                 logger.warning(
-                    f"{self.Name} has PP in yaml, which is not. Now summed from powers"
+                    f"{self.Name} has unused PP listed in yaml. Now summed from powers"
                 )
             self.PP = self._pow_PP
             self.check_valid()
@@ -244,7 +244,9 @@ class Beast:
                 0,
             )
             if self.Primary_Skill
-            else None
+            else 0
+            # Primary skill mod is zero when no primary skill selected so that save DR
+            # math still works
         )
 
     def fetch_powers(self) -> Tuple[dict, int, int, int]:
@@ -274,7 +276,8 @@ class Beast:
                 logger.warning(f"{self.Name} has a power not in yaml: {power_name}")
                 continue
             if self.Type != "Boss" and "Boss-Only" in power.Category:
-                logger.warning(f"{self.Name} was given a Boss-Only power: {power_name}")
+                logger.warning(f"Removed {self.Name}'s Boss-Only power:{power_name}")
+                continue
 
             output_powers.update({power_name: power.set_choice(choice)})
             powers_pp += max(ensure_list(power.PP))
@@ -484,7 +487,7 @@ class Beast:
         """Return _output relative file path and name for PC file given suffix"""
         return "./automation/_output/", f"PC_{self.Name}_level_{self.Level}.{suffix}"
 
-    def make_pc_html(self, items: list = None):
+    def make_pc_html(self, file_path: str = None, items: list = None):
         """Save pc html as html file
 
         Args:
@@ -493,13 +496,15 @@ class Beast:
             items (list, optional): List of dicts with item name, quantity and info.
                 Defaults a set of items store in the _html function.
         """
-        output_dir, output_filename = self._pc_file_info("html")
-        output_file = output_dir + output_filename
+        output_dir, filename = self._pc_file_info("html")
+        output_file = file_path + filename if file_path else output_dir + filename
         with open(output_file, "w") as f:
             f.write(self._html(items))
         logger.info(f"Wrote HTML {output_file}")
 
-    def make_pc_img(self, items: list = None):
+    def make_pc_img(
+        self, file_path: str = None, items: list = None, browser="chrome", dry_run=False
+    ):
         """Save pc html as png file
 
         Args:
@@ -510,15 +515,18 @@ class Beast:
         """
         from html2image import Html2Image
 
-        hti = Html2Image()
-
-        hti.output_path, output_filename = self._pc_file_info(".png")
-        hti.size = (950, 1200)
-        hti.screenshot(
-            html_str=self._html(items),
-            save_as=output_filename,
+        hti = Html2Image(
+            browser=browser,
         )
-        logger.info(f"Wrote HTML as image: {output_filename}")
+        output_path, filename = self._pc_file_info("png")
+        hti.output_path = file_path or output_path
+        hti.size = (950, 1200)
+        if not dry_run:
+            hti.screenshot(
+                html_str=self._html(items),
+                save_as=filename,
+            )
+        logger.info(f"Wrote HTML as image: {filename}")
 
     @property
     def csv_dict(self) -> dict:

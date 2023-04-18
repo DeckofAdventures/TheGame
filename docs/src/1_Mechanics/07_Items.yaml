@@ -1,3 +1,26 @@
+Template:
+  Cost: X               # Currency cost, in cp, sp, or gp, default is assumed gp
+  Use:
+    Time: Descrip       # Time it takes to use (e.g., Major Action, 1 min)
+    Duration: Descrip   # Use effect is in place for this. If none, persistent effect
+    Limit: X            # Limit uses
+    Effect: Descrip     # On use, this effect. Effect OR Power not both
+    Power: Name         # Named power it grants the wielder, from full Powers list
+  StatAdjust:           # If neither 'Add' nor 'Replace', assumed 'Add'
+      Add:              # For items that add/subtract to/from current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
+      Replace:          # For items that replace current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
+  Prereq:               # For multiple, implies 'OR'. Use [A, B] or `-`
+    Role: One of        # Martial, Defender, Support, Caster
+    Level: X            # Integer
+    Skill: X > 1        # Attrib or Skill > value
+  Save:                 # Separated here, merged in md
+  Range: X              # Default 6
+  AOE: Shape N          #
+  Damage: X             # For Weapons, Default 1
+  Tags: List            # e.g., 2-handed, Ranged - used to sort later # NOT NEEDED?
+
 Light Armor:
   Type: Armor
   StatAdjust:

@@ -190,7 +190,7 @@ class Deck(object):
         if len(self.cards) == 0 and self._use_TC:
             logger.warning("No cards available in deck.")
             return None
-        elif len(self.cards) == 0 and not self.use_TC:
+        elif len(self.cards) == 0 and not self._use_TC:
             self.shuffle()  # for GMs, just shuffle
         card = self.cards.pop()
         if card.val == "A":
@@ -201,12 +201,15 @@ class Deck(object):
 
     def check_by_skill(self, **kwargs):
         if self._use_TC:
-            logger.error("check_by_skill method envoked on a non-GM deck")
+            raise TypeError("check_by_skill method envoked on a non-GM deck")
         kwargs.pop("skill", None)
         return self.check(**kwargs)
 
     def discard(self, n, return_string=False, **_):
         """Draw n cards, return none. Discard/hand as normal"""
+        if n == "all":
+            n = len(self.cards)
+
         draws = []
         for _ in range(n):
             draws.append(self.draw())
@@ -236,7 +239,6 @@ class Deck(object):
             TC (Card): Target card
             TR: (int): Target Range
             mod (int): TR modifier
-            return_val (bool): Return the string. Default False.
         """
         DR = abs(DR)
         draw = self.draw()

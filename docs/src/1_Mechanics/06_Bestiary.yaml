@@ -334,6 +334,7 @@ Necromancer Aspect:
   AP: 0
   AR: 2
   PP: 4
+  Primary_Skill: Knowledge
   Attribs:
     AGL: -1
     CON: 2
@@ -357,6 +358,7 @@ Necromancer:
   AP: 0
   AR: 2
   PP: 6
+  Primary_Skill: Knowledge
   Attribs:
     AGL: -1
     CON: 2
@@ -388,6 +390,7 @@ Spider Queen:
   HP: 11
   AR: 2
   PP: 6
+  Primary_Skill: Knowledge
   Attribs:
     AGL: -1
     CON: 2
@@ -419,6 +422,7 @@ Scorpion Beast:
   AP: 2
   AR: 2
   PP: 4
+  Primary_Skill: Brute
   Attribs:
     AGL: 1
     CON: 0

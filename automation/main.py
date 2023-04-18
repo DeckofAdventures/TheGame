@@ -4,7 +4,8 @@ from pathlib import Path
 from .pdf.split_premades import split_pdf  # requires pdf2image package
 from .templates.main import yaml_to_other  # if writing dot, requires pydot package
 
-if __name__ == "__main__":
+
+def main():
     split_pdf(  # Reading PDFs is slow. Comment out if not using
         dry_run=True,
         roles=["Defender", "Caster", "Support", "Martial"],
@@ -23,3 +24,7 @@ if __name__ == "__main__":
         writing=["md", "csv", "png"],
         out_delim="\t",  # or ',' # for csv
     )
+
+
+if __name__ == "__main__":
+    main()

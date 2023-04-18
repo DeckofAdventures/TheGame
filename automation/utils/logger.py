@@ -16,15 +16,8 @@ stream_handler = logging.StreamHandler()  # default handler
 stream_handler.setFormatter(log_format)
 
 logger.setLevel(level=log_level)
+
+# if logger.hasHandlers():  # reset handlers if already exist, prevent duplicated output
+#     logger.handlers = []
+
 logger.handlers = [stream_handler]
-
-
-def excepthook(exc_type, exc_value, exc_traceback):
-    if issubclass(exc_type, KeyboardInterrupt):
-        sys.__excepthook__(exc_type, exc_value, exc_traceback)
-        return
-
-    logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
-
-
-sys.excepthook = excepthook

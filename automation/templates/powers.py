@@ -53,12 +53,12 @@ class Powers(YamlSpec):
                 Defaults to None, which means all of the following:
                 ["Major", "Minor", "Passive", "Adversary", "House", "Free", "Vulny"]
         """
-        input_files = ensure_list(ambiguous_item=input_files)
-        super().__init__(
-            input_files=[
-                file for file in input_files if "Power" in file or "Vuln" in file
-            ]
-        )
+        input_files = [
+            file
+            for file in ensure_list(ambiguous_item=input_files)
+            if "ower" in file.lower() or "vuln" in file.lower()
+        ]
+        super().__init__(input_files=input_files)
         self._limit_types = limit_types or list_power_types
         self._as_dict = {}
         self._categories = {}
@@ -246,8 +246,9 @@ class Power:
             Upper, Lower, None, -3, 4 would return 2, -2, 0, -3, 4 respectively
 
         """
-        upper_lower = self.Draw.upper()[0]
-        return 2 if upper_lower == "U" else -2 if upper_lower == "L" else 0
+        ul_dict = dict(U=2, L=-2, N=0)
+        val = self.Draw.upper()[0]
+        return ul_dict[val] if isinstance(val, str) else int(self.Draw)
 
     def _compose_adjust(self, stat_adjust_items):
         output = []

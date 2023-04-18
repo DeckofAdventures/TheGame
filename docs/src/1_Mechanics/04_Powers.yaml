@@ -922,7 +922,7 @@ Staggering Blow:
     Save:
         Trigger: On a successful hit,
         Type: VIT
-        Fail: they are Stunned
+        Fail: Stunned
     Tags:
         - Crusader
 

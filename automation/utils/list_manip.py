@@ -23,8 +23,3 @@ def list_to_or(entry):
     entry = [entry] if not isinstance(entry, list) else entry
     entry = [str(i) for i in entry]
     return " or ".join(entry)
-
-
-def or_to_list(entry: str):
-    """Given string, return list split by OR"""
-    return entry.split(" or ")
