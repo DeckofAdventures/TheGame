@@ -61,6 +61,8 @@ class Encounter(object):
             creature (Player): creature to be added
             side (str, optional): Enemies or PCs. Defaults to "Enemies".
         """
+        if not isinstance(creature, Player):
+            creature = Player(**creature)  # Assume dict if not Player class
         if side.lower() == "enemies":
             self.enemies.append(creature)
         else:
