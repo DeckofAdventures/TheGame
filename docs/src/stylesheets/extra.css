@@ -31,7 +31,7 @@
   --md-primary-bg-color:        var(--purp-deep);
   --md-primary-fg-color--dark:  var(--purp-vib);
   --md-accent-fg-color:         var(--purp-mid);
-  --md-code-bg-color:           var(--purp-deep);
+  --md-code-bg-color:           var(--black-ish);
   --md-code-fg-color:           var(--white-ish);
   --md-code-hl-comment-color:   var(--purp-mid);
   --md-footer-fg-color:         var(--purp-lite);
@@ -61,4 +61,3 @@ padding-top: 0px;
 padding-bottom: 0px;
 border-left: 3px solid #80808080;
 }
-

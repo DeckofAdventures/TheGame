@@ -49,6 +49,11 @@ class Bestiary(YamlSpec):
     Example:
         from automation.templates.bestiary import Bestiary, Beast
         Bestiary().as_dict['MyPC'] # Returns Beast object
+
+    Attributes:
+        as_dict (dict): dictionary of all beasts loaded
+        categories (OrderedDict): tuple of type as key, with list values of individuals
+        csv_fields (list): list of fields to be included in csv
     """
 
     # TODO: check stat overrides before printing
@@ -105,7 +110,12 @@ class Bestiary(YamlSpec):
 
 @dataclass(order=True)
 class Attribs:
-    """Class to represent a beast's Attributes"""
+    """Class to represent a beast's Attributes
+
+    Attributes:
+        as_tuple (tuple[int]): set of integers in default order
+        flat (dict): uses 'Attrib' as a prefix in {Attrib_AGL: value} dict
+    """
 
     AGL: int = 0
     CON: int = 0
@@ -131,7 +141,13 @@ class Attribs:
 
 @dataclass(order=True)
 class Skills:
-    """Class to represent a beast's Skills"""
+    """Class to represent a beast's Skills
+
+    Attributes:
+        as_tuple (tuple[int]): set of integers in default order
+        non_defaults (tuple[int]): see above, skip items at 0
+        flat (dict): uses 'Skill' as a prefix in {Skill_AGL: value} dict
+    """
 
     Finesse: int = None
     Stealth: int = None
@@ -491,7 +507,7 @@ class Beast:
         """Save pc html as html file
 
         Args:
-            output_filename (str, optional): Filename, no extension. Always in _output
+            file_path (str, optional): Filename, no extension. Always in _output
                 folder. Defaults to PC_{Name}_level_{Level}.
             items (list, optional): List of dicts with item name, quantity and info.
                 Defaults a set of items store in the _html function.
@@ -508,7 +524,7 @@ class Beast:
         """Save pc html as png file
 
         Args:
-            output_filename (str, optional): Filename, no extension. Always in _output
+            file_path (str, optional): Filename, no extension. Always in _output
                 folder. Defaults to PC_{Name}_level_{Level}.
             items (list, optional): List of dicts with item name, quantity and info.
                 Defaults a set of items store in the _html function.

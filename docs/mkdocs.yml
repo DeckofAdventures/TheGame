@@ -67,8 +67,8 @@ nav:
     - Change Log:           CHANGELOG.md
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
-    - License Info:         LICENSE
-  # FUTURE: Add API for automated items
+    - License Info:         LICENSE.md
+  - API: api/ # defer to gen-files + literate-nav
 
 extra_css:
   - stylesheets/extra.css
@@ -82,6 +82,22 @@ plugins:
   - mike:
       canonical_version: latest
       css_dir: stylesheets
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            members_order: source      
+            group_by_category: false
+            line_length: 88
+  - gen-files:
+      scripts:
+      - ./src/api/make_pages.py
+  - literate-nav:
+      nav_file: navigation.md'
+  - exclude-search:
+      exclude:
+        - "*/navigation.md"
     # - include-markdown # https://github.com/mondeja/mkdocs-include-markdown-plugin
     # when use, add mkdocs-include-markdown-plugin to pip list
 

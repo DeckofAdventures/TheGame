@@ -5,7 +5,7 @@
 
 # Copy top-level repo files for docs display
 for f in $(ls -f C*md); do cp $f ./docs/src/; done
-cp ./LICENSE ./docs/src
+cp ./LICENSE ./docs/src/LICENSE.md
 
 # Generate files from yaml
 python automation/main.py

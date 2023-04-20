@@ -32,7 +32,7 @@ class YamlSpec(ABC):
         input_files = ensure_list(input_files)
         if not input_files:
             logger.critical(
-                "YamlSpec recieved empty file list. Check that file naame contains"
+                "YamlSpec received empty file list. Check that file name contains"
                 + " relevant keywords like 'power', 'vuln', 'best', 'pc', or 'item'"
             )
         elif len(input_files) > 1:
@@ -129,8 +129,12 @@ class YamlSpec(ABC):
 
     # ------------------------------- MARKDOWN UTILITIES -------------------------------
     @property
-    def category_hierarchy(self):
-        """Return list of tuples: [(item, indent, (categ, subcat, subsub, etc.))]"""
+    def category_hierarchy(self) -> list[tuple[str, int, tuple]]:
+        """List of tuples containing (item, indentation, and set of (sub)-categories)
+
+        Returns:
+            list[tuple]: [(item, indent, (category, subcategory, sub-sub, etc.))]
+        """
         if not self._category_hierarchy:
             categories, indents, category_set, prev_category_tuple = [], [], [], tuple()
             for category_tuple in self.categories.keys():
@@ -151,7 +155,7 @@ class YamlSpec(ABC):
 
     @property
     def md_TOC(self) -> str:
-        """Generate markdown Table of Contents with category_heirarchy"""
+        """Generate markdown Table of Contents with category_hierarchy"""
         if not self._md_TOC:
             TOC = "<!-- MarkdownTOC add_links=True -->\n"
             for category, indent, _ in self.category_hierarchy:
@@ -163,7 +167,7 @@ class YamlSpec(ABC):
         """All entries into bulleted lists with key prefixes.
 
         Args:
-            category_set (set): unique set of categories (categ, subcateg)"""
+            category_set (set): unique set of categories (category, subcategory)"""
         entries = ""
         for item_name in self.categories.get(category_set, []):
             entries += self.as_dict[item_name].markdown
@@ -208,9 +212,8 @@ class YamlSpec(ABC):
         Args:
             output_fp (str): relative filepath. Default none, which means local
                 _output subfolder
-            delimeter (str): column delimiter. `\t` for tab or `,` for comma. If other,
+            delimiter (str): column delimiter. `\t` for tab or `,` for comma. If other,
                 must provide extension in ext
-            ext (str): file extension if other than `.csv`, `.tsv`. Must include period
         """
         suffix_dict = {"\t": ".tsv", ",": ".csv"}
         if not output_fp:

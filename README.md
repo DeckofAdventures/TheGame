@@ -35,6 +35,21 @@ python automation/main.py # Generate md docs
 bash docs/docs.sh serve # Generate md docs and deploy site
 ```
 
+`pre-commit` is used to run a series of checks before accepting a commit, as outlined in
+the `.pre-commit-config.yaml`. To turn on this feature within your activated conda
+environment, simply run `pre-commit install`.
+
+N.B.: The markdown lint pre-commit check requires ruby. Feel free to disable this item
+if you are not familiar with ruby. If used, the following file may be a useful addition
+to your markdown lint config: `~/.config/mdl/line_length_88.rb`
+
+```ruby
+all
+exclude_rule 'MD034'
+rule 'MD013', :line_length => 88, :tables => false
+rule 'MD007', :indent => 2
+```
+
 ### VS Code Extensions
 
 The following VS Code extensions have been used to support development...

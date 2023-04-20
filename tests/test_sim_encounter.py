@@ -25,11 +25,12 @@ def test_full_rest(setup, sample_encounter):
         e.sim_full_rest()
 
 
-def test_add_enemy(sample_encounter, sample_bestiary):
+def test_add_creature(sample_encounter, sample_bestiary):
     e = sample_encounter
     s2 = sample_bestiary.raw_data["Test Spider Queen"]
     s2.update(dict(Name="E2", id="D"))
-    e.add_enemy(s2)
+    e.add_creature(s2)
+    e.add_creature(s2, side="PCs")
 
 
 def test_apply_status_power(sample_encounter):

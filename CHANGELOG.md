@@ -16,7 +16,7 @@ While untracked edits may change individual pages and patches may systematically
 multiple pages, minor and major versions will be accompanied by descriptors detailing
 the nature of these changes.
 
-## [1.0.0a6] - Unreleased
+## 1.0.0a6 - Unreleased
 
 + Update misc bugs in notebooks/simulator
 + Update changelog description of MINOR/PATCH to reflect actual use
@@ -74,7 +74,6 @@ the nature of these changes.
 
 + Started discussions and drafts
 
-[1.0.0a6]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a6
 [1.0.0a5]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a5
 [1.0.0a4]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a4
 [1.0.0a3]: https://github.com/DeckofAdventures/TheGame/releases/tag/1.0.0a3

@@ -136,7 +136,7 @@ class Player(Deck, Beast):
         else:
             result = self.check(TC, DR, mod=mod, **new_kwargs)
 
-        # NOTE: drawlog doesn't know if had options
+        # NOTE: draw_log doesn't know if had options
         draw_log.info(
             [
                 self.id,
@@ -170,7 +170,7 @@ class Player(Deck, Beast):
         if abs(new_kwargs.get("upper_lower_int", 1)) > n_deck or n_deck == 0:
             # does not offer option to use fate cards to avoid fatigue
             self.modify_fatigue(1)
-            logger.warning("mod fat from checkby")
+            logger.debug("Modified fatigue from Player.save")
 
         # Need to account for return_string for bot and result for checking result
         if new_kwargs.get("return_string"):

@@ -7,7 +7,7 @@ name = "automation" # TODO: Rename package
 authors = [{name = "Chris Broz", email = "broz@DeckOfAdventures.com"}]
 description = "ADD LATER"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 keywords = ["ADD", "LATER"]
 license = {text = "CC BY-NC-SA 4.0"}
 classifiers = ["Programming Language :: Python :: 3"]
@@ -30,7 +30,7 @@ exclude = "notebooks"
 
 [tool.black]
 line-length = 88
-target-version = ["py39"]
+target-version = ["py310"]
 exclude = ".env"
 
 [tool.isort]

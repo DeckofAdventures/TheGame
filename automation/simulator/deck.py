@@ -12,8 +12,11 @@ class Card(object):
     """Card class
 
     Example use:
+        ```python
         from automation.simulation.deck import Card
-        Card("SA") OR Card("S","A")
+        Card("SA") == Card("S","A")
+        > True
+        ```
 
     Attributes:
         suit (str): one of [D,C,H,S,R,B] for Diamond, Club, Heart, Spade, Red, Black
@@ -113,12 +116,14 @@ class Deck(object):
     """Full deck of cards
 
     Example use:
+        ```python
         from automation.simulation.deck import Deck
         d=Deck()
         d.draw()
         > ♦️ A
         d.check(TC=Card("S","A"),DR=3)
         > [INFO]: Drew ♦️ 8 vs ♠️ A with DR 3: Miss
+        ```
 
     Attributes:
         suits (tuple): all suits in deck
@@ -168,7 +173,7 @@ class Deck(object):
 
         Args:
             limit (int, optional): Number of cards to shuffle back into deck. Defaults
-            to None.
+                to None.
         """
         random.shuffle(self.discards)
         if not limit:
@@ -230,7 +235,7 @@ class Deck(object):
 
         Returns:
             str | None: If return_string, report "Drew X"
-        """        """"""
+        """ """"""
         if n == "all":
             n = len(self.cards)
 
@@ -243,7 +248,7 @@ class Deck(object):
 
     def exchange_fate(self, return_string=False) -> str | None:
         """Move fate card from hand. If Ace, add to discard
-        
+
         Args:
             return_string (bool, optional): Default to False"""
         if len(self.hand) == 0:
@@ -310,15 +315,15 @@ class Deck(object):
                 for example, -1 for draw 2 lower
             draw_all (bool): If upper hand, draw all before stopping. Default false.
             return_val (bool): Return the integer of the result. Default False.
-            return_string (bool): Return the string describing what happened. Default 
+            return_string (bool): Return the string describing what happened. Default
                 False.
-            verbose (bool): Log the result string as a debug item            
-            
+            verbose (bool): Log the result string as a debug item
+
         Returns:
-            tuple | str: If return_string, returns a tuple containing the result as a 
+            tuple | str: If return_string, returns a tuple containing the result as a
                 string, followed by the result value. If return_val, only integer result.
         """
-        
+
         DR = max(0, abs(DR) + mod)  # Apply mod to non-negative TR
         if upper_lower_int:
             upper_lower = (

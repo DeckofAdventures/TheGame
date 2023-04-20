@@ -25,7 +25,7 @@ def split_pdf(
             Defaults to Path(glob("../_input/temp_CharSheet*pdf")[0]).
         out_folder (Path, optional): Output png folder.
             Defaults to Path("../docs/src/1_Mechanics/PremadeCharacters/").
-        return_paths (bool): If True, function returns list of output Patlib objects.
+        return_paths (bool): If True, function returns list of output Pathlib objects.
             Defaults False.
     """
     role_idx = 0  # Initialize which role

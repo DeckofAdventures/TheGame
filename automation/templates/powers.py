@@ -40,7 +40,8 @@ class Powers(YamlSpec):
 
     Attributes:
         as_dict (dict): dictionary of powers with ids as keys
-        categories
+        categories (OrderedDict): tuple of type as key, with list values of individuals
+        csv_fields (list): list of fields to be included in csv
     """
 
     def __init__(self, input_files="04_Powers_SAMPLE.yaml", limit_types: list = None):
