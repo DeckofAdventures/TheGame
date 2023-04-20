@@ -11,3 +11,8 @@ pytest # tests
 pytest-cov # test coverage
 python-dotenv # Loading .env viles
 pyyaml # Importing yml
+mkdocs # Docs core
+mkdocs-exclude # Docs exclude files
+mkdocs-material # Docs theme
+mkdocs-gen-files # Docs API
+mike # Docs versioning

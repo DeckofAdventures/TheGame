@@ -10,8 +10,8 @@ edit_uri: blob/main/docs/src/
 theme:
     name: material
     custom_dir: overrides
-    logo: assets/club.svg
-    favicon: assets/spade.svg
+    logo: stylesheets/Logo_Transparent.png
+    favicon: stylesheets/spades.svg
     features:
       - toc.integrate
       - navigation.sections
@@ -55,6 +55,8 @@ nav:
     - Character Creation:   1_Mechanics/03_CharacterCreation.md
     - Powers:               1_Mechanics/04_Powers.md
     - Vulnerabilities:      1_Mechanics/05_Vulnerabilities.md
+    - Bestiary:             1_Mechanics/06_Bestiary.md
+    - Items:                1_Mechanics/07_Items.md
     - Glossary:             1_Mechanics/99_Glossary.md
     - Tools:                1_Mechanics/Visual_Tools/README.md
     - Premades:             1_Mechanics/PremadeCharacters/README.md
@@ -66,16 +68,20 @@ nav:
     - Contributions:        CONTRIBUTING.md
     - Code of Conduct:      CODE_OF_CONDUCT.md
     - License Info:         LICENSE
-  # FUTURE: Add API for autmated items
+  # FUTURE: Add API for automated items
 
 extra_css:
   - stylesheets/extra.css
 
 plugins:
-    - search
-    - exclude:
-        glob:
-          - "temp*"
+  - search
+  - exclude:
+      glob:
+        - "temp*"
+        - "0*yaml"
+  - mike:
+      canonical_version: latest
+      css_dir: stylesheets
     # - include-markdown # https://github.com/mondeja/mkdocs-include-markdown-plugin
     # when use, add mkdocs-include-markdown-plugin to pip list
 
@@ -92,6 +98,8 @@ extra:
       link: https://github.com/DeckofAdventures/TheGame
     - icon: fontawesome/brands/discord
       link: https://discord.gg/dk6RfWgPHF
+  version:
+    provider: mike
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY

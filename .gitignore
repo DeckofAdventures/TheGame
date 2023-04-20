@@ -25,3 +25,4 @@ tests/test_data/*
 # duplicate items when build with docker
 docs/src/C*
 docs/src/LI*
+docs/site/*

@@ -39,13 +39,15 @@ jobs:
         run: | # Later: mkdocs-include-markdown-plugin
           for f in C*md; do cp $f ./docs/src/; done 
           cp LICENSE ./docs/src/
-          pip install mkdocs-material mkdocs-exclude
+          pip install mkdocs-material mkdocs-exclude mkdocs-gen-files mike
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       
       - name: Deploy
-        run: | 
-          mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
+        run: |
+          bash ./docs/docs.sh 
+          git push https://github.com/CBroz1/TheGame.git gh-pages # EDIT!
         env:
           USERNAME: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+
