@@ -1,14 +1,14 @@
 name: build
 on:
-  pull_request:      # close of PR. Insufficient permissions?
+  pull_request:
     branches:
       - main
     types:
       - closed
-  push:              # on pushing to page-test, as a dev branch for forks only
+  push:
     branches:
       - page-test
-  workflow_dispatch: # on clicking browser GUI button - Not working?
+  workflow_dispatch: # on clicking browser GUI button
 
 permissions:
   contents: write
@@ -40,13 +40,12 @@ jobs:
           for f in C*md; do cp $f ./docs/src/; done 
           cp LICENSE ./docs/src/
           pip install mkdocs-material mkdocs-exclude mkdocs-gen-files mike
-          pip install .
+          pip install -e .
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       
       - name: Deploy
         run: |
-          bash ./docs/docs.sh 
-          git push https://github.com/CBroz1/TheGame.git gh-pages # EDIT!
+          bash ./docs/docs.sh push ${{ vars.GITHUB_REPOSITORY_OWNER }}
         env:
           USERNAME: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

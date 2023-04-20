@@ -1,5 +1,7 @@
 #!/bin/bash
-# Run this script from repo root: > sh ./docs/docs.sh serve
+# Run this script from repo root to serve site: > sh ./docs/docs.sh serve
+# Then, navigate to localhost:8000/ to inspect site
+# ctrl+c to exit
 
 # Copy top-level repo files for docs display
 for f in $(ls -f C*md); do cp $f ./docs/src/; done
@@ -20,12 +22,18 @@ mike alias $MAJOR_VERSION latest --config ./docs/mkdocs.yml
 mike set-default latest --config ./docs/mkdocs.yml
 
 # # Serve site to localhost
-if [ "$1" == "serve" ]; then
+if [ "$1" == "serve" ]; then # If first arg is serve, serve docs
     mike serve --config ./docs/mkdocs.yml
-elif [ "$1" == "push" ]; then
-    git push https://github.com/$(git config user.name)/TheGame.git gh-page
+elif [ "$1" == "push" ]; then # if first arg is push
+    if [ -z "$2" ]; then # When no second arg, use local git user
+        export git_user=$(git config user.name)
+    else # Otherwise, accept second arg as git user
+        export git_user="${2}"
+    fi # Push mike results to relevant branch
+    git push https://github.com/$(git_user)/TheGame.git gh-page
 else
     echo "Docs built. "
     echo "  Add 'serve' as script arg to serve. "
     echo "  Add 'push' to push to your fork."
+    echo "  Use additional arg to dictate push-to fork"
 fi
