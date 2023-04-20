@@ -148,6 +148,13 @@
 - XP: 2
 - Prereq Level: 2
 
+**Quick Draw**
+
+- Description: Reflexes so quick, you're always at the ready.
+- Mechanic: Passive. When drawing a TC for combat, you may draw with Upper Hand.
+- Prereq Skill: AGL > 2
+- Tags: Combat
+
 ## Mystic Attacks
 
 **Mystic Attack**

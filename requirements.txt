@@ -4,6 +4,11 @@ html2image # Generating images from html
 ipykernel # ipython for debugging
 jupyter # Running notebooks
 jupytext # For syncing notebooks with py_scripts
+mike # Docs versioning
+mkdocs # Docs core
+mkdocs-exclude # Docs exclude files
+mkdocs-gen-files # Docs API
+mkdocs-material # Docs theme
 notebook # Running notebooks
 pdf2image # spliting multi-page pdf
 pre-commit # Checking files before commits
@@ -11,8 +16,3 @@ pytest # tests
 pytest-cov # test coverage
 python-dotenv # Loading .env viles
 pyyaml # Importing yml
-mkdocs # Docs core
-mkdocs-exclude # Docs exclude files
-mkdocs-material # Docs theme
-mkdocs-gen-files # Docs API
-mike # Docs versioning

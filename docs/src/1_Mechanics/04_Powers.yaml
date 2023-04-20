@@ -573,6 +573,17 @@ Speedy:
     Type: Passive
     XP: 1
 
+Quick Draw:
+    Category: [ Combat, Control ]
+    Type: Passive
+    XP: 0 # If AGL > 2, free Upper Hand on TC draw
+    PP: 0
+    Prereq:
+        Skill: AGL > 2
+    Tags: Combat
+    Description: Reflexes so quick, you're always at the ready.
+    Mechanic: When drawing a TC for combat, you may draw with Upper Hand.
+
 Focused:
     Category:
         - Roleplay
