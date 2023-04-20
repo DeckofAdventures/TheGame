@@ -40,6 +40,7 @@ jobs:
           for f in C*md; do cp $f ./docs/src/; done 
           cp LICENSE ./docs/src/
           pip install mkdocs-material mkdocs-exclude mkdocs-gen-files mike
+          pip install .
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       
       - name: Deploy
