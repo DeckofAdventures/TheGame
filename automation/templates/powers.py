@@ -284,7 +284,8 @@ class Power:
                 output += [adjust.text for adjust in self.StatAdjusts]
             if self.Save:
                 output.append(self.Save.text)
-            return ". ".join([self.Type, *output])
+            output_concat = ". ".join([self.Type, *output])
+            return output_concat.replace("..", ".")
 
     @property
     def _mechanic_for_item(self) -> str:

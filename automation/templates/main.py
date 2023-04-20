@@ -27,7 +27,7 @@ def yaml_to_other(
         if run_samples and "Vuln" not in file:
             file = file.split(".")[0] + "_SAMPLE.yaml"
 
-        logger.info(f"Started {file}")
+        logger.debug(f"Started {file}")
 
         if "best" in file.lower() or "pc" in file.lower():
             my_class = Bestiary(file)

@@ -170,7 +170,7 @@ Huge Golem:
     AGL: -1
     INT: -1
   Powers:
-    - Shield, Self
+    - Shield
     - Momentum Aura
     - Attack, Sweep
 
@@ -210,7 +210,7 @@ Grunt, Shielded:
     INT: -1
   Powers:
     - Attack, Weapon
-    - Shield, Self
+    - Shield
   Level: 1
   Description: A low level soldier with a Shield.
 
@@ -225,7 +225,7 @@ Guard:
     VIT: 1
   Powers:
     - Attack, Weapon
-    - Shield, Self
+    - Shield
     - Attack, Sweep
     - Momentum
   Level: 2
@@ -246,7 +246,7 @@ Captain, Defender:
     INT: -1
   Powers:
     - Attack, Weapon
-    - Shield, Self
+    - Shield
     - Attack, Sweep
     - Attack, Charge
     - Momentum Aura
@@ -269,7 +269,7 @@ Mystic, Caster:
     - Attack, Mystic Cone
     - Attack, Mystic Confusion
     - Attack, Mystic Entangle
-    - Shield, Self
+    - Shield
   Description: A powerful Caster with access to mystic attacks.
 
 Sentinel, Martial:
@@ -287,7 +287,7 @@ Sentinel, Martial:
     - Attack, Weapon
     - Attack, Sweep
     - Attack, Charge
-    - Attack, Disarm
+    # - Attack, Disarm # CB: No longer a power. Replace?
   Description: A Martial with access to Powers.
 
 Ritualist, Support:
@@ -310,7 +310,7 @@ Ritualist, Support:
     - Lend Vigor
     - Lend Distraction
     - Slow
-    - Shield, Others
+    - Shield
   Description: A Support with access to Powers.
 
 Specter:
@@ -406,10 +406,10 @@ Spider Queen:
     - Shake Enemy
     - Favored Terrain 
     - Manifest Terrain
-    - Condition Immunity, Poisoned
-    - Condition Resilience, Blinded
+    - Condition Immunity: Poisoned
+    - Condition Resilience: Blinded
     - Terrain Blink
-    - Conjure Terrain 
+    - Manifest Terrain: Web
     - Adversary Major Action
     - Shake Enemy
     - Wall Grab

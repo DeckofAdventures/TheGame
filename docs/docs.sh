@@ -5,6 +5,9 @@
 for f in $(ls -f C*md); do cp $f ./docs/src/; done
 cp ./LICENSE ./docs/src
 
+# Generate files from yaml
+python automation/main.py
+
 # Get major version (for full, '[0-9]\.[0-9]+\.[a-z0-9]+')
 export MAJOR_VERSION=$(cat ./automation/version.py | grep -oE '[0-9]\.[0-9]+')
 echo $MAJOR_VERSION

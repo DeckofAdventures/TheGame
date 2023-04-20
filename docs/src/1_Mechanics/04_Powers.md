@@ -3,34 +3,84 @@
 
 # Boss-Only
 
+**Manifest Terrain**
+
+- Mechanic: Major. For 1 PP, you change the area around you to an ensnaring landscape. On starting turn, target(s) make a DR 2 AGL Save. On fail, target(s) Entangled.
+- AOE: Aura 2
+
+**Undying**
+
+- Mechanic: Passive. This creature cannot be killed by traditional weapons. On reaching 0 HP, this creature goes into a stasis. The following day, they return to 1 HP. A GM determines the corresponding Vulnerability that counteracts this effect.
+
+**Undying Vulnerability**
+
+- Mechanic: Vulny. When the creature is exposed to this Vulnerability, they take 1 damage. While the creature is at 0 HP, when they are exposed to this Vulnerability they are instead killed. A GM determines the nature of Vulnerability that a creature possesses to trigger this effect, such as exposure to sunlight.
+
+**Stunning Glare**
+
+- Mechanic: Major. Force one target within range to make a DR 2 CON Save. On a failure, they take 2 damage and are Stunned. On a success, they take half damage and are not Stunned.
+- Range: 10
+
+**Drain Life**
+
+- Mechanic: Major. Force all targets within Aura 2 to make a DR 2 VIT Save. On a failure, they take 1 damage and the Boss is healed for the total amount of damage dealt.
+- AOE: Aura 2
+
+**Grant Invisibility**
+
+- Mechanic: Major. Target a creature within range. That creature gains the *Invisible* condition.
+- Range: 10
+
 ## Adversary Actions
+
+**Ally Swap**
+
+- Mechanic: Adversary. Choose a friendly creature within 10 spaces and swap places with them. That creature can then make one Attack, Weapon to a creature within 1 space after the swap is complete.
 
 **Adversary Major Action**
 
 - Mechanic: Adversary. Once per round, you make take an additional Major Action after a Dealer's turn.
 
-## House Actions
+**Drain Stamina**
 
-**Manifest Terrain**
-
-- Mechanic: House. For 1 PP, you change the area around you to an ensnaring landscape. On starting turn, target(s) make a DR 2 AGL Save. On fail, target(s) Entangled.
+- Mechanic: Adversary. All creatures within 2 spaces make a DR 2 GUT Save. On a failure, discard 2 cards.
 - AOE: Aura 2
 
-**Obey Me**
+**Phase Shift**
 
-- Mechanic: House. For 2 PP, enthrall an enemy. On starting turn, target(s) make a DR 2 CON Save. On fail, target(s) must move up to 4 spaces and/or take one Major Action at your direction on each turn. On success, target(s) end effect.
+- Mechanic: Adversary. Choose a space within 10 spaces and move there instantly.
+
+**Shake Enemy**
+
+- Mechanic: Adversary. Choose a creature within 10 spaces. They make a DR 2 CON Save. On a failure, their next check will be made at Lower Hand.
+
+## House Actions
+
+**Summon Ally**
+
+- Description: Your authority allows you to call for reinforcements.
+- Mechanic: House. Select N creatures from the Bestiary and summon them to the battlefield. The GM determines how many creatures are summoned.
 
 **Amplify Ally**
 
 - Description: Move the chess pieces on your board.
 - Mechanic: House. Select one ally. They can immediately move up to 4 spaces and take one Action.
 
+**Wall Grab**
+
+- Description: Even the walls of your House obey you. Hold still!
+- Mechanic: House. All creatures within 2 spaces of a wall must make a DR 2 AGL Save. On a failure, they take 1 damage and are Entangled.
+
+**Obey Me**
+
+- Mechanic: House. For 2 PP, enthrall an enemy. On starting turn, target(s) make a DR 2 CON Save. On fail, target(s) must move up to 4 spaces and/or take one Major Action at your direction on each turn. On success, target(s) end effect.
+
 # Combat
 
 **Staggering Blow**
 
 - Description: Getting something to stay still is just a matter of applying pressure in the right spot. Or hitting that spot really hard.
-- Mechanic: Major. For 1 PP, Make a Weapon Attack against a creature. On a successful hit,, target(s) make a VIT Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) they are Stunned.
+- Mechanic: Major. For 1 PP, Make a Weapon Attack against a creature. On a successful hit,, target(s) make a VIT Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) Stunned.
 - XP: 2
 - Range: 1
 - Prereq Role: Defender
@@ -44,7 +94,7 @@
 **Aura of Defensive Damage**
 
 - Description: Protecting others from harm can be challenging when you can't be multiple places at once. Radiating an Aura helps.
-- Mechanic: Minor. For 1 PP, Allied creatures within range gain the effects of your Aura for 1 minute. When a creature is hit by a melee attack, the attacker takes 1 damage.
+- Mechanic: Minor. For 1 PP, Allied creatures within range gain the effects of your Aura. For one minute, when a creature is hit by a melee attack, the attacker takes 1 damage.
 - XP: 2
 - AOE: Aura 6
 - Prereq Role: Defender
@@ -55,10 +105,11 @@
 **Aura of Regeneration**
 
 - Description: It is often said that working together means supporting each other's weaknesses and strengths. In some cases amplifying others is the best strength of all.
-- Mechanic: Minor. For 2 PP, Allied creatures within range gain the effects of your Aura for 1 minute. When they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
+- Mechanic: Minor. For 2 PP, Allied creatures within range gain the effects of your Aura. For one minute, when they draw a Suited Hit or a Suited Miss, they regain 1 PP, limited to 1 per round.
 - XP: 2
+- AOE: Aura 6
 - Prereq Role: Defender
-- Prereq Level: 3
+- Prereq Level: 2
 - Prereq Skill: Brute > 1
 - Tags: Crusader
 
@@ -70,17 +121,10 @@
 - Mechanic: Passive. When drawing initiative, Draw with Upper Hand.
 - XP: 1
 
-**Critical Master**
-
-- Description: When you hit big, you hit BIG. Enemies don't stand a chance against you when you make a critical hit against them.
-- Mechanic: Passive. All Critical Success attacks now deal double damage instead of adding +1 damage.
-- XP: 1
-- Prereq Level: 3
-
 **Momentum**
 
 - Description: By brute strength, force others to move around the battlefield.
-- Mechanic: Passive. As part of your movement, you attempt to move a character who is within 1 space of you.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) are moved to 1 space of attacker's end position.
+- Mechanic: Minor. As part of your movement, you attempt to move a creature who is within 1 space of you. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) are moved to 1 space of attacker's end position.
 - XP: 1
 - Prereq Role: Defender
 - Prereq Skill: Brute > 0
@@ -88,63 +132,71 @@
 **Momentum Aura**
 
 - Description: Your strength is supernatural, bending the gravity around you.
-- Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces.. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position..
-- XP: 2
+- Mechanic: Major. For 1 PP, Your Momentum ability extends to 2 spaces. If unwilling, target(s) make a STR or AGL Save with a DR of 3 minus half the Primary Skill of the Attacker. On fail, target(s) be moved to 1 space of attacker's end position.
+- XP: 1
 - Targets: 6
 - Prereq Role: Defender
+- Prereq Level: 2
 - Prereq Skill: Brute > 1
 - Prereq Power: Momentum
 - Tags: Multi-target
 
-**Find Weakness**
-
-- Description: You can size up an opponent and discover their weaknesses.
-- Mechanic: Minor. As a Minor Action, you make a contested Detection check vs. the target's Bluffing. On a Success, you learn one Vulnerability and on Critical Success you learn all Vulnerabilities.
-- XP: 1
-- Prereq Level: 2
-- Prereq Skill: Detection > 0
-- Tags: Difficulty Prediction
-
 **Pack Tactics**
 
 - Description: When an enemy is outnumbered, you know just how to take advantage.
-- Mechanic: Minor. For 1 PP, When an enemy is next to one or more of your allies, you may expend a Minor Action to grant yourself Upper Hand (+1) on your next attack for each ally in their space. If allies or targets move before you attack, this bonus is adjusted accordingly.
+- Mechanic: Passive. When an enemy is next to one or more of your allies, you have Upper Hand (+1) on your attack for each ally within 1 space of them.
 - XP: 2
 - Prereq Level: 2
-- Tags: Difficulty Prediction
 
 ## Mystic Attacks
 
-**Attack, Mystic**
+**Mystic Attack**
 
 - Description: You've been trained in some form of Magic to Technology and can produce the most basic form with ease. This could be an electrified touch or a blast of energy at range.
 - Mechanic: Major. You can make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - XP: 1
+- Range: 12
 - Prereq Skill: Knowledge > 0 or Craft > 0
+
+**Mystic Attack**
+
+- Mechanic: Major. Your Mystic Attacks now deal +1 damage.
+- XP: 2
+- Range: 12
+- Prereq Level: 3
+- Prereq Skill: Knowledge > 1 or Craft > 1
 
 **Attack, Mystic Aura**
 
 - Description: You deploy resources to channel your magic all around you.
-- Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s)
+- Mechanic: Major. For 1 or 2 PP, You perform your Mystic Attack on all characters within 1 or 2 space(s) of you.
 - XP: 2
 - Prereq Role: Caster or Support
 - Prereq Power: Attack, Mystic
 - Tags: Multi-target
 
-**Attack, Mystic Amplification**
+**Mystic Amplification**
 
 - Description: You channel your talents into a physical weapon, melding the physical and supernatural.
-- Mechanic: Major. For 1 PP, Designate a physical weapon. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
-- XP: 1
-- Prereq Role: Martial or Caster
+- Mechanic: Major. For 1 PP, Designate a weapon you are wielding. You may make a Weapon Attack with this weapon using your Primary Skill modifier. This property is lost when you use another Power.
+- XP: 2
 - Prereq Power: Attack, Mystic
+
+**Mystic Amplification**
+
+- Description: You channel your talents into a physical weapon, melding the physical and supernatural.
+- Mechanic: Major. For 1 PP, Designate a weapon you are wielding. You may make a Weapon Attack with this weapon using your Primary Skill modifier. The weapon's damage increases by +1. This property is lost when you use another Power.
+- XP: 2
+- Prereq Power: Attack, Mystic or Attack, Mystic Amplification
 
 **Attack, Mystic Cone**
 
 - Description: You deploy resources to channel your magic in a wide blast in front of you.
-- Mechanic: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down. For 1 PP, All characters in a Cone 3 are subjected to this effect.
+- Mechanic: Major. Mystic Attack or DR 3 CON Save to avoid being Knocked Down. For 2 PP, All characters in a Cone 3 are subjected to this effect. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down, take 2 damage. On success, target(s) Take half damage.
 - XP: 2
+- AOE: Cone 3
 - Prereq Role: Caster
+- Prereq Level: 3
 - Prereq Skill: Knowledge > 1 or Craft > 1
 - Prereq Power: Attack, Mystic
 - Tags: Multi-target
@@ -152,8 +204,10 @@
 **Attack, Mystic Confusion**
 
 - Description: You channel your abilities to target the psyche of your enemy to leave them incapacitated.
-- Mechanic: Major. For 1 or 2 PP, You draw a Target Card and force 1 or 3 characters to make a Conviction check against your TC. On a failure, those characters are Stunned.
+- Mechanic: Major. For 1 or 2 PP, You force 1 to 2 creatures to make a GUT Save. On a failure, those creatures are Stunned. Once, target(s) make a DR 3 GUT Save. On fail, target(s) Stunned.
 - XP: 2
+- Range: 12
+- Targets: 1 or 2
 - Prereq Role: Support or Caster
 - Prereq Power: Attack, Mystic
 - Tags: Multi-target
@@ -161,7 +215,7 @@
 **Attack, Mystic Entangle**
 
 - Description: You channel your abilities to tie your target in place.
-- Mechanic: Major. For 1 or 2 PP, Selected targets make a Save. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled.
+- Mechanic: Major. For 1 or 2 PP, Choose a point you can see within 12 spaces. All creatures within Aura 3 make a Save. Once, target(s) make a DR 3 AGL Save. On fail, target(s) Entangled.
 - XP: 2
 - Targets: 1 or 3
 - Prereq Role: Support or Caster
@@ -180,138 +234,101 @@
 
 **Attack, Mystic Dual-Shot**
 
-- Description: You are so adept mystic arts you can start another spell before even finishing the first.
+- Description: You are so adept mystic arts you can start another cast before even finishing the first.
 - Mechanic: Minor. On your turn, you may take a second Mystic Attack with Lower Hand.
 - XP: 3
-- Prereq Skill: Finesse > 1 or Knowledge > 1 or Craft > 1
+- Prereq Level: 2
+- Prereq Skill: Finesse > 0 or Knowledge > 0 or Craft > 0
 - Prereq Power: Attack, Mystic
-- Tags: Multi-target
 
-**Attack, Mystic Dual-Wield Master**
+**Attack, Mystic Dual-Shot Master**
 
-- Description: You are a master of wielding two weapons in combat.
+- Description: You are a master of wielding the mystic arts in combat.
 - Mechanic: Minor. On your turn, you may take a second Mystic Attack as a Minor Action.
-- XP: 1
 - Prereq Level: 3
-- Prereq Power: Attack, Mystic Dual-Shot
-- Tags: Multi-target
+- Prereq Skill: Finesse > 1 or Knowledge > 1 or Craft > 1
+- Prereq Power: Attack, Mystic Dual-Wield
 
 ## Support
 
 **Heal**
 
 - Description: Can channel magical energy or medical training to heal others
-- Mechanic: Major. For 1 or 2 PP, Heal yourself or another you can see for 1 or 3 Health Points
+- Mechanic: Major. For 1 or 2 PP, Heal yourself or another you can see for 1 or 2 Health Points
 - XP: 2
 - Prereq Role: Support
+
+**Heal**
+
+- Description: Can channel magical energy or medical training to heal others
+- Mechanic: Major. For 1 or 2 PP, Heal yourself or another you can see for 2 or 3 Health Points
+- XP: 2
+- Prereq Role: Support
+- Prereq Level: 3
+- Prereq Power: Heal
 
 **Lend Aid**
 
 - Description: Just a little help from a friend
-- Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. On the ally's next Draw, they may use your card as if they had Upper Hand
+- Mechanic: Minor. Draw a card, hold it in reserve, and designate one creature within 12 spaces. At any time within the next 1 minute, the creature may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
 - XP: 1
-- Prereq Role: Support
-
-**Lend Aid, Advanced**
-
-- Description: A little help goes a long way
-- Mechanic: Minor. Draw a card, hold it in reserve, and designate one ally. At any time before their next rest, the ally may use your card as if they had Upper Hand. If you use this Power again before the card is used, the effect transfers to the new target.
-- XP: 1
-- Prereq Role: Support
-- Prereq Power: Lend Aid
-
-**Lend Confusion**
-
-- Description: You're such a distracting presence that you bury into the mind of your target, having a sustained effect.
-- Mechanic: Major. Select one character to put under the effect of the Lend Distraction Power. At the end of each of their turns this character makes a Contested Conviction Check vs. your Primary Skill to end the effect.
-- XP: 1
-- Prereq Role: Support or Caster
-- Prereq Level: 2
-- Prereq Power: Lend Distraction
-
-**Lend Mass Confusion**
-
-- Description: You're such a distracting presence that you bury into the mind of many target, having a sustained effect.
-- Mechanic: Major. For 2 PP, You draw a TC. 2 or 3 targets make a Conviction check against your TC. On a failure, targets draw with the Lower Hand on any actions made during their turn. At the end of each of their turns, targets may repeat the check to end the effect.
-- XP: 2
-- Prereq Role: Support or Caster
-- Prereq Level: 3
-- Prereq Power: Lend Confusion
-- Tags: Multi-target
-
-**Lend or Remove Skill**
-
-- Description: You really know how to target an ability and either support it or get in it's way.
-- Mechanic: Major. For 1 or 2 PP, Designate a character that you would like to Boost or Reduce and choose a Skill (or action that would require a Skill such as Attack). This character draws at Upper or Lower Hand (2 or 3) checks that involve this Skill on their next turn
-- XP: 2
-- Prereq Role: Support
-
-**Lend Readiness**
-
-- Description: Your talents bolster you allies' speed and alertness.
-- Mechanic: Minor. Select one character. Until the end of the next combat, this character draws their Target Card with the Upper Hand. This effect is maintained even if you use another Power.
-- XP: 1
+- Range: 12
 - Prereq Role: Support
 
 **Lend Vigor**
 
 - Description: Channel energy to do more than help: inspire!
-- Mechanic: Major. For 1 or 2 PP, Designate 1 or 2 character(s) who, on their next turn, can take an additional Major Action and move 2 additional spaces during their movement.
-- XP: 2
+- Mechanic: Major. For 2 PP, Target creature can take an additional Major Action and move 2 additional spaces during their movement on their next turn.
+- XP: 3
 - Prereq Role: Support or Caster
+- Prereq Level: 2
 
 **Slow**
 
-- Description: You selectively bend the nature of time
-- Mechanic: Major. For 2 PP, Select a point in space. You initiate a Primary Skill Contested Check vs. Strength for all creatures within 2 spaces. On a failure, their speed is halved and they are limited to one Major or Minor action per turn. A creature that starts their turn outside of the area is no longer affected. Objects in the area are slowed until the effect ends or they are moved by a creature
+- Description: You selectively bend time.
+- Mechanic: Major. For 2 PP, Pick a point in space you can see within range. All creatures within Aura 2 must make a STR Save. On a failure, their speed is halved and they are limited to one Action on their next turn.
 - XP: 2
+- Range: 12
+- AOE: Aura 2
 - Prereq Role: Support or Caster
-- Prereq Level: 3
 
-**Shield, Others**
+**Shield**
 
 - Description: Fortify others by summoning magical armor.
-- Mechanic: Major. For 1 or 2 PP, Add 1 or 2 AP to a creature you can see. This effect does not stack with other Powers, but does stack on top of AP granted by physical items.
+- Mechanic: Major. For 1 PP, Add 1 AP to a creature you can see, including yourself. This effect does not stack with other Powers that grant AP.
 - XP: 2
-- Prereq Role: Support
-
-**Shield, Self**
-
-- Description: Fortify yourself even further, adjusting your shield or summoning magical armor.
-- Mechanic: Minor. For 1 or 2 PP, Add 1 or 2 AP to yourself. This effect is in addition to AP from physical items, but must replace AP from other Powers.
-- XP: 2
-- Prereq Role: Defender
+- Prereq Role: Defender or Support
 
 ### Distract
 
 **Lend Distraction**
 
 - Description: Just an annoyance in the distance
-- Mechanic: Minor. As a Minor Action, designate a character who, on their next draw, will draw with the Lower Hand.
+- Mechanic: Minor. For 1 PP, Draw a card, hold it in reserve, and designate one creature within 12 spaces. On the creature's next Draw, they use your card as if they had Lower Hand.
 - XP: 1
-
-**Lend Mass Distraction**
-
-- Description: You know how to cause a scene.
-- Mechanic: Major. For 1 or 2 PP, Draw a Target Card. 2 or 3 targets make a Conviction check against your TC. On a failure, those characters draw with the Lower Hand on any actions or checks made during their next turn.
-- XP: 2
-- Prereq Level: 2
-- Prereq Power: Lend Distraction
-- Tags: Multi-target
+- Range: 12
 
 ## Weapon Attacks
 
-**Attack, Weapon**
+**Weapon Attack**
 
 - Description: You've been trained with basic weaponry, and maybe even taken a liking to a favorite (e.g., hammer or bow). This is your go-to tool on the battlefield.
 - Mechanic: Major. You make a check to attack an Enemy. This may be performed while under the effects of another Power.
 - XP: 1
+
+**Weapon Attack**
+
+- Description: Your skills are sharpening, just like your weapon.
+- Mechanic: Major. Your Weapon Attack now deals an additional +1 damage.
+- XP: 2
+- Prereq Level: 3
 - Prereq Skill: Finesse > 0 or Brute > 0
+- Prereq Power: Attack, Weapon
 
 **Attack, Charge**
 
-- Description: Your weapon training allows you throw your weight into an enemy, heightening your damage.
-- Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or 2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
+- Description: Your weapon training allows you to throw your weight into an enemy, heightening your damage.
+- Mechanic: Major. For 1 or 2 PP, You must move 3 spaces before using this Power. You add +1 or +2 to the damage on a successful Weapon Attack. Power Points are still expended on a miss
 - XP: 2
 - Prereq Role: Defender or Martial
 - Prereq Power: Attack, Weapon
@@ -319,18 +336,11 @@
 **Attack, Sweep**
 
 - Description: Your weapon training allows you throw your weight around, potentially knocking targets off balance. Sweep the legs!
-- Mechanic: Major. For 1 or 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space.. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
+- Mechanic: Major. For 2 PP, You perform you Weapon Attack on multiple contiguous characters within 1 space. For 2 PP, on a hit, target(s) make a DR 3 AGL Save. On fail, target(s) Knocked Down.
 - XP: 2
 - Prereq Role: Martial or Defender
 - Prereq Power: Attack, Weapon
 - Tags: Multi-target
-
-**Attack, Disarm**
-
-- Description: You're so skillful on the battlefield that you know how to target your attacks to focus on the enemy weapon.
-- Mechanic: Major. For 1 PP, When you spend a Power Point to disarm, perform a Weapon Attack. On a hit, the enemy must spend a Major Action picking up that weapon before using it again. This does not apply to Mystic Attacks or additional weapons the enemy may wield
-- XP: 2
-- Prereq Role: Martial or Defender
 
 **Attack, Vengeance**
 
@@ -343,45 +353,36 @@
 **Attack, Dual-Wield**
 
 - Description: You are adept at wielding two weapons in combat.
-- Mechanic: Minor. On your turn, you may make a second attack as a Minor Action with Lower Hand.
+- Mechanic: Minor. On your turn, you may make a second Weapon Attack as a Minor Action with Lower Hand.
 - XP: 3
-- Prereq Skill: Finesse > 1 or Brute > 1
+- Prereq Skill: Finesse > 0 or Brute > 0
 - Prereq Power: Attack, Weapon
 
 **Attack, Dual-Wield Master**
 
-- Description: You are a master of wielding two weapons in combat.
-- Mechanic: Minor. On your turn, you may make a second attack as a Minor Action. When making this attack, you no longer draw with the Lower Hand.
-- XP: 1
+- Description: You are a master at wielding two weapons in combat.
+- Mechanic: Minor. On your turn, you may make a second Weapon Attack as a Minor Action.
+- XP: 2
 - Prereq Level: 3
+- Prereq Skill: Finesse > 1 or Brute > 1
 - Prereq Power: Attack, Dual-Wield
 
 # Companion
 
-**Creature Connection**
-
-- Description: You have developed a connection with a creature in your setting (e.g., animal, spirit, robot). At the end of a Full Rest you can attune to an animal as a Companion.
-- Mechanic: Passive. At the end of a Full Rest, you attempt to connect with a creature to take them as a Companion. The GM determines if this attempt was successful and may ask for a relevant Skill check.
-- XP: 5
-- Prereq Skill: Craft > 0 or Knowledge > 0
-- Tags: Companion
-
 **Creature Link**
 
-- Description: You have developed a strong bond with your Companion over time, and can hear its thoughts in your mind.
-- Mechanic: Passive. Some checks can now be made through your Companion using their Skills and Attributes. The GM determines if a check can reasonably be made through your Companion.
-- XP: 2
-- Prereq Level: 2
-- Prereq Power: Creature Connection
+- Description: You are able to bond to a Companion who follows you and obeys your commands.
+- Mechanic: Passive. At the end of a Full Rest, you connect with a creature, physical or ephemeral, and take them as a Companion. You can command them as a Minor Action, or inhabit their senses using their Skills and Attributes.
+- XP: 3
 - Tags: Companion
 
 **Creature Mastery**
 
 - Description: Your connection with your chosen creature has deepened, allowing you to increase the creature's power.
-- Mechanic: Passive. Your Companion gains 1 Health Point and +1 to their Primary Skill modifier.
-- XP: 2
-- Prereq Level: 2
-- Prereq Power: Creature Connection
+- Mechanic: Passive. Your Companion gains 1 Health Point and +1 to their Primary Skill modifier. They now draw their own TC in combat and act independently on their own turn.
+- XP: 3
+- Prereq Level: 3
+- Prereq Power: Creature Link
 - Tags: Companion
 
 **Summon Creature**
@@ -410,7 +411,7 @@
 **Create Potion**
 
 - Description: It's always good to have some spare healing on hand.
-- Mechanic: Major. For 1 PP, Create a Potion of Healing. After successfully completing a Quick Rest, you can exchange one Rest Card for a Potion of Healing without expending Power Points. All Potions created last until the end of your next Full Rest.
+- Mechanic: Major. For 1 PP, Create a Potion of Healing. After successfully completing a Quick Rest, you can exchange one Rest Card to create a Potion of Healing without expending Power Points. All Potions created last until the end of your next Full Rest.
 - XP: 2
 - Prereq Role: Support
 - Prereq Level: 2
@@ -430,7 +431,7 @@
 
 **Potent Brew**
 
-- Description: Sometimes its a matter of skill, other times its a matter of ingredients, but often making a potent brew requires both.
+- Description: Sometimes its a matter of skill, other times its a matter of the right ingredients, but often making a potent brew requires both.
 - Mechanic: Passive. When using a Power that creates a consumable, increase the damage healed or dealt by 1.
 - XP: 2
 - Prereq Role: Support
@@ -450,7 +451,7 @@
 **Help**
 
 - Description: You're there just when your friends need you.
-- Mechanic: Minor. Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
+- Mechanic: Minor. In Combat, discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
 - Prereq Level: 2
 
 **Thwart**
@@ -459,10 +460,22 @@
 - Mechanic: Minor. Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
 - Prereq Level: 2
 
+**Infuse**
+
+- Description: You pour yourself into helping others.
+- Mechanic: Minor. Discard N cards to add +(N/2) HP or AP to the next Power you use that already grants HP or AP.
+- Prereq Level: 2
+
+**Amplify**
+
+- Description: You pour yourself into destruction.
+- Mechanic: Minor. Discard N cards to add +(N/2) damage to the next Power you use that causes damage. This effect expires on a Miss.
+- Prereq Level: 2
+
 **Intensify**
 
 - Description: An explosive attack might mean running out of gas.
-- Mechanic: Minor. Discard no cards. Your next attack is treated as an Epic Event. Discard as many cards as you choose until a Major Success. Standard Successes are treated as Misses
+- Mechanic: Minor. On your next Attack, discard cards until you reach a Major Success. Standard Successes are treated as Misses. You can choose to end this effect early.
 - Prereq Level: 2
 
 # Game Mechanics
@@ -472,9 +485,9 @@
 **Fated Draw**
 
 - Description: Your connection to the Fates is heightened and you feel you can shift the odds in your favor.
-- Mechanic: Major. For 2 PP, When making a Check, you can draw with the Upper Hand (3).
+- Mechanic: Minor. For 1 PP, You can view the top card of your deck. You can choose to discard it, or return it to the top of your deck.
 - XP: 2
-- Prereq Level: 3
+- Prereq Level: 2
 
 **Lucky**
 
@@ -483,68 +496,63 @@
 - XP: 1
 - Tags: Suited Miss
 
-**Luck Shared**
-
-- Description: You know just how to spread the luck around. When things are going your way, you can share that vibe.
-- Mechanic: Minor. When you get a Suited Hit, you may use a Minor Action to choose one creature you can see. Until the end of their next turn, or for the next 6 seconds if out of combat, all draws are made with the Upper Hand.
-- XP: 1
-- Tags: Suited Hit
-
-**Scrying**
-
-- Description: Your intuition is heightened and you can anticipate moments coming in the near future.
-- Mechanic: Major. For 1 PP, You can a look at your top 2 cards of your deck and discard up to two of them. You must make a Draw before using this Power again
-- XP: 1
-- Prereq Level: 2
-- Tags: Card Viewing
-
-**Scrying, Advanced**
-
-- Description: Your connection to this divine sense has strengthened.
-- Mechanic: Major. For 2 PP, You can a look at your top 3 cards of your deck and discard up to three of them. You must make a Draw before using this Power again.
-- XP: 2
-- Prereq Level: 3
-- Prereq Power: Scrying
-- Tags: Card Viewing
-
-## Fate Cards
-
-**Aces Wild**
-
-- Description: You have attuned to the wild magic of Aces. When using an Ace as a Fate Card, it grants additional effects depending on the suit.
-- Mechanic: Passive. You can trade a held Ace for one of the following effects:
-    - Clubs: you can play this card to interrupt an enemy's turn and make a single Major Action - even if you already went that round
-    - Diamonds: As a Minor Action, you recover 3 PP OR you and up to three allies each recover 1 PP
-    - Hearts: As a Minor Action, you can heal yourself or an ally you can see within 5 squares 2 HP
-    - Spades: Select one of your Powers with a cost of up to 1 PP to use as a Minor Action. You may decide if any draws required by this Power succeed or fail.
-- XP: 2
-- Prereq Level: 3
-- Tags: Fate Cards
-
 # Magic
 
 **Barrier**
 
 - Description: Your skills allow you to deploy temporary impromptu walls
-- Mechanic: Major. For 1 or 2 PP, You create a wall 3 or 5 spaces wide. You may dismiss this wall at any time as a Free Action. This wall is impervious to standard attacks, but may be worn down over time at the GM's discretion.
+- Mechanic: Major. For 1 or 2 PP, You create an opaque wall 3 or 5 spaces wide and 3 spaces tall. You may dismiss this wall at any time as a Free Action. This wall has 6 Hit Points.
 - XP: 2
 - Prereq Role: Support or Caster
 
 **Illusion**
 
 - Description: Your skills let you conjure illusory effects.
-- Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Conviction Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand
+- Mechanic: Major. For 1 or 2 PP, You make an illusory intangible visual (no larger than 1 space) or auditory effect that you've heard before. To determine if it's real, a character makes a Contested Detection Check. For 2 PP, you can generate both visual and auditory effects, and the check to verify draws with the Lower Hand
 - XP: 2
-- Prereq Role: Caster
-- Prereq Skill: Knowledge > 0
+- Prereq Role: Caster or Support
+- Prereq Skill: Knowledge > 0 or Craft > 0
 
 **Craft Light**
 
-- Description: Your skills let you conjure illusory effects.
-- Mechanic: Minor. For 1 PP, Make a DR 3 Craft Check. On a Success you create an Aura 6 space radiance of light for 15 minutes. On a Failure, the light only lasts for 1 round. You can create a temporary illusory object or infuse an existing object with this property. It can be covered and dimmed. Using a Minor action allows you to extinguish a light. If the light is more than 100 spaces away from you, it disappears
-- XP: 2
+- Description: Your skills let you conjure illusory radiance.
+- Mechanic: Minor. For 0 or 1 PP, For 0 PP, you can create or infuse a temporary illusory object with light in an Aura 6 radiance. If the light is more than 100 spaces away from you, it disappears. You may end this effect as a free action. For 1 PP, you can force a target within 6 spaces to make a DR 2 GUT Save or become Blinded for 1 round. Once, target(s) make a DR 2 GUT Save. On fail, target(s) Blinded.
+- XP: 1
 - Prereq Role: Caster or Support
 - Prereq Skill: Craft > 0
+
+**Minor Levitation**
+
+- Description: Your skills allow you to momentarily suspend the laws of gravity.
+- Mechanic: Minor. For 0 or 1 PP, For 0 PP, you can infuse an object of less than 100 lbs with levitation, reducing its effective weight to 0 lbs and allowing it to float in the air. For 1 PP, you can force a target within 6 spaces to make a DR 2 STR Save or reduce their speed to 0 and float 1 space off the ground for 1 round. Once, target(s) make a DR 2 STR Save. On fail, target(s) Speed reduced to 0 and floating 1 space off the ground for 1 round.
+- XP: 1
+- Prereq Role: Caster or Support
+- Prereq Skill: Craft > 0 or Knowledge > 0
+
+**Produce Sound**
+
+- Description: Your skills let you create illusory sounds.
+- Mechanic: Minor. For 0 or 1 PP, For 0 PP, you can create a harmless sound or auditory effect emanating from a point you can see such as music, wind, rustling leaves, etc. for 1 minute. For 1 PP, you can feign the voice or noise of someone not there. A nearby creature must make a DR 2 Detection check to determine if the sound is illusory.
+- XP: 1
+- Range: 12
+- Prereq Role: Caster or Support
+- Prereq Skill: Craft > 0 or Knowledge > 0
+
+**Mystic Cleanse**
+
+- Description: Your skills let you cleanse objects and creatures.
+- Mechanic: Minor. For 0 or 1 PP, For 0 PP, you can clean objects within 1 space, removing any dirt or grime. Damaged objects are not repaired, but dirt and debris around the damage is cleaned. For 1 PP, you can target a creature within 6 spaces and remove one of the following Status Conditions from them; Burned, Frozen, Poisoned, Blinded, Deafened, Charmed, Enthralled.
+- XP: 1
+- Prereq Role: Caster or Support
+- Prereq Skill: Craft > 0 or Knowledge > 0
+
+**Illusory Appearance**
+
+- Description: Your skills let you conjure illusory effects on your person.
+- Mechanic: Minor. For 0 or 1 PP, For 0 PP, you can alter the appearance of your eye or hair color for 1 hour. For 1 PP, you can alter your appearance entirely, changing some or all physical characteristics. Occupying additional space (e.g., gaining height) produces illusions that may be readily detected if dramatically different from your original form. For the next hour, you gain the Upper Hand on Conviction Checks made to convince others of your new appearance.
+- XP: 1
+- Prereq Role: Caster or Support
+- Prereq Skill: Craft > 0 or Knowledge > 0
 
 # Movement
 
@@ -565,9 +573,8 @@
 **Speedy**
 
 - Description: You're quicker than the rest.
-- Mechanic: Passive. When you take this Power, your combat speed increases by 2 squares.
+- Mechanic: Passive. When you take this Power, your speed increases by 2.
 - XP: 1
-- Tags: Combat
 
 **Favored Terrain**
 
@@ -578,48 +585,25 @@
 **Terrain Blink**
 
 - Description: So at home that you can get anywhere.
-- Mechanic: Minor. Work with your GM to decide a favored terrain (e.g., mountains). When navigating this contiguous terrain, you can use half your movement to immediately move to a point you can see within 10 spaces.
+- Mechanic: Minor. Work with your GM to decide a favored terrain (e.g., mountains). When navigating continuous spaces of this terrain, you can use half your movement to immediately move to a point you can see within Range.
 - XP: 3
+- Range: 10
 
 ## Stealth
-
-**Stealthy Surprise**
-
-- Description: An undetected assailant is particularly deadly.
-- Mechanic: Minor. You attempt to hide from nearby creatures.
-- XP: 1
-- Prereq Skill: Stealth > 1
-- Tags: Stealth
 
 **Stealth in the Shadows**
 
 - Description: A creature of the dark, you're especially adept at going unseen.
 - Mechanic: Passive. When you make a Stealth check in dim light or darkness, you draw with the Upper Hand.
 - XP: 1
-- Prereq Skill: Stealth > 1
-- Tags: Stealth
-
-**Stealth's Call**
-
-- Description: By luck or by magical effect, you know just how to distract those who might catch you lurking.
-- Mechanic: Major. For 1 PP, You cause an illusory sound to emanate from a point you can see within 10 spaces. You make a Contested Primary Skill Check vs. Detection for any targets within 4 spaces of this point. On failure, they draw Detection Checks at Lower Hand until they leave the area.
-- XP: 1
-- Prereq Skill: Stealth > 1
-- Tags: Stealth or Multi-target
-
-**Stealth's Blessing**
-
-- Description: You channel a deep energy to go unseen.
-- Mechanic: Major. For 1 or 2 PP, Until your next rest, or use of a Major or Minor Power, your stealth checks are made with Upper Hand. For 2 PP, this effect extends to up to 3 characters. This effect ends for any character who Attacks.
-- XP: 2
 - Prereq Level: 2
-- Prereq Skill: Stealth > 2
-- Tags: Stealth or Multi-target
+- Prereq Skill: Stealth > 0
+- Tags: Stealth or Assassin
 
 **Vanishing Step**
 
 - Description: Sometimes, moving in the shadows is easiest when no one knows where you're going.
-- Mechanic: Major. For 2 PP, Choose a point you can see within 10 spaces of you. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
+- Mechanic: Major. For 2 PP, Choose a point you can see within 10 spaces. If the space is unoccupied, you appear there Hidden. You cannot attempt to occupy a space that is occupied by another creature.
 - XP: 2
 - Range: 10
 - Prereq Role: Martial
@@ -628,12 +612,26 @@
 - Prereq Power: Hidden Strike
 - Tags: Assassin
 
+# Power Points
+
+**Small Power Gain**
+
+- Description: Harnessing more stored power allows for greater achievements.
+- Mechanic: Passive. You gain 2 additional Power Points. Add 2 to PP
+- XP: 1
+
+**Large Power Gain**
+
+- Description: Gathering power is one of the paths to true mastery of the self.
+- Mechanic: Passive. You gain 4 additional Power Points. Add 4 to PP
+- XP: 2
+
 # Resilience
 
 **Condition Resilience**
 
 - Description: Through training or sheer will, you brace your body for trials ahead.
-- Mechanic: Passive. Select on of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
+- Mechanic: Passive. Select one of the following conditions when taking this power: Blinded, Deafened, Burned, Poisoned, Frozen, or Suffocating. If you make a check to avoid being subjected to this effect, you do so at Upper Hand.
 - XP: 1
 - Prereq Level: 2
 - Prereq Skill: VIT > 1
@@ -648,25 +646,23 @@
 
 # Roleplay
 
-**Calculating**
+**Focused**
 
-- Description: You concentrate and assess the nature of the task at hand to determine how difficult it might be.
-- Mechanic: Major. For 1 PP, Describe an action you or an ally wishes to take and how you would assess the situation, spending the PP. Depending on your description, the GM may reveal the exact DR or approximate DR (e.g., > 2) of this action before anyone chooses to take it.
+- Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
+- Mechanic: Passive. Choose one Skill. When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
 - XP: 1
-- Prereq Level: 2
-- Prereq Skill: Knowledge > 1 or Investigation > 1
-- Tags: Difficulty Prediction
+
+**Keen Eye**
+
+- Description: You're especially adept at taking in the world around you.
+- Mechanic: Passive. When you make a Detection check to observe the world around you (visual, auditory, etc.), draw with the Upper Hand.
+- XP: 1
 
 **Cunning**
 
 - Description: You're sharper than the rest when you take your time.
-- Mechanic: Passive. Choose one Skill other than your Primary Skill.. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
+- Mechanic: Passive. Choose one Skill other than your Primary Skill. On turns when you only make 1 non-attack action using this Skill, draw with Upper Hand. This power may be taken multiple times for additional Skills.
 - XP: 1
-
-**Focused**
-
-- Description: There's some domain that completely captivates you. When you're invested, you know exactly how to proceed and there's no distracting you. You barely see the outside world.
-- Mechanic: Passive. Choose one Skill.. When engaged in a non-instantaneous task that involves this skill, you draw with the Upper Hand. During this time, you also have the Inattentive Vulnerability and are also unable to perceive the world outside this task. Draw with the Lower Hand for any Skill check made that is not directly related to your current task.
 
 **Handy**
 
@@ -674,12 +670,6 @@
 - Mechanic: Passive. Work with your GM to decide a trade with which your character is familiar. When making a check to to perform this craft, draw with the Upper Hand.
 - XP: 1
 - Prereq Skill: Craft > 1 or Knowledge > 1
-
-**Keen Eye**
-
-- Description: You're especially adept at taking in the world around you.
-- Mechanic: Passive. When you make a Detection check to observe the world around you (visual, auditory or olfactory), draw with the Upper Hand.
-- XP: 1
 
 # Stealth
 

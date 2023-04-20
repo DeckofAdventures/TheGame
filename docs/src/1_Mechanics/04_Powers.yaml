@@ -940,7 +940,7 @@ Aggro:
 Help:
     Category: Discard (limit one per character)
     Description: You're there just when your friends need you.
-    Mechanic: Discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
+    Mechanic: In Combat, discard N cards to grant an ally within 6 spaces Upper Hand (N/2) on all Checks for their next turn
     Type: Minor
     XP: 0
     Prereq:
@@ -950,6 +950,24 @@ Thwart:
     Category: Discard (limit one per character)
     Description: You have a few tricks up your sleeve for drawing the enemy's attention.
     Mechanic: Discard N cards and cause an enemy within 6 spaces to make all Checks at Lower Hand (N/2) until the start of the triggering Dealer's next turn
+    Type: Minor
+    XP: 0
+    Prereq:
+        Level: 2
+
+Infuse:
+    Category: Discard (limit one per character)
+    Description: You pour yourself into helping others.
+    Mechanic: Discard N cards to add +(N/2) HP or AP to the next Power you use that already grants HP or AP.
+    Type: Minor
+    XP: 0
+    Prereq:
+        Level: 2
+
+Amplify:
+    Category: Discard (limit one per character)
+    Description: You pour yourself into destruction.
+    Mechanic: Discard N cards to add +(N/2) damage to the next Power you use that causes damage. This effect expires on a Miss.
     Type: Minor
     XP: 0
     Prereq:
