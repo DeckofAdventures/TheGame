@@ -718,14 +718,15 @@ weaknesses, and what actions they can take in combat.
 
 ### Standard Currency
 
-Every setting may have its own currency and economy, but in Deck of Adventures
-the standard recommendation is to use a system based on rare metals or minerals. Diamond, Gold,
-Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
+Every setting may have its own currency and economy, but in Deck of Adventures the
+standard recommendation is to use a system based on rare metals or minerals. Diamond,
+Gold, Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
 fit your setting.
 
-By default, currencies are at a 1:10 ratio with the next-most valuable counterpart:
-1 Diamond Piece (dp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1 Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below tables as a reference
-for adapting these items to your setting.
+By default, currencies are at a 1:10 ratio with the next-most valuable counterpart: 1
+Diamond Piece (dp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1
+Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below
+tables as a reference for adapting these items to your setting.
 
 The GM can grant currency as a reward for completing an Adventure, defeating
 an Encounter, and general exploration and adventuring. You can show your

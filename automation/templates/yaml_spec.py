@@ -117,7 +117,7 @@ class YamlSpec(ABC):
 
     @abstractmethod
     def categories(self) -> dict:
-        """{(heirarchy tuple): [List of names]} dict"""
+        """{(hierarchy tuple): [List of names]} dict"""
         pass
 
     @property

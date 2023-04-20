@@ -26,7 +26,7 @@ about how to play.
 3. **Running Code**. The `environment.yaml` file specifies a
    [Conda](https://docs.conda.io/en/latest/) environment that will allow you to run all
    code and generate documentation. `mkdocs` will allow you to see what the docs site
-   looks like before commiting by visiting `localhost:8000`
+   looks like before committing by visiting `localhost:8000`
 
 ```console
 conda env create -f environment.yaml # Generate conda environment
@@ -49,7 +49,7 @@ The following VS Code extensions have been used to support development...
     - [GitHub](https://github.com/stkb/Rewrap/)
 3. CSpell: Allows custom dictionaries on spell-check.
     - [Extension](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-    - [GithHub](https://github.com/streetsidesoftware/vscode-spell-checker)
+    - [GitHub](https://github.com/streetsidesoftware/vscode-spell-checker)
     - Config: `.cspell.json`
 4. Black Formatter: Supports code uniformity.
     - [Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)

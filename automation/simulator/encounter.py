@@ -156,7 +156,7 @@ class Encounter(object):
         Args:
             TC: target card. Default draw from gm_deck
             participants: list of those involved on a TC. Default all PCs
-            skill: Type of check for each participant in particpant order. Default 0 mod
+            skill: Type of check for each participant in participant order. Default 0 mod
                 e.g., participants=[PC1, PC2], skill=['STR','Finesse'].
                 If same for all, provide as string
             successes_needed: N suited hits before end. Default 1

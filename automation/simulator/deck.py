@@ -1,7 +1,6 @@
-# Intial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
+# Initial draft adapted from https://github.com/wynand1004/Projects by @TokyoEdtech
 
 import random
-from typing import Union
 
 from ..utils import logger
 
@@ -19,6 +18,8 @@ class Card(object):
     Attributes:
         suit (str): one of [D,C,H,S,R,B] for Diamond, Club, Heart, Spade, Red, Black
         val (str): one of [A, K, Q, J, T] for Ace to Ten. Or 2 to 9.
+        val_number (int): integer corresponding to above value
+        color (str): either R or B for red or black
     """
 
     def __init__(self, suit, val=" "):
@@ -159,11 +160,15 @@ class Deck(object):
         output += f"Discards:  {len(self.discards):02d}\n"
         return output
 
-    def shuffle(self, limit=None):
+    def shuffle(self, limit: int = None):
         """Shuffle N from discard to deck
 
-        If limit provided, only shuffle those from discard.
-        If no limit, reshuffle all discarded. Add jokers back to hand.
+        If limit provided, only shuffle those from discard. If no limit, reshuffle all
+        discarded. Add jokers back to hand.
+
+        Args:
+            limit (int, optional): Number of cards to shuffle back into deck. Defaults
+            to None.
         """
         random.shuffle(self.discards)
         if not limit:
@@ -176,15 +181,26 @@ class Deck(object):
             self.draw_TC()
 
     @property
-    def TC(self):
+    def TC(self) -> Card:
+        """Target card
+
+        Returns:
+            Card: Current Target Card from deck. Not applicable to GM decks.
+        """
         if not self._TC and self._use_TC:
             self.draw_TC
         return self._TC
 
     def draw_TC(self):
+        """Draw a new target card"""
         self._TC = self.draw()
 
-    def draw(self) -> Card:
+    def draw(self) -> Card | None:
+        """Draw a card, if available. Otherwise returns None.
+
+        Returns:
+            Card: _description_
+        """
         """Draw a card. If any available, return card"""
         if len(self.cards) == 0 and self._use_TC:
             logger.warning("No cards available in deck.")
@@ -200,12 +216,21 @@ class Deck(object):
 
     def check_by_skill(self, **kwargs):
         if self._use_TC:
-            raise TypeError("check_by_skill method envoked on a non-GM deck")
+            raise TypeError("check_by_skill method invoked on a non-GM deck")
         kwargs.pop("skill", None)
         return self.check(**kwargs)
 
-    def discard(self, n, return_string=False, **_):
-        """Draw n cards, return none. Discard/hand as normal"""
+    def discard(self, n: int, return_string=False, **_) -> str | None:
+        """Draw n cards, return none. Discard/hand as normal
+
+        Args:
+            n (int): Number of cards to discard. If "all", uses discards all remaining.
+            return_string (bool, optional): Return a string reflecting result. Defaults
+                to False.
+
+        Returns:
+            str | None: If return_string, report "Drew X"
+        """        """"""
         if n == "all":
             n = len(self.cards)
 
@@ -216,8 +241,11 @@ class Deck(object):
         if return_string:
             return f"Drew {draws}"
 
-    def exchange_fate(self, return_string=False):
-        """Move fate card from hand. If Ace, add to discard"""
+    def exchange_fate(self, return_string=False) -> str | None:
+        """Move fate card from hand. If Ace, add to discard
+        
+        Args:
+            return_string (bool, optional): Default to False"""
         if len(self.hand) == 0:
             result = "No cards available to exchange"
         else:
@@ -231,7 +259,7 @@ class Deck(object):
 
         logger.info(result)
 
-    def _basic_check(self, TC: Card, DR: int) -> Union[None, int]:
+    def _basic_check(self, TC: Card, DR: int) -> None | int:
         """Return string corresponding to check 'Hit/Miss/Color/Suit' etc
 
         Args:
@@ -268,12 +296,12 @@ class Deck(object):
         return_val: bool = False,
         return_string: bool = False,
         verbose=True,
-    ) -> Union[None, int]:
+    ) -> tuple[int, str] | str:
         """Log string corresponding to check 'Hit/Miss/Color/Suit' etc
 
         Args:
             TC (Card): Target card
-            TR: (int): Target Range
+            DR: (int): Target Range
             mod (int): TR modifier
             upper_lower (str): 'upper' or 'lower' Hand ('u' or 'l'). Default neither.
             draw_n (int): How many to draw. If upper/lower, default 2. Otherwise 1.
@@ -281,8 +309,16 @@ class Deck(object):
                 positive/negative for upper/lower with int of draw_n -1.
                 for example, -1 for draw 2 lower
             draw_all (bool): If upper hand, draw all before stopping. Default false.
-            return_val (bool): Return the string. Default False.
+            return_val (bool): Return the integer of the result. Default False.
+            return_string (bool): Return the string describing what happened. Default 
+                False.
+            verbose (bool): Log the result string as a debug item            
+            
+        Returns:
+            tuple | str: If return_string, returns a tuple containing the result as a 
+                string, followed by the result value. If return_val, only integer result.
         """
+        
         DR = max(0, abs(DR) + mod)  # Apply mod to non-negative TR
         if upper_lower_int:
             upper_lower = (

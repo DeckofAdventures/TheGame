@@ -22,7 +22,7 @@ from automation.utils.logger_csv import draw_log, rest_log
 
 def pytest_addoption(parser):
     """
-    Permit constants when calling pytest at commandline e.g., pytest --my-verbose False
+    Permit constants when calling pytest at command line e.g., pytest --my-verbose False
 
     Parameters
     ----------
@@ -54,7 +54,7 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def setup(request):
-    """Take passed commandline variables, set as global"""
+    """Take passed command line variables, set as global"""
     global verbose, _tear_down, verbose_context, test_data_dir
 
     verbose = str_to_bool(request.config.getoption("--my-verbose"))
@@ -70,7 +70,7 @@ def setup(request):
     yield verbose_context, _tear_down, test_data_dir
 
 
-# ------------------ GENERAL FUCNTION ------------------
+# ------------------ GENERAL FUNCTION ------------------
 
 
 def str_to_bool(value) -> bool:
@@ -108,7 +108,7 @@ class QuietStdOut:
 
 @pytest.fixture(scope="session")
 def yaml_data(setup):
-    """For each template, writes test yaml, yeilds class"""
+    """For each template, writes test yaml, yields class"""
 
     verbose_context, _tear_down, test_data_dir = setup
 
@@ -147,7 +147,7 @@ def yaml_data(setup):
                         "Type": "GUT",
                         "DR": 2,
                         "Fail": "Stunned",
-                        "Succeed": "Nonstatus Testing content",
+                        "Succeed": "Non-status testing content",
                     },
                 },
                 "Test Attack, Weapon": {
@@ -169,7 +169,7 @@ def yaml_data(setup):
                     "StatAdjust": {"AP": 1},
                     "XP": 2,
                 },
-                "Test Passsive": {
+                "Test Passive": {
                     "Name": "Fake passive",
                     "Category": ["Magic", "Fake"],
                     "Description": "Fake description.",

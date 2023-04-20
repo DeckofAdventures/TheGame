@@ -182,7 +182,7 @@ class Player(Deck, Beast):
                 TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
             )
 
-        # NOTE: drawlog doesn't know if had options
+        # NOTE: draw_log doesn't know if had options
         draw_log.info(
             [
                 self.id,

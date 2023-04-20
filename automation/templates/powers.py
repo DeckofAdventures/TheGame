@@ -56,7 +56,7 @@ class Powers(YamlSpec):
         input_files = [
             file
             for file in ensure_list(ambiguous_item=input_files)
-            if "ower" in file.lower() or "vuln" in file.lower()
+            if "power" in file.lower() or "vuln" in file.lower()
         ]
         super().__init__(input_files=input_files)
         self._limit_types = limit_types or list_power_types

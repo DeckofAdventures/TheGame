@@ -34,7 +34,7 @@ def test_gen_deck(setup, sample_card):
     assert "Exchanged Fate Card" in deck.exchange_fate(return_string=True)
 
 
-def test_autoshuffle_gm_deck():
+def test_auto_shuffle_gm_deck():
     deck = Deck(use_TC=False)
     _ = deck.discard(52)
     assert isinstance(deck.draw(), Card)
@@ -43,7 +43,7 @@ def test_autoshuffle_gm_deck():
 def test_deck_warns(sample_card):
     with pytest.raises(TypeError) as e:
         _ = Deck().check_by_skill(TC=sample_card, DR=3)
-    assert "envoked on a non-GM" in e.value.args[0]
+    assert "invoked on a non-GM" in e.value.args[0]
 
 
 def test_deck_no_fate(setup):
