@@ -9,3 +9,4 @@ dependencies:
   - pip
   - pip:
     - -r file:requirements.txt
+    - -e .

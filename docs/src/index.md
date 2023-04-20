@@ -3,7 +3,7 @@ hide:
   - feedback
 ---
 
-# Welcome to Deck of Adventures, The Game!
+# Welcome to Deck of Adventures, The Game
 
 <img src="stylesheets/Logo_Transparent.png" alt="Logo" width="200"/>
 
