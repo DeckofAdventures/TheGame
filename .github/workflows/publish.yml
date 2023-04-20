@@ -19,6 +19,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      REPO_OWNER: ${{ github.repository_owner }}
     permissions:
       contents: write
       issues: write 
@@ -36,7 +38,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup - pip & config
-        run: | # Later: mkdocs-include-markdown-plugin
+        run: |
           for f in C*md; do cp $f ./docs/src/; done 
           cp LICENSE ./docs/src/
           pip install mkdocs-material mkdocs-exclude mkdocs-gen-files mike
@@ -45,7 +47,8 @@ jobs:
       
       - name: Deploy
         run: |
-          bash ./docs/docs.sh push ${{ vars.GITHUB_REPOSITORY_OWNER }}
+          echo "OWNER: ${REPO_OWNER}"
+          bash ./docs/docs.sh push $REPO_OWNER
         env:
           USERNAME: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

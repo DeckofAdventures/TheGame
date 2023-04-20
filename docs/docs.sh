@@ -30,7 +30,8 @@ elif [ "$1" == "push" ]; then # if first arg is push
     else # Otherwise, accept second arg as git user
         export git_user="${2}"
     fi # Push mike results to relevant branch
-    git push https://github.com/$(git_user)/TheGame.git gh-page
+    export url="https://github.com/${git_user}/TheGame.git"
+    git push $url gh-pages
 else
     echo "Docs built. "
     echo "  Add 'serve' as script arg to serve. "
