@@ -41,7 +41,7 @@ profile = "black"
 py-modules = ["automation"]
 
 [tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+dependencies = {file = ["requirements.txt", "requirements_docs.txt"]}
 
 [tool.pytest.ini_options]
 minversion = "6.2"
