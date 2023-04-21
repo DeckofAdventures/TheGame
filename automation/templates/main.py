@@ -10,6 +10,7 @@ def yaml_to_other(
         "05_Vulnerabilities.yaml",
         "06_Bestiary.yaml",
         "07_Items.yaml",
+        "08_PCs.yaml",
     ],
     writing: list = ["md", "csv", "png"],
     out_delim: str = "\t",  # or ','

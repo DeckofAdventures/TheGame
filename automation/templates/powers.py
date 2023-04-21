@@ -326,6 +326,7 @@ class Power:
             "Description",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
+        output["Mechanic"] = output["Mechanic"].replace("\n", "\\")
         for attrib in [self.StatAdjusts, self.Save, self.Prereq]:
             for a in ensure_list(attrib):
                 if a:

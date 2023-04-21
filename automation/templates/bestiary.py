@@ -519,9 +519,19 @@ class Beast:
         logger.info(f"Wrote HTML {output_file}")
 
     def make_pc_img(
-        self, file_path: str = None, items: list = None, browser="chrome", dry_run=False
+        self,
+        file_path: str = None,
+        items: list = None,
+        browser="google-chrome",
+        custom_browser_flags=None,
+        dry_run=False,
     ):
         """Save pc html as png file
+
+        Writing out the image with html2image can be a noisy process with multiple
+        warning log items from chrome. To quiet these, git clone html2image and pip
+        install as editable. Then, add the following as the last line in the command
+        list in the relevant browser: '> /dev/null 2>&1'. For chrome.py, L250
 
         Args:
             file_path (str, optional): Filename, no extension. Always in _output
@@ -533,6 +543,7 @@ class Beast:
 
         hti = Html2Image(
             browser=browser,
+            custom_flags=custom_browser_flags,
         )
         output_path, filename = self._pc_file_info("png")
         hti.output_path = file_path or output_path

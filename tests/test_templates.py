@@ -67,10 +67,3 @@ def test_spec_properties(sample_powers):
     assert "_input" in sample_powers.filepath_default_input
     assert "_output" in sample_powers.filepath_default_output
     assert len(sample_powers.type_dict["Major"]) == 4
-    # from IPython import embed
-
-    # embed()
-
-    # import pdb
-
-    # pdb.set_trace()

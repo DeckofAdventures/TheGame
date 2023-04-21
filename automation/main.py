@@ -8,6 +8,7 @@ def main():
             "05_Vulnerabilities.yaml",
             "06_Bestiary.yaml",
             "07_Items.yaml",
+            # "08_PCs.yaml", # On hold pending full powers table in html
         ],
         writing=["md", "csv", "png"],
         out_delim="\t",  # or ',' # for csv

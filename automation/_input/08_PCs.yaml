@@ -183,7 +183,7 @@ Diamonds2:
     - Attack, Mystic Cone
     - Attack, Mystic Entangle
     - Lucky
-    - Scrying
+    # - Scrying # No longer exists. Replace?
     - Frail Form
     - Weak, Major
 
@@ -215,7 +215,7 @@ Diamonds3:
     - Attack, Mystic Cone
     - Attack, Mystic Entangle
     - Lucky
-    - Scrying
+    # - Scrying # No longer exists. Replace?
     - Illusion
     - Frail Form
     - Weak, Major
@@ -248,7 +248,7 @@ Hearts1:
     - Attack, Mystic
     - Attack, Mystic Entangle
     - Heal
-    - Shield, Others
+    - Shield
     - Outsider
     - Frail, Minor
     - Clumsy, Minor
@@ -280,7 +280,7 @@ Hearts2:
     - Attack, Mystic
     - Attack, Mystic Entangle
     - Heal
-    - Shield, Others
+    - Shield
     - Outsider
     - Clumsy, Minor
 
@@ -311,7 +311,7 @@ Hearts3:
     - Attack, Mystic
     - Attack, Mystic Entangle
     - Heal
-    - Shield, Others
+    - Shield
     - Lend Vigor
     - Outsider
     - Clumsy, Minor
@@ -343,7 +343,7 @@ Spades1:
     - Attack, Weapon
     - Attack, Charge
     - Attack, Sweep
-    - Stealthy Surprise
+    # - Stealthy Surprise # No longer exists. Replace?
     - Outsider
     - Eye for an Eye
 
@@ -374,7 +374,7 @@ Spades2:
     - Attack, Weapon
     - Attack, Charge
     - Attack, Sweep
-    - Stealthy Surprise
+    # - Stealthy Surprise # No longer exists. Replace?
     - Stealth in the Shadows
     - Outsider
     - Eye for an Eye
@@ -408,7 +408,7 @@ Spades3:
     - Attack, Charge
     - Attack, Sweep
     - Attack, Vengeance
-    - Stealthy Surprise
+    # - Stealthy Surprise # No longer exists. Replace?
     - Stealth in the Shadows
     - Outsider
     - Eye for an Eye
@@ -631,7 +631,7 @@ Alchemist1:
   Powers:
     - Lend Aid
     - Attack, Mystic
-    - Shield, Others
+    - Shield
     - Cowardly Ally
     - Clumsy, Major
 
@@ -661,7 +661,7 @@ Alchemist2:
   Powers:
     - Lend Aid
     - Attack, Mystic
-    - Shield, Others
+    - Shield
     - Create Potion
     - Cowardly Ally
     - Clumsy, Major
@@ -692,7 +692,7 @@ Alchemist3:
   Powers:
     - Lend Aid
     - Attack, Mystic
-    - Shield, Others
+    - Shield
     - Create Potion
     - Create Poison
     - Potent Brew
@@ -726,7 +726,7 @@ Assassin1:
   Powers:
     - Attack, Weapon
     - Attack, Charge
-    - Stealthy Surprise
+    # - Stealthy Surprise # No longer exists. Replace?
     - Vendetta
     - Eye for an Eye
 
@@ -757,8 +757,8 @@ Assassin2:
   Powers:
     - Attack, Weapon
     - Attack, Charge
-    - Stealthy Surprise
-    - Stealth's Call
+    # - Stealthy Surprise # No longer exists. Replace?
+    # - Stealth's Call # No longer exists. Replace?
     - Hidden Strike
     - Vendetta
     - Eye for an Eye
@@ -790,8 +790,8 @@ Assassin3:
   Powers:
     - Attack, Weapon
     - Attack, Charge
-    - Stealthy Surprise
-    - Stealth's Call
+    # - Stealthy Surprise # No longer exists. Replace?
+    # - Stealth's Call # No longer exists. Replace?
     - Hidden Strike
     - Vanishing Step
     - Keen Eye
