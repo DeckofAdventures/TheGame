@@ -270,7 +270,7 @@ class Deck(object):
         Args:
             TC (Card): Target card
             TR: (int): Target Range
-            mod (int): TR modifier
+            mod (int): DR modifier
         """
         DR = abs(DR)
         draw = self.draw()
@@ -307,7 +307,7 @@ class Deck(object):
         Args:
             TC (Card): Target card
             DR: (int): Target Range
-            mod (int): TR modifier
+            mod (int): DR modifier
             upper_lower (str): 'upper' or 'lower' Hand ('u' or 'l'). Default neither.
             draw_n (int): How many to draw. If upper/lower, default 2. Otherwise 1.
             upper_lower_int (int): Instead of passing upper_lower and draw_n, use
@@ -352,7 +352,7 @@ class Deck(object):
 
         result = max(results) if upper_lower == "U" else min(results)
         result_string = (
-            f"Drew {draws} vs {TC} with TR {DR}{ul_str}: {self.result_types[result]}"
+            f"Drew {draws} vs {TC} with DR {DR}{ul_str}: {self.result_types[result]}"
         )
 
         if verbose:
