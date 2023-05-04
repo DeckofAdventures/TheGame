@@ -574,7 +574,9 @@ Speedy:
     XP: 1
 
 Quick Draw:
-    Category: [ Combat, Control ]
+    Category:
+        - Combat
+        - Control
     Type: Passive
     XP: 0 # If AGL > 2, free Upper Hand on TC draw
     PP: 0

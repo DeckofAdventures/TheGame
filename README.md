@@ -5,10 +5,10 @@ roleplaying game. A magical world awaits, where Players come first. In Deck of
 Adventures, it’s your turn, your choice.
 
 Deck of Adventures is a collaborative roleplaying system, built with an open source
-ethos. Please visit our
-[Development Guide](./docs/src/2_Development/) to learn more about this project. Or
-visit our [Mechanics Guide](./docs/src/1_Mechanics/01_PlayerGuide_Full.md) to learn more
-about how to play.
+ethos. To explore the project, please visit our
+[website](https://deckofadventures.github.io/TheGame/), which includes both our
+[Development Guide](https://deckofadventures.github.io/TheGame/1.0/2_Development/02_Design_Document/)
+and [Mechanics Guide](https://deckofadventures.github.io/TheGame/1.0/1_Mechanics/01_PlayerGuide_Full/).
 
 ## Join our [Discord server!](https://discord.gg/dk6RfWgPHF)
 
