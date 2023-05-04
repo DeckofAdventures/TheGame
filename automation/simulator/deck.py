@@ -269,7 +269,7 @@ class Deck(object):
 
         Args:
             TC (Card): Target card
-            TR: (int): Target Range
+            DR: (int): Difficulty Range
             mod (int): DR modifier
         """
         DR = abs(DR)
@@ -306,7 +306,7 @@ class Deck(object):
 
         Args:
             TC (Card): Target card
-            DR: (int): Target Range
+            DR: (int): Difficulty Range
             mod (int): DR modifier
             upper_lower (str): 'upper' or 'lower' Hand ('u' or 'l'). Default neither.
             draw_n (int): How many to draw. If upper/lower, default 2. Otherwise 1.

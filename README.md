@@ -58,7 +58,7 @@ The following VS Code extensions have been used to support development...
     - [Extension](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
     - [GitHub](https://github.com/DavidAnson/markdownlint).
     - Config: `.markdownlint.yaml`
-2. Rewrap: Supports hard wrapping docs to 88 characters, which makes facilitates PR
+2. Rewrap: Supports hard wrapping docs to 88 characters, which facilitates easier PR
     review. The default keyboard shortcut is `alt+q` or `option+q`.
     - [Extension](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)
     - [GitHub](https://github.com/stkb/Rewrap/)
