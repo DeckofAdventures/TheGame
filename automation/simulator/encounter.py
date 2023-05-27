@@ -224,7 +224,7 @@ class Encounter(object):
 
         Args:
             TC (Card): target card. Default draw from gm_deck
-            DR (int): Draw range.
+            DR (int): Difficulty range.
             participants (list[Player]): list of those involved on a TC. Default all PCs
             skills (list[str] | str): Type of check for each participant in participant
                 order. Default 0 mod. If same for all, provide as single string.
