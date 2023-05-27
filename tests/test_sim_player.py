@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 def ul_dict(n):
     return {"upper_lower_int": n}
 
@@ -15,6 +18,13 @@ def test_player_repr(sample_player):
     ]
     for item in repr_items:
         assert item in sample_player.__repr__()
+
+
+def test_player_img(setup, sample_player):
+    _, _, test_data_dir = setup
+    img_path = Path("./" + test_data_dir).absolute()
+    sample_player.make_pc_img(file_path=str(img_path))
+    assert Path(img_path / sample_player._pc_file_info("png")[1]).exists()
 
 
 def test_statuses(sample_player):
@@ -43,10 +53,10 @@ def test_fatigue(sample_player):
 
 
 def test_return_string(sample_card, sample_player):
-    assert "with TR" in sample_player.check_by_skill(
+    assert "with DR" in sample_player.check_by_skill(
         TC=sample_card, DR=3, return_string=True
     )
-    assert "with TR" in sample_player.save(DR=3, return_string=True)
+    assert "with DR" in sample_player.save(DR=3, return_string=True)
     assert "rested" in sample_player.full_rest(return_string=True)
     assert "during Quick" in sample_player.quick_rest(return_string=True)
 

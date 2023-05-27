@@ -553,7 +553,7 @@ class Beast:
                 html_str=self._html(items),
                 save_as=filename,
             )
-        logger.info(f"Wrote HTML as image: {filename}")
+        logger.info(f"Wrote HTML as image: {hti.output_path}/{filename}")
 
     @property
     def csv_dict(self) -> dict:

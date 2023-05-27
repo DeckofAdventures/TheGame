@@ -130,5 +130,3 @@ e.sim_quick_rest()
 # !head automation/_output/log_draws.csv
 
 # !head automation/_output/log_rests.csv
-
-
