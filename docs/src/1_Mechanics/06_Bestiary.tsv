@@ -1,18 +1,25 @@
-Type	Name	Level	Role	Descriptions	Pronouns	RestCards	Speed	HP	PP	AP	AR	Attrib_AGL	Attrib_CON	Attrib_GUT	Attrib_INT	Attrib_STR	Attrib_VIT	Description
-Companion	Falcon	1				1	6	1	0	1	3	1			1	-1	-1	
-Companion	Bear	1				3	6	3	0	1	2	-1			-1	1	1	
-NPC	Wolf	1				2	6	2	0	1	3	1	-1		-1	1		
-Companion	Horse	1				2	6	2	0	1	3	1		-1	-1	1		
-NPC	Dire Wolf	1				3	6	3	0	1	2	2	-1		-1	2		
-NPC	Shrub Golem	1				2	6	2	0	1	4	-1			-1	1		
-NPC	Vine Golem	1				2	6	2	0	1	4	-1			-1	1		
-Dealer	Tree Golem	2				11	6	7	4	2	3	-1			-1	2	2	
-NPC	Poison Plant	1				3	6	2	1	1	4	-1					1	
-NPC	Grunt	1				2	6	2	0	1	3	1			-1			A low level soldier.
-NPC	Grunt, Shielded	1				2	6	2	0	1	2				-1	1		A low level soldier with a Shield.
-NPC	Guard	2				4	6	3	1	1	2					1	1	A decently armored and trained soldier.
-Dealer	Captain, Defender	2				9	6	5	4	2	2	1		1	-1	1	1	A Captain with access to Powers.
-Dealer	Mystic, Caster	2				8	6	5	3	1	3	-1	1		1	-1		A powerful Caster with access to mystic attacks.
-Dealer	Sentinel, Martial	2				9	6	6	3	0	2			1	1	-1		A Martial with access to Powers.
-Dealer	Ritualist, Support	1				10	6	4	6	1	3	-1	1	1	1	-1	-1	A Support with access to Powers.
-NPC	Specter	1				5	6	3	2	0	2			1	1	-1		
+Type	Name	Level	Role	Descriptions	Pronouns	RestCards	Speed	HP	PP	AP	AP_Max	AR	AR_Max	Attrib_AGL	Attrib_CON	Attrib_GUT	Attrib_INT	Attrib_STR	Attrib_VIT	Description	HP_Max	Items	PP_Max	Primary_Skill	Primary_Skill_Mod	RestCards_Max	Skill_Athletics	Skill_Bluffing	Skill_Brute	Skill_Craft	Skill_Detection	Skill_Finesse	Skill_Investigation	Skill_Knowledge	Skill_Performance	Skill_Stealth	Speed_Max	_pow_PP	_pow_XP	_vulny_XP	id
+Companion	Falcon	1				1	6	1	0	1	1	3	3	1			1	-1	-1		1		0		0	1	-1		-1	1	1	1				1	6	0	1	0	Falcon
+Companion	Bear	1				3	6	3	0	1	1	2	2	-1			-1	1	1		3		0		0	3	1		1	-1	-1	-1				-1	6	0	1	0	Bear
+Companion	Wolf	1				2	6	2	0	1	1	3	3	1		1	-1	1			2		0		0	2	1		1	-1	-1	1	1	1		1	6	0	3	0	Wolf
+Companion	Summoned Creature	1				4	6	4	0	1	1	3	3	1	-1		-1	1			4		0		0	4	1	-1	1	-1	-1	1			-1	1	6	0	2	0	Summoned Creature
+Companion	Horse	1				2	6	2	0	1	1	3	3	1		-1	-1	1			2		0		0	2	1		1	-1	-1	1	-1	-1		1	6	0	3	0	Horse
+NPC	Commoner	1				3	6	3	0	1	1	3	3							A common humanoid that is found throughout villages, towns, and cities.	3		0		0	3											6	0	1	0	Commoner
+NPC	Gray Wolf	1				2	6	2	0	1	1	3	3	1	-1		-1	1			2		0		0	2	1	-1	1	-1	-1	1			-1	1	6	0	3	0	Gray Wolf
+NPC	Dire Wolf	1				3	6	3	0	1	1	2	2	2	-1		-1	2			3		0		0	3	2	-1	2	-1	-1	2			-1	2	6	0	3	0	Dire Wolf
+NPC	Small Golem	1				2	6	2	0	1	1	4	4	-1			-1	1			2		0		0	2	1		1	-1	-1	-1				-1	6	0	1	0	Small Golem
+NPC	Medium Golem	1				2	6	2	0	1	1	4	4	-1			-1	1			2		0		0	2	1		1	-1	-1	-1				-1	6	0	2	0	Medium Golem
+Dealer	Huge Golem	2				7	6	7	4	2	2	3	3	-1			-1	2	2		7		4		0	7	2		2	-1	-1	-1				-1	6	4	5	0	Huge Golem
+NPC	Mystic Golem	1				2	6	2	1	1	1	4	4	-1					1		2		1		0	2						-1				-1	6	2	3	0	Mystic Golem
+NPC	Grunt	1				2	6	2	0	1	1	3	3	1			-1			A low level soldier.	2		0		0	2				-1	-1	1				1	6	0	1	0	Grunt
+NPC	Grunt, Shielded	1				2	6	2	0	1	1	2	2				-1	1		A low level soldier with a Shield.	2		0		0	2	1		1	-1	-1						6	1	3	0	Grunt, Shielded
+NPC	Guard	2				3	6	3	1	1	1	2	2					1	1	A decently armored and trained soldier.	3		1		0	3	1		1								6	3	6	0	Guard
+Dealer	Captain, Defender	2				5	6	5	4	2	2	2	2	1		1	-1	1	1	A Captain with access to Powers.	5		4		0	5	1		1	-1	-1	1	1	1		1	6	6	8	0	Captain, Defender
+Dealer	Mystic, Caster	2				5	6	5	2	1	1	3	3	-1	1		1	-1		A powerful Caster with access to mystic attacks.	5		2		0	5	-1	1	-1	1	1	-1			1	-1	6	9	11	0	Mystic, Caster
+Dealer	Sentinel, Martial	2				6	6	6	3	0	0	2	2			1	1	-1		A Martial with access to Powers.	6		3		0	6	-1		-1	1	1		1	1			6	4	5	0	Sentinel, Martial
+Dealer	Ritualist, Support	1				4	6	4	6	1	1	3	3	-1	1	1	1	-1	-1	A Support with access to Powers.	4		6		0	4	-1	1	-1	1	1	-1	1	1	1	-1	6	10	14	0	Ritualist, Support
+NPC	Specter	1				3	6	3	2	0	0	2	2			1	1	-1			3		2		0	3	-1		-1	1	1		1	1			6	4	5	0	Specter
+Boss	Necromancer Aspect	1				5	6	5	4	0	0	2	2	-1	2	2	2	-1	1	The manifestation of a Necromancer's will. A less powerful version of the Necromancer themselves.	5		4	Knowledge	2	5	-1	2	-1	2	2	-1	2	2	2	-1	6	2	3	0	Necromancer Aspect
+Boss	Necromancer	1				8	6	8	6	0	0	2	2	-1	2	2	2	-1	1	A master of death, typically in command of a horde of undead minions.	8		6	Knowledge	2	8	-1	2	-1	2	2	-1	2	2	2	-1	6	4	7	0	Necromancer
+Boss	Spider Queen	1				11	6	11	6	1	1	2	2	-1	2	2	2	-1	1	A queen of her minions, trusted and obeyed without question.	11		6	Knowledge	2	11	-1	2	-1	2	2	-1	2	2	2	-1	6	6	11	0	Spider Queen
+Boss	Scorpion Beast	1				8	6	8	4	2	2	2	2	1		1	-1	2	2	A fierce beast capable of intense violence and destruction.	8		4	Brute	2	8	2		2	-1	-1	1	1	1		1	6	4	8	0	Scorpion Beast

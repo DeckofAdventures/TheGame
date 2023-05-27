@@ -5,7 +5,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.14.1
+#       jupytext_version: 1.14.5
 #   kernelspec:
 #     display_name: doa
 #     language: python
@@ -39,7 +39,7 @@ from automation.simulator.encounter import Encounter
 # Note that files with SAMPLE in the name are designed to workshop ideas and test edge cases, not be included in the game.
 #
 
-b = Bestiary(input_files=["06_Bestiary_SAMPLE.yaml","07_PCs.yaml"]).raw_data
+b = Bestiary(input_files=["06_Bestiary_SAMPLE.yaml", "07_PCs.yaml"]).raw_data
 c1 = b["Clubs1"]
 c1.update(dict(Name="💀", id="A"))
 c2 = copy.copy(b["Clubs1"])
@@ -59,8 +59,6 @@ e.turn_order
 #
 
 e.sim_round(3)
-
-# %debug
 
 # We can even simulate epic events.
 #
@@ -132,5 +130,3 @@ e.sim_quick_rest()
 # !head automation/_output/log_draws.csv
 
 # !head automation/_output/log_rests.csv
-
-

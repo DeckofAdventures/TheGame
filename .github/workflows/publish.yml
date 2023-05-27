@@ -1,14 +1,14 @@
 name: build
 on:
-  pull_request:      # close of PR. Insufficient permissions?
+  pull_request:
     branches:
       - main
     types:
       - closed
-  push:              # on pushing to page-test, as a dev branch for forks only
+  push:
     branches:
       - page-test
-  workflow_dispatch: # on clicking browser GUI button - Not working?
+  workflow_dispatch: # on clicking browser GUI button
 
 permissions:
   contents: write
@@ -19,6 +19,8 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      REPO_OWNER: ${{ github.repository_owner }}
     permissions:
       contents: write
       issues: write 
@@ -36,16 +38,19 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup - pip & config
-        run: | # Later: mkdocs-include-markdown-plugin
+        run: |
           for f in C*md; do cp $f ./docs/src/; done 
-          cp LICENSE ./docs/src/
-          pip install mkdocs-material mkdocs-exclude
+          cp LICENSE ./docs/src/LICENSE.md
+          pip install -r requirements_docs.txt
+          pip install -e .
           git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       
       - name: Deploy
-        run: | 
-          mkdocs gh-deploy --force --verbose --config-file ./docs/mkdocs.yml
+        run: |
+          echo "OWNER: ${REPO_OWNER}"
+          bash ./docs/docs.sh push $REPO_OWNER
         env:
           USERNAME: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+

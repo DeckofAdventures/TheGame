@@ -1,10 +1,13 @@
-black # Code formatting
+black[jupyter] # Code formatting
 csv_logger # Logging data to CSV
 html2image # Generating images from html
+ipykernel # ipython for debugging
 jupyter # Running notebooks
 jupytext # For syncing notebooks with py_scripts
 notebook # Running notebooks
+pdf2image # splitting multi-page pdf
 pre-commit # Checking files before commits
-pydot # Generating graphviz objects
+pytest # tests
+pytest-cov # test coverage
+python-dotenv # Loading .env files
 pyyaml # Importing yml
-python-dotenv # Loading .env viles

@@ -1,10 +1,9 @@
 """
-This logger is adapted from the DataJoint Python API logger in the following format:
-    [Hour:Min][Loglevel]: Content
+This logger is adapted from the DataJoint Python API logger
+    in the following format: `[Hour:Min][log_level]: Content`
 """
 import logging
 import os
-import sys
 
 logger = logging.getLogger(__name__.split(".")[0])
 
@@ -16,15 +15,5 @@ stream_handler = logging.StreamHandler()  # default handler
 stream_handler.setFormatter(log_format)
 
 logger.setLevel(level=log_level)
+
 logger.handlers = [stream_handler]
-
-
-def excepthook(exc_type, exc_value, exc_traceback):
-    if issubclass(exc_type, KeyboardInterrupt):
-        sys.__excepthook__(exc_type, exc_value, exc_traceback)
-        return
-
-    logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
-
-
-sys.excepthook = excepthook

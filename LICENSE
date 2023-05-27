@@ -70,7 +70,6 @@ Licensor grants You such rights in consideration of benefits the
 Licensor receives from making the Licensed Material available under
 these terms and conditions.
 
-
 Section 1 -- Definitions.
 
   a. Adapted Material means material subject to Copyright and Similar
@@ -149,7 +148,6 @@ Section 1 -- Definitions.
 
   n. You means the individual or entity exercising the Licensed Rights
      under this Public License. Your has a corresponding meaning.
-
 
 Section 2 -- Scope.
 
@@ -236,7 +234,6 @@ Section 2 -- Scope.
           the Licensed Material is used other than for NonCommercial
           purposes.
 
-
 Section 3 -- License Conditions.
 
 Your exercise of the Licensed Rights is expressly made subject to the
@@ -302,7 +299,6 @@ following conditions.
           Measures to, Adapted Material that restrict exercise of the
           rights granted under the Adapter's License You apply.
 
-
 Section 4 -- Sui Generis Database Rights.
 
 Where the Licensed Rights include Sui Generis Database Rights that
@@ -325,7 +321,6 @@ apply to Your use of the Licensed Material:
 For the avoidance of doubt, this Section 4 supplements and does not
 replace Your obligations under this Public License where the Licensed
 Rights include other Copyright and Similar Rights.
-
 
 Section 5 -- Disclaimer of Warranties and Limitation of Liability.
 
@@ -355,7 +350,6 @@ Section 5 -- Disclaimer of Warranties and Limitation of Liability.
      possible, most closely approximates an absolute disclaimer and
      waiver of all liability.
 
-
 Section 6 -- Term and Termination.
 
   a. This Public License applies for the term of the Copyright and
@@ -384,7 +378,6 @@ Section 6 -- Term and Termination.
   d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
      License.
 
-
 Section 7 -- Other Terms and Conditions.
 
   a. The Licensor shall not be bound by any additional or different
@@ -393,7 +386,6 @@ Section 7 -- Other Terms and Conditions.
   b. Any arrangements, understandings, or agreements regarding the
      Licensed Material not stated herein are separate from and
      independent of the terms and conditions of this Public License.
-
 
 Section 8 -- Interpretation.
 

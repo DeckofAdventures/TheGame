@@ -1,0 +1,13 @@
+name: dofa
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.10
+  - ipython
+  - jupyterlab>=3.*
+  - pip
+  - pip:
+    - -r file:requirements.txt
+    - -r file:requirements_docs.txt
+    - -e .

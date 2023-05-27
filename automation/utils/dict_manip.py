@@ -61,9 +61,9 @@ def filter_dict_by_key(
 
     Args:
         dict_content (dict): Input dict
-        key_options (list): Set of items that, when retyped to list must match
+        key_filter (str): Optional specification of key. Default "Type"
+        key_options (set): Set of items that, when retyped to list must match
             value[list_filter].
-        key (str): Optional specification of key. Default "Type"
 
     Returns:
         dict: filtered dict
@@ -73,5 +73,5 @@ def filter_dict_by_key(
     return {
         key: value
         for (key, value) in dict_content.items()
-        if value[key_filter] == list(key_options)
+        if value[key_filter] in list(key_options)
     }

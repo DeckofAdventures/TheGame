@@ -3,11 +3,11 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "automation"
+name = "automation" # TODO: Rename package
 authors = [{name = "Chris Broz", email = "broz@DeckOfAdventures.com"}]
 description = "ADD LATER"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 keywords = ["ADD", "LATER"]
 license = {text = "CC BY-NC-SA 4.0"}
 classifiers = ["Programming Language :: Python :: 3"]
@@ -24,19 +24,35 @@ homepage = "https://deckofadventures.github.io/TheGame"
 [project.scripts]
 yaml-to-other = "automation.templates.main:yaml_to_other"
 
+[flake8]
+max-line-length = 88
+exclude = "notebooks"
+
 [tool.black]
 line-length = 88
-target-version = 'py39'
+target-version = ["py310"]
+exclude = ".env"
 
 [tool.isort]
 line_length = 88
-profile = 'black'
+profile = "black"
 
 [tool.setuptools]
 py-modules = ["automation"]
 
 [tool.setuptools.dynamic]
-dependencies = {file = ["requirements.txt"]}
+dependencies = {file = ["requirements.txt", "requirements_docs.txt"]}
+
+[tool.pytest.ini_options]
+minversion = "6.2"
+addopts = "--cov=automation --cov-report term-missing --my-verbose False"
+testpaths =  "tests"
+
+[tool.coverage.run]
+omit = [
+    "**/temp*py",
+    "**/main.py",
+]
 
 # ... other project metadata fields as specified in:
 #     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/

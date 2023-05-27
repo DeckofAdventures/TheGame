@@ -23,7 +23,13 @@ def load_all_items():
 
 
 class Items(YamlSpec):
-    """Set of DofA Items"""
+    """Set of DofA Items
+
+    Attributes:
+        as_dict (dict): dictionary of powers with ids as keys
+        categories (OrderedDict): tuple of type as key, with list values of individuals
+        csv_fields (list): list of fields to be included in csv
+    """
 
     def __init__(self, input_files="07_Items_SAMPLE.yaml", limit_types: list = None):
         """Initialize. Load file, establish attributes
@@ -110,12 +116,18 @@ class Use:
                 else:  # handles 1 Power
                     power_name, choice = self.Power, None
 
-                self.PowerFull = all_powers[power_name].set_choice(choice)
-                self.Power = self.PowerFull.Name
-                self.PowerMechanic = self.PowerFull._mechanic_for_item
+                power_lookup = all_powers.get(power_name, None)
+
+                if not power_lookup:  # If unknown power
+                    self.Power = power_name
+                    logger.warning(f"Item invokes unknown Power: {power_name}")
+                else:
+                    self.PowerFull = all_powers[power_name].set_choice(choice)
+                    self.Power = self.PowerFull.Name
+                    self.PowerMechanic = self.PowerFull._mechanic_for_item
         if self.Effect and self.Power:
             logger.warning(
-                f"Use expected effect or power, not both: {self.Effect}, {power_name}"
+                f"For items, use effect or power, not both: {self.Effect}, {power_name}"
             )
 
     @property

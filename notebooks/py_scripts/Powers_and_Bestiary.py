@@ -5,7 +5,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.14.1
+#       jupytext_version: 1.14.5
 #   kernelspec:
 #     display_name: doa
 #     language: python
@@ -116,5 +116,3 @@ yaml_to_other(
     out_delim="\t",  # CSV delimiter - "," is also available
 )
 # -
-
-

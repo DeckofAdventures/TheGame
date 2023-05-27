@@ -20,24 +20,36 @@ class YamlSpec(ABC):
         self._category_hierarchy = None
         self._content = dict()
         self._fields = None
-        self._default_root = os.getenv('THEGAME_ROOT') or "./automation/"
+        self._default_root = os.getenv("THEGAME_ROOT") or "./automation/"
         self._filepath_default_input = self._default_root + "_input/"
         self._filepath_default_output = self._default_root + "_output/"
         self._filepath_mechanics = "./docs/src/1_Mechanics/"
         self._tried_loading = False
         self._limit_types = []
         self._as_dict = {}
-        self._type_dict = {k: [] for k in self._limit_types}
+        self._type_dict = {}  # Declaring on build_contents
 
         input_files = ensure_list(input_files)
-        if len(input_files) > 1:
+        if not input_files:
+            logger.critical(
+                "YamlSpec received empty file list. Check that file name contains"
+                + " relevant keywords like 'power', 'vuln', 'best', 'pc', or 'item'"
+            )
+        elif len(input_files) > 1:
             self._stem = (
                 # When multiple inputs, take prefix before '_', add 'Combined'
                 os.path.splitext(os.path.basename(input_files[0]))[0]
                 + "_Combined"
             )
-        else:
+        elif len(input_files) == 1:
             self._stem = os.path.splitext(os.path.basename(input_files[0]))[0]
+
+        self._filepath_output = (
+            self._filepath_default_output
+            if "SAMPLE" in self._stem or "test" in self._stem
+            else self._filepath_mechanics
+        )
+
         for input_file in input_files:  # If provided mult files, combine
             if not os.path.exists(input_file):
                 input_file = self._filepath_default_input + input_file
@@ -56,32 +68,40 @@ class YamlSpec(ABC):
         return self._filepath_default_output
 
     @property
-    def filepath_mechanics(self):
-        return (
-            self._filepath_default_output
-            if "SAMPLE" in self._stem
-            else self._filepath_mechanics
-        )
+    def filepath_output(self):
+        return self._filepath_output
+
+    @filepath_output.setter  # Allows setting new output fp
+    def filepath_output(self, filepath_output: str):
+        # TODO: add path verification here
+        self._filepath_output = filepath_output
 
     # -------------------------------- CORE PROPERTIES ---------------------------------
     def _build_contents(self, this_data_class, id_component="", **kwargs):
         """Loop over items in the raw dict format. Generate list and dict versions"""
+        self._type_dict = {k: [] for k in self._limit_types}
         self._tried_loading = True
         for k, v in self.raw_data.items():
-            if v.get("Type", None) in self._limit_types:
+            type = v.get("Type", None)
+            if not type:
+                logger.warning(f"YAML item missing Type: {k}")
+            elif type in self._limit_types:
                 id = v["Name"] + str(v.get(id_component)) if v.get("Name") else k
                 _ = v.setdefault("Name", k)
                 self._as_dict.update({k: this_data_class(id=id, **v, **kwargs)})
+                self._type_dict[type].append(k)  # Build type dict
+            elif type not in self._limit_types:
+                logger.debug(f"Skipping YAML item due to excluded Type: {k}")
 
     def _build_categories(self, build_with="Type") -> OrderedDict:
         """Return OrderedDict with {tuple(Type) : [list of beasts]} as key value pairs"""
         if not self._categories:
-            for b in self.as_dict.values():
-                cat_tuple = tuple(ensure_list(getattr(b, build_with)))
+            for k, v in self.as_dict.items():
+                cat_tuple = tuple(ensure_list(getattr(v, build_with)))
                 self._categories.setdefault(cat_tuple, [])
-                self._categories[cat_tuple].append(b.Name)
+                self._categories[cat_tuple].append(k)  # Changed v.Name -> k
                 self._categories_set.add(cat_tuple)
-                self._csv_fields = self._csv_fields.union(list(b.csv_dict.keys()))
+                self._csv_fields = self._csv_fields.union(list(v.csv_dict.keys()))
                 self._categories = sort_dict(
                     self._categories, sorted(self._categories_set)
                 )
@@ -97,21 +117,24 @@ class YamlSpec(ABC):
 
     @abstractmethod
     def categories(self) -> dict:
-        """{(heirarchy tuple): [List of names]} dict"""
+        """{(hierarchy tuple): [List of names]} dict"""
         pass
 
     @property
     def type_dict(self) -> dict:
         """Cache of items by type e.g. {Major: [a, b]}"""
-        if not any(self._type_dict.values()):
-            for item in self.as_dict.values():
-                self._type_dict[item.Type].append(item.id)
+        if not self._tried_loading:
+            self._build_contents
         return self._type_dict
 
     # ------------------------------- MARKDOWN UTILITIES -------------------------------
     @property
-    def category_hierarchy(self):
-        """Return list of tuples: [(item, indent, (categ, subcat, subsub, etc.))]"""
+    def category_hierarchy(self) -> list[tuple[str, int, tuple]]:
+        """List of tuples containing (item, indentation, and set of (sub)-categories)
+
+        Returns:
+            list[tuple]: [(item, indent, (category, subcategory, sub-sub, etc.))]
+        """
         if not self._category_hierarchy:
             categories, indents, category_set, prev_category_tuple = [], [], [], tuple()
             for category_tuple in self.categories.keys():
@@ -132,10 +155,10 @@ class YamlSpec(ABC):
 
     @property
     def md_TOC(self) -> str:
-        """Generate markdown Table of Contents with category_heirarchy"""
+        """Generate markdown Table of Contents with category_hierarchy"""
         if not self._md_TOC:
             TOC = "<!-- MarkdownTOC add_links=True -->\n"
-            for (category, indent, _) in self.category_hierarchy:
+            for category, indent, _ in self.category_hierarchy:
                 TOC += make_link(category, indent)
             self._md_TOC = TOC + "<!-- /MarkdownTOC -->\n"
         return self._md_TOC
@@ -144,7 +167,7 @@ class YamlSpec(ABC):
         """All entries into bulleted lists with key prefixes.
 
         Args:
-            category_set (set): unique set of categories (categ, subcateg)"""
+            category_set (set): unique set of categories (category, subcategory)"""
         entries = ""
         for item_name in self.categories.get(category_set, []):
             entries += self.as_dict[item_name].markdown
@@ -159,14 +182,14 @@ class YamlSpec(ABC):
             TOC (bool, optional): Write table of contents. Default False
         """
         if not output_fp:
-            output_fp = self.filepath_mechanics + self._stem + ".md"
+            output_fp = self.filepath_output + self._stem + ".md"
         output = (
             "<!-- markdownlint-disable MD013 MD024 -->\n"
             + "<!-- DEVELOPERS: Please edit corresponding yaml -->\n"
         )
         if TOC:
             output += self.md_TOC
-        for (category, indent, category_set) in self.category_hierarchy:
+        for category, indent, category_set in self.category_hierarchy:
             output += make_header(category, indent)
             output += self.make_entries(category_set)
         with open(output_fp, "w", newline="") as f:
@@ -189,15 +212,12 @@ class YamlSpec(ABC):
         Args:
             output_fp (str): relative filepath. Default none, which means local
                 _output subfolder
-            delimeter (str): column delimiter. `\t` for tab or `,` for comma. If other,
+            delimiter (str): column delimiter. `\t` for tab or `,` for comma. If other,
                 must provide extension in ext
-            ext (str): file extension if other than `.csv`, `.tsv`. Must include period
         """
         suffix_dict = {"\t": ".tsv", ",": ".csv"}
         if not output_fp:
-            output_fp = (
-                self.filepath_default_output + self._stem + suffix_dict[delimiter]
-            )
+            output_fp = self.filepath_output + self._stem + suffix_dict[delimiter]
         rows = []
         with open(output_fp, "w", newline="") as f_output:
             csv_output = csv.DictWriter(

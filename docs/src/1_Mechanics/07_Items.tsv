@@ -1,0 +1,19 @@
+Type	Name	Rarity	Cost	AOE	Damage	Prereq_Skill	Range	Save	Tags	Use_Duration	Use_Effect	Use_Time
+Armor	Light Armor	Common	5 gp		0		6					
+Armor	Medium Armor	Common	25 gp		0	STR > 0	6					
+Armor	Fortified Armor	Common	100 gp		0	STR > 1	6					
+Weapon	Standard Weapon	Common	5 gp		1		6					
+Weapon	Shortsword	Common	5 gp		1		1					
+Weapon	Shortbow	Common	5 gp		1		6		['Ranged', '2-handed']			
+Weapon	Staff	Common	5 gp		1		6		2-handed			
+Weapon	Improved Weapon	Uncommon	500 gp		2		6					
+Weapon	Heroic Weapon	Rare	2,500 gp		3		6					
+Weapon	Legendary Weapon	Legendary	5,000 gp		4		6					
+General	Hammer	Common	5 sp		0		6					
+General	Tent	Common	1 gp		0		6					
+General	Lantern	Common	2 gp		0		6					
+Tool	Blacksmith Tools	Common	5 gp		0		6					
+Tool	Sailor Tools	Common	2 gp		0		6					
+Consumable	Potion of Strength	Uncommon	15 gp		0		6			1 min	Gain +1 to all Strength-based Checks	Minor Action
+Consumable	Charm of Efficiency	Rare	65 gp		0		6			1 hour	You cannot draw with Upper or Lower Hand	Minor Action
+Consumable	Fortifying Feast	Rare	100 gp		0		6			8 hours	Gain +3 AP immediately. For the duration, if you end you turn with 0 AP, return to 1 AP.	1 minute

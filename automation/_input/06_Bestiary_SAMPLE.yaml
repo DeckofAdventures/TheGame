@@ -1,41 +1,9 @@
-Template:               # must be unique
-  Type: One of          # Dealer, Boss, NPC, Companion
-  Level: X              # Dealers: XP progression, NPCs/Boss: Threat
-  HP: X                 # Required field
-  AP: X                 # 0 is default if blank
-  AR: X                 # Required field
-  Speed: X              # Optional, default 6
-  Attribs:              # List only Non-zero
-    AGL: ±X             # + is implied if not explicit
-    CON: ±X             #
-    GUT: ±X             #
-    INT: ±X             #
-    STR: ±X             #
-    VIT: ±X             #
-  Skills:               # List if different from corresponding Attrib
-    Finesse: ±X         #
-    Stealth: ±X         #
-    Bluffing: ±X        #
-    Performance: ±X     #
-    Knowledge: ±X       #
-    Investigation: ±X   #
-    Detection: ±X       #
-    Craft: ±X           #
-    Athletics: ±X       #
-    Brute: ±X           #
-  Powers:               # Include Powers/Vulnerabilities names as list
-    Example: Option     # Add as key:value when the power allows options
-  Phases:               # Only for bosses
-    One:                #
-      HP: X             #
-      Allies: X         # List of who appears. If multiple of same, list multiple times
-  Description: Descrip  # Full descriptive text
-
 Spider Queen:
   Type: Boss
   HP: 11
   AR: 2
   PP: 6
+  Primary_Skill: Knowledge
   Attribs:
     AGL: -1
     CON: 2
@@ -46,18 +14,11 @@ Spider Queen:
   Powers:
     - Attack, Mystic
     - Attack, Mystic Aura
-    - Summon Ally
     - Amplify Ally
-    - Shake Enemy
     - Favored Terrain
     - Manifest Terrain
-    - Condition Immunity, Poisoned
-    - Condition Resilience, Blinded
     - Terrain Blink
-    - Conjure Terrain
     - Adversary Major Action
-    - Shake Enemy
-    - Wall Grab
     - Obey Me
   Description: A queen of her minions, trusted and obeyed without question.
 
@@ -67,6 +28,7 @@ Scorpion Beast:
   AP: 2
   AR: 2
   PP: 4
+  Primary_Skill: Brute
   Attribs:
     AGL: 1
     CON: 0

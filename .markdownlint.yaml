@@ -9,6 +9,6 @@ MD025: false # permit adjacent headings
 MD026: false # permit trailing punctuation in headings
 MD033: # HTML elements allowed
     allowed_elements:
-        - "br"
+        - "img"
 MD034: false # Bare URLs OK
 MD036: false # permit emphasis as heading

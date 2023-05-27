@@ -5,6 +5,8 @@ hide:
 
 # Welcome to Deck of Adventures, The Game
 
+<img src="stylesheets/Logo_Transparent.png" alt="Logo" width="200"/>
+
 This website establishes latest rules for the Deck of Adventures tabletop
 roleplaying game. A magical world awaits, where Players come first. In Deck of
 Adventures, it’s your turn, your choice.

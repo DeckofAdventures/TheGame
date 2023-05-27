@@ -1,17 +1,32 @@
 import copy
 import random
-from typing import List, Union
+from math import floor
 
 from ..templates.bestiary import Beast
+from ..templates.powers import Power
 from ..utils import ensure_list, logger
-from .deck import Deck
+from .deck import Card, Deck
 from .player import Player
 
 
 class Encounter(object):
-    def __init__(
-        self, PCs: List[Union[Player, Beast]], Enemies: List[Union[Player, Beast]]
-    ):
+    """A Deck of Adventures encounter.
+
+    A series of methods for simulating an encounter in Deck of Adventures.
+
+    Attributes:
+        gm_deck (Deck): Single deck for GM in encounter
+        PCs (list[Player]): List of Players. If initialized with Beast type, will be
+            converted to Players
+        Enemies (list[Player]): List of Enemies. If initialized with Beast type, will be
+            converted to Players
+        turn_order (list[Player]): Concatenated list of PCs and Enemies in randomized
+            order
+        status_list (list[Str]): List of statuses that are simulated.
+
+    """
+
+    def __init__(self, PCs: list[Player | Beast], Enemies: list[Player | Beast]):
         self.gm_deck = Deck(use_TC=False)
         self.PCs = [p if isinstance(p, Player) else Player(**p) for p in PCs]
         self.enemies = [p if isinstance(p, Player) else Player(**p) for p in Enemies]
@@ -35,25 +50,61 @@ class Encounter(object):
         self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
 
     def set_csv_logging(self, setting: bool):
+        """Turn on CSV logging for all Players in turn_order"""
         for char in self.turn_order:
             char._CSV_LOGGING = setting
 
-    def add_enemy(self, name: Player):
-        self.enemies.append(name)
+    def add_creature(self, creature: Player, side: str = "Enemies"):
+        """Add a creature of type Player to the Encounter.
+
+        Args:
+            creature (Player): creature to be added
+            side (str, optional): Enemies or PCs. Defaults to "Enemies".
+        """
+        if not isinstance(creature, Player):
+            creature = Player(**creature)  # Assume dict if not Player class
+        if side.lower() == "enemies":
+            self.enemies.append(creature)
+        else:
+            self.PCs.append(creature)
+        self.turn_order = [*self.PCs, *self.enemies]
 
     def _apply_power(
-        self, attacker, targets: List[Player], power=None, return_string=False
-    ):
+        self,
+        attacker: Player,
+        targets: list[Player],
+        power: Power = None,
+        return_string: bool = False,
+        force_result: int = None,  # Force outcome
+    ) -> str | None:
+        """Perform a Power, attack a target.
+
+        Args:
+            attacker (Player): creature performing Power
+            targets (list[Player]): List of possible targets
+            power (Power, optional): Power to be used. Defaults to None, where nothing
+                happens.
+            return_string (bool, optional): Return a string describing what happened.
+                Defaults to False.
+            force_result (int, optional): Override card draw. Defaults to None, where
+                attacker/targets draw according to Power for random result.
+
+        Returns:
+            str | None: If return_string, returns a string describing results.
+        """
         targets = ensure_list(targets)
-        result_strings = [f"{attacker.Name} used {power.Name}"]
         if not power:
             return
+
+        result_strings = [f"{attacker.Name} used {power.Name}"]
+
         for _ in range(ensure_list(power.Targets)[0]):
             target = random.choice(targets)
             if power.Save:
-                result = target.save(
-                    DR=power.Save.DR, attrib=power.Save.Type, return_val=True
-                )
+                DR = power.Save.DR or 3 - floor(attacker.Primary_Skill_Mod / 2)
+                result = target.save(DR=DR, attrib=power.Save.Type, return_val=True)
+                if force_result:
+                    result = force_result
                 if result < 0:
                     if power.Save.Fail in self.status_list:
                         target._statuses[power.Save.Fail] = (
@@ -71,10 +122,10 @@ class Encounter(object):
                         result_strings.append(f"{target.Name} {power.Save.Fail}")
                 elif result > 0:
                     result_strings.append(f"{target.Name} resisted {power.Save.Fail}")
-                elif power.Save.Succeed:
-                    result_strings.append(
-                        target.Name + power.Save.Succeed + ". Not simulated"
-                    )
+                    if power.Save.Succeed:
+                        result_strings.append(
+                            target.Name + " " + power.Save.Succeed + ". Not simulated"
+                        )
             if power.Damage:
                 damage = ensure_list(power.Damage)[0]
                 result = attacker.check_by_skill(
@@ -97,10 +148,20 @@ class Encounter(object):
             if not return_string:
                 logger.info(result_strings)
                 result_strings = []
+
         if return_string:
             return "\n".join(result_strings)
 
-    def _take_turn(self, attacker: Player, targets: List[Player]):
+    def _take_turn(self, attacker: Player, targets: list[Player]):
+        """Runs the attackers turn on list of possible targets.
+
+        Randomizes if Major or Minor action is taken first before executing all
+        components of attacker's turn.
+
+        Args:
+            attacker (Player): Player taking the turn.
+            targets (list[Player]): List of possible targets.
+        """
         actions = ["Major", "Minor"]
         random.shuffle(actions)  # Randomize major vs minor first
 
@@ -110,6 +171,7 @@ class Encounter(object):
         attacker.end_turn()
 
     def _sim_single_round(self):
+        """Simulate a single round in turn order."""
         for char in self.turn_order:
             if char.HP <= 0:
                 logger.info(f"{char.Name} is Knocked Out, no turn")
@@ -117,16 +179,33 @@ class Encounter(object):
                 self._take_turn(char, self.enemies if char in self.PCs else self.PCs)
 
     def sim_round(self, n: int = 1):
+        """Run n number of rounds of combat in turn order.
+
+        Args:
+            n (int, optional): Number of rounds to simulate. Defaults to 1.
+        """
         for _ in range(n):
             self._sim_single_round()
 
-    def sim_full_rest(self, participants: List[Player] = None):
+    def sim_full_rest(self, participants: list[Player] = None):
+        """Simulate a full rest for all participants provided. Default to all.
+
+        Args:
+            participants (list[Player], optional): Creatures who should take a full rest.
+                Defaults to all in turn order.
+        """
         if not participants:
             participants = self.turn_order
         for char in participants:
             char.full_rest()
 
-    def sim_quick_rest(self, participants: List[Player] = None, **kwargs):
+    def sim_quick_rest(self, participants: list[Player] = None, **kwargs):
+        """Simulate a quick rest for all participants provided. Default to all.
+
+        Args:
+            participants (list[Player], optional): Creatures who should take a quick rest.
+                Defaults to all in turn order.
+        """
         if not participants:
             participants = self.turn_order
         for char in self.turn_order:
@@ -134,21 +213,24 @@ class Encounter(object):
 
     def sim_epic_event(
         self,
-        TC=None,
+        TC: Card = None,
         DR=3,
-        participants: List[Player] = None,
-        skills: List[str] = None,
-        successes_needed=1,
-    ):
-        """Run epic event. Players go first, them GM.
+        participants: list[Player] = None,
+        skills: list[str] | str = None,
+        successes_needed: int = 1,
+        return_string: bool = False,
+    ) -> str | None:
+        """Simulate an epic event. Players go first, them GM.
 
         Args:
-            TC: target card. Default draw from gm_deck
-            participants: list of those involved on a TC. Default all PCs
-            skill: Type of check for each participant in particpant order. Default 0 mod
+            TC (Card): target card. Default draw from gm_deck
+            DR (int): Difficulty range.
+            participants (list[Player]): list of those involved on a TC. Default all PCs
+            skills (list[str] | str): Type of check for each participant in participant
+                order. Default 0 mod. If same for all, provide as single string.
                 e.g., participants=[PC1, PC2], skill=['STR','Finesse'].
-                If same for all, provide as string
-            successes_needed: N suited hits before end. Default 1
+            successes_needed (int): N suited hits before end. Default 1
+            return_string (bool): return a string describing the result.
         """
         if not TC:
             TC = self.gm_deck.draw()
@@ -184,4 +266,9 @@ class Encounter(object):
                         + f"{participant.Name} {participant.result_types[result]}"
                     )
         victor = "GM" if gm_successes > player_successes else "Party"
-        logger.info(f"{victor} wins after {draw_count} total cards drawn")
+        result_string = f"{victor} wins after {draw_count} total cards drawn"
+
+        if return_string:
+            return result_string
+
+        logger.info(result_string)

@@ -5,7 +5,7 @@ Mystic Bulwark:
   Use:
     Time: Major Action
     Limit: 2 times per rest
-    Power: Shield, Self
+    Power: Shield
   StatAdjust:
     Add:
       AR: -1
@@ -20,7 +20,7 @@ Wand of Flame:
     Power:
       - Attack, Mystic Cone
       - Attack, Mystic Aura
-      - Attack, Mystic 
+      - Attack, Mystic
   StatAdjust:
     Add:
       Craft: 1

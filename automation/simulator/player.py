@@ -28,7 +28,7 @@ class Player(Deck, Beast):
             "Knocked Out": 0,
         }
         self._not_simulated = ["Blinded", "Deafened", "Enthralled", "Charmed"]
-        self._CSV_LOGGING = False
+        self._CSV_LOGGING = False  # Toggled at Encounter level
 
     def __repr__(self):
         """Result of print(Player)"""
@@ -56,22 +56,23 @@ class Player(Deck, Beast):
         return output
 
     def _apply_upper_lower(self, save_check: str, kwarg_dict: dict, skill="") -> dict:
+        # TODO: change save_check to enum: save, check
         all_type = "upper_lower_" + save_check
         next_type = "upper_lower_next_" + save_check
         extra = 0
-        if self._statuses.get("Entagled", False) and skill == "AGL":
+        if self._statuses.get("Entangled", False) and skill == "AGL":
             extra -= 1
         if self._statuses.get("Knocked Down", False) and skill in ["AGL", "STR"]:
             extra -= 1
-        if self._statuses.get("Frozen", False) and type == "skill":
+        if self._statuses.get("Frozen", False) and save_check == "check":
             extra -= 1
-        if self._fatigue > 0 and type == "save":
+        if self._fatigue > 0 and save_check == "save":
             extra -= 1
         elif self._fatigue > 1:
             extra -= 1
         kwarg_dict["upper_lower_int"] = (
             0 + kwarg_dict.get("upper_lower_int", 0)
-            if kwarg_dict.get("upper_lower_int", 0)
+            if kwarg_dict.get("upper_lower_int", False)
             else 0
             + self._statuses.get(all_type, 0)
             + self._statuses.get(next_type, 0)
@@ -80,8 +81,10 @@ class Player(Deck, Beast):
         self._statuses[next_type] = 0
         return kwarg_dict
 
-    def modify_fatigue(self, change=1):
+    def modify_fatigue(self, change=1, shuffle=True):
         self._fatigue += change
+        if shuffle:
+            self.shuffle()
         if self._fatigue >= 3 and not self._statuses.get("_fatigue3"):
             self._statuses["_fatigue3"] = True
             self.Speed = self.Speed / 2
@@ -108,14 +111,24 @@ class Player(Deck, Beast):
         skill = max(vals, key=vals.get)
         return skill, vals[skill]
 
-    def check_by_skill(self, TC: Card, DR: int, skill: str = None, **kwargs):
+    def check_by_skill(self, TC: Card = None, DR: int = 3, skill: str = None, **kwargs):
         """Accepts any Skill or Attrib. Accepts any valid args of Deck.check"""
+        if not TC:
+            TC = Card("random")
+
         if not skill:
             skill = "None"
         if self._CSV_LOGGING:
             kwargs["return_val"] = True
+
         skill, mod = self._find_highest_stat(skill)
         new_kwargs = self._apply_upper_lower("check", kwargs, skill=skill)
+
+        n_deck = len(self.cards)
+        if abs(new_kwargs.get("upper_lower_int", 1)) > n_deck or n_deck == 0:
+            # does not offer option to use fate cards to avoid fatigue
+            self.modify_fatigue()
+            logger.debug("Fatigue modified from check_by_skill")
 
         # Need to account for return_string for bot and result for checking result
         if new_kwargs.get("return_string"):
@@ -123,10 +136,7 @@ class Player(Deck, Beast):
         else:
             result = self.check(TC, DR, mod=mod, **new_kwargs)
 
-        if result == 0:
-            self.modify_fatigue()
-            result = self.check_by_skill(TC=TC, DR=DR, skill=skill, **kwargs)
-        # NOTE: drawlog doesn't know if had options
+        # NOTE: draw_log doesn't know if had options
         draw_log.info(
             [
                 self.id,
@@ -148,11 +158,19 @@ class Player(Deck, Beast):
         """Accepts any Attrib. Accepts any valid args of Deck.check"""
         if self._CSV_LOGGING:
             kwargs["return_val"] = True
+
         attrib, mod = self._find_highest_stat(attrib)
+
         assert (
             attrib in self._valid_attribs
         ), f"Could not find {attrib} in {self._valid_attribs}"
         new_kwargs = self._apply_upper_lower("save", kwargs, skill=attrib)
+
+        n_deck = len(self.cards)
+        if abs(new_kwargs.get("upper_lower_int", 1)) > n_deck or n_deck == 0:
+            # does not offer option to use fate cards to avoid fatigue
+            self.modify_fatigue(1)
+            logger.debug("Modified fatigue from Player.save")
 
         # Need to account for return_string for bot and result for checking result
         if new_kwargs.get("return_string"):
@@ -164,10 +182,7 @@ class Player(Deck, Beast):
                 TC=self.TC, DR=DR, mod=getattr(self.Attribs, attrib, 0), **new_kwargs
             )
 
-        if result == 0:
-            self.modify_fatigue()
-            self.save(DR=DR, attrib=attrib, **kwargs)
-        # NOTE: drawlog doesn't know if had options
+        # NOTE: draw_log doesn't know if had options
         draw_log.info(
             [
                 self.id,
@@ -184,6 +199,8 @@ class Player(Deck, Beast):
 
         if new_kwargs.get("return_string"):
             return result_string
+        if new_kwargs.get("return_val"):
+            return result
 
     def full_rest(self, return_string=False, **_):
         rest_log.info(
@@ -203,6 +220,7 @@ class Player(Deck, Beast):
         for i in ["HP", "PP", "AP", "RestCards", "Speed"]:
             setattr(self, i, getattr(self, i + "_Max"))
         self._statuses = {}
+        self._fatigue = 0  # TODO: Check rules. Fatigue 0 on full rest?
         rest_log.info(
             [
                 self.id,
@@ -290,10 +308,10 @@ class Player(Deck, Beast):
                 break
 
         result = f"{self.Name} recovered {point_total} HP/PP/AP during Quick Rest"
-        logger.info(result)
         self.shuffle(limit=(10 + self.Attribs.VIT * 2))
         if return_string:
             return result
+        logger.info(result)
 
     def wound(self, wound_val, bypass_HP=False):
         for _ in range(wound_val):
@@ -375,5 +393,3 @@ class Player(Deck, Beast):
                     status_dict[status]["fail"](
                         self._statuses[status] + 1, bypass_HP=True
                     )
-            if len(self.cards) == 0:
-                self.modify_fatigue(1)

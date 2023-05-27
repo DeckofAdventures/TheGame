@@ -15,9 +15,14 @@ temp*/*
 automation/_output/*
 *__pycache__/
 
+# Tests
+.cov*
+tests/test_data/*
+
 # Defaults
 .DS_Store
 
 # duplicate items when build with docker
 docs/src/C*
 docs/src/LI*
+docs/site/*

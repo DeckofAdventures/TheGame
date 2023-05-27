@@ -37,16 +37,17 @@ across 4 suits, as well as Jokers. Each player should have their own Deck, with 
 for a Discard Pile and Fate Card pile.
 
 1. Actions with unknown outcomes will require a player to make a Check, which means
-drawing from their respective decks to inform the outcome.
+  drawing from their respective decks to inform the outcome.
 
 2. Jokers and Aces are Fate Cards and should be reserved in one's hand, for both players
-and the GM. All other cards go directly into a Discard Pile. Hold on to these Fate
-Cards, even when shuffling the deck.
+  and the GM. All other cards go directly into a Discard Pile. Hold on to these Fate
+  Cards, even when shuffling the deck.
 
 3. Players will use their deck to do most anything; it represents their character's
-stamina until they complete a Rest. When the Action Deck is empty and a player has to
-shuffle between rests, they suffer from [Fatigue](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would
-shuffle when resting.
+  stamina until they complete a Rest. When the Action Deck is empty and a player has to
+  shuffle between rests, they suffer from
+  [Fatigue](./01_PlayerGuide_Full.md#upper-and-lower-hand) until they would shuffle when
+  resting.
 
 ## Fate Cards
 
@@ -571,8 +572,8 @@ their breath or healing their wounds. A Full Rest is an 8-hour period of time wh
 characters get some sleep and recover from a long day.
 
 During a Quick Rest, each player who is resting draws from their deck using Rest Cards.
-Players start with a number of Rest Cards equal to their maximum Health.
-Each Rest Card can be used as a DR 3 draw against one's own target card without modifiers. On a miss,
+Players start with a number of Rest Cards equal to their maximum Health. Each Rest Card
+can be used as a DR 3 draw against one's own target card without modifiers. On a miss,
 recover one HP or PP, your choice. On a success, recover two total points across HP and
 PP, your choice.
 

@@ -24,10 +24,10 @@ draw_header = [
     "draw_n",
 ]
 
-output_path = os.getenv('THEGAME_ROOT') or "./automation/"
+output_path = os.getenv("THEGAME_ROOT") or "./automation/"
 
 draw_log = CsvLogger(
-    filename= output_path + "_output/log_draws.csv",
+    filename=output_path + "_output/log_draws.csv",
     delimiter=delimiter,
     level=logging.INFO,
     # add_level_names=["check", "save"],
@@ -56,7 +56,7 @@ rest_header = [
 ]
 
 rest_log = CsvLogger(
-    filename= output_path + "_output/log_rests.csv",
+    filename=output_path + "_output/log_rests.csv",
     delimiter=delimiter,
     level=logging.INFO,
     add_level_nums=None,

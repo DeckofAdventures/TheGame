@@ -5,7 +5,9 @@
     // language - current active spelling language
     "language": "en",
     "enabledLanguageIds": [
-        "markdown", "yaml", "python"
+        "markdown",
+        "yaml",
+        "python"
     ],
     "dictionaries": [
         "en",
@@ -16,45 +18,86 @@
         "python-common",
         "latex",
         "public-licenses",
-        "softwareTerm",
-        "custom-dictionary"
+        "softwareTerm"
     ],
     // words - list of words to be always considered correct
     "words": [
+        "addoption",
+        "addopts",
         "Attribs",
         "Battlecharged",
         "codemirror",
+        "compatiblelicenses",
+        "creativecommons",
+        "datadir",
         "delim",
-        "excepthook",
+        "Descrip",
+        "docstrings",
+        "dofa",
+        "dotenv",
+        "Edtech",
         "Erdania",
+        "excepthook",
+        "fontawesome",
+        "Gameplay",
+        "ipykernel",
+        "ipynb",
+        "isort",
+        "jupyterlab",
+        "jupytext",
         "kernelspec",
         "levelname",
         "manip",
+        "markdownlint",
+        "minversion",
+        "mkdocs",
+        "mkdocstrings",
+        "mult",
         "nbconvert",
         "nbformat",
+        "noopener",
+        "posthog",
         "premade",
         "Premade",
         "premades",
+        "Prereq",
+        "Prereqs",
+        "purp",
         "pydot",
+        "pytests",
         "reflavoring",
         "remixable",
+        "respec",
         "roleplay",
         "Roleplay",
         "ruleset",
+        "Scrying",
         "Shortbow",
         "Shortsword",
+        "sidenav",
+        "sublicensable",
+        "testpaths",
         "Thadius",
+        "THEGAME",
+        "townsperson",
         "TTRPG",
         "TTRPGs",
-        "workshopped",
         "Vuln",
         "Vulny",
-        "Vulnys"
+        "Vulnys",
+        "waivable",
+        "workshopped",
+        "Xena",
+        "yamls"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
-    // For example "hte" should be "the"
-    "flagWords": [
-        "hte"
-    ]
+    "flagWords": [],
+    "ignorePaths": [
+        "**/docs/site",
+        ".git",
+        "automation.egg-info",
+        "__pycache__"
+    ],
+    "enabled": true
 }

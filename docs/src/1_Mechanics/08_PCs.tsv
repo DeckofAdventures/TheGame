@@ -1,0 +1,25 @@
+Type	Name	Level	Role	Descriptions	Pronouns	RestCards	Speed	HP	PP	AP	AP_Max	AR	AR_Max	Attrib_AGL	Attrib_GUT	Attrib_INT	Attrib_STR	Attrib_VIT	Description	HP_Max	Items	PP_Max	Primary_Skill	Primary_Skill_Mod	RestCards_Max	Skill_Athletics	Skill_Bluffing	Skill_Brute	Skill_Craft	Skill_Detection	Skill_Finesse	Skill_Investigation	Skill_Knowledge	Skill_Stealth	Speed_Max	_pow_PP	_pow_XP	_vulny_XP	id
+PC	Clubs1	1	Defender		He/Him	6	6	6	1	2	2	2	2	1			2	1		6		1	Brute	2	6	2		2			1			1	6	1	2	-3	Clubs1
+PC	Clubs2	2	Defender		He/Him	7	6	7	2	2	2	2	2	1			2	1		7		2	Brute	2	7	2		2			1			1	6	2	3	-3	Clubs2
+PC	Clubs3	3	Defender		He/Him	8	6	8	4	2	2	2	2	1			2	1		8		4	Brute	2	8	2		2			1			1	6	4	5	-3	Clubs3
+PC	Diamonds1	1	Caster		She/Her	6	4	6	4	0	0	3	3			2	-4	1		6		4	Knowledge	2	6	-2	1	-2	2	2		2	2		4	4	2	-4	Diamonds1
+PC	Diamonds2	2	Caster		She/Her	7	4	7	4	0	0	3	3			2	-4	1		7		4	Knowledge	2	7	-2	2	-2	2	2		2	2		4	4	2	-4	Diamonds2
+PC	Diamonds3	3	Caster		She/Her	8	4	8	6	0	0	3	3			2	-4	1		8		6	Knowledge	2	8	-2	2	-2	2	2		2	2		4	6	4	-4	Diamonds3
+PC	Hearts1	1	Support		They/Them	4	6	4	5	0	0	3	3	-2	2			-2		4		5	Craft	2	4		1		2	2	-1	2	2	-1	6	5	4	-4	Hearts1
+PC	Hearts2	2	Support		They/Them	6	6	6	5	0	0	3	3	-2	2					6		5	Craft	2	6		1		2	2	-1	2	2	-1	6	5	5	-3	Hearts2
+PC	Hearts3	3	Support		They/Them	7	6	7	7	0	0	3	3	-2	2					7		7	Craft	2	7		1		2	2	-1	2	2	-1	6	7	8	-3	Hearts3
+PC	Spades1	1	Martial		He/Him	5	6	5	4	0	0	2	2	2	1					5		4	Finesse	2	5				1	1	2	1	1	2	6	4	1	-4	Spades1
+PC	Spades2	2	Martial		He/Him	7	6	7	4	0	0	2	2	2	1			1		7		4	Finesse	2	7				1	1	2	1	1	2	6	4	2	-4	Spades2
+PC	Spades3	3	Martial		He/Him	8	6	8	4	0	0	2	2	2	1			1		8		4	Finesse	2	8		1		1	1	2	1	1	2	6	4	3	-4	Spades3
+PC	Crusader1	1	Defender		He/Him	6	6	6	1	2	2	2	2	1			2	1		6		1	Brute	2	6	2		2			1			1	6	1	1	-4	Crusader1
+PC	Crusader2	2	Defender		He/Him	7	6	7	2	2	2	2	2	1			2	1		7		2	Brute	2	7	2		2			1			1	6	2	4	-4	Crusader2
+PC	Crusader3	3	Defender		He/Him	8	6	8	5	2	2	2	2	1			2	1		8		5	Brute	2	8	2		2			1			1	6	5	7	-4	Crusader3
+PC	Summoner1	1	Caster		She/Her	6	6	6	4	0	0	3	3			2	-4	1		6		4	Knowledge	2	6	-2	1	-2	2	2		2	2		6	4	2	-4	Summoner1
+PC	Summoner2	2	Caster		She/Her	7	6	7	6	0	0	3	3			2	-4	1		7		6	Knowledge	2	7	-2	2	-2	2	2		2	2		6	6	4	-4	Summoner2
+PC	Summoner3	3	Caster		She/Her	8	6	8	7	0	0	3	3			2	-4	1		8		7	Knowledge	2	8	-2	1	-2	2	2		2	2		6	7	8	-4	Summoner3
+PC	Alchemist1	1	Support		They/Them	5	6	5	1	0	0	3	3	-4	2					5		1	Craft	2	5		1		2	2	-2	2	2	-2	6	1	0	-4	Alchemist1
+PC	Alchemist2	2	Support		They/Them	6	6	6	2	0	0	3	3	-4	2					6		2	Craft	2	6		1		2	2	-2	2	2	-1	6	2	2	-4	Alchemist2
+PC	Alchemist3	2	Support		They/Them	7	6	7	3	0	0	3	3	-4	2					7		3	Craft	2	7		1		2	2	-2	2	2	-2	6	3	6	-4	Alchemist3
+PC	Assassin1	1	Martial		He/Him	5	6	5	2	0	0	2	2	2	1	1				5		2	Finesse	2	5				1	1	2	2	1	2	6	2	-1	-4	Assassin1
+PC	Assassin2	2	Martial		He/Him	6	6	6	2	0	0	2	2	2	1	1				6		2	Finesse	2	6				1	1	2	2	1	2	6	2	1	-4	Assassin2
+PC	Assassin3	3	Martial		He/Him	7	6	7	4	0	0	2	2	2	1	1				7		4	Finesse	2	7				1	1	2	2	1	2	6	4	4	-4	Assassin3

@@ -3,7 +3,14 @@ from dataclasses import dataclass, field, fields
 from operator import attrgetter
 from typing import Union
 
-from ..utils import ensure_list, flatten_embedded, list_to_or, make_bullet, my_repr
+from ..utils import (
+    ensure_list,
+    flatten_embedded,
+    list_to_or,
+    logger,
+    make_bullet,
+    my_repr,
+)
 from .yaml_spec import YamlSpec
 
 list_power_types = [
@@ -33,7 +40,8 @@ class Powers(YamlSpec):
 
     Attributes:
         as_dict (dict): dictionary of powers with ids as keys
-        categories
+        categories (OrderedDict): tuple of type as key, with list values of individuals
+        csv_fields (list): list of fields to be included in csv
     """
 
     def __init__(self, input_files="04_Powers_SAMPLE.yaml", limit_types: list = None):
@@ -46,12 +54,12 @@ class Powers(YamlSpec):
                 Defaults to None, which means all of the following:
                 ["Major", "Minor", "Passive", "Adversary", "House", "Free", "Vulny"]
         """
-        input_files = ensure_list(ambiguous_item=input_files)
-        super().__init__(
-            input_files=[
-                file for file in input_files if "Power" in file or "Vuln" in file
-            ]
-        )
+        input_files = [
+            file
+            for file in ensure_list(ambiguous_item=input_files)
+            if "power" in file.lower() or "vuln" in file.lower()
+        ]
+        super().__init__(input_files=input_files)
         self._limit_types = limit_types or list_power_types
         self._as_dict = {}
         self._categories = {}
@@ -208,6 +216,7 @@ class Power:
         self.Mechanic_raw = self.Mechanic
         self.Mechanic = self.merge_mechanic()
         self.upper_lower_int = self._get_upper_lower_int() if self.Draw else None
+        logger.debug(f"Loaded {self.Name}")
 
     def set_choice(self, choice: str = None):
         """Given a choice among options, revise merged mechanic property
@@ -238,8 +247,9 @@ class Power:
             Upper, Lower, None, -3, 4 would return 2, -2, 0, -3, 4 respectively
 
         """
-        upper_lower = self.Draw.upper()[0]
-        return 2 if upper_lower == "U" else -2 if upper_lower == "L" else 0
+        ul_dict = dict(U=2, L=-2, N=0)
+        val = self.Draw.upper()[0]
+        return ul_dict[val] if isinstance(val, str) else int(self.Draw)
 
     def _compose_adjust(self, stat_adjust_items):
         output = []
@@ -275,7 +285,8 @@ class Power:
                 output += [adjust.text for adjust in self.StatAdjusts]
             if self.Save:
                 output.append(self.Save.text)
-            return ". ".join([self.Type, *output])
+            output_concat = ". ".join([self.Type, *output])
+            return output_concat.replace("..", ".")
 
     @property
     def _mechanic_for_item(self) -> str:
@@ -315,6 +326,7 @@ class Power:
             "Description",
         ]
         output = {k: v for k, v in self.__dict__.items() if k not in removed}
+        output["Mechanic"] = output["Mechanic"].replace("\n", "\\")
         for attrib in [self.StatAdjusts, self.Save, self.Prereq]:
             for a in ensure_list(attrib):
                 if a:
