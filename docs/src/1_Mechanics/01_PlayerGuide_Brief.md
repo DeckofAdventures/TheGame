@@ -4,14 +4,14 @@
 
 Deck of Adventures is a Tabletop Roleplaying Game (TTRPG) where friends tell a
 collaborative narrative story together as a group of adventurers. This guide is enough
-to get started, but we recommended you read the [Full Players Guide](./01_PlayerGuideFull.md)
+to get started, but we recommend you read the [Full Players Guide](./01_PlayerGuideFull.md)
 to learn all of the rules, mechanics, and story-telling devices.
 
 ## Quick-Start Guide
 
 Your Game Master (GM) is about to play narrator to a story in which you will take part.
 The GM will be there to help guide you through the process and understand the rules.
-The GM serves as the primary storyteller and referee for the rules during the game.
+The GM serves as the primary storyteller and referee throughout an Adventure.
 
 ### The Deck
 
@@ -28,14 +28,14 @@ outcome via...
   value close to in order to succeed on your Check. Think of it as the bullseye of
   the target you are aiming for.
 
-- *Difficulty Range* (DR) that defines how far away from the TC you can be and still
-  succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above' a
-  King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
+- *Difficulty Range* (DR) that defines how far away from the Target Card you can be and
+  still succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above'
+  a King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
 
 - A *Modifier* (Mod) is associated with a specific skill or attribute and can be found
   on your character sheet. A mod allows you to add that number to the DR, increasing the
   effective DR and making it easier for you to succeed. This helps widen the rings
-  around the bullseye that will result in a success.
+  around the bullseye that will result in a successful draw.
 
 - Under some circumstances, you'll be asked to draw with the *Upper Hand* or the *Lower Hand*.
     - With the Upper Hand, you can draw an additional card(s) and use the more
@@ -47,18 +47,18 @@ outcome via...
      or more cards for the applicable check. Upper and Lower Hand can also cancel
      each other out.
 
-- For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to
-  succeed on a Check. If you have a +1 Mod, the DR is 2 and you can draw a 2 or 6 and
-  still report a successful 3 or 5 draw.
+- For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to succeed
+  on a Check. If you have a +1 Mod, the effective DR is 2 which means you can draw a 2,
+  3, 4, 5 or 6 and still report a successful draw.
 
 There are two special kinds of Checks:
 
 - A *Contested Check* is triggered by two characters using skills for opposing goals.
-  The initiator sets the TC (their own card) and the DR (3 - Mod/2). The character
-  responding makes a simple check against this TC/DR.
+  The initiator sets the Target Card (their own card) and the DR (3 - Mod/2). The
+  character responding makes a simple check against this TC/DR.
 
-- A *Save* is a Check with an Attribute (see below) with a preset DR that a character
-  makes against their own TC.
+- A *Save* is a Check made with an Attribute (see below) with a predetermined DR that a
+  character makes while aiming at their own Target Card.
 
 ### Fate Cards
 
@@ -83,6 +83,9 @@ that might not be accessible to others. Some Powers, labeled Minor and Major, ta
 number of Power Points as your maximum. You'll need to keep track of how many Power
 Points you have left as you use Powers.
 
+You can work with your GM to create a custom character for the Adventure, or use one of
+the [premade characters](./PremadeCharacters/) as a quick way to get started.
+
 ### Gameplay
 
 Throughout an Adventure, your GM will describe scenes and may provide visual cues or
@@ -91,7 +94,7 @@ would do. Creativity and thinking outside the box (i.e., exact rules) is encoura
 
 Different Adventures might involve exploring the world, interacting with the locals, or
 resolving conflicts with opposing forces in combat. Adventures may contain a mix of all
-of these elements, or be primarily focused on one specific area. These scenarios may
+of these elements, or be primarily focused on one specific area. These scenarios will
 also be determined by the actions and choices of you and the other players at the table.
 
 During an Adventure, the GM might announce an **Epic Event**, a series of trials meant
