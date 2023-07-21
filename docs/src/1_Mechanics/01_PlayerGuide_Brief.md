@@ -29,13 +29,14 @@ outcome via...
   the target you are aiming for.
 
 - *Difficulty Range* (DR) that defines how far away from the Target Card you can be and
-  still succeed. Think of it as the closest rings surrounding the bullseye. A DR 'above'
-  a King is an Ace, then 2, and so on. A DR 'below' 2 is an Ace, then King, etc.
+  still succeed. Think of it as the closest rings surrounding the bullseye. A Difficulty
+  Range 'above' a King is an Ace, then 2, and so on. A Difficulty Range 'below' 2 is an
+  Ace, then King, etc.
 
 - A *Modifier* (Mod) is associated with a specific skill or attribute and can be found
-  on your character sheet. A mod allows you to add that number to the DR, increasing the
-  effective DR and making it easier for you to succeed. This helps widen the rings
-  around the bullseye that will result in a successful draw.
+  on your character sheet. A mod allows you to add that number to the Difficulty Range,
+  increasing the effective Difficulty Range and making it easier for you to succeed.
+  This helps widen the rings around the bullseye that will result in a successful draw.
 
 - Under some circumstances, you'll be asked to draw with the *Upper Hand* or the *Lower Hand*.
     - With the Upper Hand, you can draw an additional card(s) and use the more
@@ -47,18 +48,19 @@ outcome via...
      or more cards for the applicable check. Upper and Lower Hand can also cancel
      each other out.
 
-- For example, on a TC of 4, with a DR 1, you would need either a 3, 4, or 5 to succeed
-  on a Check. If you have a +1 Mod, the effective DR is 2 which means you can draw a 2,
-  3, 4, 5 or 6 and still report a successful draw.
+- For example, on a Target Card of 4, with a Difficulty Range 1, you would need either a
+  3, 4, or 5 to succeed on a Check. If you have a +1 Mod, the effective Difficulty Range
+  is now 2 which means you can draw a 2, 3, 4, 5 or 6 and still report a successful
+  draw.
 
 There are two special kinds of Checks:
 
 - A *Contested Check* is triggered by two characters using skills for opposing goals.
-  The initiator sets the Target Card (their own card) and the DR (3 - Mod/2). The
-  character responding makes a simple check against this TC/DR.
+  The initiator sets the Target Card (their own card) and the Difficulty Range (3 -
+  Mod/2). The character responding makes a simple check against these.
 
-- A *Save* is a Check made with an Attribute (see below) with a predetermined DR that a
-  character makes while aiming at their own Target Card.
+- A *Save* is a Check made with an Attribute (see below) with a predetermined Difficulty
+  Range that a character makes while aiming at their own Target Card.
 
 ### Fate Cards
 
@@ -66,20 +68,21 @@ You start with 2 Jokers in your hand as **Fate Cards**. Any Aces drawn during pl
 also reserved as Fate Cards. At any time, you can discard a Fate Card to ...
 
   1. *Push Fate*: redraw any check and use the new value.
-  2. *Exchange Fate*: gain one *Power Point* per card discarded (up to your maximum)
+  2. *Exchange Fate*: gain one *Power Point* per card discarded (up to your max)
   3. *Toughen Up*: nullify one point of damage taken per card discarded.
 
 ### Characters
 
 You will have a **Character Sheet** with all the information about your character. This
-includes Attributes (general traits, like Agility and Intelligence), and specific
-Skills under each Attribute (e.g., Finesse under Agility). Each Attribute and Skill has
-a Modifier that you add when performing a Check related to that Attribute or Skill,
-signified by a number like +1. If a Mod equals 0, do not add or subtract from the DR.
+includes Attributes (general traits, like Agility and Intelligence), and specific Skills
+under each Attribute (e.g., Finesse under Agility). Each Attribute and Skill has a
+Modifier that you add when performing a Check related to that Attribute or Skill,
+signified by a number like +1. If a Mod equals 0, do not add or subtract from the
+Difficulty Range when making a check.
 
 Also on your character sheet are **Powers**. This is anything your character can do
-that might not be accessible to others. Some Powers, labeled Minor and Major, take 1 or
-2 *Power Points* respectively to activate. Your character sheet shows your starting
+that might not be accessible to others. Some Powers, labeled Minor and Major, may
+require *Power Points* to activate. Your character sheet shows your starting
 number of Power Points as your maximum. You'll need to keep track of how many Power
 Points you have left as you use Powers.
 
@@ -90,7 +93,8 @@ the [premade characters](./PremadeCharacters/) as a quick way to get started.
 
 Throughout an Adventure, your GM will describe scenes and may provide visual cues or
 props. It's up to you to ask follow-up questions and figure out what your character
-would do. Creativity and thinking outside the box (i.e., exact rules) is encouraged.
+would do in each scenario. Creativity and thinking outside the box (i.e., exact rules)
+is encouraged.
 
 Different Adventures might involve exploring the world, interacting with the locals, or
 resolving conflicts with opposing forces in combat. Adventures may contain a mix of all
@@ -98,19 +102,19 @@ of these elements, or be primarily focused on one specific area. These scenarios
 also be determined by the actions and choices of you and the other players at the table.
 
 During an Adventure, the GM might announce an **Epic Event**, a series of trials meant
-to represent actions the party might have to take during a tense scenario.
+to represent actions the party might have to take to navigate through a tense scenario.
 
-- The GM will reveal a TC and DR. One or more players can volunteer and decide which
-  skill they want to use for the relevant check.
+- The GM will reveal a Target Card and the Difficulty Range. One or more players can
+  volunteer and decide which skill they want to use for the relevant check.
 
-- Each player and the GM will take turns drawing on the TC to get a success with a
-  matching suit.
+- Each player and the GM will take turns drawing on the Target Card to get a success
+  with a matching suit.
 
-- Each TC is a collective success or failure, and the GM determines how many TCs are
-  needed to resolve the Epic Event.
+- Each Target Card is a collective success or failure, and the GM determines how many
+  successes are needed to resolve the Epic Event.
 
 At the end of an Epic Event, the GM will tell the party whether they were successful,
-and reveal what narrative consequences there are for their success or failure.
+and reveal the narrative consequences for their success or failure.
 
 ### Resting
 
@@ -119,8 +123,8 @@ Rest takes 30 minutes of in-game time, while a Full Rest takes 8 hours of in-gam
 If a rest is interrupted, you do not gain the benefits and need to try resting again.
 
 - On completing a **Quick Rest**, each player can draw a number of **Rest Cards**.
-    - Each Rest Card is used in a DR 3 check to regain Health or Power Points. 1 point
-      is regained on a miss, and 2 points are regained on a success.
+    - Each Rest Card is used in a Difficulty Range 3 check to regain Health or Power
+      Points. 1 point is regained on a miss, and 2 points are regained on a success.
     - At the end of the rest, shuffle 10 plus twice your Vitality modifier cards back
       into your deck.
 
@@ -132,10 +136,10 @@ If a rest is interrupted, you do not gain the benefits and need to try resting a
     - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may
     also ask for shuffling on Quick Rests.
 
-Every time you run out of cards during a day and need to reshuffle, you gain one more
-level of *Fatigue*, which will make it more difficult to succeed going forward. See the
-[Full Players Guide](./01_PlayerGuideFull.md/#status-conditions) to learn more about the
-*Fatigued* status condition.
+Every time you run out of cards during a day and need to reshuffle, you gain one level
+of *Fatigue*, which makes certain actions more difficult with each level of *Fatigue*.
+See the [Full Players Guide](./01_PlayerGuideFull.md/#status-conditions) to learn more
+about the *Fatigued* status condition.
 
 ### Combat
 
@@ -149,7 +153,7 @@ out in the "theater of the mind", and will be determined by your GM.
 When the GM declares the start of Combat, each character involved in the scenario will
 draw a Target Card to determine turn order, starting from Ace and working down to 2.
 
-- On your turn, you can move and take 1 Major and 1 Minor Action, in any order.
+- On your turn, you can move and take 1 Major Action and 1 Minor Action, in any order.
   Minor actions include object interactions and some Skill Checks.
 - Your movement is limited by the Speed value on your character sheet, showing the
   maximum number of spaces you can move. The average speed is 6.
