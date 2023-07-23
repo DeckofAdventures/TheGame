@@ -60,15 +60,15 @@ There are two special kinds of Checks:
   Mod/2). The character responding makes a simple check against these values.
 
 - A *Save* is a Check made with an Attribute (see below) with a predetermined Difficulty
-  Range that a character makes while aiming at their own Target Card.
+  Range that a character makes against their own Target Card.
 
 ### Fate Cards
 
 You start with 2 Jokers in your hand as **Fate Cards**. Any Aces drawn during play are
 also reserved as Fate Cards. At any time, you can discard a Fate Card to ...
 
-  1. *Push Fate*: redraw any check and use the new value.
-  2. *Exchange Fate*: gain one *Power Point* per card discarded (up to your max)
+  1. *Push Fate*: redraw use the new value.
+  2. *Exchange Fate*: gain one *Power Point* per card discarded.
   3. *Toughen Up*: nullify one point of damage taken per card discarded.
 
 ### Characters
@@ -110,25 +110,22 @@ to represent actions the party might have to take to navigate through a tense sc
 - Each player and the GM will take turns drawing on the Target Card to get a success
   with a matching suit.
 
-- Each Target Card is a collective success or failure, and the GM determines how many
-  successes are needed to resolve the Epic Event.
+- Each Target Card is a collective success or failure.
 
-At the end of an Epic Event, the GM will tell the party whether they were successful,
-and reveal the narrative consequences for their success or failure.
+The GM determines how many successes are needed to resolve the Epic Event. 
+At the end, the GM will reveal the narrative consequences for their success or failure.
 
 ### Resting
 
-Your character may need to rest to recharge Power Points or heal Health Points. A Quick
-Rest takes 30 minutes of in-game time, while a Full Rest takes 8 hours of in-game time.
+Your character may need to rest to recharge Power Points or heal Health Points. 
 If a rest is interrupted, you do not gain the benefits and need to try resting again.
 
-- On completing a **Quick Rest**, each player can draw a number of **Rest Cards**.
+- **Quick Rest** takes 30 minutes of in-game time. Each player can draw a number of **Rest Cards**.
     - Each Rest Card is used in a Difficulty Range 3 check to regain Health or Power
-      Points. 1 point is regained on a miss, and 2 points are regained on a success.
-    - At the end of the rest, shuffle 10 plus twice your Vitality modifier cards back
-      into your deck.
+      Points. On a miss, regain 1 point. On a success, regain 2.
+    - At the end of the rest, shuffle a number of Discarded cards into your deck equal to 10 plus twice your Vitality modifier.
 
-- On completing a **Full Rest** you return to your maximum Health, Fate, Power and Armor
+- A **Full Rest** takes 8 hours of in-game time. Return to your maximum Health, Fate, Power and Armor
   Points.
     - If you run out of cards before you can successfully take a Rest, you may
      reshuffle your discard pile into your deck, but you gain one level of *Fatigue*.
@@ -136,10 +133,10 @@ If a rest is interrupted, you do not gain the benefits and need to try resting a
     - Return all Aces to the deck, and Jokers to your hand and **shuffle**. Some GMs may
     also ask for shuffling on Quick Rests.
 
-Every time you run out of cards during a day and need to reshuffle, you gain one level
-of *Fatigue*, which makes certain actions more difficult with each level of *Fatigue*.
-See the [Full Players Guide](./01_PlayerGuideFull.md/#status-conditions) to learn more
-about the *Fatigued* status condition.
+If you run out of cards in your deck before you are able to take a rest,
+you gain one level
+of *Fatigue*, which makes certain actions more difficult  
+(see [status conditions](./01_PlayerGuideFull.md/#status-conditions) for more detail).
 
 ### Combat
 
@@ -163,9 +160,7 @@ draw a Target Card to determine turn order, starting from Ace and working down t
   circumstances.
 - Unless otherwise stated, Powers have a range of 6 spaces and do 1 point of damage.
 - Remember, if you get hit, you can expend a Fate Card to nullify 1 point of damage.
-- Depending on the type of attack or amount of damage, you may get Stunned, Knocked Out,
-  Blinded/Deafened or Entangled. For a full list of Status Conditions and their rules,
-  consult the [Full Players Guide](./01_PlayerGuideFull.md/#status-conditions).
+- Some attacks may result in a [Status Condition](./01_PlayerGuideFull.md/#status-conditions).
 
 ### Ready to Play?
 
