@@ -28,7 +28,7 @@ In times of uncertainty, defer to the following:
 entire group has fun. They have the final say of rulings at the table and will work
 to try and resolve disputes between players that may come up.
 
-## The Action Deck
+## The Deck
 
 Deck of Adventures is based around a 54-card deck: 13 cards (2-10, J, Q, K, and A)
 across 4 suits, as well as Jokers. Each player should have their own Deck, with room
@@ -41,7 +41,7 @@ for a Discard Pile and Fate Card pile.
   and the GM. All other cards go directly into a Discard Pile.
 
 3. Players will use their deck to do most anything; it represents their character's
-  stamina until they complete a Rest. When the Action Deck is empty and a player has to
+  stamina until they complete a Rest. When the deck is empty and a player has to
   shuffle between rests, they suffer from one level of
   [Fatigue](./01_PlayerGuide_Full.md#status-conditions) until they complete
   a Full Rest.
@@ -233,13 +233,13 @@ Left of 0 is the lower bound, right of 0 is the upper bound.
 Effective Difficulty Range (EDR) is the DR plus Modifier of a
 check, which can help players understand the difficultly of a task. A
 check can only be attempted if the EDR is -2 or higher. A -1 EDR
-requires a Color Major Success, while a -2 EDR requires a Suited Major Success. 
+requires a Color Major Success, while a -2 EDR requires a Suited Major Success.
 For example, drawing against a King of Diamonds on a -1 EDR means
 you must draw a red King to be successful. For a -2 EDR, you need the
 King of Diamonds.
 
 During an adventure, there will be tasks of varying degrees of difficulty. As characters
-grow, their Modifiers increase and previously challenging tasks 
+grow, their Modifiers increase and previously challenging tasks
 are made easier. Higher level characters will be faced with more difficult challenges
 at a lower DR.
 A +6 EDR is an assured success, while
@@ -298,9 +298,9 @@ Multiple Upper/Lower hand effects can compound or even out. If a rule specifies
 Upper/Lower Hand (N+), the effect can apply multiple times. N cards are drawn, +1 for
 each instance the effect is applied. For example, running through your deck
 without resting results in one level of Fatigue, which causes Lower Hand (1+) on all
-Saves. This means that, if another effect causes Lower Hand, 
+Saves. This means that, if another effect causes Lower Hand,
 draw an additional Lower Hand card on
-all Saves. 
+all Saves.
 Upper/Lower Hand effects are cumulative and cancel each other out.
 
 #### Special Checks: Contested Checks and Saves
