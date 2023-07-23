@@ -43,8 +43,8 @@ for a Discard Pile and Fate Card pile.
 3. Players will use their deck to do most anything; it represents their character's
   stamina until they complete a Rest. When the Action Deck is empty and a player has to
   shuffle between rests, they suffer from one level of
-  [Fatigue](./01_PlayerGuide_Full.md#status-conditions) until they would shuffle after a
-  Full Rest.
+  [Fatigue](./01_PlayerGuide_Full.md#status-conditions) until they complete
+  a Full Rest.
 
 ## Fate Cards
 
@@ -65,8 +65,7 @@ redraw. Only one redraw is permitted per check.
 
     1. *Push Fate*: redraw any check.
 
-    2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used, up to
-       your maximum Power Points value.
+    2. *Exchange Fate*: gain Power Points equal to the number of Fate Cards used.
 
     3. *Toughen Up*: ignore damage equal to the number of Fate Cards used. This can be
     done as soon as the damage is applied or before the end of the Player's next turn
@@ -231,25 +230,24 @@ Left of 0 is the lower bound, right of 0 is the upper bound.
 
 #### Effective Difficulty Range and Negative DRs
 
-Effective Difficulty Range is the DR plus the corresponding Modifier of a specific
-check. This helps players understand whether a check is possible to complete or not. A
-Check can only be attempted if the Effective DR is -2 or higher. A -1 Effective DR
-requires a Color Major Success, while a -2 Effective DR requires a Suited Major Success
-(a Critical Success). For example, drawing against a -1 DR on a King of Diamonds means
-you must draw a King of Hearts to be successful. For a -2 DR, you would need to draw the
-King of Hearts exactly.
+Effective Difficulty Range (EDR) is the DR plus Modifier of a
+check, which can help players understand the difficultly of a task. A
+check can only be attempted if the EDR is -2 or higher. A -1 EDR
+requires a Color Major Success, while a -2 EDR requires a Suited Major Success. 
+For example, drawing against a King of Diamonds on a -1 EDR means
+you must draw a red King to be successful. For a -2 EDR, you need the
+King of Diamonds.
 
 During an adventure, there will be tasks of varying degrees of difficulty. As characters
-grow in level their skill modifiers increase and tasks previously considered challenging
+grow, their Modifiers increase and previously challenging tasks 
 are made easier. Higher level characters will be faced with more difficult challenges
-than they faced before, and the corresponding Difficulty Range will change to reflect
-the degree of difficulty. An effective DR of +6 is an assured success, while an
-effective DR of -3 is assured failure. The GM will determine whether it is necessary to
-make a draw if a check is an assured failure or success.
+at a lower DR.
+A +6 EDR is an assured success, while
+a -3 EDR is assured failure.
 
 #### Degrees of Success
 
-Exactly matching the TC in numeric value is a Major Success. If the drawn card is a
+- Exactly matching the TC in numeric value is a Major Success. If the drawn card is a
 perfect match (i.e., value and suit), it's a Critical Success. If the card drawn is
 within the DR and matches the suit or color (i.e., red/black), it is either a Suited or
 Color Success. If there is a suit or color match outside the DR after the modifier has
@@ -259,7 +257,7 @@ no critical failure in Deck of Adventures.
 
 **For example**, when Xena attempts to jump across a chasm, the GM reveals a TC of
 the 8 of Clubs and a DR of 2, asking for an Athletics check. If the player's Athletics
-modifier is +1, the effective DR is now 3, and the check is ...
+modifier is +1, the EDR is now 3, and the check is ...
 
 1. A Critical Success if they draw the 8 of Clubs. They might perfectly make the
  jump, impressing their allies, and catch a glimpse of something important in the
@@ -268,7 +266,7 @@ modifier is +1, the effective DR is now 3, and the check is ...
 2. A Major Success if they draw any 8. They might make the jump gracefully enough to
 impress their allies without any other benefits.
 
-3. A Success if they draw any card within 3 (DR 2 ± 1 Mod). For TC 8, DR 2, and Mod 1,
+3. A Success if they draw any card within 3. For TC 8, DR 2, and Mod 1,
 this is 5, 6, 7, 9, 10 or J.
 
 4. A Color Success for any Successes that match the color of the TC, in this case black
@@ -298,10 +296,12 @@ cards.
 In these cases, all cards drawn are discarded. If N is not specified, draw 1 extra.
 Multiple Upper/Lower hand effects can compound or even out. If a rule specifies
 Upper/Lower Hand (N+), the effect can apply multiple times. N cards are drawn, +1 for
-each instance the effect is applied. For example, running through your Action Deck
+each instance the effect is applied. For example, running through your deck
 without resting results in one level of Fatigue, which causes Lower Hand (1+) on all
-Saves. This means that, if another effect causes Lower Hand, you would draw 3 cards on
-all Saves. If yet another effect would also cause drawing with Lower Hand, draw 4 cards.
+Saves. This means that, if another effect causes Lower Hand, 
+draw an additional Lower Hand card on
+all Saves. 
+Upper/Lower Hand effects are cumulative and cancel each other out.
 
 #### Special Checks: Contested Checks and Saves
 
@@ -338,7 +338,7 @@ This could be caused by a Power, Status Condition, or a environmental effect. Wh
 character makes a Save, they draw a Check against their own TC and apply their relevant
 Attribute Modifier. The Attribute and DR are explicitly set by the initiating effect and
 cannot be altered. If the effect forcing a Save is a Power, the DR is 3 minus half of
-the initiator's relevant Skill modifier. Saves may still have consequences even on a
+the initiator's relevant Skill Modifier. Saves may still have consequences even on a
 success, as specified by the initiating effect.
 
 ### In Combat
@@ -367,7 +367,7 @@ order (Ace first, then K, Q, etc.) and the TC for any attack. Players with the s
 Target Card values as an enemy go first. If two players draw the same Target Card, they
 can decide who goes first. Without consensus, the player with the higher Agility
 modifier goes first. In the event of a Surprise Round, the characters who are part of
-the Surprise Round draw their Target Cards and take one full round of actions before the
+the Surprise Round draw their TCs and take one full round of actions before the
 characters being surprised can act.
 
 2. A player may delay their turn in initiative order to intentionally occur before or
@@ -378,7 +378,7 @@ round before a new one starts.
 
 #### In Combat Actions
 
-Each round represents 6 seconds of game time passing. All of the action from every
+Each round represents 6 seconds of game time passing. All of the actions from every
 characters' turns unfold simultaneously during this time, even though a turn order is
 followed. On a turn, a character may (a) move, (b) perform 1 Major Action, and/or (c)
 perform 1 Minor Action in any order they choose. They may also perform any number of
@@ -476,7 +476,7 @@ is listed in the Power or effect that causes it.
   as a Free Action, a character makes a DR 3 VIT Save to shake off the effects of the
   poison. On failure, they discard N+1 cards.
 
-  8. **Frozen** Movement speed is reduced by half and all Strength and Agility based
+  8. **Frozen** Movement speed is reduced by half and all STR and AGL based
   skill checks are drawn at Lower Hand. A character makes a DR 3 Strength Save as a Free
   Action at the end of their turn to attempt to end the freeze.
 
