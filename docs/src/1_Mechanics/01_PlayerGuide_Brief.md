@@ -57,7 +57,7 @@ There are two special kinds of Checks:
 
 - A *Contested Check* is triggered by two characters using skills for opposing goals.
   The initiator sets the Target Card (their own card) and the Difficulty Range (3 -
-  Mod/2). The character responding makes a simple check against these.
+  Mod/2). The character responding makes a simple check against these values.
 
 - A *Save* is a Check made with an Attribute (see below) with a predetermined Difficulty
   Range that a character makes while aiming at their own Target Card.
