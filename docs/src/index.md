@@ -8,14 +8,12 @@ hide:
 <img src="stylesheets/Logo_Transparent.png" alt="Logo" width="200"/>
 
 This website establishes latest rules for the Deck of Adventures tabletop
-roleplaying game. A magical world awaits, where Players come first. In Deck of
-Adventures, it’s your turn, your choice.
+roleplaying game, where there's an adventure in every card.
 
 Deck of Adventures is a collaborative roleplaying system, built with an open source
-ethos. Please visit our
-[Development Guide](/2_Development/01_Community/) to learn more about this project. Or
-visit our [Mechanics Guide](1_Mechanics/01_PlayerGuide_Full.md) to learn more about how
-to play.
+ethos. You can view the [Quickstart Guide](1_Mechanics/01_PlayerGuide_Brief.md), or read our [Full Player's Guide](1_Mechanics/01_PlayerGuide_Full.md) to learn how to play.
+
+If you'd like to learn more about this project and how to contribute, you can read our [Development Guide](2_Development/01_Community.md).
 
 ## Join our [Discord server](https://discord.gg/dk6RfWgPHF)!
 

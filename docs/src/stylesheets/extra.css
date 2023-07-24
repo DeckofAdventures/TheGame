@@ -2,11 +2,11 @@
 [data-md-color-scheme="my-default"] {
   --white-ish:                  #f0f0f3;
   --grey-mid:                   #7c7c7c;
-  --black-ish:                  #140b20;
-  --purp-lite:                  #b7a6c4;
+  --black-ish:                  #242627;
+  --purp-lite:                  #d1c4e9;
   --purp-mid:                   #7a6b89;
-  --purp-deep:                  #2d1344;
-  --purp-vib:                   #602494;
+  --purp-deep:                  #242627;
+  --purp-vib:                   #673ab7;
   --md-primary-fg-color:        var(--purp-lite);
   --md-primary-bg-color:        var(--black-ish);
   --md-primary-fg-color--dark:  var(--purp-deep);
@@ -19,10 +19,10 @@
   --white-ish:                  #f0f0f3;
   --grey-mid:                   #7c7c7c;
   --black-ish:                  #140b20;
-  --purp-lite:                  #b7a6c4;
+  --purp-lite:                  #d1c4e9;
   --purp-mid:                   #7a6b89;
-  --purp-deep:                  #2d1344;
-  --purp-vib:                   #602494;
+  --purp-deep:                  #242627;
+  --purp-vib:                   #673ab7;
   --md-typeset-color:           var(--white-ish);
   --md-typeset-a-color:         var(--purp-lite);
   --md-default-fg-color:        var(--white-ish);
@@ -39,7 +39,7 @@
 
 
 .bs-sidenav {
-    background-image: url("../img/NONE.png");
+    background-image: url("./Logo_Transparent.png");
     background-repeat: repeat;
     font-family: Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 13px;

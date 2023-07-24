@@ -49,7 +49,7 @@ theme:
 nav:
   - Home:                   index.md
   - Mechanics:
-    - Brief Guide:          1_Mechanics/01_PlayerGuide_Brief.md
+    - Quickstart Guide:     1_Mechanics/01_PlayerGuide_Brief.md
     - Full Guide:           1_Mechanics/01_PlayerGuide_Full.md
     - GM Guide:             1_Mechanics/02_GMGuide.md
     - Character Creation:   1_Mechanics/03_CharacterCreation.md
