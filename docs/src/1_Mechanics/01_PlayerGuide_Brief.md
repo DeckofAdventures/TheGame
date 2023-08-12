@@ -96,13 +96,7 @@ props. It's up to you to ask follow-up questions and figure out what your charac
 would do in each scenario. Creativity and thinking outside the box (i.e., exact rules)
 is encouraged.
 
-Different Adventures might involve exploring the world, interacting with the locals, or
-resolving conflicts with opposing forces in combat. Adventures may contain a mix of all
-of these elements, or be primarily focused on one specific area. These scenarios will
-also be determined by the actions and choices of you and the other players at the table.
-
-During an Adventure, the GM might announce an **Epic Event**, a series of trials meant
-to represent actions the party might have to take to navigate through a tense scenario.
+The GM might announce an **Epic Event**, a series of trials in a tense scenario.
 
 - The GM will reveal a Target Card and the Difficulty Range. One or more players can
   volunteer and decide which skill they want to use for the relevant check.
@@ -112,12 +106,12 @@ to represent actions the party might have to take to navigate through a tense sc
 
 - Each Target Card is a collective success or failure.
 
-The GM determines how many successes are needed to resolve the Epic Event. 
+The GM determines how many successes are needed to resolve the Epic Event.
 At the end, the GM will reveal the narrative consequences for their success or failure.
 
 ### Resting
 
-Your character may need to rest to recharge Power Points or heal Health Points. 
+Your character may need to rest to recharge Power Points or heal Health Points.
 If a rest is interrupted, you do not gain the benefits and need to try resting again.
 
 - **Quick Rest** takes 30 minutes of in-game time. Each player can draw a number of **Rest Cards**.
@@ -140,34 +134,23 @@ of *Fatigue*, which makes certain actions more difficult
 
 ### Combat
 
-During an Adventure, your party may need to navigate conflict with other characters or
-groups. If conflict can't be resolved peacefully, it may result in a combat scenario.
-The GM decides when Combat begins and then a separate set of rules take effect. A turn
-order is implemented and the area of combat is represented as a grid where each space is
-equal to 5 square feet. This may be represented on a physical or digital map, or played
-out in the "theater of the mind", and will be determined by your GM.
+During an Adventure, your party may need to navigate conflict. If not resolved peacefully, this may result Combat.
+The GM decides when to initiate a separate set of Combat rules, where a turn
+order is implemented. A map may be used as a visual aid, whether physical or digital, or "theater of the mind", as determined by your GM.
 
-When the GM declares the start of Combat, each character involved in the scenario will
-draw a Target Card to determine turn order, starting from Ace and working down to 2.
+At the start of Combat, each character
+draws their own Target Card to determine turn order, Ace to 2.
 
 - On your turn, you can move and take 1 Major Action and 1 Minor Action, in any order.
   Minor actions include object interactions and some Skill Checks.
 - Your movement is limited by the Speed value on your character sheet, showing the
   maximum number of spaces you can move. The average speed is 6.
 - Your character sheet will give you optional actions that you can take listed under
-  Powers, but you can always try something new using your imagination and knowledge of
-  your character and the scenario. Ask your GM if your idea is possible under the
+  Powers, but you can always try something new. Ask your GM if your idea is possible under the
   circumstances.
 - Unless otherwise stated, Powers have a range of 6 spaces and do 1 point of damage.
-- Remember, if you get hit, you can expend a Fate Card to nullify 1 point of damage.
+- If you get hit, you can expend a Fate Card to nullify 1 point of damage.
 - Some attacks may result in a [Status Condition](./01_PlayerGuideFull.md/#status-conditions).
-
-### Ready to Play?
-
-Now that you've learned the basics you're ready to get started. Simply grab some friends
-and a deck of cards! If you want to read the full game rules you can check out the
-[Full Players Guide](./01_PlayerGuideFull.md). If you want to find a GM or a group to play
-with, join the Discord server!
 
 ### Have Fun!
 
