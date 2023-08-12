@@ -186,21 +186,15 @@ A Target Card (TC) is like the bullseye on a target you are hoping to hit. The
 Difficulty Range (DR) is the range around the TC the player might hope to draw, like
 the circles around the bullseye.
 
-The Difficulty Range is decided by the GM and they can choose whether or not to reveal
-it before a check is made. Players may consult with their GM to determine if another
-Attribute or Skill may be used instead. Once the check is called for and the relevant
-skill is selected, players must make the check. A player will draw one or more cards.
+Players may consult with their GM to determine which Attribute(s) or Skill(s) may be used, corresponding to a Modifier on the character sheet. The DR is decided by the GM before a check is made, and may or may not be revealed to the players. The DR may differ based on Attribute or Skill chosen. Once the check is called for and the relevant
+skill is selected, player(s) must make the check by drawing one or more cards.
 Immediately after drawing, a player will apply any relevant Modifiers before reporting
-the outcome and whether or not they have successfully fallen within the DR. A Modifier
+the outcome. The Modifier
 is added to the DR when a check is made, effectively widening the DR and making it
-easier to succeed. A Modifier is indicated on the character sheet next to the relevant
-Skill or Attribute related to the Check. Think of it as a character's ability to 'aim' a
-check to get closer to the TC.
+easier to succeed.
 
-The GM may describe the nature of the outcome or announce the degree of success. This
-may be simply to report the success or failure of an action, or provide a more detailed
-description of the outcome. The GM may ask the player to describe how their character
-successfully accomplishes the action depending on the scenario.
+The GM may describe the nature of the outcome or announce the degree of success, possibly including a  more detailed
+description of the outcome. Alternatively, the GM may ask the player to describe the specifics of a given success or failure.
 
 Because the range of cards is circular (Q, K, A, 2, 3, etc.), success is all about
 dialing in your effort to match the task at hand as closely as possible. Remembering
@@ -302,15 +296,6 @@ Saves. This means that, if another effect causes Lower Hand,
 draw an additional Lower Hand card on
 all Saves.
 Upper/Lower Hand effects are cumulative and cancel each other out.
-
-#### Special Checks: Contested Checks and Saves
-
-Certain times during an Adventure, a character may need to respond to the direct actions
-of another character. This typically results in one of two special types of Checks:
-*Contested Checks* and *Saves*. When the direct will of one character is being imposed
-on another, such as one character attempting to grapple another, this is a Contested
-Check. When a character attempts to resist or shrug off a negative effect, they make a
-Save.
 
 #### Contested Checks
 
@@ -439,8 +424,8 @@ character until the start of the next combat.
 
 If the Players are defeated in combat, the GM determines what happens next in the story.
 If the scenario was of life or death importance, the Player Characters may be killed
-outright. In less tense scenarios, the Player Characters may simply be left knocked out,
-imprisoned, or some other relevant circumstance.
+outright. In less tense scenarios, the Player Characters may simply be left knocked out or
+imprisoned.
 
 #### Status Conditions
 
@@ -467,7 +452,7 @@ is listed in the Power or effect that causes it.
   5. **Knocked Out** Knocked Out (KO) characters are unable to act until treated by a Craft
   check or a Healing Power (DR 5 vs. the KO character's TC, minus 1 for each turn passed
   since the effect onset). If a Knocked Out Dealer is attacked further, the Player begins
-  an Epic Event alone to avoid *Death*.
+  an Epic Event alone.
 
   6. **Burned** As a Minor Action, a character can make a DR 3 GUT Save to stop the
   burning. On failure, they take 1 damage bypassing AP.
@@ -504,12 +489,6 @@ is listed in the Power or effect that causes it.
   the benefit of additional speed. They have Lower Hand when using any Power. A
   creature can end the Grappled condition by making a successful Contested Brute or
   Finesse Check against target's Brute.
-
-  14. **Dead** If a Knocked Out Dealer is attacked further, they begin an Epic Event. On
-  failing the Epic Event, the Dealer is dead in the game world. They live on in the
-  Player's memory and the other characters of the world. Players are encouraged to
-  create a new Dealer and work with their GM to introduce that character in a future
-  session. Some GMs may decide that Player Character *Death* is not part of their story.
 
 ### Health and Armor
 
@@ -793,7 +772,6 @@ As your character journeys through the world and accumulates experience, they wi
 
 When leveling up, characters:
 
-- Add 1 to their maximum HP
 - Acquire 2 Experience Points to spend on Attributes, Skills, and Powers
 - Can access Powers that require a certain level
 
