@@ -49,7 +49,9 @@ to complete an objective, even the GM, rather than competition between
 Players and GM. This is a delicate balance, and GMs should ask for Players'
 feedback. It's also a GM's responsibility to provide feedback to the Players
 at the table when necessary, especially if one's play style may be a
-distraction to others at the table.
+distraction to others at the table. While the rules are there to guide you,
+as the Game Master you have the authority to modify and change things to suit
+your Players' needs and your individual goals for each session and adventure.
 
 ### Making Checks
 
