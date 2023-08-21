@@ -1,0 +1,63 @@
+/*https://github.com/squidfunk/mkdocs-material/blob/master/src/assets/stylesheets/main/_colors.scss*/
+[data-md-color-scheme="my-default"] {
+  --white-ish:                  #f0f0f3;
+  --grey-mid:                   #7c7c7c;
+  --black-ish:                  #242627;
+  --purp-lite:                  #d1c4e9;
+  --purp-mid:                   #7a6b89;
+  --purp-deep:                  #242627;
+  --purp-vib:                   #673ab7;
+  --md-primary-fg-color:        var(--purp-lite);
+  --md-primary-bg-color:        var(--black-ish);
+  --md-primary-fg-color--dark:  var(--purp-deep);
+  --md-accent-fg-color:         var(--purp-vib);
+  --md-code-bg-color:           var(--white-ish);
+  --md-footer-fg-color:         var(--white-ish);
+}
+
+[data-md-color-scheme="slate"] {
+  --white-ish:                  #f0f0f3;
+  --grey-mid:                   #7c7c7c;
+  --black-ish:                  #140b20;
+  --purp-lite:                  #d1c4e9;
+  --purp-mid:                   #7a6b89;
+  --purp-deep:                  #242627;
+  --purp-vib:                   #673ab7;
+  --md-typeset-color:           var(--white-ish);
+  --md-typeset-a-color:         var(--purp-lite);
+  --md-default-fg-color:        var(--white-ish);
+  --md-default-fg-color--light: var(--purp-lite);
+  --md-primary-fg-color:        var(--purp-lite);
+  --md-primary-bg-color:        var(--purp-deep);
+  --md-primary-fg-color--dark:  var(--purp-vib);
+  --md-accent-fg-color:         var(--purp-mid);
+  --md-code-bg-color:           var(--black-ish);
+  --md-code-fg-color:           var(--white-ish);
+  --md-code-hl-comment-color:   var(--purp-mid);
+  --md-footer-fg-color:         var(--purp-lite);
+}
+
+
+.bs-sidenav {
+    background-image: url("./Logo_Transparent.png");
+    background-repeat: repeat;
+    font-family: Inter,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+}
+.table {
+  table-layout: auto;
+  width: auto;
+}
+td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+blockquote
+{
+margin-left: 10px;
+padding-left: 10px;
+padding-top: 0px;
+padding-bottom: 0px;
+border-left: 3px solid #80808080;
+}

@@ -1,0 +1,3609 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Deck of Adventures Documents">
+      
+      
+        <meta name="author" content="CBroz1">
+      
+      
+        <link rel="canonical" href="https://DeckofAdventures.github.io/TheGame/latest/1_Mechanics/02_GMGuide/">
+      
+      
+        <link rel="prev" href="../01_PlayerGuide_Full/">
+      
+      
+        <link rel="next" href="../03_CharacterCreation/">
+      
+      
+      <link rel="icon" href="../../stylesheets/spades.svg">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+    
+    
+      
+        <title>GM Guide - The Game</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NVDBHE89HX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NVDBHE89HX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NVDBHE89HX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="my-default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gms-guide-to-deck-of-adventures" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Game" class="md-header__button md-logo" aria-label="The Game" data-md-component="logo">
+      
+  <img src="../../stylesheets/Logo_Transparent.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Game
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GM Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="my-default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/DeckofAdventures/TheGame" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Game" class="md-nav__button md-logo" aria-label="The Game" data-md-component="logo">
+      
+  <img src="../../stylesheets/Logo_Transparent.png" alt="logo">
+
+    </a>
+    The Game
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/DeckofAdventures/TheGame" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mechanics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Mechanics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_PlayerGuide_Brief/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quickstart Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_PlayerGuide_Full/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GM Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    GM Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-as-a-game-master" class="md-nav__link">
+    Getting Started as a Game Master
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started as a Game Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-checks" class="md-nav__link">
+    Making Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gm-preparation" class="md-nav__link">
+    GM Preparation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#being-a-deck-of-adventures-game-master" class="md-nav__link">
+    Being a Deck of Adventures Game Master
+  </a>
+  
+    <nav class="md-nav" aria-label="Being a Deck of Adventures Game Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game-master-resources" class="md-nav__link">
+    Game Master Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-player-resources" class="md-nav__link">
+    Managing Player Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cards" class="md-nav__link">
+    Cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resting" class="md-nav__link">
+    Resting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-vulnerabilities" class="md-nav__link">
+    Character Vulnerabilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-session-with-deck-of-adventures" class="md-nav__link">
+    Running a Session with Deck of Adventures
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Session with Deck of Adventures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-target-card-system" class="md-nav__link">
+    The Target Card System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successes-and-failures" class="md-nav__link">
+    Successes and Failures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-chart" class="md-nav__link">
+    Difficulty Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player-skill-mods-and-dr-reporting" class="md-nav__link">
+    Player Skill Mods and DR Reporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fate-cards" class="md-nav__link">
+    Fate Cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-breakdown" class="md-nav__link">
+    Skills Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contested-checks" class="md-nav__link">
+    Contested Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saves" class="md-nav__link">
+    Saves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epic-events" class="md-nav__link">
+    Epic Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Epic Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-identify-an-epic-event" class="md-nav__link">
+    How to Identify an Epic Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-an-epic-events-difficulty" class="md-nav__link">
+    Setting an Epic Event's Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deciding-the-stakes" class="md-nav__link">
+    Deciding the Stakes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-example-of-an-epic-event" class="md-nav__link">
+    An Example of an Epic Event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiating-combat" class="md-nav__link">
+    Initiating Combat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strengths-and-weaknesses" class="md-nav__link">
+    Strengths and Weaknesses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-combat-encounters" class="md-nav__link">
+    Setting up Combat Encounters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-in-space" class="md-nav__link">
+    Moving in space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-types" class="md-nav__link">
+    Character Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-boss-encounter" class="md-nav__link">
+    Creating a Boss Encounter
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Boss Encounter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adversary-actions" class="md-nav__link">
+    Adversary Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#house-actions" class="md-nav__link">
+    House Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boss-phases" class="md-nav__link">
+    Boss Phases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-combat-encounter-designed-for-4-players-at-level-2" class="md-nav__link">
+    Example Combat Encounter designed for 4 Players at Level 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Combat Encounter designed for 4 Players at Level 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stat-blocks" class="md-nav__link">
+    Stat Blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    Items
+  </a>
+  
+    <nav class="md-nav" aria-label="Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-currency" class="md-nav__link">
+    Standard Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-items" class="md-nav__link">
+    Starting Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weapons" class="md-nav__link">
+    Weapons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    Armor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-items" class="md-nav__link">
+    General Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumables" class="md-nav__link">
+    Consumables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-items" class="md-nav__link">
+    Magic Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-items" class="md-nav__link">
+    Upgrading Items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_CharacterCreation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Character Creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Powers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Powers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Vulnerabilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vulnerabilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Bestiary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bestiary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../99_Glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visual_Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PremadeCharacters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Premades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_Development/01_Community/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_Development/02_Design_Document/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_Development/03_Development_Timeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change Log
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CONTRIBUTING/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CODE_OF_CONDUCT/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code of Conduct
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LICENSE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            API
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Automation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Automation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/version/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Pdf
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pdf
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/pdf/split_premades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Split premades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+        
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Simulator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/simulator/deck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deck
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/simulator/encounter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encounter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/simulator/player/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Player
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_5" >
+        
+          <label class="md-nav__link" for="__nav_4_2_5" id="__nav_4_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/templates/bestiary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bestiary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/templates/items/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Items
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/templates/main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/templates/powers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Powers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/templates/yaml_spec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yaml spec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_6" >
+        
+          <label class="md-nav__link" for="__nav_4_2_6" id="__nav_4_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Utils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/dataclass_utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dataclass utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/dict_manip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dict manip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/list_manip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List manip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/logger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logger
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/logger_csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logger csv
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/automation/utils/md_utils/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Md utils
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-as-a-game-master" class="md-nav__link">
+    Getting Started as a Game Master
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started as a Game Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-checks" class="md-nav__link">
+    Making Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gm-preparation" class="md-nav__link">
+    GM Preparation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#being-a-deck-of-adventures-game-master" class="md-nav__link">
+    Being a Deck of Adventures Game Master
+  </a>
+  
+    <nav class="md-nav" aria-label="Being a Deck of Adventures Game Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game-master-resources" class="md-nav__link">
+    Game Master Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-player-resources" class="md-nav__link">
+    Managing Player Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cards" class="md-nav__link">
+    Cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resting" class="md-nav__link">
+    Resting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-vulnerabilities" class="md-nav__link">
+    Character Vulnerabilities
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-a-session-with-deck-of-adventures" class="md-nav__link">
+    Running a Session with Deck of Adventures
+  </a>
+  
+    <nav class="md-nav" aria-label="Running a Session with Deck of Adventures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-target-card-system" class="md-nav__link">
+    The Target Card System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#successes-and-failures" class="md-nav__link">
+    Successes and Failures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difficulty-chart" class="md-nav__link">
+    Difficulty Chart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#player-skill-mods-and-dr-reporting" class="md-nav__link">
+    Player Skill Mods and DR Reporting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fate-cards" class="md-nav__link">
+    Fate Cards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-breakdown" class="md-nav__link">
+    Skills Breakdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contested-checks" class="md-nav__link">
+    Contested Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#saves" class="md-nav__link">
+    Saves
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epic-events" class="md-nav__link">
+    Epic Events
+  </a>
+  
+    <nav class="md-nav" aria-label="Epic Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-identify-an-epic-event" class="md-nav__link">
+    How to Identify an Epic Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-an-epic-events-difficulty" class="md-nav__link">
+    Setting an Epic Event's Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deciding-the-stakes" class="md-nav__link">
+    Deciding the Stakes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-example-of-an-epic-event" class="md-nav__link">
+    An Example of an Epic Event
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combat" class="md-nav__link">
+    Combat
+  </a>
+  
+    <nav class="md-nav" aria-label="Combat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initiating-combat" class="md-nav__link">
+    Initiating Combat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strengths-and-weaknesses" class="md-nav__link">
+    Strengths and Weaknesses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-combat-encounters" class="md-nav__link">
+    Setting up Combat Encounters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-in-space" class="md-nav__link">
+    Moving in space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#character-types" class="md-nav__link">
+    Character Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-boss-encounter" class="md-nav__link">
+    Creating a Boss Encounter
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a Boss Encounter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adversary-actions" class="md-nav__link">
+    Adversary Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#house-actions" class="md-nav__link">
+    House Actions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boss-phases" class="md-nav__link">
+    Boss Phases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-combat-encounter-designed-for-4-players-at-level-2" class="md-nav__link">
+    Example Combat Encounter designed for 4 Players at Level 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Example Combat Encounter designed for 4 Players at Level 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stat-blocks" class="md-nav__link">
+    Stat Blocks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items" class="md-nav__link">
+    Items
+  </a>
+  
+    <nav class="md-nav" aria-label="Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-currency" class="md-nav__link">
+    Standard Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-items" class="md-nav__link">
+    Starting Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weapons" class="md-nav__link">
+    Weapons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armor" class="md-nav__link">
+    Armor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-items" class="md-nav__link">
+    General Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumables" class="md-nav__link">
+    Consumables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magic-items" class="md-nav__link">
+    Magic Items
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrading-items" class="md-nav__link">
+    Upgrading Items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="gms-guide-to-deck-of-adventures">GM’s Guide to Deck of Adventures<a class="headerlink" href="#gms-guide-to-deck-of-adventures" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>As the Game Master (GM), your task is to bring together a group of Players and
+guide them through an Adventure. An Adventure can last for a single 2-3 hour
+session, or it can unfold over the course of weeks, months, or even years in
+a continuous narrative. You can bring together close friends in person, or
+find new friends virtually through the <a href="https://discord.gg/2Wu6ZAb6S9">Discord</a>.</p>
+<p>If you’ve been a GM elsewhere and are hoping to learn about what’s different
+about being a Deck of Adventures Game Master, you can skip right to
+<a href="./#being-a-deck-of-adventures-game-master">Being a Deck of Adventures Game Master</a>.</p>
+<p>For everyone else, or those GMs who want a refresher, we will dive into what being a GM
+is all about in <a href="./#getting-started-as-a-game-master">Getting Started as a Game Master</a>.</p>
+<p>If you or your players have questions or need a helping hand, please reach out
+to the team on <a href="https://discord.gg/2Wu6ZAb6S9">Discord</a> or via GitHub
+issues.</p>
+<h2 id="getting-started-as-a-game-master">Getting Started as a Game Master<a class="headerlink" href="#getting-started-as-a-game-master" title="Permanent link">&para;</a></h2>
+<p>Game Masters (GMs) play referee and narrator in a Tabletop RPG like Deck of
+Adventures (DofA). You are both the arbiter of the rules, and the
+actor/playwright who brings the various scenes of the story to life and
+voices the majority of the characters who populate the world. You control
+when certain characters come and go, scene changes, and the narration between
+scenes. You build the world, populate it with characters and history, and
+then the Players walk through that world and experience it first-hand.</p>
+<p>GMs are responsible for preparing ahead of sessions and guiding a group of
+Players through a collaborative narrative Adventure. You bring the game to
+life with any type of story you can imagine. There are so many possibilities
+as Game Master, and this guide is intended to help GMs develop and hone their
+skills running Adventures.</p>
+<p>There are many different approaches GMs take to this role, focusing on their
+unique strengths and talents. Don't compare yourself to others, especially
+those with years of experience. This craft takes years to hone, and decades
+to master, but you can be a great GM within your first few sessions by
+following some of the advice in this guide. The DofA Community also is
+available to respond to questions and offer advice, drawing from years of
+collective experience.</p>
+<p>You should be an impartial force in the world, controlling both allies and
+enemies neutrally. The best sessions feel like everyone is working together
+to complete an objective, even the GM, rather than competition between
+Players and GM. This is a delicate balance, and GMs should ask for Players'
+feedback. It's also a GM's responsibility to provide feedback to the Players
+at the table when necessary, especially if one's play style may be a
+distraction to others at the table. While the rules are there to guide you,
+as the Game Master you have the authority to modify and change things to suit
+your Players' needs and your individual goals for each session and adventure.</p>
+<h3 id="making-checks">Making Checks<a class="headerlink" href="#making-checks" title="Permanent link">&para;</a></h3>
+<p>As the GM, you decide when characters should make a Check when attempting an
+action during an Adventure. Some actions just happen, like a character
+opening an unlocked door. Other actions might require the character to
+attempt a Skill Check to see if they are successful. Incorporating luck makes
+Adventures feel more dynamic and exciting.</p>
+<p>When characters make a Check, they are drawing from their expertise
+(or inexperience) with a specific Skill to see how they perform. Their
+Modifier (Mod) indicates their character's expertise with a specific Skill.
+Characters with high Strength would be more likely to succeed on an Athletics
+Check than Characters with low Strength, though by incorporating luck a low
+Strength character still has a chance to succeed on a Strength Check.</p>
+<p>You determine when a Check should be made, what Skill should be used, and set
+the Difficulty. A Player might ask if a specific Skill could be used instead,
+and it is your decision whether to allow it in the circumstance. Stepping
+over a crack in the floor should not require a Check, but leaping ten feet
+across a chasm would. Attempting to sneak past a sleeping guard still
+requires a Stealth Check, but it should be less difficult than sneaking past
+the same guard who is on high alert.</p>
+<p>Flow state is achieved when we are at the peak of our ability and met with the
+exact level of challenge to fit our skills. To keep Players engaged, dial in
+the difficulty to where they're feeling challenged in a way that suits their
+play style, without worrying about what resources they have left.</p>
+<h3 id="gm-preparation">GM Preparation<a class="headerlink" href="#gm-preparation" title="Permanent link">&para;</a></h3>
+<p>As a GM, you will need to spend time outside of normal session hours working
+on your Adventure. You will be the primary resource for information about the
+world. Players will ask questions, and it's up to you to provide details,
+even if it's improvised. It's also OK to say you don't know something, or
+that you'll need to get back to them after the session. You should be open to
+Player questions and ideas, and work with them to tell the story as much as
+possible. Improvisation and spontaneity are two vital ingredients to a great
+session, but having key moments mapped out is important to shaping the
+Players' experience.</p>
+<p>What you prepare may not pan out perfectly, and that's part of the fun. The
+Players bring their own creative agency to the table, and that can be
+unpredictable. It's important not to force the Players back into a prescribed
+narrative. If the Players logically lead the the session in a different
+direction, go with it. The Players also may not know when story beats are
+improvised, and these moments can make for the most organic and memorable Adventures.</p>
+<p>During a session, GMs keep some information hidden from the Players. This can
+be a physical or virtual GM screen that separates the information that's available to
+the GM and not the players. <em>Behind the GM screen</em> also serves as a metaphor
+for what players can and can't see.
+As the GM, you choose what to share and under what circumstances,
+as a result of a Check or just part of the
+narrative. Every GM has their own style of maintaining this division of what
+is hidden and what is revealed.</p>
+<h2 id="being-a-deck-of-adventures-game-master">Being a Deck of Adventures Game Master<a class="headerlink" href="#being-a-deck-of-adventures-game-master" title="Permanent link">&para;</a></h2>
+<p>As a Deck of Adventures (DofA) Game Master (GM) you are controlling the flow
+of card draws on both sides of the table. Try to balance card draws between
+Players and NPCs throughout a session, and make sure all Players are
+involved.</p>
+<h3 id="game-master-resources">Game Master Resources<a class="headerlink" href="#game-master-resources" title="Permanent link">&para;</a></h3>
+<p>Game Masters (GMs) should have at least two decks of cards available during a
+session to represent allies and enemies. More decks may be useful to
+represent different groups in combat. If you only have one deck available,
+split it into two 26-card decks and shuffle regularly.</p>
+<p>One deck of cards should be designated the <em>NPC Deck</em> and one designated the <em>World
+Deck</em>. Different color card backs will help distinguish the two throughout play. The
+NPC Deck is used to draw Target Cards for NPCs, for their Actions, and when applying
+negative <a href="../01_PlayerGuide_Full/#status-conditions">Status Conditions</a>. The World
+Deck is used to make social checks, and to draw Target Cards representing items and
+objects in the world. Reshuffle the NPC Deck before each Combat. Reshuffle the World
+Deck empty.</p>
+<p>Most NPCs won't stick around long enough to use a deck completely, and
+therefore won't shuffle prematurely, which would invoke Lower Hand on Checks.
+For the exceptional NPC, such as a Dealer or a Boss, try assigning them a
+deck, if available. If unavailable, you can decide when to invoke Lower Hand
+behind the GM screen.</p>
+<h3 id="managing-player-resources">Managing Player Resources<a class="headerlink" href="#managing-player-resources" title="Permanent link">&para;</a></h3>
+<p>Adventures can also be designed to test different aspects of the Players and
+characters. Each Player holds a single deck of 52 cards, with two Fate Cards
+reserved at the beginning of play. Each character has statistics that include
+total Health Points (HP), Power Points (PP), and Armor Points (AP). Your focus
+during a session will be balancing the expenditure of all of these
+resources.</p>
+<p>Absolute values are low in Deck of Adventures to promote speed of play and
+simplicity of calculations. With that in mind, Player controlled Dealer HP
+starts at 5, but scales with level and Vitality modifier.
+The theoretical maximum is 21 HP, at level 10 with a +6 Vitality modifier. Armor Points are
+similarly small, with a maximum of 3. Maximum Power Points may be larger at
+higher levels of play, the enemies that players face should require
+higher level Powers that balance out this scaling.
+Players will leverage all of their
+resources to survive and succeed in Adventures. As the GM, it is up to you to
+make those resources feel strained and tested.</p>
+<h3 id="cards">Cards<a class="headerlink" href="#cards" title="Permanent link">&para;</a></h3>
+<p>Think of the Players' decks as their characters' stamina. They should get
+progressively more tired throughout the day as cards are drawn for Checks and
+Powers. If a Player runs out of cards between Rests, they are
+<a href="../01_PlayerGuide_Full/#status-conditions">Fatigued</a> and
+reshuffle their deck. They then make all checks at Lower Hand until they complete
+a Rest. At lower levels, Players may not reach the end of their decks between
+Rests to incur Lower Hand penalties. As Players level up, both the Powers
+they use and the Encounters they face may require more draws, bringing them
+closer to running out. Some Players will go through cards more quickly than others.
+Keep this in mind when
+developing Encounters to challenge different Players.</p>
+<h3 id="resting">Resting<a class="headerlink" href="#resting" title="Permanent link">&para;</a></h3>
+<p>Health and Power Points are also balanced by Rests. Players can take a Quick
+Rest using 30 minutes of in-game time, or a Full Rest using 8 hours.
+Depending on the Encounters they face and the resources
+expended, Players may try to Rest more often. While Resting, the Players will
+regain their HP and PP, and expending Rest Cards. Keep these resources in mind when planning
+Encounters that deal damage. Try to keep
+Players motivated to press on, even without full resources.</p>
+<p>To Rest, Players will consult with the GM about whether it may be feasible
+to secure an uninterrupted break. Players
+can only use Rest Cards after a Rest has been successfully completed. If a
+situation is tense, it may not always be possible to gain the benefits of a
+Rest. In the event that a Rest is interrupted, it can be resumed based on the
+remaining time left and extended as necessary.</p>
+<p>For example, a Full Rest would be easy to secure at a comfortable inn in a
+major city. A temporary hiding spot in an enemy bandit camp would me much
+more risky. You could use (a) a Player Stealth Check (b) an enemy Detection
+Check, or (c) an Epic Event to see if the Rest is interrupted. As the GM, you
+have the ultimate authority in the successful completion of a Rest. Encourage
+players to work with each other to make the best decision given
+circumstances.</p>
+<h3 id="character-vulnerabilities">Character Vulnerabilities<a class="headerlink" href="#character-vulnerabilities" title="Permanent link">&para;</a></h3>
+<p>Each character can have one or more Vulnerabilities, which may have
+mechanical and/or roleplay implications. GMs are highly encouraged to keep
+these Vulnerabilities in mind when designing Adventures. For Players, these
+are narrative seeds that can be cultivated into truly meaningful
+moments for the Players.</p>
+<p>For Player Vulnerabilities with more severe mechanical consequences, or those
+that could lead to dangerous situations, GMs should avoid planning too much
+around this weakness. The Players should feel like their Vulnerabilities add to
+the richness of the story, and that are ultimately rewarded for taking on the added
+challenge. A Vulnerability should feel both like an added difficulty
+and the source of heroism despite the odds. At its best, Vulnerabilities will inspire
+characters that develop over time, intertwining with a broader narrative.</p>
+<p>For NPCs, Vulnerabilities can add depth to an otherwise flat archetype of
+merchant or farmer. Are there Vulnerabilities that can work to challenge the
+values of Players? What foils can help Players flesh out their character by
+disagreeing with another character. Seeing a corruptible guard might really
+activate a character focused on justice. Enemy NPC Vulnerabilities also give
+Players something to exploit, through deeper analysis of the world. Yes, one
+Player can do consistent damage by continuing to attack, but another could
+spend a turn studying movements to learn that their adversary has an injury
+and can't defend against specific attacks. Perhaps an enemy has specific
+values or beliefs that could be used to turn them into an ally.</p>
+<h2 id="running-a-session-with-deck-of-adventures">Running a Session with Deck of Adventures<a class="headerlink" href="#running-a-session-with-deck-of-adventures" title="Permanent link">&para;</a></h2>
+<h3 id="the-target-card-system">The Target Card System<a class="headerlink" href="#the-target-card-system" title="Permanent link">&para;</a></h3>
+<p>As a Game Master (GM), you will set up various challenges wherein you or a
+Player will draw a Target Card (TC), and the other draws against that card to
+make a Check. The level of difficulty of a Check is set by the Difficulty
+Range (DR), which is the distance between pip values that will still count as
+a success. When thinking about the Target Card System, it may be helpful to
+consider a bullseye, where the TC is the center and
+the DR is the number of circles away from the center you can hit and still
+be successful.</p>
+<p>One of the initial barriers a new GM must overcome is helping the Players
+understand this target system. As Players get more familiar with the
+system, speed of play increases, and it is then easier for them to understand
+more complex mechanics. Using the
+<a href="../Visual_Tools/1_Circular_Assembled.PNG">Circular TC-DR Tool</a> is a helpful visual
+aid.</p>
+<p>The Target Card System is circular, so an Ace is only 1 away from both a King
+and a 2. If you were aiming a Check against a Target Card of an Ace, you
+could consult the below table to understand which cards would be successful
+within the set DR.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DR</th>
+<th style="text-align: center;">-6</th>
+<th style="text-align: center;">-5</th>
+<th style="text-align: center;">-4</th>
+<th style="text-align: center;">-3</th>
+<th style="text-align: center;">-2</th>
+<th style="text-align: center;">-1</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">+1</th>
+<th style="text-align: center;">+2</th>
+<th style="text-align: center;">+3</th>
+<th style="text-align: center;">+4</th>
+<th style="text-align: center;">+5</th>
+<th style="text-align: center;">+6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Card</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">Q</td>
+<td style="text-align: center;">K</td>
+<td style="text-align: center;">A</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="successes-and-failures">Successes and Failures<a class="headerlink" href="#successes-and-failures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Successes</strong> happen when the drawn card is within the DR. The character
+    making the Check is able to accomplish what they intended, within
+    reason.</p>
+</li>
+<li>
+<p><strong>Misses</strong> happen when the drawn card is outside the DR. The character
+    making the Check is not able to accomplish what they intended.</p>
+</li>
+<li>
+<p><strong>Critical Successes</strong> happen when the drawn card exactly matches the TC in
+    pip value and suit. At 2% chance, they should feel amazing for the
+    Player. Make an effort to reward these exact matches whenever possible
+    with additional effects or bonuses.</p>
+</li>
+<li>
+<p><strong>Major Successes</strong> happen when the drawn card matches the TC in pip value
+    At 6% chance, this should feel pretty good. In Combat, a Major Success
+    increases the damage of the attack by 1. Out of combat, some smaller
+    bonus should happen whenever possible.</p>
+</li>
+<li>
+<p><strong>Color and Suited Successes</strong> happen when the drawn card is within the DR
+    and matches the TC in color or suit.</p>
+</li>
+<li>
+<p><strong>Fate Cards</strong>  permit a Dealer (Player character or significant NPC) to
+    redraw. If this changes the success state, the first draw should be
+    ignored.</p>
+</li>
+</ul>
+<h3 id="difficulty-chart">Difficulty Chart<a class="headerlink" href="#difficulty-chart" title="Permanent link">&para;</a></h3>
+<p>As the GM, you set the Difficulty for all Checks made during a session. Setting the
+Difficulty Range (DR) is the GM's way of establishing how difficult something
+is to accomplish. The chart below shows probability of success for the most
+frequent draws at each Difficulty Range (DR). To further dial in the
+difficulty, you might say that a specific check requires a Color or Suited
+Success. Note that Color or Suit make success half or a quarter as likely.
+Some mechanics or GM rulings can call for Checks to be made at Upper or Lower
+Hand, potentially drawing additional cards, and taking the more or less beneficial
+result. The final row notes the difference caused by drawing 2 cards. At DR 0
+or 6, there's little difference, but it can be as much as 25% for a DR 3
+check.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DR</th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">Normal Draw</td>
+<td style="text-align: center;">8%</td>
+<td style="text-align: center;">23%</td>
+<td style="text-align: center;">38%</td>
+<td style="text-align: center;">54%</td>
+<td style="text-align: center;">69%</td>
+<td style="text-align: center;">85%</td>
+<td style="text-align: center;">100%</td>
+</tr>
+<tr>
+<td style="text-align: right;">Color Draw</td>
+<td style="text-align: center;">4%</td>
+<td style="text-align: center;">12%</td>
+<td style="text-align: center;">19%</td>
+<td style="text-align: center;">27%</td>
+<td style="text-align: center;">35%</td>
+<td style="text-align: center;">42%</td>
+<td style="text-align: center;">50%</td>
+</tr>
+<tr>
+<td style="text-align: right;">Suit Draw</td>
+<td style="text-align: center;">2%</td>
+<td style="text-align: center;">6%</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">13%</td>
+<td style="text-align: center;">17%</td>
+<td style="text-align: center;">21%</td>
+<td style="text-align: center;">25%</td>
+</tr>
+<tr>
+<td style="text-align: right;">Lower Hand 2</td>
+<td style="text-align: center;">1%</td>
+<td style="text-align: center;">5%</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">29%</td>
+<td style="text-align: center;">48%</td>
+<td style="text-align: center;">72%</td>
+<td style="text-align: center;">100%</td>
+</tr>
+<tr>
+<td style="text-align: right;">Upper Hand 2</td>
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">41%</td>
+<td style="text-align: center;">62%</td>
+<td style="text-align: center;">79%</td>
+<td style="text-align: center;">91%</td>
+<td style="text-align: center;">98%</td>
+<td style="text-align: center;">100%</td>
+</tr>
+<tr>
+<td style="text-align: right;">Difference</td>
+<td style="text-align: center;">7%</td>
+<td style="text-align: center;">18%</td>
+<td style="text-align: center;">24%</td>
+<td style="text-align: center;">25%</td>
+<td style="text-align: center;">21%</td>
+<td style="text-align: center;">13%</td>
+<td style="text-align: center;">NA</td>
+</tr>
+</tbody>
+</table>
+<p>Keep this table as a handy reference for setting DRs throughout a session. Do
+you want something to feel extremely difficult? Maybe make it a DR 1. Should
+a Player feel like something is less challenging for their character in a
+moment where the odds are in their favor? Make it a DR 3 with Upper Hand. You
+decide what makes the most sense given a specific situation.</p>
+<h3 id="player-skill-mods-and-dr-reporting">Player Skill Mods and DR Reporting<a class="headerlink" href="#player-skill-mods-and-dr-reporting" title="Permanent link">&para;</a></h3>
+<p>Players will have Modifiers (Mods) on their Character Sheet that allow them to
+reduce the difficulty of Checks made in the relevant domain.
+A Modifier
+widens the DR, making it more likely their draw will be successful. In some
+circumstances, having a +1 Mod may be the difference between success and
+failure.</p>
+<p>Referencing the table above, it's clear to see the difference an additional
+DR +1 can make. As you progress Players through an Adventure, keep these
+Modifiers in mind when balancing Encounters and challenges. A Player with
+a +3 Mod facing a DR 3 Check is an automatic success on a Normal Draw. Scale
+difficulties up or down accordingly, but never punish a Player for having a
+high Modifier. If it is likely their character would be able to easily
+succeed on something, allow it rather than changing the Difficulty on the
+spot.</p>
+<h3 id="fate-cards">Fate Cards<a class="headerlink" href="#fate-cards" title="Permanent link">&para;</a></h3>
+<p>Players start with 2 Jokers as Fate Cards and will randomly gain more as they
+draw their Aces. As the GM, you also reserve Fate Cards when controlling
+Dealers during a session. Fate Cards are opportunities for Players and
+Dealers to manipulate fate by allowing for a re-draw or avoiding damage. You
+can ask if a Player would like to use a Fate Card when they Miss or when they
+take damage. You can encourage Players to use these more often by giving
+additional Fate Cards to reward key moments of play. This can be a great tool
+for encouraging great roleplay or working together.</p>
+<h3 id="skills-breakdown">Skills Breakdown<a class="headerlink" href="#skills-breakdown" title="Permanent link">&para;</a></h3>
+<p>Players will want to make Checks based on their characters' strengths. Their
+approach to a situation should determine the nature of a Check. As the GM,
+you have the final say as to which Skill applies. Attributes are meant to be
+more responsive/reactive, and are often used for Contested Checks. Skills are
+intended to be more active for character-initiated events.</p>
+<p>The list below provides of general information about the Attributes and
+Skills (see <a href="../01_PlayerGuide_Full/#characters">Full Player's Guide</a> for
+more info).</p>
+<ul>
+<li>
+<p>AGL Agility: Dodging Contested Checks, boosts Unarmored AC.</p>
+<ul>
+<li>Finesse: Performing difficult physical actions with ease. Primary Skill
+  for Martial role.</li>
+<li>Stealth: Moving quietly, undetected.</li>
+</ul>
+</li>
+<li>
+<p>CON Conviction: Strength of character to resist harmful mental effects.</p>
+<ul>
+<li>Bluffing: Convincing others, either truthfully or deceptively.</li>
+<li>Performance: Acting under scrutiny, potentially in front of audiences.</li>
+</ul>
+</li>
+<li>
+<p>GUT Intuition: Gut feelings about the state of the world (e.g., truthfulness,
+  supernatural knowledge)</p>
+<ul>
+<li>Detection: Observing the world using all senses.</li>
+<li>Craft: Practicing a honed trade (i.e., Medicine, Pottery, Piety).
+  Primary Skill for Support role.</li>
+</ul>
+</li>
+<li>
+<p>INT Intelligence: Reactive critical thinking or recalling recalling explicit
+  information.</p>
+<ul>
+<li>Knowledge: Recalling and amassing knowledge at leisure. Primary Skill
+  for Casters.</li>
+<li>Investigation: Seeking the answer to a question or piecing together
+  information.</li>
+</ul>
+</li>
+<li>
+<p>STR Strength: Physical limits and boundaries (e.g,. resisting a push).</p>
+<ul>
+<li>Athletics: Exerting oneself in physical sustained challenge.</li>
+<li>Brute: Burst force or single lifts. Primary Skill for Defenders.</li>
+</ul>
+</li>
+<li>
+<p>VIT Vitality: Resisting bodily harm. Determines max HP.</p>
+</li>
+</ul>
+<h3 id="contested-checks">Contested Checks<a class="headerlink" href="#contested-checks" title="Permanent link">&para;</a></h3>
+<p>Contested Checks are initiated when two characters attempt to accomplish
+opposite goals, or one character attempts to overcome the resistance of
+another (see <a href="../01_PlayerGuide_Full/#contested-checks">Full Player Guide</a> for more info).</p>
+<p>The list below features a few examples of Contested Checks, but, as the GM,
+it's up to you to decide what a situation calls for if it is not explicitly
+described in the guide or in a Power mechanic.</p>
+<ol>
+<li>
+<p>Tackle Target: Initiator Finesse vs. Target Athletics</p>
+</li>
+<li>
+<p>Convince Target, truthfully or deceptively: Initiator Bluffing vs. Target Detection
+or (if possessing relevant knowledge) Knowledge</p>
+</li>
+<li>
+<p>Sneaking past Target: Initiator Stealth vs. Target Detection</p>
+</li>
+<li>
+<p>Arm wrestle: Brute vs. Brute</p>
+</li>
+<li>
+<p>Impersonation: Initiator Performance vs. Target Detection or (if suspecting) Investigation</p>
+</li>
+</ol>
+<h3 id="saves">Saves<a class="headerlink" href="#saves" title="Permanent link">&para;</a></h3>
+<p>Saves occur when a character is attempting to resist or shrug off a negative effect (see
+<a href="../01_PlayerGuide_Full/#saves">Full Player Guide</a>.</p>
+<p>When calling for a Save, choose the Attribute that is most relevant to the initiating
+effect. A character cannot choose to use a different Attribute.</p>
+<p>Because characters draw against their own TC, Saves will
+never be a Critical Success. You can choose to add an additional effect to a Major Success.</p>
+<p>While all saves will have effects for failure, some may still have effects on success,
+such as half damage. Refer to the
+specific wording of the initiating effect.</p>
+<p>If an environmental effect initiates a Save, you determine the DR and Attribute as the
+GM. If an effect would cause a
+character to attempt to resist it to avoid damage or a Status Condition, that character
+should make a Save.</p>
+<!-- FUTURE: Add examples of Saves a character might have to make, and a relevant DR -->
+
+<h3 id="epic-events">Epic Events<a class="headerlink" href="#epic-events" title="Permanent link">&para;</a></h3>
+<!-- Future: revise to refer back to the same example repeatedly -->
+
+<p>Epic Events are unique, time-gated scenarios that can occur throughout an
+Adventure. As the Game Master (GM), you determine when an Epic Event will
+happen, set the Difficulty, and decide the stakes.</p>
+<p>Epic Events invoke a specific set of rules for determining the outcome, which
+is different than traditional combat, social interaction, or exploration.
+These are typically very draining on Player stamina (remaining decks), and
+could be a tool to engage resource management. This is also is a good way to
+engage all Players in faster-paced, more free-form roleplaying. Since Players
+can't make a Check two times in a row, it requires active dialogue, planning,
+and participation from every Player.</p>
+<p>As the GM, you are actively drawing against the Players on a TC during the
+Epic Event. The odds are skewed in the Players' favor by allowing them to
+draw using Skill Modifiers while you draw with a +0 Mod. Your ability to
+modify the challenge of an Epic Event comes from setting the Difficulty.</p>
+<p>For more information on Epic Events, visit the <a href="../01_PlayerGuide_Full/#epic-events">Full Player's Guide</a></p>
+<h4 id="how-to-identify-an-epic-event">How to Identify an Epic Event<a class="headerlink" href="#how-to-identify-an-epic-event" title="Permanent link">&para;</a></h4>
+<!-- BROZ: Also for time skips. "Do we want to first-person travel or Epic it?" -->
+
+<p>Epic Events often occur within a limited time frame, typically less than a
+minute, and typically no more than twice per session. This could be a fleeing
+event under some thread of harm (e.g., a crumbling dungeon or an erupting
+volcano), or an unexpected smaller scenario (e.g., preventing an uncontrolled
+vehicle from crashing). It can cover a small scope (e.g, a moment of surprise
+that begins a larger battlefield), something larger (e.g., replace an entire
+combat), or even be used to shrink longer periods of time into manageable
+pieces (e.g., dealing with the storms and resource management of travel
+across a sea). As GM, you will get a feel for what makes for a good Epic
+Event, and how to place it in your narrative to keep the session feeling
+fresh and lively for all of your Players.</p>
+<h4 id="setting-an-epic-events-difficulty">Setting an Epic Event's Difficulty<a class="headerlink" href="#setting-an-epic-events-difficulty" title="Permanent link">&para;</a></h4>
+<p>The GM sets the difficulty ahead by announcing how many Successes will be
+needed before 3 Failures. Setting a difficulty of 4 means that the Players
+need to make 4 successful Checks before reaching 3 failures.</p>
+<h4 id="deciding-the-stakes">Deciding the Stakes<a class="headerlink" href="#deciding-the-stakes" title="Permanent link">&para;</a></h4>
+<p>Going into an Epic Event, there is no guarantee of Success, even at lower
+Difficulties. Try to balance the outcomes based on the scope of the Epic
+Event. Not all Epic Events are life-or-death scenarios, and consequences can
+vary depending on the number of success before 3 failures.</p>
+<p>If Players get 3 Failures trying to escape a collapsing dungeon, they may take
+a little damage, discard some cards, or lose a precious object in
+the fray. Likewise, if the Players are successful without any failures, the
+reward for their success can be balanced accordingly.</p>
+<!-- Future: a table for difficulty. Assuming X players Difficulty Y has Z% chance -->
+
+<h4 id="an-example-of-an-epic-event">An Example of an Epic Event<a class="headerlink" href="#an-example-of-an-epic-event" title="Permanent link">&para;</a></h4>
+<!-- Future: Modify example as dungeon collapse-->
+
+<p>The Players hear screaming ~ 100 ft away, and rush to investigate. They see a
+group of townsfolk being attacked by a group of monsters. Each of the
+townsfolk is engaged with a different monster. The difficulty is set to 3,
+and 5 target cards are drawn. The Players then declare which skill they will
+use to save one of the townsfolk, and must make a suited hit before the GM
+does to succeed on each TC.</p>
+<ul>
+<li>
+<p>The Defender chooses Brute, and intends to ram into a monster while the
+  townsperson gets away. The GM decides a corresponding DR of 3 on a 9 of
+  Hearts Target Card (TC). The Defender draws a 6 of Hearts and, with the
+  Defender's +2 to Brute, this is a Suited Success and a success on the first
+  Epic Event challenge.</p>
+</li>
+<li>
+<p>The Support wants to protect a townsperson using their magic via Craft, with
+  a +1 modifier. The GM rules this more difficult, with a DR 2 on a 7 of
+  Clubs TC. The Support draws a 3 of Diamonds, which is a miss. The GM then
+  draws, without a modifier, against this same TC. They draw a 6 of Spades;
+  also a miss. Support and GM each take turns drawing until until the Support
+  draws a 5 of Clubs, which is a success.</p>
+</li>
+<li>
+<p>The Martial wants to sneak up to a monster and help the townsperson escape,
+  using Stealth. The GM sets a DR 2 on the Jack of Spades TC. The Martial
+  draws first, and misses. The GM draws a King of Spades. As the GM got a
+  Suited Success, this is the first failure for the Players.</p>
+</li>
+<li>
+<p>The Caster and Support both go for the fourth TC together, each with their
+  primary skill modifier. The DR is set to a 3, and they each draw first,
+  missing the TC. The GM draws, and misses. The Caster misses again, but uses
+  a Fate Card to re-draw and draws a suited hit. This marks a 3rd success for
+  the Players, which ends the Epic Event.</p>
+</li>
+</ul>
+<p>The Players watch as the monsters retreat, having saved the majority of the
+townsfolk. Due to the one failure, one of the townsfolk has been gravely
+injured and was dragged away with the monsters as they retreated. The Players
+can choose to follow after the monsters or regroup with the townsfolk they
+saved. This might result in a reward from the local government for saving
+lives, or kick off a new Adventure that involves seeking out the monsters.</p>
+<h3 id="combat">Combat<a class="headerlink" href="#combat" title="Permanent link">&para;</a></h3>
+<p>Deck of Adventures (DofA) combat is meant to be fast-paced, collaborative, and
+accessible. It is designed around a simple core, while allowing for a lot of
+player freedom based on how they built their character. To run combat in DofA
+successfully, you should plan encounters thoughtfully and be able to adapt on
+the fly when Players make unexpected strategic decisions.</p>
+<p>Some sessions may be very focused on combat, with 3-4 combat encounters
+between Full Rests, while others will be more roleplay-oriented. As the Game
+Master (GM), you decide what mix is best for your table. Some Players may be
+more interested in combat, while others get excited and engaged with good
+social roleplay, and it is up to you as the GM to balance the interests of
+the Players at the table.</p>
+<h4 id="initiating-combat">Initiating Combat<a class="headerlink" href="#initiating-combat" title="Permanent link">&para;</a></h4>
+<p>You choose when to declare the beginning of Combat, and this triggers the
+start of Combat Turn Order. The start depends entirely on the scenario. It
+might begin when the Players decide to attack an enemy, or when an enemy
+decides to attack the Players.</p>
+<p>To determine Turn Order, every Player will draw a Target Card for themselves.
+As the GM, you will draw a TC for each Minion and Dealer involved in the
+Encounter, including any new enemies that appear throughout Combat. To
+simplify, a group of Minions might have a single TC, but a Dealer must always
+have their own TC.</p>
+<h4 id="strengths-and-weaknesses">Strengths and Weaknesses<a class="headerlink" href="#strengths-and-weaknesses" title="Permanent link">&para;</a></h4>
+<p>There are ways to build encounters that allow the Players to highlight their
+character's strengths or Vulnerabilities. If a Player recently took a new
+Power, you might build an encounter to give them a chance to shine. A new
+area of effect Power would be feel great to deploy on a swarm of smaller
+enemies. If a Player has the Wanted Vulnerability, you might introduce the
+faction hunting them, who might approach the Players as hostile. Can the
+Players talk their way out of the situation, or will they choose to fight?</p>
+<h4 id="setting-up-combat-encounters">Setting up Combat Encounters<a class="headerlink" href="#setting-up-combat-encounters" title="Permanent link">&para;</a></h4>
+<p>You decide what types of Combat Encounters you want to run during a session.
+Players could be matched against a single strong foe. Many smaller enemies
+might have the players torn in different directions. A single Dealer with
+supporting Minions might have interesting interaction effects, where one
+gains benefits in the presence of the other.</p>
+<p>GMs should try to include a mix of roleplay and combat in an Adventure, when
+possible. Storming an enemy fortress may result in several Combat Encounters
+back to back. Investigating a crime in a major city may have more social
+investigation-based with relatively little combat.</p>
+<h3 id="moving-in-space">Moving in space<a class="headerlink" href="#moving-in-space" title="Permanent link">&para;</a></h3>
+<p>Deck of Adventures is designed to be playable using either imperial or metric units, on
+either a square grid or hex map. For units, treat 1 space as either 5 feet or 1 meter.
+You choice of map can impact diagonal movement and area of effect. Following the
+<a href="./01_PlayerGuide_Full#in-combat">Player Guide</a>
+, moving diagonally on a grid is assumed
+to be the same as moving horizontally. You could alternatively decide that players are
+limited to 2 diagonal moves per round of combat, or that a diagonal move is worth 1.5
+speed.</p>
+<p>To measure area of effect (AOE), refer to the images provided in <a href="https://github.com/DeckofAdventures/TheGame/tree/main/docs/src/1_Mechanics/Visual_Tools">Visual Tools</a>.
+Powers will define an AOE by it's shape and size (e.g., Cone 3). Here, we us N to define
+each shape at any size.</p>
+<ul>
+<li>
+<p><strong>Line</strong>: Pick an edge of the space of the character or object causing this effect.
+  Draw a straight line perpendicular to this edge N spaces long. Any space touched by
+  this line is affected.</p>
+</li>
+<li>
+<p><strong>Aura</strong>: Unless otherwise specified, the point of origin is assumed to be the
+  character or object causing the effect. A circle is drawn around this point. Any space
+  caught overlapping with this circle is affected.</p>
+<ul>
+<li>On a <em>grid</em> map, the radius of this circle is at the far edge of the Nth space
+  away from the point of origin.</li>
+<li>On a <em>hex</em> map, the radius of this circle is at the far edge of the line segment
+  pointing in the direction of the point of origin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cone</strong>: Pick an edge of the space of the character or object causing this effect.
+  The radius is measured from the center point of this edge, with additional lines drawn
+  to endpoints of the arc. Any space caught overlapping with this arc is affected.</p>
+<ul>
+<li>On a <em>grid</em> map, the radius extends N squares away from the origin, with lines
+  drawn to the corners of the squares included in a perpendicular line N squares
+  long.</li>
+<li>On a <em>hex</em> map, the radius extends N minus .5 hex away from this origin, with
+  lines drawn to the far-most corners of the hex touched by a straight line N hex
+  long, perpendicular to the radius.</li>
+</ul>
+</li>
+</ul>
+<h3 id="character-types">Character Types<a class="headerlink" href="#character-types" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Minions</strong> are enemies that are weaker than the Players. They often have
+    lower HP, and cannot take Powers or Vulnerabilities. They do not have
+    access to Fate Cards, and draw from a single GM deck.</p>
+</li>
+<li>
+<p><strong>Dealers</strong> are just as powerful as, or more powerful than, the Players.
+    They have a name, and experience that would lend them power. GMs
+    might draw from a separate deck of cards for each Dealer. Each starts
+    with one Fate Card, and reserves Aces when drawn. Dealers can also take
+    Powers and Vulnerabilities, and may possess items. See below for how to
+    turn a Dealer into a Boss.</p>
+</li>
+<li>
+<p><strong>Bystanders</strong> are allied or neutral characters that exist throughout the
+    world, as anything from a store owner to noble ambassador. These
+    characters are typically on par in power with Minions, and may be
+    persuaded to join Players in combat as Companions or GM controlled
+    Dealers.</p>
+</li>
+<li>
+<p><strong>Companions</strong> are Player-controlled creatures who can be commanded with an
+    Action. Players can invest in Powers to make their Companion more
+    powerful. A GM might also grant a temporary Companion as part of an
+    Adventure, potentially as a result of a Check, or an exchange for other
+    money or items.</p>
+</li>
+<li>
+<p><strong>Bosses</strong> are even more powerful than Dealers, and gain the following
+    benefits: Adversary Actions, House Actions, and Phases.</p>
+</li>
+</ul>
+<h3 id="creating-a-boss-encounter">Creating a Boss Encounter<a class="headerlink" href="#creating-a-boss-encounter" title="Permanent link">&para;</a></h3>
+<p>Boss Encounters are best saved for the end of Adventures, as a culmination of
+the the story thus far. As the GM, you choose what Actions they have access to.</p>
+<h4 id="adversary-actions">Adversary Actions<a class="headerlink" href="#adversary-actions" title="Permanent link">&para;</a></h4>
+<p>An Adversary Action is a Boss ability that takes place outside their turn
+during Combat to help balance encounters where a single Boss might be facing
+up to 6 Players. This helps Players feel a sense of danger from a single
+enemy. Adversary Actions may be related to resource replenishment, like
+allowing a Boss to recover a small amount of HP or gain Power Points. They may
+allow for an additional attack, or an environmental effect involving a Check
+for the Players. Players who fail might take damage or receive a Status
+Condition like Entangled.</p>
+<p>For example, a poisonous monster would have the following Adversary Action:
+<em>Acid Splash</em>. A cloud of acid appears in a 4 space cube. Any creature inside
+ the cube at the start of their turn makes a DR 3 Agility Check or take 2
+ damage. On a success, 1 damage.</p>
+<h4 id="house-actions">House Actions<a class="headerlink" href="#house-actions" title="Permanent link">&para;</a></h4>
+<p>House Actions take place when a Boss is in their home or base of operations.
+Once initiated, they happen at the beginning of every round of combat. This
+is a great way to add in dynamic elements to an encounter, such as new
+enemies appearing or the environment becoming more dangerous.</p>
+<h4 id="boss-phases">Boss Phases<a class="headerlink" href="#boss-phases" title="Permanent link">&para;</a></h4>
+<p>Dealers often have &lt; 10 HP. For balance, Boss Encounters can have multiple
+Phases. After running out of HP, they replenish and changes their approach.
+Every time a Boss enters a new Phase, draw a new TC for them. The following
+list features a number of examples that might be triggered by a new Phase:</p>
+<ul>
+<li>Boss escapes to another location</li>
+<li>Boss summons Minions</li>
+<li>Boss alters the environment to make certain areas<ul>
+<li>cause damage (e.g., erupting flame)</li>
+<li>require a check (e.g,. Agility check to stay standing on ice)</li>
+</ul>
+</li>
+<li>Boss disappears, and reappears<ul>
+<li>when Minions have been defeated</li>
+<li>after a set number of rounds</li>
+<li>after an environmental effect dissipates</li>
+</ul>
+</li>
+<li>Boss changes features like<ul>
+<li>core stats</li>
+<li>higher or lower AR</li>
+<li>drawing with Upper Hand (e.g., putting in more effort)</li>
+<li>drawing with Lower Hand (e.g., getting angry/sloppy)</li>
+</ul>
+</li>
+</ul>
+<h3 id="example-combat-encounter-designed-for-4-players-at-level-2">Example Combat Encounter designed for 4 Players at Level 2<a class="headerlink" href="#example-combat-encounter-designed-for-4-players-at-level-2" title="Permanent link">&para;</a></h3>
+<p>In a longer campaign, mix up the types of encounters to see how Players react
+and interact with each other. This will keep things fresh so combat keeps
+Players engaged over time.
+Here, the context is kept purposefully blank to fill in with your setting.</p>
+<p><strong>Location.</strong> Start with a wide open space for the Players and enemies to move
+  around in, between 10-20 spaces across to allow for movement and let the
+  range influence Player tactics.</p>
+<p><strong>Setup.</strong> Add 4 Minions close to the entrance and 1 Dealer farther away. 2
+  Minions are melee guards and 2 are shooters 3-5 spaces away, to force the
+  Players to choose their targets and allow space between each enemy. The
+  Players will need to deal with the Minions first in order to reach the
+  Dealer, allowing the Dealer to use their abilities in the first 2+ rounds.</p>
+<h4 id="stat-blocks">Stat Blocks<a class="headerlink" href="#stat-blocks" title="Permanent link">&para;</a></h4>
+<p>Every creature has a set of statistics that govern their actions in the game. Consult
+their stat block in the <a href="../06_Bestiary/">Bestiary</a> to learn their strengths and
+weaknesses, and what actions they can take in combat.</p>
+<h2 id="items">Items<a class="headerlink" href="#items" title="Permanent link">&para;</a></h2>
+<h3 id="standard-currency">Standard Currency<a class="headerlink" href="#standard-currency" title="Permanent link">&para;</a></h3>
+<p>Every setting may have its own currency and economy, but in Deck of Adventures the
+standard recommendation is to use a system based on rare metals or minerals. Diamond,
+Gold, Silver, and Copper Pieces are useful breakdowns, and can be modified as needed to
+fit your setting.</p>
+<p>By default, currencies are at a 1:10 ratio with the next-most valuable counterpart: 1
+Diamond Piece (dp) = 10 Gold Pieces(gp), 1 Gold Piece = 10 Silver Pieces (sp), and 1
+Silver Piece = 10 Copper Pieces (cp). When creating your own currency, use the below
+tables as a reference for adapting these items to your setting.</p>
+<p>The GM can grant currency as a reward for completing an Adventure, defeating
+an Encounter, and general exploration and adventuring. You can show your
+Players the tables below, or encourage them to seek out merchants to acquire
+new items using the currency they've earned. Leverage the Player's desire to
+continue to strengthen their character by offering them opportunities to earn
+more currency during their Adventures, and reward strong roleplay, barter
+skills, and careful exploration and examination with additional currency.</p>
+<h3 id="starting-items">Starting Items<a class="headerlink" href="#starting-items" title="Permanent link">&para;</a></h3>
+<p>All characters start with a basic set of items, depending on choices
+made at Character Creation. This may be setting dependent.
+A high fantasy campaign
+may start characters with a Magic Item, while others may simply start the
+characters with a Standard Weapon and Light Armor. Determine what makes the most
+sense for your world.</p>
+<p>The general starting items in Deck of Adventures include a standard weapon,
+simple armor, an Adventuring Pack, a Trinket and 50 gp.</p>
+<p><strong>Adventuring Pack</strong> contains the following:</p>
+<ul>
+<li>1 Bedroll</li>
+<li>1 Rations Kit (contains 10 meals)</li>
+<li>5 Torches</li>
+<li>1 Flint &amp; Tinder</li>
+<li>1 Flask</li>
+</ul>
+<p><strong>Trinkets</strong> are simple items, low in monetary value, that are meaningful to the
+  character and may be a part of their backstory. Examples include:</p>
+<ul>
+<li>a small statue</li>
+<li>a bauble from childhood</li>
+<li>a broken dagger</li>
+<li>a worn painting or image</li>
+<li>an old letter</li>
+</ul>
+<p>Work with your Players during Character Creation to generate a list of
+Starting Items that make sense for their character.
+Take their Vulnerabilities into account as well. Would an Outsider carry
+something significant to their people? Maybe a character with the Frail
+Vulnerability would carry a cane with them of some significance.</p>
+<h3 id="weapons">Weapons<a class="headerlink" href="#weapons" title="Permanent link">&para;</a></h3>
+<p>Weapons are one way to damage in combat. The
+quality of that weapon determines how much damage.</p>
+<p><strong>Weapon Quality Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Damage</th>
+<th>Descriptor</th>
+<th>Average Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Standard</td>
+<td>15 sp</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Improved</td>
+<td>25 gp</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Heroic</td>
+<td>25 dp</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Legendary</td>
+<td>100 dp</td>
+</tr>
+</tbody>
+</table>
+<p>Characters with high quality weapons are able to deal damage quickly, so keep
+this in mind when balancing Encounters or granting Players loot as they Level
+Up. The average costs are meant to guide you as to when Players
+can expect to afford each, but
+these can be given as rewards or made available at
+any price.</p>
+<h3 id="armor">Armor<a class="headerlink" href="#armor" title="Permanent link">&para;</a></h3>
+<p>Armor and Agility Modifiers are the only way for characters to alter their
+base Armor Range (AR). For characters with low Agility, wearing Armor will
+help them avoid attacks in combat.</p>
+<p>Base AR for an unarmored character is 3. Wearing Armor reduces this AR
+depending on Type. Some have Strength Requirements in
+order to wear. A character who ignores this requirement may only use
+their movement speed and must make all
+Agility, Finesse, and Stealth Checks at Lower Hand.</p>
+<p><strong>Armor Type Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>AR</th>
+<th>Armor Type</th>
+<th>AP</th>
+<th>Prerequisite</th>
+<th>Average Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>Unarmored</td>
+<td>0</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Light</td>
+<td>0</td>
+<td>-</td>
+<td>5 sp</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Medium</td>
+<td>0</td>
+<td>-</td>
+<td>20 sp</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Fortified</td>
+<td>1</td>
+<td>Strength ≥ 0</td>
+<td>15 gp</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Heavy</td>
+<td>2</td>
+<td>Strength ≥ 1</td>
+<td>50 gp</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Massive</td>
+<td>3</td>
+<td>Strength ≥ 2</td>
+<td>20 dp</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Gleaming</td>
+<td>2</td>
+<td>Agility ≥ 3</td>
+<td>100 dp</td>
+</tr>
+</tbody>
+</table>
+<p>Characters may start with Light Armor at Level 1, but must acquire other armor over the
+course of their Adventures, either through purchase or reward.</p>
+<p>Some armor and items also grant Armor Points (AP). Items like Shields can provide AP
+when readied using an Action, while other types of Armor may have magical effects that
+provide AP (see <a href="./#magic-items">Magic Items</a>). Shields can be purchased
+and can be found
+in varying quality.</p>
+<p><strong>Shield Quality Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>AP</th>
+<th>Descriptor</th>
+<th>Average Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Standard</td>
+<td>5 sp</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hardened</td>
+<td>10 gp</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Impervious</td>
+<td>25 dp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="general-items">General Items<a class="headerlink" href="#general-items" title="Permanent link">&para;</a></h3>
+<p>When Players venture into a town or city, they will expect to find a store
+available that will sell them General Goods. The items they find here are up
+to the GM's discretion, but below is a list of items and their general
+costs.</p>
+<p><strong>General Items Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item Name</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hammer</td>
+<td>5 cp</td>
+</tr>
+<tr>
+<td>Backpack</td>
+<td>8 cp</td>
+</tr>
+<tr>
+<td>Empty Vial</td>
+<td>2 cp</td>
+</tr>
+<tr>
+<td>Canvas Pouch</td>
+<td>2 cp</td>
+</tr>
+<tr>
+<td>Tent</td>
+<td>1 sp</td>
+</tr>
+<tr>
+<td>Torches</td>
+<td>5 cp</td>
+</tr>
+<tr>
+<td>Flint &amp; Tinder</td>
+<td>5 cp</td>
+</tr>
+<tr>
+<td>Bedroll</td>
+<td>8 cp</td>
+</tr>
+<tr>
+<td>Rations Kit</td>
+<td>5 cp</td>
+</tr>
+<tr>
+<td>Flask</td>
+<td>1 sp</td>
+</tr>
+<tr>
+<td>Lantern</td>
+<td>2 sp</td>
+</tr>
+<tr>
+<td>Mirror</td>
+<td>1 sp</td>
+</tr>
+<tr>
+<td>Crowbar</td>
+<td>1 sp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
+<p>Tools are useful items that a character can use to perform certain Checks more
+easily. A character who uses a Tool to perform a Check may draw with the
+Upper Hand. General domains and trade skills will use a specific tool to make
+a Check. These are listed below.</p>
+<p><strong>Tools Table</strong></p>
+<p>Various professions in the world require tools for their craft. To attempt a Check in a
+relevant profession, you must be in possession of that profession's tools or you make
+your Check at the Lower Hand. These tools can often be found in a General Store, though
+in some settings some professions' tools may be harder to find.</p>
+<table>
+<thead>
+<tr>
+<th>Profession Name</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blacksmith</td>
+<td>1 gp</td>
+</tr>
+<tr>
+<td>Locksmith</td>
+<td>1 gp</td>
+</tr>
+<tr>
+<td>Chef</td>
+<td>5 sp</td>
+</tr>
+<tr>
+<td>Carpenter</td>
+<td>5 sp</td>
+</tr>
+<tr>
+<td>Sailor</td>
+<td>2 sp</td>
+</tr>
+<tr>
+<td>Leatherworker</td>
+<td>5 sp</td>
+</tr>
+<tr>
+<td>Clothier</td>
+<td>1 gp</td>
+</tr>
+<tr>
+<td>Navigator</td>
+<td>2 sp</td>
+</tr>
+<tr>
+<td>Alchemist</td>
+<td>3 sp</td>
+</tr>
+<tr>
+<td>Herbalist</td>
+<td>2 sp</td>
+</tr>
+<tr>
+<td>Mountaineer</td>
+<td>3 sp</td>
+</tr>
+<tr>
+<td>Jeweler</td>
+<td>1 gp</td>
+</tr>
+<tr>
+<td>Cartographer</td>
+<td>1 gp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="consumables">Consumables<a class="headerlink" href="#consumables" title="Permanent link">&para;</a></h3>
+<p><em>Consumables</em> are one-time use items that grant a specific effect,
+ usually during a set duration of time. These can include Potions, Charms,
+ Meals, and Ammunition. See below for how to use these Consumables in game.</p>
+<table>
+<thead>
+<tr>
+<th>Consumable Type</th>
+<th>Use Time</th>
+<th>General Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Potions</td>
+<td>Minor Action</td>
+<td>Short term effects, usually a single effect.</td>
+</tr>
+<tr>
+<td>Charms</td>
+<td>Major Action</td>
+<td>Medium-term effects, more complex effects.</td>
+</tr>
+<tr>
+<td>Meals</td>
+<td>10 minutes</td>
+<td>Long-term effects, enough to last most of a day.</td>
+</tr>
+</tbody>
+</table>
+<p>These items may vary in supply and cost depending on where the Players are
+looking. In a desolate town that only has a trader pass through once every
+year, these items might be in short supply. In a wealthy merchant district of a major
+city, they would be easy to find.</p>
+<p>It is up to the GM which Consumables to make available, and when. The reason
+to grant access to Consumables over Magical Items is to allow the Players to
+feel like they've gotten something valuable and powerful, but they need to be
+strategic in when to use it. These can create memorable moments of an
+Adventure without permanently altering the balance of power.</p>
+<p>The Consumables listed below draw from a selection of possible
+Consumables and their Effects that you can add to your game. Feel free to
+create your own Consumables and ask the Community for help as needed.</p>
+<table>
+<thead>
+<tr>
+<th>Consumable Name</th>
+<th>Cost</th>
+<th>Effect</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Potion of Healing</td>
+<td>2 gp</td>
+<td>Regain 1 HP immediately</td>
+<td></td>
+</tr>
+<tr>
+<td>Potion of Water Breath</td>
+<td>5 gp</td>
+<td>You are immune to the Suffocating Status Condition</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Potion of Extended Breath</td>
+<td>2 gp</td>
+<td>Your ability to hold your breath is extended by 60 minutes</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Potion of Strength</td>
+<td>15 gp</td>
+<td>Gain +1 to all Strength-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Potion of Agility</td>
+<td>15 gp</td>
+<td>Gain +1 to all Agility-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Potion of Conviction</td>
+<td>15 gp</td>
+<td>Gain +1 to all Conviction-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Potion of Intelligence</td>
+<td>15 gp</td>
+<td>Gain +1 to all Intelligence-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Potion of Intuition</td>
+<td>15 gp</td>
+<td>Gain +1 to all Intuition-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Potion of Vitality</td>
+<td>2 dp</td>
+<td>Gain +1 Maximum HP and +1 to all Vitality-based Checks</td>
+<td>1 min</td>
+</tr>
+<tr>
+<td>Charm of Efficiency</td>
+<td>6 dp</td>
+<td>You cannot draw with Upper or Lower Hand</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Charm of True Aim</td>
+<td>4 dp</td>
+<td>All Attacks are made with Upper Hand</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Charm of Amplification</td>
+<td>5 dp</td>
+<td>All Upper Hand and Lower Hand effects are doubled</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Charm of Wounding</td>
+<td>3 dp</td>
+<td>When dealing damage with an Attack or Power, add +1 damage to the total</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td>Hearty Stew</td>
+<td>1 dp</td>
+<td>Gain +1 HP and +1 to your Maximum HP</td>
+<td>8 hours</td>
+</tr>
+<tr>
+<td>Focusing Beverage</td>
+<td>1 dp</td>
+<td>Gain +1 HP and +1 to your Maximum PP</td>
+<td>8 hours</td>
+</tr>
+<tr>
+<td>Fortifying Feast</td>
+<td>1 dp</td>
+<td>Gain +3 AP immediately. For the duration, if you end your turn with 0 AP, return to 1 AP</td>
+<td>8 hours</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magic-items">Magic Items<a class="headerlink" href="#magic-items" title="Permanent link">&para;</a></h3>
+<p>Some items can have additional effects granted while wielding them, such as
+modifying damage on a Suited Hit or granting additional effects on a Major
+Success.</p>
+<h3 id="upgrading-items">Upgrading Items<a class="headerlink" href="#upgrading-items" title="Permanent link">&para;</a></h3>
+<p>Some items can be upgraded with the proper materials. A Standard Weapon or Light Armor
+can be modified to higher quality levels, and they can also be outfitted with magical
+upgrade materials as well. These materials are an optional addition to any GM's
+setting, and they are very straightforward ways to reward your Players during an
+Adventure with clear upgrades to existing items so they don't have to replace items
+often. For example, a gemstone attached a weapon causes an additional 1 damage.
+Attached to armor, the same gemstone might grants +1 Max PP or HP.</p>
+<!-- Future: add additional sections for World building -->
+
+<!--
+
+## Building Your World
+
+### What is Your World?
+
+### Preparing an Adventure
+
+- Different length of Adventures: One Shots, Multi-Shots, Campaigns
+- Different types of Adventures: Combat, investigation, contracts,
+  negotiations, etc.
+- Railroad vs. Sandbox
+
+### Creating NPCs
+
+- Social encounters, Bystanders
+
+- Enemy types: Dealers and Minions
+
+Other sections to build out
+
+- Leveling up: XP vs. Milestones
+- Giving Players items and balancing Power creep
+- How to get Players to contribute to the World
+- Leveraging Player backstories
+- Developing Lore and background information
+- Managing an increasingly complex World
+
+## Managing Players (Expectations & Realities)
+
+- Bringing Players together
+- The importance of Session 0 - establishing a safe space
+- United at the table
+- Creating an open and safe space for your Players
+- Understanding Player motivations and preferences
+- Keeping Players engaged
+- Mitigating conflict - in and out of session
+- How to manage an Evil character at the table
+
+## Number Crunch
+
+- General numbers on resources like PP/HP/AP/Stamina
+- Making stat decisions for your NPCs
+- Balancing encounters (Difficulty Challenge Formula or advice)
+- Scaling damage over time
+- Item lists or general descriptions/tables (see Issue #33)
+
+## Continuing Your Journey as a Game Master
+
+This section will contain some more advanced aspects of being a Game Master.
+
+- Balancing higher level encounters
+- Further leveraging player motivations and back story in a narrative
+- Supporting Player and character growth and development
+- Building a continuous Adventure that sustains over time as a full Campaign
+- Resuming a Campaign after a long break (it's OK - it happens)
+- Seeking help from the community
+
+-->
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by opening a <a href="https://github.com/DeckofAdventures/TheGame/issues/new?assignees=&labels=question&title=[Feedback]+GM%20Guide+-+/1_Mechanics/02_GMGuide/" target="_blank" rel="noopener">GitHub issue</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/DeckofAdventures/TheGame" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/dk6RfWgPHF" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>

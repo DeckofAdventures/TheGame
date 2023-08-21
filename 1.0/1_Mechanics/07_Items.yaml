@@ -1,0 +1,150 @@
+Template:
+  Cost: X               # Currency cost, in cp, sp, or gp, default is assumed gp
+  Use:
+    Time: Descrip       # Time it takes to use (e.g., Major Action, 1 min)
+    Duration: Descrip   # Use effect is in place for this. If none, persistent effect
+    Limit: X            # Limit uses
+    Effect: Descrip     # On use, this effect. Effect OR Power not both
+    Power: Name         # Named power it grants the wielder, from full Powers list
+  StatAdjust:           # If neither 'Add' nor 'Replace', assumed 'Add'
+      Add:              # For items that add/subtract to/from current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
+      Replace:          # For items that replace current value
+          Stat: X       # AGL, STR, Finesse, AP, AR, etc.
+  Prereq:               # For multiple, implies 'OR'. Use [A, B] or `-`
+    Role: One of        # Martial, Defender, Support, Caster
+    Level: X            # Integer
+    Skill: X > 1        # Attrib or Skill > value
+  Save:                 # Separated here, merged in md
+  Range: X              # Default 6
+  AOE: Shape N          #
+  Damage: X             # For Weapons, Default 1
+  Tags: List            # e.g., 2-handed, Ranged - used to sort later # NOT NEEDED?
+
+Light Armor:
+  Type: Armor
+  StatAdjust:
+    Replace:
+      AR: 3
+  Cost: 5 gp
+
+Medium Armor:
+  Type: Armor
+  StatAdjust:
+    Replace:
+      AR: 2
+  Prereq:
+    Skill: STR > 0
+  Cost: 25 gp
+
+Fortified Armor:
+  Type: Armor
+  StatAdjust:
+    Replace:
+      AR: 2
+    Add:
+      AP: 1
+  Prereq:
+    Skill: STR > 1
+  Cost: 100 gp
+
+Standard Weapon:
+  Type: Weapon
+  Damage: 1
+  Cost: 5 gp
+  Rarity: Common
+
+Shortsword:
+  Type: Weapon
+  Damage: 1
+  Cost: 5 gp
+  Rarity: Common
+  Range: 1
+
+Shortbow:
+  Type: Weapon
+  Damage: 1
+  Cost: 5 gp
+  Rarity: Common
+  Tags: [Ranged, 2-handed]
+  Range: 6
+
+Staff:
+  Type: Weapon
+  Damage: 1
+  Cost: 5 gp
+  Rarity: Common
+  Tags: 2-handed
+
+Improved Weapon:
+  Type: Weapon
+  Damage: 2
+  Cost: 500 gp
+  Rarity: Uncommon
+
+Heroic Weapon:
+  Type: Weapon
+  Damage: 3
+  Cost: 2,500 gp
+  Rarity: Rare
+
+Legendary Weapon:
+  Type: Weapon
+  Damage: 4
+  Cost: 5,000 gp
+  Rarity: Legendary
+
+Hammer:
+  Type: General
+  Cost: 5 sp
+  Description: A common hammer, useful for many types of crafts.
+
+Tent:
+  Type: General
+  Cost: 1 gp
+  Description: A canvas tent, useful for staying warm and dry when camping in the wilderness.
+
+Lantern:
+  Type: General
+  Cost: 2 gp
+  Description: An oil lantern that can help illuminate the darkness.
+
+Blacksmith Tools:
+  Type: Tool
+  Cost: 5 gp
+  Description: A set of tools that consists of a hammer, tongs, and various metalworking items.
+
+Sailor Tools:
+  Type: Tool
+  Cost: 2 gp
+  Description: A set of tools that includes lengths of rope, patch kit for canvas sails, and assorted ship carpentry items.
+
+Potion of Strength:
+  Type: Consumable
+  Rarity: Uncommon
+  Cost: 15 gp
+  Use:
+    Time: Minor Action
+    Effect: Gain +1 to all Strength-based Checks
+    Duration: 1 min
+
+Charm of Efficiency:
+  Type: Consumable
+  Rarity: Rare
+  Cost: 65 gp
+  Use:
+    Time: Minor Action
+    Effect: You cannot draw with Upper or Lower Hand
+    Duration: 1 hour
+
+Fortifying Feast:
+  Type: Consumable
+  Rarity: Rare
+  Cost: 100 gp
+  Use:
+    Time: 1 minute
+    Effect: Gain +3 AP immediately. For the duration, if you end you turn with 0 AP, return to 1 AP.
+    Duration: 8 hours
+
+
+

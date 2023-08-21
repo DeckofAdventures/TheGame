@@ -1,0 +1,439 @@
+Template:               # must be unique
+  Type: One of          # Dealer, Boss, NPC, Companion
+  Level: X              # Dealers: XP progression, NPCs/Boss: Level
+  HP: X                 # Required field
+  AP: X                 # 0 is default if blank
+  AR: X                 # Required field
+  PP: X                 # Required field
+  Speed: X              # Optional, default 6
+  Attribs:              # List only Non-zero
+    AGL: ±X             # + is implied if not explicit
+    CON: ±X             #
+    GUT: ±X             #
+    INT: ±X             #
+    STR: ±X             #
+    VIT: ±X             #
+  Skills:               # List if different from corresponding Attrib
+    Finesse: ±X         #
+    Stealth: ±X         #
+    Bluffing: ±X        #
+    Performance: ±X     #
+    Knowledge: ±X       #
+    Investigation: ±X   #
+    Detection: ±X       #
+    Craft: ±X           #
+    Athletics: ±X       #
+    Brute: ±X           #
+  Powers:               # Include Power names as list
+  Phases:               # Only for bosses
+    One:                # Phase number
+      HP: X             #
+      Allies: X         # List of who appears. If multiple of same, list N times
+  Description: Descrip  # Full descriptive text
+
+Falcon:
+  Type: Companion
+  Level: 1
+  HP: 1
+  AR: 3
+  Attribs:
+    AGL: 1
+    STR: -1
+    INT: 1
+    VIT: -1
+  Powers:
+    - Attack, Weapon
+
+Bear:
+  Type: Companion
+  Level: 1
+  HP: 3
+  AP: 1
+  AR: 2
+  Attribs:
+    AGL: -1
+    STR: 1
+    INT: -1
+    VIT: 1
+  Powers:
+    - Attack, Weapon
+
+Wolf:
+  Type: Companion
+  Level: 1
+  HP: 2
+  AR: 3
+  Attribs:
+    AGL: 1
+    STR: 1
+    INT: -1
+    GUT: 1
+  Powers:
+    - Attack, Weapon
+    - Pack Tactics
+
+Summoned Creature:
+  Type: Companion
+  Level: 1
+  HP: 4
+  AR: 3
+  Attribs:
+    AGL: 1
+    STR: 1
+    INT: -1
+    CON: -1
+  Powers:
+    - Attack, Weapon
+    - Attack, Mystic
+
+Horse:
+  Type: Companion
+  Level: 1
+  HP: 2
+  AR: 3
+  Attribs:
+    AGL: 1
+    STR: 1
+    INT: -1
+    GUT: -1
+  Powers:
+    - Attack, Weapon
+    - Pack Tactics
+
+Commoner:
+  Type: NPC
+  HP: 3
+  AR: 3
+  Powers:
+    - Attack, Weapon
+  Description: A common humanoid that is found throughout villages, towns, and cities.
+
+Gray Wolf:
+  Type: NPC
+  HP: 2
+  AR: 3
+  Attribs:
+    AGL: 1
+    STR: 1
+    INT: -1
+    CON: -1
+  Powers:
+    - Attack, Weapon
+    - Pack Tactics
+
+Dire Wolf:
+  Type: NPC
+  HP: 3
+  AR: 2
+  Attribs:
+    AGL: 2
+    STR: 2
+    INT: -1
+    CON: -1
+  Powers:
+    - Attack, Weapon
+    - Pack Tactics
+
+Small Golem:
+  Type: NPC
+  HP: 2
+  AR: 4
+  Attribs:
+    AGL: -1
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+
+Medium Golem:
+  Type: NPC
+  HP: 2
+  AR: 4
+  Attribs:
+    AGL: -1
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Momentum
+
+Huge Golem:
+  Type: Dealer
+  Level: 2
+  HP: 7
+  AP: 2
+  AR: 3
+  PP: 4
+  Attribs:
+    STR: 2
+    VIT: 2
+    AGL: -1
+    INT: -1
+  Powers:
+    - Shield
+    - Momentum Aura
+    - Attack, Sweep
+
+Mystic Golem:
+  Type: NPC
+  HP: 2
+  AR: 4
+  PP: 1
+  Attribs:
+    AGL: -1
+    VIT: 1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+
+Grunt:
+  Type: NPC
+  HP: 2
+  AR: 3
+  PP: 0
+  Attribs:
+    AGL: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+  Level: 1
+  Description: A low level soldier.
+
+Grunt, Shielded:
+  Type: NPC
+  HP: 2
+  AP: 1
+  AR: 2
+  PP: 0
+  Attribs:
+    STR: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Shield
+  Level: 1
+  Description: A low level soldier with a Shield.
+
+Guard:
+  Type: NPC
+  HP: 3
+  AP: 1
+  AR: 2
+  PP: 1
+  Attribs:
+    STR: 1
+    VIT: 1
+  Powers:
+    - Attack, Weapon
+    - Shield
+    - Attack, Sweep
+    - Momentum
+  Level: 2
+  Description: A decently armored and trained soldier.
+
+Captain, Defender:
+  Type: Dealer
+  Level: 2
+  HP: 5
+  AP: 2
+  AR: 2
+  PP: 4
+  Attribs:
+    AGL: 1
+    STR: 1
+    VIT: 1
+    GUT: 1
+    INT: -1
+  Powers:
+    - Attack, Weapon
+    - Shield
+    - Attack, Sweep
+    - Attack, Charge
+    - Momentum Aura
+  Description: A Captain with access to Powers.
+
+Mystic, Caster:
+  Type: Dealer
+  Level: 2
+  HP: 5
+  PP: 2
+  AR: 3
+  Attribs:
+    AGL: -1
+    CON: 1
+    INT: 1
+    STR: -1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Attack, Mystic Cone
+    - Attack, Mystic Confusion
+    - Attack, Mystic Entangle
+    - Shield
+  Description: A powerful Caster with access to mystic attacks.
+
+Sentinel, Martial:
+  Type: Dealer
+  Level: 2
+  HP: 6
+  AP: 0
+  AR: 2
+  PP: 3
+  Attribs:
+    GUT: 1
+    INT: 1
+    STR: -1
+  Powers:
+    - Attack, Weapon
+    - Attack, Sweep
+    - Attack, Charge
+    # - Attack, Disarm # CB: No longer a power. Replace?
+  Description: A Martial with access to Powers.
+
+Ritualist, Support:
+  Type: Dealer
+  HP: 4
+  AR: 3
+  PP: 6
+  Attribs:
+    AGL: -1
+    GUT: 1
+    CON: 1
+    INT: 1
+    STR: -1
+    VIT: -1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Heal
+    - Lend Aid
+    - Lend Vigor
+    - Lend Distraction
+    - Slow
+    - Shield
+  Description: A Support with access to Powers.
+
+Specter:
+  Type: NPC
+  HP: 3
+  AP: 0
+  AR: 2
+  PP: 2
+  Attribs:
+    GUT: 1
+    INT: 1
+    STR: -1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Slow
+
+Necromancer Aspect: 
+  Type: Boss
+  HP: 5
+  AP: 0
+  AR: 2
+  PP: 4
+  Primary_Skill: Knowledge
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Stunning Glare
+    - Drain Life
+    - Summon Ally
+    - Phase Shift
+    - Ally Swap
+  Description: The manifestation of a Necromancer's will. A less powerful version of the Necromancer themselves.
+
+Necromancer: 
+  Type: Boss
+  HP: 8
+  AP: 0
+  AR: 2
+  PP: 6
+  Primary_Skill: Knowledge
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Undying
+    - Undying Vulnerability
+    - Life Link
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Stunning Glare
+    - Drain Life
+    - Shake Enemy
+    - Summon Creature
+    - Summon Ally
+    - Phase Shift
+    - Adversary Major Action
+    - Drain Stamina
+    - Ally Swap
+    - Wall Grab
+    - Amplify Ally
+  Description: A master of death, typically in command of a horde of undead minions. 
+
+Spider Queen: 
+  Type: Boss
+  HP: 11
+  AR: 2
+  PP: 6
+  Primary_Skill: Knowledge
+  Attribs:
+    AGL: -1
+    CON: 2
+    INT: 2
+    GUT: 2
+    STR: -1
+    VIT: 1
+  Powers:
+    - Attack, Mystic
+    - Attack, Mystic Aura
+    - Summon Ally
+    - Amplify Ally 
+    - Shake Enemy
+    - Favored Terrain 
+    - Manifest Terrain
+    - Condition Immunity: Poisoned
+    - Condition Resilience: Blinded
+    - Terrain Blink
+    - Manifest Terrain: Web
+    - Adversary Major Action
+    - Shake Enemy
+    - Wall Grab
+    - Obey Me
+  Description: A queen of her minions, trusted and obeyed without question.
+
+Scorpion Beast: 
+  Type: Boss
+  HP: 8
+  AP: 2
+  AR: 2
+  PP: 4
+  Primary_Skill: Brute
+  Attribs:
+    AGL: 1
+    CON: 0
+    INT: -1
+    GUT: 1
+    STR: 2
+    VIT: 2
+  Powers:
+    - Attack, Weapon
+    - Attack, Sweep
+    - Attack, Dual-Wield Master
+    - Momentum Aura
+    - Staggering Blow
+  Description: A fierce beast capable of intense violence and destruction.
