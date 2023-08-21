@@ -734,10 +734,10 @@ completely customizable process. Consult with your GM for information about the 
 and what skills might be relevant for the story ahead. Custom creation starts with
 spending Experience Points on Attributes, Skills, Powers, Vulnerabilities and/or Skills.
 
-- A [Background](./03_CharacterCreation#decide-your-background) is descriptive of a
+- A [Background](./03_CharacterCreation.md/#decide-your-background) is descriptive of a
   character's history and where they are when you begin your adventure.
 
-- [A Role](./03_CharacterCreation#choose-your-role) is a general class that unlocks
+- [A Role](./03_CharacterCreation.md/#choose-your-role) is a general class that unlocks
   access to certain abilities.
 
 - Attributes cost more, but also increase corresponding skills.

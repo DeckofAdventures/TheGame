@@ -4,7 +4,7 @@
 
 Deck of Adventures is a Tabletop Roleplaying Game (TTRPG) where friends tell a
 collaborative narrative story together as a group of adventurers. This guide is enough
-to get started, but we recommend you read the [Full Players Guide](./01_PlayerGuideFull.md)
+to get started, but we recommend you read the [Full Player's Guide](1_Mechanics/01_PlayerGuide_Full.md)
 to learn all of the rules, mechanics, and story-telling devices.
 
 ## Quick-Start Guide
@@ -88,7 +88,7 @@ Points as your maximum. You'll need to keep track of how many Power Points you h
 as you use Powers.
 
 You can work with your GM to create a custom character for the Adventure, or use one of
-the [premade characters](./PremadeCharacters/) as a quick way to get started.
+the [premade characters](./PremadeCharacters/README.md) as a quick way to get started.
 
 ### Gameplay
 
@@ -132,7 +132,7 @@ rest is interrupted, you do not gain the benefits and need to try resting again.
 
 If you run out of cards in your deck before you are able to take a rest, you gain one
 level of *Fatigue*, which makes certain actions more difficult  
-(see [status conditions](./01_PlayerGuideFull.md/#status-conditions) for more detail).
+(see [status conditions](1_Mechanics/01_PlayerGuide_Full.md#status-conditions) for more detail).
 
 ### Combat
 
@@ -153,7 +153,7 @@ order, Ace to 2.
   under the circumstances.
 - Unless otherwise stated, Powers have a range of 6 spaces and do 1 point of damage.
 - If you get hit, you can expend a Fate Card to nullify 1 point of damage.
-- Some attacks may result in a [Status Condition](./01_PlayerGuideFull.md/#status-conditions).
+- Some attacks may result in a [Status Condition](1_Mechanics/01_PlayerGuide_Full.md#status-conditions).
 
 ### Have Fun!
 
