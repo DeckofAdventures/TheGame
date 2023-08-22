@@ -1,4 +1,4 @@
-site_name: The Game
+site_name: Deck of Adventures
 site_url: https://DeckofAdventures.github.io/TheGame
 site_description: Deck of Adventures Documents
 site_author: CBroz1
@@ -11,7 +11,7 @@ theme:
     name: material
     custom_dir: overrides
     logo: stylesheets/Logo_Transparent.png
-    favicon: stylesheets/spades.svg
+    favicon: stylesheets/favicon.png
     features:
       - toc.integrate
       - navigation.sections
