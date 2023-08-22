@@ -10,9 +10,9 @@
 - [Discard Pile](01_PlayerGuide_Full.md#the-action-deck): a separate pile of cards that
   have already been used. The discard pile is only shuffled back into the Action Deck
   during a Rest.
-- [Power](03_CharacterCreation#choose-your-powers): Boons or special abilities granted
+- [Power](03_CharacterCreation.md#choose-your-powers): Boons or special abilities granted
   to a Dealer.
-- [Role](03_CharacterCreation#choose-your-role): General descriptor of a character role
+- [Role](03_CharacterCreation.md#choose-your-role): General descriptor of a character role
   (e.g., Caster, Defender). Some Powers have Role prerequisites.
 - [Attribute](01_PlayerGuide_Full.md#attributes-skills-and-modifiers): Major skill
   domain, each with associated modifier adding to related Skills.
@@ -33,11 +33,11 @@
 - [Epic Event](01_PlayerGuide_Full.md#epic-events): Draw multiple cards to pass a series
   of checks usually resulting in collective success or failure.
 - [Fate Cards](01_PlayerGuide_Full.md#fate-cards): King/Aces cards held for redraws.
-- [PP, Power Points](03_CharacterCreation#choose-your-powers): Limited resource used
+- [PP, Power Points](03_CharacterCreation.md#choose-your-powers): Limited resource used
   when
 - [GM, Game Master](01_PlayerGuide_Full.md#what-is-a-tabletop-game-system?): Narrator
   and curator of the story.
-- [Hand, Upper/Lower](01_PlayerGuide_Full#upper-and-lower-hand): Draw N cards and report
+- [Hand, Upper/Lower](01_PlayerGuide_Full.md#upper-and-lower-hand): Draw N cards and report
   the result closest (Upper), or furthest (Lower) from the TC. If unspecified, draw 2.
 - [HP, Health Points](01_PlayerGuide_Full.md#health-and-armor): pool of health from
   which damage can subtract, before getting Knocked Out.
@@ -45,7 +45,7 @@
   HP. Unconscious and on the brink of death.
 - [Modifier](01_PlayerGuide_Full.md#attributes-skills-and-modifiers): The number a
   player may add or subtract from a draw before reporting the value on a check.
-- [Passive](03_CharacterCreation#choose-your-powers): A descriptor for Powers that are
+- [Passive](03_CharacterCreation.md#choose-your-powers): A descriptor for Powers that are
   always in effect.
 - [Player](01_PlayerGuide_Full.md#what-is-a-tabletop-game-system?): Active participant
   in the story.
@@ -59,9 +59,9 @@
 - [TC, Target Card](01_PlayerGuide_Full.md#making-a-check): The card that sets the
   mid-point of the range for a Check.
 - The House: Audience observing the game, neither player nor GM.
-- [Vulnerability](03_CharacterCreation#choose-your-vulnerabilities): Weaknesses that
+- [Vulnerability](03_CharacterCreation.md#choose-your-vulnerabilities): Weaknesses that
   inhibit a Dealer in some way, either combat- or roleplay-based.
-- [XP, Experience Points](03_CharacterCreation#using-experience-points-xp): Resource for
+- [XP, Experience Points](03_CharacterCreation.md#using-experience-points-xp): Resource for
   building a character awarded on leveling up.
 - [Hidden](01_PlayerGuide_Full.md#light-and-vision): A property of a creature that is
   unseen or undetected.
